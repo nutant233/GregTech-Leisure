@@ -411,7 +411,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setSound(GTSoundEntries.SCIENCE)
 
     GTRecipeTypes.register("distort", "multiblock")
-        .setMaxIOSize(9, 0, 3, 1)
+        .setMaxIOSize(9, 9, 9, 9)
         .setEUIO("in")
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .addDataInfo(data => {
