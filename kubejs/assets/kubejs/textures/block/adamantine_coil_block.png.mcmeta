@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/adamantine_coil_block_ctm"
+    }
+}

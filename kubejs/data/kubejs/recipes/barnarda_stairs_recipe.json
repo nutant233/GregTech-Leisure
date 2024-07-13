@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "category": "building",
+  "pattern": [
+    "a  ",
+    "aa ",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "kubejs:barnarda_planks"
+    }
+  },
+  "result": {
+    "item": "kubejs:barnarda_stairs",
+    "count": 4
+  }
+}

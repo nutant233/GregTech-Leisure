@@ -1,0 +1,47 @@
+
+[multiblocks]
+
+	[multiblocks.mekanism]
+
+		#JEI 'Building [Dynamic Tank]' page configuration
+		[multiblocks.mekanism.dynamic_tank]
+			#Set page visibility
+			visible = true
+
+		#JEI 'Building [Thermal Evaporation Plant]' page configuration
+		[multiblocks.mekanism.evaporation_plant]
+			#Set page visibility
+			visible = true
+
+		#JEI 'Building [Thermoelectric Boiler]' page configuration
+		[multiblocks.mekanism.boiler]
+			#Set page visibility
+			visible = true
+
+		#JEI 'Building [Supercritical Phase Shifter]' page configuration
+		[multiblocks.mekanism.sps]
+			#Set page visibility
+			visible = true
+
+		#JEI 'Building [Induction Matrix]' page configuration
+		[multiblocks.mekanism.matrix]
+			#Set page visibility
+			visible = true
+
+	[multiblocks.mekanismgenerators]
+
+		#JEI 'Building [Industrial Turbine]' page configuration
+		[multiblocks.mekanismgenerators.turbine]
+			#Set page visibility
+			visible = true
+
+		#JEI 'Building [Fission Reactor]' page configuration
+		[multiblocks.mekanismgenerators.fission_reactor]
+			#Set page visibility
+			visible = true
+
+		#JEI 'Building [Fusion Reactor]' page configuration
+		[multiblocks.mekanismgenerators.fusion_reactor]
+			#Set page visibility
+			visible = true
+

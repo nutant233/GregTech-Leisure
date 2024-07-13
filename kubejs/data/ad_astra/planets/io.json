@@ -1,0 +1,10 @@
+{
+  "dimension": "kubejs:io",
+  "gravity":  4.704,
+  "orbit": "kubejs:io_orbit",
+  "oxygen": false,
+  "solar_power": 14,
+  "solar_system": "ad_astra:solar_system",
+  "temperature": -174,
+  "tier": 5
+}

@@ -1,0 +1,8 @@
+# Default config file that will be copied to saves/新的世界/serverconfig/ftbultimine-server.snbt if it doesn't exist!
+# Just copy any values you wish to override in here!
+
+{ max_blocks: 512
+merge_tags: [
+		"minecraft:base_stone_overworld"
+		"forge:ores"
+	]}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gtceu:super_cooler_component"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "gtceu:/block/super_cooler_component"
+}

@@ -1,0 +1,670 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "definitions": {
+        "typePrimitive": {
+            "type": "object",
+            "required": [
+                "type",
+                "name"
+            ],
+            "properties": {
+                "type": {
+                    "const": "type:primitive",
+                    "description": "A primitive type"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "typeClass": {
+            "type": "object",
+            "required": [
+                "type",
+                "name"
+            ],
+            "properties": {
+                "type": {
+                    "const": "type:class",
+                    "description": "A class type"
+                },
+                "name": {
+                    "type": "string",
+                    "$ref": "probe.class-definitions.json#/definitions/typeClassName"
+                }
+            }
+        },
+        "typeVariable": {
+            "type": "object",
+            "required": [
+                "type",
+                "name"
+            ],
+            "properties": {
+                "type": {
+                    "const": "type:variable",
+                    "description": "A variable type"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "typeParameterized": {
+            "type": "object",
+            "required": [
+                "type",
+                "base",
+                "params"
+            ],
+            "properties": {
+                "type": {
+                    "const": "type:parameterized"
+                },
+                "base": {
+                    "$ref": "#/definitions/propertyType"
+                },
+                "params": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/propertyType"
+                    }
+                }
+            }
+        },
+        "typeIntersection": {
+            "type": "object",
+            "required": [
+                "type",
+                "types"
+            ],
+            "properties": {
+                "type": {
+                    "const": "type:intersection"
+                },
+                "types": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/propertyType"
+                    }
+                }
+            }
+        },
+        "typeUnion": {
+            "type": "object",
+            "required": [
+                "type",
+                "types"
+            ],
+            "properties": {
+                "type": {
+                    "const": "type:union"
+                },
+                "types": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/propertyType"
+                    }
+                }
+            }
+        },
+        "typeArray": {
+            "type": "object",
+            "required": [
+                "type",
+                "component"
+            ],
+            "properties": {
+                "type": {
+                    "const": "type:array"
+                },
+                "component": {
+                    "$ref": "#/definitions/propertyType"
+                }
+            }
+        },
+        "typeObject": {
+            "type": "object",
+            "required": [
+                "type",
+                "members"
+            ],
+            "properties": {
+                "type": {
+                    "const": "type:object"
+                },
+                "members": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "key",
+                            "value"
+                        ],
+                        "properties": {
+                            "key": {
+                                "anyOf": [
+                                    {
+                                        "$ref": "#/definitions/propertyObjectKey"
+                                    }
+                                ]
+                            },
+                            "value": {
+                                "$ref": "#/definitions/propertyType"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "propertyObjectKey": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "$ref": "#/definitions/propertyType"
+                },
+                {
+                    "type": "object",
+                    "required": [
+                        "optional"
+                    ],
+                    "properties": {
+                        "optional": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "key": {
+                            "$ref": "#/definitions/propertyObjectKey"
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            ]
+        },
+        "typeJSArray": {
+            "type": "object",
+            "required": [
+                "type",
+                "types"
+            ],
+            "properties": {
+                "type": {
+                    "const": "type:jsArray"
+                },
+                "types": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/propertyType"
+                    }
+                }
+            }
+        },
+        "propertyType": {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "type:primitive",
+                        "type:class",
+                        "type:variable",
+                        "type:parameterized",
+                        "type:union",
+                        "type:intersection",
+                        "type:array",
+                        "type:object",
+                        "type:jsArray"
+                    ]
+                },
+                "properties": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "type"
+                        ],
+                        "properties": {
+                            "type": {
+                                "const": "property:underscored"
+                            },
+                            "underscored": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                }
+            },
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/typePrimitive"
+                },
+                {
+                    "$ref": "#/definitions/typeClass"
+                },
+                {
+                    "$ref": "#/definitions/typeVariable"
+                },
+                {
+                    "$ref": "#/definitions/typeParameterized"
+                },
+                {
+                    "$ref": "#/definitions/typeUnion"
+                },
+                {
+                    "$ref": "#/definitions/typeIntersection"
+                },
+                {
+                    "$ref": "#/definitions/typeArray"
+                },
+                {
+                    "$ref": "#/definitions/typeObject"
+                },
+                {
+                    "$ref": "#/definitions/typeJSArray"
+                }
+            ]
+        },
+        "propertyComment": {
+            "type": "object",
+            "required": [
+                "type",
+                "lines"
+            ],
+            "properties": {
+                "type": {
+                    "const": "property:comment"
+                },
+                "lines": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "propertyHide": {
+            "type": "object",
+            "required": [
+                "type"
+            ],
+            "properties": {
+                "type": {
+                    "const": "property:hide"
+                }
+            }
+        },
+        "propertyAssign": {
+            "type": "object",
+            "required": [
+                "type",
+                "assign"
+            ],
+            "properties": {
+                "type": {
+                    "const": "property:assign"
+                },
+                "shield": {
+                    "type": "boolean"
+                },
+                "assign": {
+                    "$ref": "#/definitions/propertyType"
+                }
+            }
+        },
+        "propertyMod": {
+            "type": "object",
+            "required": [
+                "type",
+                "mod"
+            ],
+            "properties": {
+                "type": {
+                    "const": "property:mod"
+                },
+                "mod": {
+                    "type": "string"
+                }
+            }
+        },
+        "propertyModify": {
+            "type": "object",
+            "required": [
+                "type",
+                "index"
+            ],
+            "properties": {
+                "type": {
+                    "const": "property:modify"
+                },
+                "index": {
+                    "type": "integer"
+                },
+                "newType": {
+                    "$ref": "#/definitions/propertyType"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "propertyReturns": {
+            "type": "object",
+            "required": [
+                "type",
+                "returns"
+            ],
+            "properties": {
+                "type": {
+                    "const": "property:returns"
+                },
+                "returns": {
+                    "$ref": "#/definitions/propertyType"
+                }
+            }
+        },
+        "propertyExtra": {
+            "type": "object",
+            "required": [
+                "type",
+                "extra"
+            ],
+            "properties": {
+                "type": {
+                    "const": "property:extra"
+                },
+                "extra": {
+                    "$ref": "#/definitions/propertyType"
+                }
+            }
+        },
+        "propertyClass": {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "property:comment",
+                        "property:hide",
+                        "property:assign",
+                        "property:mod",
+                        "property:extra"
+                    ]
+                }
+            },
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/propertyComment"
+                },
+                {
+                    "$ref": "#/definitions/propertyHide"
+                },
+                {
+                    "$ref": "#/definitions/propertyAssign"
+                },
+                {
+                    "$ref": "#/definitions/propertyMod"
+                },
+                {
+                    "$ref": "#/definitions/propertyExtra"
+                }
+            ]
+        },
+        "propertyMethod": {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "property:comment",
+                        "property:hide",
+                        "property:mod",
+                        "property:modify",
+                        "property:returns"
+                    ]
+                }
+            },
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/propertyComment"
+                },
+                {
+                    "$ref": "#/definitions/propertyHide"
+                },
+                {
+                    "$ref": "#/definitions/propertyMod"
+                },
+                {
+                    "$ref": "#/definitions/propertyModify"
+                },
+                {
+                    "$ref": "#/definitions/propertyReturns"
+                }
+            ]
+        },
+        "propertyField": {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "property:comment",
+                        "property:hide",
+                        "property:mod"
+                    ]
+                }
+            },
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/propertyComment"
+                },
+                {
+                    "$ref": "#/definitions/propertyHide"
+                },
+                {
+                    "$ref": "#/definitions/propertyMod"
+                }
+            ]
+        },
+        "propertyConstructor": {
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "property:comment",
+                        "property:hide",
+                        "property:mod",
+                        "property:modify"
+                    ]
+                }
+            },
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/propertyComment"
+                },
+                {
+                    "$ref": "#/definitions/propertyHide"
+                },
+                {
+                    "$ref": "#/definitions/propertyMod"
+                },
+                {
+                    "$ref": "#/definitions/propertyModify"
+                }
+            ]
+        }
+    },
+    "properties": {
+        "properties": {
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "#/definitions/propertyMod"
+                    }
+                ]
+            }
+        },
+        "classes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "type"
+                ],
+                "properties": {
+                    "type": {
+                        "const": "document:class"
+                    },
+                    "className": {
+                        "type": "string",
+                        "description": "The class name",
+                        "$ref": "probe.class-definitions.json#/definitions/typeClassName"
+                    },
+                    "properties": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/propertyClass"
+                        }
+                    },
+                    "methods": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "type",
+                                "name",
+                                "returns"
+                            ],
+                            "properties": {
+                                "type": {
+                                    "const": "document:method"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "static": {
+                                    "type": "boolean"
+                                },
+                                "abstract": {
+                                    "type": "boolean"
+                                },
+                                "params": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "required": [
+                                            "type",
+                                            "name",
+                                            "paramType"
+                                        ],
+                                        "properties": {
+                                            "type": {
+                                                "const": "property:param"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "paramType": {
+                                                "$ref": "#/definitions/propertyType"
+                                            }
+                                        }
+                                    }
+                                },
+                                "returns": {
+                                    "$ref": "#/definitions/propertyType"
+                                },
+                                "properties": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/propertyMethod"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "interfaces": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/propertyType"
+                        }
+                    },
+                    "constructors": {
+                        "type": "array",
+                        "items": {
+                            "required": [
+                                "type"
+                            ],
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "const": "document:constructor"
+                                },
+                                "params": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "required": [
+                                            "type",
+                                            "name",
+                                            "paramType"
+                                        ],
+                                        "properties": {
+                                            "type": {
+                                                "const": "property:param"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "paramType": {
+                                                "$ref": "#/definitions/propertyType"
+                                            }
+                                        }
+                                    }
+                                },
+                                "properties": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/propertyConstructor"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "fields": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "required": [
+                                "type",
+                                "name",
+                                "fieldType"
+                            ],
+                            "properties": {
+                                "type": {
+                                    "const": "document:field"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "fieldType": {
+                                    "$ref": "#/definitions/propertyType"
+                                },
+                                "properties": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/propertyField"
+                                    }
+                                },
+                                "final": {
+                                    "type": "boolean"
+                                },
+                                "static": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

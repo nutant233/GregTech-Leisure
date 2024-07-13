@@ -1,0 +1,7 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "kubejs:block/barnarda_planks"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_pressure_plate",
+  "category": "redstone",
+  "pattern": [
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "kubejs:barnarda_planks"
+    }
+  },
+  "result": {
+    "item": "kubejs:barnarda_pressure_plate",
+    "count": 1
+  }
+}

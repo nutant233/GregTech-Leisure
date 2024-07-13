@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "kubejs:block/barnarda_slab"
+    },
+    "type=top": {
+      "model": "kubejs:block/barnarda_slab_top"
+    },
+    "type=double": {
+      "model": "kubejs:block/barnarda_slab_full"
+    }
+  }
+}

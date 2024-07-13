@@ -1,0 +1,15 @@
+crash-reports/
+backups/
+logs/
+local/
+modernfix/
+natives-osx-arm64/
+saves/
+screenshots/
+.DS_Store
+log4j2.xml
+servers.dat
+rhino.local.properties
+servers.dat_old
+usercache.json
+usernamecache.json
