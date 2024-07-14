@@ -512,6 +512,21 @@
 			x: -3.5d
 			y: -3.0d
 		}
+		{
+			dependencies: [
+				"02F523E003E1C93D"
+				"035C470213E8B4DB"
+			]
+			description: ["优化你的产线"]
+			id: "16C93F76F74CB8DB"
+			tasks: [{
+				id: "42B8B94BB1B32E83"
+				item: "gtceu:chemical_distort"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -3.0d
+		}
 	]
 	subtitle: ["Tier7-ZPM"]
 	title: "零点压"

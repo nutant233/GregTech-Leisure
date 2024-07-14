@@ -41,6 +41,7 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:plasma_condenser", "等离子专用冷冻机")
     event.add("gtceu:rare_earth_centrifugal", "稀土专用离心机")
     event.add("gtceu:magic_manufacturer", "将电能转化为魔力")
+    event.add("gtceu:chemical_distort", ["线圈温度每高出配方温度100K，并行加1", "更高的电压不会提供额外温度"])
     event.add("gtceu:sps_crafting", "借助魔力合成特殊的物品")
     event.add("gtceu:matter_fabricator", "产出特殊物质")
     event.add(["gtceu:nano_forge_1", "gtceu:nano_forge_2", "gtceu:nano_forge_3"], ["只能使用激光仓", "处理低阶纳米锻炉配方时并行数x16"])

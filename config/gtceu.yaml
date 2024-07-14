@@ -247,12 +247,12 @@ machines:
 
   # Whether the Assembly Line should require the item inputs to be in order.
   # Default: true
-  orderedAssemblyLineItems: true
+  orderedAssemblyLineItems: false
 
   # Whether the Assembly Line should require the fluid inputs to be in order.
   # (Requires Ordered Assembly Line Item Inputs to be enabled.)
   # Default: false
-  orderedAssemblyLineFluids: true
+  orderedAssemblyLineFluids: false
 
   # Let Buffer has more ability.
   # When enabled it, Buffer will can used to assemble line and so on.

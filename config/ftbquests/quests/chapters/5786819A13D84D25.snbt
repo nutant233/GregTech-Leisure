@@ -429,7 +429,7 @@
 		}
 		{
 			dependencies: ["7C23CC6ADDC33EA0"]
-			description: ["需求量很大，需要搭建被动产线"]
+			description: ["先进的材料"]
 			id: "55C57FADEE874B97"
 			tasks: [{
 				id: "637385F4CC2A5DD4"

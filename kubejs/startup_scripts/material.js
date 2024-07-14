@@ -93,7 +93,10 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.Copper.addFlags(GENERATE_NANOSWARM)
     GTMaterials.Silver.addFlags(GENERATE_NANOSWARM)
     GTMaterials.Gold.addFlags(GENERATE_NANOSWARM)
-    GTMaterials.Naquadah.addFlags(GTMaterialFlags.GENERATE_FRAME)
+    GTMaterials.Iridium.addFlags(GENERATE_NANOSWARM)
+    GTMaterials.Osmium.addFlags(GENERATE_NANOSWARM)
+    GTMaterials.Rhenium.addFlags(GENERATE_NANOSWARM)
+    GTMaterials.Naquadah.addFlags(GENERATE_NANOSWARM,GTMaterialFlags.GENERATE_FRAME)
     GTMaterials.NaquadahAlloy.addFlags(GTMaterialFlags.GENERATE_FINE_WIRE)
     GTMaterials.RutheniumTriniumAmericiumNeutronate.addFlags(GTMaterialFlags.GENERATE_FINE_WIRE)
     GTMaterials.TitaniumTungstenCarbide.addFlags(GTMaterialFlags.GENERATE_GEAR)
@@ -352,7 +355,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .element(GTElements.get("vibranium"))
         .color(0xff0000)
         .iconSet(GTMaterialIconSet.METALLIC)
-        .flags(GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_FRAME)
+        .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_FRAME)
 
     event.create("draconium")
         .ingot()
@@ -428,7 +431,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .element(GTElements.get("cosmicneutronium"))
         .color(0x000d1a)
         .iconSet(MOMaterialIconSet.CUSTOM_NEUTRONIUM)
-        .flags(GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_FINE_WIRE, GTMaterialFlags.GENERATE_SPRING_SMALL)
+        .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_FINE_WIRE, GTMaterialFlags.GENERATE_SPRING_SMALL)
         .cableProperties(GTValues.V[GTValues.MAX], 2, 128)
 
     event.create("echoite")
@@ -512,7 +515,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .element(GTElements.get("infuscolium"))
         .color(0xff77ff)
         .iconSet(GTMaterialIconSet.RADIOACTIVE)
-        .flags(GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD)
+        .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD)
 
     event.create("enderium")
         .ingot()
@@ -523,7 +526,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .element(GTElements.get("enderium"))
         .color(0x75ede2)
         .iconSet(GTMaterialIconSet.METALLIC)
-        .flags(GTMaterialFlags.GENERATE_FINE_WIRE)
+        .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_FINE_WIRE)
 
     event.create("eternity")
         .ingot()
@@ -597,7 +600,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .element(GTElements.get("transcendentmetal"))
         .color(0xffffff)
         .iconSet(MOMaterialIconSet.CUSTOM_TRANSCENDENTMETAL)
-        .flags(GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD)
+        .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD)
 
     event.create("uruium")
         .ingot()
@@ -606,6 +609,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .blastTemp(14600, "higher", GTValues.VA[GTValues.UIV], 1200)
         .element(GTElements.get("uruium"))
         .color(0x87ceeb)
+        .flags(GENERATE_NANOSWARM)
         .iconSet(GTMaterialIconSet.METALLIC)
         .cableProperties(GTValues.V[GTValues.MAX], 16, 536870912)
 
