@@ -14132,7 +14132,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(790)
 
     gtr.mixer("gtceu:potassium_pyrosulfate_dust")
-        .itemInputs("gtceu:potassium_dust", "2x gtceu:sulfur_dust")
+        .itemInputs("2x gtceu:potassium_dust", "2x gtceu:sulfur_dust")
         .inputFluids("gtceu:oxygen 7000")
         .itemOutputs("11x gtceu:potassium_pyrosulfate_dust")
         .EUt(120)
