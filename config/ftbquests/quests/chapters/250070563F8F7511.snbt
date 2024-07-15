@@ -292,12 +292,12 @@
 			icon: "minecraft:iron_ingot"
 			id: "2C6F506ADD78F277"
 			rewards: [{
-				id: "77AD2428EAC7189E"
+				id: "1DC27EA1D26C5D2F"
 				item: {
 					Count: 1
 					id: "ae2:portable_item_cell_16k"
 					tag: {
-						internalCurrentPower: 200000.0d
+						internalCurrentPower: 2000000.0d
 					}
 				}
 				type: "item"
@@ -1098,6 +1098,52 @@
 			]
 			x: -2.5d
 			y: -4.0d
+		}
+		{
+			dependencies: ["4B6F43302E963F5E"]
+			id: "7198356C944E053A"
+			rewards: [
+				{
+					id: "7480CA9E0C881C90"
+					item: {
+						Count: 1
+						id: "gtceu:super_portable_item_storage_cell"
+						tag: {
+							internalCurrentPower: 2000000000
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7E40E854D6E1AE44"
+					item: {
+						Count: 1
+						id: "gtceu:super_portable_fluid_storage_cell"
+						tag: {
+							internalCurrentPower: 2000000000
+						}
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					id: "373DF3479C5D655D"
+					item: "gtceu:bronze_crate"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "39860496FDB73E14"
+					item: "gtceu:bronze_drum"
+					type: "item"
+				}
+			]
+			x: 7.5d
+			y: -1.0d
 		}
 	]
 	title: "由此开始"

@@ -5810,7 +5810,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("minecraft:water 900", "gtceu:phosphoric_acid 100")
         .outputFluids("gtceu:rare_earth_hydroxides 1000")
         .EUt(480)
-        .duration(120)
+        .duration(50)
 
     gtr.chemical_reactor("gtceu:rare_earth_chlorides")
         .inputFluids("gtceu:rare_earth_hydroxides 1000", "gtceu:hydrochloric_acid 1000")
