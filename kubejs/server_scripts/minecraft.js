@@ -183,4 +183,12 @@ ServerEvents.recipes((event) => {
         .chancedOutput("minecraft:dragon_egg", 9000, 0)
         .duration(8000)
         .EUt(GTValues.VA[GTValues.ZPM])
+
+    gtr.chemical_bath("minecraft:crying_obsidian")
+        .itemInputs("minecraft:obsidian")
+        .inputFluids("gtceu:antimatter 10")
+        .itemOutputs("minecraft:crying_obsidian")
+        .EUt(GTValues.VA[GTValues.HV])
+        .duration(200)
+        .cleanroom(CleanroomType.CLEANROOM)
 })

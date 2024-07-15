@@ -1414,7 +1414,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("super_particle_collider", "multiblock")
         .rotationState(RotationState.ALL)
         .recipeType("super_particle_collider")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:lafium_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1468,6 +1468,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("a", Predicates.controller(Predicates.blocks(definition.get())))
                 .where("b", Predicates.blocks("kubejs:lafium_mechanical_casing")
                     .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                    .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1))
                     .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
                 .where("c", Predicates.blocks("kubejs:lafium_mechanical_casing"))

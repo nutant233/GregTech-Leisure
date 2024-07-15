@@ -826,6 +826,7 @@ ServerEvents.recipes((event) => {
             "gtceu:uev_electric_pump",
             "2x gtceu:uev_field_generator",
             "minecraft:dragon_egg",
+            "4x #gtceu:circuits/uiv",
             "gtceu:really_max_battery",
             "8x gtceu:dense_obsidian_plate")
         .inputFluids("gtceu:soldering_alloy 2880", "gtceu:mutated_living_solder 1296")
@@ -6030,24 +6031,22 @@ ServerEvents.recipes((event) => {
 
     //radox
     gtr.incubator("kubejs:variation_wood")
-        .itemInputs("64x kubejs:barnarda_log", "64x minecraft:crimson_stem", "64x #forge:dusts/wood", "gtceu:lapotron_dust")
+        .itemInputs("64x kubejs:barnarda_log", "16x minecraft:crimson_stem", "64x #forge:dusts/wood", "gtceu:lapotron_dust")
         .inputFluids("gtceu:unknowwater 10000", "gtceu:biomass 1000")
         .itemOutputs("64x kubejs:variation_wood")
-        .EUt(GTValues.VA[GTValues.ZPM])
+        .EUt(GTValues.VA[GTValues.UHV])
         .duration(2400)
 
     gtr.incubator("kubejs:variation_wood1")
-        .itemInputs("64x kubejs:barnarda_log", "64x minecraft:warped_stem", "64x #forge:dusts/wood", "gtceu:lapotron_dust")
+        .itemInputs("64x kubejs:barnarda_log", "16x minecraft:warped_stem", "64x #forge:dusts/wood", "gtceu:lapotron_dust")
         .inputFluids("gtceu:unknowwater 10000", "gtceu:biomass 1000")
         .itemOutputs("64x kubejs:variation_wood")
-        .EUt(GTValues.VA[GTValues.ZPM])
+        .EUt(GTValues.VA[GTValues.UHV])
         .duration(2400)
 
     gtr.qft("gtceu:radox")
         .inputFluids("gtceu:radox_gas 21600", "gtceu:oxygen_plasma 75000", "gtceu:titanium_50_tetrachloride 1000")
-        .itemInputs("20x gtceu:ruthenium_tetroxide_dust",
-            "20x gtceu:osmium_tetroxide_dust",
-            "16x gtceu:molybdenum_trioxide_dust",
+        .itemInputs("16x gtceu:molybdenum_trioxide_dust",
             "16x gtceu:chromium_trioxide_dust",
             "14x gtceu:phosphorus_pentoxide_dust",
             "12x gtceu:cubic_zirconia_dust",
@@ -6056,13 +6055,15 @@ ServerEvents.recipes((event) => {
             "10x gtceu:arsenic_trioxide_dust",
             "10x gtceu:antimony_trioxide_dust",
             "10x gtceu:boron_trioxide_dust",
+            "8x gtceu:zincite_dust",
             "8x gtceu:magnesia_dust",
             "8x gtceu:cobalt_oxide_dust",
             "8x gtceu:massicot_dust",
             "8x gtceu:cupric_oxide_dust",
             "6x gtceu:potash_dust",
             "6x gtceu:silver_oxide_dust",
-            "6x gtceu:sodium_oxide_dust")
+            "6x gtceu:sodium_oxide_dust",
+            "4x gtceu:rare_earth_oxide_dust")
         .outputFluids("gtceu:radox 10800")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(8000)
@@ -6147,7 +6148,7 @@ ServerEvents.recipes((event) => {
 
     gtr.pyrolyse_oven("gtceu:rawradox")
         .inputFluids("gtceu:xenoxene 1000")
-        .itemInputs("64x kubejs:variation_wood")
+        .itemInputs("16x kubejs:variation_wood")
         .outputFluids("gtceu:rawradox 1000")
         .itemOutputs("gtceu:ash_dust")
         .circuit(1)
@@ -6156,7 +6157,7 @@ ServerEvents.recipes((event) => {
 
     gtr.pyrolyse_oven("gtceu:rawradox1")
         .inputFluids("gtceu:enriched_xenoxene 1000")
-        .itemInputs("64x kubejs:variation_wood")
+        .itemInputs("16x kubejs:variation_wood")
         .outputFluids("gtceu:rawradox 10000")
         .itemOutputs("gtceu:ash_dust")
         .circuit(1)
@@ -7792,7 +7793,7 @@ ServerEvents.recipes((event) => {
         .EUt(30)
         .duration(20)
 
-    for (let index = 2; index < 29; index++) {
+    for (let index = 2; index < 33; index++) {
         event.stonecutting("kubejs:space_essence_" + index, "kubejs:space_essence_1")
         event.shapeless("kubejs:space_essence_1", ["kubejs:space_essence_" + index])
     }
@@ -8066,7 +8067,8 @@ ServerEvents.recipes((event) => {
             "80x gtceu:diatomite_ore",
             "80x gtceu:electrotine_ore",
             "40x gtceu:alunite_ore",
-            "240x gtceu:coal_ore"], "7"],
+            "240x gtceu:coal_ore",
+            "40x gtceu:rubidium_ore"], "7"],
 
         [["90x gtceu:beryllium_ore",
             "120x gtceu:emerald_ore",
@@ -8086,7 +8088,8 @@ ServerEvents.recipes((event) => {
             "80x gtceu:sodalite_ore",
             "80x gtceu:lapis_ore",
             "40x gtceu:calcite_ore",
-            "150x gtceu:wulfenite_ore",], "10"],
+            "150x gtceu:wulfenite_ore",
+            "30x gtceu:calorite_ore"], "10"],
 
         [["120x gtceu:galena_ore",
             "80x gtceu:silver_ore",
@@ -8263,7 +8266,7 @@ ServerEvents.recipes((event) => {
             "60x gtceu:topaz_ore",
             "40x gtceu:emerald_ore",
             "40x gtceu:amethyst_ore",
-            "20x gtceu:celestine_ore"], "25"],
+            "20x gtceu:celestine_ore"], "25"]
         ]
 
     space_drones.slice(1).forEach((space_drone) => {
@@ -8342,10 +8345,262 @@ ServerEvents.recipes((event) => {
             "40x gtceu:uruium_ore",
             "40x gtceu:lead_ore",
             "20x gtceu:cobalt_ore"], "26"],
+        [["120x gtceu:bloodstone_ore",
+            "80x gtceu:redstone_ore",
+            "120x gtceu:red_garnet_ore",
+            "40x gtceu:gravel_ruby_ore",
+            "40x gtceu:almandine_ore",
+            "40x gtceu:pyrope_ore"], "27"]
         ]
 
     space_drones.slice(2).forEach((space_drone) => {
         space_ores3.forEach((space_ore) => {
+            gtr.miner_module("space_ore_1_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel 100000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_2_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_rp_1 80000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_3_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:dense_hydrazine_fuel_mixture 70000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_4_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_cn3h7o3 60000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_5_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_cn3h7o3 50000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_6_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_h8n4c2o4 40000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_7_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("ad_astra:cryo_fuel 20000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+
+            gtr.miner_module("space_ore_8_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:stellar_energy_rocket_fuel 10000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+        })
+    })
+
+    const space_ores4 =
+        [[["80x gtceu:naquadah_ore",
+            "40x gtceu:adamantine_compounds_ore",
+            "60x gtceu:rare_earth_metal_ore",
+            "40x gtceu:monazite_ore",
+            "40x gtceu:bastnasite_ore",
+            "20x gtceu:enriched_naquadah_ore"], "28"],
+        [["60x gtceu:plutonium_ore",
+            "80x gtceu:uraninite_ore",
+            "40x gtceu:orichalcum_ore",
+            "60x gtceu:mithril_ore",
+            "80x gtceu:salt_ore",
+            "80x gtceu:rock_salt_ore"], "29"]
+        ]
+
+    space_drones.slice(3).forEach((space_drone) => {
+        space_ores4.forEach((space_ore) => {
+            gtr.miner_module("space_ore_1_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel 100000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_2_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_rp_1 80000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_3_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:dense_hydrazine_fuel_mixture 70000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_4_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_cn3h7o3 60000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_5_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_cn3h7o3 50000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_6_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_h8n4c2o4 40000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_7_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("ad_astra:cryo_fuel 20000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+
+            gtr.miner_module("space_ore_8_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:stellar_energy_rocket_fuel 10000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+        })
+    })
+
+    const space_ores5 =
+        [[["80x gtceu:enderium_ore",
+            "120x gtceu:sodalite_ore",
+            "60x gtceu:celestine_ore",
+            "80x gtceu:lapis_ore",
+            "60x gtceu:bauxite_ore",
+            "40x gtceu:pitchblende_ore"], "30"],
+        [["40x gtceu:silver_ore",
+            "60x gtceu:andesite_platinum_ore",
+            "60x gtceu:palladium_ore",
+            "80x gtceu:vibranium_ore",
+            "120x gtceu:aluminium_ore",
+            "120x gtceu:iron_ore"], "31"]
+        ]
+
+    space_drones.slice(4).forEach((space_drone) => {
+        space_ores5.forEach((space_ore) => {
+            gtr.miner_module("space_ore_1_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel 100000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_2_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_rp_1 80000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_3_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:dense_hydrazine_fuel_mixture 70000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_4_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_cn3h7o3 60000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_5_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_cn3h7o3 50000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_6_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:rocket_fuel_h8n4c2o4 40000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+            gtr.miner_module("space_ore_7_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("ad_astra:cryo_fuel 20000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+
+
+            gtr.miner_module("space_ore_8_" + space_ore[1] + space_drone)
+                .notConsumable("16x kubejs:space_drone_mk" + space_drone)
+                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .inputFluids("gtceu:stellar_energy_rocket_fuel 10000")
+                .itemOutputs(space_ore[0])
+                .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
+                .duration(1200 / (2 ** space_drone))
+        })
+    })
+
+    const space_ores6 =
+        [[["12x gtceu:lazurite_ore",
+            "80x gtceu:sapphire_ore",
+            "60x gtceu:starmetal_ore",
+            "80x gtceu:green_sapphire_ore",
+            "120x gtceu:yellow_garnet_ore",
+            "80x gtceu:pollucite_ore"], "32"]
+        ]
+
+    space_drones.slice(5).forEach((space_drone) => {
+        space_ores6.forEach((space_ore) => {
             gtr.miner_module("space_ore_1_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
                 .itemInputs("kubejs:space_essence_" + space_ore[1])
@@ -9059,7 +9314,7 @@ ServerEvents.recipes((event) => {
 
     gtr.stellar_forge("gtceu:adamantium_plasma")
         .inputFluids("gtceu:orichalcum 576", "gtceu:tin 1024", "gtceu:antimony 864", "gtceu:iron 1152", "gtceu:mercury 1000")
-        .itemInputs("kubejs:naquadria_charge")
+        .itemInputs("kubejs:naquadria_charge", "24x gtceu:bloodstone_dust")
         .outputFluids("gtceu:adamantium_plasma 2304")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
@@ -14620,7 +14875,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("1152x gtceu:carbon_dust", "16x gtceu:copper_dust", "144x gtceu:zinc_dust")
         .inputFluids("gtceu:chlorobenzene 28800", "gtceu:sulfuric_acid 14400", "gtceu:hydrogen 316800", "gtceu:nitrogen 57600", "gtceu:oxygen 201600")
         .outputFluids("gtceu:polybenzimidazole 21600")
-        .EUt(GTValues.V[GTValues.IV])
+        .EUt(GTValues.VA[GTValues.IV])
         .duration(6400)
         .blastFurnaceTemp(6000)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -14641,7 +14896,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:hydrogen 72000", "gtceu:oxygen 128000", "gtceu:chlorine 14400")
         .itemOutputs("125x gtceu:platinum_dust", "125x gtceu:palladium_dust", "60x gtceu:ruthenium_dust", "16x gtceu:iridium_dust", "20x gtceu:rhodium_dust", "16x gtceu:osmium_dust")
         .outputFluids("gtceu:hydrogen 2800", "minecraft:water 7200", "gtceu:chlorine 6400")
-        .EUt(GTValues.V[GTValues.LuV])
+        .EUt(GTValues.VA[GTValues.LuV])
         .duration(2400)
         .blastFurnaceTemp(9000)
 
@@ -14660,7 +14915,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("1920x gtceu:carbon_dust", "64x gtceu:iodine_dust")
         .inputFluids("gtceu:hydrogen 640000", "gtceu:oxygen 96000", "gtceu:chlorine 96000", "gtceu:fluorine 96000")
         .outputFluids("gtceu:cycloparaphenylene 32000", "gtceu:fluorine 4800", "gtceu:chlorine 3200")
-        .EUt(GTValues.V[GTValues.UV])
+        .EUt(GTValues.VA[GTValues.UV])
         .duration(2000)
         .blastFurnaceTemp(16200)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -14703,11 +14958,12 @@ ServerEvents.recipes((event) => {
         .notConsumable("gtceu:naquadah_nanoswarm")
         .itemInputs("64x gtceu:naquadah_dust", "16x gtceu:caesium_dust")
         .inputFluids("gtceu:fluorine 16000", "gtceu:fluoroantimonic_acid 64000", "gtceu:sulfuric_acid 12000", "gtceu:radon 8000", "gtceu:nitrogen_dioxide 4000", "gtceu:xenon 4000")
-        .itemOutputs("48x gtceu:naquadria_dust", "256x gtceu:antimony_trifluoride_dust")
+        .itemOutputs("64x gtceu:naquadria_dust", "256x gtceu:antimony_trifluoride_dust")
         .outputFluids("gtceu:hydrofluoric_acid 272000", "gtceu:radon_trioxide 8000", "gtceu:xenon_trioxide 4000")
         .EUt(7680)
         .duration(3600)
         .blastFurnaceTemp(12600)
+        .cleanroom(CleanroomType.CLEANROOM)
 
     gtr.distort("gtceu:fullerene_dust")
         .notConsumable("gtceu:enderium_nanoswarm")
@@ -14715,8 +14971,29 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:methane 60000", "gtceu:bromine 60000", "gtceu:nitrogen 60000")
         .itemOutputs("64x gtceu:fullerene_dust")
         .outputFluids("gtceu:hydrobromic_acid 60000", "gtceu:ammonia 60000")
-        .EUt(GTValues.V[GTValues.UHV])
+        .EUt(GTValues.VA[GTValues.UHV])
         .duration(6400)
+        .blastFurnaceTemp(16200)
+        .cleanroom(CleanroomType.CLEANROOM)
+
+    gtr.distort("gtceu:stem_cells")
+        .notConsumable("gtceu:naquadah_nanoswarm")
+        .chancedInput("kubejs:glacio_spirit", 8000, 100)
+        .itemInputs("gtceu:tiny_naquadah_dust", "gtceu:osmiridium_dust", "gtceu:salt_dust", "gtceu:calcium_dust", "4x gtceu:meat_dust", "4x gtceu:bio_chaff", "2x minecraft:bone")
+        .inputFluids("gtceu:phosphoric_acid 1000", "minecraft:water 3000", "gtceu:distilled_water 2000", "gtceu:biomass 1000")
+        .itemOutputs("64x gtceu:stem_cells", "gtceu:phosphorus_dust")
+        .EUt(GTValues.VA[GTValues.ZPM])
+        .duration(600)
+        .blastFurnaceTemp(10800)
+        .cleanroom(CleanroomType.STERILE_CLEANROOM)
+
+    gtr.distort("gtceu:polyurethaneresin")
+        .notConsumable("gtceu:gold_nanoswarm")
+        .itemInputs("45x gtceu:tin_dust", "64x gtceu:carbon_dust", "5x gtceu:nickel_dust", "5x gtceu:palladium_dust", "5x gtceu:iron_dust", "36x gtceu:silicon_dust")
+        .inputFluids("gtceu:oxygen 1964000", "gtceu:hydrogen 529000", "gtceu:chlorine 870000", "gtceu:nitrogen 45000")
+        .outputFluids("gtceu:polyurethaneresin 45000")
+        .EUt(GTValues.VA[GTValues.IV])
+        .duration(27000)
         .blastFurnaceTemp(16200)
         .cleanroom(CleanroomType.CLEANROOM)
 })

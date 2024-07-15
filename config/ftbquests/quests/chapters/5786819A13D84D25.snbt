@@ -162,8 +162,8 @@
 				item: "gtceu:hexanitrohexaaxaisowurtzitane_dust"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 0.5d
+			x: 2.0d
+			y: -1.0d
 		}
 		{
 			dependencies: [
@@ -177,7 +177,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 0.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["2DD8E128C6E3E41D"]
@@ -206,7 +206,10 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["2DD8E128C6E3E41D"]
+			dependencies: [
+				"2DD8E128C6E3E41D"
+				"1FE5F8D737ADB1B8"
+			]
 			id: "23B418803D455368"
 			tasks: [{
 				id: "12A595464E70C437"
@@ -214,7 +217,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 2.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["76BAF48FA9D845C6"]
@@ -342,7 +345,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: -1.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["3BA7B0BA435252E0"]

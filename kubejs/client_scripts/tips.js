@@ -84,6 +84,7 @@ ItemEvents.tooltip(event => {
         "gtceu:a_mass_fabricator",
         "gtceu:cooling_tower",
         "gtceu:super_blast_smelter",
+        "gtceu:super_particle_collider",
         "gtceu:large_chemical_plant"], "允许同时使用激光仓")
     event.add(["gtceu:magic_manufacturer",
         "gtceu:sps_crafting",
@@ -106,7 +107,6 @@ ItemEvents.tooltip(event => {
         "gtceu:gravitation_shockburst",
         "gtceu:suprachronal_assembly_line",
         "gtceu:resource_collection",
-        "gtceu:super_particle_collider",
         "gtceu:engraving_laser_plant",
         "gtceu:dimensionally_transcendent_mixer",
         "gtceu:mage_assembler",
