@@ -6,7 +6,9 @@ StartupEvents.registry("block", event => {
         ["adamantine", "16200", "32", "9"],
         ["naquadriatictaranium", "18900", "64", "9"],
         ["starmetal", "21600", "64", "9"],
-        ["infinity", "36000", "128", "9"]
+        ["infinity", "36000", "128", "9"],
+        ["hypogen", "62000", "256", "9"],
+        ["eternity", "96000", "512", "9"]
     ]
     coils.forEach((coil) => {
         event.create(coil[0] + "_coil_block", "gtceu:coil")

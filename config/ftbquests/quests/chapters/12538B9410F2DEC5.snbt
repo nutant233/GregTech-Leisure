@@ -399,7 +399,10 @@
 		}
 		{
 			dependencies: ["7C23CC6ADDC33EA0"]
-			description: ["自带回流，自带隔离，神器"]
+			description: [
+				"自带回流，自带隔离，神器"
+				"目前bug较多"
+			]
 			id: "608DB6EE086D9AAD"
 			shape: "gear"
 			size: 1.2d
