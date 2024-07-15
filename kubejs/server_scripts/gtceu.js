@@ -7958,7 +7958,8 @@ ServerEvents.recipes((event) => {
 
         [["300x gtceu:netherrack_sulfur_ore",
             "200x gtceu:netherrack_pyrite_ore",
-            "100x gtceu:netherrack_sphalerite_ore"], "kubejs:sulfur_vein_essence"]]
+            "100x gtceu:netherrack_sphalerite_ore",
+            "20x gtceu:netherrack_indium_ore"], "kubejs:sulfur_vein_essence"]]
 
     nether_ores.forEach((nether_ore) => {
         gtr.large_void_miner("nether_void_ore_" + nether_ore[1])
@@ -7977,7 +7978,8 @@ ServerEvents.recipes((event) => {
 
         [["160x gtceu:endstone_bauxite_ore",
             "80x gtceu:endstone_ilmenite_ore",
-            "80x gtceu:endstone_aluminium_ore"], "kubejs:bauxite_vein_end_essence"],
+            "80x gtceu:endstone_aluminium_ore",
+            "30x gtceu:endstone_titanium_ore"], "kubejs:bauxite_vein_end_essence"],
 
         [["60x gtceu:endstone_bornite_ore",
             "40x gtceu:endstone_cooperite_ore",
@@ -7991,10 +7993,23 @@ ServerEvents.recipes((event) => {
 
         [["180x gtceu:endstone_pitchblende_ore",
             "120x gtceu:endstone_uraninite_ore",
-            "20x gtceu:endstone_trinium_ore"], "kubejs:pitchblende_vein_end_essence"],
+            "30x gtceu:endstone_tungsten_ore"], "kubejs:pitchblende_vein_end_essence"],
 
         [["180x gtceu:endstone_naquadah_ore",
-            "60x gtceu:endstone_plutonium_ore"], "kubejs:naquadah_vein_essence"]]
+            "60x gtceu:endstone_plutonium_ore",
+            "20x gtceu:endstone_trinium_ore"], "kubejs:naquadah_vein_essence"]]
+
+    const all_ores = overworld_ores.concat(overworld_ores, nether_ores, end_ores)
+
+    let recipe = gtr.random_ore("random_ore")
+        .inputFluids("gtceu:drilling_fluid 10000000")
+        .EUt(GTValues.VA[GTValues.ZPM])
+        .duration(1200)
+    all_ores.forEach(ore => {
+        ore[0].forEach(item => {
+            recipe.chancedOutput(item, 200, 20)
+        })
+    })
 
     end_ores.forEach((end_ore) => {
         gtr.large_void_miner("end_void_ore_" + end_ore[1])
@@ -8017,7 +8032,8 @@ ServerEvents.recipes((event) => {
             "120x gtceu:pyrope_ore",
             "60x gtceu:sapphire_ore",
             "60x gtceu:green_sapphire_ore",
-            "70x gtceu:stibnite_ore"], "2"],
+            "70x gtceu:stibnite_ore",
+            "120x gtceu:uraninite_ore"], "2"],
 
         [["90x gtceu:bastnasite_ore",
             "30x gtceu:molybdenum_ore",
@@ -8159,9 +8175,9 @@ ServerEvents.recipes((event) => {
         [["120x gtceu:scheelite_ore",
             "80x gtceu:tungstate_ore",
             "40x gtceu:lithium_ore",
-            "20x gtceu:tungsten_ore",
-            "180x gtceu:pitchblende_ore",
-            "120x gtceu:uraninite_ore"], "23"],
+            "20x gtceu:tellurium_ore",
+            "30x gtceu:tungsten_ore",
+            "180x gtceu:pitchblende_ore"], "23"],
 
         [["180x gtceu:naquadah_ore",
             "60x gtceu:plutonium_ore",

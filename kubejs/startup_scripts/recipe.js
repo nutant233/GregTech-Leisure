@@ -74,6 +74,13 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.MINER)
 
+    event.create("random_ore")
+        .setEUIO("in")
+        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+        .setMaxIOSize(0, 216, 1, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.MINER)
+
     event.create("void_fluid_drilling_rig")
         .setEUIO("in")
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)

@@ -359,6 +359,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("large_void_miner")
+        .recipeType("random_ore")
         .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern((definition) =>
@@ -3789,5 +3790,4 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where(" ", Predicates.any())
                 .build())
         .workableCasingRenderer("kubejs:block/oxidation_resistant_hastelloy_n_mechanical_casing", "gtceu:block/multiblock/gcym/large_wiremill")
-
 })
