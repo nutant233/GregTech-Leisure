@@ -5206,8 +5206,8 @@ ServerEvents.recipes((event) => {
 
     gtr.advanced_hyper_reactor("gtceu:concentration_mixing_hyper_fuel_2")
         .inputFluids("gtceu:concentration_mixing_hyper_fuel_2 1")
-        .duration(800)
-        .EUt(-GTValues.V[GTValues.OpV])
+        .duration(200)
+        .EUt(-GTValues.V[GTValues.MAX])
 
     gtr.mixer("gtceu:concentration_mixing_hyper_fuel_1")
         .itemInputs("gtceu:hassium_dust", "gtceu:oganesson_dust")

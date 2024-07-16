@@ -410,7 +410,7 @@
 			y: 8.5d
 		}
 		{
-			description: ["相比硅岩，更省燃料，最高4A MAX输出"]
+			description: ["相比硅岩，更省燃料，最高64A MAX输出"]
 			id: "548E8FA4B1004534"
 			tasks: [{
 				id: "5079AC2040FDA3AA"
@@ -442,7 +442,7 @@
 			y: 10.0d
 		}
 		{
-			description: ["最高64A MAX输出"]
+			description: ["最高1024A MAX输出"]
 			id: "25F672CF48091CEC"
 			tasks: [{
 				id: "7F7D348C6E55EC07"

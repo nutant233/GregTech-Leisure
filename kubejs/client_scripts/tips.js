@@ -42,21 +42,22 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:plasma_condenser", "等离子专用冷冻机")
     event.add("gtceu:rare_earth_centrifugal", "稀土专用离心机")
     event.add("gtceu:magic_manufacturer", "将电能转化为魔力")
-    event.add("gtceu:chemical_distort", ["线圈温度每高出配方温度100K，并行加1", "更高的电压不会提供额外温度"])
+    event.add("gtceu:chemical_distort", ["线圈温度每高出配方温度100K，并行加4", "更高的电压不会提供额外温度"])
+    event.add(["gtceu:dimensional_focus_engraving_array", "gtceu:mega_wiremill"], "线圈温度每高出900K，并行数x2")
     event.add("gtceu:sps_crafting", "借助魔力合成特殊的物品")
     event.add("gtceu:matter_fabricator", "产出特殊物质")
     event.add(["gtceu:nano_forge_1", "gtceu:nano_forge_2", "gtceu:nano_forge_3"], ["只能使用激光仓", "处理低阶纳米锻炉配方时并行数x16"])
     event.add("ad_astra:oxygen_loader", "§c仅合成，无法产出氧气")
     event.add(["gtceu:dimensionally_transcendent_dirt_forge", "gtceu:dimensionally_transcendent_steam_oven"], ["拥有524288的最大并行", "并且直接完成配方"])
-    event.add(["gtceu:suprachronal_assembly_line_module", "gtceu:suprachronal_assembly_line"], "耗时倍数x0.4")
     event.add(["gtceu:large_chemical_plant", "gtceu:chemical_plant"], "线圈等级每高出白铜一级能耗降低5%")
     event.add(["gtceu:processing_plant", "gtceu:assemble_plant", "gtceu:separated_plant", "gtceu:mixed_plant"], ["耗能倍数x0.8", "耗时倍数x0.9", "每种模式都需要放入一个对应电压等级的机器才能运行", "电压等级每高出LV一级，最大并行数+4，上限为16"])
     event.add("gtceu:space_elevator", ["可安装最多8个拓展模块", "查询JEI多方块信息获取模块位置"])
     event.add("gtceu:suprachronal_assembly_line_module", "安装在超时空装配线两侧")
     event.add("gtceu:suprachronal_assembly_line", ["§8§l不可视之触", "可在两侧拓展模块", "查询JEI多方块信息获取模块位置"])
-    event.add("gtceu:hyper_reactor", "超能反应")
+    event.add(["gtceu:suprachronal_assembly_line_module", "gtceu:suprachronal_assembly_line"], "耗时倍数x0.4")
+    event.add("gtceu:hyper_reactor", ["每次运行前提供额外的1mb等离子体将获得16的并行", "不同燃料所需的等离子体不同", "从1-4顺序为：", "山铜，末影，魔金，亚稳态𬭶"])
+    event.add("gtceu:advanced_hyper_reactor", ["提供不同等离子体获得不同并行", "星辉：8，致密中子：16"])
     event.add("gtceu:a_mass_fabricator", ["耗能倍数x0.8", "耗时倍数x0.5"])
-    event.add("gtceu:holy_separator", ["耗能倍数x0.6", "耗时倍数x0.4"])
     event.add("gtceu:dimensionally_transcendent_mixer", "运行搅拌机配方时每秒进度额外增加1秒")
     event.add("gtceu:space_probe_surface_reception", "不要遮挡")
     event.add(["gtceu:mega_alloy_blast_smelter", "gtceu:mega_blast_furnace"], "耗时倍数x0.8")
@@ -73,15 +74,18 @@ ItemEvents.tooltip(event => {
         "gtceu:advanced_sps_crafting",
         "gtceu:naquadah_reactor",
         "gtceu:hyper_reactor",
+        "gtceu:advanced_hyper_reactor",
         "gtceu:mage_assembler",
         "gtceu:suprachronal_assembly_line",
         "gtceu:superconducting_electromagnetism",
         "gtceu:dimensionally_transcendent_mixer",
+        "gtceu:dimensional_focus_engraving_array",
         "gtceu:qft",
         "gtceu:matter_fabricator",
         "gtceu:holy_separator",
         "gtceu:crystalline_infinity",
         "gtceu:a_mass_fabricator",
+        "gtceu:field_extrusion_factory",
         "gtceu:cooling_tower",
         "gtceu:super_blast_smelter",
         "gtceu:super_particle_collider",
@@ -94,12 +98,11 @@ ItemEvents.tooltip(event => {
         "gtceu:nano_forge_2",
         "gtceu:nano_forge_3",
         "gtceu:space_probe_surface_reception",
-        "gtceu:superconducting_electromagnetism",
         "gtceu:dimensionally_transcendent_plasma_forge",
+        "gtceu:dimensional_focus_engraving_array",
         "gtceu:advanced_sps_crafting",
         "gtceu:precision_assembler",
         "gtceu:large_infuser",
-        "gtceu:holy_separator",
         "gtceu:pcb_factory",
         "gtceu:large_gas_collector",
         "gtceu:aggregation_device",
@@ -110,10 +113,8 @@ ItemEvents.tooltip(event => {
         "gtceu:engraving_laser_plant",
         "gtceu:dimensionally_transcendent_mixer",
         "gtceu:mage_assembler",
-        "gtceu:qft",
         "gtceu:a_mass_fabricator",
         "gtceu:star_ultimate_material_forge_factory",
-        "gtceu:crystalline_infinity",
         "gtceu:dragon_egg_copier",
         "gtceu:cooling_tower",
         "gtceu:large_chemical_plant"], Text.keybind("gtceu.machine.perfect_oc"))
@@ -139,6 +140,7 @@ ItemEvents.tooltip(event => {
         "gtceu:super_particle_collider",
         "gtceu:engraving_laser_plant",
         "gtceu:dimensionally_transcendent_mixer",
+        "gtceu:field_extrusion_factory",
         "gtceu:qft",
         "gtceu:large_pyrolyse_oven",
         "gtceu:large_chemical_plant",
