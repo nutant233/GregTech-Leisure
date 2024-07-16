@@ -41,6 +41,18 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     GTMachines.registerSimpleGenerator("naquadah_reactor", GTRecipeTypes.get("naquadah_reactor"),
         GTMachines.genericGeneratorTankSizeFunction, 0.1, GTValues.IV, GTValues.LuV, GTValues.ZPM)
 
+    function getGreenhouseLight(machine) {
+        let level = machine.self().getLevel()
+        let pos = machine.self().getPos()
+        let coordinates = [pos.offset(1, 2, 0), pos.offset(1, 2, 1), pos.offset(1, 2, -1), pos.offset(0, 2, 1), pos.offset(0, 2, -1), pos.offset(-1, 2, 0), pos.offset(-1, 2, 1), pos.offset(-1, 2, -1), pos.offset(2, 2, 0), pos.offset(2, 2, -1), pos.offset(2, 2, 1), pos.offset(3, 2, 0), pos.offset(3, 2, -1), pos.offset(3, 2, 1), pos.offset(-2, 2, 0), pos.offset(-2, 2, -1), pos.offset(-2, 2, 1), pos.offset(-3, 2, 0), pos.offset(-3, 2, -1), pos.offset(-3, 2, 1), pos.offset(-1, 2, 2), pos.offset(0, 2, 2), pos.offset(1, 2, 2), pos.offset(-1, 2, 3), pos.offset(0, 2, 3), pos.offset(1, 2, 3), pos.offset(-1, 2, -2), pos.offset(0, 2, -2), pos.offset(1, 2, -2), pos.offset(-1, 2, - 3), pos.offset(0, 2, -3), pos.offset(1, 2, -3)]
+        for (let i in coordinates) {
+            if (level.getBlock(coordinates[i]) == "gtceu:tempered_glass") {
+                return level.getBlock(coordinates[i].offset(0, 1, 0)).getSkyLight()
+            }
+        }
+        return 0
+    }
+
     event.create("greenhouse", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
@@ -64,39 +76,34 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("0", Predicates.any())
                 .build())
         .beforeWorking(machine => {
-            let level = machine.self().getLevel()
-            let pos = machine.self().getPos()
-            let coordinates = [pos.offset(1, 2, 0), pos.offset(1, 2, 1), pos.offset(1, 2, -1), pos.offset(0, 2, 1), pos.offset(0, 2, -1), pos.offset(-1, 2, 0), pos.offset(-1, 2, 1), pos.offset(-1, 2, -1), pos.offset(2, 2, 0), pos.offset(2, 2, -1), pos.offset(2, 2, 1), pos.offset(3, 2, 0), pos.offset(3, 2, -1), pos.offset(3, 2, 1), pos.offset(-2, 2, 0), pos.offset(-2, 2, -1), pos.offset(-2, 2, 1), pos.offset(-3, 2, 0), pos.offset(-3, 2, -1), pos.offset(-3, 2, 1), pos.offset(-1, 2, 2), pos.offset(0, 2, 2), pos.offset(1, 2, 2), pos.offset(-1, 2, 3), pos.offset(0, 2, 3), pos.offset(1, 2, 3), pos.offset(-1, 2, -2), pos.offset(0, 2, -2), pos.offset(1, 2, -2), pos.offset(-1, 2, - 3), pos.offset(0, 2, -3), pos.offset(1, 2, -3)]
-            for (let i in coordinates) {
-                if (level.getBlock(coordinates[i]) == "gtceu:tempered_glass" && level.getBlock(coordinates[i].offset(0, 1, 0)).getSkyLight() > 0) {
-                    return true
-                }
+            if (getGreenhouseLight(machine) > 0) {
+                return true
             }
             machine.getRecipeLogic().resetRecipeLogic()
             return false
         })
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
-                let level = machine.self().getLevel()
-                let pos = machine.self().getPos()
-                let coordinates = [pos.offset(1, 2, 0), pos.offset(1, 2, 1), pos.offset(1, 2, -1), pos.offset(0, 2, 1), pos.offset(0, 2, -1), pos.offset(-1, 2, 0), pos.offset(-1, 2, 1), pos.offset(-1, 2, -1), pos.offset(2, 2, 0), pos.offset(2, 2, -1), pos.offset(2, 2, 1), pos.offset(3, 2, 0), pos.offset(3, 2, -1), pos.offset(3, 2, 1), pos.offset(-2, 2, 0), pos.offset(-2, 2, -1), pos.offset(-2, 2, 1), pos.offset(-3, 2, 0), pos.offset(-3, 2, -1), pos.offset(-3, 2, 1), pos.offset(-1, 2, 2), pos.offset(0, 2, 2), pos.offset(1, 2, 2), pos.offset(-1, 2, 3), pos.offset(0, 2, 3), pos.offset(1, 2, 3), pos.offset(-1, 2, -2), pos.offset(0, 2, -2), pos.offset(1, 2, -2), pos.offset(-1, 2, - 3), pos.offset(0, 2, -3), pos.offset(1, 2, -3)]
-                for (let i in coordinates) {
-                    if (level.getBlock(coordinates[i]) == "gtceu:tempered_glass") {
-                        let SkyLight = level.getBlock(coordinates[i].offset(0, 1, 0)).getSkyLight()
-                        let logic = machine.getRecipeLogic()
-                        if (SkyLight == 0) {
-                            machine.getRecipeLogic().setProgress(0)
-                        }
-                        if (SkyLight < 15 && SkyLight > 0) {
-                            logic.setProgress(logic.getProgress() - 10)
-                            return true
-                        }
-                    }
+                let SkyLight = getGreenhouseLight(machine)
+                let logic = machine.getRecipeLogic()
+                if (SkyLight == 0) {
+                    logic.setProgress(0)
+                }
+                if (SkyLight < 15 && SkyLight > 0) {
+                    logic.setProgress(logic.getProgress() - 10)
+                    return true
                 }
             }
             return true
         })
-        .workableCasingRenderer("gtceu:block/casings/voltage/ulv/side", "gtceu:block/multiblock/implosion_compressor", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                if (getGreenhouseLight(controller) < 15) {
+                    components.add(Component.literal("光照不足"))
+                }
+            }
+        })
+        .workableCasingRenderer("gtceu:block/casings/voltage/ulv/side", "gtceu:block/multiblock/implosion_compressor")
 
     event.create("stellar_forge", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -140,7 +147,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return true
         })
-        .workableCasingRenderer("gtceu:block/casings/gcym/atomic_casing", "gtceu:block/multiblock/electric_blast_furnace", true)
+        .workableCasingRenderer("gtceu:block/casings/gcym/atomic_casing", "gtceu:block/multiblock/electric_blast_furnace")
 
     event.create("plasma_condenser", "multiblock")
         .rotationState(RotationState.ALL)
@@ -165,7 +172,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("d", Predicates.controller(Predicates.blocks(definition.get())))
             .where(" ", Predicates.any())
             .build())
-        .workableCasingRenderer("kubejs:block/antifreeze_heatproof_machine_casing", "gtceu:block/multiblock/vacuum_freezer", true)
+        .workableCasingRenderer("kubejs:block/antifreeze_heatproof_machine_casing", "gtceu:block/multiblock/vacuum_freezer")
 
     event.create("rare_earth_centrifugal", "multiblock")
         .rotationState(RotationState.ALL)
@@ -189,7 +196,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("d", Predicates.blocks("kubejs:neutronium_pipe_casing"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_sturdy_hsse", "gtceu:block/multiblock/gcym/large_centrifuge", true)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_sturdy_hsse", "gtceu:block/multiblock/gcym/large_centrifuge")
 
     event.create("magic_manufacturer", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -222,7 +229,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("i", Predicates.blocks("kubejs:magic_core"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/voltage/uiv/side", "gtceu:block/multiblock/implosion_compressor", true)
+        .workableCasingRenderer("gtceu:block/casings/voltage/uiv/side", "gtceu:block/multiblock/implosion_compressor")
 
     event.create("sps_crafting", "multiblock")
         .rotationState(RotationState.ALL)
@@ -250,7 +257,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("g", Predicates.blocks("kubejs:magic_core"))
                 .where(" ", Predicates.air())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/fusion/fusion_casing_mk2", "gtceu:block/multiblock/assembly_line", true)
+        .workableCasingRenderer("gtceu:block/casings/fusion/fusion_casing_mk2", "gtceu:block/multiblock/assembly_line")
 
     event.create("advanced_sps_crafting", "multiblock")
         .rotationState(RotationState.ALL)
@@ -287,7 +294,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("i", Predicates.blocks("kubejs:sps_casing"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/fusion/fusion_casing_mk2", "gtceu:block/multiblock/assembly_line", true)
+        .workableCasingRenderer("gtceu:block/casings/fusion/fusion_casing_mk2", "gtceu:block/multiblock/assembly_line")
 
     event.create("matter_fabricator", "multiblock")
         .rotationState(RotationState.ALL)
@@ -311,7 +318,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("c", Predicates.blocks("gtceu:superconducting_coil"))
                 .where("d", Predicates.blocks("gtceu:electrolytic_cell"))
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/hpca/high_power_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("gtceu:block/casings/hpca/high_power_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("void_fluid_drilling_rig", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -332,7 +339,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("F", Predicates.blocks("gtceu:hssg_frame"))
                 .where("#", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_sturdy_hsse", "gtceu:block/multiblock/fluid_drilling_rig", true)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_sturdy_hsse", "gtceu:block/multiblock/fluid_drilling_rig")
 
     event.create("void_miner", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -353,7 +360,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("F", Predicates.blocks("gtceu:titanium_frame"))
                 .where("#", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_stable_titanium", "gtceu:block/multiblock/large_miner", true)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_stable_titanium", "gtceu:block/multiblock/large_miner")
 
     event.create("large_void_miner", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -382,7 +389,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("d", Predicates.blocks("gtceu:stable_machine_casing"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_robust_tungstensteel", "gtceu:block/multiblock/large_miner", true)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_robust_tungstensteel", "gtceu:block/multiblock/large_miner")
 
     event.create("annihilate_generator", "multiblock")
         .rotationState(RotationState.ALL)
@@ -467,7 +474,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("J", Predicates.blocks("gtceu:high_power_casing"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/hpca/high_power_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("gtceu:block/casings/hpca/high_power_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("chemical_plant", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
@@ -491,7 +498,14 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("d", Predicates.blocks("gtceu:ptfe_pipe_casing"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_inert_ptfe", "gtceu:block/machines/chemical_reactor", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                let value = 1 - controller.getCoilTier() * 0.05
+                components.add(Component.literal("耗时倍数：" + value))
+                components.add(Component.literal("耗时倍数：" + value))
+            }
+        })
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_inert_ptfe", "gtceu:block/machines/chemical_reactor")
 
     event.create("advanced_hyper_reactor", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -524,7 +538,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where(" ", Predicates.any())
                 .where("-", Predicates.air())
                 .build())
-        .workableCasingRenderer("kubejs:block/enhance_hyper_mechanical_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("kubejs:block/enhance_hyper_mechanical_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("hyper_reactor", "multiblock")
         .rotationState(RotationState.ALL)
@@ -549,7 +563,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("d", Predicates.blocks("gtceu:fusion_glass"))
                 .where(" ", Predicates.air())
                 .build())
-        .workableCasingRenderer("kubejs:block/enhance_hyper_mechanical_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("kubejs:block/enhance_hyper_mechanical_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("large_naquadah_reactor", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -577,7 +591,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("f", Predicates.blocks("kubejs:neutronium_gearbox"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("advanced_assembly_line", "multiblock")
         .rotationState(RotationState.ALL)
@@ -605,7 +619,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("T", Predicates.blocks("kubejs:advanced_assembly_line_unit"))
                 .where("#", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/multiblock/assembly_line", true)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/multiblock/assembly_line")
 
     event.create("sphere_of_harmony", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -661,9 +675,8 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("B", Predicates.blocks("kubejs:dimensional_stability_casing"))
                 .where("C", Predicates.blocks("kubejs:dimensional_bridge_casing"))
                 .where(" ", Predicates.any())
-                .build()
-        )
-        .workableCasingRenderer("kubejs:block/dimensionally_transcendent_casing", "gtceu:block/cosmos_simulation", true)
+                .build())
+        .workableCasingRenderer("kubejs:block/dimensionally_transcendent_casing", "gtceu:block/cosmos_simulation")
 
     event.create("space_probe_surface_reception", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -719,7 +732,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             machine.getRecipeLogic().resetRecipeLogic()
             return false
         })
-        .workableCasingRenderer("gtceu:block/casings/gcym/atomic_casing", "gtceu:block/multiblock/data_bank", true)
+        .workableCasingRenderer("gtceu:block/casings/gcym/atomic_casing", "gtceu:block/multiblock/data_bank")
 
     function dtpf() {
         return FactoryBlockPattern.start()
@@ -758,7 +771,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .aisle(" ddd   ddd             ddd   ddd ", "                                 ", "                                 ", "                                 ", " ddd   ddd             ddd   ddd ", "                                 ", "                                 ", "                                 ", "                                 ", "                                 ", " ddd   ddd             ddd   ddd ", "                                 ", "                                 ", "                                 ", " ddd   ddd   d     d   ddd   ddd ", "         d   d     d   d         ", "         d   d     d   d         ", "                                 ", "                                 ", "                                 ", "         d   d     d   d         ", "         d   d     d   d         ", "         d   d     d   d         ", "                                 ")
     }
 
-    event.create("dimensionally_transcendent_plasma_forge", "multiblock")
+    event.create("dimensionally_transcendent_plasma_forge", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("dimensionally_transcendent_plasma_forge")
@@ -776,12 +789,31 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
                     .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1)))
                 .where("b", Predicates.blocks("kubejs:dimension_injection_casing"))
-                .where("C", Predicates.blocks("kubejs:uruium_coil_block"))
+                .where("C", Predicates.heatingCoils())
                 .where("d", Predicates.blocks("kubejs:dimensionally_transcendent_casing"))
                 .where("s", Predicates.blocks("kubejs:dimensional_bridge_casing"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("kubejs:block/dimensionally_transcendent_casing", "gtceu:block/dimensionally_transcendent_plasma_forge", true)
+        .beforeWorking((machine, recipe) => {
+            if (machine.getCoilType().getCoilTemperature() == 273) {
+                if (machine.getRecipeType() == GTRecipeTypes.get("stellar_forge")) {
+                    return true
+                } else if (recipe.data.getInt("ebf_temp") <= 32000) {
+                    return true
+                }
+            } else if (recipe.data.getInt("ebf_temp") <= machine.getCoilType().getCoilTemperature()) {
+                return true
+            }
+            machine.getRecipeLogic().resetRecipeLogic()
+            return false
+        })
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                let temp = controller.getCoilType().getCoilTemperature()
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of((temp == 273 ? 32000 : temp) + "K").blue()))
+            }
+        })
+        .workableCasingRenderer("kubejs:block/dimensionally_transcendent_casing", "gtceu:block/dimensionally_transcendent_plasma_forge")
 
     event.create("decay_hastener", "multiblock")
         .rotationState(RotationState.ALL)
@@ -804,7 +836,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("c", Predicates.blocks("gtceu:fusion_casing"))
                 .where("d", Predicates.blocks("gtceu:uv_hermetic_casing"))
                 .build())
-        .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/data_bank", true)
+        .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/data_bank")
 
     event.create("large_recycler", "multiblock")
         .rotationState(RotationState.ALL)
@@ -822,9 +854,13 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.autoAbilities(definition.getRecipeTypes()))
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
                 .where("c", Predicates.blocks("gtceu:bronze_gearbox"))
-                .build()
-        )
-        .workableCasingRenderer("gtceu:block/casings/steam/steel/side", "gtceu:block/multiblock/gcym/large_maceration_tower", true)
+                .build())
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(4 ** (machine.self().getTier() - 4)).darkPurple()).gray())
+            }
+        })
+        .workableCasingRenderer("gtceu:block/casings/steam/steel/side", "gtceu:block/multiblock/gcym/large_maceration_tower")
 
     event.create("mass_fabricator", "multiblock")
         .rotationState(RotationState.ALL)
@@ -851,10 +887,8 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("d", Predicates.blocks("gtceu:hyper_core"))
                 .where("e", Predicates.blocks("gtceu:uhv_hermetic_casing"))
                 .where("f", Predicates.blocks("gtceu:heat_vent"))
-                .build()
-        )
-        .workableCasingRenderer(
-            "gtceu:block/casings/voltage/uhv/side", "gtceu:block/multiblock/gcym/large_electrolyzer", true)
+                .build())
+        .workableCasingRenderer("gtceu:block/casings/voltage/uhv/side", "gtceu:block/multiblock/gcym/large_electrolyzer")
 
     event.create("a_mass_fabricator", "multiblock")
         .rotationState(RotationState.ALL)
@@ -889,10 +923,8 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("D", Predicates.blocks("gtceu:neutronium_frame"))
                 .where("E", Predicates.blocks("kubejs:hollow_casing"))
                 .where("F", Predicates.blocks("gtceu:hyper_core"))
-                .build()
-        )
-        .workableCasingRenderer(
-            "gtceu:block/casings/voltage/uxv/side", "gtceu:block/multiblock/fusion_reactor", true)
+                .build())
+        .workableCasingRenderer("gtceu:block/casings/voltage/uxv/side", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("circuit_assembly_line", "multiblock")
         .rotationState(RotationState.ALL)
@@ -914,7 +946,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("f", Predicates.abilities(PartAbility.EXPORT_ITEMS))
                 .where("g", Predicates.abilities(PartAbility.IMPORT_FLUIDS_4X))
                 .build())
-        .workableCasingRenderer("kubejs:block/pikyonium_machine_casing", "gtceu:block/multiblock/assembly_line", true)
+        .workableCasingRenderer("kubejs:block/pikyonium_machine_casing", "gtceu:block/multiblock/assembly_line")
 
     event.create("precision_assembler", "multiblock")
         .rotationState(RotationState.ALL)
@@ -940,7 +972,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("-", Predicates.air())
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("kubejs:block/oxidation_resistant_hastelloy_n_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler", true)
+        .workableCasingRenderer("kubejs:block/oxidation_resistant_hastelloy_n_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
     event.create("space_elevator", "multiblock", (holder) => new $SpaceElevator(holder))
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1002,7 +1034,35 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("-", Predicates.air())
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("kubejs:block/space_elevator_mechanical_casing", "gtceu:block/space_elevator", true)
+        .workableCasingRenderer("kubejs:block/space_elevator_mechanical_casing", "gtceu:block/space_elevator")
+
+    function isSpaceElevatorModule(machine) {
+        let level = machine.self().getLevel()
+        let pos = machine.self().getPos()
+        let coordinates = [pos.offset(8, -2, 3),
+        pos.offset(8, -2, -3),
+        pos.offset(-8, -2, 3),
+        pos.offset(-8, -2, -3),
+        pos.offset(3, -2, 8),
+        pos.offset(-3, -2, 8),
+        pos.offset(3, -2, -8),
+        pos.offset(-3, -2, -8)]
+        for (let i in coordinates) {
+            if (level.getBlock(coordinates[i]) == "gtceu:power_core") {
+                let coordinatess = [coordinates[i].offset(3, 2, 0),
+                coordinates[i].offset(-3, 2, 0),
+                coordinates[i].offset(0, 2, 3),
+                coordinates[i].offset(0, 2, -3)]
+                for (let j in coordinatess) {
+                    let logic = gtch.getRecipeLogic(level, coordinatess[j], null)
+                    if (logic != null && logic.getMachine().self().getRecipeType() == GTRecipeTypes.get("space_elevator") && logic.isWorking() && logic.getProgress() > 80) {
+                        return true
+                    }
+                }
+            }
+        }
+        return false
+    }
 
     event.create("assembler_module", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1023,65 +1083,28 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("c", Predicates.blocks("kubejs:module_connector"))
                 .build())
         .beforeWorking(machine => {
-            let level = machine.self().getLevel()
-            let pos = machine.self().getPos()
-            let coordinates = [pos.offset(8, -2, 3),
-            pos.offset(8, -2, -3),
-            pos.offset(-8, -2, 3),
-            pos.offset(-8, -2, -3),
-            pos.offset(3, -2, 8),
-            pos.offset(-3, -2, 8),
-            pos.offset(3, -2, -8),
-            pos.offset(-3, -2, -8)]
-            for (let i in coordinates) {
-                if (level.getBlock(coordinates[i]) == "gtceu:power_core") {
-                    let coordinatess = [coordinates[i].offset(3, 2, 0),
-                    coordinates[i].offset(-3, 2, 0),
-                    coordinates[i].offset(0, 2, 3),
-                    coordinates[i].offset(0, 2, -3)]
-                    for (let j in coordinatess) {
-                        let logic = gtch.getRecipeLogic(level, coordinatess[j], null)
-                        if (logic != null && logic.getMachine().self().getRecipeType() == GTRecipeTypes.get("space_elevator") && logic.isWorking() && logic.getProgress() > 80) {
-                            return true
-                        }
-                    }
-                }
+            if (isSpaceElevatorModule(machine)) {
+                return true
             }
             machine.getRecipeLogic().resetRecipeLogic()
             return false
         })
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
-                let level = machine.self().getLevel()
-                let pos = machine.self().getPos()
-                let coordinates = [pos.offset(8, -2, 3),
-                pos.offset(8, -2, -3),
-                pos.offset(-8, -2, 3),
-                pos.offset(-8, -2, -3),
-                pos.offset(3, -2, 8),
-                pos.offset(-3, -2, 8),
-                pos.offset(3, -2, -8),
-                pos.offset(-3, -2, -8)]
-                for (let i in coordinates) {
-                    if (level.getBlock(coordinates[i]) == "gtceu:power_core") {
-                        let coordinatess = [coordinates[i].offset(3, 2, 0),
-                        coordinates[i].offset(-3, 2, 0),
-                        coordinates[i].offset(0, 2, 3),
-                        coordinates[i].offset(0, 2, -3)]
-                        for (let j in coordinatess) {
-                            let logic = gtch.getRecipeLogic(level, coordinatess[j], null)
-                            if (logic != null && logic.getMachine().self().getRecipeType() == GTRecipeTypes.get("space_elevator") && logic.isWorking() && logic.getProgress() > 80) {
-                                return true
-                            }
-                        }
-                    }
+                if (isSpaceElevatorModule(machine)) {
+                    return true
                 }
                 machine.getRecipeLogic().resetRecipeLogic()
                 return false
             }
             return true
         })
-        .workableCasingRenderer("kubejs:block/space_elevator_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.literal("该模块" + (isSpaceElevatorModule(controller) ? "已" : "未") + "成功安装"))
+            }
+        })
+        .workableCasingRenderer("kubejs:block/space_elevator_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
     event.create("resource_collection", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1102,65 +1125,28 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("c", Predicates.blocks("kubejs:module_connector"))
                 .build())
         .beforeWorking(machine => {
-            let level = machine.self().getLevel()
-            let pos = machine.self().getPos()
-            let coordinates = [pos.offset(8, -2, 3),
-            pos.offset(8, -2, -3),
-            pos.offset(-8, -2, 3),
-            pos.offset(-8, -2, -3),
-            pos.offset(3, -2, 8),
-            pos.offset(-3, -2, 8),
-            pos.offset(3, -2, -8),
-            pos.offset(-3, -2, -8)]
-            for (let i in coordinates) {
-                if (level.getBlock(coordinates[i]) == "gtceu:power_core") {
-                    let coordinatess = [coordinates[i].offset(3, 2, 0),
-                    coordinates[i].offset(-3, 2, 0),
-                    coordinates[i].offset(0, 2, 3),
-                    coordinates[i].offset(0, 2, -3)]
-                    for (let j in coordinatess) {
-                        let logic = gtch.getRecipeLogic(level, coordinatess[j], null)
-                        if (logic != null && logic.getMachine().self().getRecipeType() == GTRecipeTypes.get("space_elevator") && logic.isWorking() && logic.getProgress() > 80) {
-                            return true
-                        }
-                    }
-                }
+            if (isSpaceElevatorModule(machine)) {
+                return true
             }
             machine.getRecipeLogic().resetRecipeLogic()
             return false
         })
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
-                let level = machine.self().getLevel()
-                let pos = machine.self().getPos()
-                let coordinates = [pos.offset(8, -2, 3),
-                pos.offset(8, -2, -3),
-                pos.offset(-8, -2, 3),
-                pos.offset(-8, -2, -3),
-                pos.offset(3, -2, 8),
-                pos.offset(-3, -2, 8),
-                pos.offset(3, -2, -8),
-                pos.offset(-3, -2, -8)]
-                for (let i in coordinates) {
-                    if (level.getBlock(coordinates[i]) == "gtceu:power_core") {
-                        let coordinatess = [coordinates[i].offset(3, 2, 0),
-                        coordinates[i].offset(-3, 2, 0),
-                        coordinates[i].offset(0, 2, 3),
-                        coordinates[i].offset(0, 2, -3)]
-                        for (let j in coordinatess) {
-                            let logic = gtch.getRecipeLogic(level, coordinatess[j], null)
-                            if (logic != null && logic.getMachine().self().getRecipeType() == GTRecipeTypes.get("space_elevator") && logic.isWorking() && logic.getProgress() > 80) {
-                                return true
-                            }
-                        }
-                    }
+                if (isSpaceElevatorModule(machine)) {
+                    return true
                 }
                 machine.getRecipeLogic().resetRecipeLogic()
                 return false
             }
             return true
         })
-        .workableCasingRenderer("kubejs:block/space_elevator_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.literal("该模块" + (isSpaceElevatorModule(controller) ? "已" : "未") + "成功安装"))
+            }
+        })
+        .workableCasingRenderer("kubejs:block/space_elevator_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
     event.create("fishing_ground", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1188,9 +1174,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("c", Predicates.fluids("minecraft:water"))
                 .where(" ", Predicates.air())
                 .build())
-        .workableCasingRenderer("kubejs:block/aluminium_bronze_casing",
-            "gtceu:block/multiblock/gcym/large_assembler", true
-        )
+        .workableCasingRenderer("kubejs:block/aluminium_bronze_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
     event.create("block_conversion_room", "multiblock")
         .rotationState(RotationState.NONE)
@@ -1241,7 +1225,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .onWaiting(machine => {
             machine.getRecipeLogic().interruptRecipe()
         })
-        .workableCasingRenderer("kubejs:block/aluminium_bronze_casing", "gtceu:block/multiblock/cleanroom", true)
+        .workableCasingRenderer("kubejs:block/aluminium_bronze_casing", "gtceu:block/multiblock/cleanroom")
 
     event.create("incubator", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1265,7 +1249,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("e", Predicates.blocks("gtceu:filter_casing"))
                 .where(" ", Predicates.air())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/cleanroom/plascrete", "gtceu:block/multiblock/gcym/large_maceration_tower", true)
+        .workableCasingRenderer("gtceu:block/casings/cleanroom/plascrete", "gtceu:block/multiblock/gcym/large_maceration_tower")
 
     event.create("large_incubator", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1298,7 +1282,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("e", Predicates.blocks("gtceu:filter_casing"))
                 .where(" ", Predicates.air())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/cleanroom/plascrete", "gtceu:block/multiblock/gcym/large_maceration_tower", true)
+        .workableCasingRenderer("gtceu:block/casings/cleanroom/plascrete", "gtceu:block/multiblock/gcym/large_maceration_tower")
 
     event.create("pcb_factory", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1339,7 +1323,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("l", Predicates.blocks("gtceu:stainless_evaporation_casing"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/gcym/watertight_casing", "gtceu:block/multiblock/gcym/large_maceration_tower", true)
+        .workableCasingRenderer("gtceu:block/casings/gcym/watertight_casing", "gtceu:block/multiblock/gcym/large_maceration_tower")
 
     event.create("lava_furnace", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1358,7 +1342,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("C", Predicates.blocks("gtceu:bronze_firebox_casing"))
             .where(" ", Predicates.air())
             .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_oven", false)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_oven")
 
     event.create("large_gas_collector", "multiblock")
         .rotationState(RotationState.NONE)
@@ -1382,7 +1366,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("b", Predicates.blocks("gtceu:assembly_line_grating"))
             .where("e", Predicates.blocks("gtceu:iv_hermetic_casing"))
             .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/machines/gas_collector", true)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/machines/gas_collector")
 
     event.create("aggregation_device", "multiblock", (holder) => new $FusionReactorMachine(holder, GTValues.MAX))
         .rotationState(RotationState.ALL)
@@ -1409,7 +1393,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("g", Predicates.abilities(PartAbility.EXPORT_ITEMS))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/fusion/fusion_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("gtceu:block/casings/fusion/fusion_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("super_particle_collider", "multiblock")
         .rotationState(RotationState.ALL)
@@ -1478,7 +1462,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("f", Predicates.blocks("gtceu:enriched_naquadah_frame"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("kubejs:block/lafium_mechanical_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("kubejs:block/lafium_mechanical_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("engraving_laser_plant", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1515,7 +1499,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("j", Predicates.blocks("gtceu:tungstensteel_pipe_casing"))
             .where("k", Predicates.blocks("kubejs:neutronium_pipe_casing"))
             .build())
-        .workableCasingRenderer("kubejs:block/pikyonium_machine_casing", "gtceu:block/multiblock/gcym/large_engraving_laser", true)
+        .workableCasingRenderer("kubejs:block/pikyonium_machine_casing", "gtceu:block/multiblock/gcym/large_engraving_laser")
 
     event.create("mega_alloy_blast_smelter", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1551,7 +1535,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("k", Predicates.blocks("gtceu:tungstensteel_pipe_casing"))
             .where(" ", Predicates.any())
             .build())
-        .workableCasingRenderer("gtceu:block/casings/gcym/high_temperature_smelting_casing", "gtceu:block/multiblock/gcym/blast_alloy_smelter", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of((controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV)) + "K").red()))
+            }
+        })
+        .workableCasingRenderer("gtceu:block/casings/gcym/high_temperature_smelting_casing", "gtceu:block/multiblock/gcym/blast_alloy_smelter")
 
     event.create("dimensionally_transcendent_mixer", "multiblock")
         .rotationState(RotationState.ALL)
@@ -1592,7 +1581,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return true
         })
-        .workableCasingRenderer("kubejs:block/dimensionally_transcendent_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("kubejs:block/dimensionally_transcendent_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("qft", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1629,7 +1618,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("f", Predicates.blocks("gtceu:qft_coil"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("kubejs:block/manipulator", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("kubejs:block/manipulator", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("super_computation", "multiblock", (holder, args) => new $ComputationProviderMachine(holder, args))
         .rotationState(RotationState.NONE)
@@ -1702,7 +1691,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return 512
         })
-        .workableCasingRenderer("gtceu:block/casings/hpca/computer_casing/back", "gtceu:block/super_computation", true)
+        .workableCasingRenderer("gtceu:block/casings/hpca/computer_casing/back", "gtceu:block/super_computation")
 
     event.create("super_blast_smelter", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1765,7 +1754,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("t", Predicates.abilities(PartAbility.MUFFLER))
             .where(" ", Predicates.any())
             .build())
-        .workableCasingRenderer("gtceu:block/casings/gcym/high_temperature_smelting_casing", "gtceu:block/multiblock/gcym/blast_alloy_smelter", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of((controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV)) + "K").red()))
+            }
+        })
+        .workableCasingRenderer("gtceu:block/casings/gcym/high_temperature_smelting_casing", "gtceu:block/multiblock/gcym/blast_alloy_smelter")
 
     event.create("large_chemical_plant", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
@@ -1796,9 +1790,15 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("d", Predicates.heatingCoils())
                 .where("b", Predicates.blocks("gtceu:ptfe_pipe_casing"))
                 .where(" ", Predicates.any())
-                .build()
-        )
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_inert_ptfe", "gtceu:block/machines/chemical_reactor", true)
+                .build())
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                let value = 1 - controller.getCoilTier() * 0.05
+                components.add(Component.literal("耗时倍数：" + value))
+                components.add(Component.literal("耗时倍数：" + value))
+            }
+        })
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_inert_ptfe", "gtceu:block/machines/chemical_reactor")
 
     event.create("integrated_ore_processor", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -1828,7 +1828,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("g", Predicates.blocks("gtceu:zpm_muffler_hatch"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/gcym/large_maceration_tower", true)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/gcym/large_maceration_tower")
 
     event.create("dragon_egg_copier", "multiblock")
         .rotationState(RotationState.ALL)
@@ -1848,7 +1848,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("c", Predicates.blocks("kubejs:magic_core"))
                 .where("d", Predicates.blocks("gtceu:uev_muffler_hatch"))
                 .build())
-        .workableCasingRenderer("kubejs:block/extreme_strength_tritanium_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("kubejs:block/extreme_strength_tritanium_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("blaze_blast_furnace", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
@@ -1885,7 +1885,13 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return true
         })
-        .workableCasingRenderer("kubejs:block/blaze_blast_furnace_casing", "gtceu:block/multiblock/electric_blast_furnace", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal("4").darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of((controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV)) + "K").red()))
+            }
+        })
+        .workableCasingRenderer("kubejs:block/blaze_blast_furnace_casing", "gtceu:block/multiblock/electric_blast_furnace")
 
     event.create("cold_ice_freezer", "multiblock")
         .rotationState(RotationState.ALL)
@@ -1921,7 +1927,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return true
         })
-        .workableCasingRenderer("kubejs:block/cold_ice_casing", "gtceu:block/multiblock/vacuum_freezer", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal("4")).gray())
+            }
+        })
+        .workableCasingRenderer("kubejs:block/cold_ice_casing", "gtceu:block/multiblock/vacuum_freezer")
 
     event.create("door_of_create", "multiblock")
         .rotationState(RotationState.NONE)
@@ -1997,7 +2008,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return true
         })
-        .workableCasingRenderer("kubejs:block/dimension_connection_casing", "gtceu:block/door_of_create", true)
+        .workableCasingRenderer("kubejs:block/dimension_connection_casing", "gtceu:block/door_of_create")
 
     event.create("large_cracker", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
@@ -2028,7 +2039,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("b", Predicates.blocks(GTBlocks.CASING_TEMPERED_GLASS.get()))
                 .where("c", Predicates.heatingCoils())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/cracking_unit", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.cracking_unit.energy", 100 - 10 * controller.getCoilTier()))
+            }
+        })
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/cracking_unit")
 
     event.create("mage_assembler", "multiblock")
         .rotationState(RotationState.ALL)
@@ -2088,7 +2104,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("i", Predicates.blocks("gtceu:ptfe_pipe_casing"))
                 .where("-", Predicates.abilities(PartAbility.MUFFLER))
                 .build())
-        .workableCasingRenderer("kubejs:block/iridium_casing", "gtceu:block/multiblock/gcym/large_assembler", true)
+        .workableCasingRenderer("kubejs:block/iridium_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
     event.create("large_greenhouse", "multiblock")
         .rotationState(RotationState.ALL)
@@ -2119,7 +2135,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
                 .where(" ", Predicates.air())
                 .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/implosion_compressor", true)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/implosion_compressor")
 
     event.create("bedrock_drilling_rig", "multiblock")
         .rotationState(RotationState.NONE)
@@ -2166,7 +2182,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             machine.getRecipeLogic().interruptRecipe()
             return false
         })
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_sturdy_hsse", "gtceu:block/multiblock/cleanroom", true)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_sturdy_hsse", "gtceu:block/multiblock/cleanroom")
 
     event.create("cooling_tower", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -2221,7 +2237,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("~", Predicates.controller(Predicates.blocks(definition.get())))
             .where(" ", Predicates.any())
             .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_frost_proof", "gtceu:block/multiblock/vacuum_freezer", true)
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_frost_proof", "gtceu:block/multiblock/vacuum_freezer")
 
     event.create("superconducting_electromagnetism", "multiblock")
         .rotationState(RotationState.ALL)
@@ -2263,7 +2279,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where(" ", Predicates.any())
             .build()
         )
-        .workableCasingRenderer("kubejs:block/lafium_mechanical_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("kubejs:block/lafium_mechanical_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("create_aggregation", "multiblock")
         .rotationState(RotationState.NONE)
@@ -2329,7 +2345,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return true
         })
-        .workableCasingRenderer("kubejs:block/dimension_connection_casing", "gtceu:block/create_aggregation", true)
+        .workableCasingRenderer("kubejs:block/dimension_connection_casing", "gtceu:block/create_aggregation")
 
     event.create("gravitation_shockburst", "multiblock")
         .rotationState(RotationState.ALL)
@@ -2357,7 +2373,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where(" ", Predicates.any())
             .build()
         )
-        .workableCasingRenderer("kubejs:block/create_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .workableCasingRenderer("kubejs:block/create_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("create_computation", "multiblock", (holder, args) => new $ComputationProviderMachine(holder, args))
         .rotationState(RotationState.ALL)
@@ -2387,7 +2403,24 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .addCallBack("getMaxCWUt", () => {
             return GTValues.V[GTValues.MAX]
         })
-        .workableCasingRenderer("gtceu:block/casings/hpca/advanced_computer_casing/back", "gtceu:block/multiblock/hpca", true)
+        .workableCasingRenderer("gtceu:block/casings/hpca/advanced_computer_casing/back", "gtceu:block/multiblock/hpca")
+
+    function getSuprachronalAssemblyLineModule(machine) {
+        let level = machine.self().getLevel()
+        let pos = machine.self().getPos()
+        var a = 0
+        let coordinates = [pos.offset(3, 0, 0),
+        pos.offset(-3, 0, 0),
+        pos.offset(0, 0, 3),
+        pos.offset(0, 0, -3)]
+        for (let i in coordinates) {
+            let logic = gtch.getRecipeLogic(level, coordinates[i], null)
+            if (logic != null && logic.getMachine().self().getBlockState().getBlock().getId() == "gtceu:suprachronal_assembly_line_module" && logic.getMachine().self().isFormed()) {
+                a++
+            }
+        }
+        return a
+    }
 
     event.create("suprachronal_assembly_line", "multiblock")
         .rotationState(RotationState.ALL)
@@ -2457,20 +2490,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where(" ", Predicates.any())
                 .build())
         .beforeWorking(machine => {
-            let level = machine.self().getLevel()
-            let pos = machine.self().getPos()
-            var a = 0
-            let coordinates = [pos.offset(3, 0, 0),
-            pos.offset(-3, 0, 0),
-            pos.offset(0, 0, 3),
-            pos.offset(0, 0, -3)]
-            for (let i in coordinates) {
-                let logic = gtch.getRecipeLogic(level, coordinates[i], null)
-                if (logic != null) {
-                    a++
-                }
-            }
-            if (a < 3) {
+            if (getSuprachronalAssemblyLineModule(machine) < 3) {
                 return true
             }
             machine.getRecipeLogic().resetRecipeLogic()
@@ -2478,20 +2498,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
-                let level = machine.self().getLevel()
-                let pos = machine.self().getPos()
-                var a = 0
-                let coordinates = [pos.offset(3, 0, 0),
-                pos.offset(-3, 0, 0),
-                pos.offset(0, 0, 3),
-                pos.offset(0, 0, -3)]
-                for (let i in coordinates) {
-                    let logic = gtch.getRecipeLogic(level, coordinates[i], null)
-                    if (logic != null) {
-                        a++
-                    }
-                }
-                if (a < 3) {
+                if (getSuprachronalAssemblyLineModule(machine) < 3) {
                     return true
                 }
                 machine.getRecipeLogic().resetRecipeLogic()
@@ -2499,7 +2506,28 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return true
         })
-        .workableCasingRenderer("kubejs:block/molecular_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.literal("已安装的模块数：" + getSuprachronalAssemblyLineModule(controller)))
+            }
+        })
+        .workableCasingRenderer("kubejs:block/molecular_casing", "gtceu:block/multiblock/fusion_reactor")
+
+    function isSuprachronalAssemblyLineModule(machine) {
+        let level = machine.self().getLevel()
+        let pos = machine.self().getPos()
+        let coordinates = [pos.offset(3, 0, 0),
+        pos.offset(-3, 0, 0),
+        pos.offset(0, 0, 3),
+        pos.offset(0, 0, -3)]
+        for (let i in coordinates) {
+            let logic = gtch.getRecipeLogic(level, coordinates[i], null)
+            if (logic != null && logic.getMachine().self().getBlockState().getBlock().getId() == "gtceu:suprachronal_assembly_line" && logic.getMachine().self().isFormed()) {
+                return true
+            }
+        }
+        return false
+    }
 
     event.create("suprachronal_assembly_line_module", "multiblock")
         .rotationState(RotationState.ALL)
@@ -2533,41 +2561,28 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("-", Predicates.air())
             .build())
         .beforeWorking(machine => {
-            let level = machine.self().getLevel()
-            let pos = machine.self().getPos()
-            let coordinates = [pos.offset(3, 0, 0),
-            pos.offset(-3, 0, 0),
-            pos.offset(0, 0, 3),
-            pos.offset(0, 0, -3)]
-            for (let i in coordinates) {
-                let logic = gtch.getRecipeLogic(level, coordinates[i], null)
-                if (logic != null && logic.getMachine().self().getBlockState().getBlock().getId() == "gtceu:suprachronal_assembly_line" && logic.getMachine().self().isFormed()) {
-                    return true
-                }
+            if (isSuprachronalAssemblyLineModule(machine)) {
+                return true
             }
             machine.getRecipeLogic().resetRecipeLogic()
             return false
         })
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
-                let level = machine.self().getLevel()
-                let pos = machine.self().getPos()
-                let coordinates = [pos.offset(3, 0, 0),
-                pos.offset(-3, 0, 0),
-                pos.offset(0, 0, 3),
-                pos.offset(0, 0, -3)]
-                for (let i in coordinates) {
-                    let logic = gtch.getRecipeLogic(level, coordinates[i], null)
-                    if (logic != null && logic.getMachine().self().getBlockState().getBlock().getId() == "gtceu:suprachronal_assembly_line" && logic.getMachine().self().isFormed()) {
-                        return true
-                    }
+                if (isSuprachronalAssemblyLineModule(machine)) {
+                    return true
                 }
                 machine.getRecipeLogic().resetRecipeLogic()
                 return false
             }
             return true
         })
-        .workableCasingRenderer("kubejs:block/molecular_casing", "gtceu:block/multiblock/fusion_reactor", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.literal("该模块" + (isSuprachronalAssemblyLineModule(controller) ? "已" : "未") + "成功安装"))
+            }
+        })
+        .workableCasingRenderer("kubejs:block/molecular_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("crystalline_infinity", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
@@ -2628,9 +2643,8 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("F", Predicates.blocks("gtceu:hyper_core"))
                 .where("G", Predicates.blocks("gtceu:tritanium_frame"))
                 .where(" ", Predicates.any())
-                .build()
-        )
-        .workableCasingRenderer("kubejs:block/extreme_strength_tritanium_casing", "gtceu:block/multiblock/fusion_reactor", true)
+                .build())
+        .workableCasingRenderer("kubejs:block/extreme_strength_tritanium_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("processing_plant", "multiblock")
         .rotationState(RotationState.ALL)
@@ -2707,7 +2721,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return isrecipe
         })
-        .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (machine.self().getTier() - 1))).darkPurple()).gray())
+            }
+        })
+        .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
     event.create("assemble_plant", "multiblock")
         .rotationState(RotationState.ALL)
@@ -2744,7 +2763,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return isrecipe
         })
-        .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (machine.self().getTier() - 1))).darkPurple()).gray())
+            }
+        })
+        .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
     event.create("separated_plant", "multiblock")
         .rotationState(RotationState.ALL)
@@ -2789,7 +2813,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return isrecipe
         })
-        .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler", true)
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (machine.self().getTier() - 1))).darkPurple()).gray())
+            }
+        })
+        .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
     event.create("mixed_plant", "multiblock")
         .rotationState(RotationState.ALL)
@@ -2834,6 +2863,11 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 machine.getRecipeLogic().interruptRecipe()
             }
             return isrecipe
+        })
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (machine.self().getTier() - 1))).darkPurple()).gray())
+            }
         })
         .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
@@ -2916,8 +2950,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("F", Predicates.blocks("kubejs:force_field_glass"))
                 .where("G", Predicates.blocks("kubejs:stellar_containment_casing"))
                 .where(" ", Predicates.any())
-                .build()
-        )
+                .build())
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal("1000").darkPurple()).gray())
+            }
+        })
         .workableCasingRenderer("kubejs:block/molecular_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("steam_piston_hammer", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 8))
@@ -3227,6 +3265,11 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return true
         })
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal("524288").darkPurple()).gray())
+            }
+        })
         .workableCasingRenderer("gtceu:block/casings/solid/machine_primitive_bricks", "gtceu:block/multiblock/primitive_blast_furnace")
 
     event.create("dimensionally_transcendent_steam_oven", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 524288))
@@ -3492,6 +3535,11 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("M", Predicates.blocks("gtceu:ev_hermetic_casing"))
                 .where(" ", Predicates.any())
                 .build())
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.cracking_unit.energy", 100 - 10 * controller.getCoilTier()))
+            }
+        })
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/implosion_compressor")
 
     event.create("weather_control", "multiblock")
@@ -3536,7 +3584,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 server.runCommandSilent(`execute in ${dim} run weather thunder`)
             }
         })
-        .workableCasingRenderer("gtceu:block/casings/steam/steel/side", "gtceu:block/multiblock/gcym/large_maceration_tower", true)
+        .workableCasingRenderer("gtceu:block/casings/steam/steel/side", "gtceu:block/multiblock/gcym/large_maceration_tower")
 
     event.create("large_pyrolyse_oven", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
@@ -3563,6 +3611,11 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("C", Predicates.blocks("gtceu:tungsten_carbide_frame"))
                 .where(" ", Predicates.air())
                 .build())
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.pyrolyse_oven.speed", components.getCoilTier() == 0 ? 75 : 50 * (components.getCoilTier() + 1)))
+            }
+        })
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/pyrolyse_oven")
 
     event.create("large_rock_crusher", "multiblock")
@@ -3735,6 +3788,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             machine.getRecipeLogic().resetRecipeLogic()
             return false
+        })
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.max(1, (machine.getCoilType().getCoilTemperature() - recipe.data.getInt("ebf_temp")) / 100)).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of(controller.getCoilType().getCoilTemperature() + "K").red()))
+            }
         })
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_inert_ptfe", "gtceu:block/multiblock/fusion_reactor")
 
