@@ -857,7 +857,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(4 ** (machine.self().getTier() - 4)).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(4 ** (controller.self().getTier() - 4)).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("gtceu:block/casings/steam/steel/side", "gtceu:block/multiblock/gcym/large_maceration_tower")
@@ -2723,7 +2723,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (machine.self().getTier() - 1))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (controller.self().getTier() - 1))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
@@ -2765,7 +2765,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (machine.self().getTier() - 1))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (controller.self().getTier() - 1))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
@@ -2815,7 +2815,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (machine.self().getTier() - 1))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (controller.self().getTier() - 1))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
@@ -2866,7 +2866,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (machine.self().getTier() - 1))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (controller.self().getTier() - 1))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
@@ -3613,7 +3613,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.pyrolyse_oven.speed", components.getCoilTier() == 0 ? 75 : 50 * (components.getCoilTier() + 1)))
+                components.add(Component.translatable("gtceu.multiblock.pyrolyse_oven.speed", controller.getCoilTier() == 0 ? 75 : 50 * (controller.getCoilTier() + 1)))
             }
         })
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/pyrolyse_oven")
@@ -3791,7 +3791,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.max(1, (machine.getCoilType().getCoilTemperature() - recipe.data.getInt("ebf_temp")) / 100)).darkPurple()).gray())
                 components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of(controller.getCoilType().getCoilTemperature() + "K").red()))
             }
         })

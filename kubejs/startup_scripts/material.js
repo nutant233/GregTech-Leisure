@@ -397,7 +397,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .element(GTElements.get("infinity"))
         .iconSet(MOMaterialIconSet.CUSTOM_INFINITY)
         .flags(GTMaterialFlags.GENERATE_FRAME)
-        .cableProperties(GTValues.V[GTValues.MAX], 32768, 0, true)
+        .cableProperties(GTValues.V[GTValues.MAX], 8192, 0, true)
 
     event.create("hypogen")
         .ingot()
@@ -409,7 +409,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .element(GTElements.get("hypogen"))
         .iconSet(GTMaterialIconSet.RADIOACTIVE)
         .flags(GTMaterialFlags.GENERATE_PLATE)
-        .cableProperties(4 * GTValues.V[GTValues.MAX], 8, 0, false)
+        .cableProperties(GTValues.V[GTValues.MAX], 32768, 0, true)
 
     event.create("shirabon")
         .ingot()
@@ -581,6 +581,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet(new GTMaterialIconSet("spacetime"))
         .flags(GENERATE_NANOSWARM, GTMaterialFlags.NO_UNIFICATION)
     [FluidStorageKey](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(1).customStill())
+        .cableProperties(GTValues.V[GTValues.MAX], 524288, 0, true)
 
     event.create("degenerate_rhenium")
         .dust()
