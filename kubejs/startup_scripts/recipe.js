@@ -3,6 +3,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
     const $LocalizationUtils = Java.loadClass("com.lowdragmc.lowdraglib.utils.LocalizationUtils")
     const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUtil")
     const $ICoilType = Java.loadClass("com.gregtechceu.gtceu.api.block.ICoilType")
+    const $I18n = LDLib.isClient() ? Java.loadClass("net.minecraft.client.resources.language.I18n") : null
 
     event.create("greenhouse")
         .setEUIO("in")
@@ -18,11 +19,20 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC)
 
-    event.create("dimensionally_transcendent_plasma_forge")
-        .setEUIO("in")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+    GTRecipeTypes.register("dimensionally_transcendent_plasma_forge", "multiblock")
         .setMaxIOSize(2, 2, 2, 2)
+        .setEUIO("in")
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, FillDirection.LEFT_TO_RIGHT)
+        .addDataInfo(data => {
+            return $LocalizationUtils.format("gtceu.recipe.temperature", $FormattingUtil.formatNumbers(data.getInt("ebf_temp")))
+        })
+        .addDataInfo(data => {
+            let requiredCoil = $ICoilType.getMinRequiredType(data.getInt("ebf_temp"))
+            if (LDLib.isClient() && requiredCoil != null && requiredCoil.getMaterial() != null) {
+                return $LocalizationUtils.format("gtceu.recipe.coil.tier", $I18n.get(requiredCoil.getMaterial().getUnlocalizedName()))
+            }
+            return ""
+        })
         .setSound(GTSoundEntries.ARC)
 
     event.create("plasma_condenser")
@@ -427,7 +437,6 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .addDataInfo(data => {
             let requiredCoil = $ICoilType.getMinRequiredType(data.getInt("ebf_temp"))
             if (LDLib.isClient() && requiredCoil != null && requiredCoil.getMaterial() != null) {
-                const $I18n = Java.loadClass("net.minecraft.client.resources.language.I18n")
                 return $LocalizationUtils.format("gtceu.recipe.coil.tier", $I18n.get(requiredCoil.getMaterial().getUnlocalizedName()))
             }
             return ""

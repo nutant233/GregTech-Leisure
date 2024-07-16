@@ -4984,6 +4984,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:dimensionallytranscendentresidue 100")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(2400)
+        .blastFurnaceTemp(30000)
 
     gtr.mixer("gtceu:dimensionallytranscendentcrudecatalyst")
         .itemInputs("kubejs:resonating_gem")
@@ -6590,6 +6591,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:chaos_plasma 1000", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(1600)
+        .blastFurnaceTemp(32000)
 
     gtr.canner("kubejs:cosmic_mesh_containment_unit")
         .itemInputs("kubejs:time_dilation_containment_unit")
@@ -6687,6 +6689,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:dimensionallytranscendentresidue 100")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(4800)
+        .blastFurnaceTemp(32000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:transcendentmetal")
         .notConsumable("gtceu:spacetime_catalyst")
@@ -6695,6 +6698,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:transcendentmetal 144", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(3200)
+        .blastFurnaceTemp(36000)
 
     gtr.autoclave("gtceu:spacetime_catalyst")
         .itemInputs("gtceu:infinity_catalyst")
@@ -9063,6 +9067,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:dimensionallytranscendentresidue 100")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(800)
+        .blastFurnaceTemp(28000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:crystalmatrix_plasma")
         .notConsumable("gtceu:infinity_catalyst")
@@ -9071,6 +9076,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:crystalmatrix_plasma 10000", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(800)
+        .blastFurnaceTemp(28000)
 
     gtr.dimensionally_transcendent_plasma_forge("kubejs:infinity")
         .notConsumable("gtceu:spacetime_catalyst")
@@ -9078,6 +9084,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:infinity 1000", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(4 * GTValues.VA[GTValues.MAX])
         .duration(1600)
+        .blastFurnaceTemp(32000)
 
     gtr.stellar_forge("gtceu:eternity_dust")
         .itemInputs("4x kubejs:quantum_chromodynamic_charge", "gtceu:eternity_singularity")
@@ -9100,6 +9107,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:spacetime 100", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(4 * GTValues.VA[GTValues.MAX])
         .duration(1600)
+        .blastFurnaceTemp(36000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:magnetohydrodynamicallyconstrainedstarmatter")
         .notConsumable("gtceu:eternity_catalyst")
@@ -9107,6 +9115,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:magnetohydrodynamicallyconstrainedstarmatter 1000", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(64 * GTValues.VA[GTValues.MAX])
         .duration(6400)
+        .blastFurnaceTemp(81000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:dense_neutron_plasma")
         .notConsumable("gtceu:infinity_catalyst")
@@ -9116,6 +9125,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:plasma_containment_cell")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(800)
+        .blastFurnaceTemp(26000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:eternity")
         .notConsumable("gtceu:eternity_catalyst")
@@ -9124,6 +9134,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:eternity 10000", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(16 * GTValues.VA[GTValues.MAX])
         .duration(4800)
+        .blastFurnaceTemp(56000)
 
     const mcsms = [["ingot", 144], ["dust", 144], ["nugget", 16], ["rod", 72], ["plate", 144], ["foil", 36], ["block", 1296], ["frame", 288]]
     mcsms.forEach((mcsm) => {
@@ -12352,6 +12363,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:dimensionallytranscendentresidue 100")
         .EUt(16 * GTValues.VA[GTValues.MAX])
         .duration(6400)
+        .blastFurnaceTemp(62000)
 
     gtr.chemical_reactor("gtceu:sodium_hypochlorite_dust")
         .circuit(1)
@@ -13088,6 +13100,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:infinity_glass")
         .EUt(4096 * GTValues.VA[GTValues.MAX])
         .duration(1600)
+        .blastFurnaceTemp(88000)
 
     gtr.dimensionally_transcendent_plasma_forge("kubejs:create_casing")
         .itemInputs("gtceu:eternity_frame", "kubejs:command_block_core")
@@ -13095,6 +13108,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:create_casing")
         .EUt(16384 * GTValues.VA[GTValues.MAX])
         .duration(3200)
+        .blastFurnaceTemp(96000)
 
     gtr.research_station("1x_kubejs_command_block_core")
         .itemInputs("gtceu:data_module", "kubejs:command_block_core")
