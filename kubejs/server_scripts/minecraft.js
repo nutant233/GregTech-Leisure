@@ -191,4 +191,12 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.HV])
         .duration(200)
         .cleanroom(CleanroomType.CLEANROOM)
+
+    gtr.assembler("netherite_upgrade_smithing_template")
+        .circuit(2)
+        .notConsumable("minecraft:netherite_upgrade_smithing_template")
+        .itemInputs("7x gtceu:diamond_dust", "minecraft:netherrack")
+        .itemOutputs("minecraft:netherite_upgrade_smithing_template")
+        .EUt(480)
+        .duration(200)
 })

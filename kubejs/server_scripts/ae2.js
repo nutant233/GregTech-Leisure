@@ -195,7 +195,7 @@ ServerEvents.recipes((event) => {
     ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of("gtceu:256m_storage")).dataStack(Item.of("gtceu:data_stick")).EUt(GTValues.VA[GTValues.LuV]).duration(1200))
 
     gtr.assembly_line("kubejs:infinite_cell_component")
-        .itemInputs("16x gtceu:256g_storage", "gtceu:data_bank", "16x gtceu:data_module", "4x #gtceu:circuits/uev", "16x gtceu:ruthenium_trinium_americium_neutronate_hex_wire", "4x gtceu:double_neutronium_plate")
+        .itemInputs("16x gtceu:256g_storage", "gtceu:data_bank", "16x gtceu:data_module", "64x ae2:creative_energy_cell", "64x #gtceu:circuits/uev", "64x gtceu:ruthenium_trinium_americium_neutronate_hex_wire", "4x gtceu:double_neutronium_plate")
         .inputFluids("gtceu:mutated_living_solder 20000", "gtceu:pcb_coolant 100000")
         .itemOutputs("kubejs:infinite_cell_component")
         .EUt(GTValues.VA[GTValues.UHV])

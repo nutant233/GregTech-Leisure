@@ -733,7 +733,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where(" ", Predicates.any())
                 .build())
         .recipeModifier((machine, recipe) => {
-            recipe.duration = 1200 / (2 ** getSphereOfHarmonyOC(machine))
+            recipe.duration = 2400 / (2 ** getSphereOfHarmonyOC(machine))
             return recipe
         })
         .beforeWorking(machine => {
@@ -742,10 +742,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 let hydrogen = machine.holder.self().getPersistentData().getLong("hydrogen")
                 let helium = machine.holder.self().getPersistentData().getLong("helium")
                 let oc = getSphereOfHarmonyOC(machine)
-                if (hydrogen >= 1024000000 && helium >= 1024000000) {
+                if (hydrogen >= 1024000000 && helium >= 1024000000 && oc != null) {
                     machine.holder.self().getPersistentData().putLong("hydrogen", hydrogen - 1024000000)
                     machine.holder.self().getPersistentData().putLong("helium", helium - 1024000000)
-                    return oc == null ? false : $WirelessEnergyManager.addEUToGlobalEnergyMap(uuid, $BigInteger.valueOf(- (1319413952716800 * (8 ** oc))))
+                    return $WirelessEnergyManager.addEUToGlobalEnergyMap(uuid, $BigInteger.valueOf(- (5277655810867200 * (8 ** oc))))
                 }
                 if (machine.input(true, ContentBuilder().fluid("gtceu:hydrogen 100000").build()).isSuccess()) {
                     machine.input(false, ContentBuilder().fluid("gtceu:hydrogen 100000").build())
@@ -769,7 +769,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     components.add(Component.translatable("gtmthings.machine.wireless_energy_monitor.tooltip.1",
                         $FormattingUtil.formatNumbers($WirelessEnergyManager.getUserEU(uuid))).gray())
                 }
-                components.add(Component.literal("启动耗能：" + $FormattingUtil.formatNumbers(oc == null ? 0 : 1319413952716800 * (8 ** oc)) + "EU"))
+                components.add(Component.literal("启动耗能：" + $FormattingUtil.formatNumbers(oc == null ? 0 : 5277655810867200 * (8 ** oc)) + "EU"))
                 components.add(Component.literal("氢储量：" + $FormattingUtil.formatNumbers(controller.holder.self().getPersistentData().getLong("hydrogen")) + "mb"))
                 components.add(Component.literal("氦储量：" + $FormattingUtil.formatNumbers(controller.holder.self().getPersistentData().getLong("helium")) + "mb"))
             }

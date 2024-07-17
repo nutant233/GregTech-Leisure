@@ -415,7 +415,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .ingot()
         .fluid()
         .color(0xc61361)
-        .blastTemp(96000, "highest")
+        .blastTemp(64000, "highest")
         .element(GTElements.get("shirabon"))
         .flags(GTMaterialFlags.GENERATE_FINE_WIRE)
         .iconSet(GTMaterialIconSet.METALLIC)
