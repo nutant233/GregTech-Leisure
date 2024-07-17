@@ -10,6 +10,10 @@ const $Slaughterhouse = Java.loadClass("com.gregtechceu.gtceu.common.machine.mul
 const $DysonSphere = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.generator.DysonSphere")
 const $ItemRecipeCapability = Java.loadClass("com.gregtechceu.gtceu.api.capability.recipe.ItemRecipeCapability")
 const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
+const $TeamUtil = Java.loadClass("com.hepdd.gtmthings.utils.TeamUtil")
+const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUtil")
+const $WirelessEnergyManager = Java.loadClass("com.hepdd.gtmthings.api.misc.WirelessEnergyManager")
+const $BigInteger = Java.loadClass("java.math.BigInteger")
 const gtch = Java.loadClass("com.gregtechceu.gtceu.api.capability.GTCapabilityHelper")
 const mcbr = Java.loadClass("net.minecraft.core.registries.BuiltInRegistries")
 const mcrl = Java.loadClass("net.minecraft.resources.ResourceLocation")
@@ -659,11 +663,26 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/multiblock/assembly_line")
 
+    function getSphereOfHarmonyOC(machine) {
+        if (machine.input(true, ContentBuilder().circuit(4).build()).isSuccess()) {
+            return 3
+        }
+        if (machine.input(true, ContentBuilder().circuit(3).build()).isSuccess()) {
+            return 2
+        }
+        if (machine.input(true, ContentBuilder().circuit(2).build()).isSuccess()) {
+            return 1
+        }
+        if (machine.input(true, ContentBuilder().circuit(1).build()).isSuccess()) {
+            return 0
+        }
+        return null
+    }
+
     event.create("sphere_of_harmony", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("cosmos_simulation")
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(2, 16, 1, 1)))
         .appearanceBlock(() => Block.getBlock("kubejs:dimensionally_transcendent_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start()
@@ -705,38 +724,54 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("E", Predicates.blocks("kubejs:dimension_injection_casing"))
                 .where("F", Predicates.blocks("kubejs:dimensionally_transcendent_casing")
                     .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(1))
-                    .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1))
+                    .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(1))
                     .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setPreviewCount(1))
-                    .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1))
-                    .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(2)))
+                    .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1)))
                 .where("D", Predicates.blocks("kubejs:spacetime_compression_field_generator"))
                 .where("B", Predicates.blocks("kubejs:dimensional_stability_casing"))
                 .where("C", Predicates.blocks("kubejs:dimensional_bridge_casing"))
                 .where(" ", Predicates.any())
                 .build())
+        .recipeModifier((machine, recipe) => {
+            recipe.duration = 1200 / (2 ** getSphereOfHarmonyOC(machine))
+            return recipe
+        })
         .beforeWorking(machine => {
-            let hydrogen = machine.holder.self().getPersistentData().getInt("hydrogen")
-            let helium = machine.holder.self().getPersistentData().getInt("helium")
-            if (hydrogen >= 1024000000 && helium >= 1024000000) {
-                machine.holder.self().getPersistentData().putInt("hydrogen", hydrogen - 1024000000)
-                machine.holder.self().getPersistentData().putInt("helium", helium - 1024000000)
-                return true
-            }
-            if (machine.input(true, ContentBuilder().fluid("gtceu:hydrogen 100000").build()).isSuccess()) {
-                machine.input(false, ContentBuilder().fluid("gtceu:hydrogen 100000").build())
-                machine.holder.self().getPersistentData().putInt("hydrogen", hydrogen + 10000000)
-            }
-            if (machine.input(true, ContentBuilder().fluid("gtceu:helium 1000000").build()).isSuccess()) {
-                machine.input(false, ContentBuilder().fluid("gtceu:helium 1000000").build())
-                machine.holder.self().getPersistentData().putInt("helium", helium + 10000000)
+            let uuid = UUID.fromString(machine.holder.self().getPersistentData().getString("sphere_of_harmony"))
+            if (uuid != null) {
+                let hydrogen = machine.holder.self().getPersistentData().getLong("hydrogen")
+                let helium = machine.holder.self().getPersistentData().getLong("helium")
+                let oc = getSphereOfHarmonyOC(machine)
+                if (hydrogen >= 1024000000 && helium >= 1024000000) {
+                    machine.holder.self().getPersistentData().putLong("hydrogen", hydrogen - 1024000000)
+                    machine.holder.self().getPersistentData().putLong("helium", helium - 1024000000)
+                    return oc == null ? false : $WirelessEnergyManager.addEUToGlobalEnergyMap(uuid, $BigInteger.valueOf(- (1319413952716800 * (8 ** oc))))
+                }
+                if (machine.input(true, ContentBuilder().fluid("gtceu:hydrogen 100000").build()).isSuccess()) {
+                    machine.input(false, ContentBuilder().fluid("gtceu:hydrogen 100000").build())
+                    machine.holder.self().getPersistentData().putLong("hydrogen", hydrogen + 10000000)
+                }
+                if (machine.input(true, ContentBuilder().fluid("gtceu:helium 1000000").build()).isSuccess()) {
+                    machine.input(false, ContentBuilder().fluid("gtceu:helium 1000000").build())
+                    machine.holder.self().getPersistentData().putLong("helium", helium + 10000000)
+                }
             }
             machine.getRecipeLogic().interruptRecipe()
             return false
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.literal("氢储量：" + controller.holder.self().getPersistentData().getInt("hydrogen") + "mb"))
-                components.add(Component.literal("氦储量：" + controller.holder.self().getPersistentData().getInt("helium") + "mb"))
+                let uuid = UUID.fromString(controller.holder.self().getPersistentData().getString("sphere_of_harmony"))
+                let oc = getSphereOfHarmonyOC(controller)
+                if (uuid != null) {
+                    components.add(Component.translatable("gtmthings.machine.wireless_energy_monitor.tooltip.0",
+                        $TeamUtil.GetName(controller.self().getLevel(), uuid)).aqua())
+                    components.add(Component.translatable("gtmthings.machine.wireless_energy_monitor.tooltip.1",
+                        $FormattingUtil.formatNumbers($WirelessEnergyManager.getUserEU(uuid))).gray())
+                }
+                components.add(Component.literal("启动耗能：" + $FormattingUtil.formatNumbers(oc == null ? 0 : 1319413952716800 * (8 ** oc)) + "EU"))
+                components.add(Component.literal("氢储量：" + $FormattingUtil.formatNumbers(controller.holder.self().getPersistentData().getLong("hydrogen")) + "mb"))
+                components.add(Component.literal("氦储量：" + $FormattingUtil.formatNumbers(controller.holder.self().getPersistentData().getLong("helium")) + "mb"))
             }
         })
         .workableCasingRenderer("kubejs:block/dimensionally_transcendent_casing", "gtceu:block/cosmos_simulation")
@@ -873,7 +908,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
                 let temp = controller.getCoilType().getCoilTemperature()
-                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of((temp == 273 ? 32000 : temp) + "K").blue()))
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of($FormattingUtil.formatNumbers((temp == 273 ? 32000 : temp)) + "K").blue()))
                 if (controller.getRecipeType() == GTRecipeTypes.get("stellar_forge") && temp != 273) {
                     components.add(Component.literal("当前配方模式无法使用该线圈").red())
                 }
@@ -1291,6 +1326,11 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .onWaiting(machine => {
             machine.getRecipeLogic().interruptRecipe()
         })
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.literal("每次转化数量：" + machine.self().getTier() * 4 - 7))
+            }
+        })
         .workableCasingRenderer("kubejs:block/aluminium_bronze_casing", "gtceu:block/multiblock/cleanroom")
 
     event.create("incubator", "multiblock")
@@ -1603,7 +1643,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of((controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV)) + "K").red()))
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of($FormattingUtil.formatNumbers((controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV))) + "K").red()))
             }
         })
         .workableCasingRenderer("gtceu:block/casings/gcym/high_temperature_smelting_casing", "gtceu:block/multiblock/gcym/blast_alloy_smelter")
@@ -1822,7 +1862,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of((controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV)) + "K").red()))
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of($FormattingUtil.formatNumbers((controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV))) + "K").red()))
             }
         })
         .workableCasingRenderer("gtceu:block/casings/gcym/high_temperature_smelting_casing", "gtceu:block/multiblock/gcym/blast_alloy_smelter")
@@ -1954,7 +1994,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
                 components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal("4").darkPurple()).gray())
-                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of((controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV)) + "K").red()))
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of($FormattingUtil.formatNumbers((controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV))) + "K").red()))
             }
         })
         .workableCasingRenderer("kubejs:block/blaze_blast_furnace_casing", "gtceu:block/multiblock/electric_blast_furnace")
@@ -3948,7 +3988,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of(controller.getCoilType().getCoilTemperature() + "K").red()))
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of($FormattingUtil.formatNumbers(controller.getCoilType().getCoilTemperature()) + "K").red()))
             }
         })
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_inert_ptfe", "gtceu:block/multiblock/fusion_reactor")

@@ -215,6 +215,13 @@ BlockEvents.rightClicked("kubejs:antimatter_charge", event => {
     }
 })
 
+BlockEvents.rightClicked("gtceu:sphere_of_harmony", event => {
+    var machine = gtch.getRecipeLogic(event.level, event.block.pos, null).getMachine()
+    if (machine.self().isFormed()) {
+        machine.holder.self().getPersistentData().putString("sphere_of_harmony", event.player.uuid.toString())
+    }
+})
+
 BlockEvents.rightClicked("minecraft:crying_obsidian", event => {
     if (event.player.getHeldItem("main_hand") == null && event.player.getHeldItem("off_hand") == null) {
         let name = event.player.getName().getString()

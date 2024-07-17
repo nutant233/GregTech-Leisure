@@ -11167,7 +11167,6 @@ ServerEvents.recipes((event) => {
             "gtceu:helium_3 131072000",
             "gtceu:unknowwater 131072000",
             "gtceu:uu_matter 131072000")
-        .EUt(GTValues.VA[GTValues.MAX] * 64)
         .duration(1200)
         .inputFluids("gtceu:cosmic_element 1024000")
 

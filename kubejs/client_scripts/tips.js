@@ -68,7 +68,7 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:blaze_blast_furnace", ["需每秒提供§b10x(功率÷120)^1/2§r的§e液态烈焰§r", "耗时倍数x0.5", "最大并行数固定为4"])
     event.add("gtceu:cold_ice_freezer", ["需每秒提供§b10x电压等级^2§r的§b液态冰§r", "耗时倍数x0.5", "最大并行数固定为4"])
     event.add("gtceu:annihilate_generator", ["终极质能转换"])
-    event.add("gtceu:sphere_of_harmony", ["创造一个微缩宇宙", "执行特殊超频模式，每提升16倍功率提升2倍速度", "启动需1024B的宇宙素，与1024KB的氢和氦", "氢和氦存储在机器内部，在机器准备工作之前会持续消耗"])
+    event.add("gtceu:sphere_of_harmony", ["创造一个微缩宇宙，并获取里面的资源", "这台多方块机器需要太多EU，无法用常规手段供能", "由无线EU网络直接供给EU，具体数值可在GUI内查看", "工作前需设置好电路", "执行特殊超频模式，每提升16倍功率提升2倍速度，超频由编程电路调节", "1号不执行超频，2-4分别执行1，2，3次超频", "启动需1024B的宇宙素，与1024KB的氢和氦", "氢和氦存储在机器内部，在机器准备工作之前会持续消耗"])
     event.add("gtceu:integrated_ore_processor", ["一步完成矿石处理", "1号电路为研磨-研磨-离心", "2号电路为研磨-洗矿-热离-研磨", "3号电路为研磨-洗矿-研磨-离心", "4号电路为研磨-洗矿-筛选-离心", "5号电路为研磨-浸洗-热离-研磨", "6号电路为研磨-浸洗-研磨-离心", "7号电路为研磨-浸洗-筛选-离心"])
     event.add(["gtceu:dimensionally_transcendent_plasma_forge",
         "gtceu:advanced_sps_crafting",
