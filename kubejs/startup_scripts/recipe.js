@@ -304,6 +304,22 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC)
 
+    event.create("dimensional_focus_engraving_array")
+        .setEUIO("in")
+        .setMaxTooltips(6)
+        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+        .setMaxIOSize(2, 1, 1, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.ARC)
+
+    GTRecipeTypes.LASER_ENGRAVER_RECIPES.onRecipeBuild((recipeBuilder, provider) => {
+        GTRecipeTypes.get("dimensional_focus_engraving_array").copyFrom(recipeBuilder)
+            .duration(recipeBuilder.duration * 0.2)
+            .EUt(recipeBuilder.EUt() * 4)
+            .CWUt(Math.log10(recipeBuilder.EUt()) / Math.log10(4))
+            .save(provider)
+    })
+
     event.create("precision_laser_engraver")
         .setEUIO("in")
         .setMaxTooltips(5)

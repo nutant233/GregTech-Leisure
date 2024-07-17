@@ -708,12 +708,37 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1))
                     .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setPreviewCount(1))
                     .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1))
-                    .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2)))
+                    .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(2)))
                 .where("D", Predicates.blocks("kubejs:spacetime_compression_field_generator"))
                 .where("B", Predicates.blocks("kubejs:dimensional_stability_casing"))
                 .where("C", Predicates.blocks("kubejs:dimensional_bridge_casing"))
                 .where(" ", Predicates.any())
                 .build())
+        .beforeWorking(machine => {
+            let hydrogen = machine.holder.self().getPersistentData().getInt("hydrogen")
+            let helium = machine.holder.self().getPersistentData().getInt("helium")
+            if (hydrogen >= 1024000000 && helium >= 1024000000) {
+                machine.holder.self().getPersistentData().putInt("hydrogen", hydrogen - 1024000000)
+                machine.holder.self().getPersistentData().putInt("helium", helium - 1024000000)
+                return true
+            }
+            if (machine.input(true, ContentBuilder().fluid("gtceu:hydrogen 100000").build()).isSuccess()) {
+                machine.input(false, ContentBuilder().fluid("gtceu:hydrogen 100000").build())
+                machine.holder.self().getPersistentData().putInt("hydrogen", hydrogen + 10000000)
+            }
+            if (machine.input(true, ContentBuilder().fluid("gtceu:helium 1000000").build()).isSuccess()) {
+                machine.input(false, ContentBuilder().fluid("gtceu:helium 1000000").build())
+                machine.holder.self().getPersistentData().putInt("helium", helium + 10000000)
+            }
+            machine.getRecipeLogic().interruptRecipe()
+            return false
+        })
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.literal("氢储量：" + controller.holder.self().getPersistentData().getInt("hydrogen") + "mb"))
+                components.add(Component.literal("氦储量：" + controller.holder.self().getPersistentData().getInt("helium") + "mb"))
+            }
+        })
         .workableCasingRenderer("kubejs:block/dimensionally_transcendent_casing", "gtceu:block/cosmos_simulation")
 
     event.create("space_probe_surface_reception", "multiblock")
@@ -3932,8 +3957,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .rotationState(RotationState.ALL)
         .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 2 ** (machine.getCoilType().getCoilTemperature() / 900), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(GCyMBlocks.CASING_LASER_SAFE_ENGRAVING)
-        .recipeTypes("precision_laser_engraver")
-        .recipeTypes("laser_engraver")
+        .recipeTypes("dimensional_focus_engraving_array")
         .pattern((definition) =>
             FactoryBlockPattern.start("back", "up", "right")
                 .aisle("                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                            A                                            ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ", "                                                                                         ")
@@ -4033,14 +4057,14 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("E", Predicates.blocks("kubejs:containment_field_generator"))
                 .where("F", Predicates.blocks("gtceu:superconducting_coil"))
                 .where("G", Predicates.blocks("gtceu:laser_safe_engraving_casing")
-                    .setMinGlobalLimited(2500)
-                    .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1))
-                    .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1))
+                    .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(4))
+                    .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2))
                     .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
-                    .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(1))
+                    .or(Predicates.abilities(PartAbility.DATA_ACCESS).setExactLimit(1))
+                    .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(2))
                     .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1))
-                    .or(Predicates.abilities(PartAbility.COMPUTATION_DATA_RECEPTION).setMaxGlobalLimited(1)))
+                    .or(Predicates.abilities(PartAbility.COMPUTATION_DATA_RECEPTION).setExactLimit(1)))
                 .where("H", Predicates.heatingCoils())
                 .where(" ", Predicates.any())
                 .build())

@@ -514,6 +514,19 @@
 			x: 4.5d
 			y: 2.0d
 		}
+		{
+			dependencies: ["783379F3A7557CEE"]
+			id: "1BDEBBAF5BA9854E"
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "43EBC608B5383709"
+				item: "gtceu:dimensional_focus_engraving_array"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 2.0d
+		}
 	]
 	subtitle: ["Tier9-UHV"]
 	title: "极高压"
