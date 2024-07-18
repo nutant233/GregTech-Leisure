@@ -8857,7 +8857,8 @@ ServerEvents.recipes((event) => {
         ["gtceu:naphtha 100000", 24],
         ["gtceu:refinery_gas 100000", 25],
         ["gtceu:coal_gas 100000", 26],
-        ["gtceu:bromine 100000", 27]]
+        ["gtceu:bromine 100000", 27],
+        ["gtceu:barnarda_air 100000", 28]]
     space_drones.slice(2).forEach((space_drone) => {
         space_fluid2s.forEach((space_fluid) => {
             gtr.drilling_module(space_drone + "1_space_fluid_" + space_fluid[1])
@@ -14759,10 +14760,21 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.UXV])
             .CWUt(2048))
 
-    gtr.assembly_line("gtceu:field_extrusion_factory")
-        .itemInputs("4x gtceu:uhv_forming_press", "4x gtceu:uhv_forge_hammer", "4x gtceu:uhv_extruder", "4x gtceu:uhv_compressor", "4x gtceu:uhv_bender", "32x gtceu:uev_electric_piston", "4x gtceu:uev_robot_arm", "4x #gtceu:circuits/uiv", "64x gtceu:stress_proof_casing")
+    gtr.assembly_line("gtceu:field_extruder_factory")
+        .itemInputs("4x gtceu:uhv_extruder", "4x gtceu:uhv_compressor", "8x gtceu:uev_field_generator", "4x gtceu:uev_emitter", "4x #gtceu:circuits/uiv", "4x gtceu:rhenium_nanoswarm", "64x gtceu:stress_proof_casing")
         .inputFluids("gtceu:mutated_living_solder 2304", "gtceu:platinum 4608", "gtceu:reinforced_epoxy_resin 4608", "gtceu:uranium_rhodium_dinaquadide 4608")
-        .itemOutputs("gtceu:field_extrusion_factory")
+        .itemOutputs("gtceu:field_extruder_factory")
+        .EUt(GTValues.VA[GTValues.UEV])
+        .duration(800)
+        .stationResearch(b => b.researchStack(Item.of("gtceu:large_extruder"))
+            .dataStack(Item.of("gtceu:data_module"))
+            .EUt(GTValues.VA[GTValues.UEV])
+            .CWUt(256))
+
+    gtr.assembly_line("gtceu:mega_presser")
+        .itemInputs("4x gtceu:uhv_forming_press", "4x gtceu:uhv_forge_hammer", "4x gtceu:uhv_bender", "32x gtceu:uev_electric_piston", "4x gtceu:uev_robot_arm", "4x #gtceu:circuits/uiv", "64x gtceu:stress_proof_casing")
+        .inputFluids("gtceu:mutated_living_solder 2304", "gtceu:palladium 4608", "gtceu:reinforced_epoxy_resin 4608", "gtceu:uranium_rhodium_dinaquadide 4608")
+        .itemOutputs("gtceu:mega_presser")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(800)
         .stationResearch(b => b.researchStack(Item.of("gtceu:large_material_press"))
@@ -14781,12 +14793,16 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.UEV])
             .CWUt(256))
 
-    gtr.assembler("gtceu:dimensional_focus_engraving_array")
-        .itemInputs("gtceu:engraving_laser_plant", "6x gtceu:neutronium_nanoswarm", "6x gtceu:uhv_laser_engraver", "64x gtceu:normal_laser_pipe", "16x #gtceu:circuits/uiv", "16x gtceu:seaborgium_rod", "32x gtceu:double_dubnium_plate")
-        .inputFluids("gtceu:mutated_living_solder 28800")
+    gtr.assembly_line("gtceu:dimensional_focus_engraving_array")
+        .itemInputs("8x gtceu:uhv_laser_engraver", "16x gtceu:neutronium_nanoswarm", "64x gtceu:normal_laser_pipe", "8x gtceu:uev_field_generator", "4x gtceu:uev_emitter", "16x #gtceu:circuits/uiv", "16x gtceu:seaborgium_rod", "32x gtceu:double_dubnium_plate")
+        .inputFluids("gtceu:mutated_living_solder 28800", "gtceu:polyetheretherketone 28800", "gtceu:pikyonium 4608", "gtceu:abyssalalloy 4608")
         .itemOutputs("gtceu:dimensional_focus_engraving_array")
         .EUt(GTValues.VA[GTValues.UEV])
-        .duration(1200)
+        .duration(1600)
+        .stationResearch(b => b.researchStack(Item.of("gtceu:engraving_laser_plant"))
+            .dataStack(Item.of("gtceu:data_module"))
+            .EUt(GTValues.VA[GTValues.UEV])
+            .CWUt(256))
 
     gtr.assembler("kubejs:naquadah_alloy_casing")
         .itemInputs("gtceu:naquadah_alloy_frame", "6x gtceu:naquadah_alloy_plate")
