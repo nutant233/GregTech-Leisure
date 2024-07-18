@@ -46,7 +46,10 @@ ItemEvents.tooltip(event => {
     event.add(["gtceu:dimensional_focus_engraving_array", "gtceu:mega_wiremill"], "线圈温度每高出900K，并行数x2")
     event.add("gtceu:sps_crafting", "借助魔力合成特殊的物品")
     event.add("gtceu:matter_fabricator", "产出特殊物质")
-    event.add(["gtceu:nano_forge_1", "gtceu:nano_forge_2", "gtceu:nano_forge_3"], ["只能使用激光仓", "处理低阶纳米锻炉配方时并行数x16"])
+    event.add(["gtceu:nano_forge_1", "gtceu:nano_forge_2", "gtceu:nano_forge_3"], ["只能使用激光仓", "放入对应的纳米蜂群才能工作，并且按蜂群数量来并行"])
+    event.add("gtceu:nano_forge_1", ["并行数为蜂群数量"])
+    event.add("gtceu:nano_forge_2", ["处理2阶配方时，并行数为蜂群数量", "处理1阶配方时并行数量翻倍，超频模式改为无损超频"])
+    event.add("gtceu:nano_forge_3", ["处理3阶配方时，并行数为蜂群数量", "处理2阶配方时并行数量翻倍", "处理1阶配方时并行数翻4倍，超频模式改为每提高4倍功率获得8倍提速"])
     event.add("ad_astra:oxygen_loader", "§c仅合成，无法产出氧气")
     event.add(["gtceu:dimensionally_transcendent_dirt_forge", "gtceu:dimensionally_transcendent_steam_oven"], ["拥有524288的最大并行", "并且直接完成配方"])
     event.add(["gtceu:large_chemical_plant", "gtceu:chemical_plant"], "线圈等级每高出白铜一级能耗降低5%")
@@ -59,6 +62,7 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:advanced_hyper_reactor", ["提供不同等离子体获得不同并行", "星辉：8，致密中子：16"])
     event.add("gtceu:a_mass_fabricator", ["耗能倍数x0.8", "耗时倍数x0.5"])
     event.add("gtceu:dimensionally_transcendent_mixer", "运行搅拌机配方时每秒进度额外增加1秒")
+    event.add("gtceu:pcb_factory", ["放入纳米蜂群可获得减免", "可使用金和振金，每个提升1%速度", "振金还可使能耗降低4倍"])
     event.add("gtceu:space_probe_surface_reception", "不要遮挡")
     event.add(["gtceu:mega_alloy_blast_smelter", "gtceu:mega_blast_furnace"], "耗时倍数x0.8")
     event.add("gtceu:super_blast_smelter", "耗时倍数x0.2")
@@ -94,9 +98,6 @@ ItemEvents.tooltip(event => {
         "gtceu:sps_crafting",
         "gtceu:chemical_plant",
         "gtceu:large_chemical_reactor",
-        "gtceu:nano_forge_1",
-        "gtceu:nano_forge_2",
-        "gtceu:nano_forge_3",
         "gtceu:space_probe_surface_reception",
         "gtceu:dimensionally_transcendent_plasma_forge",
         "gtceu:dimensional_focus_engraving_array",
@@ -136,7 +137,6 @@ ItemEvents.tooltip(event => {
         "gtceu:precision_assembler",
         "gtceu:fishing_ground",
         "gtceu:pcb_factory",
-        "gtceu:large_pcb_factory",
         "gtceu:super_particle_collider",
         "gtceu:engraving_laser_plant",
         "gtceu:dimensionally_transcendent_mixer",

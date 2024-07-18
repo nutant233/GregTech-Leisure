@@ -500,7 +500,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
                 let value = 1 - controller.getCoilTier() * 0.05
-                components.add(Component.literal("耗时倍数：" + value))
+                components.add(Component.literal("耗能倍数：" + value))
                 components.add(Component.literal("耗时倍数：" + value))
             }
         })
@@ -1391,11 +1391,19 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .workableCasingRenderer("gtceu:block/casings/cleanroom/plascrete", "gtceu:block/multiblock/gcym/large_maceration_tower")
 
-    event.create("pcb_factory", "multiblock")
+    function getPCBReduction(machine) {
+        let item = machine.getMachineStorageItem().getId()
+        if (item == "gtceu:gold_nanoswarm" || item == "gtceu:vibranium_nanoswarm") {
+            return (100 - machine.getMachineStorageItem().getCount()) / 100
+        }
+        return 1
+    }
+
+    event.create("pcb_factory", "multiblock", (holder) => new $StorageMachine(holder, 64))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("pcb_factory")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, machine.getMachineStorageItem().getId() == "gtceu:vibranium_nanoswarm" ? 0.25 : 1, getPCBReduction(machine)), GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(GCyMBlocks.CASING_WATERTIGHT)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1430,6 +1438,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("l", Predicates.blocks("gtceu:stainless_evaporation_casing"))
                 .where(" ", Predicates.any())
                 .build())
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.literal("耗能倍数：" + (controller.getMachineStorageItem().getId() == "gtceu:vibranium_nanoswarm" ? 0.25 : 1)))
+                components.add(Component.literal("耗时倍数：" + getPCBReduction(controller)))
+            }
+        })
         .workableCasingRenderer("gtceu:block/casings/gcym/watertight_casing", "gtceu:block/multiblock/gcym/large_maceration_tower")
 
     event.create("lava_furnace", "multiblock")
@@ -1901,7 +1915,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
                 let value = 1 - controller.getCoilTier() * 0.05
-                components.add(Component.literal("耗时倍数：" + value))
+                components.add(Component.literal("耗时能数：" + value))
                 components.add(Component.literal("耗时倍数：" + value))
             }
         })
@@ -3845,11 +3859,11 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .workableCasingRenderer("kubejs:block/iridium_casing", "gtceu:block/multiblock/fusion_reactor")
 
-    event.create("nano_forge_1", "multiblock", (holder) => new $StorageMachine(holder, 1))
+    event.create("nano_forge_1", "multiblock", (holder) => new $StorageMachine(holder, 64))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("nano_forge")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount(), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -3872,19 +3886,28 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("C", Predicates.blocks("gtceu:ruridit_frame"))
                 .build())
         .beforeWorking((machine, recipe) => {
-            if (recipe.data.getInt("nano_forge_tier") == 1) {
+            if (recipe.data.getInt("nano_forge_tier") == 1 && machine.getMachineStorageItem().getId() == "gtceu:carbon_nanoswarm") {
                 return true
             }
             machine.getRecipeLogic().resetRecipeLogic()
             return false
         })
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                if (controller.getMachineStorageItem().getId() == "gtceu:carbon_nanoswarm") {
+                    components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(controller.getMachineStorageItem().getCount()).darkPurple()).gray())
+                } else {
+                    components.add(Component.literal("需要放入碳纳米蜂群").red())
+                }
+            }
+        })
         .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
-    event.create("nano_forge_2", "multiblock", (holder) => new $StorageMachine(holder, 1))
+    event.create("nano_forge_2", "multiblock", (holder) => new $StorageMachine(holder, 64))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("nano_forge")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 16 ** (2 - recipe.data.getInt("nano_forge_tier")), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (2 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (3 - recipe.data.getInt("nano_forge_tier")), 4), recipe, machine.getOverclockVoltage())])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -3911,19 +3934,28 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("D", Predicates.blocks("gtceu:ruridit_frame"))
                 .build())
         .beforeWorking((machine, recipe) => {
-            if (recipe.data.getInt("nano_forge_tier") < 3) {
+            if (recipe.data.getInt("nano_forge_tier") < 3 && machine.getMachineStorageItem().getId() == "gtceu:neutronium_nanoswarm") {
                 return true
             }
             machine.getRecipeLogic().resetRecipeLogic()
             return false
         })
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                if (controller.getMachineStorageItem().getId() == "gtceu:neutronium_nanoswarm") {
+                    components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(controller.getMachineStorageItem().getCount()).darkPurple()).gray())
+                } else {
+                    components.add(Component.literal("需要放入中子素纳米蜂群").red())
+                }
+            }
+        })
         .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
-    event.create("nano_forge_3", "multiblock", (holder) => new $StorageMachine(holder, 1))
+    event.create("nano_forge_3", "multiblock", (holder) => new $StorageMachine(holder, 64))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("nano_forge")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 16 ** (3 - recipe.data.getInt("nano_forge_tier")), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (3 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (4 - recipe.data.getInt("nano_forge_tier")), 4), recipe, machine.getOverclockVoltage())])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -3950,6 +3982,22 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("B", Predicates.blocks("kubejs:advanced_assembly_line_unit"))
                 .where("C", Predicates.blocks("gtceu:ruridit_frame"))
                 .build())
+        .beforeWorking((machine, recipe) => {
+            if (machine.getMachineStorageItem().getId() == "gtceu:draconium_nanoswarm") {
+                return true
+            }
+            machine.getRecipeLogic().resetRecipeLogic()
+            return false
+        })
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                if (controller.getMachineStorageItem().getId() == "gtceu:draconium_nanoswarm") {
+                    components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(controller.getMachineStorageItem().getCount()).darkPurple()).gray())
+                } else {
+                    components.add(Component.literal("需要放入龙纳米蜂群").red())
+                }
+            }
+        })
         .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
     event.create("chemical_distort", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
@@ -4000,7 +4048,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
 
     event.create("dimensional_focus_engraving_array", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 2 ** (machine.getCoilType().getCoilTemperature() / 900), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(GCyMBlocks.CASING_LASER_SAFE_ENGRAVING)
         .recipeTypes("dimensional_focus_engraving_array")
         .pattern((definition) =>
@@ -4115,7 +4163,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(2 ** (controller.getCoilType().getCoilTemperature() / 900))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(recipe, Math.min(2147483647, 2 ** (controller.getCoilType().getCoilTemperature() / 900)))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("gtceu:block/casings/gcym/laser_safe_engraving_casing", "gtceu:block/multiblock/fusion_reactor")
@@ -4123,7 +4171,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("mega_wiremill", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
         .recipeType("wiremill")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 2 ** (machine.getCoilType().getCoilTemperature() / 900)).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900))).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:oxidation_resistant_hastelloy_n_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4173,7 +4221,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(2 ** (controller.getCoilType().getCoilTemperature() / 900))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(Math.min(2147483647, 2 ** (controller.getCoilType().getCoilTemperature() / 900)))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/oxidation_resistant_hastelloy_n_mechanical_casing", "gtceu:block/multiblock/gcym/large_wiremill")

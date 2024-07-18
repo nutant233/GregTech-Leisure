@@ -14800,7 +14800,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("64x gtceu:carbon_block", "64x gtceu:soc")
         .itemOutputs("64x gtceu:carbon_nanoswarm")
         .inputFluids("gtceu:soldering_alloy 20000", "gtceu:lubricant 20000")
-        .duration(160000)
+        .duration(80000)
         .EUt(GTValues.VA[GTValues.UV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 1)
 
@@ -14809,7 +14809,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("64x minecraft:glowstone", "64x gtceu:advanced_soc")
         .itemOutputs("64x gtceu:glowstone_nanoswarm")
         .inputFluids("gtceu:uu_amplifier 10000", "gtceu:soldering_alloy 20000", "gtceu:lubricant 20000")
-        .duration(640000)
+        .duration(320000)
         .EUt(GTValues.VA[GTValues.UV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 1)
 
@@ -14836,7 +14836,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x minecraft:gold_block", "16x gtceu:soc")
         .itemOutputs("gtceu:gold_nanoswarm")
         .inputFluids("gtceu:enriched_naquadah 2000", "gtceu:soldering_alloy 20000", "gtceu:bismuth 20000")
-        .duration(80000)
+        .duration(40000)
         .EUt(GTValues.VA[GTValues.UV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 1)
 
@@ -14845,7 +14845,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:silver_block", "16x gtceu:soc")
         .itemOutputs("gtceu:silver_nanoswarm")
         .inputFluids("gtceu:enriched_naquadah 2000", "gtceu:soldering_alloy 20000", "gtceu:bismuth 20000")
-        .duration(80000)
+        .duration(40000)
         .EUt(GTValues.VA[GTValues.UV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 1)
 
@@ -14854,7 +14854,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:iridium_block", "32x gtceu:soc")
         .itemOutputs("gtceu:iridium_nanoswarm")
         .inputFluids("gtceu:naquadria 2000", "gtceu:uu_amplifier 2000", "gtceu:soldering_alloy 20000")
-        .duration(160000)
+        .duration(80000)
         .EUt(GTValues.VA[GTValues.UV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 1)
 
@@ -14863,7 +14863,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:osmium_block", "32x gtceu:soc")
         .itemOutputs("gtceu:osmium_nanoswarm")
         .inputFluids("gtceu:naquadria 2000", "gtceu:uu_amplifier 2000", "gtceu:soldering_alloy 20000")
-        .duration(160000)
+        .duration(80000)
         .EUt(GTValues.VA[GTValues.UV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 1)
 
@@ -14872,7 +14872,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:rhenium_block", "64x gtceu:soc")
         .itemOutputs("gtceu:rhenium_nanoswarm")
         .inputFluids("gtceu:naquadria 2000", "gtceu:uu_amplifier 2000", "gtceu:soldering_alloy 20000")
-        .duration(320000)
+        .duration(160000)
         .EUt(GTValues.VA[GTValues.UV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 1)
 
@@ -14881,7 +14881,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:naquadah_block", "16x gtceu:advanced_soc")
         .itemOutputs("gtceu:naquadah_nanoswarm")
         .inputFluids("gtceu:naquadria 8000", "gtceu:uu_amplifier 2000", "gtceu:mutated_living_solder 20000")
-        .duration(640000)
+        .duration(320000)
         .EUt(GTValues.VA[GTValues.UV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 1)
 
@@ -14890,7 +14890,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:neutronium_block", "64x gtceu:soc", "32x gtceu:advanced_soc")
         .itemOutputs("gtceu:neutronium_nanoswarm")
         .inputFluids("gtceu:neutronium 4000", "gtceu:uu_amplifier 2000", "gtceu:mutated_living_solder 20000")
-        .duration(1280000)
+        .duration(640000)
         .EUt(GTValues.VA[GTValues.UV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 1)
 
@@ -14899,7 +14899,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:enderium_block", "64x gtceu:advanced_soc", "64x gtceu:advanced_soc")
         .itemOutputs("gtceu:enderium_nanoswarm")
         .inputFluids("gtceu:neutronium 8000", "gtceu:uu_amplifier 4000", "gtceu:mutated_living_solder 40000")
-        .duration(80000)
+        .duration(40000)
         .EUt(GTValues.VA[GTValues.UEV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 2)
 
@@ -14908,7 +14908,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:infuscolium_block", "64x gtceu:advanced_soc", "32x gtceu:highly_advanced_soc")
         .itemOutputs("gtceu:infuscolium_nanoswarm")
         .inputFluids("gtceu:neutronium 8000", "gtceu:uu_amplifier 4000", "gtceu:mutated_living_solder 40000")
-        .duration(80000)
+        .duration(40000)
         .EUt(GTValues.VA[GTValues.UEV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 2)
 
@@ -14917,7 +14917,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:uruium_block", "64x gtceu:advanced_soc", "64x gtceu:highly_advanced_soc")
         .itemOutputs("gtceu:uruium_nanoswarm")
         .inputFluids("gtceu:uu_matter 20000", "gtceu:mutated_living_solder 40000", "gtceu:super_mutated_living_solder 40000")
-        .duration(160000)
+        .duration(80000)
         .EUt(GTValues.VA[GTValues.UEV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 2)
 
@@ -14926,7 +14926,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:vibranium_block", "64x gtceu:highly_advanced_soc", "64x gtceu:highly_advanced_soc")
         .itemOutputs("gtceu:vibranium_nanoswarm")
         .inputFluids("gtceu:uu_matter 20000", "gtceu:mutated_living_solder 40000", "gtceu:super_mutated_living_solder 40000")
-        .duration(120000)
+        .duration(60000)
         .EUt(GTValues.VA[GTValues.UEV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 2)
 
@@ -14935,7 +14935,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:draconium_block", "32x gtceu:highly_advanced_soc_wafer", "32x kubejs:optical_ram_wafer", "32x kubejs:optical_soc", "8x kubejs:exotic_processing_core")
         .itemOutputs("gtceu:draconium_nanoswarm")
         .inputFluids("gtceu:uu_matter 40000", "gtceu:mutated_living_solder 80000", "gtceu:super_mutated_living_solder 80000")
-        .duration(640000)
+        .duration(320000)
         .EUt(GTValues.VA[GTValues.UEV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 2)
 
@@ -14944,7 +14944,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:cosmicneutronium_block", "32x kubejs:optical_soc", "32x kubejs:exotic_wafer", "16x kubejs:cosmic_ram_wafer", "8x kubejs:cosmic_processing_unit_core")
         .itemOutputs("gtceu:cosmicneutronium_nanoswarm")
         .inputFluids("gtceu:uu_matter 40000", "gtceu:crystalmatrix 40000", "gtceu:cosmic_mesh 40000")
-        .duration(80000)
+        .duration(40000)
         .EUt(GTValues.VA[GTValues.UXV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 3)
 
@@ -14954,7 +14954,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:spacetime_block", "4x kubejs:eigenfolded_kerr_manifold", "16x kubejs:supracausal_ram_wafer", "8x kubejs:supracausal_processing_core")
         .itemOutputs("gtceu:spacetime_nanoswarm")
         .inputFluids("gtceu:uu_matter 80000", "gtceu:infinity 40000", "gtceu:temporalfluid 40000")
-        .duration(160000)
+        .duration(80000)
         .EUt(GTValues.VA[GTValues.UXV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 3)
 
@@ -14964,7 +14964,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:rhenium_nanoswarm", "8x gtceu:transcendentmetal_block", "8x kubejs:recursively_folded_negative_space", "kubejs:suprachronal_max")
         .itemOutputs("gtceu:transcendentmetal_nanoswarm")
         .inputFluids("gtceu:uu_matter 80000", "gtceu:raw_star_matter_plasma 40000", "gtceu:spatialfluid 20000")
-        .duration(320000)
+        .duration(160000)
         .EUt(GTValues.VA[GTValues.UXV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 3)
 
@@ -14975,7 +14975,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:neutronium_nanoswarm", "8x gtceu:eternity_block", "8x kubejs:ctc_computational_unit")
         .itemOutputs("gtceu:eternity_nanoswarm")
         .inputFluids("gtceu:spatialfluid 80000", "gtceu:exciteddtsc 80000", "gtceu:primordialmatter 80000")
-        .duration(640000)
+        .duration(320000)
         .EUt(GTValues.VA[GTValues.UXV])
     ["addData(java.lang.String,int)"]("nano_forge_tier", 3)
 
