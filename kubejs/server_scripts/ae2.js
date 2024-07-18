@@ -154,7 +154,7 @@ ServerEvents.recipes((event) => {
     for (let index = 0; index < 5; index++) {
         event.shapeless(`gtceu:${4 ** index}m_storage`, ["ae2:crafting_unit", getCellComponent(index + 5)])
         event.shapeless(`gtceu:item_storage_cell_${4 ** index}m`, ["ae2:item_cell_housing", getCellComponent(index + 5)])
-        event.shapeless(`gtceu:fluid_storage_cell_${4 ** index}m`, ["ae2:item_cell_housing", getCellComponent(index + 5)])
+        event.shapeless(`gtceu:fluid_storage_cell_${4 ** index}m`, ["ae2:fluid_cell_housing", getCellComponent(index + 5)])
         event.shaped(`gtceu:item_storage_cell_${4 ** index}m`, [
             "ABA",
             "BDB",

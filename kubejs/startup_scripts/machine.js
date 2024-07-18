@@ -8,6 +8,7 @@ const $CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.g
 const $ComputationProviderMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.research.ComputationProviderMachine")
 const $Slaughterhouse = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.Slaughterhouse")
 const $DysonSphere = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.generator.DysonSphere")
+const $StorageMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.StorageMachine")
 const $ItemRecipeCapability = Java.loadClass("com.gregtechceu.gtceu.api.capability.recipe.ItemRecipeCapability")
 const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
 const $TeamUtil = Java.loadClass("com.hepdd.gtmthings.utils.TeamUtil")
@@ -107,7 +108,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("stellar_forge")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(3, 4, 1, 1))])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(3, 4))])
         .appearanceBlock(GCyMBlocks.CASING_ATOMIC)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("               ", "      bbb      ", "      b b      ", "      b b      ", "      b b      ", "      b b      ", "      b b      ", "      bbb      ", "               ")
@@ -638,7 +639,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("advanced_assembly_line", "multiblock")
         .rotationState(RotationState.ALL)
         .recipeType("assembly_line")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(2, 4, 0.6, 1))])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.6), GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern(definition =>
             FactoryBlockPattern.start("back", "up", "right")
@@ -958,7 +959,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(4 ** (controller.self().getTier() - 4)).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(4 ** (controller.self().getTier() - 4))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("gtceu:block/casings/steam/steel/side", "gtceu:block/multiblock/gcym/large_maceration_tower")
@@ -994,7 +995,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("a_mass_fabricator", "multiblock")
         .rotationState(RotationState.ALL)
         .recipeType("mass_fabricator")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(4, 4, 0.5, 0.8))])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 0.8, 0.5), GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(GTBlocks.MACHINE_CASING_UXV)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1079,7 +1080,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("space_elevator")
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1, 1, 1)))
+        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1)))
         .appearanceBlock(() => Block.getBlock("kubejs:space_elevator_mechanical_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start("right", "down", "front")
@@ -1282,7 +1283,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .allowExtendedFacing(false)
         .allowFlip(false)
         .recipeType("block_conversion")
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 4, 1, 1)))
+        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 4)))
         .appearanceBlock(() => Block.getBlock("kubejs:aluminium_bronze_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start()
@@ -1610,7 +1611,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("mega_alloy_blast_smelter", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe, 0.8)])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.8), GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
         .appearanceBlock(GCyMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .recipeTypes("alloy_blast_smelter")
         .pattern(definition => FactoryBlockPattern.start()
@@ -1802,7 +1803,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("super_blast_smelter", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe, 0.2)])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.2), GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
         .appearanceBlock(GCyMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .recipeTypes("electric_blast_furnace")
         .recipeTypes("alloy_blast_smelter")
@@ -1959,7 +1960,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("blaze_blast_furnace", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
         .recipeType("electric_blast_furnace")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4, false).getFirst(), (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe, 0.5)])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.5), GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4, false).getFirst(), (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
         .appearanceBlock(() => Block.getBlock("kubejs:blaze_blast_furnace_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("XXX", "CCC", "CCC", "XXX")
@@ -2002,7 +2003,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("cold_ice_freezer", "multiblock")
         .rotationState(RotationState.ALL)
         .recipeType("vacuum_freezer")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(2, 4, 0.5, 1))])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.5), GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:cold_ice_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("XXX", "XXX", "XXX")
@@ -2045,7 +2046,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .allowExtendedFacing(false)
         .allowFlip(false)
         .recipeType("door_of_create")
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1, 1, 1)))
+        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1)))
         .appearanceBlock(() => Block.getBlock("kubejs:dimension_connection_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start()
@@ -2392,7 +2393,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .allowExtendedFacing(false)
         .allowFlip(false)
         .recipeType("create_aggregation")
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1, 1, 1)))
+        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1)))
         .appearanceBlock(() => Block.getBlock("kubejs:dimension_connection_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("          aaaaaaa          ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "                           ", "          aaaaaaa          ",)
@@ -2533,7 +2534,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("suprachronal_assembly_line")
         .recipeType("assembly_line")
         .recipeType("circuit_assembly_line")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(4, 4, 0.4, 1))])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.4), GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start("up", "back", "left")
@@ -2639,7 +2640,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .rotationState(RotationState.ALL)
         .recipeType("assembly_line")
         .recipeType("circuit_assembly_line")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(4, 4, 0.4, 1))])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.4), GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle(" D ", " E ", " D ")
@@ -2752,7 +2753,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .workableCasingRenderer("kubejs:block/extreme_strength_tritanium_casing", "gtceu:block/multiblock/fusion_reactor")
 
-    event.create("processing_plant", "multiblock")
+    event.create("processing_plant", "multiblock", (holder) => new $StorageMachine(holder, 1))
         .rotationState(RotationState.ALL)
         .recipeType("bender")
         .recipeType("compressor")
@@ -2763,10 +2764,9 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("wiremill")
         .recipeType("forming_press")
         .recipeType("polarizer")
-        .recipeType("extractor")
         .recipeType("laser_engraver")
         .recipeType("fluid_solidifier")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - 1)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(2, 4, 0.9, 0.8))])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 0.8, 0.9), GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - 1)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
                 .aisle("bbb", "bbb", "bbb")
@@ -2784,40 +2784,37 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             let isrecipe = false
             switch (machine.self().getRecipeType()) {
                 case GTRecipeTypes.BENDER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_bender").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_bender"
                     break
                 case GTRecipeTypes.COMPRESSOR_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_compressor").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_compressor"
                     break
                 case GTRecipeTypes.FORGE_HAMMER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_forge_hammer").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_forge_hammer"
                     break
                 case GTRecipeTypes.CUTTER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_cutter").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_cutter"
                     break
                 case GTRecipeTypes.EXTRUDER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_extruder").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_extruder"
                     break
                 case GTRecipeTypes.LATHE_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_lathe").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_lathe"
                     break
                 case GTRecipeTypes.WIREMILL_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_wiremill").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_wiremill"
                     break
                 case GTRecipeTypes.FORMING_PRESS_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_forming_press").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_forming_press"
                     break
                 case GTRecipeTypes.POLARIZER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_polarizer").build()).isSuccess()
-                    break
-                case GTRecipeTypes.EXTRACTOR_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_extractor").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_polarizer"
                     break
                 case GTRecipeTypes.FLUID_SOLIDFICATION_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_fluid_solidifier").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_fluid_solidifier"
                     break
                 case GTRecipeTypes.LASER_ENGRAVER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_laser_engraver").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_laser_engraver"
                     break
                 default:
                     break
@@ -2829,16 +2826,16 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (controller.self().getTier() - 1))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(Math.min(16, 4 * (controller.self().getTier() - 1)))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
-    event.create("assemble_plant", "multiblock")
+    event.create("assemble_plant", "multiblock", (holder) => new $StorageMachine(holder, 1))
         .rotationState(RotationState.ALL)
         .recipeType("assembler")
         .recipeType("circuit_assembler")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - 1)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(2, 4, 0.9, 0.8))])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 0.8, 0.9), GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - 1)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
                 .aisle("bbb", "bbb", "bbb")
@@ -2856,10 +2853,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             let isrecipe = false
             switch (machine.self().getRecipeType()) {
                 case GTRecipeTypes.ASSEMBLER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_assembler").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_assembler"
                     break
                 case GTRecipeTypes.CIRCUIT_ASSEMBLER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_circuit_assembler").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_circuit_assembler"
                     break
                 default:
                     break
@@ -2871,18 +2868,20 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (controller.self().getTier() - 1))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(Math.min(16, 4 * (controller.self().getTier() - 1)))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
-    event.create("separated_plant", "multiblock")
+    event.create("separated_plant", "multiblock", (holder) => new $StorageMachine(holder, 1))
         .rotationState(RotationState.ALL)
         .recipeType("centrifuge")
         .recipeType("thermal_centrifuge")
         .recipeType("electrolyzer")
         .recipeType("sifter")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - 1)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(2, 4, 0.9, 0.8))])
+        .recipeType("macerator")
+        .recipeType("extractor")
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 0.8, 0.9), GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - 1)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
                 .aisle("bbb", "bbb", "bbb")
@@ -2900,16 +2899,22 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             let isrecipe = false
             switch (machine.self().getRecipeType()) {
                 case GTRecipeTypes.CENTRIFUGE_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_centrifuge").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_centrifuge"
                     break
                 case GTRecipeTypes.THERMAL_CENTRIFUGE_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_thermal_centrifuge").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_thermal_centrifuge"
                     break
                 case GTRecipeTypes.ELECTROLYZER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_electrolyzer").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_electrolyzer"
                     break
                 case GTRecipeTypes.SIFTER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_sifter").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_sifter"
+                    break
+                case GTRecipeTypes.MACERATOR_RECIPES:
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_macerator"
+                    break
+                case GTRecipeTypes.EXTRACTOR_RECIPES:
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_extractor"
                     break
                 default:
                     break
@@ -2921,18 +2926,18 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (controller.self().getTier() - 1))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(Math.min(16, 4 * (controller.self().getTier() - 1)))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
-    event.create("mixed_plant", "multiblock")
+    event.create("mixed_plant", "multiblock", (holder) => new $StorageMachine(holder, 1))
         .rotationState(RotationState.ALL)
         .recipeType("chemical_reactor")
         .recipeType("mixer")
         .recipeType("chemical_bath")
         .recipeType("ore_washer")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - 1)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(2, 4, 0.9, 0.8))])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 0.8, 0.9), GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - 1)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:multi_functional_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -2951,16 +2956,16 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             let isrecipe = false
             switch (machine.self().getRecipeType()) {
                 case GTRecipeTypes.CHEMICAL_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_chemical_reactor").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_chemical_reactor"
                     break
                 case GTRecipeTypes.MIXER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_mixer").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_mixer"
                     break
                 case GTRecipeTypes.CHEMICAL_BATH_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_chemical_bath").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_chemical_bath"
                     break
                 case GTRecipeTypes.ORE_WASHER_RECIPES:
-                    isrecipe = machine.input(true, ContentBuilder().item("gtceu:" + tiers[tier][0] + "_ore_washer").build()).isSuccess()
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_ore_washer"
                     break
                 default:
                     break
@@ -2972,7 +2977,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(Math.min(16, 4 * (controller.self().getTier() - 1))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(Math.min(16, 4 * (controller.self().getTier() - 1)))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/multi_functional_casing", "gtceu:block/multiblock/gcym/large_assembler")
@@ -3510,7 +3515,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("slaughterhouse", "multiblock", (holder) => new $Slaughterhouse(holder, mobList1, mobList2))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 4, 1, 1)))
+        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 4)))
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .recipeTypes("slaughterhouse")
         .pattern(definition => FactoryBlockPattern.start()
@@ -3652,7 +3657,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("weather_control")
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1, 1, 1)))
+        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1)))
         .appearanceBlock(GTBlocks.STEEL_HULL)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("AAA", " A ", " A ", "   ", "   ", "   ", "   ")
@@ -3727,7 +3732,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("large_rock_crusher", "multiblock")
         .rotationState(RotationState.ALL)
         .recipeType("rock_breaker")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(2, 4, 1, 1))])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(GCyMBlocks.CASING_SECURE_MACERATION)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -3840,7 +3845,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .workableCasingRenderer("kubejs:block/iridium_casing", "gtceu:block/multiblock/fusion_reactor")
 
-    event.create("nano_forge_1", "multiblock")
+    event.create("nano_forge_1", "multiblock", (holder) => new $StorageMachine(holder, 1))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("nano_forge")
@@ -3875,7 +3880,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
-    event.create("nano_forge_2", "multiblock")
+    event.create("nano_forge_2", "multiblock", (holder) => new $StorageMachine(holder, 1))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("nano_forge")
@@ -3914,7 +3919,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
-    event.create("nano_forge_3", "multiblock")
+    event.create("nano_forge_3", "multiblock", (holder) => new $StorageMachine(holder, 1))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("nano_forge")
@@ -4110,7 +4115,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(2 ** (controller.getCoilType().getCoilTemperature() / 900)).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(2 ** (controller.getCoilType().getCoilTemperature() / 900))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("gtceu:block/casings/gcym/laser_safe_engraving_casing", "gtceu:block/multiblock/fusion_reactor")
@@ -4168,7 +4173,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal(2 ** (controller.getCoilType().getCoilTemperature() / 900)).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(2 ** (controller.getCoilType().getCoilTemperature() / 900))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/oxidation_resistant_hastelloy_n_mechanical_casing", "gtceu:block/multiblock/gcym/large_wiremill")

@@ -14696,6 +14696,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("1x gtceu:hafnium_dust", "6x gtceu:magnesium_chloride_dust")
         .EUt(120)
         .duration(300)
+        .blastFurnaceTemp(3400)
 
     gtr.incubator("gtceu:stem_cells")
         .chancedInput("kubejs:glacio_spirit", 6000, 500)

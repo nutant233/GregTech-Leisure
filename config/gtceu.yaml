@@ -176,6 +176,10 @@ machines:
   # Default: false
   harmlessActiveTransformers: false
 
+  # Divisor for Recipe Duration per Overclock.
+  # Default: 2.0
+  overclockDivisor: 2.0
+
   # Whether to play machine sounds while machines are active.
   # Default: true
   machineSounds: true
