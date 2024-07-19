@@ -942,6 +942,11 @@
 			]
 			id: "445E80B825D862C8"
 			optional: true
+			rewards: [{
+				id: "058D4F7D96DE7CC0"
+				item: "gtceu:chocolate_coin"
+				type: "item"
+			}]
 			tasks: [{
 				id: "27B31B7702C197DD"
 				item: "kubejs:time_twister_wireless"
