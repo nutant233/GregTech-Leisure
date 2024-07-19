@@ -4,7 +4,16 @@ ServerEvents.recipes((event) => {
     const tiers = [["ulv", 0], ["lv", 1], ["mv", 2], ["hv", 3], ["ev", 4], ["iv", 5], ["luv", 6], ["zpm", 7], ["uv", 8], ["uhv", 9], ["uev", 10], ["uiv", 11], ["uxv", 12], ["opv", 13], ["max", 14]]
 
     event.remove({ output: "ae2:certus_quartz_crystal", input: "ae2:quartz_block" })
+    event.remove({ output: "ae2:controller" })
     event.remove({ output: "ae2:blank_pattern" })
+    event.remove({ id: "ae2:network/parts/export_bus" })
+    event.remove({ id: "ae2:network/parts/import_bus" })
+    event.remove({ id: "ae2:network/wireless_part" })
+    event.remove({ id: "ae2:materials/annihilationcore" })
+    event.remove({ id: "ae2:materials/formationcore" })
+    event.remove({ id: "ae2:materials/advancedcard" })
+    event.remove({ id: "ae2:materials/basiccard" })
+    event.remove({ id: "ae2:network/crafting/cpu_crafting_unit" })
     event.replaceInput({ output: "expatternprovider:fishbig" }, "minecraft:pufferfish", "gtceu:magnetohydrodynamicallyconstrainedstarmatter_block")
     event.shapeless("infinitycells:infinity_cell", ["ae2:item_cell_housing", "kubejs:infinite_cell_component"])
     event.shapeless("infinitycells:infinity_fluid_cell", ["ae2:fluid_cell_housing", "kubejs:infinite_cell_component"])
@@ -16,6 +25,83 @@ ServerEvents.recipes((event) => {
     ], {
         A: "ae2:dense_energy_cell",
         D: "gtceu:hv_field_generator"
+    })
+
+    event.shaped("ae2:crafting_unit", [
+        "PCP",
+        "KMK",
+        "PLP"
+    ], {
+        P: "gtceu:aluminium_plate",
+        C: "ae2:calculation_processor",
+        K: "ae2:fluix_glass_cable",
+        M: "#gtceu:circuits/mv",
+        L: "ae2:logic_processor",
+    });
+
+    event.shaped("2x ae2:advanced_card", [
+        "WP ",
+        "ACP",
+        "SP "
+    ], {
+        W: "#forge:fine_wires/red_alloy",
+        P: "#forge:plates/stainless_steel",
+        A: "ae2:engineering_processor",
+        C: "#gtceu:circuits/hv",
+        S: "#forge:fine_wires/silver",
+    })
+
+    event.shaped("2x ae2:basic_card", [
+        "WP ",
+        "ACP",
+        "SP "
+    ], {
+        W: "#forge:fine_wires/red_alloy",
+        P: "#forge:plates/aluminium",
+        A: "ae2:engineering_processor",
+        C: "#gtceu:circuits/mv",
+        S: "#forge:fine_wires/gold",
+    })
+
+    event.shaped("ae2:annihilation_core", [
+        "CPB"
+    ], {
+        C: "#gtceu:circuits/ulv",
+        P: "ae2:logic_processor",
+        B: "#forge:dusts/nether_quartz",
+    })
+
+    event.shaped("ae2:formation_core", [
+        "CPB"
+    ], {
+        C: "#gtceu:circuits/ulv",
+        P: "ae2:logic_processor",
+        B: "#forge:dusts/certus_quartz",
+    })
+
+    event.shaped("ae2:wireless_receiver", [
+        "CPC",
+        "RSR",
+        "   "
+    ], {
+        C: "#gtceu:circuits/ev",
+        P: "ae2:fluix_pearl",
+        R: "#forge:rods/titanium",
+        S: "gtceu:hv_sensor",
+    })
+
+    event.shaped("ae2:import_bus", [
+        "IPC"
+    ], {
+        I: "ae2:annihilation_core",
+        P: "gtceu:lv_robot_arm",
+        C: "ae2:fluix_glass_cable",
+    })
+
+    event.shaped("ae2:export_bus", ["IPC"], {
+        I: "ae2:formation_core",
+        P: "gtceu:lv_robot_arm",
+        C: "ae2:fluix_glass_cable",
     })
 
     gtr.forming_press("ae2:logic_processor")
@@ -93,9 +179,9 @@ ServerEvents.recipes((event) => {
         .EUt(16)
         .duration(200)
 
-    gtr.macerator('ae2:fluix_dust')
-        .itemInputs('ae2:fluix_crystal')
-        .itemOutputs('ae2:fluix_dust')
+    gtr.macerator("ae2:fluix_dust")
+        .itemInputs("ae2:fluix_crystal")
+        .itemOutputs("ae2:fluix_dust")
         .EUt(2)
         .duration(240)
 
@@ -120,19 +206,49 @@ ServerEvents.recipes((event) => {
         .EUt(30)
         .duration(20)
 
-    gtr.assembler("ae2:blank_pattern_1")
-        .itemInputs("ae2:quartz_glass", "#gtceu:circuits/ulv", "gtceu:glass_gem", "2x minecraft:glowstone_dust", "gtceu:small_iron_spring", "gtceu:double_iron_plate", "gtceu:nether_quartz_plate", "4x gtceu:polyvinyl_chloride_plate", "4x gtceu:wrought_iron_foil")
-        .inputFluids("gtceu:glass 1296")
+    gtr.assembler("gtceu:blank_pattern")
+        .itemInputs(
+            "3x #forge:plates/steel",
+            "2x #forge:plates/polyethylene",
+            "4x #forge:fine_wires/red_alloy",
+            "#gtceu:circuits/mv")
         .itemOutputs("ae2:blank_pattern")
+        .inputFluids("gtceu:glass 144")
+        .duration(200)
         .EUt(120)
-        .duration(200)
 
-    gtr.assembler("ae2:blank_pattern_2")
-        .itemInputs("ae2:quartz_glass", "#gtceu:circuits/lv", "gtceu:exquisite_glass_gem", "2x minecraft:glowstone_dust", "gtceu:small_iron_spring", "gtceu:double_iron_plate", "gtceu:nether_quartz_plate", "4x gtceu:polybenzimidazole_plate", "4x gtceu:wrought_iron_foil")
-        .inputFluids("gtceu:glass 1296")
-        .itemOutputs("16x ae2:blank_pattern")
-        .EUt(1920)
+    gtr.assembler("gtceu:blank_pattern_good")
+        .itemInputs(
+            "3x #forge:plates/steel",
+            "2x #forge:plates/polyvinyl_chloride",
+            "4x #forge:fine_wires/red_alloy",
+            "#gtceu:circuits/mv")
+        .itemOutputs("4x ae2:blank_pattern")
+        .inputFluids("gtceu:glass 288")
         .duration(200)
+        .EUt(120)
+
+    gtr.assembler("gtceu:blank_pattern_better")
+        .itemInputs(
+            "3x #forge:plates/steel",
+            "2x #forge:plates/polytetrafluoroethylene",
+            "4x #forge:fine_wires/red_alloy",
+            "#gtceu:circuits/mv")
+        .itemOutputs("16x ae2:blank_pattern")
+        .inputFluids("gtceu:glass 576")
+        .duration(200)
+        .EUt(480)
+
+    gtr.assembler("gtceu:blank_pattern_best")
+        .itemInputs(
+            "3x #forge:plates/steel",
+            "2x #forge:plates/polybenzimidazole",
+            "4x #forge:fine_wires/red_alloy",
+            "#gtceu:circuits/mv")
+        .itemOutputs("64x ae2:blank_pattern")
+        .inputFluids("gtceu:glass 1152")
+        .duration(200)
+        .EUt(480)
 
     gtr.macerator("ae2:sky_dust")
         .itemInputs("ae2:sky_stone_block")
