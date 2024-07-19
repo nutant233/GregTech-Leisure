@@ -252,7 +252,7 @@ ServerEvents.recipes((event) => {
         "CAC",
         "DED"
     ], {
-        A: "gtceu:hv_machine_hull",
+        A: "gtceu:uev_machine_hull",
         C: "gtceu:uev_robot_arm",
         D: "gtceu:law_filter_casing",
         E: "gtceu:sterile_cleaning_maintenance_hatch"

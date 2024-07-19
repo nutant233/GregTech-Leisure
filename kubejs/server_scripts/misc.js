@@ -45,14 +45,15 @@ ServerEvents.recipes((event) => {
         B: "gtceu:eternity_rod"
     })
 
-    event.shaped("kubejs:time_twister_mk", [
-        "EEE",
-        "DSD",
-        "EEE"
+    event.shaped("kubejs:time_twister_wireless", [
+        "CDC",
+        "BAB",
+        "CDC"
     ], {
-        S: Item.of("kubejs:time_twister", "{Damage:0}").weakNBT(),
-        D: "gtceu:electric_blast_furnace",
-        E: "gtceu:primitive_blast_furnace"
+        A: "kubejs:time_twister",
+        D: "gtmthings:wireless_energy_monitor",
+        C: "gtmthings:lv_wireless_energy_receive_cover",
+        B: "minecraft:clock"
     })
 
     gtr.weather_control("1")
@@ -123,6 +124,10 @@ const gtch = Java.loadClass("com.gregtechceu.gtceu.api.capability.GTCapabilityHe
 const $DamageTypes = Java.loadClass("net.minecraft.world.damagesource.DamageTypes")
 const $MenuHooks = Java.loadClass("earth.terrarium.botarium.common.menu.MenuHooks")
 const $PlanetsMenuProvider = Java.loadClass("earth.terrarium.adastra.common.menus.base.PlanetsMenuProvider")
+const $WirelessEnergyManager = Java.loadClass("com.hepdd.gtmthings.api.misc.WirelessEnergyManager")
+const $BigInteger = Java.loadClass("java.math.BigInteger")
+const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
+const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUtil")
 BlockEvents.rightClicked(event => {
     function a() {
         event.player.damageHeldItem()
@@ -135,18 +140,14 @@ BlockEvents.rightClicked(event => {
         }
     }
     if (!event.player.isFake() && event.player.isSteppingCarefully()) {
-        if (event.player.getHeldItem(event.hand) == "kubejs:time_twister_mk") {
+        if (event.player.getHeldItem(event.hand) == "kubejs:time_twister_wireless") {
             var recipeLogic = gtch.getRecipeLogic(event.level, event.block.pos, null)
-            if (recipeLogic != null && recipeLogic.isWorking() && recipeLogic.getMachine().self().getRecipeType() == GTRecipeTypes.ALLOY_SMELTER_RECIPES || recipeLogic.getMachine().self().getRecipeType() == GTRecipeTypes.BLAST_RECIPES && recipeLogic.getMachine().self().getTier() < 7) {
-                if (recipeLogic.getDuration() > 800) {
-                    recipeLogic.setProgress(recipeLogic.getProgress() + 160)
-                    a()
-                } else if (recipeLogic.getDuration() > 400) {
-                    recipeLogic.setProgress(recipeLogic.getProgress() + 80)
-                    a()
-                } else if (recipeLogic.getDuration() > 200) {
-                    recipeLogic.setProgress(recipeLogic.getProgress() + 80)
-                    a()
+            if (recipeLogic != null && recipeLogic.isWorking()) {
+                let reducedDuration = (recipeLogic.getDuration() - recipeLogic.getProgress()) * 0.5
+                let eu = 8 * reducedDuration * $RecipeHelper.getInputEUt(recipeLogic.getLastRecipe())
+                if (eu > 0 && $WirelessEnergyManager.addEUToGlobalEnergyMap(event.player.uuid, $BigInteger.valueOf(- eu))) {
+                    recipeLogic.setProgress(recipeLogic.getProgress() + reducedDuration)
+                    event.player.setStatusMessage("消耗了 " + $FormattingUtil.formatNumbers(eu) + " EU，使机器运行时间减少了 " + reducedDuration + " tick")
                 }
             }
         }
@@ -159,7 +160,7 @@ BlockEvents.rightClicked(event => {
                     if (recipeLogic.getMachine().self().getRecipeType() == GTRecipeTypes.PRIMITIVE_BLAST_FURNACE_RECIPES) {
                         recipeLogic.setProgress(recipeLogic.getProgress() + 100)
                         a()
-                    } else if (recipeLogic.getMachine().self().getTier() < 4) {
+                    } else if (recipeLogic.getMachine().self().getTier() < 4 && $RecipeHelper.getInputEUt(recipeLogic.getLastRecipe()) > 0) {
                         if (recipeLogic.getDuration() > 400) {
                             recipeLogic.setProgress(recipeLogic.getProgress() + (4 - recipeLogic.getMachine().self().getTier()) * 40)
                             a()
@@ -412,7 +413,7 @@ PlayerEvents.tick(event => {
             event.player.persistentData.putInt("fspeed", 1)
         }
         let tt = event.player.persistentData.getInt("tt")
-        let tti = (event.player.getHeldItem("main_hand") == "kubejs:time_twister" || event.player.getHeldItem("main_hand") == "kubejs:time_twister_mk")
+        let tti = event.player.getHeldItem("main_hand") == "kubejs:time_twister"
         if (tt > 20) {
             if (tti) {
                 event.player.setStatusMessage("可使用次数：" + 20)

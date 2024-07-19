@@ -931,6 +931,25 @@
 			x: -7.5d
 			y: 7.5d
 		}
+		{
+			dependencies: [
+				"691B35DF70361BB3"
+				"15A4420D900FEDE6"
+			]
+			description: [
+				"不同于普通版，这个版本没有耐久度，没有次数限制，没有冷却，没有电压限制，但代价是电"
+				"机制：每次使用使机器进度增加到剩余进度的50%，消耗EU：8x减少掉的时间(tick单位)x配方运行功率"
+			]
+			id: "445E80B825D862C8"
+			optional: true
+			tasks: [{
+				id: "27B31B7702C197DD"
+				item: "kubejs:time_twister_wireless"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 7.5d
+		}
 	]
 	subtitle: ["Tier1-LV"]
 	title: "低压"
