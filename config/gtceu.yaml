@@ -444,7 +444,7 @@ compat:
 
   # Whether dimension marker should show dimension tier.
   # Default: false
-  showDimensionTier: false
+  showDimensionTier: true
 
 dev:
   # Debug general events? (will print recipe conficts etc. to server's debug.log)

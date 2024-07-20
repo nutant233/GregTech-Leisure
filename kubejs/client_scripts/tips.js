@@ -56,7 +56,7 @@ ItemEvents.tooltip(event => {
     event.add(["gtceu:processing_plant", "gtceu:assemble_plant", "gtceu:separated_plant", "gtceu:mixed_plant"], ["耗能倍数x0.8", "耗时倍数x0.9", "每种模式都需要放入一个对应电压等级的机器才能运行", "电压等级每高出LV一级，最大并行数+4，上限为16"])
     event.add("gtceu:space_elevator", ["可安装最多8个拓展模块", "查询JEI多方块信息获取模块位置"])
     event.add("gtceu:suprachronal_assembly_line_module", "安装在超时空装配线两侧")
-    event.add("gtceu:suprachronal_assembly_line", ["§8§l不可视之触", "可在两侧拓展模块", "查询JEI多方块信息获取模块位置"])
+    event.add("gtceu:suprachronal_assembly_line", ["§8§l不可视之触", "可在两侧拓展模块，模块与主机共享并行数", "查询JEI多方块信息获取模块位置"])
     event.add(["gtceu:suprachronal_assembly_line_module", "gtceu:suprachronal_assembly_line"], "耗时倍数x0.4")
     event.add("gtceu:hyper_reactor", ["每次运行前提供额外的1mb等离子体将获得16的并行", "不同燃料所需的等离子体不同", "从1-4顺序为：", "山铜，末影，魔金，亚稳态𬭶"])
     event.add("gtceu:advanced_hyper_reactor", ["提供不同等离子体获得不同并行", "星辉：8，致密中子：16"])

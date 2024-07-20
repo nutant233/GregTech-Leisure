@@ -2631,7 +2631,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .workableCasingRenderer("kubejs:block/molecular_casing", "gtceu:block/multiblock/fusion_reactor")
 
-    function isSuprachronalAssemblyLineModule(machine) {
+    function getSuprachronalAssemblyLine(machine) {
         let level = machine.self().getLevel()
         let pos = machine.self().getPos()
         let coordinates = [pos.offset(3, 0, 0),
@@ -2641,17 +2641,17 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         for (let i in coordinates) {
             let logic = gtch.getRecipeLogic(level, coordinates[i], null)
             if (logic != null && logic.getMachine().self().getBlockState().getBlock().getId() == "gtceu:suprachronal_assembly_line" && logic.getMachine().self().isFormed()) {
-                return true
+                return logic.getMachine()
             }
         }
-        return false
+        return null
     }
 
     event.create("suprachronal_assembly_line_module", "multiblock")
         .rotationState(RotationState.ALL)
         .recipeType("assembly_line")
         .recipeType("circuit_assembly_line")
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.4), GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.4), GTRecipeModifiers.SUBTICK_PARALLEL,  (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, GTRecipeModifiers.getHatchParallel(getSuprachronalAssemblyLine(machine)), false).getFirst(),GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle(" D ", " E ", " D ")
@@ -2670,7 +2670,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1))
-                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
                 .or(Predicates.abilities(PartAbility.OPTICAL_DATA_RECEPTION).setExactLimit(1))
                 .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
                 .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1))
@@ -2679,7 +2678,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("-", Predicates.air())
             .build())
         .beforeWorking(machine => {
-            if (isSuprachronalAssemblyLineModule(machine)) {
+            if (getSuprachronalAssemblyLine(machine) != null) {
                 return true
             }
             machine.getRecipeLogic().resetRecipeLogic()
@@ -2687,7 +2686,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
-                if (isSuprachronalAssemblyLineModule(machine)) {
+                if (getSuprachronalAssemblyLine(machine) != null) {
                     return true
                 }
                 machine.getRecipeLogic().resetRecipeLogic()
@@ -2697,7 +2696,8 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.literal("该模块" + (isSuprachronalAssemblyLineModule(controller) ? "已" : "未") + "成功安装"))
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(GTRecipeModifiers.getHatchParallel(getSuprachronalAssemblyLine(controller)))).darkPurple()).gray())
+                components.add(Component.literal("该模块" + (getSuprachronalAssemblyLine(controller) != null ? "已" : "未") + "成功安装"))
             }
         })
         .workableCasingRenderer("kubejs:block/molecular_casing", "gtceu:block/multiblock/fusion_reactor")
@@ -4148,7 +4148,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2))
                     .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
-                    .or(Predicates.abilities(PartAbility.DATA_ACCESS).setExactLimit(1))
+                    .or(Predicates.abilities(PartAbility.OPTICAL_DATA_RECEPTION).setExactLimit(1))
                     .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(2))
                     .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1))
                     .or(Predicates.abilities(PartAbility.COMPUTATION_DATA_RECEPTION).setExactLimit(1)))
@@ -4165,7 +4165,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("mega_wiremill", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
         .recipeType("wiremill")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900))).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:oxidation_resistant_hastelloy_n_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4225,7 +4225,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("bender")
         .recipeType("forge_hammer")
         .recipeType("forming_press")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900))).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()

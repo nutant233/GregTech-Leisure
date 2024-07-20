@@ -68,21 +68,6 @@ GTCEuServerEvents.oreVeins(event => {
         vein.density(0.25)
         vein.discardChanceOnAirExposure(0)
         vein.layer("all_layer")
-        vein.dimensions("kubejs:ancient_world", "kubejs:ceres", "kubejs:barnarda")
-        vein.heightRangeUniform(20, 60)
-        vein.layeredVeinGenerator(generator => generator
-            .buildLayerPattern(pattern => pattern
-                .layer(l => l.weight(1).mat(GTMaterials.BlueTopaz).size(2, 4))
-                .layer(l => l.weight(1).mat(GTMaterials.Topaz).size(1, 3))
-            )
-        )
-    })
-    event.add("kubejs:topaz_vein_aw", vein => {
-        vein.weight(70)
-        vein.clusterSize(30)
-        vein.density(0.25)
-        vein.discardChanceOnAirExposure(0)
-        vein.layer("all_layer")
         vein.dimensions("kubejs:ancient_world", "kubejs:ganymede", "kubejs:barnarda")
         vein.heightRangeUniform(20, 60)
         vein.layeredVeinGenerator(generator => generator
