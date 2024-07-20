@@ -14,10 +14,7 @@
 				"4F864738509B6DCA"
 				"4536535E8DA71D5B"
 			]
-			description: [
-				"在开始之前需要先浏览一遍旁边的任务。"
-				"用上电之前还需要度过蒸汽时代，任务给予的奖励能帮助快速度过。"
-			]
+			description: ["在开始之前需要先浏览一遍旁边的任务。"]
 			hide_dependency_lines: true
 			icon: "minecraft:grass_block"
 			id: "075D368E91231337"
@@ -1101,6 +1098,7 @@
 		}
 		{
 			dependencies: ["4B6F43302E963F5E"]
+			icon: "kubejs:infinite_cell_component"
 			id: "7198356C944E053A"
 			rewards: [
 				{
@@ -1142,6 +1140,7 @@
 					type: "item"
 				}
 			]
+			title: "超级存储"
 			x: 7.5d
 			y: -1.0d
 		}

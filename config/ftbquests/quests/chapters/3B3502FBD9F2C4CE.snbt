@@ -440,8 +440,9 @@
 		}
 		{
 			dependencies: ["4BFA114E12BCB163"]
-			description: ["目前可以不用制作，但在之后的阶段会大量使用激光传电，这是必需品"]
+			description: ["有点无用"]
 			id: "212BCFCFAECAA9D2"
+			optional: true
 			shape: "gear"
 			size: 1.3d
 			tasks: [{
@@ -591,6 +592,7 @@
 			dependencies: ["169F331B1D2B9DFE"]
 			description: ["用不完的蒸汽"]
 			id: "5744F6172D4E112B"
+			optional: true
 			shape: "gear"
 			size: 1.2d
 			tasks: [{

@@ -320,7 +320,7 @@ ServerEvents.recipes((event) => {
 
     for (let index = 1; index < 5; index++) {
         gtr.assembler(`mae2:${4 ** index}x_crafting_accelerator`)
-            .itemInputs(index == 1 ? "ae2:crafting_accelerator" : `mae2:${4 ** (index - 1)}x_crafting_accelerator`, (4 ** index) + "x ae2:engineering_processor")
+            .itemInputs(index == 1 ? "ae2:crafting_accelerator" : `mae2:${4 ** (index - 1)}x_crafting_accelerator`, (2 ** index) + "x ae2:engineering_processor", getCellComponent(index))
             .inputFluids("gtceu:soldering_alloy " + 72 * (2 ** index))
             .itemOutputs(`mae2:${4 ** index}x_crafting_accelerator`)
             .EUt(GTValues.VA[index - 1])

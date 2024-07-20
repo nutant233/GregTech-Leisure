@@ -69,7 +69,7 @@
 		}
 		{
 			dependencies: ["0ABAFF5BA123B0B6"]
-			description: ["这里的AE2没有频道限制"]
+			description: ["这里的AE2没有频道限制，因此控制器被禁用"]
 			icon: "ae2:controller"
 			id: "6E2CDCAA9BE93465"
 			tasks: [{
@@ -77,7 +77,7 @@
 				title: "其他提示"
 				type: "checkmark"
 			}]
-			x: -4.0d
+			x: -2.5d
 			y: -3.0d
 		}
 		{
@@ -302,6 +302,15 @@
 		}
 		{
 			id: "483BD2C8C69D7CFE"
+			rewards: [{
+				id: "21FFA79E7CDC7E73"
+				item: {
+					Count: 1
+					id: "ad_astra:energizer"
+					tag: { }
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "6EC081E5D228A0C3"
 				item: "buildinggadgets2:gadget_building"
@@ -358,18 +367,6 @@
 			}]
 			x: -5.5d
 			y: 1.5d
-		}
-		{
-			dependencies: ["36B663F2F28F2C3B"]
-			description: ["可跨维度传输"]
-			id: "522BDE43CA870897"
-			tasks: [{
-				id: "04579D3D675E5E07"
-				item: "laserio:laser_connector_advanced"
-				type: "item"
-			}]
-			x: -5.5d
-			y: 3.0d
 		}
 	]
 	title: "其他模组"

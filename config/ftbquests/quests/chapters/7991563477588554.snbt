@@ -12,7 +12,7 @@
 		shape: "rsquare"
 		size: 1.5d
 		x: 1.0d
-		y: -2.0d
+		y: -3.5d
 	}]
 	quests: [
 		{
@@ -425,8 +425,8 @@
 				item: "gtceu:mpic_chip"
 				type: "item"
 			}]
-			x: -1.0d
-			y: -0.5d
+			x: 1.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -521,27 +521,6 @@
 			}]
 			x: -4.0d
 			y: 5.5d
-		}
-		{
-			dependencies: ["2ECB47CBE5DC6E49"]
-			description: [
-				"一台燃气发电机有1AEV级的电，在EV阶段多堆几台就有足够的电力"
-				"或者可以使用GT原版的大型涡轮和大型内燃机来发电"
-			]
-			icon: "gtceu:large_combustion_engine"
-			id: "0C222E8655494697"
-			rewards: [{
-				id: "157286ACB5B8DAB2"
-				item: "gtceu:silver_credit"
-				type: "item"
-			}]
-			tasks: [{
-				id: "69074724E388B0F2"
-				title: "如果你的电力不够了"
-				type: "checkmark"
-			}]
-			x: 1.0d
-			y: -3.5d
 		}
 		{
 			dependencies: [

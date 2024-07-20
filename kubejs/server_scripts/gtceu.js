@@ -7452,7 +7452,7 @@ ServerEvents.recipes((event) => {
 
     overworld_raw_ores.forEach((overworld_ore) => {
         let recipe = gtr.void_miner("overworld_void_ore_" + overworld_ore[1])
-            .inputFluids("gtceu:drilling_fluid 1000", "gtceu:sapphire_slurry 100")
+            .inputFluids("gtceu:drilling_fluid 1000", "gtceu:sapphire_slurry 20")
             .notConsumable("kubejs:overworld_data")
             .circuit(overworld_ore[1])
             .EUt(GTValues.VA[GTValues.EV])
@@ -7516,7 +7516,7 @@ ServerEvents.recipes((event) => {
 
     nether_raw_ores.forEach((nether_ore) => {
         let recipe = gtr.void_miner("nether_void_ore_" + nether_ore[1])
-            .inputFluids("gtceu:drilling_fluid 1000", "gtceu:green_sapphire_slurry 100")
+            .inputFluids("gtceu:drilling_fluid 1000", "gtceu:green_sapphire_slurry 20")
             .notConsumable("2x kubejs:nether_data")
             .circuit(nether_ore[1])
             .EUt(2 * GTValues.VA[GTValues.EV])
@@ -7554,7 +7554,7 @@ ServerEvents.recipes((event) => {
 
     end_raw_ores.forEach((end_ore) => {
         let recipe = gtr.void_miner("end_void_ore_" + end_ore[1])
-            .inputFluids("gtceu:drilling_fluid 1000", "gtceu:ruby_slurry 100")
+            .inputFluids("gtceu:drilling_fluid 1000", "gtceu:ruby_slurry 20")
             .notConsumable("4x kubejs:end_data")
             .circuit(end_ore[1])
             .EUt(GTValues.VA[GTValues.IV])
@@ -9122,10 +9122,27 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(800)
 
+    gtr.dimensionally_transcendent_plasma_forge("gtceu:dimensionallytranscendentresidue")
+        .inputFluids("gtceu:dimensionallytranscendentcrudecatalyst 100", "gtceu:raw_star_matter_plasma 100")
+        .outputFluids("gtceu:dimensionallytranscendentresidue 100")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(400)
+        .blastFurnaceTemp(36000)
+
+    gtr.dimensionally_transcendent_plasma_forge("gtceu:spacetime_ingot")
+        .notConsumable("64x kubejs:ingot_field_shape")
+        .notConsumable("64x gtceu:spacetimebendingcore")
+        .inputFluids("gtceu:spacetime 1000", "gtceu:raw_star_matter_plasma 1000")
+        .outputFluids("gtceu:dimensionallytranscendentresidue 100")
+        .itemOutputs("8x gtceu:spacetime_ingot")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(6400)
+        .blastFurnaceTemp(62000)
+
     gtr.dimensionally_transcendent_plasma_forge("gtceu:spacetime")
         .notConsumable("gtceu:spacetime_catalyst")
-        .inputFluids("gtceu:infinity 100")
-        .outputFluids("gtceu:spacetime 100", "gtceu:dimensionallytranscendentresidue 100")
+        .inputFluids("gtceu:infinity 100", "gtceu:hypogen 100")
+        .outputFluids("gtceu:spacetime 200", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(4 * GTValues.VA[GTValues.MAX])
         .duration(1600)
         .blastFurnaceTemp(36000)
@@ -9175,6 +9192,36 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(1200)
         .blastFurnaceTemp(26000)
+
+    gtr.macerator("gtceu:spacetime_dust")
+        .itemInputs("gtceu:spacetime_ingot")
+        .itemOutputs("gtceu:spacetime_dust")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(400)
+
+    gtr.compressor("gtceu:spacetime_block")
+        .itemInputs("9x gtceu:spacetime_ingot")
+        .itemOutputs("gtceu:spacetime_block")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(3000)
+
+    gtr.qft("gtceu:spacetime_single_wire")
+        .notConsumable("gtceu:spacetime_nanoswarm")
+        .notConsumable("gtceu:transcendentmetal_nanoswarm")
+        .itemInputs("gtceu:infinity_single_wire")
+        .inputFluids("gtceu:spacetime 100", "gtceu:rhugnor 100")
+        .itemOutputs("gtceu:spacetime_single_wire")
+        .EUt(16 * GTValues.VA[GTValues.MAX])
+        .duration(400)
+
+    gtr.qft("gtceu:spacetime_double_wire")
+        .notConsumable("4x gtceu:spacetime_nanoswarm")
+        .notConsumable("4x gtceu:transcendentmetal_nanoswarm")
+        .itemInputs("2x gtceu:spacetime_single_wire")
+        .inputFluids("gtceu:rhugnor 200")
+        .itemOutputs("gtceu:spacetime_double_wire")
+        .EUt(16 * GTValues.VA[GTValues.MAX])
+        .duration(800)
 
     const mcsms = [["ingot", 144], ["dust", 144], ["nugget", 16], ["rod", 72], ["plate", 144], ["foil", 36], ["block", 1296], ["frame", 288]]
     mcsms.forEach((mcsm) => {
@@ -13704,6 +13751,13 @@ ServerEvents.recipes((event) => {
     implosion_compressor_add("4x gtceu:certus_quartz_gem", "ae2:charged_certus_quartz_crystal", 4)
     implosion_compressor_add(["4x ad_astra:steel_plate", "2x gtceu:dense_tungsten_steel_plate"], "ad_astra:steel_block", 1)
 
+    gtr.electric_implosion_compressor("gtceu:eternity_singularity")
+        .notConsumable("gtceu:eternity_nanoswarm")
+        .itemInputs("gtceu:spacetime_dust")
+        .itemOutputs("gtceu:eternity_singularity")
+        .EUt(2048 * GTValues.VA[GTValues.MAX])
+        .duration(20)
+
     function op1(macerator, machine, am, a, b, ci, ch, mch1, mch2, mch3, mch4, tag) {
         event.forEachRecipe(
             { type: "gtceu:thermal_centrifuge", input: machine.outputs.item[0].content.ingredient.item }, c => {
@@ -15284,4 +15338,11 @@ ServerEvents.recipes((event) => {
         .outputFluids("minecraft:water 3000")
         .EUt(30720)
         .duration(400)
+
+    gtr.chemical_reactor("gtceu:potassium_bromide_dust")
+        .itemInputs("gtceu:potassium_dust")
+        .inputFluids("gtceu:bromine 1000")
+        .itemOutputs("2x gtceu:potassium_bromide_dust")
+        .EUt(120)
+        .duration(160)
 })

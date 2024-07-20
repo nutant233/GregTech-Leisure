@@ -383,6 +383,7 @@ ItemEvents.firstRightClicked("kubejs:warped_ender_pearl", event => {
 
 PlayerEvents.tick(event => {
     if (event.player.age % 20 == 0) {
+        event.player.onUpdateAbilities()
         let hfa = event.player.getArmorSlots().toString() == "[1 hazmat_fermium_boots, 1 hazmat_fermium_leggings, 1 hazmat_fermium_chestplate, 1 hazmat_fermium_helmet]"
         let fa = event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]"
         let ma = event.player.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]"
@@ -395,7 +396,6 @@ PlayerEvents.tick(event => {
             event.getServer().runCommandSilent(`execute at ${name} run kill @e[distance=..100,name=!${name},type=!item]`)
         }
         if (ma || fa || hfa) {
-            event.player.onUpdateAbilities()
             event.player.potionEffects.add("minecraft:saturation", 200, 0, false, false)
             if (event.player.persistentData.getBoolean("nv")) {
                 event.player.potionEffects.add("minecraft:night_vision", 300, 0, false, false)

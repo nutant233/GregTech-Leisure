@@ -892,6 +892,7 @@
 		}
 		{
 			dependencies: ["1642DCCDDA40E2D6"]
+			description: ["你需要搭配通用工厂来实现超净间环境"]
 			id: "466BB600F2EE288D"
 			tasks: [{
 				id: "75B923AE5FEA0D27"
