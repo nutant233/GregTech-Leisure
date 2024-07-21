@@ -203,14 +203,22 @@
 		{
 			dependencies: ["1DAE3D00F91134F0"]
 			description: ["可以代替恒星锻炉"]
+			icon: "gtceu:dimensionally_transcendent_plasma_forge"
 			id: "2880531AF7540B24"
 			shape: "gear"
 			size: 1.2d
-			tasks: [{
-				id: "2CA90B99536E4896"
-				item: "gtceu:dimensionally_transcendent_plasma_forge"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2CA90B99536E4896"
+					item: "gtceu:dimensionally_transcendent_plasma_forge"
+					type: "item"
+				}
+				{
+					id: "61D289345D143E85"
+					item: "kubejs:uruium_coil_block"
+					type: "item"
+				}
+			]
 			x: 3.5d
 			y: 1.0d
 		}
