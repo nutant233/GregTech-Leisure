@@ -299,6 +299,7 @@
 		}
 		{
 			dependencies: ["7A7C73D046390488"]
+			description: ["去巴纳德C用集气室搜集"]
 			hide_dependency_lines: true
 			id: "12F8275FC06FCFEE"
 			tasks: [{
@@ -376,7 +377,7 @@
 				"1FA9E56114BFABF5"
 				"2802E34A99CE1D79"
 			]
-			description: ["这是T8火箭"]
+			description: ["这是T8火箭，解锁巴纳德C"]
 			id: "7A7C73D046390488"
 			shape: "gear"
 			size: 1.3d
