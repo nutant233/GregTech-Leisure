@@ -120,6 +120,7 @@ ItemEvents.tooltip(event => {
         "gtceu:mage_assembler",
         "gtceu:mega_presser",
         "gtceu:mega_wiremill",
+        "gtceu:mass_fabricator",
         "gtceu:a_mass_fabricator",
         "gtceu:star_ultimate_material_forge_factory",
         "gtceu:dragon_egg_copier",

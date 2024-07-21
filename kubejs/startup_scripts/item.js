@@ -360,6 +360,7 @@ StartupEvents.registry("item", event => {
     event.create("dyson_swarm_module")
     event.create("infinite_cell_component")
     event.create("glacio_spirit")
+    event.create("timepiece")
 })
 ItemEvents.modification(event => {
     event.modify("gtceu:raw_coal", modification => {
