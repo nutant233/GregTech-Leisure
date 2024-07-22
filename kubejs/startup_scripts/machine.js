@@ -565,7 +565,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     canParallel = true
                 }
                 break
-            case GTValues.V[GTValues.UEV]:
+            case GTValues.V[GTValues.UIV]:
                 if (machine.input(true, ContentBuilder().fluid("gtceu:infuscolium_plasma 1").build()).isSuccess()) {
                     machine.input(false, ContentBuilder().fluid("gtceu:infuscolium_plasma 1").build())
                     canParallel = true

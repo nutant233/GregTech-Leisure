@@ -11828,7 +11828,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:raw_photon_carrying_wafer")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(600)
-        .CWUt(2)
+        .CWUt(1)
         .cleanroom(CleanroomType.CLEANROOM)
         .researchWithoutRecipe("1x_kubejs_raw_photon_carrying_wafer", "gtceu:data_module")
 
@@ -11846,7 +11846,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:prepared_cosmic_soc_wafer")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(4800)
-        .CWUt(16)
+        .CWUt(8)
         .cleanroom(CleanroomType.CLEANROOM)
         .researchWithoutRecipe("1x_kubejs_prepared_cosmic_soc_wafer", "gtceu:data_module")
 
@@ -11864,7 +11864,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:high_precision_crystal_soc")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(2400)
-        .CWUt(4)
+        .CWUt(2)
         .cleanroom(CleanroomType.CLEANROOM)
         .researchWithoutRecipe("1x_kubejs_high_precision_crystal_soc", "gtceu:data_module")
 
@@ -11882,7 +11882,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:nm_wafer")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(900)
-        .CWUt(2)
+        .CWUt(1)
         .cleanroom(CleanroomType.CLEANROOM)
         .researchWithoutRecipe("1x_kubejs_nm_wafer", "gtceu:data_module")
 
@@ -11900,7 +11900,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:pm_wafer")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(1800)
-        .CWUt(4)
+        .CWUt(2)
         .cleanroom(CleanroomType.CLEANROOM)
         .researchWithoutRecipe("1x_kubejs_pm_wafer", "gtceu:data_module")
 
@@ -11918,7 +11918,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:fm_wafer")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(2700)
-        .CWUt(8)
+        .CWUt(4)
         .cleanroom(CleanroomType.CLEANROOM)
         .researchWithoutRecipe("1x_kubejs_fm_wafer", "gtceu:data_module")
 

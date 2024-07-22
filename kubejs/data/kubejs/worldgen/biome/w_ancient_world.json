@@ -19,14 +19,14 @@
         "maxCount": 4
       },
       {
-        "type": "zombie_horse",
-        "weight": 20,
+        "type": "zombie_villager",
+        "weight": 2,
         "minCount": 4,
         "maxCount": 4
       },
       {
-        "type": "zombie_villager",
-        "weight": 20,
+        "type": "zombified_piglin",
+        "weight": 5,
         "minCount": 4,
         "maxCount": 4
       }

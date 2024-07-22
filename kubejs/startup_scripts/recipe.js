@@ -312,11 +312,16 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setSound(GTSoundEntries.ARC)
 
     GTRecipeTypes.LASER_ENGRAVER_RECIPES.onRecipeBuild((recipeBuilder, provider) => {
-        GTRecipeTypes.get("dimensional_focus_engraving_array").copyFrom(recipeBuilder)
+        let recipe = GTRecipeTypes.get("dimensional_focus_engraving_array").copyFrom(recipeBuilder)
             .duration(recipeBuilder.duration * 0.2)
             .EUt(recipeBuilder.EUt() * 4)
-            .CWUt(Math.log10(recipeBuilder.EUt()) / Math.log10(4))
-            .save(provider)
+        let value = Math.log10(recipeBuilder.EUt()) / Math.log10(4)
+        if (value > 10) {
+            recipe.CWUt(value / 4)["inputFluids(com.lowdragmc.lowdraglib.side.fluid.FluidStack)"](Fluid.of("gtceu:euv_photoresist", value / 2).getFluidStack())
+        } else {
+            recipe["inputFluids(com.lowdragmc.lowdraglib.side.fluid.FluidStack)"](Fluid.of("gtceu:photoresist", value).getFluidStack())
+        }
+        return recipe.save(provider)
     })
 
     event.create("precision_laser_engraver")
