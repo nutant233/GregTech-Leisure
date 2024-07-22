@@ -1,8 +1,7 @@
 //priority: 94
 ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
-    const tiers = [["ulv", 0], ["lv", 1], ["mv", 2], ["hv", 3], ["ev", 4], ["iv", 5], ["luv", 6], ["zpm", 7], ["uv", 8], ["uhv", 9], ["uev", 10], ["uiv", 11], ["uxv", 12], ["opv", 13], ["max", 14]]
-
+    
     event.remove({ output: "ae2:certus_quartz_crystal", input: "ae2:quartz_block" })
     event.remove({ output: "ae2:controller" })
     event.remove({ output: "ae2:blank_pattern" })

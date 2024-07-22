@@ -14618,11 +14618,11 @@ ServerEvents.recipes((event) => {
 
     gtr.distillery("gtceu:kerosene")
         .itemInputs("gtceu:coke_dust")
-        .inputFluids("gtceu:coal_tar 500")
+        .inputFluids("gtceu:coal_tar 200")
         .outputFluids("gtceu:kerosene 100")
         .itemOutputs("gtceu:dark_ash_dust")
         .EUt(120)
-        .duration(120)
+        .duration(30)
 
     gtr.distillery("gtceu:rp_1")
         .circuit(1)
@@ -15514,4 +15514,20 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:cosmic_element 100")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
+
+    for (let index = 1; index < 4; index++) {
+        gtr.assembler("gtmthings:" + tiers[index][0] + "_4a_wireless_energy_input_hatch")
+            .itemInputs("gtceu:" + tiers[index][0] + "_energy_input_hatch_4a", "2x gtmthings:" + tiers[index][0] + "_wireless_energy_receive_cover", "gtceu:advanced_energy_detector_cover")
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs("gtmthings:" + tiers[index][0] + "_4a_wireless_energy_input_hatch")
+            .EUt(GTValues.VA[index])
+            .duration(200)
+
+        gtr.assembler("gtmthings:" + tiers[index][0] + "_16a_wireless_energy_input_hatch")
+            .itemInputs("gtceu:" + tiers[index][0] + "_energy_input_hatch_16a", "2x gtmthings:" + tiers[index][0] + "_4a_wireless_energy_receive_cover", "gtceu:advanced_energy_detector_cover")
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs("gtmthings:" + tiers[index][0] + "_16a_wireless_energy_input_hatch")
+            .EUt(GTValues.VA[index])
+            .duration(200)
+    }
 })

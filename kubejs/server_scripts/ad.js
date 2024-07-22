@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
     const gtr = event.recipes.gtceu
-    const ban = ["ad_astra:compressor",
+    const items = ["ad_astra:compressor",
         "ad_astra:coal_generator",
         "ad_astra:etrionic_blast_furnace",
         "ad_astra:fuel_refinery",
@@ -22,8 +22,12 @@ ServerEvents.recipes(event => {
         "ad_astra:desh_ingot",
         "ad_astra:ostrum_ingot",
         "ad_astra:calorite_ingot",
-        "ad_astra:steel_block"]
-    ban.forEach(item => {
+        "ad_astra:steel_block",
+        "ad_astra:energizer",
+        "ad_astra:steel_cable",
+        "ad_astra:desh_cable",
+        "ad_astra:cable_duct"]
+    items.forEach(item => {
         event.remove({ output: item })
     })
     event.remove({ type: "ad_astra:compressing" })
@@ -33,6 +37,7 @@ ServerEvents.recipes(event => {
     event.remove({ type: "ad_astra:oxygen_loading" })
     event.remove({ type: "ad_astra:refining" })
     event.remove({ output: "ad_astra:ice_shard", mod: "ad_astra" })
+    event.shapeless("ad_astra:energizer", "gtceu:ulv_charger_4x")
 
     gtr.compressor("ad_astra:ice_shard")
         .itemInputs("64x gtceu:ice_dust")
