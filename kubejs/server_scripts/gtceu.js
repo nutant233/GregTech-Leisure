@@ -10655,7 +10655,7 @@ ServerEvents.recipes((event) => {
     })
 
     gtr.autoclave("kubejs:unstable_star")
-        .notConsumable("gtceu:infuscolium_nanoswarm")
+        .notConsumable('gtceu:orichalcum_nanoswarm')
         .itemInputs("gtceu:gravi_star")
         .inputFluids("gtceu:adamantine 288")
         .itemOutputs("kubejs:unstable_star")
@@ -15094,9 +15094,9 @@ ServerEvents.recipes((event) => {
         .itemInputs("8x gtceu:orichalcum_block", "64x gtceu:advanced_soc", "64x gtceu:advanced_soc")
         .itemOutputs("gtceu:orichalcum_nanoswarm")
         .inputFluids("gtceu:neutronium 8000", "gtceu:uu_amplifier 4000", "gtceu:mutated_living_solder 40000")
-        .duration(40000)
-        .EUt(GTValues.VA[GTValues.UEV])
-    ["addData(java.lang.String,int)"]("nano_forge_tier", 2)
+        .duration(640000)
+        .EUt(GTValues.VA[GTValues.UV])
+    ["addData(java.lang.String,int)"]("nano_forge_tier", 1)
 
     gtr.nano_forge("gtceu:enderium_nanoswarm")
         .notConsumable("gtceu:green_glass_lens")
@@ -15530,4 +15530,11 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[index])
             .duration(200)
     }
+
+    gtr.macerator("kubejs:draconium_dust_a")
+        .itemInputs("minecraft:dragon_egg")
+        .itemOutputs("4x gtceu:ender_pearl_dust")
+        .chancedOutput("kubejs:draconium_dust", 6000, 500)
+        .EUt(GTValues.VA[GTValues.UEV])
+        .duration(8000)
 })
