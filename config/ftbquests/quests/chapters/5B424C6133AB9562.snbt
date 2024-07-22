@@ -302,15 +302,6 @@
 		}
 		{
 			id: "483BD2C8C69D7CFE"
-			rewards: [{
-				id: "21FFA79E7CDC7E73"
-				item: {
-					Count: 1
-					id: "ad_astra:energizer"
-					tag: { }
-				}
-				type: "item"
-			}]
 			tasks: [{
 				id: "6EC081E5D228A0C3"
 				item: "buildinggadgets2:gadget_building"

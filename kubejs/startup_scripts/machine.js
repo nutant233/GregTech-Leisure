@@ -4144,7 +4144,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("E", Predicates.blocks("kubejs:containment_field_generator"))
                 .where("F", Predicates.blocks("gtceu:superconducting_coil"))
                 .where("G", Predicates.blocks("gtceu:laser_safe_engraving_casing")
-                    .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(4))
+                    .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(24))
                     .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2))
                     .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
@@ -4157,7 +4157,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(recipe, Math.min(2147483647, 2 ** (controller.getCoilType().getCoilTemperature() / 900)))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(Math.min(2147483647, 2 ** (controller.getCoilType().getCoilTemperature() / 900)))).darkPurple()).gray())
             }
         })
         .workableCasingRenderer("gtceu:block/casings/gcym/laser_safe_engraving_casing", "gtceu:block/multiblock/fusion_reactor")
