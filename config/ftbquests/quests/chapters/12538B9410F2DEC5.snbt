@@ -435,6 +435,15 @@
 			]
 			description: ["前往太阳系之外"]
 			id: "7FD1D1D8ED72D40C"
+			rewards: [{
+				id: "4BCD53BFF7E94B0A"
+				item: {
+					Count: 1
+					id: "avaritia:infinity_shovel"
+					tag: { }
+				}
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "50DBDD703AB9CE43"

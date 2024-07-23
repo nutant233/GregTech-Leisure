@@ -653,6 +653,11 @@
 				"00E7CB7CD9296B1A"
 			]
 			id: "36F5A40D3976E512"
+			rewards: [{
+				id: "4A04C411F24ADCCC"
+				item: "avaritia:cosmic_meatballs"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "7F18BB34CB3491CD"

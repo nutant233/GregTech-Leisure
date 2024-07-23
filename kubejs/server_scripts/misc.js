@@ -300,7 +300,7 @@ BlockEvents.broken("kubejs:create_aggregatione_core", event => {
     }
 })
 
-ItemEvents.firstRightClicked("kubejs:infinity_sword", event => {
+ItemEvents.firstRightClicked("avaritia:infinity_sword", event => {
     let name = event.player.getName().getString()
     let targetX = 0, targetZ = 0, targetY = 0, xr = 0, yr = 0, index = 0
     function pos(index, xr, yr) {
@@ -340,24 +340,6 @@ ItemEvents.firstRightClicked("kubejs:infinity_sword", event => {
                     entity.attack(event.player.damageSources().source($DamageTypes.MAGIC, event.player), 10000)
                 }
             }
-        }
-    }
-})
-
-ItemEvents.firstLeftClicked("kubejs:infinity_sword", event => {
-    let name = event.player.getName().getString()
-    let rotation = event.player.getRotationVector()
-    let xr = rotation.x * (3.1415926535897932 / 180)
-    let yr = rotation.y * (3.1415926535897932 / 180)
-    let targetX = Math.round(event.player.x - (Math.sin(yr) * 2 * Math.abs(Math.cos(xr))))
-    let targetZ = Math.round(event.player.z + (Math.cos(yr) * 2 * Math.abs(Math.cos(xr))))
-    let targetY = Math.round(event.player.y - Math.sin(xr) * 2) + 1
-    let entities = event.getLevel().getEntitiesWithin(AABB.of(targetX - 3, targetY - 3, targetZ - 3, targetX + 3, targetY + 3, targetZ + 3))
-    for (let entity of entities) {
-        if (entity.isLiving() && entity != event.player) {
-            entity.attack(event.player.damageSources().source($DamageTypes.GENERIC_KILL, event.player), 10000)
-            entity.kill()
-            event.getServer().runCommandSilent(`execute at ${name} run kill @e[distance=..2,name=!${name},type=!item]`)
         }
     }
 })

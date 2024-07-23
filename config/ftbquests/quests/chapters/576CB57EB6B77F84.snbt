@@ -5,7 +5,7 @@
 	group: "24F4987B35ABEE82"
 	icon: "ad_astra:coal_generator"
 	id: "576CB57EB6B77F84"
-	order_index: 4
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{

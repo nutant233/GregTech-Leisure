@@ -602,6 +602,11 @@
 		{
 			dependencies: ["66AE53E13E3C3C19"]
 			id: "67784DEB22D18308"
+			rewards: [{
+				id: "6798C71A84FECE4E"
+				item: "avaritia:infinity_axe"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "1382D199FDBDEBF5"

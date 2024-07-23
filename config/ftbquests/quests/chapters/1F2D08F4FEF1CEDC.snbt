@@ -5,7 +5,7 @@
 	group: "24F4987B35ABEE82"
 	icon: "gtceu:lv_sodium_battery"
 	id: "1F2D08F4FEF1CEDC"
-	order_index: 2
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{

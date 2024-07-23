@@ -415,28 +415,11 @@
 				"潜行右键可以聚集100范围内的掉落物"
 				"聚集视角指定的生物"
 			]
-			icon: {
-				Count: 1
-				id: "kubejs:infinity_sword"
-				tag: {
-					Damage: 0
-				}
-			}
+			icon: "avaritia:infinity_sword"
 			id: "59E9131BD015B4F5"
 			rewards: [{
-				id: "2053E626EF03D2F5"
-				item: {
-					Count: 1
-					id: "kubejs:infinity_sword"
-					tag: {
-						Damage: 0
-						Enchantments: [{
-							id: "minecraft:looting"
-							lvl: 10
-						}]
-						Unbreakable: 1
-					}
-				}
+				id: "4F21C8505D7A2EBC"
+				item: "avaritia:infinity_sword"
 				type: "item"
 			}]
 			tasks: [

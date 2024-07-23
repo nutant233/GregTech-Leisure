@@ -53,6 +53,10 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "avaritia": {
+    "extreme": true,
+    "compressor": true
+  },
   "gtceu": {
     "auto_output_info": true,
     "workable_provider": true,

@@ -393,8 +393,16 @@
 		}
 		{
 			dependencies: ["17DDFB6DF710D0FF"]
-			description: ["AE2的各种机器都可以打开教程界面，里面的教程非常完善，如果不会AE2，可以去多学习。"]
+			description: [
+				"AE2的各种机器都可以打开教程界面，里面的教程非常完善，如果不会AE2，可以去多学习。"
+				"注意本包AE2没有频道限制。"
+			]
 			id: "492F71975D3DD5B9"
+			rewards: [{
+				id: "1208C717F553F12B"
+				item: "avaritia:endless_cake"
+				type: "item"
+			}]
 			tasks: [{
 				id: "2019A63704200229"
 				title: "关于ae2的教程"
@@ -429,6 +437,20 @@
 		{
 			dependencies: ["17F16F76AEF59A7F"]
 			id: "11D5E0BBC95DD69F"
+			rewards: [{
+				id: "5CF2BA09CE926F63"
+				item: {
+					Count: 1
+					id: "avaritia:crystal_pickaxe"
+					tag: {
+						Enchantments: [{
+							id: "minecraft:silk_touch"
+							lvl: 1s
+						}]
+					}
+				}
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "4C1A865888E2607A"
@@ -449,8 +471,9 @@
 			description: ["可以使用木质曲柄供能"]
 			id: "2CAC5455B8EF58A0"
 			rewards: [{
-				id: "0C2269201A1FE1DC"
-				item: "ae2:crank"
+				count: 4
+				id: "3D06F07F5B5C164D"
+				item: "ae2:speed_card"
 				type: "item"
 			}]
 			tasks: [{
@@ -466,7 +489,14 @@
 				"2CAC5455B8EF58A0"
 				"11D5E0BBC95DD69F"
 			]
+			description: ["自动化工作台，搭配样板实现自动合成，目前无法使用"]
 			id: "5C232DB97FF518E4"
+			rewards: [{
+				count: 2
+				id: "6F107CC24F7433E8"
+				item: "gtceu:vacuum_tube"
+				type: "item"
+			}]
 			tasks: [{
 				id: "7605A7B791C7AC06"
 				item: "ae2:molecular_assembler"
@@ -1033,8 +1063,8 @@
 			description: ["非常快速的蒸汽生产"]
 			id: "46CF462246D76553"
 			rewards: [{
-				id: "73A467D6E19BEDE8"
-				item: "gtceu:cupronickel_credit"
+				id: "5D2EEEE4972997F5"
+				item: "avaritia:star_fuel"
 				type: "item"
 			}]
 			tasks: [{
@@ -1048,7 +1078,7 @@
 		{
 			can_repeat: true
 			dependencies: ["0626E7D4F9EAB1B2"]
-			description: ["可使用扳手限制流向"]
+			description: ["可使用扳手限制流向，注意管道容量特别大"]
 			icon: "gtceu:spacetime_tiny_fluid_pipe"
 			id: "77E7A87066C55AA3"
 			rewards: [{
@@ -1064,6 +1094,42 @@
 			}]
 			x: 4.0d
 			y: -3.5d
+		}
+		{
+			dependencies: ["2CAC5455B8EF58A0"]
+			description: ["每个格子都有21亿的容量，物品流体均可存储，物品大于64后无法手动转移，需要管道等物流装置"]
+			id: "731167F979A82F7D"
+			tasks: [{
+				id: "3E5E52475855F3A1"
+				item: "ae2:interface"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["11D5E0BBC95DD69F"]
+			description: ["激光物流的合成都被加强了，推荐使用这个模组来物流"]
+			id: "48E511D2F5FDEF8D"
+			tasks: [
+				{
+					id: "46AF75CE3A991AE4"
+					item: "laserio:laser_connector"
+					type: "item"
+				}
+				{
+					id: "6935D143A1CE2790"
+					item: "laserio:laser_node"
+					type: "item"
+				}
+				{
+					id: "6862BB21741A2A5F"
+					item: "laserio:laser_wrench"
+					type: "item"
+				}
+			]
+			x: 16.0d
+			y: 5.0d
 		}
 	]
 	subtitle: ["Tier0-ULV"]

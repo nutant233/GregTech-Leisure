@@ -49,8 +49,8 @@
 			]
 			id: "45C3486A3F0EE7FB"
 			tasks: [{
-				id: "5BBC64364F3B8585"
-				item: "gtceu:spacetime_catalyst"
+				id: "5B7BBBB311822D83"
+				item: "kubejs:spacetime_catalyst"
 				type: "item"
 			}]
 			x: -4.5d
@@ -146,8 +146,8 @@
 			]
 			id: "0A6C5B3C148A5743"
 			tasks: [{
-				id: "0F4BA03102AD7083"
-				item: "gtceu:eternity_singularity"
+				id: "401DDDBA19AED491"
+				item: "kubejs:eternity_singularity"
 				type: "item"
 			}]
 			x: -3.0d
@@ -174,8 +174,8 @@
 			]
 			id: "2AFCDC0CA3205903"
 			tasks: [{
-				id: "0A2C6A26BFC382C9"
-				item: "gtceu:eternity_catalyst"
+				id: "470C4F62160DE7DA"
+				item: "kubejs:eternity_catalyst"
 				type: "item"
 			}]
 			x: -1.5d

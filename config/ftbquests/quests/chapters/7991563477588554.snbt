@@ -711,6 +711,15 @@
 		{
 			dependencies: ["67CFD956E4D9CD11"]
 			id: "446647433D821AF8"
+			rewards: [{
+				id: "537AA3E36908A8D9"
+				item: {
+					Count: 1
+					id: "avaritia:infinity_pickaxe"
+					tag: { }
+				}
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "57C53954FE2A6C6B"
@@ -815,6 +824,11 @@
 				"0C1A854AAAC9D2BB"
 			]
 			id: "48C89326DFB4BAA4"
+			rewards: [{
+				id: "20C81B1BF6C1FDD2"
+				item: "avaritia:ultimate_stew"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "27B61B6074B55BA0"

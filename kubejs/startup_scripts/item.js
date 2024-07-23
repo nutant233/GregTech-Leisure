@@ -88,9 +88,6 @@ StartupEvents.registry("item", event => {
             .texture("kubejs:item/space_essence")
             .displayName("太空精华" + essence)
     }
-    event.create("infinity_sword", "sword")
-        .speedBaseline(96)
-        .attackDamageBonus(1.7E+308)
     event.create("bedrock_destroyer", "pickaxe")
     event.create("lepton_trap_crystal")
     event.create("charged_lepton_trap_crystal")
@@ -361,19 +358,16 @@ StartupEvents.registry("item", event => {
     event.create("infinite_cell_component")
     event.create("glacio_spirit")
     event.create("timepiece")
+    event.create("entangled_singularity")
+    event.create("eternity_singularity")
+    event.create("spacetime_catalyst")
+    event.create("eternity_catalyst")
+    for (let i = 0; i < 16; i++) {
+        event.create("combined_singularity_" + i)
+    }
 })
 ItemEvents.modification(event => {
     event.modify("gtceu:raw_coal", modification => {
         modification.setBurnTime(1600)
     })
 })
-const $MORegistrate = Java.loadClass("com.epimorphismmc.monomorphism.registry.registrate.MORegistrate")
-const combined_singularity = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-combined_singularity.forEach((i) => {
-    $MORegistrate.registerHaloItem("combined_singularity_" + i)
-})
-$MORegistrate.registerHaloItem("entangled_singularity")
-$MORegistrate.registerHaloItem("eternity_singularity")
-$MORegistrate.registerHaloItem("infinity_catalyst")
-$MORegistrate.registerHaloItem("spacetime_catalyst")
-$MORegistrate.registerHaloItem("eternity_catalyst")

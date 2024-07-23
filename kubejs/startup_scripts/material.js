@@ -58,7 +58,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTBlocks.createActiveCasing("spacetimecontinuumripper", "block/variant/spacetimecontinuumripper")
     GTBlocks.createActiveCasing("spacetimebendingcore", "block/variant/spacetimebendingcore")
     GTBlocks.createActiveCasing("qft_coil", "block/variant/qft_coil")
-    const MOMaterialIconSet = Java.loadClass("com.epimorphismmc.monomorphism.data.chemical.material.info.MOMaterialIconSet")
     const $DustProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty")
     const $IngotProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty")
     const $FluidProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty")
@@ -402,9 +401,15 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     [FluidStorageKey](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(1000000).customStill().translation("fluid.kubejs.infinity"))
         .blastTemp(32000, "highest")
         .element(GTElements.get("infinity"))
-        .iconSet(MOMaterialIconSet.CUSTOM_INFINITY)
+        .iconSet(new GTMaterialIconSet("infinity"))
         .flags(GTMaterialFlags.GENERATE_FRAME)
         .cableProperties(GTValues.V[GTValues.MAX], 8192, 0, true)
+
+    event.create("cosmic")
+        .ingot()
+        .color(0x2d3e5e)
+        .iconSet(new GTMaterialIconSet("cosmic"))
+        .flags(GTMaterialFlags.GENERATE_FINE_WIRE)
 
     event.create("hypogen")
         .ingot()
@@ -471,7 +476,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .blastTemp(24800, "highest")
         .element(GTElements.get("cosmicneutronium"))
         .color(0x000d1a)
-        .iconSet(MOMaterialIconSet.CUSTOM_NEUTRONIUM)
+        .iconSet(new GTMaterialIconSet("cosmicneutronium", GTMaterialIconSet.METALLIC))
         .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_FINE_WIRE, GTMaterialFlags.GENERATE_SPRING_SMALL)
         .cableProperties(GTValues.V[GTValues.MAX], 2, 128)
 
@@ -578,7 +583,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     [FluidStorageKey](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(10000000).customStill().translation("fluid.kubejs.eternity"))
         .blastTemp(36000, null, GTValues.VA[GTValues.MAX], 3600)
         .element(GTElements.get("eternity"))
-        .iconSet(MOMaterialIconSet.CUSTOM_ETERNITY)
+        .iconSet(new GTMaterialIconSet("eternity"))
         .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_FRAME)
 
     event.create("spacetime")
@@ -644,7 +649,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .radioactiveHazard(8)
         .element(GTElements.get("transcendentmetal"))
         .color(0xffffff)
-        .iconSet(MOMaterialIconSet.CUSTOM_TRANSCENDENTMETAL)
+        .iconSet(new GTMaterialIconSet("transcendentmetal"))
         .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD)
 
     event.create("uruium")
@@ -663,7 +668,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .radioactiveHazard(100)
     [FluidStorageKey](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(100000).customStill())
         .element(GTElements.get("raw_star_matter"))
-        .iconSet(MOMaterialIconSet.CUSTOM_MAGNETOHYDRODYNAMICALLYCONSTRAINEDSTARMATTER)
+        .iconSet(new GTMaterialIconSet("magnetohydrodynamicallyconstrainedstarmatter"))
         .flags(GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.NO_UNIFICATION)
 
     event.create("white_dwarf_mtter")

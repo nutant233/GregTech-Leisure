@@ -1374,7 +1374,7 @@ ServerEvents.recipes((event) => {
             "kubejs:exotic_mainframe",
             "kubejs:cosmic_mainframe",
             "kubejs:supracausal_mainframe",
-            "gtceu:eternity_catalyst",
+            "kubejs:eternity_catalyst",
             "16x kubejs:nuclear_star",
             "16x gtceu:eternity_foil",
             "4x gtceu:eternity_plate")
@@ -2017,7 +2017,7 @@ ServerEvents.recipes((event) => {
         })
 
     gtr.assembly_line("kubejs:hyperdimensional_drone")
-        .itemInputs("2x gtceu:max_robot_arm", "2x gtceu:max_conveyor_module", "2x gtceu:max_emitter", "2x gtceu:max_sensor", "gtceu:max_field_generator", "kubejs:chaotic_core", "kubejs:draconic_energy_core", "gtceu:spacetime_catalyst", "kubejs:ctc_guidance_unit", "64x kubejs:dyson_swarm_module", "64x kubejs:dyson_swarm_module", "64x kubejs:dyson_swarm_module", "64x kubejs:dyson_swarm_module", "2x gtceu:double_transcendentmetal_plate")
+        .itemInputs("2x gtceu:max_robot_arm", "2x gtceu:max_conveyor_module", "2x gtceu:max_emitter", "2x gtceu:max_sensor", "gtceu:max_field_generator", "kubejs:chaotic_core", "kubejs:draconic_energy_core", "kubejs:spacetime_catalyst", "kubejs:ctc_guidance_unit", "64x kubejs:dyson_swarm_module", "64x kubejs:dyson_swarm_module", "64x kubejs:dyson_swarm_module", "64x kubejs:dyson_swarm_module", "2x gtceu:double_transcendentmetal_plate")
         .inputFluids("gtceu:super_mutated_living_solder 28800", "gtceu:infinity 20000", "gtceu:spacetime 10000")
         .itemOutputs("kubejs:hyperdimensional_drone")
         .EUt(GTValues.VA[GTValues.MAX])
@@ -4573,7 +4573,7 @@ ServerEvents.recipes((event) => {
             .CWUt(4096))
 
     gtr.assembly_line("kubejs:eternity_coil_block")
-        .itemInputs("#gtceu:circuits/max", "8x gtceu:spacetime_double_wire", "4x gtceu:eternity_rod", "gtceu:eternity_singularity", "64x kubejs:cosmic_fabric", "64x gtceu:radox_foil", "64x gtceu:radox_foil", "64x gtceu:chaos_foil")
+        .itemInputs("#gtceu:circuits/max", "8x gtceu:spacetime_double_wire", "4x gtceu:eternity_rod", "kubejs:eternity_singularity", "64x kubejs:cosmic_fabric", "64x gtceu:radox_foil", "64x gtceu:radox_foil", "64x gtceu:chaos_foil")
         .inputFluids("gtceu:hypogen 576", "gtceu:spacetime 576")
         .itemOutputs("kubejs:eternity_coil_block")
         .EUt(16 * GTValues.VA[GTValues.MAX])
@@ -6743,17 +6743,17 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(800)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:infinity_catalyst")
+    gtr.dimensionally_transcendent_plasma_forge("avaritia:infinity_catalyst")
         .itemInputs("64x kubejs:contained_exotic_matter", "64x kubejs:essentia_matter")
         .inputFluids("gtceu:infinity 1000", "gtceu:high_energy_quark_gluon_plasma 100000")
-        .itemOutputs("gtceu:infinity_catalyst", "64x kubejs:time_dilation_containment_unit")
+        .itemOutputs("avaritia:infinity_catalyst", "64x kubejs:time_dilation_containment_unit")
         .outputFluids("gtceu:dimensionallytranscendentresidue 100")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(4800)
         .blastFurnaceTemp(32000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:transcendentmetal")
-        .notConsumable("gtceu:spacetime_catalyst")
+        .notConsumable("kubejs:spacetime_catalyst")
         .itemInputs("kubejs:hypercube")
         .inputFluids("gtceu:spacetime 100", "gtceu:tennessine 144")
         .outputFluids("gtceu:transcendentmetal 144", "gtceu:dimensionallytranscendentresidue 100")
@@ -6761,17 +6761,17 @@ ServerEvents.recipes((event) => {
         .duration(3200)
         .blastFurnaceTemp(36000)
 
-    gtr.autoclave("gtceu:spacetime_catalyst")
-        .itemInputs("gtceu:infinity_catalyst")
+    gtr.autoclave("kubejs:spacetime_catalyst")
+        .itemInputs("avaritia:infinity_catalyst")
         .inputFluids("gtceu:spacetime 1000")
-        .itemOutputs("gtceu:spacetime_catalyst")
+        .itemOutputs("kubejs:spacetime_catalyst")
         .EUt(4 * GTValues.VA[GTValues.MAX])
         .duration(1200)
 
-    gtr.chemical_bath("gtceu:eternity_catalyst")
-        .itemInputs("gtceu:spacetime_catalyst")
+    gtr.chemical_bath("kubejs:eternity_catalyst")
+        .itemInputs("kubejs:spacetime_catalyst")
         .inputFluids("gtceu:eternity 1000")
-        .itemOutputs("gtceu:eternity_catalyst")
+        .itemOutputs("kubejs:eternity_catalyst")
         .EUt(4 * GTValues.VA[GTValues.MAX])
         .duration(1600)
 
@@ -9177,7 +9177,7 @@ ServerEvents.recipes((event) => {
         .duration(600)
 
     gtr.dimensionally_transcendent_plasma_forge("kubejs:cosmic_neutron_plasma_cell")
-        .notConsumable("gtceu:infinity_catalyst")
+        .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("5x kubejs:extremely_durable_plasma_cell")
         .inputFluids("gtceu:uu_matter 1000000", "gtceu:dense_neutron_plasma 1000")
         .itemOutputs("5x kubejs:cosmic_neutron_plasma_cell")
@@ -9187,7 +9187,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(28000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:crystalmatrix_plasma")
-        .notConsumable("gtceu:infinity_catalyst")
+        .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("16x kubejs:corporeal_matter")
         .inputFluids("gtceu:uu_matter 1000000", "gtceu:free_proton_gas 20000")
         .outputFluids("gtceu:crystalmatrix_plasma 10000", "gtceu:dimensionallytranscendentresidue 100")
@@ -9196,7 +9196,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(28000)
 
     gtr.dimensionally_transcendent_plasma_forge("kubejs:infinity")
-        .notConsumable("gtceu:spacetime_catalyst")
+        .notConsumable("kubejs:spacetime_catalyst")
         .inputFluids("gtceu:crystalmatrix_plasma 10000", "gtceu:cosmicneutronium 5000")
         .outputFluids("gtceu:infinity 1000", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(4 * GTValues.VA[GTValues.MAX])
@@ -9204,7 +9204,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(32000)
 
     gtr.stellar_forge("gtceu:eternity_dust")
-        .itemInputs("4x kubejs:quantum_chromodynamic_charge", "gtceu:eternity_singularity")
+        .itemInputs("4x kubejs:quantum_chromodynamic_charge", "kubejs:eternity_singularity")
         .inputFluids("gtceu:primordialmatter 1000", "gtceu:dimensionallytranscendentresidue 1000")
         .itemOutputs("gtceu:eternity_dust")
         .outputFluids("gtceu:temporalfluid 1000")
@@ -9236,7 +9236,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(62000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:spacetime")
-        .notConsumable("gtceu:spacetime_catalyst")
+        .notConsumable("kubejs:spacetime_catalyst")
         .inputFluids("gtceu:infinity 100", "gtceu:hypogen 100")
         .outputFluids("gtceu:spacetime 200", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(4 * GTValues.VA[GTValues.MAX])
@@ -9244,7 +9244,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(36000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:magnetohydrodynamicallyconstrainedstarmatter")
-        .notConsumable("gtceu:eternity_catalyst")
+        .notConsumable("kubejs:eternity_catalyst")
         .itemInputs("gtceu:eternity_nanoswarm")
         .inputFluids("gtceu:raw_star_matter_plasma 100000", "gtceu:exciteddtsc 100000")
         .outputFluids("gtceu:magnetohydrodynamicallyconstrainedstarmatter 100000", "gtceu:dimensionallytranscendentresidue 100")
@@ -9253,7 +9253,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(81000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:dense_neutron_plasma")
-        .notConsumable("gtceu:infinity_catalyst")
+        .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("kubejs:neutron_plasma_containment_cell")
         .inputFluids("gtceu:heavy_quark_degenerate_matter_plasma 10000", "gtceu:periodicium 1000")
         .outputFluids("gtceu:dense_neutron_plasma 10000", "gtceu:dimensionallytranscendentresidue 100")
@@ -9263,8 +9263,8 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(26000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:eternity")
-        .notConsumable("gtceu:eternity_catalyst")
-        .itemInputs("gtceu:eternity_singularity")
+        .notConsumable("kubejs:eternity_catalyst")
+        .itemInputs("kubejs:eternity_singularity")
         .inputFluids("gtceu:primordialmatter 1000", "gtceu:raw_star_matter_plasma 9000")
         .outputFluids("gtceu:eternity 10000", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(16 * GTValues.VA[GTValues.MAX])
@@ -9272,7 +9272,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(56000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:rhugnor")
-        .notConsumable("gtceu:infinity_catalyst")
+        .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("64x gtceu:energy_crystal")
         .inputFluids("gtceu:infinity 10000", "gtceu:black_titanium 10000")
         .outputFluids("gtceu:rhugnor 10000", "gtceu:dimensionallytranscendentresidue 100")
@@ -9281,7 +9281,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(36000)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:hypogen")
-        .notConsumable("gtceu:infinity_catalyst")
+        .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("gtceu:quantumchromodynamically_confined_matter_block")
         .inputFluids("gtceu:rhugnor 10000", "gtceu:dragon_blood 10000")
         .outputFluids("gtceu:hypogen 10000", "gtceu:dimensionallytranscendentresidue 100")
@@ -12532,147 +12532,147 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .duration(1200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_0")
+    gtr.neutron_compressor("kubejs:combined_singularity_0")
         .itemInputs("64x gtceu:lafium_block", "64x gtceu:potin_block")
-        .itemOutputs("gtceu:combined_singularity_0")
+        .itemOutputs("kubejs:combined_singularity_0")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_1")
+    gtr.neutron_compressor("kubejs:combined_singularity_1")
         .itemInputs("64x gtceu:enderite_block", "64x gtceu:indium_gallium_phosphide_block")
-        .itemOutputs("gtceu:combined_singularity_1")
+        .itemOutputs("kubejs:combined_singularity_1")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_2")
+    gtr.neutron_compressor("kubejs:combined_singularity_2")
         .itemInputs("64x gtceu:ruthenium_trinium_americium_neutronate_block", "64x gtceu:yttrium_barium_cuprate_block")
-        .itemOutputs("gtceu:combined_singularity_2")
+        .itemOutputs("kubejs:combined_singularity_2")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_3")
+    gtr.neutron_compressor("kubejs:combined_singularity_3")
         .itemInputs("64x gtceu:hastelloyk_243_block", "64x gtceu:cobalt_brass_block")
-        .itemOutputs("gtceu:combined_singularity_3")
+        .itemOutputs("kubejs:combined_singularity_3")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_4")
+    gtr.neutron_compressor("kubejs:combined_singularity_4")
         .itemInputs("64x gtceu:titansteel_block", "64x gtceu:uranium_rhodium_dinaquadide_block")
-        .itemOutputs("gtceu:combined_singularity_4")
+        .itemOutputs("kubejs:combined_singularity_4")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_5")
+    gtr.neutron_compressor("kubejs:combined_singularity_5")
         .itemInputs("64x gtceu:hastelloy_x_block", "64x gtceu:red_steel_block")
-        .itemOutputs("gtceu:combined_singularity_5")
+        .itemOutputs("kubejs:combined_singularity_5")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_6")
+    gtr.neutron_compressor("kubejs:combined_singularity_6")
         .itemInputs("64x gtceu:highurabilityompoundteel_block", "64x gtceu:germaniumtungstennitride_block")
-        .itemOutputs("gtceu:combined_singularity_6")
+        .itemOutputs("kubejs:combined_singularity_6")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_7")
+    gtr.neutron_compressor("kubejs:combined_singularity_7")
         .itemInputs("64x gtceu:hsse_block", "64x gtceu:watertight_steel_block")
-        .itemOutputs("gtceu:combined_singularity_7")
+        .itemOutputs("kubejs:combined_singularity_7")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_8")
+    gtr.neutron_compressor("kubejs:combined_singularity_8")
         .itemInputs("64x gtceu:pikyonium_block", "64x gtceu:aluminium_bronze_block")
-        .itemOutputs("gtceu:combined_singularity_8")
+        .itemOutputs("kubejs:combined_singularity_8")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_9")
+    gtr.neutron_compressor("kubejs:combined_singularity_9")
         .itemInputs("64x gtceu:abyssalalloy_block", "64x gtceu:soldering_alloy_block")
-        .itemOutputs("gtceu:combined_singularity_9")
+        .itemOutputs("kubejs:combined_singularity_9")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_10")
+    gtr.neutron_compressor("kubejs:combined_singularity_10")
         .itemInputs("64x gtceu:black_titanium_block", "64x gtceu:nickel_zinc_ferrite_block")
-        .itemOutputs("gtceu:combined_singularity_10")
+        .itemOutputs("kubejs:combined_singularity_10")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_11")
+    gtr.neutron_compressor("kubejs:combined_singularity_11")
         .itemInputs("64x gtceu:ultimet_block", "64x gtceu:hsla_steel_block")
-        .itemOutputs("gtceu:combined_singularity_11")
+        .itemOutputs("kubejs:combined_singularity_11")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_12")
+    gtr.neutron_compressor("kubejs:combined_singularity_12")
         .itemInputs("64x gtceu:enriched_naquadah_trinium_europium_duranide_block", "64x gtceu:rtm_alloy_block")
-        .itemOutputs("gtceu:combined_singularity_12")
+        .itemOutputs("kubejs:combined_singularity_12")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_13")
+    gtr.neutron_compressor("kubejs:combined_singularity_13")
         .itemInputs("64x gtceu:blue_steel_block", "64x gtceu:hastelloy_c_276_block")
-        .itemOutputs("gtceu:combined_singularity_13")
+        .itemOutputs("kubejs:combined_singularity_13")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_14")
+    gtr.neutron_compressor("kubejs:combined_singularity_14")
         .itemInputs("64x gtceu:cinobite_block", "64x gtceu:stellite_100_block")
-        .itemOutputs("gtceu:combined_singularity_14")
+        .itemOutputs("kubejs:combined_singularity_14")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.neutron_compressor("gtceu:combined_singularity_15")
+    gtr.neutron_compressor("kubejs:combined_singularity_15")
         .itemInputs("64x gtceu:maraging_steel_300_block", "64x gtceu:grisium_block")
-        .itemOutputs("gtceu:combined_singularity_15")
+        .itemOutputs("kubejs:combined_singularity_15")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.qft("gtceu:eternity_singularity")
-        .notConsumable("gtceu:infinity_catalyst")
+    gtr.qft("kubejs:eternity_singularity")
+        .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("64x gtceu:neutronium_block",
-            "gtceu:combined_singularity_0",
-            "gtceu:combined_singularity_1",
-            "gtceu:combined_singularity_2",
-            "gtceu:combined_singularity_3",
-            "gtceu:combined_singularity_4",
-            "gtceu:combined_singularity_5",
-            "gtceu:combined_singularity_6",
-            "gtceu:combined_singularity_7",
-            "gtceu:combined_singularity_8",
-            "gtceu:combined_singularity_9",
-            "gtceu:combined_singularity_10",
-            "gtceu:combined_singularity_11",
-            "gtceu:combined_singularity_12",
-            "gtceu:combined_singularity_13",
-            "gtceu:combined_singularity_14",
-            "gtceu:combined_singularity_15")
+            "kubejs:combined_singularity_0",
+            "kubejs:combined_singularity_1",
+            "kubejs:combined_singularity_2",
+            "kubejs:combined_singularity_3",
+            "kubejs:combined_singularity_4",
+            "kubejs:combined_singularity_5",
+            "kubejs:combined_singularity_6",
+            "kubejs:combined_singularity_7",
+            "kubejs:combined_singularity_8",
+            "kubejs:combined_singularity_9",
+            "kubejs:combined_singularity_10",
+            "kubejs:combined_singularity_11",
+            "kubejs:combined_singularity_12",
+            "kubejs:combined_singularity_13",
+            "kubejs:combined_singularity_14",
+            "kubejs:combined_singularity_15")
         .inputFluids("gtceu:draconiumawakened 1000", "gtceu:cosmicneutronium 1000", "gtceu:dimensionallytranscendentstellarcatalyst 1000")
-        .itemOutputs("gtceu:eternity_singularity")
+        .itemOutputs("kubejs:eternity_singularity")
         .EUt(16 * GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.qft("gtceu:eternity_singularity_1")
-        .notConsumable("gtceu:eternity_catalyst")
+    gtr.qft("kubejs:eternity_singularity_1")
+        .notConsumable("kubejs:eternity_catalyst")
         .itemInputs("64x gtceu:neutronium_block",
-            "gtceu:combined_singularity_0",
-            "gtceu:combined_singularity_1",
-            "gtceu:combined_singularity_2",
-            "gtceu:combined_singularity_3",
-            "gtceu:combined_singularity_4",
-            "gtceu:combined_singularity_5",
-            "gtceu:combined_singularity_6",
-            "gtceu:combined_singularity_7",
-            "gtceu:combined_singularity_8",
-            "gtceu:combined_singularity_9",
-            "gtceu:combined_singularity_10",
-            "gtceu:combined_singularity_11",
-            "gtceu:combined_singularity_12",
-            "gtceu:combined_singularity_13",
-            "gtceu:combined_singularity_14",
-            "gtceu:combined_singularity_15")
+            "kubejs:combined_singularity_0",
+            "kubejs:combined_singularity_1",
+            "kubejs:combined_singularity_2",
+            "kubejs:combined_singularity_3",
+            "kubejs:combined_singularity_4",
+            "kubejs:combined_singularity_5",
+            "kubejs:combined_singularity_6",
+            "kubejs:combined_singularity_7",
+            "kubejs:combined_singularity_8",
+            "kubejs:combined_singularity_9",
+            "kubejs:combined_singularity_10",
+            "kubejs:combined_singularity_11",
+            "kubejs:combined_singularity_12",
+            "kubejs:combined_singularity_13",
+            "kubejs:combined_singularity_14",
+            "kubejs:combined_singularity_15")
         .inputFluids("gtceu:cosmicneutronium 1000", "gtceu:exciteddtec 1000", "gtceu:spatialfluid 1000")
-        .itemOutputs("16x gtceu:eternity_singularity")
+        .itemOutputs("16x kubejs:eternity_singularity")
         .EUt(16 * GTValues.VA[GTValues.MAX])
         .duration(200)
 
@@ -12686,7 +12686,7 @@ ServerEvents.recipes((event) => {
         .duration(600)
 
     gtr.qft("kubejs:quantum_anomaly")
-        .itemInputs("gtceu:entangled_singularity")
+        .itemInputs("kubejs:entangled_singularity")
         .inputFluids("gtceu:duranium 144", "gtceu:exciteddtec 100")
         .chancedOutput("kubejs:quantum_anomaly", 1000, 0)
         .EUt(GTValues.VA[GTValues.MAX])
@@ -13239,7 +13239,7 @@ ServerEvents.recipes((event) => {
             "16x kubejs:dimension_creation_casing",
             "16x kubejs:dimension_connection_casing",
             "8x kubejs:suprachronal_mainframe_complex",
-            "8x gtceu:eternity_singularity",
+            "8x kubejs:eternity_singularity",
             "8x kubejs:chaotic_core",
             "64x kubejs:void_matter",
             "16x kubejs:quantum_anomaly",
@@ -13730,7 +13730,7 @@ ServerEvents.recipes((event) => {
         .duration(400)
 
     gtr.assembler("gregiceng:crafting_io_slave")
-        .itemInputs("gregiceng:luv_input_buffer", "expatternprovider:ingredient_buffer", "expatternprovider:ex_pattern_provider", "expatternprovider:pattern_provider_upgrade", "#gtceu:circuits/uv", "gtceu:entangled_singularity", "2x gtceu:opal_plate")
+        .itemInputs("gregiceng:luv_input_buffer", "expatternprovider:ingredient_buffer", "expatternprovider:ex_pattern_provider", "expatternprovider:pattern_provider_upgrade", "#gtceu:circuits/uv", "kubejs:entangled_singularity", "2x gtceu:opal_plate")
         .inputFluids("gtceu:soldering_alloy 576")
         .itemOutputs("gregiceng:crafting_io_slave")
         .EUt(122880)
@@ -13883,14 +13883,14 @@ ServerEvents.recipes((event) => {
     }
     implosion_compressor_add("4x gtceu:echo_dust", "minecraft:echo_shard", 3)
     implosion_compressor_add(["minecraft:command_block", "kubejs:two_way_foil"], "kubejs:command_block_core", 1)
-    implosion_compressor_add(["ae2:singularity", "kubejs:warped_ender_pearl"], "gtceu:entangled_singularity", 1)
+    implosion_compressor_add(["ae2:singularity", "kubejs:warped_ender_pearl"], "kubejs:entangled_singularity", 1)
     implosion_compressor_add("4x gtceu:certus_quartz_gem", "ae2:charged_certus_quartz_crystal", 4)
     implosion_compressor_add(["4x ad_astra:steel_plate", "2x gtceu:dense_tungsten_steel_plate"], "ad_astra:steel_block", 1)
 
-    gtr.electric_implosion_compressor("gtceu:eternity_singularity")
+    gtr.electric_implosion_compressor("kubejs:eternity_singularity")
         .notConsumable("gtceu:eternity_nanoswarm")
         .itemInputs("gtceu:spacetime_dust")
-        .itemOutputs("gtceu:eternity_singularity")
+        .itemOutputs("kubejs:eternity_singularity")
         .EUt(2048 * GTValues.VA[GTValues.MAX])
         .duration(20)
 
@@ -15213,7 +15213,7 @@ ServerEvents.recipes((event) => {
     gtr.nano_forge("gtceu:eternity_nanoswarm")
         .notConsumable("gtceu:blue_glass_lens")
         .notConsumable("kubejs:quantum_anomaly")
-        .notConsumable("gtceu:eternity_catalyst")
+        .notConsumable("kubejs:eternity_catalyst")
         .itemInputs("gtceu:neutronium_nanoswarm", "8x gtceu:eternity_block", "8x kubejs:ctc_computational_unit")
         .itemOutputs("gtceu:eternity_nanoswarm")
         .inputFluids("gtceu:spatialfluid 80000", "gtceu:exciteddtsc 80000", "gtceu:primordialmatter 80000")

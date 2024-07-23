@@ -628,7 +628,10 @@
 				"7F39794EF1168325"
 				"5F80A7D38186BE29"
 			]
-			description: ["覆盖板可以安装在各种GT的机器上，使用螺丝刀可以快速打开"]
+			description: [
+				"覆盖板可以安装在各种GT的机器上，实现不同的功能，使用螺丝刀可以快速打开"
+				"比如传送带和机械臂可以抽取和弹出物品，电动泵为流体，这里的机器不仅包括单方块机器，还包括管道，多方块仓在内的各种GT方块实体"
+			]
 			icon: "gtceu:computer_monitor_cover"
 			id: "1551A4288CC800CC"
 			rewards: [{
@@ -737,7 +740,7 @@
 				type: "item"
 			}]
 			x: -13.0d
-			y: -2.0d
+			y: -3.5d
 		}
 		{
 			dependencies: ["4AFFB5895E08B151"]
@@ -862,6 +865,15 @@
 			]
 			icon: "gtceu:oil_bucket"
 			id: "1BBA0428718C586A"
+			rewards: [{
+				id: "0B8179F05A25E9A2"
+				item: {
+					Count: 1
+					id: "avaritia:infinity_bucket"
+					tag: { }
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "4B1E38412A6E2F9B"
 				title: "石油"
@@ -932,10 +944,7 @@
 			y: 7.5d
 		}
 		{
-			dependencies: [
-				"691B35DF70361BB3"
-				"15A4420D900FEDE6"
-			]
+			dependencies: ["691B35DF70361BB3"]
 			description: [
 				"不同于普通版，这个版本没有耐久度，没有次数限制，没有冷却，没有电压限制，但代价是电"
 				"机制：每次使用使机器进度增加到剩余进度的50%，消耗EU：8x减少掉的时间(tick单位)x配方运行功率"
@@ -954,6 +963,97 @@
 			}]
 			x: -1.5d
 			y: 7.5d
+		}
+		{
+			dependencies: [
+				"783BF9B9CCDA5182"
+				"150F409313B13620"
+			]
+			description: ["用来合成AE下单最基础的设备"]
+			id: "66514318B10984D1"
+			tasks: [{
+				id: "386C02830D3DD19A"
+				item: "ae2:crafting_unit"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["66514318B10984D1"]
+			description: ["用法在AE自带教程里，非常详细"]
+			id: "5370380F079EBBED"
+			tasks: [
+				{
+					id: "285811E86776DA03"
+					item: "ae2:1k_crafting_storage"
+					type: "item"
+				}
+				{
+					id: "62A11DA0E16D00CE"
+					item: "ae2:crafting_accelerator"
+					type: "item"
+				}
+			]
+			x: -5.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5370380F079EBBED"]
+			description: ["帮你自动下单，可能有bug，自行选择"]
+			id: "005EDBD384083D9D"
+			optional: true
+			tasks: [{
+				id: "75DB30A00168528F"
+				item: "merequester:requester"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1BBA0428718C586A"]
+			description: ["也可以选择生物线"]
+			icon: "gtceu:ethylene_bucket"
+			id: "20A75D3E4F254579"
+			tasks: [{
+				id: "5E25150865524B39"
+				title: "聚乙烯"
+				type: "checkmark"
+			}]
+			x: -11.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"20A75D3E4F254579"
+				"783BF9B9CCDA5182"
+			]
+			description: ["别当样板仙人"]
+			id: "7156662490F50918"
+			tasks: [{
+				id: "0D2AAC4E0A71A4B8"
+				item: "ae2:blank_pattern"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"59D7F512A30C4290"
+				"5F80A7D38186BE29"
+				"7F39794EF1168325"
+			]
+			description: ["自动化的好帮手，还有升级版本"]
+			id: "0C4C092066795074"
+			tasks: [{
+				id: "0C3C902009CFCA3E"
+				item: "gtceu:lv_buffer"
+				type: "item"
+			}]
+			x: -13.0d
+			y: -2.0d
 		}
 	]
 	subtitle: ["Tier1-LV"]

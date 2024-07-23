@@ -778,6 +778,17 @@
 		{
 			dependencies: ["60C149F551ED9513"]
 			id: "5D724C8B6198E9E7"
+			rewards: [{
+				id: "260BA81F9C1927BC"
+				item: {
+					Count: 1
+					id: "avaritia:skull_fire_sword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "7EA698F4ABA360E8"
 				item: "gtceu:large_steam_input_hatch"

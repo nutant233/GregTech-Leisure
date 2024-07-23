@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "kubejs:item/singularity/combined_singularity_13",
-    "layer1": "kubejs:item/singularity/combined_singularity_13_overlay"
-  }
-}

@@ -44,10 +44,6 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", e
         }
     })
     switch (event.getItemStack().getId()) {
-        case "kubejs:infinity_sword":
-            event.getToolTip().removeIf(line => line.toString().includes("attack"))
-            event.getToolTip().add(Component.literal(TextUtil.full_color("无尽")).append(Component.literal(" §2攻击伤害")))
-            break
         case "gtceu:steam_mega_turbine":
             mega_turbine(GTValues.EV, 24)
             break

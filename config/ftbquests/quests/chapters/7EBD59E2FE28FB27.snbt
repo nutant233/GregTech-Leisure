@@ -841,6 +841,15 @@
 		{
 			dependencies: ["7C722E54C642B3CF"]
 			id: "757D5884D79736D7"
+			rewards: [{
+				id: "277917EE59B243EB"
+				item: {
+					Count: 1
+					id: "avaritia:infinity_bow"
+					tag: { }
+				}
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "73D9FEB576363C98"
