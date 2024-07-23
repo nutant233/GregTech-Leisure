@@ -28,6 +28,17 @@ ServerEvents.recipes((event) => {
     event.shapeless("gtceu:spacetime_nonuple_fluid_pipe", ["gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe"])
     event.shapeless("gtceu:spacetime_large_fluid_pipe", ["gtceu:spacetime_normal_fluid_pipe", "gtceu:spacetime_normal_fluid_pipe"])
     event.shapeless("gtceu:spacetime_huge_fluid_pipe", ["gtceu:spacetime_large_fluid_pipe", "gtceu:spacetime_large_fluid_pipe"])
+    event.shaped("gtceu:large_steam_input_hatch", [
+        "ACA",
+        "BDB",
+        "ACA"
+    ], {
+        A: "gtceu:double_bronze_plate",
+        B: "gtceu:stainless_steel_tiny_fluid_pipe",
+        C: "gtceu:iron_rotor",
+        D: "gtceu:steam_input_hatch"
+    })
+
     event.shaped("kubejs:reactor_core", [
         "ACA",
         "CDC",
@@ -10655,7 +10666,7 @@ ServerEvents.recipes((event) => {
     })
 
     gtr.autoclave("kubejs:unstable_star")
-        .notConsumable('gtceu:orichalcum_nanoswarm')
+        .notConsumable("gtceu:orichalcum_nanoswarm")
         .itemInputs("gtceu:gravi_star")
         .inputFluids("gtceu:adamantine 288")
         .itemOutputs("kubejs:unstable_star")
