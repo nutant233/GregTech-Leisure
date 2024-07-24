@@ -383,6 +383,12 @@
 			hide_dependency_lines: true
 			icon: "gtceu:lp_steam_furnace"
 			id: "4A7475AE3B4D27E8"
+			rewards: [{
+				count: 64
+				id: "3B5EF29AE31ADB93"
+				item: "avaritia:compressed_chest"
+				type: "item"
+			}]
 			tasks: [{
 				id: "2BAE16759003FFF8"
 				title: "蒸汽动力"
@@ -1060,7 +1066,7 @@
 		}
 		{
 			dependencies: ["5749CAD673EE6816"]
-			description: ["非常快速的蒸汽生产"]
+			description: ["非常快速的蒸汽生产，推荐烧钻石"]
 			id: "46CF462246D76553"
 			rewards: [{
 				id: "5D2EEEE4972997F5"

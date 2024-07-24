@@ -272,6 +272,11 @@
 			dependencies: ["23136C08CE3A0759"]
 			icon: "gtceu:aqua_regia_bucket"
 			id: "5CB9E9C1B8922907"
+			rewards: [{
+				id: "40C44A6027CFAB3D"
+				item: "avaritia:neutron_horse_armor"
+				type: "item"
+			}]
 			tasks: [{
 				id: "7231B57EA14CA7D2"
 				title: "王水"

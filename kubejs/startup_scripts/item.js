@@ -370,4 +370,10 @@ ItemEvents.modification(event => {
     event.modify("gtceu:raw_coal", modification => {
         modification.setBurnTime(1600)
     })
+    event.modify("minecraft:diamond", modification => {
+        modification.setBurnTime(1280000)
+    })
+    event.modify("minecraft:diamond_block", modification => {
+        modification.setBurnTime(12800000)
+    })
 })

@@ -593,7 +593,7 @@
 		}
 		{
 			dependencies: ["2C6F506ADD78F277"]
-			description: ["去小市场兑换宝物"]
+			description: ["去小市场兑换宝物，注意钻石是耐烧王，推荐给锅炉用"]
 			id: "2E6B876A85B30554"
 			rewards: [{
 				id: "4C4D7911A44B42C2"

@@ -13887,6 +13887,13 @@ ServerEvents.recipes((event) => {
     implosion_compressor_add("4x gtceu:certus_quartz_gem", "ae2:charged_certus_quartz_crystal", 4)
     implosion_compressor_add(["4x ad_astra:steel_plate", "2x gtceu:dense_tungsten_steel_plate"], "ad_astra:steel_block", 1)
 
+    gtr.electric_implosion_compressor("minecraft:diamond")
+        .itemInputs("64x minecraft:coal")
+        .itemInputs("64x minecraft:coal")
+        .itemOutputs("minecraft:diamond")
+        .EUt(GTValues.VA[GTValues.UV])
+        .duration(1)
+
     gtr.electric_implosion_compressor("kubejs:eternity_singularity")
         .notConsumable("gtceu:eternity_nanoswarm")
         .itemInputs("gtceu:spacetime_dust")
