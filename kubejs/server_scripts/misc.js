@@ -436,6 +436,9 @@ NetworkEvents.dataReceived("global.flyingspeedKey.consumeClick", (event) => {
     if (event.player.getArmorSlots().toString() == "[1 hazmat_fermium_boots, 1 hazmat_fermium_leggings, 1 hazmat_fermium_chestplate, 1 hazmat_fermium_helmet]") {
         flyspeed(0.2)
     }
+    if (event.player.getArmorSlots().toString() == "[1 infinity_boots, 1 infinity_pants, 1 infinity_chestplate, 1 infinity_helmet]") {
+        flyspeed(0.3)
+    }
 })
 
 NetworkEvents.dataReceived("gt.se.st", event => {
