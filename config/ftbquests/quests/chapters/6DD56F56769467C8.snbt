@@ -1131,6 +1131,18 @@
 			x: 16.0d
 			y: 5.0d
 		}
+		{
+			dependencies: ["11D5E0BBC95DD69F"]
+			description: ["这是一个非常好用的垃圾桶"]
+			id: "4AD572FD6CB3BBE1"
+			tasks: [{
+				id: "324E23E8118E54D7"
+				item: "ae2:condenser"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 6.5d
+		}
 	]
 	subtitle: ["Tier0-ULV"]
 	title: "蒸汽时代"

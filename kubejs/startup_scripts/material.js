@@ -476,7 +476,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .blastTemp(24800, "highest")
         .element(GTElements.get("cosmicneutronium"))
         .color(0x000d1a)
-        .iconSet(new GTMaterialIconSet("cosmicneutronium", GTMaterialIconSet.METALLIC))
+        .iconSet(new GTMaterialIconSet("cosmicneutronium", GTMaterialIconSet.BRIGHT))
         .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_FINE_WIRE, GTMaterialFlags.GENERATE_SPRING_SMALL)
         .cableProperties(GTValues.V[GTValues.MAX], 2, 128)
 
@@ -649,7 +649,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .radioactiveHazard(8)
         .element(GTElements.get("transcendentmetal"))
         .color(0xffffff)
-        .iconSet(new GTMaterialIconSet("transcendentmetal"))
+        .iconSet(Java.loadClass("com.epimorphismmc.monomorphism.data.chemical.material.info.MOMaterialIconSet").CUSTOM_TRANSCENDENT_MENTAL)
         .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD)
 
     event.create("uruium")

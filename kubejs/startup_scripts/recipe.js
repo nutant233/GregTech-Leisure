@@ -33,7 +33,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
             }
             return ""
         })
-        .setSound(GTSoundEntries.ARC)
+        .setSound(GTSoundEntries.DTPF)
 
     event.create("plasma_condenser")
         .setEUIO("in")
@@ -301,7 +301,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(0, 0, 2, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.ARC)
+        .setSound(GTSoundEntries.FUSIONLOOP)
 
     event.create("dimensional_focus_engraving_array")
         .setEUIO("in")
