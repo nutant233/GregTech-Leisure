@@ -421,7 +421,7 @@
 			y: 8.5d
 		}
 		{
-			description: ["满模块时可达250A MAX输出"]
+			description: ["满模块时可达1000A MAX输出"]
 			id: "082BB082BE18C820"
 			tasks: [{
 				id: "4DC11532BC403AB3"

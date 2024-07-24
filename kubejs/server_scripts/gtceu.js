@@ -11070,7 +11070,7 @@ ServerEvents.recipes((event) => {
             "4x #gtceu:circuits/opv",
             "ae2:wireless_receiver",
             "gtceu:opv_electric_pump",
-            "gtceu:uxv_electric_piston",
+            "gtceu:opv_electric_piston",
             "2x gtceu:opv_electric_motor",
             "2x gtceu:opv_conveyor_module",
             "2x gtceu:opv_robot_arm",
@@ -14085,7 +14085,7 @@ ServerEvents.recipes((event) => {
 
     gtr.dyson_sphere("gtceu:dysonsphere")
         .inputFluids("kubejs:gelid_cryotheum 1")
-        .EUt(-GTValues.V[GTValues.OpV])
+        .EUt(-GTValues.V[GTValues.MAX])
         .duration(20)
         .CWUt(8)
 
