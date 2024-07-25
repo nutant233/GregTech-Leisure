@@ -100,6 +100,7 @@ ItemEvents.tooltip(event => {
     event.add(["gtceu:magic_manufacturer",
         "gtceu:sps_crafting",
         "gtceu:chemical_plant",
+        "gtceu:circuit_printer",
         "gtceu:large_chemical_reactor",
         "gtceu:space_probe_surface_reception",
         "gtceu:dimensionally_transcendent_plasma_forge",

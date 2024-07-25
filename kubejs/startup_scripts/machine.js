@@ -4254,4 +4254,23 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
         })
         .workableCasingRenderer("kubejs:block/molecular_casing", "gtceu:block/multiblock/fusion_reactor")
+
+    event.create("circuit_printer", "multiblock")
+        .rotationState(RotationState.ALL)
+        .recipeType("circuit_printer")
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 2147483647, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
+        .pattern((definition) =>
+            FactoryBlockPattern.start()
+                .aisle("bbb", "bbb", "bbb")
+                .aisle("bbb", "b b", "bbb")
+                .aisle("bbb", "bab", "bbb")
+                .where("a", Predicates.controller(Predicates.blocks(definition.get())))
+                .where("b", Predicates.blocks(GTBlocks.CASING_STEEL_SOLID.get())
+                    .setMinGlobalLimited(10)
+                    .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                    .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
+                .where(" ", Predicates.air())
+                .build())
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/multiblock/gcym/large_cutter")
 })

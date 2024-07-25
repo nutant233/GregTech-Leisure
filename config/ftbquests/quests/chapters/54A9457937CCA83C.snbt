@@ -649,7 +649,10 @@
 		}
 		{
 			dependencies: ["1F0C667FF8F5D340"]
-			description: ["可以理解为一个不消耗的物品，但不需要真正的物品，只需要在机器里设置。"]
+			description: [
+				"可以理解为一个不消耗的物品，但不需要真正的物品，只需要在机器里设置。"
+				"如果从外部输入编程电路物品，则会覆盖当前的电路设置，实现编程电路的自由变换。"
+			]
 			icon: {
 				Count: 1
 				id: "gtceu:programmed_circuit"
@@ -1054,6 +1057,23 @@
 			}]
 			x: -13.0d
 			y: -2.0d
+		}
+		{
+			dependencies: ["783BF9B9CCDA5182"]
+			description: ["复制你的编程电路，有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的返回(更稳定)或者阻挡。"]
+			id: "71C4132579EE9BDE"
+			rewards: [{
+				id: "5D36288DA1F0DC8D"
+				item: "avaritia:extreme_crafting_table"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7D21071856D8528F"
+				item: "gtceu:circuit_printer"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 7.5d
 		}
 	]
 	subtitle: ["Tier1-LV"]
