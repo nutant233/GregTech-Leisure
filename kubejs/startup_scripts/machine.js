@@ -2614,16 +2614,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             machine.getRecipeLogic().resetRecipeLogic()
             return false
         })
-        .onWorking(machine => {
-            if (machine.getOffsetTimer() % 20 == 0) {
-                if (getSuprachronalAssemblyLineModule(machine) < 3) {
-                    return true
-                }
-                machine.getRecipeLogic().resetRecipeLogic()
-                return false
-            }
-            return true
-        })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
                 components.add(Component.literal("已安装的模块数：" + getSuprachronalAssemblyLineModule(controller)))
@@ -2683,16 +2673,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             machine.getRecipeLogic().resetRecipeLogic()
             return false
-        })
-        .onWorking(machine => {
-            if (machine.getOffsetTimer() % 20 == 0) {
-                if (getSuprachronalAssemblyLine(machine) != null) {
-                    return true
-                }
-                machine.getRecipeLogic().resetRecipeLogic()
-                return false
-            }
-            return true
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
