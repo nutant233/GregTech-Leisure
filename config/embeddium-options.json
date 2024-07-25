@@ -2,7 +2,8 @@
   "quality": {
     "weather_quality": "DEFAULT",
     "leaves_quality": "DEFAULT",
-    "enable_vignette": true
+    "enable_vignette": true,
+    "use_quad_normals_for_shading": false
   },
   "advanced": {
     "enable_memory_tracing": false,
