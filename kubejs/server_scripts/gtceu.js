@@ -15569,4 +15569,10 @@ ServerEvents.recipes((event) => {
             .EUt(30)
             .duration(20)
     }
+
+    gtr.packer("gtceu:tiny_degenerate_rhenium_dust")
+        .itemInputs("gtceu:degenerate_rhenium_dust")
+        .itemOutputs("9x gtceu:tiny_degenerate_rhenium_dust")
+        .EUt(1920)
+        .duration(20)
 })
