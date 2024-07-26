@@ -1,7 +1,6 @@
 {
-  "parent": "item/generated",
+  "parent": "gtceu:item/material_sets/dull/dust",
   "textures": {
-    "layer0": "gtceu:item/material_sets/metallic/dust",
     "halo": "avaritia:misc/halo_noise"
   },
   "loader": "avaritia:halo",

@@ -359,7 +359,7 @@ StartupEvents.registry("item", event => {
     event.create("glacio_spirit")
     event.create("timepiece")
     event.create("entangled_singularity")
-    event.create("eternity_singularity")
+    event.create("cosmic_singularity")
     event.create("spacetime_catalyst")
     event.create("eternity_catalyst")
     for (let i = 0; i < 16; i++) {

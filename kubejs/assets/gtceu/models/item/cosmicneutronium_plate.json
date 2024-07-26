@@ -1,7 +1,6 @@
 {
-  "parent": "item/generated",
+  "parent": "gtceu:item/material_sets/dull/plate",
   "textures": {
-    "layer0": "gtceu:item/material_sets/dull/plate",
     "halo": "avaritia:misc/halo_noise"
   },
   "loader": "avaritia:halo",
