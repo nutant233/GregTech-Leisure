@@ -244,8 +244,8 @@
 				item: "gtceu:decay_hastener"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 1.5d
+			x: -0.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -396,23 +396,6 @@
 			}]
 			x: -9.5d
 			y: 4.5d
-		}
-		{
-			dependencies: ["7C23CC6ADDC33EA0"]
-			description: [
-				"自带回流，自带隔离，神器"
-				"目前bug较多"
-			]
-			id: "608DB6EE086D9AAD"
-			shape: "gear"
-			size: 1.2d
-			tasks: [{
-				id: "3BBE129F11F94A55"
-				item: "gregiceng:crafting_io_buffer"
-				type: "item"
-			}]
-			x: -0.5d
-			y: 3.0d
 		}
 		{
 			dependencies: ["0A2D46609F5C3CAB"]

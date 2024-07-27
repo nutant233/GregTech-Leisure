@@ -1186,6 +1186,14 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet(GTMaterialIconSet.METALLIC)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
 
+    event.create("fall_king")
+        .ingot()
+        .fluid()
+        .blastTemp(5400, "high")
+        .components("1x helium", "1x lithium", "1x cobalt", "1x platinum", "1x erbium")
+        .color(0xffcf6b)
+        .iconSet(GTMaterialIconSet.BRIGHT)
+
     event.create("woods_glass")
         .ingot()
         .fluid()

@@ -1006,17 +1006,17 @@ ServerEvents.recipes((event) => {
 
     gtr.assembly_line("gtceu:super_blast_smelter")
         .itemInputs("64x gtceu:tungsten_carbide_frame",
-            "16x gtceu:mega_blast_furnace",
-            "16x gtceu:mega_alloy_blast_smelter",
+            "64x gtceu:mega_blast_furnace",
+            "64x gtceu:mega_alloy_blast_smelter",
             "64x gtceu:uv_field_generator",
             "64x gtceu:iv_fluid_regulator",
-            "16x #gtceu:circuits/uev",
-            "16x gtceu:copper_nanoswarm",
+            "64x #gtceu:circuits/uev",
+            "64x gtceu:copper_nanoswarm",
             "64x gtceu:ruthenium_trinium_americium_neutronate_hex_wire",
-            "4x gtceu:dense_tungsten_steel_plate",
-            "4x gtceu:dense_rhodium_plated_palladium_plate",
-            "4x gtceu:dense_naquadah_alloy_plate",
-            "4x gtceu:dense_darmstadtium_plate",
+            "14x gtceu:dense_tungsten_steel_plate",
+            "14x gtceu:dense_rhodium_plated_palladium_plate",
+            "14x gtceu:dense_naquadah_alloy_plate",
+            "14x gtceu:dense_darmstadtium_plate",
             "64x gtceu:double_gallium_plate",
             "64x gtceu:double_chromium_plate",
             "64x gtceu:double_cobalt_plate",
@@ -1324,9 +1324,9 @@ ServerEvents.recipes((event) => {
         })
 
     gtr.assembly_line("gtceu:large_void_miner")
-        .itemInputs("gtceu:ev_large_miner",
-            "gtceu:iv_large_miner",
-            "gtceu:luv_large_miner",
+        .itemInputs("4x gtceu:ev_large_miner",
+            "4x gtceu:iv_large_miner",
+            "4x gtceu:luv_large_miner",
             "64x gtceu:uranium_triplatinum_single_wire",
             "64x gtceu:samarium_iron_arsenic_oxide_single_wire",
             "64x gtceu:indium_tin_barium_titanium_cuprate_single_wire",
@@ -1336,12 +1336,12 @@ ServerEvents.recipes((event) => {
             "8x gtceu:ev_sensor",
             "8x gtceu:iv_sensor",
             "8x gtceu:luv_sensor",
-            "4x #gtceu:circuits/uv",
+            "16x #gtceu:circuits/uv",
             "16x gtceu:double_osmium_plate",
             "16x gtceu:double_black_steel_plate",
             "16x gtceu:double_niobium_nitride_plate")
         .itemOutputs("gtceu:large_void_miner")
-        .inputFluids("gtceu:soldering_alloy 2880")
+        .inputFluids("gtceu:soldering_alloy 5760", "gtceu:fall_king 5760", "gtceu:energetic_alloy 5760", "gtceu:tanmolyium 5760")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(800)
         .researchWithoutRecipe("1x_gtceu_void_miner", "gtceu:data_orb")
@@ -1720,7 +1720,7 @@ ServerEvents.recipes((event) => {
             "8x gtceu:stellite_gear",
             "8x gtceu:double_hssg_plate",
             "8x gtceu:double_tanmolyium_plate")
-        .inputFluids("gtceu:soldering_alloy 5760")
+        .inputFluids("gtceu:soldering_alloy 5760", "gtceu:rose_gold 5760", "gtceu:osmiridium 5760", "gtceu:vanadium_gallium 5760")
         .itemOutputs("gtceu:advanced_assembly_line")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(400)
@@ -1879,7 +1879,7 @@ ServerEvents.recipes((event) => {
             "8x gtceu:ruridit_screw",
             "4x gtceu:trinium_gear",
             "8x gtceu:double_hastelloy_n_plate")
-        .inputFluids("gtceu:soldering_alloy 5760")
+        .inputFluids("gtceu:soldering_alloy 5760", "gtceu:tantalum 5760", "gtceu:manganese_phosphide 5760", "gtceu:magnesium_diboride 5760")
         .itemOutputs("gtceu:precision_assembler")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(1000)
@@ -2408,8 +2408,8 @@ ServerEvents.recipes((event) => {
         .itemInputs("16x gtceu:large_assembler",
             "16x gtceu:large_circuit_assembler",
             "16x kubejs:precision_circuit_assembly_robot_mk1",
-            "16x gtceu:uv_fluid_regulator",
-            "32x gtceu:uv_robot_arm",
+            "32x gtceu:uv_fluid_regulator",
+            "64x gtceu:uv_robot_arm",
             "32x #gtceu:circuits/uhv",
             "64x gtceu:tungsten_carbide_screw",
             "64x gtceu:yttrium_barium_cuprate_screw",
@@ -7916,7 +7916,8 @@ ServerEvents.recipes((event) => {
             "12x #forge:ores/uraninite"], "kubejs:pitchblende_vein_end_essence"],
 
         [["18x #forge:ores/naquadah",
-            "6x #forge:ores/plutonium"], "kubejs:naquadah_vein_essence"]]
+            "6x #forge:ores/plutonium",
+            "20x #forge:ores/trinium"], "kubejs:naquadah_vein_essence"]]
 
     end_vs.forEach((end_v) => {
         gtr.incubator("end_e_" + end_v[1])

@@ -684,6 +684,22 @@
 			x: 5.5d
 			y: -0.5d
 		}
+		{
+			dependencies: ["6B71EE1A869ABCD5"]
+			id: "2AA63D77B0E86D2E"
+			rewards: [{
+				id: "74F83E0CD43D15C7"
+				item: "avaritia:infinity_hoe"
+				type: "item"
+			}]
+			tasks: [{
+				id: "07D2F38F2B6D6996"
+				item: "gtceu:fall_king_ingot"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -5.0d
+		}
 	]
 	subtitle: ["Tier5-IV"]
 	title: "强导压"

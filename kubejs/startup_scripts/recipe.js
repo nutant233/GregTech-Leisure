@@ -166,7 +166,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(0, 1, 1, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.SCIENCE)
+        .setSound(GTSoundEntries.ARC)
 
     event.create("large_recycler")
         .setEUIO("in")
