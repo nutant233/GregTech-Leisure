@@ -28,6 +28,16 @@ ServerEvents.recipes((event) => {
     event.shapeless("gtceu:spacetime_nonuple_fluid_pipe", ["gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe"])
     event.shapeless("gtceu:spacetime_large_fluid_pipe", ["gtceu:spacetime_normal_fluid_pipe", "gtceu:spacetime_normal_fluid_pipe"])
     event.shapeless("gtceu:spacetime_huge_fluid_pipe", ["gtceu:spacetime_large_fluid_pipe", "gtceu:spacetime_large_fluid_pipe"])
+    event.shaped("gtmthings:creative_laser_hatch", [
+        "ABA",
+        "BCB",
+        "ABA"
+    ], {
+        A: "minecraft:chain_command_block",
+        B: "kubejs:chaotic_energy_core",
+        C: "gtmthings:max_4194304a_wireless_laser_target_hatch"
+    })
+
     event.shaped("gtceu:circuit_printer", [
         "ACA",
         "BDB",
@@ -1981,7 +1991,7 @@ ServerEvents.recipes((event) => {
         })
 
     gtr.assembly_line("kubejs:spacetime_compression_field_generator")
-        .itemInputs("kubejs:dimensionally_transcendent_casing", "kubejs:hollow_casing", "gtceu:opv_field_generator", "kubejs:microwormhole_generator", "2x gtceu:infinity_rod", "gtceu:double_starmetal_plate", "gtceu:double_quantumchromodynamically_confined_matter_plate", "4x gtceu:double_titan_precision_steel_plate")
+        .itemInputs("kubejs:dimensionally_transcendent_casing", "kubejs:containment_field_generator", "4x kubejs:dyson_deployment_casing", "gtceu:opv_field_generator", "kubejs:microwormhole_generator", "4x gtceu:orichalcum_nanoswarm", "2x gtceu:infinity_rod", "gtceu:double_starmetal_plate", "gtceu:double_quantumchromodynamically_confined_matter_plate", "4x gtceu:double_titan_precision_steel_plate")
         .inputFluids("gtceu:super_mutated_living_solder 576", "gtceu:cosmicneutronium 288", "gtceu:crystalmatrix 576", "gtceu:heavy_quark_degenerate_matter 576")
         .itemOutputs("kubejs:spacetime_compression_field_generator")
         .EUt(GTValues.VA[GTValues.OpV])
@@ -3018,10 +3028,12 @@ ServerEvents.recipes((event) => {
         })
 
     gtr.assembly_line("kubejs:dimensional_stability_casing")
-        .itemInputs("kubejs:hollow_casing",
+        .itemInputs("kubejs:containment_field_generator",
+            "4x kubejs:dyson_control_casing",
+            "4x kubejs:dyson_control_toroid",
             "gtceu:uxv_field_generator",
-            "gtceu:uiv_field_generator",
-            "gtceu:opv_electric_pump",
+            "4x gtceu:uiv_field_generator",
+            "2x gtceu:opv_electric_pump",
             "2x gtceu:rtm_alloy_spring",
             "#gtceu:circuits/uev",
             "2x gtceu:crystalmatrix_rod",
@@ -3353,9 +3365,11 @@ ServerEvents.recipes((event) => {
         [1, "uev", "seaborgium", "mithril", "kubejs:nm_chip", "8x kubejs:smd_inductor_optical"],
         [2, "uiv", "adamantium", "neutronium", "kubejs:pm_chip", "8x kubejs:smd_inductor_exotic"],
         [3, "uxv", "vibranium", "taranium", "kubejs:pm_chip", "8x kubejs:smd_inductor_cosmic"],
-        [4, "opv", "draconium", "crystalmatrix", "kubejs:fm_chip", "8x kubejs:smd_inductor_supracausal"]
+        [4, "opv", "draconium", "crystalmatrix", "kubejs:fm_chip", "8x kubejs:smd_inductor_supracausal"],
+        [5, "max", "chaos", "cosmicneutronium", "kubejs:fm_chip", "8x gtceu:shirabon_foil"]
     ]
     wireless_tiers.forEach((tier) => {
+        let soldering = tier[0] > 2 ? "gtceu:mutated_living_solder 144" : "gtceu:super_mutated_living_solder 144"
         gtr.assembler(`gtmthings:${tier[1]}_wireless_energy_receive_cover`)
             .itemInputs(`gtceu:${tier[1]}_sensor`,
                 `gtceu:${tier[1]}_emitter`,
@@ -3366,7 +3380,7 @@ ServerEvents.recipes((event) => {
                 `2x gtceu:${tier[3]}_single_cable`,
                 "2x gtceu:red_alloy_single_cable",
                 `4x gtceu:${tier[2]}_plate`)
-            .inputFluids("gtceu:soldering_alloy 144")
+            .inputFluids(soldering)
             .itemOutputs(`gtmthings:${tier[1]}_wireless_energy_receive_cover`)
             .EUt(GTValues.VA[tier[0] + 9])
             .duration(200)
@@ -3376,54 +3390,145 @@ ServerEvents.recipes((event) => {
                 `4x gtceu:niobium_titanium_quadruple_cable`,
                 `2x kubejs:${tier[1]}_voltage_coil`,
                 "2x gtceu:double_battery_alloy_plate")
-            .inputFluids("gtceu:soldering_alloy 144")
+            .inputFluids(soldering)
             .itemOutputs(`gtmthings:${tier[1]}_4a_wireless_energy_receive_cover`)
             .EUt(GTValues.VA[tier[0] + 9])
             .duration(200)
     })
-    for (let index = 5; index < 14; index++) {
+    for (let index = 5; index < 15; index++) {
         let tierName = GTValues.VN[index].toLowerCase()
         gtr.assembler(`gtmthings:${tierName}_16384a_wireless_laser_target_hatch`)
             .itemInputs(`gtceu:${tierName}_16384a_laser_target_hatch`,
-                `32x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "gtceu:active_transformer",
                 "gtceu:superconducting_coil",
+                "2x gtceu:high_power_casing",
+                "4x gtceu:normal_laser_pipe",
                 "gtceu:advanced_energy_detector_cover")
             .inputFluids("gtceu:soldering_alloy 144")
             .itemOutputs(`gtmthings:${tierName}_16384a_wireless_laser_target_hatch`)
             .EUt(GTValues.VA[index])
             .duration(200)
 
-        gtr.assembler(`gtmthings:${tierName}_65536a_wireless_laser_target_hatch`)
-            .itemInputs(`gtceu:${tierName}_65536a_laser_target_hatch`,
-                `64x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
-                "gtceu:active_transformer",
-                "gtceu:superconducting_coil",
-                "gtceu:advanced_energy_detector_cover")
-            .inputFluids("gtceu:soldering_alloy 144")
-            .itemOutputs(`gtmthings:${tierName}_65536a_wireless_laser_target_hatch`)
-            .EUt(GTValues.VA[index])
-            .duration(200)
-
         gtr.assembler(`gtmthings:${tierName}_16384a_wireless_laser_source_hatch`)
             .itemInputs(`gtceu:${tierName}_16384a_laser_source_hatch`,
-                `32x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "gtceu:active_transformer",
                 "gtceu:superconducting_coil",
+                "2x gtceu:high_power_casing",
+                "4x gtceu:normal_laser_pipe",
                 "gtceu:advanced_energy_detector_cover")
             .inputFluids("gtceu:soldering_alloy 144")
             .itemOutputs(`gtmthings:${tierName}_16384a_wireless_laser_source_hatch`)
             .EUt(GTValues.VA[index])
             .duration(200)
 
+        gtr.assembler(`gtmthings:${tierName}_65536a_wireless_laser_target_hatch`)
+            .itemInputs(`gtceu:${tierName}_65536a_laser_target_hatch`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
+                "gtceu:active_transformer",
+                "2x gtceu:superconducting_coil",
+                "2x gtceu:high_power_casing",
+                "8x gtceu:normal_laser_pipe",
+                "gtceu:advanced_energy_detector_cover")
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs(`gtmthings:${tierName}_65536a_wireless_laser_target_hatch`)
+            .EUt(GTValues.VA[index])
+            .duration(200)
+
         gtr.assembler(`gtmthings:${tierName}_65536a_wireless_laser_source_hatch`)
             .itemInputs(`gtceu:${tierName}_65536a_laser_source_hatch`,
-                `64x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "gtceu:active_transformer",
-                "gtceu:superconducting_coil",
+                "2x gtceu:superconducting_coil",
+                "2x gtceu:high_power_casing",
+                "8x gtceu:normal_laser_pipe",
                 "gtceu:advanced_energy_detector_cover")
             .inputFluids("gtceu:soldering_alloy 144")
             .itemOutputs(`gtmthings:${tierName}_65536a_wireless_laser_source_hatch`)
+            .EUt(GTValues.VA[index])
+            .duration(200)
+
+        gtr.assembler(`gtmthings:${tierName}_262144a_wireless_laser_target_hatch`)
+            .itemInputs(`gtceu:${tierName}_262144a_laser_target_hatch`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
+                "2x gtceu:active_transformer",
+                "2x gtceu:superconducting_coil",
+                "2x gtceu:high_power_casing",
+                "16x gtceu:normal_laser_pipe",
+                "gtceu:advanced_energy_detector_cover")
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs(`gtmthings:${tierName}_262144a_wireless_laser_target_hatch`)
+            .EUt(GTValues.VA[index])
+            .duration(200)
+
+        gtr.assembler(`gtmthings:${tierName}_262144a_wireless_laser_source_hatch`)
+            .itemInputs(`gtceu:${tierName}_262144a_laser_source_hatch`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
+                "2x gtceu:active_transformer",
+                "2x gtceu:superconducting_coil",
+                "2x gtceu:high_power_casing",
+                "16x gtceu:normal_laser_pipe",
+                "gtceu:advanced_energy_detector_cover")
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs(`gtmthings:${tierName}_262144a_wireless_laser_source_hatch`)
+            .EUt(GTValues.VA[index])
+            .duration(200)
+
+
+        gtr.assembler(`gtmthings:${tierName}_1048576a_wireless_laser_target_hatch`)
+            .itemInputs(`gtceu:${tierName}_1048576a_laser_target_hatch`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
+                "2x gtceu:active_transformer",
+                "4x gtceu:superconducting_coil",
+                "2x gtceu:high_power_casing",
+                "32x gtceu:normal_laser_pipe",
+                "4x kubejs:molecular_coil",
+                "gtceu:advanced_energy_detector_cover")
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs(`gtmthings:${tierName}_1048576a_wireless_laser_target_hatch`)
+            .EUt(GTValues.VA[index])
+            .duration(200)
+
+        gtr.assembler(`gtmthings:${tierName}_1048576a_wireless_laser_source_hatch`)
+            .itemInputs(`gtceu:${tierName}_1048576a_laser_source_hatch`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
+                "2x gtceu:active_transformer",
+                "4x gtceu:superconducting_coil",
+                "2x gtceu:high_power_casing",
+                "32x gtceu:normal_laser_pipe",
+                "4x kubejs:molecular_coil",
+                "gtceu:advanced_energy_detector_cover")
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs(`gtmthings:${tierName}_1048576a_wireless_laser_source_hatch`)
+            .EUt(GTValues.VA[index])
+            .duration(200)
+
+        gtr.assembler(`gtmthings:${tierName}_4194304a_wireless_laser_target_hatch`)
+            .itemInputs(`gtceu:${tierName}_4194304a_laser_target_hatch`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
+                "2x gtceu:active_transformer",
+                "8x gtceu:superconducting_coil",
+                "2x gtceu:high_power_casing",
+                "32x gtceu:normal_laser_pipe",
+                "8x kubejs:molecular_coil",
+                "gtceu:advanced_energy_detector_cover")
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs(`gtmthings:${tierName}_4194304a_wireless_laser_target_hatch`)
+            .EUt(GTValues.VA[index])
+            .duration(200)
+
+        gtr.assembler(`gtmthings:${tierName}_4194304a_wireless_laser_source_hatch`)
+            .itemInputs(`gtceu:${tierName}_4194304a_laser_source_hatch`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
+                "2x gtceu:active_transformer",
+                "8x gtceu:superconducting_coil",
+                "2x gtceu:high_power_casing",
+                "32x gtceu:normal_laser_pipe",
+                "8x kubejs:molecular_coil",
+                "gtceu:advanced_energy_detector_cover")
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs(`gtmthings:${tierName}_4194304a_wireless_laser_source_hatch`)
             .EUt(GTValues.VA[index])
             .duration(200)
     }
@@ -5153,7 +5258,7 @@ ServerEvents.recipes((event) => {
         .duration(50)
 
     gtr.assembler("kubejs:dimensionally_transcendent_casing")
-        .itemInputs("gtceu:mithril_frame", "2x kubejs:molecular_casing", "12x gtceu:adamantium_bolt", "gtceu:enderite_single_wire", "6x gtceu:osmiridium_plate")
+        .itemInputs("gtceu:mithril_frame", "2x kubejs:dimension_injection_casing", "2x kubejs:molecular_casing", "gtceu:iv_quantum_chest", "gtceu:iv_quantum_tank", "12x gtceu:adamantium_bolt", "gtceu:enderite_single_wire", "6x gtceu:palladium_plate", "6x gtceu:osmiridium_plate")
         .itemOutputs("2x kubejs:dimensionally_transcendent_casing")
         .inputFluids("gtceu:degenerate_rhenium 200")
         .EUt(GTValues.VA[GTValues.UIV])
@@ -7288,6 +7393,7 @@ ServerEvents.recipes((event) => {
         .CWUt(128)
 
     gtr.autoclave("kubejs:contained_kerr_singularity")
+        .notConsumable("gtceu:vibranium_nanoswarm")
         .itemInputs("kubejs:contained_kerr_newmann_singularity")
         .inputFluids("gtceu:free_electron_gas 1000")
         .itemOutputs("kubejs:contained_kerr_singularity")
@@ -12696,6 +12802,7 @@ ServerEvents.recipes((event) => {
         .duration(600)
 
     gtr.qft("kubejs:quantum_anomaly")
+        .chancedInput("gtceu:draconium_nanoswarm", 100, 0)
         .itemInputs("kubejs:entangled_singularity")
         .inputFluids("gtceu:duranium 144", "gtceu:exciteddtec 100")
         .chancedOutput("kubejs:quantum_anomaly", 1000, 0)
@@ -13277,6 +13384,8 @@ ServerEvents.recipes((event) => {
         .duration(20)
 
     gtr.assembler("kubejs:magnetohydrodynamicallyconstrainedstarmatter_helmet")
+        .notConsumable("gtceu:spacetime_nanoswarm")
+        .notConsumable("gtceu:cosmicneutronium_nanoswarm")
         .itemInputs("50x gtceu:magnetohydrodynamicallyconstrainedstarmatter_ingot", "kubejs:command_block_core")
         .itemOutputs("kubejs:magnetohydrodynamicallyconstrainedstarmatter_helmet")
         .EUt(65536 * GTValues.VA[GTValues.MAX])
@@ -13284,6 +13393,8 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.assembler("kubejs:magnetohydrodynamicallyconstrainedstarmatter_chestplate")
+        .notConsumable("gtceu:spacetime_nanoswarm")
+        .notConsumable("gtceu:cosmicneutronium_nanoswarm")
         .itemInputs("80x gtceu:magnetohydrodynamicallyconstrainedstarmatter_ingot", "kubejs:command_block_core")
         .itemOutputs("kubejs:magnetohydrodynamicallyconstrainedstarmatter_chestplate")
         .EUt(65536 * GTValues.VA[GTValues.MAX])
@@ -13291,6 +13402,8 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.assembler("kubejs:magnetohydrodynamicallyconstrainedstarmatter_leggings")
+        .notConsumable("gtceu:spacetime_nanoswarm")
+        .notConsumable("gtceu:cosmicneutronium_nanoswarm")
         .itemInputs("70x gtceu:magnetohydrodynamicallyconstrainedstarmatter_ingot", "kubejs:command_block_core")
         .itemOutputs("kubejs:magnetohydrodynamicallyconstrainedstarmatter_leggings")
         .EUt(65536 * GTValues.VA[GTValues.MAX])
@@ -13298,6 +13411,8 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.assembler("kubejs:magnetohydrodynamicallyconstrainedstarmatter_boots")
+        .notConsumable("gtceu:spacetime_nanoswarm")
+        .notConsumable("gtceu:cosmicneutronium_nanoswarm")
         .itemInputs("40x gtceu:magnetohydrodynamicallyconstrainedstarmatter_ingot", "kubejs:command_block_core")
         .itemOutputs("kubejs:magnetohydrodynamicallyconstrainedstarmatter_boots")
         .EUt(65536 * GTValues.VA[GTValues.MAX])
@@ -13432,6 +13547,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(5000)
 
     gtr.qft("kubejs:hyper_stable_self_healing_adhesive")
+        .chancedInput("gtceu:uruium_nanoswarm", 500, 0)
         .itemInputs("64x gtceu:activated_carbon_dust", "64x gtceu:bismuth_dust")
         .inputFluids("gtceu:oxygen 20000", "gtceu:hydrogen 20000")
         .chancedOutput("kubejs:hyper_stable_self_healing_adhesive", 2000, 0)
@@ -13439,6 +13555,7 @@ ServerEvents.recipes((event) => {
         .duration(20)
 
     gtr.qft("kubejs:black_body_naquadria_supersolid")
+        .chancedInput("gtceu:uruium_nanoswarm", 500, 0)
         .itemInputs("64x gtceu:naquadria_dust", "64x gtceu:magnesium_dust")
         .inputFluids("gtceu:phosphoric_acid 20000", "gtceu:sulfuric_acid 20000")
         .chancedOutput("kubejs:black_body_naquadria_supersolid", 2000, 0)
@@ -13531,6 +13648,8 @@ ServerEvents.recipes((event) => {
             "64x gtceu:uhv_ultimate_battery",
             "16x kubejs:chaotic_core",
             "32x #gtceu:circuits/max",
+            "16x gtceu:white_dwarf_mtter_nanoswarm",
+            "16x gtceu:black_dwarf_mtter_nanoswarm",
             "64x kubejs:smd_capacitor_supracausal",
             "64x kubejs:smd_diode_supracausal",
             "64x kubejs:smd_resistor_supracausal",
@@ -13538,7 +13657,9 @@ ServerEvents.recipes((event) => {
             "64x kubejs:smd_inductor_supracausal",
             "64x gtceu:chaos_block",
             "64x gtceu:magnetohydrodynamicallyconstrainedstarmatter_rod",
-            "64x gtceu:magnetohydrodynamicallyconstrainedstarmatter_plate")
+            "64x gtceu:magnetohydrodynamicallyconstrainedstarmatter_plate",
+            "64x gtceu:shirabon_plate",
+            "32x gtceu:double_cosmic_plate")
         .inputFluids("gtceu:super_mutated_living_solder 28800", "gtceu:chaos 28800", "gtceu:spacetime 10000", "gtceu:primordialmatter 10000")
         .itemOutputs("kubejs:chaotic_energy_core")
         .EUt(64 * GTValues.VA[GTValues.MAX])
@@ -13716,7 +13837,7 @@ ServerEvents.recipes((event) => {
         })
 
     gtr.assembly_line("gtceu:suprachronal_assembly_line")
-        .itemInputs("16x kubejs:dimensionally_transcendent_casing",
+        .itemInputs("kubejs:infinite_cell_component",
             "16x gtceu:advanced_assembly_line",
             "16x gtceu:circuit_assembly_line",
             "4x kubejs:spacetime_assembly_line_casing",
@@ -13781,7 +13902,7 @@ ServerEvents.recipes((event) => {
         .cleanroom(CleanroomType.CLEANROOM)
 
     gtr.assembler("kubejs:molecular_casing")
-        .itemInputs("gtceu:high_power_casing", "4x gtceu:double_battery_alloy_plate", "gtceu:iv_emitter", "24x gtceu:darmstadtium_ring", "12x gtceu:tungsten_foil", "12x gtceu:ruridit_foil", "24x gtceu:tungsten_steel_foil")
+        .itemInputs("gtceu:high_power_casing", "4x gtceu:double_battery_alloy_plate", "gtceu:iv_emitter", "24x gtceu:darmstadtium_ring", "12x gtceu:tungsten_foil", "12x gtceu:ruridit_foil", "24x gtceu:tungsten_steel_foil", "6x gtceu:rhodium_plate", "4x gtceu:double_ruthenium_plate")
         .inputFluids("gtceu:niobium_nitride 864")
         .itemOutputs("kubejs:molecular_casing")
         .EUt(GTValues.VA[GTValues.UV])
@@ -15585,22 +15706,6 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:cosmic_element 100")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
-
-    for (let index = 1; index < 4; index++) {
-        gtr.assembler("gtmthings:" + tiers[index][0] + "_4a_wireless_energy_input_hatch")
-            .itemInputs("gtceu:" + tiers[index][0] + "_energy_input_hatch_4a", "2x gtmthings:" + tiers[index][0] + "_wireless_energy_receive_cover", "gtceu:advanced_energy_detector_cover")
-            .inputFluids("gtceu:soldering_alloy 144")
-            .itemOutputs("gtmthings:" + tiers[index][0] + "_4a_wireless_energy_input_hatch")
-            .EUt(GTValues.VA[index])
-            .duration(200)
-
-        gtr.assembler("gtmthings:" + tiers[index][0] + "_16a_wireless_energy_input_hatch")
-            .itemInputs("gtceu:" + tiers[index][0] + "_energy_input_hatch_16a", "2x gtmthings:" + tiers[index][0] + "_4a_wireless_energy_receive_cover", "gtceu:advanced_energy_detector_cover")
-            .inputFluids("gtceu:soldering_alloy 144")
-            .itemOutputs("gtmthings:" + tiers[index][0] + "_16a_wireless_energy_input_hatch")
-            .EUt(GTValues.VA[index])
-            .duration(200)
-    }
 
     gtr.macerator("kubejs:draconium_dust_a")
         .itemInputs("minecraft:dragon_egg")
