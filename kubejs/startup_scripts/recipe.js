@@ -472,11 +472,4 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
             return $LocalizationUtils.format("gtceu.recipe.nano_forge_tier", $FormattingUtil.formatNumbers(data.getInt("nano_forge_tier")))
         })
         .setSound(GTSoundEntries.SCIENCE)
-
-    event.create("circuit_printer")
-        .setEUIO("in")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(1, 1, 0, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.ARC)
 })

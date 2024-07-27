@@ -38,17 +38,6 @@ ServerEvents.recipes((event) => {
         C: "gtmthings:max_4194304a_wireless_laser_target_hatch"
     })
 
-    event.shaped("gtceu:circuit_printer", [
-        "ACA",
-        "BDB",
-        "ACA"
-    ], {
-        A: "gtceu:double_steel_plate",
-        B: "gtceu:programmed_circuit",
-        C: "gtceu:empty_mold",
-        D: "gtceu:lv_circuit_assembler"
-    })
-
     event.shaped("gtceu:large_steam_input_hatch", [
         "ACA",
         "BDB",
@@ -721,8 +710,8 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:resin_printed_circuit_board", "kubejs:elite_control_circuit", "gtceu:steel_plate", "gtceu:small_obsidian_dust", "2x gtceu:red_alloy_screw")
         .itemOutputs("kubejs:ultimate_control_circuit")
         .inputFluids("gtceu:glue 20")
-        .duration(320)
-        .EUt(30)
+        .duration(80)
+        .EUt(120)
 
     gtr.circuit_assembler("kubejs:ultima_control_circuit")
         .itemInputs("gtceu:phenolic_printed_circuit_board", "4x kubejs:ultimate_control_circuit", "8x gtceu:red_alloy_foil")
@@ -15564,7 +15553,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:hydrobromic_acid 60000", "gtceu:ammonia 60000")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(64000)
-        .blastFurnaceTemp(16200)
+        .blastFurnaceTemp(16800)
         .cleanroom(CleanroomType.CLEANROOM)
 
     gtr.distort("gtceu:stem_cells")
@@ -15575,7 +15564,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("64x gtceu:stem_cells", "gtceu:phosphorus_dust")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(600)
-        .blastFurnaceTemp(10800)
+        .blastFurnaceTemp(12200)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
 
     gtr.distort("gtceu:polyurethaneresin")
@@ -15618,7 +15607,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("47x gtceu:hexanitrohexaaxaisowurtzitane_dust")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(51200)
-        .blastFurnaceTemp(18900)
+        .blastFurnaceTemp(21600)
         .cleanroom(CleanroomType.CLEANROOM)
 
     gtr.distort("gtceu:photoresist")
@@ -15636,7 +15625,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("30x gtceu:rhenium_dust", "56x gtceu:lithium_dust", "40x gtceu:selenium_dust", "50x gtceu:activated_carbon_dust", "60x gtceu:rutile_dust", "55x gtceu:quicklime_dust")
         .inputFluids("gtceu:ethane 12000", "gtceu:chlorine 75000", "gtceu:photoresist 8000", "gtceu:hydrogen 4700", "gtceu:oxygen 89000", "gtceu:nitrogen 40000", "gtceu:butane 57000")
         .outputFluids("gtceu:euv_photoresist 21600")
-        .EUt(GTValues.VA[GTValues.UEV])
+        .EUt(GTValues.VA[GTValues.UXV])
         .duration(12800)
         .blastFurnaceTemp(21600)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -15646,7 +15635,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("768x gtceu:carbon_dust", "50x gtceu:rutile_dust", "70x gtceu:succinic_acid_dust", "32x gtceu:ice_dust", "20x gtceu:silver_dust", "25x gtceu:quicklime_dust", "40x gtceu:boron_dust", "120x gtceu:sodium_dust")
         .inputFluids("gtceu:benzene 40000", "gtceu:bromine 25000", "gtceu:oxygen 21600", "gtceu:chlorine 5600", "gtceu:propene 16000", "gtceu:butene 80000")
         .outputFluids("gtceu:photopolymer 16000")
-        .EUt(GTValues.VA[GTValues.UIV])
+        .EUt(GTValues.VA[GTValues.OpV])
         .duration(25600)
         .blastFurnaceTemp(21600)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -15714,14 +15703,6 @@ ServerEvents.recipes((event) => {
         .chancedOutput("kubejs:draconium_dust", 6000, 500)
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(8000)
-
-    for (let index = 1; index < 33; index++) {
-        gtr.circuit_printer("gtceu:programmed_circuit_" + index)
-            .circuit(index)
-            .itemOutputs(Item.of("gtceu:programmed_circuit", "{Configuration:" + index + "}"))
-            .EUt(30)
-            .duration(20)
-    }
 
     gtr.packer("gtceu:tiny_degenerate_rhenium_dust")
         .itemInputs("gtceu:degenerate_rhenium_dust")

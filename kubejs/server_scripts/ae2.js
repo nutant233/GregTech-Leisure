@@ -1,7 +1,7 @@
 //priority: 94
 ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
-    
+
     event.remove({ output: "ae2:certus_quartz_crystal", input: "ae2:quartz_block" })
     event.remove({ output: "ae2:controller" })
     event.remove({ output: "ae2:blank_pattern" })
@@ -13,7 +13,7 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "ae2:materials/advancedcard" })
     event.remove({ id: "ae2:materials/basiccard" })
     event.remove({ id: "ae2:network/crafting/cpu_crafting_unit" })
-    event.replaceInput({ output: "expatternprovider:fishbig" }, "minecraft:pufferfish", "gtceu:magnetohydrodynamicallyconstrainedstarmatter_block")
+    event.replaceInput({ output: "expatternprovider:fishbig" }, "minecraft:pufferfish", "gtceu:cosmic_ingot")
     event.shapeless("infinitycells:infinity_cell", ["ae2:item_cell_housing", "kubejs:infinite_cell_component"])
     event.shapeless("infinitycells:infinity_fluid_cell", ["ae2:fluid_cell_housing", "kubejs:infinite_cell_component"])
 
@@ -324,5 +324,18 @@ ServerEvents.recipes((event) => {
             .itemOutputs(`mae2:${4 ** index}x_crafting_accelerator`)
             .EUt(GTValues.VA[index - 1])
             .duration(200)
+    }
+
+    for (let index = 0; index < 33; index++) {
+        event.shaped(Item.of("expatternprovider:infinity_cell", `{record:{"#c":"ae2:i",id:"gtceu:programmed_circuit",tag:{Configuration:${index}}}}`), [
+            "BAB",
+            "ADA",
+            "CCC"
+        ], {
+            A: Item.of("gtceu:programmed_circuit", `{Configuration:${index}}`).weakNBT(),
+            B: "ae2:quartz_glass",
+            C: "minecraft:diamond",
+            D: "ae2:cell_component_16k"
+        })
     }
 })

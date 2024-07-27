@@ -201,7 +201,7 @@
 				type: "item"
 			}]
 			x: 1.5d
-			y: -4.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["2AFCDC0CA3205903"]
@@ -246,6 +246,7 @@
 			dependencies: [
 				"2C3C46AC660CC54E"
 				"3F2335911E21E042"
+				"51D5E14423F35E6F"
 			]
 			description: ["耗能固定为4A MAX"]
 			id: "296DE95F3BE7DC54"
@@ -268,8 +269,8 @@
 				item: "kubejs:dimension_creation_casing"
 				type: "item"
 			}]
-			x: 1.5d
-			y: -3.0d
+			x: 3.0d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -345,6 +346,28 @@
 			}]
 			x: 0.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["30AEBB08CE6C88BA"]
+			id: "51D5E14423F35E6F"
+			tasks: [{
+				id: "3A41AFEDD43994E6"
+				item: "gtceu:cosmic_ingot"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["51D5E14423F35E6F"]
+			id: "157CE930096F5DCA"
+			tasks: [{
+				id: "344462E7CE13EB75"
+				item: "expatternprovider:fishbig"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -4.5d
 		}
 	]
 	subtitle: ["Tier13-OpV"]

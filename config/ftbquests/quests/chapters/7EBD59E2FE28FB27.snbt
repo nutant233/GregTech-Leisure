@@ -416,7 +416,10 @@
 		}
 		{
 			dependencies: ["1F7A9D09E9E43886"]
-			description: ["你也可以使用普通的，但更推荐使用贴片的"]
+			description: [
+				"你也可以使用普通的，但更推荐使用贴片"
+				"现阶段铂可以使用化学浸洗机获取"
+			]
 			id: "5F2D336589FBEF61"
 			rewards: [{
 				id: "1CBE3FBF9D145657"

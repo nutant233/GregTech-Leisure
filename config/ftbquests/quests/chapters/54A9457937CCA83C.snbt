@@ -1032,7 +1032,7 @@
 				"20A75D3E4F254579"
 				"783BF9B9CCDA5182"
 			]
-			description: ["别当样板仙人"]
+			description: ["别当样板仙人，可合成样板修改器批量修改样板"]
 			id: "7156662490F50918"
 			tasks: [{
 				id: "0D2AAC4E0A71A4B8"
@@ -1059,20 +1059,27 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["783BF9B9CCDA5182"]
-			description: ["复制你的编程电路，有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的返回(更稳定)或者阻挡。"]
+			dependencies: ["7156662490F50918"]
+			description: ["有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的锁定合成直到主产物返回。"]
 			id: "71C4132579EE9BDE"
-			rewards: [{
-				id: "5D36288DA1F0DC8D"
-				item: "avaritia:extreme_crafting_table"
-				type: "item"
-			}]
 			tasks: [{
-				id: "7D21071856D8528F"
-				item: "gtceu:circuit_printer"
+				id: "01F68B85CF1AB791"
+				item: {
+					Count: 1
+					id: "expatternprovider:infinity_cell"
+					tag: {
+						record: {
+							"#c": "ae2:i"
+							id: "gtceu:programmed_circuit"
+							tag: {
+								Configuration: 1
+							}
+						}
+					}
+				}
 				type: "item"
 			}]
-			x: -9.0d
+			x: -9.5d
 			y: 7.5d
 		}
 	]
