@@ -1042,8 +1042,8 @@ ServerEvents.recipes((event) => {
 
     gtr.assembly_line("gtceu:sps_crafting")
         .itemInputs("8x gtceu:double_americium_plate",
-            "4x gtceu:uiv_robot_arm",
-            "4x gtceu:uiv_emitter",
+            "32x gtceu:uev_robot_arm",
+            "8x gtceu:uev_fluid_regulator",
             "4x gtceu:long_rhodium_rod",
             "4x #gtceu:circuits/uiv",
             "4x gtceu:naquadah_nanoswarm",
@@ -15776,7 +15776,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.qft("gtceu:magmatter")
-        .notConsumable("gtceu:eternity_nanoswarm")
+        .notConsumable("kubejs:spacetime_catalyst")
         .inputFluids("gtceu:chaos 1000", "gtceu:spatialfluid 1000", "gtceu:exciteddtsc 1000")
         .itemInputs("gtceu:attuned_tengam_block")
         .outputFluids("gtceu:magmatter 1000")
