@@ -396,6 +396,8 @@ gameplay:
 
   disableDrift: true
 
+  babyMode: false
+
 # Config options for Mod Compatibility
 compat:
   # Config options regarding GTEU compatibility with other energy systems
