@@ -3358,7 +3358,7 @@ ServerEvents.recipes((event) => {
         [5, "max", "chaos", "cosmicneutronium", "kubejs:fm_chip", "8x gtceu:shirabon_foil"]
     ]
     wireless_tiers.forEach((tier) => {
-        let soldering = tier[0] > 2 ? "gtceu:mutated_living_solder 144" : "gtceu:super_mutated_living_solder 144"
+        let soldering = tier[0] < 3 ? "gtceu:mutated_living_solder 144" : "gtceu:super_mutated_living_solder 144"
         gtr.assembler(`gtmthings:${tier[1]}_wireless_energy_receive_cover`)
             .itemInputs(`gtceu:${tier[1]}_sensor`,
                 `gtceu:${tier[1]}_emitter`,
@@ -4865,31 +4865,31 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:uranium_235 144")
         .itemOutputs("kubejs:nuclear_waste")
         .EUt(120)
-        .duration(18000)
+        .duration(16000)
 
     gtr.decay_hastener("kubejs:nuclear_waste_2")
         .inputFluids("gtceu:plutonium_241 144")
         .itemOutputs("kubejs:nuclear_waste")
         .EUt(120)
-        .duration(9000)
+        .duration(4000)
 
     gtr.decay_hastener("kubejs:rutherfordium_dust")
         .inputFluids("gtceu:seaborgium 144")
         .itemOutputs("gtceu:rutherfordium_dust")
         .EUt(480)
-        .duration(8000)
+        .duration(4000)
 
     gtr.decay_hastener("kubejs:rutherfordium_dust1")
         .inputFluids("gtceu:actinium 144")
         .itemOutputs("gtceu:rutherfordium_dust")
         .EUt(480)
-        .duration(16000)
+        .duration(8000)
 
     gtr.decay_hastener("kubejs:actinium_dust")
         .inputFluids("gtceu:radium 144")
         .itemOutputs("gtceu:actinium_dust")
         .EUt(480)
-        .duration(4000)
+        .duration(2000)
 
     gtr.assembler("kubejs:plasma_containment_cell")
         .itemInputs("4x gtceu:osmiridium_plate", "gtceu:uv_field_generator", "gtceu:long_naquadah_alloy_rod", "2x gtceu:fusion_glass", "8x gtceu:fluxed_electrum_foil")
@@ -7939,7 +7939,7 @@ ServerEvents.recipes((event) => {
     gtr.incubator("kubejs:space_essence")
         .itemInputs("#kubjes:vein_essence", "ae2:sky_dust", "gtceu:tiny_nether_star_dust")
         .inputFluids("gtceu:biomass 100", "gtceu:sterilized_growth_medium 100")
-        .itemOutputs("kubejs:space_essence_1")
+        .itemOutputs("kubejs:space_essence")
         .EUt(480)
         .duration(1200)
 
@@ -7962,11 +7962,6 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:milk 100")
         .EUt(30)
         .duration(20)
-
-    for (let index = 2; index < 33; index++) {
-        event.stonecutting("kubejs:space_essence_" + index, "kubejs:space_essence_1")
-        event.shapeless("kubejs:space_essence_1", ["kubejs:space_essence_" + index])
-    }
 
     const overworld_ores =
         [[["60x gtceu:bentonite_ore",
@@ -8367,7 +8362,7 @@ ServerEvents.recipes((event) => {
         space_ores1.forEach((space_ore) => {
             gtr.miner_module("space_ore_1_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel 20000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8375,7 +8370,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_2_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_rp_1 16000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8383,7 +8378,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_3_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:dense_hydrazine_fuel_mixture 12000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8391,7 +8386,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_4_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 10000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8399,7 +8394,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_5_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 8000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8407,7 +8402,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_6_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_h8n4c2o4 6000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8415,7 +8410,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_7_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("ad_astra:cryo_fuel 4000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8423,7 +8418,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_8_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:stellar_energy_rocket_fuel 2000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8444,7 +8439,7 @@ ServerEvents.recipes((event) => {
         space_ores2.forEach((space_ore) => {
             gtr.miner_module("space_ore_1_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel 20000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8452,7 +8447,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_2_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_rp_1 16000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8460,7 +8455,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_3_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:dense_hydrazine_fuel_mixture 12000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8468,7 +8463,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_4_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 10000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8476,7 +8471,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_5_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 8000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8484,7 +8479,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_6_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_h8n4c2o4 6000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8492,7 +8487,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_7_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("ad_astra:cryo_fuel 4000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8500,7 +8495,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_8_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:stellar_energy_rocket_fuel 2000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8527,7 +8522,7 @@ ServerEvents.recipes((event) => {
         space_ores3.forEach((space_ore) => {
             gtr.miner_module("space_ore_1_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel 20000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8535,7 +8530,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_2_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_rp_1 16000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8543,7 +8538,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_3_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:dense_hydrazine_fuel_mixture 12000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8551,7 +8546,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_4_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 10000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8559,7 +8554,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_5_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 8000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8567,7 +8562,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_6_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_h8n4c2o4 6000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8575,7 +8570,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_7_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("ad_astra:cryo_fuel 4000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8583,7 +8578,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_8_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:stellar_energy_rocket_fuel 2000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8610,7 +8605,7 @@ ServerEvents.recipes((event) => {
         space_ores4.forEach((space_ore) => {
             gtr.miner_module("space_ore_1_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel 20000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8618,7 +8613,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_2_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_rp_1 16000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8626,7 +8621,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_3_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:dense_hydrazine_fuel_mixture 12000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8634,7 +8629,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_4_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 10000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8642,7 +8637,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_5_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 8000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8650,7 +8645,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_6_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_h8n4c2o4 6000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8658,7 +8653,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_7_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("ad_astra:cryo_fuel 4000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8666,7 +8661,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_8_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:stellar_energy_rocket_fuel 2000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8693,7 +8688,7 @@ ServerEvents.recipes((event) => {
         space_ores5.forEach((space_ore) => {
             gtr.miner_module("space_ore_1_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel 20000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8701,7 +8696,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_2_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_rp_1 16000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8709,7 +8704,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_3_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:dense_hydrazine_fuel_mixture 12000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8717,7 +8712,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_4_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 10000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8725,7 +8720,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_5_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 8000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8733,7 +8728,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_6_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_h8n4c2o4 6000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8741,7 +8736,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_7_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("ad_astra:cryo_fuel 4000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8749,7 +8744,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_8_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:stellar_energy_rocket_fuel 2000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8770,7 +8765,7 @@ ServerEvents.recipes((event) => {
         space_ores6.forEach((space_ore) => {
             gtr.miner_module("space_ore_1_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel 20000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8778,7 +8773,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_2_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_rp_1 16000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8786,7 +8781,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_3_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:dense_hydrazine_fuel_mixture 12000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8794,7 +8789,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_4_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 10000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8802,7 +8797,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_5_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 8000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8810,7 +8805,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_6_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:rocket_fuel_h8n4c2o4 6000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8818,7 +8813,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_7_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("ad_astra:cryo_fuel 4000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8826,7 +8821,7 @@ ServerEvents.recipes((event) => {
 
             gtr.miner_module("space_ore_8_" + space_ore[1] + space_drone)
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_ore[1])
+                .circuit(space_ore[1])
                 .inputFluids("gtceu:stellar_energy_rocket_fuel 2000")
                 .itemOutputs(space_ore[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8852,7 +8847,7 @@ ServerEvents.recipes((event) => {
         space_fluids.forEach((space_fluid) => {
             gtr.drilling_module(space_drone + "1_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel 10000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8860,7 +8855,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "2_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_rp_1 8000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8868,7 +8863,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "3_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:dense_hydrazine_fuel_mixture 7000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8876,7 +8871,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "4_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 6000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8884,7 +8879,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "5_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 5000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8892,7 +8887,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "6_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_h8n4c2o4 4000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8900,7 +8895,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "7_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("ad_astra:cryo_fuel 2000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8908,7 +8903,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "8_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:stellar_energy_rocket_fuel 1000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8927,7 +8922,7 @@ ServerEvents.recipes((event) => {
         space_fluid1s.forEach((space_fluid) => {
             gtr.drilling_module(space_drone + "1_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel 10000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8935,7 +8930,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "2_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_rp_1 8000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8943,7 +8938,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "3_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:dense_hydrazine_fuel_mixture 7000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8951,7 +8946,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "4_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 6000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8959,7 +8954,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "5_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 5000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8967,7 +8962,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "6_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_h8n4c2o4 4000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8975,7 +8970,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "7_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("ad_astra:cryo_fuel 2000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -8983,7 +8978,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "8_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:stellar_energy_rocket_fuel 1000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9005,7 +9000,7 @@ ServerEvents.recipes((event) => {
         space_fluid2s.forEach((space_fluid) => {
             gtr.drilling_module(space_drone + "1_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel 10000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9013,7 +9008,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "2_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_rp_1 8000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9021,7 +9016,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "3_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:dense_hydrazine_fuel_mixture 7000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9029,7 +9024,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "4_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 6000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9037,7 +9032,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "5_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 5000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9045,7 +9040,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "6_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_h8n4c2o4 4000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9053,7 +9048,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "7_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("ad_astra:cryo_fuel 2000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9061,7 +9056,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "8_space_fluid_" + space_fluid[1])
                 .notConsumable("16x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:stellar_energy_rocket_fuel 1000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9076,7 +9071,7 @@ ServerEvents.recipes((event) => {
         space_fluid5s.forEach((space_fluid) => {
             gtr.drilling_module(space_drone + "1_space_fluid_" + space_fluid[1])
                 .notConsumable("64x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel 100000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9084,7 +9079,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "2_space_fluid_" + space_fluid[1])
                 .notConsumable("64x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_rp_1 80000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9092,7 +9087,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "3_space_fluid_" + space_fluid[1])
                 .notConsumable("64x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:dense_hydrazine_fuel_mixture 70000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9100,7 +9095,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "4_space_fluid_" + space_fluid[1])
                 .notConsumable("64x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 60000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9108,7 +9103,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "5_space_fluid_" + space_fluid[1])
                 .notConsumable("64x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_cn3h7o3 50000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9116,7 +9111,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "6_space_fluid_" + space_fluid[1])
                 .notConsumable("64x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:rocket_fuel_h8n4c2o4 40000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9124,7 +9119,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "7_space_fluid_" + space_fluid[1])
                 .notConsumable("64x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("ad_astra:cryo_fuel 20000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -9132,7 +9127,7 @@ ServerEvents.recipes((event) => {
 
             gtr.drilling_module(space_drone + "8_space_fluid_" + space_fluid[1])
                 .notConsumable("64x kubejs:space_drone_mk" + space_drone)
-                .itemInputs("kubejs:space_essence_" + space_fluid[1])
+                .circuit(space_fluid[1])
                 .inputFluids("gtceu:stellar_energy_rocket_fuel 10000")
                 .outputFluids(space_fluid[0])
                 .EUt(GTValues.VA[GTValues.ZPM] * (4 ** space_drone))
@@ -14349,9 +14344,9 @@ ServerEvents.recipes((event) => {
 
     gtr.autoclave("gtceu:super_mutated_living_solder")
         .inputFluids("gtceu:mutated_living_solder 10000")
-        .itemInputs("64x kubejs:essence", "64x kubejs:draconium_dust")
+        .itemInputs("64x kubejs:space_essence", "64x kubejs:draconium_dust")
         .outputFluids("gtceu:super_mutated_living_solder 10000")
-        .itemOutputs("16x kubejs:essence_block")
+        .itemOutputs("kubejs:essence_block")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(2400)
 

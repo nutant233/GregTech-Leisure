@@ -83,11 +83,7 @@ StartupEvents.registry("item", event => {
             .texture("kubejs:item/" + vein)
             .tag("kubjes:vein_essence")
     })
-    for (let essence = 1; essence < 33; essence++) {
-        event.create("space_essence_" + essence)
-            .texture("kubejs:item/space_essence")
-            .displayName("太空精华" + essence)
-    }
+    event.create("space_essence")
     event.create("bedrock_destroyer", "pickaxe")
     event.create("lepton_trap_crystal")
     event.create("charged_lepton_trap_crystal")

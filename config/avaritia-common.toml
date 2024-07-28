@@ -34,4 +34,6 @@
 	#Singularity default time required
 	#Range: > 0
 	"Singularity Time Required" = 240
+	#Does the right key spawn lightning with range of attack
+	"Is Sword Cause Lightning" = false
 
