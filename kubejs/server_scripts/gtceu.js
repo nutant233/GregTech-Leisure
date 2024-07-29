@@ -330,7 +330,7 @@ ServerEvents.recipes((event) => {
         A: "gtceu:mithril_frame",
         B: "gtceu:uev_emitter",
         C: "gtceu:sterilizing_filter_casing",
-        D: "gtceu:uiv_muffler_hatch"
+        D: "gtceu:uev_muffler_hatch"
     })
 
     event.shaped("gtceu:cold_ice_freezer", [
@@ -1949,9 +1949,9 @@ ServerEvents.recipes((event) => {
         .duration(150)
         .researchWithoutRecipe("1x_kubejs_plasma_containment_cell", "gtceu:data_module")
 
-    gtr.research_station("1x_kubejs_dimensionally_transcendent_casing")
-        .itemInputs("gtceu:data_module", "kubejs:dimensionally_transcendent_casing")
-        .itemOutputs(Item.of("gtceu:data_module", "{assembly_line_research:{research_id:\"1x_kubejs_dimensionally_transcendent_casing\",research_type:\"gtceu:assembly_line\"}}"))
+    gtr.research_station("1x_kubejs_spacetime_assembly_line_casing")
+        .itemInputs("gtceu:data_module", "kubejs:spacetime_assembly_line_casing")
+        .itemOutputs(Item.of("gtceu:data_module", "{assembly_line_research:{research_id:\"1x_kubejs_spacetime_assembly_line_casing\",research_type:\"gtceu:assembly_line\"}}"))
         .EUt(GTValues.VA[GTValues.UEV])
         .CWUt(512)
         .duration(512 * 4000)
@@ -1966,7 +1966,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("2x kubejs:dimension_injection_casing")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(400)
-        .researchWithoutRecipe("1x_kubejs_dimensionally_transcendent_casing", "gtceu:data_module")
+        .researchWithoutRecipe("1x_kubejs_spacetime_assembly_line_casing", "gtceu:data_module")
 
     gtr.research_station("1x_kubejs_time_dilation_containment_unit")
         .itemInputs("gtceu:data_module", "kubejs:time_dilation_containment_unit")
@@ -4670,7 +4670,7 @@ ServerEvents.recipes((event) => {
         .circuit(1)
 
     gtr.assembly_line("kubejs:infinity_coil_block")
-        .itemInputs("#gtceu:circuits/opv", "8x gtceu:infinity_double_wire", "16x gtceu:draconium_screw", "64x gtceu:kevlar_foil", "32x gtceu:radox_foil")
+        .itemInputs("gtceu:qft_coil", "8x gtceu:infinity_double_wire", "16x gtceu:draconium_screw", "64x gtceu:kevlar_foil", "32x gtceu:radox_foil")
         .inputFluids("gtceu:starmetal 576", "gtceu:crystalmatrix 576")
         .itemOutputs("kubejs:infinity_coil_block")
         .EUt(GTValues.VA[GTValues.MAX])
@@ -4681,7 +4681,7 @@ ServerEvents.recipes((event) => {
             .CWUt(2048))
 
     gtr.assembly_line("kubejs:hypogen_coil_block")
-        .itemInputs("#gtceu:circuits/max", "8x gtceu:hypogen_double_wire", "16x gtceu:transcendentmetal_screw", "64x gtceu:radox_foil", "32x gtceu:chaos_foil")
+        .itemInputs("kubejs:infinity_coil_block", "8x gtceu:hypogen_double_wire", "16x gtceu:transcendentmetal_screw", "64x gtceu:radox_foil", "32x gtceu:chaos_foil")
         .inputFluids("gtceu:infinity 576", "gtceu:cosmicneutronium 576")
         .itemOutputs("kubejs:hypogen_coil_block")
         .EUt(4 * GTValues.VA[GTValues.MAX])
@@ -4692,7 +4692,7 @@ ServerEvents.recipes((event) => {
             .CWUt(4096))
 
     gtr.assembly_line("kubejs:eternity_coil_block")
-        .itemInputs("#gtceu:circuits/max", "8x gtceu:spacetime_double_wire", "4x gtceu:eternity_rod", "avaritia:eternal_singularity", "64x kubejs:cosmic_fabric", "64x gtceu:radox_foil", "64x gtceu:radox_foil", "64x gtceu:chaos_foil")
+        .itemInputs("kubejs:hypogen_coil_block", "8x gtceu:spacetime_double_wire", "4x gtceu:eternity_rod", "avaritia:eternal_singularity", "64x kubejs:cosmic_fabric", "64x gtceu:radox_foil", "64x gtceu:radox_foil", "64x gtceu:chaos_foil")
         .inputFluids("gtceu:hypogen 576", "gtceu:spacetime 576")
         .itemOutputs("kubejs:eternity_coil_block")
         .EUt(16 * GTValues.VA[GTValues.MAX])
