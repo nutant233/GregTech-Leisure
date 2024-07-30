@@ -80,6 +80,10 @@
 		containerClass = "gripe._90.megacells.menu.MEGAInterfaceMenu"
 		sortRange = ""
 
+	[[sorting.containerOverrides]]
+		containerClass = "com.direwolf20.laserio.client.screens.*"
+		sortRange = ""
+
 	#Categor(y/ies) for sorting
 	#
 	#name: the name of the category

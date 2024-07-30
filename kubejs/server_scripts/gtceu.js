@@ -5976,6 +5976,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.chemical_reactor("gtceu:hexamethylenetetramine_dust")
+        .circuit(1)
         .inputFluids("gtceu:formaldehyde 4000", "gtceu:ammonia 6000")
         .itemOutputs("22x gtceu:hexamethylenetetramine_dust")
         .outputFluids("minecraft:water 6000")
@@ -6389,11 +6390,11 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UXV])
 
     gtr.sps_crafting("minecraft:dragon_breath")
-        .itemInputs("10x minecraft:glass_bottle", "minecraft:dragon_egg")
-        .inputFluids("gtceu:mana 10000", "gtceu:dragon_blood 100")
-        .itemOutputs("10x minecraft:dragon_breath")
-        .EUt(GTValues.VA[GTValues.UXV])
-        .duration(100)
+        .itemInputs("minecraft:glass_bottle", "minecraft:dragon_egg")
+        .inputFluids("gtceu:mana 1000", "gtceu:dragon_blood 10")
+        .itemOutputs("minecraft:dragon_breath")
+        .EUt(GTValues.VA[GTValues.UIV])
+        .duration(80)
 
     gtr.canner("kubejs:infused_breath")
         .inputFluids("gtceu:xpjuice 1000")
@@ -12050,7 +12051,7 @@ ServerEvents.recipes((event) => {
         .cleanroom(CleanroomType.CLEANROOM)
 
     gtr.stellar_forge("kubejs:dragon_heart")
-        .itemInputs("kubejs:naquadria_charge", "minecraft:dragon_egg", "gtceu:double_draconiumawakened_plate")
+        .itemInputs("kubejs:naquadria_charge", "64x minecraft:dragon_egg", "gtceu:double_draconiumawakened_plate")
         .itemOutputs("kubejs:dragon_heart")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)

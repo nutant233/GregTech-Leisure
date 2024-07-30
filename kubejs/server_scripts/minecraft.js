@@ -150,11 +150,11 @@ ServerEvents.recipes((event) => {
 
     gtr.dragon_egg_copier("gtceu:dragon_egg_copier")
         .itemInputs("minecraft:dragon_egg")
-        .inputFluids("gtceu:biohmediumsterilized 1000")
+        .inputFluids("gtceu:biohmediumsterilized 100")
         .itemOutputs("minecraft:dragon_egg")
-        .chancedOutput("minecraft:dragon_egg", 1000, 1000)
+        .chancedOutput("minecraft:dragon_egg", 2000, 1000)
         .EUt(GTValues.VA[GTValues.ZPM])
-        .duration(20000)
+        .duration(200)
         .cleanroom(CleanroomType.LAW_CLEANROOM)
 
     gtr.fermenter("minecraft:poisonous_potato")
@@ -181,8 +181,8 @@ ServerEvents.recipes((event) => {
         .itemInputs("minecraft:egg", "64x kubejs:warped_ender_pearl")
         .inputFluids("gtceu:antimatter 1000", "gtceu:ender_eye 10000", "gtceu:sterilized_growth_medium 10000")
         .chancedOutput("minecraft:dragon_egg", 9000, 0)
-        .duration(8000)
-        .EUt(GTValues.VA[GTValues.ZPM])
+        .duration(2000)
+        .EUt(GTValues.VA[GTValues.UV])
 
     gtr.chemical_bath("minecraft:crying_obsidian")
         .itemInputs("minecraft:obsidian")
