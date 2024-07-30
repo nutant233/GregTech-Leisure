@@ -128,84 +128,7 @@ const $WirelessEnergyManager = Java.loadClass("com.hepdd.gtmthings.api.misc.Wire
 const $BigInteger = Java.loadClass("java.math.BigInteger")
 const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
 const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUtil")
-BlockEvents.rightClicked(event => {
-    function a() {
-        event.player.damageHeldItem()
-        let tt = event.player.persistentData.getInt("tt")
-        event.player.persistentData.putInt("tt", tt - 1)
-        if (tt > 0) {
-            event.player.setStatusMessage("可使用次数：" + (tt - 1))
-        } else {
-            event.player.addItemCooldown(event.player.getHeldItem(event.hand), 20)
-        }
-    }
-    if (!event.player.isFake() && event.player.isSteppingCarefully()) {
-        if (event.player.getHeldItem(event.hand) == "kubejs:time_twister_wireless") {
-            var recipeLogic = gtch.getRecipeLogic(event.level, event.block.pos, null)
-            if (recipeLogic != null && recipeLogic.isWorking()) {
-                let reducedDuration = (recipeLogic.getDuration() - recipeLogic.getProgress()) * 0.5
-                let eu = 8 * reducedDuration * $RecipeHelper.getInputEUt(recipeLogic.getLastRecipe())
-                if (eu > 0 && $WirelessEnergyManager.addEUToGlobalEnergyMap(event.player.uuid, $BigInteger.valueOf(- eu))) {
-                    recipeLogic.setProgress(recipeLogic.getProgress() + reducedDuration)
-                    event.player.setStatusMessage("消耗了 " + $FormattingUtil.formatNumbers(eu) + " EU，使机器运行时间减少了 " + reducedDuration + " tick")
-                }
-            }
-        }
-        if (event.player.getHeldItem(event.hand) == "kubejs:time_twister") {
-            var recipeLogic = gtch.getRecipeLogic(event.level, event.block.pos, null)
-            if (recipeLogic != null && recipeLogic.isWorking()) {
-                if (event.player.isCreative()) {
-                    recipeLogic.setProgress(recipeLogic.getDuration() - recipeLogic.getProgress() - 20)
-                } else {
-                    if (recipeLogic.getMachine().self().getRecipeType() == GTRecipeTypes.PRIMITIVE_BLAST_FURNACE_RECIPES) {
-                        recipeLogic.setProgress(recipeLogic.getProgress() + 100)
-                        a()
-                    } else if (recipeLogic.getMachine().self().getTier() < 4 && $RecipeHelper.getInputEUt(recipeLogic.getLastRecipe()) > 0) {
-                        if (recipeLogic.getDuration() > 400) {
-                            recipeLogic.setProgress(recipeLogic.getProgress() + (4 - recipeLogic.getMachine().self().getTier()) * 40)
-                            a()
-                        } else if (recipeLogic.getDuration() > 200) {
-                            recipeLogic.setProgress(recipeLogic.getProgress() + (4 - recipeLogic.getMachine().self().getTier()) * 20)
-                            a()
-                        } else if (recipeLogic.getDuration() > 40) {
-                            recipeLogic.setProgress(recipeLogic.getProgress() + (4 - recipeLogic.getMachine().self().getTier()) * 10)
-                            a()
-                        }
-                    }
-                }
-            }
-        }
-    }
-    if (event.player.getHeldItem("main_hand") == "kubejs:command_wand") {
-        let name = event.player.getName().getString()
-        if (event.block == "kubejs:create_aggregatione_core" && event.getLevel().getBlock(event.block.x, event.block.y + 1, event.block.z) == "minecraft:air") {
-            if (event.player.getHeldItem("off_hand") == "minecraft:command_block") {
-                event.player.offHandItem.count--
-                event.getServer().runCommandSilent(`execute at ${name} run fill ${event.block.x} ${event.block.y + 1} ${event.block.z} ${event.block.x} ${event.block.y + 1} ${event.block.z} minecraft:command_block`)
-            }
-            if (event.player.getHeldItem("off_hand") == "minecraft:chain_command_block") {
-                event.player.offHandItem.count--
-                event.getServer().runCommandSilent(`execute at ${name} run fill ${event.block.x} ${event.block.y + 1} ${event.block.z} ${event.block.x} ${event.block.y + 1} ${event.block.z} minecraft:chain_command_block`)
-            }
-            if (event.player.getHeldItem("off_hand") == "minecraft:repeating_command_block") {
-                event.player.offHandItem.count--
-                event.getServer().runCommandSilent(`execute at ${name} run fill ${event.block.x} ${event.block.y + 1} ${event.block.z} ${event.block.x} ${event.block.y + 1} ${event.block.z} minecraft:repeating_command_block`)
-            }
-        }
-        if (event.player.isSteppingCarefully() && event.block == "minecraft:command_block") {
-            event.block.set("minecraft:air")
-            event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${event.block.x} ${event.block.y} ${event.block.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:command_block",Count:1b}}`)
-        }
-        if (event.player.isSteppingCarefully() && event.block == "minecraft:chain_command_block") {
-            event.block.set("minecraft:air")
-            event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${event.block.x} ${event.block.y} ${event.block.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:chain_command_block",Count:1b}}`)
-        }
-        if (event.player.isSteppingCarefully() && event.block == "minecraft:repeating_command_block") {
-            event.block.set("minecraft:air")
-            event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${event.block.x} ${event.block.y} ${event.block.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:repeating_command_block",Count:1b}}`)
-        }
-    }
-})
+const $ClipContext = Java.loadClass("net.minecraft.world.level.ClipContext")
 
 BlockEvents.rightClicked("kubejs:antimatter_charge", event => {
     if (event.player.getHeldItem("main_hand") == null && event.player.getHeldItem("off_hand") == null) {
@@ -297,6 +220,98 @@ BlockEvents.broken("kubejs:create_aggregatione_core", event => {
     let command_block = event.getLevel().getBlock(event.block.x, event.block.y + 1, event.block.z)
     if (command_block == "minecraft:command_block" || command_block == "minecraft:chain_command_block" || command_block == "minecraft:repeating_command_block") {
         event.getServer().runCommandSilent(`execute at ${event.player.getName().getString()} run fill ${event.block.x} ${event.block.y + 1} ${event.block.z} ${event.block.x} ${event.block.y + 1} ${event.block.z} minecraft:air`)
+    }
+})
+
+function getEyePositionPos(level, player) {
+    return level.clip(new $ClipContext(player.getEyePosition(1), player.getEyePosition(1).add(player.getViewVector(1).scale(5)), $ClipContext.Block.OUTLINE, $ClipContext.Fluid.NONE, player)).getBlockPos()
+}
+
+function getEyePositionRecipeLogic(level, player) {
+    return gtch.getRecipeLogic(level, getEyePositionPos(level, player), null)
+}
+
+ItemEvents.rightClicked("kubejs:time_twister_wireless", event => {
+    if (!event.player.isFake() && event.player.isSteppingCarefully()) {
+        var recipeLogic = getEyePositionRecipeLogic(event.level, event.player)
+        if (recipeLogic != null && recipeLogic.isWorking()) {
+            let reducedDuration = (recipeLogic.getDuration() - recipeLogic.getProgress()) * 0.5
+            let eu = 8 * reducedDuration * $RecipeHelper.getInputEUt(recipeLogic.getLastRecipe())
+            if (eu > 0 && $WirelessEnergyManager.addEUToGlobalEnergyMap(event.player.uuid, $BigInteger.valueOf(- eu))) {
+                recipeLogic.setProgress(recipeLogic.getProgress() + reducedDuration)
+                event.player.setStatusMessage("消耗了 " + $FormattingUtil.formatNumbers(eu) + " EU，使机器运行时间减少了 " + reducedDuration + " tick")
+            }
+        }
+    }
+})
+
+function consume(player, hand) {
+    player.damageHeldItem()
+    let tt = player.persistentData.getInt("tt")
+    player.persistentData.putInt("tt", tt - 1)
+    if (tt > 0) {
+        player.setStatusMessage("可使用次数：" + (tt - 1))
+    } else {
+        player.addItemCooldown(player.getHeldItem(hand), 20)
+    }
+}
+
+ItemEvents.rightClicked("kubejs:time_twister", event => {
+    if (!event.player.isFake() && event.player.isSteppingCarefully()) {
+        var recipeLogic = getEyePositionRecipeLogic(event.level, event.player)
+        if (recipeLogic != null && recipeLogic.isWorking()) {
+            if (event.player.isCreative()) {
+                recipeLogic.setProgress(recipeLogic.getDuration() - recipeLogic.getProgress() - 20)
+            } else {
+                if (recipeLogic.getMachine().self().getRecipeType() == GTRecipeTypes.PRIMITIVE_BLAST_FURNACE_RECIPES) {
+                    recipeLogic.setProgress(recipeLogic.getProgress() + 100)
+                    consume(event.player, event.hand)
+                } else if (recipeLogic.getMachine().self().getTier() < 4 && $RecipeHelper.getInputEUt(recipeLogic.getLastRecipe()) > 0) {
+                    if (recipeLogic.getDuration() > 400) {
+                        recipeLogic.setProgress(recipeLogic.getProgress() + (4 - recipeLogic.getMachine().self().getTier()) * 40)
+                        consume(event.player, event.hand)
+                    } else if (recipeLogic.getDuration() > 200) {
+                        recipeLogic.setProgress(recipeLogic.getProgress() + (4 - recipeLogic.getMachine().self().getTier()) * 20)
+                        consume(event.player, event.hand)
+                    } else if (recipeLogic.getDuration() > 40) {
+                        recipeLogic.setProgress(recipeLogic.getProgress() + (4 - recipeLogic.getMachine().self().getTier()) * 10)
+                        consume(event.player, event.hand)
+                    }
+                }
+            }
+        }
+    }
+})
+
+ItemEvents.rightClicked("kubejs:command_wand", event => {
+    let name = event.player.getName().getString()
+    let pos = getEyePositionPos(event.level, event.player)
+    let block = event.level.getBlock(pos.x, pos.y, pos.z)
+    if (block == "kubejs:create_aggregatione_core" && event.level.getBlock(pos.x, pos.y + 1, pos.z) == "minecraft:air") {
+        if (event.player.getHeldItem("off_hand") == "minecraft:command_block") {
+            event.player.offHandItem.count--
+            event.getServer().runCommandSilent(`execute at ${name} run fill ${pos.x} ${pos.y + 1} ${pos.z} ${pos.x} ${pos.y + 1} ${pos.z} minecraft:command_block`)
+        }
+        if (event.player.getHeldItem("off_hand") == "minecraft:chain_command_block") {
+            event.player.offHandItem.count--
+            event.getServer().runCommandSilent(`execute at ${name} run fill ${pos.x} ${pos.y + 1} ${pos.z} ${pos.x} ${pos.y + 1} ${pos.z} minecraft:chain_command_block`)
+        }
+        if (event.player.getHeldItem("off_hand") == "minecraft:repeating_command_block") {
+            event.player.offHandItem.count--
+            event.getServer().runCommandSilent(`execute at ${name} run fill ${pos.x} ${pos.y + 1} ${pos.z} ${pos.x} ${pos.y + 1} ${pos.z} minecraft:repeating_command_block`)
+        }
+    }
+    if (event.player.isSteppingCarefully() && block == "minecraft:command_block") {
+        block.set("minecraft:air")
+        event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${pos.x} ${block.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:command_block",Count:1b}}`)
+    }
+    if (event.player.isSteppingCarefully() && block == "minecraft:chain_command_block") {
+        block.set("minecraft:air")
+        event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${pos.x} ${block.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:chain_command_block",Count:1b}}`)
+    }
+    if (event.player.isSteppingCarefully() && block == "minecraft:repeating_command_block") {
+        block.set("minecraft:air")
+        event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${pos.x} ${block.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:repeating_command_block",Count:1b}}`)
     }
 })
 
@@ -409,35 +424,36 @@ PlayerEvents.tick(event => {
     }
 })
 
-NetworkEvents.dataReceived("global.flyingspeedKey.consumeClick", (event) => {
-    function flyspeed(max) {
-        if (event.player.isSteppingCarefully()) {
-            event.player.abilities.setFlyingSpeed(0.05)
-            event.player.setStatusMessage("飞行速度重置")
-            event.player.persistentData.putInt("fspeed", 1)
+function flyspeed(player, max) {
+    if (player.isSteppingCarefully()) {
+        player.abilities.setFlyingSpeed(0.05)
+        player.setStatusMessage("飞行速度重置")
+        player.persistentData.putInt("fspeed", 1)
+    } else {
+        let speed = player.abilities.getFlyingSpeed()
+        let speeda = player.persistentData.getInt("fspeed")
+        if (speed < max) {
+            player.abilities.setFlyingSpeed(0.05 * speeda)
+            player.persistentData.putInt("fspeed", speeda + 1)
+            player.setStatusMessage("飞行速度x" + speeda)
         } else {
-            let speed = event.player.abilities.getFlyingSpeed()
-            let speeda = event.player.persistentData.getInt("fspeed")
-            if (speed < max) {
-                event.player.abilities.setFlyingSpeed(0.05 * speeda)
-                event.player.persistentData.putInt("fspeed", speeda + 1)
-                event.player.setStatusMessage("飞行速度x" + speeda)
-            } else {
-                event.player.setStatusMessage("达到极限")
-            }
+            player.setStatusMessage("达到极限")
         }
     }
+}
+
+NetworkEvents.dataReceived("global.flyingspeedKey.consumeClick", (event) => {
     if (event.player.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]") {
-        flyspeed(0.4)
+        flyspeed(event.player, 0.4)
     }
     if (event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]") {
-        flyspeed(0.2)
+        flyspeed(event.player, 0.2)
     }
     if (event.player.getArmorSlots().toString() == "[1 hazmat_fermium_boots, 1 hazmat_fermium_leggings, 1 hazmat_fermium_chestplate, 1 hazmat_fermium_helmet]") {
-        flyspeed(0.2)
+        flyspeed(event.player, 0.2)
     }
     if (event.player.getArmorSlots().toString() == "[1 infinity_boots, 1 infinity_pants, 1 infinity_chestplate, 1 infinity_helmet]") {
-        flyspeed(0.3)
+        flyspeed(event.player, 0.3)
     }
 })
 

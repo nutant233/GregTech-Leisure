@@ -15470,7 +15470,7 @@ ServerEvents.recipes((event) => {
         .notConsumable("gtceu:iridium_nanoswarm")
         .itemInputs("576x gtceu:platinum_group_sludge_dust", "16x gtceu:sulfur_dust")
         .inputFluids("gtceu:hydrogen 72000", "gtceu:oxygen 128000", "gtceu:chlorine 14400")
-        .itemOutputs("125x gtceu:platinum_dust", "125x gtceu:palladium_dust", "60x gtceu:ruthenium_dust", "16x gtceu:iridium_dust", "20x gtceu:rhodium_dust", "16x gtceu:osmium_dust")
+        .itemOutputs("64x gtceu:platinum_dust", "64x gtceu:palladium_dust", "60x gtceu:ruthenium_dust", "32x gtceu:iridium_dust", "48x gtceu:rhodium_dust", "32x gtceu:osmium_dust")
         .outputFluids("gtceu:hydrogen 2800", "minecraft:water 7200", "gtceu:chlorine 6400")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(2400)
