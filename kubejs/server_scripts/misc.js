@@ -381,7 +381,7 @@ ItemEvents.firstRightClicked("kubejs:warped_ender_pearl", event => {
 PlayerEvents.tick(event => {
     if (event.player.age % 20 == 0) {
         event.player.onUpdateAbilities()
-        let hfa = event.player.getArmorSlots().toString() == "[1 hazmat_fermium_boots, 1 hazmat_fermium_leggings, 1 hazmat_fermium_chestplate, 1 hazmat_fermium_helmet]"
+        let hfa = event.player.getArmorSlots().toString() == "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]"
         let fa = event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]"
         let ma = event.player.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]"
         let name = event.player.getName().getString()
@@ -449,7 +449,7 @@ NetworkEvents.dataReceived("global.flyingspeedKey.consumeClick", (event) => {
     if (event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]") {
         flyspeed(event.player, 0.2)
     }
-    if (event.player.getArmorSlots().toString() == "[1 hazmat_fermium_boots, 1 hazmat_fermium_leggings, 1 hazmat_fermium_chestplate, 1 hazmat_fermium_helmet]") {
+    if (event.player.getArmorSlots().toString() == "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]") {
         flyspeed(event.player, 0.2)
     }
     if (event.player.getArmorSlots().toString() == "[1 infinity_boots, 1 infinity_pants, 1 infinity_chestplate, 1 infinity_helmet]") {
@@ -463,7 +463,7 @@ NetworkEvents.dataReceived("gt.se.st", event => {
 })
 
 NetworkEvents.dataReceived("global.nightvisionKey.consumeClick", event => {
-    if (event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]" || event.player.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]" || event.player.getArmorSlots().toString() == "[1 hazmat_fermium_boots, 1 hazmat_fermium_leggings, 1 hazmat_fermium_chestplate, 1 hazmat_fermium_helmet]") {
+    if (event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]" || event.player.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]" || event.player.getArmorSlots().toString() == "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]") {
         if (event.player.persistentData.getBoolean("nv")) {
             event.player.persistentData.putBoolean("nv", false)
             event.player.removeEffect("minecraft:night_vision")
@@ -526,7 +526,7 @@ EntityEvents.hurt("player", event => {
     if (event.entity.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]") {
         event.cancel()
     }
-    if ((event.getSource().type().msgId() == "oxygen" || event.getSource().type().msgId() == "drown") && (event.entity.getArmorSlots().toString() == "[1 quarktech_boots, 1 quarktech_leggings, 1 advanced_quarktech_chestplate, 1 quarktech_helmet]" || event.entity.getArmorSlots().toString() == "[1 quarktech_boots, 1 quarktech_leggings, 1 quarktech_chestplate, 1 quarktech_helmet]")) {
+    if ((event.getSource().type().msgId() == "oxygen" || event.getSource().type().msgId() == "drown") && (event.entity.getArmorSlots().toString() == "[1 quarktech_boots, 1 quarktech_leggings, 1 advanced_quarktech_chestplate, 1 quarktech_helmet]" || event.entity.getArmorSlots().toString() == "[1 quarktech_boots, 1 quarktech_leggings, 1 quarktech_chestplate, 1 quarktech_helmet]" || event.player.getArmorSlots().toString() == "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]")) {
         event.cancel()
     }
 })

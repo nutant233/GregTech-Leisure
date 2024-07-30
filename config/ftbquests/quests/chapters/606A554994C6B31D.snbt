@@ -474,7 +474,7 @@
 			description: [
 				"带有夜视和创造飞行，X键可加速飞行，最高4倍，潜行加X可以重制飞行速度，无需能量"
 				"Z键开关夜视"
-				"可使用消辐宁和防化服升级为抵抗任何危险效果的版本"
+				"可使用宇航服升级为抵抗宇宙危险的航天版本，无需氧气"
 			]
 			icon: {
 				Count: 1
@@ -487,7 +487,13 @@
 			rewards: [
 				{
 					id: "305DCBDAB0E551AA"
-					item: "kubejs:fermium_helmet"
+					item: {
+						Count: 1
+						id: "kubejs:fermium_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
 					type: "item"
 				}
 				{

@@ -17,7 +17,7 @@ ItemEvents.armorTierRegistry(event => {
         tier.toughness = 10
         tier.knockbackResistance = 1
     })
-    event.add("hazmat_fermium", tier => {
+    event.add("space_fermium", tier => {
         tier.durabilityMultiplier = -1
         tier.slotProtections = [16, 24, 22, 14]
         tier.enchantmentValue = 14
@@ -306,25 +306,20 @@ StartupEvents.registry("item", event => {
         .tier("magnetohydrodynamicallyconstrainedstarmatter")
         .tag("gtceu:ppe_armor")
     event.create("fermium_helmet", "helmet")
-        .tier("fermium")
     event.create("fermium_chestplate", "chestplate")
         .tier("fermium")
     event.create("fermium_leggings", "leggings")
         .tier("fermium")
     event.create("fermium_boots", "boots")
         .tier("fermium")
-    event.create("hazmat_fermium_helmet", "helmet")
-        .tier("hazmat_fermium")
-        .tag("gtceu:ppe_armor")
-    event.create("hazmat_fermium_chestplate", "chestplate")
-        .tier("hazmat_fermium")
-        .tag("gtceu:ppe_armor")
-    event.create("hazmat_fermium_leggings", "leggings")
-        .tier("hazmat_fermium")
-        .tag("gtceu:ppe_armor")
-    event.create("hazmat_fermium_boots", "boots")
-        .tier("hazmat_fermium")
-        .tag("gtceu:ppe_armor")
+    event.create("space_fermium_helmet", "helmet")
+        .tier("space_fermium")
+    event.create("space_fermium_chestplate", "chestplate")
+        .tier("space_fermium")
+    event.create("space_fermium_leggings", "leggings")
+        .tier("space_fermium")
+    event.create("space_fermium_boots", "boots")
+        .tier("space_fermium")
     event.create("reinforced_echo_shard")
     event.create("bedrock_drill")
     event.create("memory_foam_block")

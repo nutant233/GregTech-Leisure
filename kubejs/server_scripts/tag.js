@@ -56,7 +56,23 @@ ServerEvents.tags("item", event => {
         "ad_astra:heat_resistant_armor",
         "ad_astra:space_suit_items"]
     space_suit_items.forEach(ssitem => {
-        event.add(ssitem, ["gtceu:quarktech_chestplate", "gtceu:quarktech_leggings", "gtceu:quarktech_boots", "gtceu:advanced_quarktech_chestplate", "gtceu:quarktech_helmet", "kubejs:magnetohydrodynamicallyconstrainedstarmatter_helmet", "kubejs:magnetohydrodynamicallyconstrainedstarmatter_chestplate", "kubejs:magnetohydrodynamicallyconstrainedstarmatter_leggings", "kubejs:magnetohydrodynamicallyconstrainedstarmatter_boots"])
+        event.add(ssitem, ["gtceu:quarktech_chestplate",
+            "gtceu:quarktech_leggings",
+            "gtceu:quarktech_boots",
+            "gtceu:advanced_quarktech_chestplate",
+            "gtceu:quarktech_helmet",
+            "avaritia:infinity_helmet",
+            "avaritia:infinity_chestplate",
+            "avaritia:infinity_pants",
+            "avaritia:infinity_boots",
+            "kubejs:space_fermium_helmet",
+            "kubejs:space_fermium_chestplate",
+            "kubejs:space_fermium_leggings",
+            "kubejs:space_fermium_boots",
+            "kubejs:magnetohydrodynamicallyconstrainedstarmatter_helmet",
+            "kubejs:magnetohydrodynamicallyconstrainedstarmatter_chestplate",
+            "kubejs:magnetohydrodynamicallyconstrainedstarmatter_leggings",
+            "kubejs:magnetohydrodynamicallyconstrainedstarmatter_boots"])
     })
 })
 ServerEvents.tags("block", event => {

@@ -650,10 +650,10 @@ ServerEvents.recipes((event) => {
 
     event.smithing("kubejs:create_hpca_component", "kubejs:command_block_core", "gtceu:super_computation_component", "kubejs:suprachronal_mainframe_complex")
     event.smithing("gtceu:create_computation", "kubejs:command_block_core", "gtceu:high_performance_computation_array", "kubejs:suprachronal_mainframe_complex")
-    event.smithing("kubejs:hazmat_fermium_helmet", "gtceu:hazmat_headpiece", "kubejs:fermium_helmet", "gtceu:rad_away_pill")
-    event.smithing("kubejs:hazmat_fermium_chestplate", "gtceu:hazmat_chestpiece", "kubejs:fermium_chestplate", "gtceu:rad_away_pill")
-    event.smithing("kubejs:hazmat_fermium_leggings", "gtceu:hazmat_leggings", "kubejs:fermium_leggings", "gtceu:rad_away_pill")
-    event.smithing("kubejs:hazmat_fermium_boots", "gtceu:hazmat_boots", "kubejs:fermium_boots", "gtceu:rad_away_pill")
+    event.smithing("kubejs:space_fermium_helmet", 'ad_astra:netherite_space_helmet', "kubejs:fermium_helmet", "ad_astra:oxygen_distributor")
+    event.smithing("kubejs:space_fermium_chestplate", 'ad_astra:netherite_space_suit', "kubejs:fermium_chestplate", "ad_astra:oxygen_distributor")
+    event.smithing("kubejs:space_fermium_leggings", 'ad_astra:netherite_space_pants', "kubejs:fermium_leggings", "ad_astra:oxygen_distributor")
+    event.smithing("kubejs:space_fermium_boots", 'ad_astra:netherite_space_boots', "kubejs:fermium_boots", "ad_astra:oxygen_distributor")
 
     const gtr = event.recipes.gtceu
 
@@ -15664,7 +15664,7 @@ ServerEvents.recipes((event) => {
         .duration(9600)
         .blastFurnaceTemp(18900)
         .cleanroom(CleanroomType.CLEANROOM)
-        
+
 
     gtr.qft("gtceu:fullerene_polymer_matrix_pulp_dust")
         .notConsumable("gtceu:starmetal_nanoswarm")

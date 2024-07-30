@@ -40,7 +40,7 @@ ServerEvents.recipes(event => {
     event.shapeless("ad_astra:energizer", "gtceu:ulv_charger_4x")
 
     gtr.compressor("ad_astra:ice_shard")
-        .itemInputs("64x gtceu:ice_dust")
+        .itemInputs("minecraft:blue_ice")
         .itemOutputs("ad_astra:ice_shard")
         .EUt(30)
         .duration(200)
