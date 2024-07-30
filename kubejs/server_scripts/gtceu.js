@@ -1410,8 +1410,7 @@ ServerEvents.recipes((event) => {
         .dimension("kubejs:create")
 
     gtr.suprachronal_assembly_line("kubejs:create_ultimate_battery")
-        .itemInputs("16x gtceu:double_magnetohydrodynamicallyconstrainedstarmatter_plate",
-            "gtceu:magnetohydrodynamicallyconstrainedstarmatter_frame",
+        .itemInputs("gtceu:magnetohydrodynamicallyconstrainedstarmatter_frame",
             "4x kubejs:suprachronal_mainframe_complex",
             "16x gtceu:mega_max_battery",
             "16x gtceu:max_field_generator",
@@ -1424,8 +1423,9 @@ ServerEvents.recipes((event) => {
             "64x kubejs:fm_wafer",
             "64x kubejs:fm_wafer",
             "16x gtceu:infinity_hex_wire",
-            "16x gtceu:magnetohydrodynamicallyconstrainedstarmatter_foil",
-            "16x gtceu:magnetohydrodynamicallyconstrainedstarmatter_plate")
+            "64x gtceu:magnetohydrodynamicallyconstrainedstarmatter_foil",
+            "32x gtceu:magnetohydrodynamicallyconstrainedstarmatter_plate",
+            "32x gtceu:double_cosmic_plate")
         .itemOutputs("kubejs:create_ultimate_battery")
         .inputFluids("gtceu:infinity 1000", "gtceu:spacetime 1000", "gtceu:eternity 1000", "gtceu:magnetohydrodynamicallyconstrainedstarmatter 1000")
         .EUt(4096 * GTValues.VA[GTValues.MAX])
@@ -1758,22 +1758,22 @@ ServerEvents.recipes((event) => {
 
     gtr.assembly_line("gtceu:sphere_of_harmony")
         .itemInputs("16x kubejs:dimension_injection_casing",
-            "4x kubejs:spacetime_compression_field_generator",
-            "4x kubejs:dimensional_stability_casing",
-            "16x gtceu:uv_world_accelerator",
-            "16x gtceu:resource_collection",
-            "16x gtceu:high_performance_computation_array",
-            "16x kubejs:ctc_computational_unit",
-            "4x kubejs:stabilized_wormhole_generator",
-            "4x #gtceu:circuits/max",
-            "4x gtceu:cosmicneutronium_nanoswarm",
-            "8x gtceu:opv_emitter",
-            "8x gtceu:opv_sensor",
-            "8x gtceu:opv_robot_arm",
-            "16x kubejs:time_dilation_containment_unit",
-            "gtceu:insanely_max_battery",
-            "16x gtceu:double_chaos_plate")
-        .inputFluids("gtceu:super_mutated_living_solder 480000", "gtceu:degenerate_rhenium 100000", "gtceu:neutronium 5760", "gtceu:infinity 1000")
+            "16x kubejs:spacetime_compression_field_generator",
+            "16x kubejs:dimensional_stability_casing",
+            "64x gtceu:uv_world_accelerator",
+            "64x gtceu:resource_collection",
+            "64x gtceu:high_performance_computation_array",
+            "32x kubejs:ctc_computational_unit",
+            "32x kubejs:stabilized_wormhole_generator",
+            "16x #gtceu:circuits/max",
+            "16x gtceu:cosmicneutronium_nanoswarm",
+            "64x gtceu:opv_emitter",
+            "64x gtceu:opv_sensor",
+            "64x gtceu:opv_robot_arm",
+            "64x kubejs:time_dilation_containment_unit",
+            "4x gtceu:insanely_max_battery",
+            "32x gtceu:double_chaos_plate")
+        .inputFluids("gtceu:super_mutated_living_solder 480000", "gtceu:degenerate_rhenium 100000", "gtceu:neutronium 57600", "gtceu:infinity 16000")
         .itemOutputs("gtceu:sphere_of_harmony")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(2400)
@@ -2529,11 +2529,15 @@ ServerEvents.recipes((event) => {
         .itemInputs("32x gtceu:magnetohydrodynamicallyconstrainedstarmatter_frame",
             "16x kubejs:chain_command_block_core",
             "16x gtceu:spacetimecontinuumripper",
-            "8x gtceu:max_emitter",
-            "8x #gtceu:circuits/max",
+            "8x kubejs:create_aggregatione_core",
+            "32x gtceu:max_robot_arm",
+            "32x gtceu:max_emitter",
+            "16x gtceu:max_field_generator",
             "64x gtceu:infinity_octal_wire",
             "2x gtceu:mega_max_battery",
-            "8x gtceu:double_magnetohydrodynamicallyconstrainedstarmatter_plate")
+            "64x gtceu:cosmic_plate",
+            "64x gtceu:double_shirabon_plate",
+            "64x gtceu:double_magnetohydrodynamicallyconstrainedstarmatter_plate")
         .inputFluids("gtceu:magnetohydrodynamicallyconstrainedstarmatter 10000", "gtceu:primordialmatter 16000", "gtceu:temporalfluid 32000", "gtceu:spatialfluid 32000")
         .itemOutputs("gtceu:create_aggregation")
         .EUt(GTValues.VA[GTValues.UXV])
@@ -2554,13 +2558,17 @@ ServerEvents.recipes((event) => {
     gtr.assembly_line("kubejs:create_aggregatione_core")
         .itemInputs("gtceu:magnetohydrodynamicallyconstrainedstarmatter_frame",
             "16x kubejs:dimension_creation_casing",
+            "16x kubejs:two_way_foil",
+            "16x gtceu:cosmic_foil",
             "64x kubejs:black_body_naquadria_supersolid",
             "16x gtceu:max_field_generator",
+            "32x gtceu:magmatter_rod",
             "8x kubejs:eigenfolded_kerr_manifold",
+            "16x gtceu:max_robot_arm",
             "gtceu:insanely_max_battery",
             "16x gtceu:magnetohydrodynamicallyconstrainedstarmatter_foil",
             "64x gtceu:eternity_foil")
-        .inputFluids("gtceu:magnetohydrodynamicallyconstrainedstarmatter 10000", "gtceu:chaos 10000", "gtceu:temporalfluid 10000", "gtceu:spatialfluid 10000")
+        .inputFluids("gtceu:magnetohydrodynamicallyconstrainedstarmatter 10000", "gtceu:chaos 10000", "gtceu:temporalfluid 10000", "gtceu:magmatter 10000")
         .itemOutputs("kubejs:create_aggregatione_core")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(120000)
@@ -15636,6 +15644,44 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(21600)
         .cleanroom(CleanroomType.CLEANROOM)
 
+    gtr.distort("gtceu:polyetheretherketone")
+        .notConsumable("gtceu:vibranium_nanoswarm")
+        .itemInputs("16x gtceu:sodium_dust")
+        .inputFluids("gtceu:chlorine 48000", "gtceu:benzene 16000", "gtceu:oxygen 60000", "gtceu:propene 8000", "gtceu:nitric_acid 8000")
+        .outputFluids("gtceu:polyetheretherketone 20736", "minecraft:water 8000", "gtceu:carbon_dioxide 8000")
+        .itemOutputs("32x gtceu:sodium_fluoride_dust")
+        .EUt(GTValues.VA[GTValues.UHV])
+        .duration(16400)
+        .blastFurnaceTemp(14400)
+        .cleanroom(CleanroomType.CLEANROOM)
+
+    gtr.distort("gtceu:zylon_dust")
+        .notConsumable("gtceu:black_dwarf_mtter_nanoswarm")
+        .itemInputs("1762x gtceu:sulfur_dust", "41x gtceu:sodium_dust")
+        .inputFluids("gtceu:bromine 15200", "gtceu:toluene 432000", "gtceu:hydrogen 412000", "gtceu:ethane 6000", "gtceu:propene 50000", "gtceu:nitric_acid 67000", "gtceu:oxygen 40000", "gtceu:benzene 70000")
+        .itemOutputs("115x gtceu:zylon_dust")
+        .EUt(GTValues.VA[GTValues.UEV])
+        .duration(9600)
+        .blastFurnaceTemp(18900)
+        .cleanroom(CleanroomType.CLEANROOM)
+        
+
+    gtr.qft("gtceu:fullerene_polymer_matrix_pulp_dust")
+        .notConsumable("gtceu:starmetal_nanoswarm")
+        .itemInputs("16x gtceu:fullerene_dust", "8x gtceu:palladium_dust")
+        .inputFluids("gtceu:nitrogen 15000", "gtceu:hydrogen 73000", "gtceu:oxygen 13000")
+        .itemOutputs("16x gtceu:fullerene_polymer_matrix_pulp_dust")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(1600)
+
+    gtr.qft("gtceu:taranium_dust")
+        .notConsumable("avaritia:infinity_catalyst")
+        .itemInputs("176x gtceu:bedrock_dust", "64x gtceu:carbon_dust", "640x gtceu:deepslate_dust")
+        .inputFluids("gtceu:helium 37000", "gtceu:hydrogen 73000", "gtceu:xenon 3000")
+        .itemOutputs("64x gtceu:taranium_dust")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(6400)
+
     gtr.chemical_reactor("gtceu:calcium_chloride_dust")
         .itemInputs("gtceu:calcium_dust")
         .inputFluids("gtceu:chlorine 2000")
@@ -15756,7 +15802,7 @@ ServerEvents.recipes((event) => {
 
     gtr.arc_furnace("kubejs:cosmic_singularity")
         .itemInputs("avaritia:eternal_singularity")
-        .inputFluids("gtceu:magnetohydrodynamicallyconstrainedstarmatter 576")
+        .inputFluids("gtceu:magnetohydrodynamicallyconstrainedstarmatter 9216")
         .itemOutputs("kubejs:cosmic_singularity", "64x gtceu:shirabon_dust")
         .outputFluids("gtceu:helium_plasma 1000")
         .EUt(GTValues.VA[GTValues.MAX])
