@@ -306,6 +306,7 @@ StartupEvents.registry("item", event => {
         .tier("magnetohydrodynamicallyconstrainedstarmatter")
         .tag("gtceu:ppe_armor")
     event.create("fermium_helmet", "helmet")
+        .tier("fermium")
     event.create("fermium_chestplate", "chestplate")
         .tier("fermium")
     event.create("fermium_leggings", "leggings")
