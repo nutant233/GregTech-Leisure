@@ -450,7 +450,7 @@
 		}
 		{
 			dependencies: ["3CE1CF84836DAB98"]
-			description: ["LV超导体"]
+			description: ["LV超导体，这4颗珍珠正好可用来制作屠宰场"]
 			id: "567D1D4B5A1B372B"
 			rewards: [{
 				count: 4

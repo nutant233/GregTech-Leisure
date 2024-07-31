@@ -5188,27 +5188,27 @@ ServerEvents.recipes((event) => {
 
     gtr.annihilate_generator("kubejs:neutronium_antimatter_fuel_rod")
         .itemInputs("kubejs:neutronium_antimatter_fuel_rod")
-        .itemOutputs("kubejs:annihilation_constrainer")
+        .chancedOutput("kubejs:annihilation_constrainer", 9000, 0)
         .duration(200)
-        .EUt(-GTValues.V[GTValues.MAX] * 16)
+        .EUt(-GTValues.V[GTValues.MAX] * 64)
 
     gtr.annihilate_generator("kubejs:draconium_antimatter_fuel_rod")
         .itemInputs("kubejs:draconium_antimatter_fuel_rod")
-        .itemOutputs("kubejs:annihilation_constrainer")
+        .chancedOutput("kubejs:annihilation_constrainer", 8000, 0)
         .duration(200)
-        .EUt(-GTValues.V[GTValues.MAX] * 256)
+        .EUt(-GTValues.V[GTValues.MAX] * 1024)
 
     gtr.annihilate_generator("kubejs:cosmicneutronium_antimatter_fuel_rod")
         .itemInputs("kubejs:cosmicneutronium_antimatter_fuel_rod")
-        .itemOutputs("kubejs:annihilation_constrainer")
+        .chancedOutput("kubejs:annihilation_constrainer", 7000, 0)
         .duration(200)
-        .EUt(-GTValues.V[GTValues.MAX] * 4096)
+        .EUt(-GTValues.V[GTValues.MAX] * 16384)
 
     gtr.annihilate_generator("kubejs:infinity_antimatter_fuel_rod")
         .itemInputs("kubejs:infinity_antimatter_fuel_rod")
-        .itemOutputs("kubejs:annihilation_constrainer")
+        .chancedOutput("kubejs:annihilation_constrainer", 6000, 0)
         .duration(200)
-        .EUt(-GTValues.V[GTValues.MAX] * 65536)
+        .EUt(-GTValues.V[GTValues.MAX] * 262144)
 
     gtr.assembler("gtceu:fishing_ground")
         .itemInputs("gtceu:lv_fisher",
@@ -5310,12 +5310,12 @@ ServerEvents.recipes((event) => {
 
     gtr.naquadah_reactor("gtceu:naquadah_fuel")
         .inputFluids("gtceu:naquadah_fuel 1")
-        .duration(30)
+        .duration(875)
         .EUt(-8192)
 
     gtr.naquadah_reactor("gtceu:enriched_naquadah_fuel")
         .inputFluids("gtceu:enriched_naquadah_fuel 1")
-        .duration(40)
+        .duration(1250)
         .EUt(-8192)
 
     gtr.large_naquadah_reactor("gtceu:naquadah_fuel")
@@ -5361,12 +5361,12 @@ ServerEvents.recipes((event) => {
     gtr.advanced_hyper_reactor("gtceu:concentration_mixing_hyper_fuel_1")
         .inputFluids("gtceu:concentration_mixing_hyper_fuel_1 1")
         .duration(200)
-        .EUt(-GTValues.V[GTValues.OpV])
+        .EUt(-GTValues.V[GTValues.MAX])
 
     gtr.advanced_hyper_reactor("gtceu:concentration_mixing_hyper_fuel_2")
         .inputFluids("gtceu:concentration_mixing_hyper_fuel_2 1")
         .duration(200)
-        .EUt(-GTValues.V[GTValues.MAX])
+        .EUt(-4 * GTValues.V[GTValues.MAX])
 
     gtr.mixer("gtceu:concentration_mixing_hyper_fuel_1")
         .itemInputs("gtceu:hassium_dust", "gtceu:oganesson_dust")
@@ -14214,7 +14214,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("kubejs:gelid_cryotheum 1")
         .EUt(-GTValues.V[GTValues.MAX])
         .duration(20)
-        .CWUt(8)
+        .CWUt(4)
 
     gtr.dyson_sphere("gtceu:dysonspherelaunch")
         .itemInputs("64x kubejs:dyson_swarm_module")

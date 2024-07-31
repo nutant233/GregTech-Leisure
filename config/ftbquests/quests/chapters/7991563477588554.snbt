@@ -257,7 +257,10 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["23136C08CE3A0759"]
+			dependencies: [
+				"23136C08CE3A0759"
+				"4C62EA42F0B042B2"
+			]
 			description: ["铂系金属包括铂、钯、铑、钌、铱和锇。这些金属都具有良好的耐腐蚀性、高的熔点和优良的催化性能。"]
 			id: "7B1B96479C90FD94"
 			tasks: [{
@@ -813,7 +816,10 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["423A9192EABB347B"]
+			dependencies: [
+				"423A9192EABB347B"
+				"131A1FB74BB801E0"
+			]
 			id: "1D285E7B5FEA312C"
 			tasks: [{
 				id: "13A068D35C93D49C"
@@ -851,6 +857,18 @@
 				}
 			]
 			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["169F331B1D2B9DFE"]
+			description: ["64A无线仓不同与普通的64A变电仓，它可以放在各种机器上代替普通能源仓使用"]
+			id: "063F2C5886FD5811"
+			tasks: [{
+				id: "51A196029B9DC070"
+				item: "gtmthings:ev_64a_wireless_energy_input_hatch"
+				type: "item"
+			}]
+			x: 1.5d
 			y: 4.0d
 		}
 	]

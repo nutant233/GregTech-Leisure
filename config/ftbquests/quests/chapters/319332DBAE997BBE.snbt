@@ -24,6 +24,7 @@
 	]
 	quests: [
 		{
+			dependencies: ["0A5B42B66B1D4A98"]
 			id: "7F92A8EE58AD5BA2"
 			tasks: [{
 				id: "7247977F19E25C6A"

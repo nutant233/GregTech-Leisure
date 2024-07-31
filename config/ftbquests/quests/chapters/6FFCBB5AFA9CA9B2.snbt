@@ -797,6 +797,33 @@
 			x: -7.0d
 			y: 4.5d
 		}
+		{
+			dependencies: ["66111CD69F4D7AE3"]
+			description: [
+				"2个普通能源仓有4A功率，但会将配方等级提升，从而导致如通用工厂机器需要更高的条件来运行，"
+				"但如果只放一个4A能源仓，那么机器将只会提升功率而不提升配方等级，可以让通用工厂用MV机器跑出HV的速度，如果你放2个4A，那么机器也会提升配方等级，和普通的相比多了1倍功率，这不会带来超频效果，但是如果机器可以并行，那么将会比普通仓获得更多并行"
+			]
+			id: "1C7891851481570A"
+			tasks: [{
+				id: "55F93394CEE0FD26"
+				item: "gtceu:mv_energy_input_hatch_4a"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1C7891851481570A"]
+			description: ["正如4A的特性，这个可以让你用MV小机器使用EV级功率"]
+			id: "3CF63975311A1B43"
+			tasks: [{
+				id: "73AA9A2A78D23067"
+				item: "gtceu:mv_energy_input_hatch_16a"
+				type: "item"
+			}]
+			x: -8.5d
+			y: 3.0d
+		}
 	]
 	subtitle: ["Tier2-MV"]
 	title: "中压"

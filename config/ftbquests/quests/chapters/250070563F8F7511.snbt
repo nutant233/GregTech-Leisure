@@ -554,7 +554,7 @@
 		}
 		{
 			dependencies: ["52A0EE026A3D3A79"]
-			description: ["潜行右键可以自动搭建多方块结构"]
+			description: ["手持终端潜行右键可以自动搭建多方块结构，如果是空手则会显示预览"]
 			id: "4AB25C15F0B05AA0"
 			optional: true
 			rewards: [{

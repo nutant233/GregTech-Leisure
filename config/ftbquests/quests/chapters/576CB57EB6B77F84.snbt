@@ -109,7 +109,7 @@
 			y: -0.5d
 		}
 		{
-			description: ["蒸汽已经无法将这个发电机跑满了"]
+			description: ["蒸汽已经准备淘汰了"]
 			id: "67A3AFD69B00EC4C"
 			tasks: [{
 				id: "73693527D6E35992"
@@ -153,7 +153,7 @@
 		}
 		{
 			description: [
-				"小蒸汽涡轮跑不满，但是这个可以，并且发电量还不错"
+				"这种涡轮在目前的性能不如小发电机"
 				"注意不要遮挡转子"
 			]
 			id: "1B77B2C00B24906E"
@@ -421,7 +421,7 @@
 			y: 8.5d
 		}
 		{
-			description: ["满模块时可达1000A MAX输出"]
+			description: ["满模块时可达10000A MAX输出"]
 			id: "082BB082BE18C820"
 			tasks: [{
 				id: "4DC11532BC403AB3"
@@ -442,7 +442,7 @@
 			y: 10.0d
 		}
 		{
-			description: ["最高1024A MAX输出"]
+			description: ["最高4096A MAX输出"]
 			id: "25F672CF48091CEC"
 			tasks: [{
 				id: "7F7D348C6E55EC07"
@@ -463,7 +463,7 @@
 			y: 11.5d
 		}
 		{
-			description: ["最高4194304A MAX输出"]
+			description: ["最高1048576A MAX输出，并且结构支持4面共享"]
 			id: "1893C9D673253B79"
 			tasks: [{
 				id: "7E9DC235BCE8E7BF"
