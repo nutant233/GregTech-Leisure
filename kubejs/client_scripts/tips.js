@@ -43,7 +43,7 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:rare_earth_centrifugal", "稀土专用离心机")
     event.add("gtceu:magic_manufacturer", "将电能转化为魔力")
     event.add("gtceu:chemical_distort", ["线圈温度每高出配方温度100K，并行加4", "更高的电压不会提供额外温度"])
-    event.add(["gtceu:dimensional_focus_engraving_array", "gtceu:mega_wiremill", "gtceu:mega_presser"], "线圈温度每高出900K，并行数x2")
+    event.add(["gtceu:dimensional_focus_engraving_array", "gtceu:mega_wiremill", "gtceu:mega_presser", "gtceu:mega_extractor"], "线圈温度每高出900K，并行数x2")
     event.add("gtceu:sps_crafting", "借助魔力合成特殊的物品")
     event.add("gtceu:matter_fabricator", "产出特殊物质")
     event.add(["gtceu:nano_forge_1", "gtceu:nano_forge_2", "gtceu:nano_forge_3"], ["只能使用激光仓", "放入对应的纳米蜂群才能工作，并且按蜂群数量来并行"])
@@ -96,7 +96,8 @@ ItemEvents.tooltip(event => {
         "gtceu:cooling_tower",
         "gtceu:super_blast_smelter",
         "gtceu:super_particle_collider",
-        "gtceu:large_chemical_plant"], "允许同时使用激光仓")
+        "gtceu:large_chemical_plant",
+        "gtceu:mega_extractor"], "允许同时使用激光仓")
     event.add(["gtceu:magic_manufacturer",
         "gtceu:sps_crafting",
         "gtceu:chemical_plant",
@@ -126,7 +127,8 @@ ItemEvents.tooltip(event => {
         "gtceu:star_ultimate_material_forge_factory",
         "gtceu:dragon_egg_copier",
         "gtceu:cooling_tower",
-        "gtceu:large_chemical_plant"], Text.keybind("gtceu.machine.perfect_oc"))
+        "gtceu:large_chemical_plant",
+        "gtceu:mega_extractor"], Text.keybind("gtceu.machine.perfect_oc"))
     event.add(["gtceu:plasma_condenser",
         "gtceu:rare_earth_centrifugal",
         "gtceu:chemical_plant",
