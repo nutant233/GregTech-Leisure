@@ -543,6 +543,7 @@
 				"大型的蒸汽多方块都有64的并行，并且处理速度是LV机器的2倍"
 				"非大型的蒸汽多方块为8并行"
 				"蒸汽多方块的外壳可以到小市场购买"
+				"大型蒸汽多方块满并行工作时蒸汽消耗特别大，需要用时空管道或激光节点等高速流体传输手段来提供蒸汽，否则会跳蒸汽"
 			]
 			hide_dependent_lines: true
 			icon: "gtceu:steam_piston_hammer"
@@ -767,7 +768,7 @@
 				"10B5D98AD1BE649E"
 				"327FACDF9807E960"
 			]
-			description: ["蒸汽合金炉的多方块版本"]
+			description: ["蒸汽合金炉的多方块版本，极度推荐做一台"]
 			hide_dependency_lines: true
 			id: "474AB958E64FD64D"
 			rewards: [{
@@ -775,6 +776,7 @@
 				item: "gtceu:cupronickel_credit"
 				type: "item"
 			}]
+			shape: "gear"
 			tasks: [{
 				id: "7688C45439577F0E"
 				item: "gtceu:steam_foundry"
@@ -887,7 +889,10 @@
 				"1F897E15549B94A6"
 				"06CC5EDA9F5B9726"
 			]
-			description: ["正式进入电力时代"]
+			description: [
+				"正式进入电力时代"
+				"建议先做个一组多"
+			]
 			id: "5749CAD673EE6816"
 			shape: "rsquare"
 			size: 1.2d
@@ -1084,7 +1089,10 @@
 		{
 			can_repeat: true
 			dependencies: ["0626E7D4F9EAB1B2"]
-			description: ["可使用扳手限制流向，注意管道容量特别大"]
+			description: [
+				"可使用扳手限制流向，注意管道容量特别大"
+				"可以当储罐用"
+			]
 			icon: "gtceu:spacetime_tiny_fluid_pipe"
 			id: "77E7A87066C55AA3"
 			rewards: [{
@@ -1151,6 +1159,24 @@
 			}]
 			x: 16.0d
 			y: 6.5d
+		}
+		{
+			dependencies: ["327FACDF9807E960"]
+			description: ["快速处理矿物"]
+			hide_dependency_lines: true
+			id: "566484A8529171B6"
+			rewards: [{
+				id: "359C84725A20427B"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5057A0AC48EF94E9"
+				item: "gtceu:large_steam_thermal_centrifuge"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -0.5d
 		}
 	]
 	subtitle: ["Tier0-ULV"]
