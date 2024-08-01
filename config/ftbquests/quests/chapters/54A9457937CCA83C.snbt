@@ -76,6 +76,7 @@
 				"后面冶炼各种金属的必备机器"
 				"能源仓可接受2A对应电压的电，2个能源仓就能达到更高级的电压。"
 				"在&r&6提示和技巧&r选项卡中查看教程以了解更多!"
+				"能通氮气就通氮气，能省不少时间"
 			]
 			icon: "gtceu:electric_blast_furnace"
 			id: "3CE1CF84836DAB98"
@@ -519,7 +520,10 @@
 		}
 		{
 			dependencies: ["7A16CA336F2DE4B1"]
-			description: ["前期稳定获取氮气"]
+			description: [
+				"前期稳定获取氮气"
+				"推荐用大蒸汽离心"
+			]
 			icon: "gtceu:air_bucket"
 			id: "02DDE47DD10770F0"
 			rewards: [{
@@ -696,7 +700,10 @@
 				"77EE1581E1339F54"
 				"1621BCB4A957E781"
 			]
-			description: ["GT的机器，管道，线缆可以被染色"]
+			description: [
+				"GT的机器，管道，线缆可以被染色"
+				"防止你接错管道把产线搞坏"
+			]
 			id: "3E09992F64019ABA"
 			rewards: [{
 				id: "2023A3BCCB32D3BB"
