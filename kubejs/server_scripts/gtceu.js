@@ -1942,7 +1942,7 @@ ServerEvents.recipes((event) => {
         })
 
     gtr.assembly_line("kubejs:extremely_durable_plasma_cell")
-        .itemInputs("12x gtceu:neutronium_plate", "4x gtceu:neutronium_large_fluid_pipe", "2x gtceu:uxv_electric_pump", "gtceu:uxv_field_generator", "gtceu:quantumchromodynamically_confined_matter_frame", "kubejs:force_field_glass", "gtceu:fusion_coil", "#gtceu:circuits/uiv")
+        .itemInputs("48x gtceu:neutronium_plate", "4x gtceu:heavy_quark_degenerate_matter_large_fluid_pipe", "2x gtceu:uxv_electric_pump", "2x gtceu:uxv_field_generator", "gtceu:infuscolium_nanoswarm", "2x gtceu:quantumchromodynamically_confined_matter_frame", "4x kubejs:force_field_glass", "8x gtceu:fusion_coil", "2x #gtceu:circuits/uiv", "4x gtceu:double_adamantine_plate", "4x gtceu:double_celestialtungsten_plate")
         .inputFluids("gtceu:super_mutated_living_solder 2304", "gtceu:dalisenite 2304", "gtceu:echoite 2592", "gtceu:taranium 1584")
         .itemOutputs("kubejs:extremely_durable_plasma_cell")
         .EUt(15000000)
@@ -2280,14 +2280,18 @@ ServerEvents.recipes((event) => {
         })
 
     gtr.assembly_line("gtceu:qft_coil")
-        .itemInputs("kubejs:uruium_coil_block",
+        .itemInputs("gtceu:quantumchromodynamically_confined_matter_frame",
+            "kubejs:uruium_coil_block",
             "gtceu:uev_field_generator",
+            "kubejs:quantumchromodynamic_protective_plating",
             "gtceu:uv_fluid_regulator",
             "gtceu:uhv_fluid_regulator",
             "gtceu:uev_fluid_regulator",
             "gtceu:uiv_fluid_regulator",
-            "4x gtceu:naquadah_huge_fluid_pipe",
+            "gtceu:naquadah_huge_fluid_pipe",
             "gtceu:neutronium_huge_fluid_pipe",
+            "gtceu:enderium_huge_fluid_pipe",
+            "gtceu:heavy_quark_degenerate_matter_huge_fluid_pipe",
             "2x gtceu:ender_pearl_plate",
             "2x gtceu:nether_star_plate",
             "4x gtceu:legendarium_plate",
@@ -3707,7 +3711,7 @@ ServerEvents.recipes((event) => {
             .CWUt(2048))
 
     gtr.assembly_line("kubejs:hypogen_coil_block")
-        .itemInputs("kubejs:infinity_coil_block", "8x gtceu:hypogen_double_wire", "16x gtceu:transcendentmetal_screw", "64x gtceu:radox_foil", "32x gtceu:chaos_foil")
+        .itemInputs("gtceu:qft_coil", "8x gtceu:hypogen_double_wire", "16x gtceu:transcendentmetal_screw", "64x gtceu:radox_foil", "32x gtceu:chaos_foil")
         .inputFluids("gtceu:infinity 576", "gtceu:cosmicneutronium 576")
         .itemOutputs("kubejs:hypogen_coil_block")
         .EUt(4 * GTValues.VA[GTValues.MAX])
@@ -3718,7 +3722,7 @@ ServerEvents.recipes((event) => {
             .CWUt(4096))
 
     gtr.assembly_line("kubejs:eternity_coil_block")
-        .itemInputs("kubejs:hypogen_coil_block", "8x gtceu:spacetime_double_wire", "4x gtceu:eternity_rod", "avaritia:eternal_singularity", "64x kubejs:cosmic_fabric", "64x gtceu:radox_foil", "64x gtceu:radox_foil", "64x gtceu:chaos_foil")
+        .itemInputs("gtceu:qft_coil", "8x gtceu:spacetime_double_wire", "4x gtceu:eternity_rod", "avaritia:eternal_singularity", "64x kubejs:cosmic_fabric", "64x gtceu:radox_foil", "64x gtceu:radox_foil", "64x gtceu:chaos_foil")
         .inputFluids("gtceu:hypogen 576", "gtceu:spacetime 576")
         .itemOutputs("kubejs:eternity_coil_block")
         .EUt(16 * GTValues.VA[GTValues.MAX])
