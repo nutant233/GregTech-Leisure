@@ -522,6 +522,20 @@
 			x: -9.5d
 			y: -3.0d
 		}
+		{
+			dependencies: ["0A2D46609F5C3CAB"]
+			description: ["电解机、电磁选矿机和两极磁化机的激光版本"]
+			id: "3565D2D5E0A2CEDF"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "30D756E7388280AB"
+				item: "gtceu:superconducting_electromagnetism"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 4.5d
+		}
 	]
 	subtitle: ["Tier7-ZPM"]
 	title: "零点压"
