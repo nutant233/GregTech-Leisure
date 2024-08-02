@@ -3371,31 +3371,6 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[index])
             .duration(200)
     }
-
-    const casings = [
-        ["uev", "seaborgium"],
-        ["uiv", "adamantium"],
-        ["uxv", "vibranium"],
-        ["opv", "draconium"],
-        ["max", "chaos"]
-    ]
-
-    casings.forEach((casing) => {
-        event.shaped("gtceu:" + casing[0] + "_machine_casing", [
-            "AAA",
-            "ABA",
-            "AAA"
-        ], {
-            A: "#forge:plates/" + casing[1],
-            B: "#forge:tools/hammers"
-        })
-        gtr.assembler("gtceu:" + casing[0] + "_machine_casing")
-            .itemInputs("8x #forge:plates/" + casing[1])
-            .itemOutputs("gtceu:" + casing[0] + "_machine_casing")
-            .EUt(16)
-            .duration(50)
-            .circuit(8)
-    })
     const machine_materials = [
         ["uhv", "neutronium", "europium", "abyssalalloy", "uev", "1966080", "uv", "128", "kubejs:smd_diode_bioware"],
         ["uev", "seaborgium", "mithril", "titansteel", "uiv", "7864320", "uhv", "256", "kubejs:smd_diode_optical"],
@@ -14883,4 +14858,15 @@ ServerEvents.recipes((event) => {
         .itemOutputs("gtceu:long_magmatter_rod")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(300)
+
+    gtr.assembly_line("gtceu:mega_extractor")
+        .itemInputs("16x gtceu:uhv_extractor", "16x gtceu:uhv_fluid_solidifier", "32x gtceu:uev_electric_piston", "8x gtceu:uev_electric_pump", "4x #gtceu:circuits/uiv", "16x gtceu:titansteel_hex_wire", "16x gtceu:double_quantum_plate", "32x gtceu:double_hastelloy_x_plate")
+        .inputFluids("gtceu:mutated_living_solder 2304", "gtceu:naquadria 4608", "gtceu:plutonium 4608", "gtceu:mithril 4608")
+        .itemOutputs("gtceu:mega_extractor")
+        .EUt(GTValues.VA[GTValues.UEV])
+        .duration(800)
+        .stationResearch(b => b.researchStack(Item.of("gtceu:large_extractor"))
+            .dataStack(Item.of("gtceu:data_module"))
+            .EUt(GTValues.VA[GTValues.UEV])
+            .CWUt(256))
 })

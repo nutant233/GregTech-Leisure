@@ -36,7 +36,7 @@ ServerEvents.recipes((event) => {
         K: "ae2:fluix_glass_cable",
         M: "#gtceu:circuits/mv",
         L: "ae2:logic_processor",
-    });
+    })
 
     event.shaped("2x ae2:advanced_card", [
         "WP ",
