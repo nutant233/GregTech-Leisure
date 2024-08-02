@@ -42,7 +42,7 @@ ServerEvents.recipes((event) => {
         "BDB",
         "ACA"
     ], {
-        A: "gtceu:double_bronze_plate",
+        A: "kubejs:precision_steam_mechanism",
         B: "gtceu:stainless_steel_tiny_fluid_pipe",
         C: "gtceu:iron_rotor",
         D: "gtceu:steam_input_hatch"
@@ -555,7 +555,7 @@ ServerEvents.recipes((event) => {
         A: "gtceu:steam_grinder",
         B: "gtceu:bronze_block",
         C: "gtceu:diamond_grinding_head",
-        D: "gtceu:diamond_gear"
+        D: "kubejs:precision_steam_mechanism"
     })
 
     event.shaped("gtceu:large_steam_centrifuge", [
@@ -565,7 +565,7 @@ ServerEvents.recipes((event) => {
     ], {
         A: "gtceu:bronze_gearbox",
         B: "gtceu:bronze_block",
-        C: "gtceu:invar_gear",
+        C: "kubejs:precision_steam_mechanism",
         D: "gtceu:small_iron_gear"
     })
 
@@ -576,7 +576,7 @@ ServerEvents.recipes((event) => {
     ], {
         A: "gtceu:bronze_pipe_casing",
         B: "gtceu:bronze_block",
-        C: "gtceu:wrought_iron_gear",
+        C: "kubejs:precision_steam_mechanism",
         D: "gtceu:stone_gear",
         E: "gtceu:steel_foil"
     })
@@ -597,7 +597,7 @@ ServerEvents.recipes((event) => {
         "DAD",
         "BCB"
     ], {
-        A: "gtceu:long_steel_rod",
+        A: "kubejs:precision_steam_mechanism",
         B: "gtceu:bronze_plate",
         C: "gtceu:iron_rotor",
         D: "gtceu:copper_huge_fluid_pipe"
@@ -610,7 +610,7 @@ ServerEvents.recipes((event) => {
     ], {
         A: "gtceu:bronze_pipe_casing",
         B: "gtceu:bronze_plate",
-        C: "gtceu:steel_plate",
+        C: "kubejs:precision_steam_mechanism",
         D: "gtceu:long_copper_rod"
     })
 
@@ -622,7 +622,7 @@ ServerEvents.recipes((event) => {
         A: "gtceu:bronze_frame",
         B: "gtceu:bronze_plate",
         C: "gtceu:double_bronze_plate",
-        D: "gtceu:small_steel_gear"
+        D: "kubejs:precision_steam_mechanism"
     })
 
     event.shaped("gtceu:weather_control", [
@@ -1795,7 +1795,7 @@ ServerEvents.recipes((event) => {
             "64x kubejs:time_dilation_containment_unit",
             "4x gtceu:insanely_max_battery",
             "32x gtceu:double_chaos_plate")
-        .inputFluids("gtceu:super_mutated_living_solder 480000", "gtceu:degenerate_rhenium 100000", "gtceu:neutronium 57600", "gtceu:infinity 16000")
+        .inputFluids("gtceu:super_mutated_living_solder 480000", "gtceu:liquid_degenerate_rhenium 100000", "gtceu:neutronium 57600", "gtceu:infinity 16000")
         .itemOutputs("gtceu:sphere_of_harmony")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(2400)
@@ -1984,7 +1984,7 @@ ServerEvents.recipes((event) => {
 
     gtr.assembly_line("kubejs:dimension_injection_casing")
         .itemInputs("6x gtceu:osmiridium_plate", "4x gtceu:lead_plate", "12x gtceu:adamantium_bolt", "2x #gtceu:circuits/iv", "2x gtceu:enderite_single_wire", "gtceu:ev_super_tank", "gtceu:ev_super_chest")
-        .inputFluids("gtceu:degenerate_rhenium 200", "gtceu:vibrant_alloy 288", "gtceu:astral_silver 288", "gtceu:enriched_naquadah 288")
+        .inputFluids("gtceu:liquid_degenerate_rhenium 200", "gtceu:vibrant_alloy 288", "gtceu:astral_silver 288", "gtceu:enriched_naquadah 288")
         .itemOutputs("2x kubejs:dimension_injection_casing")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(400)
@@ -2023,7 +2023,7 @@ ServerEvents.recipes((event) => {
     gtr.assembly_line("kubejs:dimensional_bridge_casing")
         .itemInputs("kubejs:dimensionally_transcendent_casing", "gtceu:uv_quantum_chest", "gtceu:uv_quantum_tank", "2x gtceu:enderite_single_wire", "2x #gtceu:circuits/uv", "gtceu:uhv_field_generator")
         .itemOutputs("kubejs:dimensional_bridge_casing")
-        .inputFluids("gtceu:mutated_living_solder 576", "gtceu:degenerate_rhenium 200", "gtceu:duranium 288", "gtceu:enriched_naquadah 288")
+        .inputFluids("gtceu:mutated_living_solder 576", "gtceu:liquid_degenerate_rhenium 200", "gtceu:duranium 288", "gtceu:enriched_naquadah 288")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(400)
         .researchWithoutRecipe("1x_kubejs_dimension_injection_casing", "gtceu:data_module")
@@ -3061,7 +3061,7 @@ ServerEvents.recipes((event) => {
             "#gtceu:circuits/uev",
             "2x gtceu:crystalmatrix_rod",
             "gtceu:double_crystalmatrix_plate")
-        .inputFluids("gtceu:super_mutated_living_solder 288", "gtceu:degenerate_rhenium 200", "gtceu:molten_pikyonium 288", "gtceu:molten_periodicium 288")
+        .inputFluids("gtceu:super_mutated_living_solder 288", "gtceu:liquid_degenerate_rhenium 200", "gtceu:molten_pikyonium 288", "gtceu:molten_periodicium 288")
         .itemOutputs("kubejs:dimensional_stability_casing")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(800)
@@ -4043,7 +4043,7 @@ ServerEvents.recipes((event) => {
 
     gtr.fluid_solidifier("gtceu:degenerate_rhenium_plate")
         .notConsumable("gtceu:plate_casting_mold")
-        .inputFluids("gtceu:degenerate_rhenium 144")
+        .inputFluids("gtceu:liquid_degenerate_rhenium 144")
         .itemOutputs("gtceu:degenerate_rhenium_plate")
         .EUt(7)
         .duration(400)
@@ -4276,7 +4276,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("kubejs:dimensionally_transcendent_casing")
         .itemInputs("gtceu:mithril_frame", "2x kubejs:dimension_injection_casing", "2x kubejs:molecular_casing", "gtceu:iv_quantum_chest", "gtceu:iv_quantum_tank", "12x gtceu:adamantium_bolt", "gtceu:enderite_single_wire", "6x gtceu:palladium_plate", "6x gtceu:osmiridium_plate")
         .itemOutputs("2x kubejs:dimensionally_transcendent_casing")
-        .inputFluids("gtceu:degenerate_rhenium 200")
+        .inputFluids("gtceu:liquid_degenerate_rhenium 200")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
 
@@ -8852,7 +8852,7 @@ ServerEvents.recipes((event) => {
     gtr.plasma_condenser("gtceu:degenerate_rhenium")
         .itemInputs("kubejs:rhenium_plasma_containment_cell")
         .inputFluids("gtceu:liquid_helium 100000")
-        .outputFluids("gtceu:helium 100000", "gtceu:degenerate_rhenium 1000")
+        .outputFluids("gtceu:helium 100000", "gtceu:liquid_degenerate_rhenium 1000")
         .itemOutputs("kubejs:plasma_containment_cell")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(1200)
@@ -12925,7 +12925,7 @@ ServerEvents.recipes((event) => {
 
     gtr.assembler("kubejs:spacetime_assembly_line_casing")
         .itemInputs("gtceu:assembly_line_casing", "gtceu:uhv_emitter", "4x gtceu:uev_electric_motor", "2x gtceu:uev_conveyor_module", "2x gtceu:uev_electric_piston", "2x #gtceu:circuits/uev", "8x gtceu:double_zinc_plate")
-        .inputFluids("gtceu:degenerate_rhenium 200")
+        .inputFluids("gtceu:liquid_degenerate_rhenium 200")
         .itemOutputs("kubejs:spacetime_assembly_line_casing")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(400)
