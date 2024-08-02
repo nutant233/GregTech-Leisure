@@ -354,6 +354,7 @@ StartupEvents.registry("item", event => {
     event.create("cosmic_singularity")
     event.create("spacetime_catalyst")
     event.create("eternity_catalyst")
+    event.create("precision_steam_mechanism")
     for (let i = 0; i < 16; i++) {
         event.create("combined_singularity_" + i)
     }

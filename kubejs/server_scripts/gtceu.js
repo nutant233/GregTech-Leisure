@@ -647,6 +647,28 @@ ServerEvents.recipes((event) => {
         D: "gtceu:vanadium_steel_huge_fluid_pipe"
     })
 
+    event.shaped("kubejs:precision_steam_mechanism", [
+        "ABA",
+        "CDC",
+        "EBE"
+    ], {
+        A:"gtceu:bronze_rod",
+        B:"gtceu:small_bronze_gear",
+        C:"gtceu:bronze_plate",
+        D:"gtceu:small_copper_spring",
+        E:"gtceu:bronze_tiny_fluid_pipe"
+    })
+    
+    event.shaped("kubejs:steam_assembly_block", [
+        "ABA",
+        "BCB",
+        "ABA"
+    ], {
+        A:"gtceu:bronze_normal_fluid_pipe",
+        B:"kubejs:precision_steam_mechanism",
+        C:"gtceu:bronze_frame"
+    })
+
     event.smithing("kubejs:create_hpca_component", "kubejs:command_block_core", "gtceu:super_computation_component", "kubejs:suprachronal_mainframe_complex")
     event.smithing("gtceu:create_computation", "kubejs:command_block_core", "gtceu:high_performance_computation_array", "kubejs:suprachronal_mainframe_complex")
     event.smithing("kubejs:space_fermium_helmet", "ad_astra:netherite_space_helmet", "kubejs:fermium_helmet", "ad_astra:oxygen_distributor")
