@@ -120,7 +120,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 })
 
-const gtch = Java.loadClass("com.gregtechceu.gtceu.api.capability.GTCapabilityHelper")
+const $GTCapabilityHelper = Java.loadClass("com.gregtechceu.gtceu.api.capability.GTCapabilityHelper")
 const $DamageTypes = Java.loadClass("net.minecraft.world.damagesource.DamageTypes")
 const $MenuHooks = Java.loadClass("earth.terrarium.botarium.common.menu.MenuHooks")
 const $PlanetsMenuProvider = Java.loadClass("earth.terrarium.adastra.common.menus.base.PlanetsMenuProvider")
@@ -140,7 +140,7 @@ BlockEvents.rightClicked("kubejs:antimatter_charge", event => {
 })
 
 BlockEvents.rightClicked("gtceu:sphere_of_harmony", event => {
-    var machine = gtch.getRecipeLogic(event.level, event.block.pos, null).getMachine()
+    var machine = $GTCapabilityHelper.getRecipeLogic(event.level, event.block.pos, null).getMachine()
     if (machine.self().isFormed()) {
         machine.holder.self().getPersistentData().putString("sphere_of_harmony", event.player.uuid.toString())
     }
@@ -228,7 +228,7 @@ function getEyePositionPos(level, player) {
 }
 
 function getEyePositionRecipeLogic(level, player) {
-    return gtch.getRecipeLogic(level, getEyePositionPos(level, player), null)
+    return $GTCapabilityHelper.getRecipeLogic(level, getEyePositionPos(level, player), null)
 }
 
 ItemEvents.rightClicked("kubejs:time_twister_wireless", event => {
@@ -544,7 +544,7 @@ PlayerEvents.loggedIn(event => {
 })
 
 BlockEvents.broken("gtceu:active_transformer", event => {
-    if (gtch.getRecipeLogic(event.level, event.block.pos, null).getMachine().self().isFormed()) {
+    if ($GTCapabilityHelper.getRecipeLogic(event.level, event.block.pos, null).getMachine().self().isFormed()) {
         let pos = event.block.pos
         let coordinates = [pos.offset(1, 0, 0), pos.offset(-1, 0, 0), pos.offset(0, 0, -1), pos.offset(0, 0, 1), pos.offset(0, 1, 0), pos.offset(0, -1, 0)]
         for (let i in coordinates) {

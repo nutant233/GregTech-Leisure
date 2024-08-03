@@ -8852,7 +8852,7 @@ ServerEvents.recipes((event) => {
             .outputFluids("gtceu:" + fluid + " 1000", "gtceu:helium 100000")
             .circuit(1)
             .EUt(GTValues.VA[GTValues.UHV])
-            .duration(1200)
+            .duration(600)
     })
 
     gtr.plasma_condenser("minecraft:iron_ingot")
@@ -8879,7 +8879,7 @@ ServerEvents.recipes((event) => {
             .outputFluids("gtceu:helium 14400")
             .itemOutputs("gtceu:hot_" + ingot + "_ingot")
             .EUt(GTValues.VA[GTValues.UHV])
-            .duration(160)
+            .duration(60)
     })
 
     gtr.plasma_condenser("gtceu:degenerate_rhenium")
