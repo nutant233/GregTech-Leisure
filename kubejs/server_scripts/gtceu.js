@@ -574,7 +574,7 @@ ServerEvents.recipes((event) => {
         "DAD",
         "BCB"
     ], {
-        A: "gtceu:bronze_pipe_casing",
+        A: "gtceu:steam_bath",
         B: "gtceu:bronze_block",
         C: "kubejs:precision_steam_mechanism",
         D: "gtceu:stone_gear",
@@ -597,9 +597,9 @@ ServerEvents.recipes((event) => {
         "DAD",
         "BCB"
     ], {
-        A: "kubejs:precision_steam_mechanism",
+        A: "gtceu:steam_mixer",
         B: "gtceu:bronze_plate",
-        C: "gtceu:iron_rotor",
+        C: "kubejs:precision_steam_mechanism",
         D: "gtceu:copper_huge_fluid_pipe"
     })
 
@@ -619,10 +619,43 @@ ServerEvents.recipes((event) => {
         "DAD",
         "BCB"
     ], {
-        A: "gtceu:bronze_frame",
+        A: "gtceu:steam_ore_washer",
         B: "gtceu:bronze_plate",
         C: "gtceu:double_bronze_plate",
         D: "kubejs:precision_steam_mechanism"
+    })
+
+    event.shaped("gtceu:steam_mixer", [
+        "ABA",
+        "BCB",
+        "DBD"
+    ], {
+        A:"gtceu:bronze_normal_fluid_pipe",
+        B:"gtceu:bronze_plate",
+        C:"gtceu:bronze_pipe_casing",
+        D:"gtceu:bronze_gear"
+    })
+
+    event.shaped("gtceu:steam_bath", [
+        "ABA",
+        "BCB",
+        "DBD"
+    ], {
+        A:"gtceu:bronze_rod",
+        B:"gtceu:bronze_plate",
+        C:"gtceu:bronze_pipe_casing",
+        D:"gtceu:bronze_gear"
+    })
+
+    event.shaped("gtceu:steam_ore_washer", [
+        "ABA",
+        "BCB",
+        "DBD"
+        ], {
+        A:"gtceu:bronze_rod",
+        B:"gtceu:steel_plate",
+        C:"gtceu:bronze_pipe_casing",
+        D:"gtceu:potin_gear"
     })
 
     event.shaped("gtceu:weather_control", [
