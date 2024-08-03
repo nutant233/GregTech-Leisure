@@ -182,12 +182,17 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC)
 
-    event.create("circuit_assembly_line")
+    const GenerateDisassembly = Java.loadClass("com.gregtechceu.gtceu.data.recipe.GenerateDisassembly")
+
+    GTRecipeTypes.register("circuit_assembly_line", "multiblock")
         .setEUIO("in")
         .setMaxIOSize(16, 1, 4, 0)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ASSEMBLER)
+        .onRecipeBuild((recipeBuilder, provider) => {
+            GenerateDisassembly.generateDisassembly(recipeBuilder, provider)
+        })
 
     event.create("suprachronal_assembly_line")
         .setEUIO("in")
@@ -321,7 +326,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         } else {
             recipe["inputFluids(com.lowdragmc.lowdraglib.side.fluid.FluidStack)"](Fluid.of("gtceu:photoresist", value).getFluidStack())
         }
-        return recipe.save(provider)
+        recipe.save(provider)
     })
 
     event.create("precision_laser_engraver")

@@ -630,10 +630,10 @@ ServerEvents.recipes((event) => {
         "BCB",
         "DBD"
     ], {
-        A:"gtceu:bronze_normal_fluid_pipe",
-        B:"gtceu:bronze_plate",
-        C:"gtceu:bronze_pipe_casing",
-        D:"gtceu:bronze_gear"
+        A: "gtceu:bronze_normal_fluid_pipe",
+        B: "gtceu:bronze_plate",
+        C: "gtceu:bronze_pipe_casing",
+        D: "gtceu:bronze_gear"
     })
 
     event.shaped("gtceu:steam_bath", [
@@ -641,21 +641,21 @@ ServerEvents.recipes((event) => {
         "BCB",
         "DBD"
     ], {
-        A:"gtceu:bronze_rod",
-        B:"gtceu:bronze_plate",
-        C:"gtceu:bronze_pipe_casing",
-        D:"gtceu:bronze_gear"
+        A: "gtceu:bronze_rod",
+        B: "gtceu:bronze_plate",
+        C: "gtceu:bronze_pipe_casing",
+        D: "gtceu:bronze_gear"
     })
 
     event.shaped("gtceu:steam_ore_washer", [
         "ABA",
         "BCB",
         "DBD"
-        ], {
-        A:"gtceu:bronze_rod",
-        B:"gtceu:steel_plate",
-        C:"gtceu:bronze_pipe_casing",
-        D:"gtceu:potin_gear"
+    ], {
+        A: "gtceu:bronze_rod",
+        B: "gtceu:steel_plate",
+        C: "gtceu:bronze_pipe_casing",
+        D: "gtceu:potin_gear"
     })
 
     event.shaped("gtceu:weather_control", [
@@ -685,21 +685,21 @@ ServerEvents.recipes((event) => {
         "CDC",
         "EBE"
     ], {
-        A:"gtceu:bronze_rod",
-        B:"gtceu:small_bronze_gear",
-        C:"gtceu:bronze_plate",
-        D:"gtceu:small_copper_spring",
-        E:"gtceu:bronze_tiny_fluid_pipe"
+        A: "gtceu:bronze_rod",
+        B: "gtceu:small_bronze_gear",
+        C: "gtceu:bronze_plate",
+        D: "gtceu:small_copper_spring",
+        E: "gtceu:bronze_tiny_fluid_pipe"
     })
-    
+
     event.shaped("kubejs:steam_assembly_block", [
         "ABA",
         "BCB",
         "ABA"
     ], {
-        A:"gtceu:bronze_normal_fluid_pipe",
-        B:"kubejs:precision_steam_mechanism",
-        C:"gtceu:bronze_frame"
+        A: "gtceu:bronze_normal_fluid_pipe",
+        B: "kubejs:precision_steam_mechanism",
+        C: "gtceu:bronze_frame"
     })
 
     event.smithing("kubejs:create_hpca_component", "kubejs:command_block_core", "gtceu:super_computation_component", "kubejs:suprachronal_mainframe_complex")

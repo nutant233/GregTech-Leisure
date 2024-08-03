@@ -26,7 +26,8 @@ ServerEvents.recipes(event => {
         "ad_astra:energizer",
         "ad_astra:steel_cable",
         "ad_astra:desh_cable",
-        "ad_astra:cable_duct"]
+        "ad_astra:cable_duct",
+        "ad_astra:steel_ingot"]
     items.forEach(item => {
         event.remove({ output: item })
     })
