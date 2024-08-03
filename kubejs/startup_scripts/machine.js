@@ -3187,7 +3187,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(1)))
             .where(" ", Predicates.any())
             .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_grinder")
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_circuit_assembler")
 
     event.create("large_steam_mixer", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
@@ -3218,7 +3218,8 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(1)))
             .where(" ", Predicates.any())
             .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_grinder")
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_mixer")
+        
 
     event.create("large_steam_centrifuge", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
@@ -3252,7 +3253,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(4)))
             .where(" ", Predicates.any())
             .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_grinder")
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_centrifuge")
 
     event.create("large_steam_thermal_centrifuge", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
@@ -3280,7 +3281,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(3)))
             .where(" ", Predicates.any())
             .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_oven")
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_thermal_centrifuge")
 
     event.create("large_steam_bath", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
@@ -3341,7 +3342,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(3)))
             .where(" ", Predicates.air())
             .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/machines/chemical_bath")
+        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_ore_washer")
 
     event.create("dimensionally_transcendent_dirt_forge", "multiblock")
         .rotationState(RotationState.ALL)
