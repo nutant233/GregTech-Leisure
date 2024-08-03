@@ -782,8 +782,8 @@
 				item: "gtceu:steam_foundry"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 1.5d
+			x: 4.0d
+			y: 3.5d
 		}
 		{
 			dependencies: [
@@ -917,12 +917,11 @@
 			y: 6.5d
 		}
 		{
-			dependencies: ["327FACDF9807E960"]
-			hide_dependency_lines: true
+			dependencies: ["1524C538DFFC1F8C"]
 			id: "7FC52CB0D25BFDEA"
 			rewards: [{
-				id: "3347C85A883DE39C"
-				item: "gtceu:cupronickel_credit"
+				id: "720D121DE3F97D4B"
+				item: "gtceu:silver_credit"
 				type: "item"
 			}]
 			tasks: [{
@@ -930,16 +929,15 @@
 				item: "gtceu:large_steam_mixer"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.5d
 			y: 3.5d
 		}
 		{
-			dependencies: ["327FACDF9807E960"]
-			hide_dependency_lines: true
+			dependencies: ["33D56FF16ABE1A3E"]
 			id: "22F9FA0498340DA6"
 			rewards: [{
-				id: "00C4DA67D1D38088"
-				item: "gtceu:cupronickel_credit"
+				id: "53E58A0CD46BC52B"
+				item: "gtceu:silver_credit"
 				type: "item"
 			}]
 			tasks: [{
@@ -947,7 +945,7 @@
 				item: "gtceu:large_steam_bath"
 				type: "item"
 			}]
-			x: 2.5d
+			x: 1.0d
 			y: 3.5d
 		}
 		{
@@ -1166,8 +1164,8 @@
 			hide_dependency_lines: true
 			id: "566484A8529171B6"
 			rewards: [{
-				id: "359C84725A20427B"
-				item: "gtceu:cupronickel_credit"
+				id: "048A24828975F5DD"
+				item: "gtceu:silver_credit"
 				type: "item"
 			}]
 			tasks: [{
@@ -1177,6 +1175,40 @@
 			}]
 			x: 1.0d
 			y: -0.5d
+		}
+		{
+			dependencies: ["327FACDF9807E960"]
+			hide_dependency_lines: true
+			id: "33D56FF16ABE1A3E"
+			rewards: [{
+				id: "7D224561DE68A90B"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3BD1F25AF5F35CD7"
+				item: "gtceu:steam_bath"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["327FACDF9807E960"]
+			hide_dependency_lines: true
+			id: "1524C538DFFC1F8C"
+			rewards: [{
+				id: "7E568BA18E106578"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "550B7D97589B3134"
+				item: "gtceu:steam_mixer"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.5d
 		}
 	]
 	subtitle: ["Tier0-ULV"]
