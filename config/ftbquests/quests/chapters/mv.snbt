@@ -1,0 +1,25 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "mv"
+	group: "53FD41080ED1E796"
+	icon: "gtceu:mv_machine_hull"
+	id: "6AE49AAF3BDC94C1"
+	order_index: 2
+	quest_links: [ ]
+	quests: [{
+		dependencies: [
+			"40C39645B1DE2488"
+			"388E5C1034C54D19"
+		]
+		id: "7296C57805F5DC96"
+		tasks: [{
+			id: "0A5103D6EA070927"
+			title: "中压MV"
+			type: "checkmark"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "重压MV"
+}

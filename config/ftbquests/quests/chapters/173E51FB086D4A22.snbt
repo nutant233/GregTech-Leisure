@@ -1,0 +1,220 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "173E51FB086D4A22"
+	group: "40551FF3A34D90BA"
+	icon: "gtceu:mv_fluid_drilling_rig"
+	id: "173E51FB086D4A22"
+	order_index: 1
+	quest_links: [
+		{
+			id: "23D2FC4204AB8AFE"
+			linked_quest: "51B9A72C19F84F0E"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "56DA55DD71CE30C7"
+			linked_quest: "6E3B42BCBA6064F5"
+			x: 4.0d
+			y: 8.0d
+		}
+		{
+			id: "06E68266FB9CFED3"
+			linked_quest: "27A9D4E765101CB9"
+			x: 3.0d
+			y: 5.0d
+		}
+		{
+			id: "5651E635C1B0CA7F"
+			linked_quest: "7296C57805F5DC96"
+			x: 8.0d
+			y: 0.0d
+		}
+	]
+	quests: [
+		{
+			id: "088C594495CADBA1"
+			tasks: [{
+				id: "769CAD13CEAFBEB3"
+				title: "HV"
+				type: "checkmark"
+			}]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			id: "7171B45BCD083364"
+			tasks: [{
+				id: "130194FAF884E3A1"
+				title: "IV"
+				type: "checkmark"
+			}]
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"51B9A72C19F84F0E"
+				"2D6BB32B642AE8BA"
+			]
+			description: ["lv时期可选的获得石油的手段"]
+			id: "6DEAA19092FBCF99"
+			rewards: [{
+				id: "61884E75889139DF"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "42E23ED61B2417CC"
+				item: "gtceu:lv_pump"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6DEAA19092FBCF99"]
+			id: "2451D79084562C67"
+			tasks: [{
+				id: "2410E462E07D486C"
+				item: "gtceu:oil_medium_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2D6BB32B642AE8BA"]
+			id: "0B00D881C861FEB2"
+			tasks: [{
+				id: "105FCEFBC3B166E7"
+				item: "gtceu:lv_distillery"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"2451D79084562C67"
+				"0B00D881C861FEB2"
+			]
+			description: ["蒸馏室三号电路"]
+			id: "63FEF796CFF5E8DF"
+			tasks: [{
+				id: "014038349888FC2A"
+				item: "gtceu:sulfuric_naphtha_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"63FEF796CFF5E8DF"
+				"045D76184BFBD4D6"
+				"27A9D4E765101CB9"
+			]
+			description: ["含硫石脑油加氢气"]
+			id: "071C1482A33D97FB"
+			tasks: [{
+				id: "5487A28C3E9B45E0"
+				item: "gtceu:naphtha_bucket"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"071C1482A33D97FB"
+				"27A9D4E765101CB9"
+			]
+			description: ["化学反应釜加蒸汽三号电路"]
+			id: "70E703942B61C86C"
+			tasks: [{
+				id: "43A2C8C1FC309DE4"
+				item: "gtceu:severely_steam_cracked_naphtha_bucket"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"70E703942B61C86C"
+				"0B00D881C861FEB2"
+			]
+			description: ["蒸馏室十号电路"]
+			id: "0C5B23E443F1A5D5"
+			tasks: [{
+				id: "4AE736F84D6F23E1"
+				item: "gtceu:ethylene_bucket"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["63FEF796CFF5E8DF"]
+			description: ["将硫化氢电解以进行氢的循环"]
+			icon: "gtceu:hydrogen_sulfide_bucket"
+			id: "751BF4CAEE613BBA"
+			tasks: [{
+				id: "58FAC5989D41DC20"
+				title: "硫化氢"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0C5B23E443F1A5D5"]
+			id: "45D039D63194BC41"
+			tasks: [{
+				id: "6111812043CAC617"
+				item: "gtceu:polyethylene_bucket"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"6E3B42BCBA6064F5"
+				"751BF4CAEE613BBA"
+			]
+			description: ["你最开始的氢来自于电解水"]
+			id: "045D76184BFBD4D6"
+			tasks: [{
+				id: "33CEFF88B7CF0789"
+				item: "gtceu:hydrogen_bucket"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7296C57805F5DC96"]
+			description: [
+				"虚空获取油"
+				"只能安装一个能源仓，2个机器会停机"
+			]
+			id: "481B6E85DA1906B8"
+			rewards: [{
+				id: "7328C7E17857D82B"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "12DB235FA5E46543"
+				item: "gtceu:mv_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.0d
+		}
+	]
+	title: "石化与生化"
+}
