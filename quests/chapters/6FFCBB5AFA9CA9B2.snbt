@@ -1,0 +1,830 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "6FFCBB5AFA9CA9B2"
+	group: "68CBF1606D696C68"
+	icon: "gtceu:mv_electric_motor"
+	id: "6FFCBB5AFA9CA9B2"
+	order_index: 2
+	quest_links: [{
+		id: "45FD3BFBF8133D17"
+		linked_quest: "150F409313B13620"
+		shape: "rsquare"
+		size: 1.5d
+		x: -7.0d
+		y: -1.5d
+	}]
+	quests: [
+		{
+			dependencies: ["5DB1BB2C0A548348"]
+			id: "08D2C5A728CAD67C"
+			rewards: [{
+				id: "56D2FA8014EEBF50"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "548533697C905342"
+				item: "gtceu:mv_electrolyzer"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"08D2C5A728CAD67C"
+				"6D9236A60AD1F9BB"
+			]
+			description: ["可以用来做电池，然后制作电力的工具"]
+			id: "729C5397F75C65FA"
+			rewards: [{
+				id: "2063A9883CC23B57"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0DB4C3F7517ABBE2"
+				item: "gtceu:lithium_dust"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["5DB1BB2C0A548348"]
+			description: ["必备"]
+			id: "52172228E56BBA28"
+			rewards: [{
+				id: "385BD17881DDA34B"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1C70BCD973D43938"
+				item: "gtceu:mv_extruder"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5DB1BB2C0A548348"]
+			description: ["自动农场"]
+			id: "18684490251DBD9D"
+			rewards: [
+				{
+					id: "69A9899CC46674E7"
+					item: "minecraft:melon_seeds"
+					type: "item"
+				}
+				{
+					id: "68C10767F30C748E"
+					item: "gtceu:gold_credit"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "251F244012D1F786"
+				item: "gtceu:greenhouse"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["5DB1BB2C0A548348"]
+			id: "34556BF64C3671AC"
+			rewards: [{
+				id: "2F336111B0C0533D"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3240F1BC70CA2864"
+				item: "gtceu:mv_sifter"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7C1D0E17F83897F2"]
+			dependency_requirement: "all_started"
+			id: "5E04CE621365ACA8"
+			rewards: [{
+				id: "3E54D28D32766C73"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3C7E181AEF28C347"
+				item: "gtceu:mv_emitter"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5E04CE621365ACA8"]
+			id: "21B437543F64957A"
+			rewards: [{
+				id: "191489FC8C6755CF"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "37E709C12358E100"
+				item: "gtceu:mv_laser_engraver"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5DB1BB2C0A548348"]
+			id: "3E4F4984408E6EBA"
+			rewards: [{
+				id: "7C5382BC4F66B1B0"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "29F53A7EC20F6F1C"
+				item: "gtceu:mv_mixer"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5DB1BB2C0A548348"]
+			description: ["生产润滑油"]
+			id: "4F15A190E07FF79A"
+			rewards: [{
+				id: "5D853C7B522AAA9B"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "061E46B5EF13E600"
+				item: "gtceu:mv_brewery"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["48A666D4FA218EA9"]
+			id: "4A9F3D33A23BA418"
+			rewards: [{
+				id: "15AB9A7918B95524"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1DFC7033A66E6CEF"
+				item: "gtceu:mv_cutter"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"3CE1CF84836DAB98"
+				"5A80C5460AED6BF8"
+			]
+			description: [
+				"单晶硅是一种纯净的硅材料，其晶体结构在三个维度上都是有序和连续的。单晶硅具有高度的晶体完整性和均匀性，因此它是一种非常重要的半导体材料，广泛应用于电子和光伏行业。"
+				"在电子领域，单晶硅是制造集成电路（IC）和半导体器件的基础材料，因为它具有良好的电子迁移率和可控的半导体特性。这些器件包括晶体管、二极管、太阳能电池和各种传感器。"
+				"在光伏行业，单晶硅太阳能电池因其较高的转换效率和较长的使用寿命而备受青睐。单晶硅太阳能电池板由单晶硅棒切片制成，这些硅片经过加工和处理后能够有效地将太阳光转换为电能。"
+			]
+			id: "64DA6C62EF262EEA"
+			rewards: [{
+				id: "7960583187082B34"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "52BDDADA7DC4B562"
+				item: "gtceu:silicon_boule"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"405C1A2C5161FAB9"
+				"21B437543F64957A"
+				"4A9F3D33A23BA418"
+				"486370EEE9CEF62A"
+			]
+			description: [
+				"PIC（功率集成电路）是一种专门设计用于处理高电流和高电压的集成电路。它们通常用于电力电子设备中，如电源适配器、变频器、电动汽车和工业控制系统。"
+				"功率集成电路可以包含多种功能，如电源管理、电压调节、功率转换、电机控制等。它们通常由MOSFET（金属-氧化物-半导体场效应晶体管）、IGBT（绝缘栅双极晶体管）等功率晶体管组成，这些晶体管能够处理较大的电流和电压。"
+				"功率集成电路的设计目标是提高能效、减少体积、降低成本并提供所需的电气性能。"
+			]
+			id: "06BB3ECC5CB2EA72"
+			tasks: [{
+				id: "2F6A08E239CD3F41"
+				item: "gtceu:ulpic_chip"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"34556BF64C3671AC"
+				"4A9F3D33A23BA418"
+			]
+			dependency_requirement: "one_completed"
+			description: ["2种方式都可以获取"]
+			hide_dependency_lines: true
+			id: "486370EEE9CEF62A"
+			tasks: [
+				{
+					id: "6712DE42CA20EF77"
+					item: "gtceu:sapphire_lens"
+					type: "item"
+				}
+				{
+					id: "0AAF57964CF27F1B"
+					item: "gtceu:ruby_lens"
+					type: "item"
+				}
+				{
+					id: "2AA5BDE67FEEA007"
+					item: "gtceu:emerald_lens"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3E4F4984408E6EBA"
+				"0CC95FCF053DD0B9"
+			]
+			id: "1BC342B3F09471BA"
+			tasks: [{
+				id: "0B18099855C2C470"
+				item: "gtceu:stainless_steel_dust"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5DB1BB2C0A548348"]
+			id: "53C059106731BFB4"
+			rewards: [{
+				id: "6C83F26AEA6E5C7C"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "19DF7030EA9329AD"
+				item: "gtceu:mv_assembler"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"06BB3ECC5CB2EA72"
+				"53C059106731BFB4"
+			]
+			id: "66111CD69F4D7AE3"
+			rewards: [{
+				id: "4FC11E9C381001B5"
+				item: "gtceu:mv_energy_input_hatch"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1711E69654139EFF"
+				item: "gtceu:mv_energy_input_hatch"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"66111CD69F4D7AE3"
+				"1BC342B3F09471BA"
+			]
+			description: ["HV时代的主要材料"]
+			id: "60C149F551ED9513"
+			rewards: [{
+				id: "28212B94E95EA304"
+				item: "gtceu:platinum_credit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [{
+				id: "4F45077365097DBB"
+				item: "gtceu:stainless_steel_ingot"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5DB1BB2C0A548348"]
+			description: ["只有坎塔尔和硅2种锭可以这样冷却"]
+			id: "05E6E47D35883CB8"
+			rewards: [{
+				id: "4167F4FC3742C8B0"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0DA3377274D3EDDF"
+				item: "gtceu:mv_chemical_bath"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"3E4F4984408E6EBA"
+				"0CC95FCF053DD0B9"
+			]
+			id: "589E5C204B2D5032"
+			tasks: [{
+				id: "13BD3B6D37B79232"
+				item: "gtceu:kanthal_dust"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"05E6E47D35883CB8"
+				"66111CD69F4D7AE3"
+				"589E5C204B2D5032"
+			]
+			description: [
+				"因其柔韧性、耐用性和拉伸强度而被用于加热元件。"
+				"目前只能用水冷却"
+			]
+			id: "4255808A0CBBC851"
+			rewards: [{
+				count: 32
+				id: "384588285A9C38BD"
+				item: "gtceu:kanthal_ingot"
+				type: "item"
+			}]
+			tasks: [{
+				id: "44BA464CFE52EE60"
+				item: "gtceu:kanthal_ingot"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4255808A0CBBC851"]
+			id: "768D0EE2B7B540CD"
+			rewards: [{
+				id: "0F96C8A1F9DD92B2"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1D740CF5CBFF768A"
+				item: "gtceu:kanthal_coil_block"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["53C059106731BFB4"]
+			description: [
+				"虚空获取油"
+				"只能安装一个能源仓，2个机器会停机"
+			]
+			id: "33AB93CADFC6B494"
+			rewards: [{
+				id: "735EB37B09982631"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "46497EEA67E6C246"
+				item: "gtceu:mv_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: 6.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["667BE50F26659DF9"]
+			description: ["通过电解红宝石获取"]
+			id: "0CC95FCF053DD0B9"
+			rewards: [{
+				count: 16
+				id: "30416FB6FA043E92"
+				item: "gtceu:chromium_dust"
+				type: "item"
+			}]
+			tasks: [{
+				id: "79A95F0310978134"
+				item: "gtceu:chromium_dust"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["768D0EE2B7B540CD"]
+			description: ["蚀刻产量是普通单晶硅的4倍，有了HV激光蚀刻机后才能使用"]
+			id: "29046933CED8971A"
+			rewards: [{
+				id: "549EC7351F3DECFC"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "79929E713C35BCCE"
+				item: "gtceu:phosphorus_boule"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7C1D0E17F83897F2"]
+			dependency_requirement: "all_started"
+			id: "3B2F570DD548E312"
+			rewards: [{
+				id: "004F2AA852D3E91B"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "24AB2A0BA7902637"
+				item: "gtceu:mv_sensor"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3B2F570DD548E312"
+				"5E04CE621365ACA8"
+			]
+			description: ["三录仪"]
+			id: "1AF4C8C111FE9156"
+			rewards: [{
+				id: "1D3333646DAF6EC5"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4C3F1E0213341952"
+				item: "gtceu:portable_scanner"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5DB1BB2C0A548348"]
+			description: ["很好的无限资源生产器"]
+			id: "4253680C734DEA98"
+			rewards: [{
+				id: "5E580CC3FE93615C"
+				item: "minecraft:diorite"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7F7DD027E6B6D8CB"
+				item: "gtceu:mv_rock_crusher"
+				type: "item"
+			}]
+			x: -5.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4253680C734DEA98"]
+			description: ["无限的硅，铝，锂，钠"]
+			id: "6D9236A60AD1F9BB"
+			rewards: [{
+				id: "5CEDC58950655974"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "650705066B0C6AB6"
+				item: "gtceu:clay_dust"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["34556BF64C3671AC"]
+			id: "7C1D0E17F83897F2"
+			tasks: [{
+				id: "75D98485C5E6C01A"
+				item: "gtceu:flawless_emerald_gem"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0CC95FCF053DD0B9"
+				"3E4F4984408E6EBA"
+			]
+			id: "621C80D9B852B312"
+			tasks: [{
+				id: "59D09CF0BD53556E"
+				item: "gtceu:vanadium_steel_dust"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["621C80D9B852B312"]
+			description: ["钒钢是一种特殊的合金钢，通过在其中添加钒元素来提高其机械性能，如强度、韧性、耐磨性和耐热性。这种材料常用于制造高负荷的工业零件和工具。"]
+			id: "48A666D4FA218EA9"
+			rewards: [{
+				id: "0077AFC4022D4D09"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0AC8A90CD378612E"
+				item: "gtceu:vanadium_steel_ingot"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["48A666D4FA218EA9"]
+			description: ["无CD，可穿墙"]
+			id: "64802F81DE231743"
+			rewards: [{
+				id: "3008F39491FBC4DD"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "666B4F40EF10AEB9"
+				item: "travelanchors:travel_staff"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["150F409313B13620"]
+			description: ["与LV时期的相同，除此之外还有几个零件需要制作"]
+			icon: "gtceu:mv_electric_motor"
+			id: "5DB1BB2C0A548348"
+			rewards: [{
+				id: "50C8B1BDFB981E7D"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "23273DEC31F4F23A"
+				item: "gtceu:mv_electric_motor"
+				type: "item"
+			}]
+			title: "MV零部件"
+			x: -5.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["52172228E56BBA28"]
+			description: ["容量极大"]
+			id: "1417EDD1EA19203B"
+			rewards: [{
+				id: "54F2235948335E70"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "74B11FAA74A8BEC0"
+				item: "gtceu:lv_super_chest"
+				type: "item"
+			}]
+			x: -8.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["53C059106731BFB4"]
+			description: [
+				"高效的生产机器，放入多个输入总线并开启隔离可以一台机器执行多个电路或者模具的配方"
+				"单方块机器需放入工厂GUI内，如果放入的机器等级和工厂等级不同，工厂就不会工作。"
+				"关于并行，可以去提示章节查看"
+			]
+			id: "715C7EC5B34E9C45"
+			rewards: [{
+				id: "60000C57C3BB3E28"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.3d
+			tasks: [
+				{
+					id: "3A4077910992928C"
+					item: "gtceu:processing_plant"
+					type: "item"
+				}
+				{
+					id: "5B3A06EE73A933BC"
+					item: "gtceu:assemble_plant"
+					type: "item"
+				}
+				{
+					id: "31A10360EC5B5417"
+					item: "gtceu:separated_plant"
+					type: "item"
+				}
+				{
+					id: "31D8714FE8C4AA68"
+					item: "gtceu:mixed_plant"
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"405C1A2C5161FAB9"
+				"486370EEE9CEF62A"
+			]
+			id: "2D6B316B2999B220"
+			tasks: [
+				{
+					id: "3604C98BE2C695A9"
+					item: "gtceu:ilc_chip"
+					type: "item"
+				}
+				{
+					id: "1D2185D71020CF85"
+					item: "gtceu:ram_chip"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["64DA6C62EF262EEA"]
+			id: "405C1A2C5161FAB9"
+			tasks: [{
+				id: "778B097E775212A3"
+				item: "gtceu:silicon_wafer"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2D6B316B2999B220"]
+			id: "1E4B3711D58DF793"
+			rewards: [{
+				id: "090BEDE387C8F18C"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "44314BD29132E5BD"
+					item: "gtceu:basic_integrated_circuit"
+					type: "item"
+				}
+				{
+					id: "11C9C686089A58B3"
+					item: "gtceu:good_integrated_circuit"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["05E6E47D35883CB8"]
+			id: "413CDDAAE8E40318"
+			rewards: [{
+				id: "7120B4AD8BF8111E"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "171D92A70B9C18CD"
+				item: "gtceu:silicon_ingot"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["413CDDAAE8E40318"]
+			id: "55E8323DD9292C04"
+			rewards: [{
+				id: "55949D2A38C739E6"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "72FD881F0D98D49A"
+				item: "gtceu:transistor"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"55E8323DD9292C04"
+				"1E4B3711D58DF793"
+			]
+			description: ["继续更换更便宜的终极控制电路"]
+			id: "3F3FBA77395EF2E1"
+			rewards: [{
+				id: "50EA114E3988D00A"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1ADD9FA0FE562996"
+				item: "gtceu:advanced_integrated_circuit"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["60C149F551ED9513"]
+			id: "5D724C8B6198E9E7"
+			rewards: [{
+				id: "260BA81F9C1927BC"
+				item: {
+					Count: 1
+					id: "avaritia:skull_fire_sword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7EA698F4ABA360E8"
+				item: "gtceu:large_steam_input_hatch"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["66111CD69F4D7AE3"]
+			description: [
+				"2个普通能源仓有4A功率，但会将配方等级提升，从而导致如通用工厂机器需要更高的条件来运行，"
+				"但如果只放一个4A能源仓，那么机器将只会提升功率而不提升配方等级，可以让通用工厂用MV机器跑出HV的速度，如果你放2个4A，那么机器也会提升配方等级，和普通的相比多了1倍功率，这不会带来超频效果，但是如果机器可以并行，那么将会比普通仓获得更多并行"
+			]
+			id: "1C7891851481570A"
+			tasks: [{
+				id: "55F93394CEE0FD26"
+				item: "gtceu:mv_energy_input_hatch_4a"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1C7891851481570A"]
+			description: ["正如4A的特性，这个可以让你用MV小机器使用EV级功率"]
+			id: "3CF63975311A1B43"
+			tasks: [{
+				id: "73AA9A2A78D23067"
+				item: "gtceu:mv_energy_input_hatch_16a"
+				type: "item"
+			}]
+			x: -8.5d
+			y: 3.0d
+		}
+	]
+	subtitle: ["Tier2-MV"]
+	title: "中压"
+}

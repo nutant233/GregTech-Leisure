@@ -1,0 +1,656 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "lv"
+	group: "53FD41080ED1E796"
+	icon: "gtceu:lv_machine_hull"
+	id: "393DD40CAFBB69A5"
+	order_index: 1
+	quest_links: [{
+		id: "0B8B2F7F6C5F0B43"
+		linked_quest: "4C591AA4F1D907C1"
+		x: -2.0d
+		y: -4.0d
+	}]
+	quests: [
+		{
+			dependencies: ["51B9A72C19F84F0E"]
+			description: ["电动马达是一种将电能转换为机械能的装置。它的工作原理基于电磁感应，当电流通过电动机的线圈时，会在磁场中产生力，这个力使得电动机的转子旋转，从而驱动负载工作。电动马达广泛应用于各种工业、商业和家用电器中。"]
+			id: "0223A643A5066452"
+			tasks: [{
+				id: "24996B85BAF15356"
+				item: "gtceu:lv_electric_motor"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0223A643A5066452"]
+			description: ["电力活塞是由电力驱动的往复运动装置，可以将电动机的旋转运动转换为直线往复运动。这样的装置可以用于各种应用，如压缩机、气动执行器、机械臂等。"]
+			id: "29A8EC2EB3240278"
+			tasks: [{
+				id: "5F0D1E840CD57B74"
+				item: "gtceu:lv_electric_piston"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"0223A643A5066452"
+				"29A8EC2EB3240278"
+			]
+			description: [
+				"机械臂是一种模仿人类手臂功能的机械装置，通常由一系列连杆和关节组成，能够进行一系列复杂的运动，包括旋转、弯曲和伸展。机械臂可以通过编程或远程控制来执行各种任务，如搬运、组装、焊接、喷涂、测量和探索等。"
+				"这些部件还可以用作覆盖版"
+			]
+			id: "0332882DFA45B956"
+			tasks: [{
+				id: "67355131E7E55AAE"
+				item: "gtceu:lv_robot_arm"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0223A643A5066452"]
+			description: ["传送带是一种运输机械，用于将材料或产品从一个地点搬运到另一个地点。它由一个或多个连续的带状结构组成，围绕两个滚筒旋转，这些滚筒作为驱动和支撑点。传送带可以水平运行，也可以倾斜或垂直运行，以适应不同的搬运需求。"]
+			id: "3DDFE62FF48A9135"
+			tasks: [{
+				id: "4913190E81A4B668"
+				item: "gtceu:lv_conveyor_module"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0223A643A5066452"]
+			id: "2D6BB32B642AE8BA"
+			tasks: [{
+				id: "5DBFDA1AF623D088"
+				item: "gtceu:lv_electric_pump"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"7CB85061F0822830"
+				"553B2D61416792DC"
+			]
+			id: "51B9A72C19F84F0E"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "13DADE13289E59D0"
+				title: "低压LV"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["0223A643A5066452"]
+			description: ["让你更加高效的获得导线和细导线"]
+			hide_dependent_lines: true
+			id: "0CF19CAFB3355075"
+			tasks: [{
+				id: "588BCA87500214EF"
+				item: "gtceu:lv_wiremill"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"0223A643A5066452"
+				"29A8EC2EB3240278"
+			]
+			description: ["让你更高效的获得板和箔，一锭出一板，一锭出四箔"]
+			hide_dependent_lines: true
+			id: "3DC0B933936357B3"
+			tasks: [{
+				id: "137AFD6CB3927548"
+				item: "gtceu:lv_bender"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"0223A643A5066452"
+				"29A8EC2EB3240278"
+			]
+			description: ["让你更高效的获得杆和螺丝，一锭出两杆，一螺栓出一螺丝"]
+			id: "048455FFC9BDC82A"
+			tasks: [{
+				id: "57EDE3A779842162"
+				item: "gtceu:lv_lathe"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["51B9A72C19F84F0E"]
+			hide_dependency_lines: true
+			id: "51F0CE5F1BCC78D1"
+			tasks: [{
+				id: "3DA43E9650F117DD"
+				item: "gtceu:lv_polarizer"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"20F6BF1EDC6EBDC1"
+				"32CE144D9A9F0943"
+				"3F38CC8C8D650202"
+				"198ED0A20800F3ED"
+			]
+			icon_scale: 2.0d
+			id: "07D0D7005DA4F446"
+			shape: "circle"
+			size: 2.0d
+			tasks: [{
+				id: "0BAFA129FC209B2A"
+				item: "gtceu:electric_blast_furnace"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3E50EE376968519F"]
+			id: "32CE144D9A9F0943"
+			tasks: [{
+				id: "66CE417A92BDA931"
+				item: "gtceu:lv_energy_input_hatch"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["51B9A72C19F84F0E"]
+			hide_dependency_lines: true
+			id: "3F38CC8C8D650202"
+			tasks: [
+				{
+					id: "7DD304EE89C9B95E"
+					item: "gtceu:maintenance_hatch"
+					type: "item"
+				}
+				{
+					id: "2CD0C7B93136636E"
+					item: "gtceu:lv_input_hatch"
+					type: "item"
+				}
+				{
+					id: "0814DB1EBFD42A5B"
+					item: "gtceu:lv_input_bus"
+					type: "item"
+				}
+				{
+					id: "0338C31DFA586B4D"
+					item: "gtceu:lv_output_bus"
+					type: "item"
+				}
+			]
+			title: "一些仓室"
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"3E50EE376968519F"
+				"18C2AB18B354F774"
+				"7F9F473B8C508676"
+				"36E33432C72763C8"
+			]
+			id: "20F6BF1EDC6EBDC1"
+			shape: "circle"
+			size: 2.0d
+			tasks: [{
+				count: 16L
+				id: "022D8EB7519F65E1"
+				item: { Count: 16, id: "gtceu:cupronickel_coil_block" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0332882DFA45B956"
+				"3DDFE62FF48A9135"
+			]
+			id: "3E50EE376968519F"
+			tasks: [{
+				id: "0A32B247C01822D2"
+				item: "gtceu:lv_assembler"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"29A8EC2EB3240278"
+				"2D6BB32B642AE8BA"
+			]
+			id: "63C2FA96C708C125"
+			tasks: [{
+				id: "061EC839843C4CDA"
+				item: "gtceu:lv_extractor"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"13DADE13289E59D0"
+				"77406A75BD5839C2"
+			]
+			id: "7CC28185463F24C2"
+			tasks: [{
+				id: "1B0AD5C6137AEFCE"
+				item: "gtceu:cupronickel_ingot"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["63C2FA96C708C125"]
+			id: "18C2AB18B354F774"
+			tasks: [{
+				id: "27384B8F957A3BC0"
+				item: "gtceu:tin_alloy_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"51B9A72C19F84F0E"
+				"77406A75BD5839C2"
+			]
+			hide_dependency_lines: true
+			id: "198ED0A20800F3ED"
+			tasks: [{
+				id: "1CB9DD3F4D92C8FD"
+				item: "gtceu:invar_ingot"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"0CF19CAFB3355075"
+				"7CC28185463F24C2"
+			]
+			id: "7F9F473B8C508676"
+			tasks: [{
+				id: "75A397E09A1E76A7"
+				item: "gtceu:cupronickel_double_wire"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3DC0B933936357B3"]
+			id: "36E33432C72763C8"
+			tasks: [{
+				id: "1CC54740C4BEE22C"
+				item: "gtceu:bronze_foil"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["51B9A72C19F84F0E"]
+			hide_dependency_lines: true
+			id: "6E3B42BCBA6064F5"
+			tasks: [{
+				id: "2FE273B543714BD1"
+				item: "gtceu:lv_electrolyzer"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6E3B42BCBA6064F5"]
+			description: ["LV阶段你的铝粉只能通过电解蓝宝石和绿色蓝宝石粉获得"]
+			hide_dependency_lines: false
+			id: "73EFFB71A1A827D6"
+			tasks: [{
+				id: "2E83C5426C90F1A6"
+				item: "gtceu:aluminium_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"73EFFB71A1A827D6"
+				"07D0D7005DA4F446"
+			]
+			id: "11B60450D7F3C188"
+			size: 2.0d
+			tasks: [{
+				id: "298A039260B352D6"
+				item: "gtceu:aluminium_ingot"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"0877362A9EE36FB3"
+				"006BBE4D312A2E2E"
+			]
+			id: "7D399E31506924A0"
+			tasks: [{
+				id: "0F9DE31D5976C043"
+				item: "gtceu:good_electronic_circuit"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7D399E31506924A0"]
+			id: "40C39645B1DE2488"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "348825C79AD479CA"
+				item: "kubejs:elite_control_circuit"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3E50EE376968519F"]
+			id: "3A97E85643D2F8AC"
+			tasks: [{
+				id: "395F73DF4EA428B0"
+				item: "gtceu:phenolic_circuit_board"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3A97E85643D2F8AC"
+				"1BF78ABAD1FF993F"
+			]
+			id: "006BBE4D312A2E2E"
+			tasks: [{
+				id: "4E8A56A18EA1888B"
+				item: "gtceu:phenolic_printed_circuit_board"
+				type: "item"
+			}]
+			x: 8.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0CF19CAFB3355075"]
+			id: "1BF78ABAD1FF993F"
+			tasks: [{
+				id: "5D16B78D90582E29"
+				item: "gtceu:silver_single_wire"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6D63FB02A50F8249"]
+			id: "0877362A9EE36FB3"
+			tasks: [{
+				id: "632999DA643003E5"
+				item: "gtceu:diode"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"5705516829BB38BE"
+				"30359A44D8B7E7A1"
+			]
+			id: "6D63FB02A50F8249"
+			tasks: [{
+				id: "3DBD74652FB4B8BF"
+				item: "gtceu:gallium_arsenide_dust"
+				type: "item"
+			}]
+			x: 8.0d
+			y: -4.0d
+		}
+		{
+			description: ["砷粉的来源是雄黄"]
+			id: "5705516829BB38BE"
+			tasks: [{
+				id: "7C622FF1D777475A"
+				item: "gtceu:arsenic_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["335ED39019FC62E7"]
+			description: ["镓粉的来源是热离闪锌矿"]
+			id: "30359A44D8B7E7A1"
+			tasks: [{
+				id: "74A9E28D77F8768D"
+				item: "gtceu:gallium_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["51B9A72C19F84F0E"]
+			hide_dependency_lines: true
+			id: "524AC325E68AEB3A"
+			tasks: [{
+				id: "4F2FF11089D97406"
+				item: "gtceu:lv_arc_furnace"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["51F0CE5F1BCC78D1"]
+			id: "18DC7021FF2C7EEB"
+			tasks: [{
+				id: "06EC3C1BF7D124CB"
+				item: "gtceu:magnetic_steel_rod"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["524AC325E68AEB3A"]
+			id: "31B5C9A6F8FB0BA2"
+			tasks: [{
+				id: "0C8DEF275C16A96E"
+				item: "gtceu:annealed_copper_ingot"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D6BB32B642AE8BA"]
+			hide_dependency_lines: true
+			id: "5C12B96341807611"
+			tasks: [{
+				id: "13AD3E7E937E345D"
+				item: "gtceu:lv_gas_collector"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5C12B96341807611"]
+			description: ["推荐用大型蒸汽离心机离心"]
+			icon: "gtceu:nitrogen_bucket"
+			id: "05707E2FF325F723"
+			tasks: [{
+				id: "34EEC000DAD79557"
+				title: "氮气和氧气"
+				type: "checkmark"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["51B9A72C19F84F0E"]
+			description: ["这个是lv阶段的超导材料"]
+			hide_dependency_lines: true
+			id: "44DD16023AF842F1"
+			tasks: [{
+				id: "001139BEE7311878"
+				item: "gtceu:conductive_alloy_ingot"
+				type: "item"
+			}]
+			title: "LV超导"
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"3DDFE62FF48A9135"
+				"2D6BB32B642AE8BA"
+			]
+			description: ["自动化的好帮手，还有升级版本"]
+			hide_dependency_lines: true
+			id: "3D8CF0C08F6A3075"
+			tasks: [{
+				id: "785EB9D4772FE036"
+				item: "gtceu:lv_buffer"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			can_repeat: false
+			dependencies: [
+				"54034055F57DDAA5"
+				"49ABB341017BAE85"
+			]
+			id: "388E5C1034C54D19"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "08CFFDE3C82C9FCF"
+				item: "gtceu:mv_machine_hull"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"3E50EE376968519F"
+				"35F31D71CC8B67CF"
+			]
+			id: "49ABB341017BAE85"
+			tasks: [{
+				id: "4B0294376308A36D"
+				item: "gtceu:copper_single_cable"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["11B60450D7F3C188"]
+			id: "54034055F57DDAA5"
+			tasks: [{
+				id: "20A2D5C286E8A31E"
+				item: "gtceu:aluminium_plate"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"27A9D4E765101CB9"
+				"5D4ADE3F2E57635C"
+			]
+			description: ["你需要用硫粉和生橡胶末在化学反应釜里面反应"]
+			id: "35F31D71CC8B67CF"
+			tasks: [{
+				id: "7C49A402D20FE1B1"
+				item: "gtceu:rubber_bucket"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0223A643A5066452"]
+			hide_dependency_lines: true
+			id: "27A9D4E765101CB9"
+			tasks: [{
+				id: "708FD829786614CE"
+				item: "gtceu:lv_chemical_reactor"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["335ED39019FC62E7"]
+			description: ["硫来自于远古世界，生橡胶来自于离心黏性树脂"]
+			id: "5D4ADE3F2E57635C"
+			tasks: [
+				{
+					id: "1F83D0A9E7203CB7"
+					item: "gtceu:sulfur_dust"
+					type: "item"
+				}
+				{
+					id: "40CDF40EC6D4E24F"
+					item: "gtceu:raw_rubber_dust"
+					type: "item"
+				}
+			]
+			title: "硫粉和生橡胶"
+			x: 8.0d
+			y: 0.0d
+		}
+	]
+	title: "低压LV"
+}

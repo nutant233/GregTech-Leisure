@@ -1,0 +1,637 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "319332DBAE997BBE"
+	group: "68CBF1606D696C68"
+	icon: "gtceu:luv_electric_motor"
+	id: "319332DBAE997BBE"
+	order_index: 6
+	quest_links: [
+		{
+			id: "2D863FE0CCAA0BFC"
+			linked_quest: "4BFA114E12BCB163"
+			shape: "rsquare"
+			size: 1.2d
+			x: -0.5d
+			y: -1.0d
+		}
+		{
+			id: "45CEA407E29E6BE5"
+			linked_quest: "6B71EE1A869ABCD5"
+			x: -3.5d
+			y: -1.0d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["0A5B42B66B1D4A98"]
+			id: "7F92A8EE58AD5BA2"
+			tasks: [{
+				id: "7247977F19E25C6A"
+				item: "gtceu:naquadah_dust"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["09F132EE8A88C872"]
+			id: "13BBF0FF3267BFDB"
+			tasks: [{
+				id: "78E1EA0D0D683394"
+				item: "gtceu:naquadah_coil_block"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["6E3CDFF8C93D440B"]
+			icon: "gtceu:fluoroantimonic_acid_bucket"
+			id: "26AA716D268DFD9A"
+			tasks: [{
+				id: "46E47C225B2D81DB"
+				title: "氟锑酸"
+				type: "checkmark"
+			}]
+			x: 5.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"7F92A8EE58AD5BA2"
+				"26AA716D268DFD9A"
+			]
+			description: ["经过一系列处理，就可以从硅岩粉中提取富集硅岩，超能硅岩，凯金"]
+			id: "0AAFF10F8CE6F898"
+			tasks: [{
+				id: "5E76C9D97928A594"
+				title: "硅岩处理"
+				type: "checkmark"
+			}]
+			x: 5.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"0AAFF10F8CE6F898"
+				"13BBF0FF3267BFDB"
+			]
+			id: "0507FDF7BECE29AF"
+			tasks: [{
+				id: "39855610E9E80307"
+				item: "gtceu:enriched_naquadah_ingot"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"13BBF0FF3267BFDB"
+				"2BEF03C52636E165"
+			]
+			description: ["ZPM阶段主要材料"]
+			id: "0485D45408234C99"
+			shape: "rsquare"
+			size: 1.2d
+			tasks: [{
+				id: "373808445A507E87"
+				item: "gtceu:naquadah_alloy_ingot"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["13BBF0FF3267BFDB"]
+			description: ["LuV超导体"]
+			id: "2CEEFDACE7B13D5A"
+			tasks: [{
+				id: "4EA57D5B0BBC42FB"
+				item: "gtceu:indium_tin_barium_titanium_cuprate_ingot"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["2CEEFDACE7B13D5A"]
+			id: "5B01312E34A3AD60"
+			tasks: [{
+				id: "7A45FAD14DF53B00"
+				item: "gtceu:superconducting_coil"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"79D48E5CA0E21A07"
+				"00B9091E4824D78C"
+				"0F22A8CE63F369CA"
+				"2CEEFDACE7B13D5A"
+				"5B01312E34A3AD60"
+				"4381BC8012E94E0A"
+				"4BFA114E12BCB163"
+			]
+			description: ["聚变是将两种较轻的元素转化为较重的元素的过程。"]
+			id: "118FDF6D9F868002"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "30F5A61CE755449F"
+				item: "gtceu:luv_fusion_reactor"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["118FDF6D9F868002"]
+			id: "52DF531AFB3A07CE"
+			tasks: [{
+				id: "102F17C54DB17FBD"
+				item: "gtceu:europium_ingot"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["52DF531AFB3A07CE"]
+			id: "4068B8F601B041D9"
+			tasks: [{
+				id: "167573A2E0ACFF35"
+				item: "gtceu:raw_crystal_chip"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4068B8F601B041D9"]
+			id: "368ED4C1A9ADA4D2"
+			tasks: [{
+				id: "5D8F250C052776B6"
+				item: "gtceu:raw_crystal_chip_parts"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"7F649184083236E1"
+				"1F0C8D37619111BE"
+			]
+			description: ["使用极高的直接能量流来进行类似电子电路的计算。"]
+			id: "5BB55AABB91EEF9D"
+			tasks: [{
+				id: "3BB71E30BB01BF1F"
+				item: "gtceu:crystal_processor"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5BB55AABB91EEF9D"]
+			id: "3DCB5E7F69CE5F7F"
+			tasks: [{
+				id: "042B52D3F408E0DA"
+				item: "gtceu:crystal_processor_assembly"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["3DCB5E7F69CE5F7F"]
+			id: "09856E59E52AEE7D"
+			tasks: [{
+				id: "3864B056087A7894"
+				item: "gtceu:crystal_processor_computer"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"09856E59E52AEE7D"
+				"298369255C8130F7"
+			]
+			id: "233CA36D529EC3FB"
+			tasks: [{
+				id: "6BB959FA3D648151"
+				item: "gtceu:crystal_processor_mainframe"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4068B8F601B041D9"]
+			id: "7F649184083236E1"
+			tasks: [{
+				id: "0471E640C4427300"
+				item: "gtceu:crystal_cpu"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["5B01312E34A3AD60"]
+			id: "72D3B5BC37024815"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "6A7178D43D22A237"
+				item: "gtceu:active_transformer"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["1C10383050657004"]
+			id: "4381BC8012E94E0A"
+			tasks: [{
+				id: "74011E6BE9AA8BDE"
+				item: "gtceu:uhpic_chip"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"5B01312E34A3AD60"
+				"4172820CE8E15F90"
+			]
+			id: "79D48E5CA0E21A07"
+			tasks: [{
+				id: "1716B0692F1C0249"
+				item: "gtceu:fusion_casing"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4058D1416D94BABB"]
+			id: "4172820CE8E15F90"
+			tasks: [{
+				id: "452A699C8A8C2AF5"
+				item: "gtceu:neutron_reflector"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"7F8C2ECC7CE2BF20"
+				"43B8C2A0BAF74B2C"
+			]
+			id: "00B9091E4824D78C"
+			tasks: [{
+				id: "20C4C63653ED3480"
+				item: "gtceu:luv_energy_input_hatch"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["2BEF03C52636E165"]
+			id: "23B23867F311BF51"
+			tasks: [{
+				id: "3CDD2D97C975A389"
+				item: "gtceu:trinium_coil_block"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["233CA36D529EC3FB"]
+			description: ["含有无法挖掘的矿物"]
+			id: "6DDE77C23FC5D067"
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "0F730F8E535FA432"
+				item: "gtceu:large_void_miner"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"52DF531AFB3A07CE"
+				"2A81EA75E3DD41A3"
+			]
+			description: ["效率更高"]
+			id: "52980D117AB477B2"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "2E8C86DE512279CC"
+				item: "gtceu:void_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["233CA36D529EC3FB"]
+			description: ["你可以不用制作小型组装机了"]
+			id: "2A0269009ABF1414"
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "17918BFA4E414A13"
+				item: "gtceu:precision_assembler"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0507FDF7BECE29AF"]
+			description: ["ZPM超导体"]
+			id: "0B89B3108EB4A01F"
+			tasks: [{
+				id: "7E7B15A8DCDA158C"
+				item: "gtceu:uranium_rhodium_dinaquadide_ingot"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2CEEFDACE7B13D5A"]
+			id: "4ECACC2A6159D332"
+			tasks: [{
+				id: "66F78A994427739B"
+				item: "gtceu:luv_field_generator"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"4ECACC2A6159D332"
+				"0B89B3108EB4A01F"
+			]
+			description: ["需要计算机提供的算力"]
+			id: "298369255C8130F7"
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "223832A139BBC896"
+				item: "gtceu:research_station"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"4ECACC2A6159D332"
+				"0B89B3108EB4A01F"
+			]
+			description: ["为设备运行提供算力，更多的算力需要升级组件或者使用交换机合并多个计算机算力"]
+			id: "50FFFB0EBEDAE50B"
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "1E7BE63B3A0D93A8"
+				item: "gtceu:high_performance_computation_array"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"53D0B2B73387C7CE"
+				"042A0E98DC1084B3"
+			]
+			id: "0DC5BFACB3D4BC95"
+			tasks: [{
+				id: "4A9623D2D33B88B9"
+				item: "gtceu:magneto_resonatic_dust"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["6DDE77C23FC5D067"]
+			description: [""]
+			id: "042A0E98DC1084B3"
+			tasks: [
+				{
+					id: "0B436E19F0479E87"
+					item: "gtceu:zirconium_dust"
+					type: "item"
+				}
+				{
+					id: "3EE902C024F94F0D"
+					item: "gtceu:tellurium_dust"
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0DC5BFACB3D4BC95"]
+			description: ["更便宜的电路"]
+			id: "566AEB5D28AB34DA"
+			optional: true
+			tasks: [{
+				id: "18EC26D87A2536DC"
+				item: "kubejs:imprinted_resonatic_circuit_board"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"4BFA114E12BCB163"
+				"076BD82842C349A3"
+				"6B71EE1A869ABCD5"
+				"7F8C2ECC7CE2BF20"
+			]
+			description: ["在有精密组装机之前你都得制作小型组装机"]
+			id: "43B8C2A0BAF74B2C"
+			tasks: [{
+				id: "77F6912E5D65A761"
+				item: "gtceu:luv_assembler"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["66C0D17BAE340EB4"]
+			description: ["新的材料"]
+			id: "076BD82842C349A3"
+			tasks: [
+				{
+					id: "464C4FCFEC9CD809"
+					item: "gtceu:polyphenylene_sulfide_foil"
+					type: "item"
+				}
+				{
+					id: "1D69AACF762B069C"
+					item: "gtceu:silicone_rubber_plate"
+					type: "item"
+				}
+				{
+					id: "09EF720849B3DFB1"
+					item: "gtceu:styrene_butadiene_rubber_plate"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["4BFA114E12BCB163"]
+			description: [
+				"可以输入/forge tps来查看游戏延迟，最好保证tps保持在20"
+				"以下事项会导致游戏卡顿"
+				"把所有东西都建在一个小空间里,这不会影响TPS,但会导致FPS下降"
+				"使用大量抽屉由于需要对每个抽屉进行迭代插入和提取,推荐改用AE存储"
+				"集中传输大量频道,推荐使用ME控制器来分散频道,尽量搭建子网络来减少主网络频道使用量"
+				"在网络中大量使用输入和输出总线.推荐使用ME接口"
+			]
+			id: "1866C18852956050"
+			tasks: [{
+				id: "075B9DA6F675FA75"
+				title: "如果你感到了卡顿"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["5E077F4541D0F4B1"]
+			id: "1F0C8D37619111BE"
+			tasks: [{
+				id: "733C183D65E9CA06"
+				item: "gtceu:multilayer_fiber_reinforced_printed_circuit_board"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"7F92A8EE58AD5BA2"
+				"7DCA0B7C9F3C3ACF"
+			]
+			id: "09F132EE8A88C872"
+			tasks: [{
+				id: "62E375AC37B369C7"
+				item: "gtceu:naquadah_ingot"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["09F132EE8A88C872"]
+			id: "1C10383050657004"
+			tasks: [{
+				id: "78A1A23B153BDD1E"
+				item: "gtceu:naquadah_boule"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"0AAFF10F8CE6F898"
+				"13BBF0FF3267BFDB"
+			]
+			id: "2BEF03C52636E165"
+			tasks: [{
+				id: "0B22F2ABE0FBC895"
+				item: "gtceu:trinium_ingot"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["23B23867F311BF51"]
+			id: "4A058FA1859A00D1"
+			tasks: [{
+				id: "20E616EF8F63C870"
+				item: "gtceu:naquadria_ingot"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["09F132EE8A88C872"]
+			id: "66AE53E13E3C3C19"
+			tasks: [{
+				id: "41F85AC3AB132C38"
+				item: "ad_astra:calorite_ingot"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["66AE53E13E3C3C19"]
+			id: "67784DEB22D18308"
+			rewards: [{
+				id: "6798C71A84FECE4E"
+				item: "avaritia:infinity_axe"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "1382D199FDBDEBF5"
+					item: {
+						Count: 1
+						id: "ad_astra_rocketed:tier_6_rocket"
+						tag: {
+							BotariumData: {
+								StoredFluids: [{
+									Amount: 0L
+									Fluid: "minecraft:empty"
+								}]
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2BCAFEB828914FFF"
+					item: "ad_astra:cryo_fuel_bucket"
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: -2.5d
+		}
+	]
+	subtitle: ["Tier6-LuV"]
+	title: "剧差压"
+}

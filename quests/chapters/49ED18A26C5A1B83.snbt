@@ -1,0 +1,1247 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "49ED18A26C5A1B83"
+	group: "40551FF3A34D90BA"
+	icon: "gtceu:electric_blast_furnace"
+	id: "49ED18A26C5A1B83"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "262671AC71B36736"
+			tasks: [{
+				id: "61480FBF487B19F1"
+				title: "多方块结构"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "124EE416D53264B8"
+			tasks: [{
+				id: "703A425F858BE442"
+				title: "各种功能方块"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "703F7F40C36AC0DD"
+			size: 2.0d
+			tasks: [{
+				id: "2AB92C4BB85484CD"
+				item: "gtceu:electric_blast_furnace"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["703F7F40C36AC0DD"]
+			id: "24D3D414058A19D8"
+			tasks: [{
+				count: 16L
+				id: "5C9D71CE1F39D1A4"
+				item: { Count: 16, id: "gtceu:cupronickel_coil_block" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["24D3D414058A19D8"]
+			id: "3BDD3759B2C12843"
+			tasks: [{
+				count: 16L
+				id: "0DD6195A3A0A58FC"
+				item: { Count: 16, id: "gtceu:kanthal_coil_block" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"3BDD3759B2C12843"
+				"4F6776718454D6D1"
+			]
+			id: "6C1258159E342BFB"
+			tasks: [{
+				count: 16L
+				id: "5CFB9A0F21385BD5"
+				item: "gtceu:nichrome_coil_block"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6C1258159E342BFB"]
+			id: "10FE41FB3D5B5118"
+			tasks: [{
+				count: 16L
+				id: "638FF3E26C81720D"
+				item: "gtceu:rtm_alloy_coil_block"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["10FE41FB3D5B5118"]
+			id: "31D132F6EC9062BC"
+			tasks: [{
+				count: 16L
+				id: "7B5204F3B6E6D82E"
+				item: { Count: 16, id: "gtceu:hssg_coil_block" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["31D132F6EC9062BC"]
+			id: "4706F66FF46487F2"
+			tasks: [{
+				count: 16L
+				id: "443DD5E60A85CE55"
+				item: { Count: 16, id: "gtceu:naquadah_coil_block" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4706F66FF46487F2"]
+			id: "20244C7F0CCA0B56"
+			tasks: [{
+				count: 16L
+				id: "2EF13FF8A46E8A81"
+				item: { Count: 16, id: "gtceu:trinium_coil_block" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["20244C7F0CCA0B56"]
+			id: "1634D669590E28E3"
+			tasks: [{
+				count: 16L
+				id: "69C2F24D7140D3EA"
+				item: { Count: 16, id: "gtceu:tritanium_coil_block" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["1634D669590E28E3"]
+			id: "00F50033D3AF8479"
+			tasks: [{
+				id: "5FCD131CFF643162"
+				item: { Count: 16, id: "kubejs:abyssalalloy_coil_block" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["00F50033D3AF8479"]
+			id: "0EE3316A709A45FE"
+			tasks: [{
+				id: "240F70B294FA73C1"
+				item: { Count: 16, id: "kubejs:titansteel_coil_block" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["0EE3316A709A45FE"]
+			id: "59FB03850785FF2F"
+			tasks: [{
+				id: "3B6E996C4F732910"
+				item: { Count: 16, id: "kubejs:adamantine_coil_block" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["59FB03850785FF2F"]
+			id: "5AEC213D2281F8F0"
+			tasks: [{
+				id: "32B961C1335D9D0D"
+				item: { Count: 16, id: "kubejs:naquadriatictaranium_coil_block" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["5AEC213D2281F8F0"]
+			id: "4C54B6D5B8BB6626"
+			tasks: [{
+				id: "40B8CE0E81F493CA"
+				item: { Count: 16, id: "kubejs:starmetal_coil_block" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["4C54B6D5B8BB6626"]
+			id: "66DA8A1B2CEEB9A1"
+			tasks: [{
+				id: "0999BA1473904A08"
+				item: { Count: 16, id: "kubejs:infinity_coil_block" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["66DA8A1B2CEEB9A1"]
+			id: "1795FC9ACAC4D042"
+			tasks: [{
+				id: "042FCC16A0D4A88D"
+				item: { Count: 16, id: "kubejs:hypogen_coil_block" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["1795FC9ACAC4D042"]
+			id: "7B8EC90F1EFDB7F2"
+			tasks: [{
+				id: "67129ADF4E0E8389"
+				item: { Count: 16, id: "kubejs:eternity_coil_block" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 11.5d
+		}
+		{
+			dependencies: ["66DA8A1B2CEEB9A1"]
+			id: "06EAF391250421CA"
+			size: 2.0d
+			tasks: [{
+				id: "3EDDB35968BBBEDD"
+				item: "gtceu:dimensionally_transcendent_plasma_forge"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 11.5d
+		}
+		{
+			id: "4F6776718454D6D1"
+			size: 2.0d
+			tasks: [{
+				id: "089D3DB381324C35"
+				item: "gtceu:vacuum_freezer"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			id: "34908D217BF13202"
+			tasks: [{
+				id: "1E87D587DFD3E87D"
+				item: "gtceu:cold_ice_freezer"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4F6776718454D6D1"]
+			id: "789045D2500D0273"
+			tasks: [{
+				id: "4C3CFED2CDA00203"
+				item: "gtceu:mega_vacuum_freezer"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			id: "1991013E3A63A228"
+			tasks: [{
+				id: "7CC5CA80646DA932"
+				item: "gtceu:blaze_blast_furnace"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["703F7F40C36AC0DD"]
+			id: "7EC8ABE240032E52"
+			tasks: [{
+				id: "08042E19C729FD76"
+				item: "gtceu:mega_blast_furnace"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"7EC8ABE240032E52"
+				"43BE6D55B3BB6FDE"
+			]
+			id: "06EDDFCA1F5A655D"
+			tasks: [{
+				id: "7664A77072AB9CBE"
+				item: "gtceu:super_blast_smelter"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["70B58231B2150488"]
+			id: "43BE6D55B3BB6FDE"
+			tasks: [{
+				id: "66B79900264C6A4C"
+				item: "gtceu:mega_alloy_blast_smelter"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			id: "70B58231B2150488"
+			size: 2.0d
+			tasks: [{
+				id: "46C1CD3452A95743"
+				item: "gtceu:alloy_blast_smelter"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5F5F348E3A34827E"]
+			id: "18DF7BD5424C42C2"
+			tasks: [{
+				id: "1F4D6E17C8653F61"
+				item: "gtceu:primitive_blast_furnace"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["18DF7BD5424C42C2"]
+			id: "369BD7F046987CB2"
+			size: 2.0d
+			tasks: [{
+				id: "18E383DE56A0FCFF"
+				item: "gtceu:dimensionally_transcendent_dirt_forge"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5F5F348E3A34827E"]
+			id: "14B9F8B8BB4FB8EE"
+			tasks: [{
+				id: "7B3AB142A4992E94"
+				item: "gtceu:bronze_large_boiler"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["388BD32463FA905D"]
+			id: "3EE3754E039F4075"
+			tasks: [{
+				id: "6968E1DED56DAABF"
+				item: "gtceu:steel_large_boiler"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			id: "744502A8023CFB5B"
+			tasks: [{
+				id: "61FB35BCA78F91AA"
+				item: "gtceu:titanium_large_boiler"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			id: "780C2F702D31BFCB"
+			tasks: [{
+				id: "0C42DD216CE02B13"
+				item: "gtceu:tungstensteel_large_boiler"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["780C2F702D31BFCB"]
+			id: "4AB7F1BE4D120AF9"
+			size: 2.0d
+			tasks: [{
+				id: "10D830BF010D798A"
+				item: "gtceu:dimensionally_transcendent_steam_boiler"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5F5F348E3A34827E"]
+			id: "5B84CF1D367582E4"
+			tasks: [{
+				id: "4FB2D4251A56E0E3"
+				item: "gtceu:steam_oven"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5B84CF1D367582E4"]
+			id: "67D7D6E7D2F3D8B3"
+			size: 2.0d
+			tasks: [{
+				id: "4831728CD372B9AF"
+				item: "gtceu:dimensionally_transcendent_steam_oven"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5F5F348E3A34827E"]
+			id: "293762688F27FD99"
+			tasks: [{
+				id: "7E8CE46EE2DFF56A"
+				item: "gtceu:steam_grinder"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["293762688F27FD99"]
+			id: "51A1A2397AF521D9"
+			tasks: [{
+				id: "62A40548C20A4310"
+				item: "gtceu:large_steam_macerator"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F5F348E3A34827E"]
+			id: "4877DB6020D6BFBC"
+			tasks: [{
+				id: "7619FF42134B3ED2"
+				item: "gtceu:steam_piston_hammer"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5F5F348E3A34827E"]
+			id: "7902A7E9ADB189D9"
+			tasks: [{
+				id: "35F12473994F904B"
+				item: "gtceu:steam_pressor"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5F5F348E3A34827E"]
+			id: "77406A75BD5839C2"
+			tasks: [{
+				id: "2AEC60CE651B6400"
+				item: "gtceu:steam_foundry"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5F5F348E3A34827E"]
+			id: "0B96B20B2FEE77CE"
+			tasks: [{
+				id: "1454A4D453C3E27E"
+				item: "gtceu:steam_mixer"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0B96B20B2FEE77CE"]
+			id: "37CD2592D45E71E0"
+			tasks: [{
+				id: "35F532684CE5F88C"
+				item: "gtceu:large_steam_mixer"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5276CA8FA5262C9B"]
+			id: "7FF9045E4B4B2459"
+			tasks: [{
+				id: "440816FA8D648C70"
+				item: "gtceu:large_steam_centrifuge"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5276CA8FA5262C9B"]
+			id: "7AE52BAD2043947A"
+			tasks: [{
+				id: "4DEA5FEBD6461E5F"
+				item: "gtceu:large_steam_thermal_centrifuge"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5F5F348E3A34827E"]
+			id: "4043EFEBD3B3F866"
+			tasks: [{
+				id: "282F36F20F540214"
+				item: "gtceu:steam_bath"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["4043EFEBD3B3F866"]
+			id: "4D7B7F0FA6962066"
+			tasks: [{
+				id: "32FE2B3978582F49"
+				item: "gtceu:large_steam_bath"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5F5F348E3A34827E"]
+			id: "20640FDFDB9A19EA"
+			tasks: [{
+				id: "5EBAAC64FCA23A6C"
+				item: "gtceu:steam_ore_washer"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["20640FDFDB9A19EA"]
+			id: "63EC74F3B67B9E2E"
+			tasks: [{
+				id: "5D864E297DE95B6E"
+				item: "gtceu:large_steam_ore_washer"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 12.0d
+		}
+		{
+			id: "3541676E1269F053"
+			size: 2.0d
+			tasks: [{
+				id: "216BEDD1FE314954"
+				item: "gtceu:large_chemical_reactor"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3541676E1269F053"]
+			id: "15C94BB329BF231C"
+			tasks: [{
+				id: "6277B0EFAA01A408"
+				item: "gtceu:chemical_plant"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["15C94BB329BF231C"]
+			id: "395977CDDDD7DB71"
+			tasks: [{
+				id: "30B926D755C75047"
+				item: "gtceu:large_chemical_plant"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 6.0d
+		}
+		{
+			id: "58602B0E6729355E"
+			tasks: [{
+				id: "1330107367833229"
+				item: "gtceu:processing_plant"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 10.0d
+		}
+		{
+			id: "2ADB67F311C445F8"
+			tasks: [{
+				id: "74447B4877CD2752"
+				item: "gtceu:assemble_plant"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 10.0d
+		}
+		{
+			id: "642B78B37564D838"
+			tasks: [{
+				id: "70343A54278D6D4C"
+				item: "gtceu:separated_plant"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 12.0d
+		}
+		{
+			id: "58357D371E6D632C"
+			tasks: [{
+				id: "7A9208C0BE230EA5"
+				item: "gtceu:mixed_plant"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 12.0d
+		}
+		{
+			id: "17A797C2D7167222"
+			tasks: [{
+				id: "7DEC23B5B5B60887"
+				item: "gtceu:distillation_tower"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 8.0d
+		}
+		{
+			id: "1C4D03D4C5202D67"
+			tasks: [{
+				id: "298F3156F852D73F"
+				item: "gtceu:cracker"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"3C071C0542CF935D"
+				"5CD26DECB937FC71"
+			]
+			description: ["原始人也要组装电路"]
+			id: "0A65389266654B6A"
+			tasks: [{
+				id: "08CFD0E0ECD34F97"
+				item: "gtceu:large_steam_circuit_assembler"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			id: "6992E6733C4AF2C8"
+			tasks: [{
+				id: "7D98AA262099E416"
+				item: "gtceu:multi_smelter"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 8.0d
+		}
+		{
+			id: "1A2E1B8496F9BCBC"
+			tasks: [{
+				id: "1A236859B4DFDAC8"
+				item: "gtceu:fishing_ground"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			id: "4BC1562A95EEFB49"
+			tasks: [{
+				id: "370B060E1D3FBCFC"
+				item: "gtceu:slaughterhouse"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["70B58231B2150488"]
+			id: "28D87403504BAC6E"
+			tasks: [{
+				id: "0A673087ED58B5F3"
+				title: "合金冶炼炉可以炖出很多奇奇怪怪的合金"
+				type: "checkmark"
+			}]
+			x: 12.0d
+			y: 2.0d
+		}
+		{
+			id: "4DB8234007297D23"
+			tasks: [{
+				id: "1CAB2CF1C63F092A"
+				item: "gtceu:large_material_press"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			id: "61FC724C91DD34AA"
+			tasks: [{
+				id: "556592649525E5EA"
+				item: "gtceu:large_wiremill"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 0.0d
+		}
+		{
+			id: "6646B75F928E5E24"
+			tasks: [{
+				id: "108CFC9419E38D01"
+				item: "gtceu:large_extruder"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 0.0d
+		}
+		{
+			id: "40F426C73BC0D0B1"
+			tasks: [{
+				id: "71B58F12D90004CD"
+				item: "gtceu:large_maceration_tower"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			id: "68231575D1C914D3"
+			tasks: [{
+				id: "24C4FBB352F17232"
+				item: "gtceu:large_rock_crusher"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			id: "2B84B8AF004A3E30"
+			tasks: [{
+				id: "0AD11A5E68B5AB76"
+				item: "gtceu:large_chemical_bath"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 2.0d
+		}
+		{
+			id: "4CE943B11817839B"
+			tasks: [{
+				id: "626DF9530989FAFF"
+				item: "gtceu:large_autoclave"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 2.0d
+		}
+		{
+			id: "0BA7E63542F3DF65"
+			tasks: [{
+				id: "46B00D07B903315D"
+				item: "gtceu:large_distillery"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 2.0d
+		}
+		{
+			id: "7B27C60DCA2E3E3B"
+			tasks: [{
+				id: "5457CF6985E9B652"
+				item: "gtceu:large_extractor"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 2.0d
+		}
+		{
+			id: "73098848CB2E14A0"
+			tasks: [{
+				id: "631601FF1B2F5811"
+				item: "gtceu:large_solidifier"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 2.0d
+		}
+		{
+			id: "18252D602561E4A9"
+			tasks: [{
+				id: "06C8CFECF0770A4B"
+				item: "gtceu:large_assembler"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 4.0d
+		}
+		{
+			id: "0892BF5A6B8239F3"
+			tasks: [{
+				id: "6C133A30621B7CF8"
+				item: "gtceu:large_circuit_assembler"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 4.0d
+		}
+		{
+			id: "4C3AEBDFC6EABF1C"
+			tasks: [{
+				id: "131B8455EC02C61C"
+				item: "gtceu:large_centrifuge"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 6.0d
+		}
+		{
+			id: "575ED5E8BFF4C4DA"
+			tasks: [{
+				id: "21A2787A7737A002"
+				item: "gtceu:large_sifting_funnel"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 6.0d
+		}
+		{
+			id: "1028F818343D7E98"
+			tasks: [{
+				id: "0774458710DDC0C1"
+				item: "gtceu:large_mixer"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 4.0d
+		}
+		{
+			id: "567F4961F73AF444"
+			tasks: [{
+				id: "68F64EA7774D3D95"
+				item: "gtceu:large_electrolyzer"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 4.0d
+		}
+		{
+			id: "733F780D21B24299"
+			tasks: [{
+				id: "00C8354009D8F1E9"
+				item: "gtceu:large_electromagnet"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			id: "39AF31AE6A35268B"
+			tasks: [{
+				id: "6AEE584059520EAE"
+				item: "gtceu:large_arc_smelter"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			id: "6877D6C1A85A3966"
+			tasks: [{
+				id: "73C1891D4BA13645"
+				item: "gtceu:large_engraving_laser"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 6.0d
+		}
+		{
+			id: "655590EA82BBCE85"
+			tasks: [{
+				id: "31F4AB1734BAF33E"
+				item: "gtceu:large_brewer"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 4.0d
+		}
+		{
+			id: "222812461331CD79"
+			tasks: [{
+				id: "2451AFBFC91B1C5B"
+				item: "gtceu:large_cutter"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1C4D03D4C5202D67"]
+			id: "49AAFC714080194F"
+			tasks: [{
+				id: "04AC6931B5188ABA"
+				item: "gtceu:large_cracker"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 16.0d
+		}
+		{
+			id: "6F214917085BB3C1"
+			tasks: [{
+				id: "6B3A120AF6198847"
+				item: "gtceu:large_gas_collector"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 14.0d
+		}
+		{
+			id: "6D92BE9ABB5872A8"
+			tasks: [{
+				id: "14DC29114E2E9E95"
+				item: "gtceu:void_miner"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 16.0d
+		}
+		{
+			id: "7655EE3D83EBB13E"
+			tasks: [{
+				id: "43B052665415761A"
+				item: "gtceu:iv_large_miner"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 16.0d
+		}
+		{
+			id: "473D7D8B36DB5430"
+			tasks: [{
+				id: "1E91FAD2754E680A"
+				item: "gtceu:ev_large_miner"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 16.0d
+		}
+		{
+			id: "2CCAD0B9D81993B8"
+			tasks: [{
+				id: "5E8405B5834ED9BA"
+				item: "gtceu:luv_large_miner"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"2CCAD0B9D81993B8"
+				"7655EE3D83EBB13E"
+				"473D7D8B36DB5430"
+			]
+			id: "56F2156559F2ADF9"
+			tasks: [{
+				id: "49BA26D8933E6AB2"
+				item: "gtceu:large_void_miner"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 16.0d
+		}
+		{
+			id: "4BE89B8ACA67B40E"
+			tasks: [{
+				id: "2AE174BF3F387D9B"
+				item: "gtceu:mv_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 14.0d
+		}
+		{
+			id: "2C5487A0EC202859"
+			tasks: [{
+				id: "30B3C1A31C071416"
+				item: "gtceu:hv_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 14.0d
+		}
+		{
+			id: "64FDE4E65171925B"
+			tasks: [{
+				id: "2CCF1EDF23AB860F"
+				item: "gtceu:ev_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"4BE89B8ACA67B40E"
+				"2C5487A0EC202859"
+				"64FDE4E65171925B"
+			]
+			id: "6D6A8592BA1B4A3B"
+			tasks: [{
+				id: "1C69197EB8ADD074"
+				item: "gtceu:void_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 14.0d
+		}
+		{
+			id: "219F925EFF51D910"
+			tasks: [{
+				id: "15159BAB2249A9C2"
+				item: "gtceu:implosion_compressor"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["219F925EFF51D910"]
+			id: "7B69F3FFF5B4ACD0"
+			tasks: [{
+				id: "385FF806612D15D2"
+				item: "gtceu:electric_implosion_compressor"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 16.0d
+		}
+		{
+			id: "22D20E733EF2AAA6"
+			tasks: [{
+				id: "4BFEF0EEFB69C047"
+				item: "gtceu:pyrolyse_oven"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["22D20E733EF2AAA6"]
+			id: "395FF094289E28A6"
+			tasks: [{
+				id: "08EC32D1BA08F740"
+				item: "gtceu:large_pyrolyse_oven"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 16.0d
+		}
+		{
+			id: "224B850538D346D3"
+			tasks: [{
+				id: "35754BC5CA22B983"
+				item: "gtceu:evaporation_plant"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 10.0d
+		}
+		{
+			id: "2576EB4B191FA2C2"
+			tasks: [{
+				id: "694E93AAE449976E"
+				item: "gtceu:primitive_pump"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 6.0d
+		}
+		{
+			id: "2868F50AE67459A0"
+			tasks: [{
+				id: "3F252D04A2CA9A6C"
+				item: "gtceu:coke_oven"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			id: "5A3ED2E3807DC4F8"
+			tasks: [{
+				id: "0F8C11179A5C3EDB"
+				item: "gtceu:wooden_multiblock_tank"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			id: "1AA844E565DA56CE"
+			tasks: [{
+				id: "27C60DD71B3C55C1"
+				item: "gtceu:steel_multiblock_tank"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 2.0d
+		}
+		{
+			id: "558B8208DD44E27B"
+			tasks: [{
+				id: "0BFDC960CC82E3B0"
+				item: "gtceu:assembly_line"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 18.0d
+		}
+		{
+			id: "05801CE2E3390E3F"
+			tasks: [{
+				id: "34B271313B0D9275"
+				item: "gtceu:advanced_assembly_line"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 18.0d
+		}
+		{
+			id: "592B6311A21418F2"
+			tasks: [{
+				id: "46362AC0356A022F"
+				item: "gtceu:circuit_assembly_line"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 20.0d
+		}
+		{
+			id: "2ECA13C21316E02E"
+			tasks: [{
+				id: "4C9B6C9E9C0C7530"
+				item: "gtceu:precision_assembler"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 18.0d
+		}
+		{
+			id: "51B87A7BB7ED907F"
+			tasks: [{
+				id: "6DF0A0A96D362F8A"
+				item: "gtceu:mage_assembler"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			id: "46ACC4672A4FBF67"
+			tasks: [{
+				id: "6459458AFA862B47"
+				item: "gtceu:suprachronal_assembly_line"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 20.0d
+		}
+		{
+			id: "3B7D2907D1B6A0D1"
+			tasks: [{
+				id: "39BBC4F42BD49987"
+				item: "gtceu:suprachronal_assembly_line_module"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 20.0d
+		}
+		{
+			id: "40D8E0B3024D5231"
+			tasks: [{
+				id: "295710BB8066D43B"
+				item: "gtceu:space_elevator"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 18.0d
+		}
+		{
+			id: "24F5D1338F48A57E"
+			tasks: [{
+				id: "3BA3485CD23604FF"
+				item: "gtceu:assembler_module"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 18.0d
+		}
+		{
+			id: "290495468BAB6553"
+			tasks: [{
+				id: "5F02C1D185DD1B36"
+				item: "gtceu:resource_collection"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 18.0d
+		}
+	]
+	title: "多方块结构"
+}
