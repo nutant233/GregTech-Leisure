@@ -263,6 +263,70 @@ machines:
   # Need restart Minecraft to apply.
   enableMoreBufferAbility: false
 
+  # Small Steam Boiler Options
+  smallBoilers:
+    # The amount of steam a Steam Solid Boiler produces per second at max temperature.
+    # Default: 120
+    solidBoilerBaseOutput: 960
+
+    # The amount of steam a High Pressure Steam Solid Boiler produces per second at max temperature.
+    # Default: 300
+    hpSolidBoilerBaseOutput: 2400
+
+    # The amount of steam a Steam Liquid Boiler produces per second at max temperature.
+    # Default: 240
+    liquidBoilerBaseOutput: 1920
+
+    # The amount of steam a High Pressure Steam Liquid Boiler produces per second at max temperature.
+    # Default: 600
+    hpLiquidBoilerBaseOutput: 4800
+
+    # The amount of steam a Steam Solar Boiler produces per second at max temperature.
+    # Default: 120
+    solarBoilerBaseOutput: 960
+
+    # The amount of steam a High Pressure Steam Solar Boiler produces per second at max temperature.
+    # Default: 360
+    hpSolarBoilerBaseOutput: 2880
+
+  # Large Steam Boiler Options
+  largeBoilers:
+    # The conversion rate between water and steam in Large Boilers.
+    # Default: 160
+    steamPerWater: 160
+
+    # The max temperature of the Large Bronze Boiler.
+    # Default: 800
+    bronzeBoilerMaxTemperature: 6400
+
+    # The heat speed of the Large Bronze Boiler.
+    # Default: 1
+    bronzeBoilerHeatSpeed: 2
+
+    # The max temperature of the Large Steel Boiler.
+    # Default: 1800
+    steelBoilerMaxTemperature: 14400
+
+    # The heat speed of the Large Steel Boiler.
+    # Default: 1
+    steelBoilerHeatSpeed: 4
+
+    # The max temperature of the Large Titanium Boiler.
+    # Default: 3200
+    titaniumBoilerMaxTemperature: 25600
+
+    # The heat speed of the Large Titanium Boiler.
+    # Default: 1
+    titaniumBoilerHeatSpeed: 8
+
+    # The max temperature of the Large Tungstensteel Boiler.
+    # Default: 6400
+    tungstensteelBoilerMaxTemperature: 51200
+
+    # The heat speed of the Large Tungstensteel Boiler.
+    # Default: 2
+    tungstensteelBoilerHeatSpeed: 16
+
 client:
   # Whether or not to enable Emissive Textures for GregTech Machines.
   # Default: true
@@ -406,6 +470,10 @@ compat:
     # This does not enable nor disable Converters.
     # Default: true
     nativeEUToPlatformNative: true
+
+    # Enable GTEU to Platform native (and vice versa) Converters.
+    # Default: false
+    enablePlatformConverters: false
 
     # Platform native Energy to GTEU ratio for converting FE to EU.
     # Only affects converters.

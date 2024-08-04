@@ -20,6 +20,8 @@
   "block.gtceu.advanced_hyper_reactor": "进阶超能反应堆",
   "block.gtceu.advanced_sps_crafting": "进阶超临界合成机",
   "block.gtceu.aggregation_device": "聚合装置",
+  "block.gtceu.uv_fluid_drilling_rig": "§3无尽流体钻机§r",
+  "gtceu.machine.uv_fluid_drilling_rig.tooltip": "甚至无消耗",
   "block.gtceu.annihilate_generator": "湮灭发电机",
   "block.gtceu.assemble_plant": "通用组装厂",
   "block.gtceu.assembler_module": "太空电梯组装模块",
