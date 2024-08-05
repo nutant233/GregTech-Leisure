@@ -16,8 +16,6 @@ const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUt
 const $WirelessEnergyManager = Java.loadClass("com.hepdd.gtmthings.api.misc.WirelessEnergyManager")
 const $BigInteger = Java.loadClass("java.math.BigInteger")
 const $GTCapabilityHelper = Java.loadClass("com.gregtechceu.gtceu.api.capability.GTCapabilityHelper")
-const $ContentBuilder = Java.loadClass("com.gregtechceu.gtceu.data.ContentBuilder")
-const create_hpca_content = $ContentBuilder().eu(GTValues.V[GTValues.MAX]).build()
 const tiers = [["ulv", 0], ["lv", 1], ["mv", 2], ["hv", 3], ["ev", 4], ["iv", 5], ["luv", 6], ["zpm", 7], ["uv", 8], ["uhv", 9], ["uev", 10], ["uiv", 11], ["uxv", 12], ["opv", 13], ["max", 14]]
 const cov_recipe = { "minecraft:bone_block": "kubejs:essence_block", "minecraft:oak_log": "minecraft:crimson_stem", "minecraft:birch_log": "minecraft:warped_stem", "gtceu:calcium_block": "minecraft:bone_block", "minecraft:moss_block": "minecraft:sculk", "minecraft:grass_block": "minecraft:moss_block", "kubejs:infused_obsidian": "kubejs:draconium_block_charged" }
 const mobList1 = ["chicken", "rabbit", "sheep", "cow", "horse", "pig", "donkey", "skeleton_horse", "villager", "iron_golem", "wolf", "goat", "parrot", "camel", "cat", "fox", "llama", "panda", "polar_bear"]
@@ -505,12 +503,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_inert_ptfe", "gtceu:block/machines/chemical_reactor")
 
     function getAdvancedHyperReactorMaxParallel(machine) {
-        if (machine.input(true, $ContentBuilder().fluid("gtceu:starmetal_plasma 1").build()).isSuccess()) {
-            machine.input(false, $ContentBuilder().fluid("gtceu:starmetal_plasma 1").build())
+        if (machine.inputFluid("gtceu:starmetal_plasma 1")) {
             return 8
         }
-        if (machine.input(true, $ContentBuilder().fluid("gtceu:dense_neutron_plasma 1").build()).isSuccess()) {
-            machine.input(false, $ContentBuilder().fluid("gtceu:dense_neutron_plasma 1").build())
+        if (machine.inputFluid("gtceu:dense_neutron_plasma 1")) {
             return 16
         }
     }
@@ -552,26 +548,22 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         let canParallel = false
         switch ($RecipeHelper.getOutputEUt(recipe)) {
             case GTValues.V[GTValues.UHV]:
-                if (machine.input(true, $ContentBuilder().fluid("gtceu:orichalcum_plasma 1").build()).isSuccess()) {
-                    machine.input(false, $ContentBuilder().fluid("gtceu:orichalcum_plasma 1").build())
+                if (machine.inputFluid("gtceu:orichalcum_plasma 1")) {
                     canParallel = true
                 }
                 break
             case GTValues.V[GTValues.UEV]:
-                if (machine.input(true, $ContentBuilder().fluid("gtceu:enderium_plasma 1").build()).isSuccess()) {
-                    machine.input(false, $ContentBuilder().fluid("gtceu:enderium_plasma 1").build())
+                if (machine.inputFluid("gtceu:enderium_plasma 1")) {
                     canParallel = true
                 }
                 break
             case GTValues.V[GTValues.UIV]:
-                if (machine.input(true, $ContentBuilder().fluid("gtceu:infuscolium_plasma 1").build()).isSuccess()) {
-                    machine.input(false, $ContentBuilder().fluid("gtceu:infuscolium_plasma 1").build())
+                if (machine.inputFluid("gtceu:infuscolium_plasma 1")) {
                     canParallel = true
                 }
                 break
             case GTValues.V[GTValues.UXV]:
-                if (machine.input(true, $ContentBuilder().fluid("gtceu:metastable_hassium_plasma 1").build()).isSuccess()) {
-                    machine.input(false, $ContentBuilder().fluid("gtceu:metastable_hassium_plasma 1").build())
+                if (machine.inputFluid("gtceu:metastable_hassium_plasma 1")) {
                     canParallel = true
                 }
                 break
@@ -663,16 +655,16 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/multiblock/assembly_line")
 
     function getSphereOfHarmonyOC(machine) {
-        if (machine.input(true, $ContentBuilder().circuit(4).build()).isSuccess()) {
+        if (machine.notConsumableCircuit(4)) {
             return 3
         }
-        if (machine.input(true, $ContentBuilder().circuit(3).build()).isSuccess()) {
+        if (machine.notConsumableCircuit(3)) {
             return 2
         }
-        if (machine.input(true, $ContentBuilder().circuit(2).build()).isSuccess()) {
+        if (machine.notConsumableCircuit(2)) {
             return 1
         }
-        if (machine.input(true, $ContentBuilder().circuit(1).build()).isSuccess()) {
+        if (machine.notConsumableCircuit(1)) {
             return 0
         }
         return null
@@ -746,12 +738,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     machine.holder.self().getPersistentData().putLong("helium", helium - 1024000000)
                     return $WirelessEnergyManager.addEUToGlobalEnergyMap(uuid, $BigInteger.valueOf(- (5277655810867200 * (8 ** oc))))
                 }
-                if (machine.input(true, $ContentBuilder().fluid("gtceu:hydrogen 100000").build()).isSuccess()) {
-                    machine.input(false, $ContentBuilder().fluid("gtceu:hydrogen 100000").build())
+                if (machine.inputFluid("gtceu:hydrogen 100000").build()) {
                     machine.holder.self().getPersistentData().putLong("hydrogen", hydrogen + 10000000)
                 }
-                if (machine.input(true, $ContentBuilder().fluid("gtceu:helium 1000000").build()).isSuccess()) {
-                    machine.input(false, $ContentBuilder().fluid("gtceu:helium 1000000").build())
+                if (machine.inputFluid("gtceu:helium 1000000")) {
                     machine.holder.self().getPersistentData().putLong("helium", helium + 10000000)
                 }
             }
@@ -1776,37 +1766,23 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where(" ", Predicates.any())
                 .build())
         .addCallBack("requestCWUt", machine => {
-            let tier = machine.self().getTier()
-            if (tier < 12 && machine.input(true, $ContentBuilder().eu(GTValues.V[GTValues.UIV]).build()).isSuccess() && machine.input(true, $ContentBuilder().item("kubejs:optical_mainframe").build()).isSuccess()) {
-                machine.input(false, $ContentBuilder().eu(GTValues.V[GTValues.UIV]).build())
-                return 512
-            }
-            if (tier < 13 && machine.input(true, $ContentBuilder().eu(GTValues.V[GTValues.UXV]).build()).isSuccess() && machine.input(true, $ContentBuilder().item("kubejs:exotic_mainframe").build()).isSuccess()) {
-                machine.input(false, $ContentBuilder().eu(GTValues.V[GTValues.UXV]).build())
-                return 1024
-            }
-            if (tier < 14 && machine.input(true, $ContentBuilder().eu(GTValues.V[GTValues.OpV]).build()).isSuccess() && machine.input(true, $ContentBuilder().item("kubejs:cosmic_mainframe").build()).isSuccess()) {
-                machine.input(false, $ContentBuilder().eu(GTValues.V[GTValues.OpV]).build())
-                return 2048
-            }
-            if (machine.input(true, $ContentBuilder().eu(GTValues.V[GTValues.MAX]).build()).isSuccess() && machine.input(true, $ContentBuilder().item("kubejs:supracausal_mainframe").build()).isSuccess()) {
-                machine.input(false, $ContentBuilder().eu(GTValues.V[GTValues.MAX]).build())
-                return 4096
-            }
-            return 0
+            return 2 ** machine.self().getTier()
         })
         .addCallBack("getMaxCWUt", machine => {
             let tier = machine.self().getTier()
-            if (tier > 13) {
-                return 4096
-            }
-            if (tier > 12) {
-                return 2048
-            }
-            if (tier > 11) {
+            if (tier < 12 && machine.notConsumableItem(Item.of("kubejs:optical_mainframe", 8))) {
                 return 1024
             }
-            return 512
+            if (tier < 13 && machine.notConsumableItem(Item.of("kubejs:exotic_mainframe", 8))) {
+                return 2048
+            }
+            if (tier < 14 && machine.notConsumableItem(Item.of("kubejs:cosmic_mainframe", 8))) {
+                return 4096
+            }
+            if (machine.notConsumableItem(Item.of("kubejs:supracausal_mainframe", 8))) {
+                return 8192
+            }
+            return 0
         })
         .workableCasingRenderer("gtceu:block/casings/hpca/computer_casing/back", "gtceu:block/super_computation")
 
@@ -1985,7 +1961,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("#", Predicates.air())
             .build())
         .beforeWorking(machine => {
-            if (machine.input(true, $ContentBuilder().fluid("gtceu:blaze " + (2 ** (machine.self().getTier() - 2)) * 10).build()).isSuccess()) {
+            if (machine.inputFluid("gtceu:blaze " + (2 ** (machine.self().getTier() - 2)) * 10)) {
                 return true
             }
             machine.getRecipeLogic().interruptRecipe()
@@ -1994,8 +1970,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
                 let tier = machine.self().getTier()
-                if (machine.input(true, $ContentBuilder().fluid("gtceu:blaze " + (2 ** (tier - 2)) * 10).build()).isSuccess()) {
-                    machine.input(false, $ContentBuilder().fluid("gtceu:blaze " + (2 ** (tier - 2)) * 10).build())
+                if (machine.inputFluid("gtceu:blaze " + (2 ** (tier - 2)) * 10)) {
                     return true
                 }
                 machine.getRecipeLogic().setProgress(0)
@@ -2027,7 +2002,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("#", Predicates.blocks("gtceu:luv_hermetic_casing"))
             .build())
         .beforeWorking(machine => {
-            if (machine.input(true, $ContentBuilder().fluid("gtceu:ice " + (2 ** (machine.self().getTier())) * 10).build()).isSuccess()) {
+            if (machine.inputFluid("gtceu:ice " + (2 ** (machine.self().getTier())) * 10)) {
                 return true
             }
             machine.getRecipeLogic().interruptRecipe()
@@ -2036,8 +2011,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
                 let tier = machine.self().getTier()
-                if (machine.input(true, $ContentBuilder().fluid("gtceu:ice " + (2 ** (tier)) * 10).build()).isSuccess()) {
-                    machine.input(false, $ContentBuilder().fluid("gtceu:ice " + (2 ** (tier)) * 10).build())
+                if (machine.inputFluid("gtceu:ice " + (2 ** (tier)) * 10)) {
                     return true
                 }
                 machine.getRecipeLogic().setProgress(0)
@@ -2447,12 +2421,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 let level = machine.self().getLevel()
                 let pos = machine.self().getPos().offset(0, -16, 0)
                 let block = level.getBlock(pos).getId()
-                if (machine.input(true, $ContentBuilder().item("kubejs:chain_command_block_core").build()).isSuccess() && block == "kubejs:command_block_broken") {
-                    machine.input(false, $ContentBuilder().item("kubejs:chain_command_block_core").build())
+                if (machine.inputItem(Item.of("kubejs:chain_command_block_core")) && block == "kubejs:command_block_broken") {
                     level.setBlockAndUpdate(pos, Block.getBlock("minecraft:chain_command_block").defaultBlockState())
                 }
-                if (machine.input(true, $ContentBuilder().item("kubejs:repeating_command_block_core").build()).isSuccess() && block == "kubejs:chain_command_block_broken") {
-                    machine.input(false, $ContentBuilder().item("kubejs:repeating_command_block_core").build())
+                if (machine.inputItem(Item.of("kubejs:repeating_command_block_core")) && block == "kubejs:chain_command_block_broken") {
                     level.setBlockAndUpdate(pos, Block.getBlock("minecraft:repeating_command_block").defaultBlockState())
                 }
             }
@@ -2507,8 +2479,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("c", Predicates.blocks("kubejs:create_hpca_component"))
             .build())
         .addCallBack("requestCWUt", machine => {
-            if (machine.input(true, create_hpca_content).isSuccess()) {
-                machine.input(false, create_hpca_content)
+            if (machine.inputEU(GTValues.V[GTValues.MAX])) {
                 return GTValues.V[GTValues.MAX]
             }
             return 0
@@ -3754,13 +3725,13 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             let level = machine.getLevel()
             let dim = level.getDimension()
             let server = level.getServer()
-            if (machine.input(true, $ContentBuilder().circuit(1).build()).isSuccess()) {
+            if (machine.notConsumableCircuit(1)) {
                 server.runCommandSilent(`execute in ${dim} run weather clear`)
             }
-            if (machine.input(true, $ContentBuilder().circuit(2).build()).isSuccess()) {
+            if (machine.notConsumableCircuit(2)) {
                 server.runCommandSilent(`execute in ${dim} run weather rain`)
             }
-            if (machine.input(true, $ContentBuilder().circuit(3).build()).isSuccess()) {
+            if (machine.notConsumableCircuit(3)) {
                 server.runCommandSilent(`execute in ${dim} run weather thunder`)
             }
         })

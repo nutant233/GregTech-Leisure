@@ -68,7 +68,7 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:super_blast_smelter", "耗时倍数x0.2")
     event.add("gtceu:dyson_sphere", ["发射戴森球模块后开始工作", "每次运行都有(模块数量/128 + 1)%的概率损坏一次模块", "当损坏高于60%时，输出效率降低为(100-损坏值)%", "当损坏达到100%时减少一次模块发射数量", "在损坏值高于70%时发射不会增加发射次数，但会将损坏值清零", "产能功率由发射的模块数量决定", "每次发射可使功率增加1A MAX"])
     event.add("gtceu:bedrock_drilling_rig", ["需要基岩在钻头下方", "每次运行都有10%的概率破坏基岩"])
-    event.add("gtceu:super_computation", ["根据不同的电压等级获得算力输出", "且每种算力输出需要不同的电路主机", "提供UIV级电压时，需要放入光学处理器主机，并提供512CWU/t", "提供UXV级电压时，需要放入奇异处理器主机，并提供1024CWU/t", "提供OpV级电压时，需要放入寰宇处理器主机，并提供2048CWU/t", "提供MAX级电压时，需要放入超因果处理器主机，并提供4096CWU/t"])
+    event.add("gtceu:super_computation", ["根据不同的电压等级获得算力输出", "且每种算力输出需要不同的电路主机8个", "提供UIV级电压时，需要放入光学处理器主机，并提供1024CWU/t", "提供UXV级电压时，需要放入奇异处理器主机，并提供2048CWU/t", "提供OpV级电压时，需要放入寰宇处理器主机，并提供4096CWU/t", "提供MAX级电压时，需要放入超因果处理器主机，并提供8192CWU/t"])
     event.add("gtceu:blaze_blast_furnace", ["需每秒提供§b10x(功率÷120)^1/2§r的§e液态烈焰§r", "耗时倍数x0.5", "最大并行数固定为4"])
     event.add("gtceu:cold_ice_freezer", ["需每秒提供§b10x电压等级^2§r的§b液态冰§r", "耗时倍数x0.5", "最大并行数固定为4"])
     event.add("gtceu:annihilate_generator", ["终极质能转换"])
