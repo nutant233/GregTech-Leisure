@@ -31,6 +31,7 @@
   "gtceu:recipe_logic_provider": null,
   "gtceu:recipe_output_info": null,
   "gtceu:stained_color": null,
+  "gtceu:transformer": null,
   "gtceu:workable_provider": null,
   "gtmthings:wireless_energy_hatch_provider": null,
   "jade:block_face": null,

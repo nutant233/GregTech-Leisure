@@ -502,7 +502,7 @@ ServerEvents.recipes(event => {
         .duration(400)
 
     gtr.assembly_line("ad_astra_rocketed:tier_7_rocket")
-        .itemInputs("ad_astra:rocket_nose_cone", "gtceu:zpm_field_generator", "16x #gtceu:circuits/uv", "4x gtceu:zpm_emitter", "4x gtceu:zpm_fluid_regulator", "4x ad_astra:calorite_tank", "ad_astra:calorite_engine", "8x ad_astra:ostrum_block", "64x ad_astra:calorite_plate", "4x ad_astra:rocket_fin")
+        .itemInputs("ad_astra:rocket_nose_cone", "gtceu:zpm_field_generator", "16x #gtceu:circuits/uv", "4x gtceu:zpm_emitter", "4x gtceu:zpm_fluid_regulator", "4x ad_astra:calorite_tank", "ad_astra:calorite_engine", "8x ad_astra:ostrum_block", "32x gtceu:fall_king_block", "64x ad_astra:calorite_plate", "4x ad_astra:rocket_fin")
         .inputFluids("gtceu:soldering_alloy 5760", "gtceu:lubricant 4000", "gtceu:pcb_coolant 4000", "gtceu:indium_tin_barium_titanium_cuprate 1296")
         .itemOutputs("ad_astra_rocketed:tier_7_rocket")
         .EUt(122880)
