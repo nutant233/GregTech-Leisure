@@ -19,7 +19,11 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["59D7F512A30C4290"]
+			dependencies: [
+				"59D7F512A30C4290"
+				"51B9A72C19F84F0E"
+			]
+			dependency_requirement: "one_completed"
 			description: [
 				"只要蒸汽足够，16A的LV是很厉害的，注意线缆不要放低于16A的"
 				"推荐制作一个大型锅炉来生产蒸汽"

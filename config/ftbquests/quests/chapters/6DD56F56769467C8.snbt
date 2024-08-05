@@ -346,6 +346,7 @@
 			dependencies: ["12E605EC5CFDE71A"]
 			icon: "gtceu:creosote_bucket"
 			id: "1ADCD127B6621645"
+			ignore_reward_blocking: true
 			tasks: [{
 				id: "7012AD604451425F"
 				title: "杂酚油"
@@ -369,8 +370,8 @@
 				title: "蒸汽传输"
 				type: "checkmark"
 			}]
-			x: 7.0d
-			y: -0.5d
+			x: 8.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["46F82A0A3D57C225"]
@@ -437,7 +438,7 @@
 				item: "gtceu:dimensionally_transcendent_dirt_forge"
 				type: "item"
 			}]
-			x: 14.5d
+			x: 14.25d
 			y: 0.0d
 		}
 		{
@@ -532,7 +533,7 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: 3.5d
+			y: 3.5999999999999996d
 		}
 		{
 			dependencies: ["51F4B817346DEC45"]
@@ -583,7 +584,7 @@
 				type: "checkmark"
 			}]
 			x: 7.0d
-			y: 3.5d
+			y: 3.0d
 		}
 		{
 			dependencies: [
@@ -620,7 +621,7 @@
 				type: "item"
 			}]
 			x: 7.0d
-			y: 1.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["59D7F512A30C4290"]

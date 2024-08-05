@@ -1046,8 +1046,8 @@
 				item: "ae2:blank_pattern"
 				type: "item"
 			}]
-			x: -9.5d
-			y: 6.0d
+			x: -11.5d
+			y: 7.5d
 		}
 		{
 			dependencies: [
