@@ -2448,7 +2448,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(1600)
         .stationResearch(b => b.researchStack(Item.of("kubejs:aggregatione_core"))
-        .EUt(GTValues.VA[GTValues.UEV])
+            .EUt(GTValues.VA[GTValues.UEV])
             .dataStack(Item.of("gtceu:data_module"))
             .CWUt(128))
 
@@ -2459,7 +2459,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(800)
         .stationResearch(b => b.researchStack(Item.of("kubejs:accelerated_pipeline"))
-        .EUt(GTValues.VA[GTValues.ZPM])
+            .EUt(GTValues.VA[GTValues.ZPM])
             .dataStack(Item.of("gtceu:data_module"))
             .CWUt(32))
 
@@ -2470,7 +2470,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .duration(1600)
         .stationResearch(b => b.researchStack(Item.of("gtceu:power_module"))
-        .EUt(GTValues.VA[GTValues.UV])
+            .EUt(GTValues.VA[GTValues.UV])
             .dataStack(Item.of("gtceu:data_module"))
             .CWUt(64))
 
@@ -13992,4 +13992,46 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:hydrogen 1000")
         .EUt(30)
         .duration(60)
+
+    gtr.assembler("kubejs:inverter")
+        .itemInputs("4x gtceu:polyethylene_plate", "4x gtceu:ilc_chip", "2x gtceu:exquisite_quartzite_gem", "gtceu:computer_monitor_cover", "#gtceu:circuits/ev", "4x gtceu:diode", "8x gtceu:aluminium_single_wire")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs("kubejs:inverter")
+        .EUt(120)
+        .duration(200)
+
+    tiers.forEach(i => {
+        gtr.assembler("gtceu:" + i[0] + "_neutron_accelerator")
+            .itemInputs("gtceu:" + i[0] + "_machine_hull", "kubejs:inverter", i[1] == 1 ? "2x gtceu:lead_rotor" : "2x gtceu:" + i[0] + "_electric_motor", "gtceu:double_beryllium_plate", "2x gtceu:polyvinyl_chloride_plate")
+            .itemOutputs("gtceu:" + i[0] + "_neutron_accelerator")
+            .EUt(30)
+            .duration(400)
+    })
+
+    gtr.assembler("gtceu:neutron_sensor")
+        .itemInputs("gtceu:iv_machine_hull", "gtceu:advanced_activity_detector_cover", "gtceu:computer_monitor_cover", "gtceu:vibrant_alloy_hex_wire", "#gtceu:circuits/ev", "2x gtceu:hv_sensor")
+        .inputFluids("gtceu:helium 1000")
+        .itemOutputs("gtceu:neutron_sensor")
+        .EUt(1920)
+        .duration(200)
+
+    gtr.assembler("gtceu:neutron_activator")
+        .itemInputs("gtceu:iv_machine_hull", "4x gtceu:soc", "#gtceu:circuits/iv", "2x gtceu:data_stick", "gtceu:ev_sensor", "2x gtceu:ev_emitter", "gtceu:uranium_235_block", "2x gtceu:neutron_reflector")
+        .inputFluids("gtceu:stainless_steel 1296")
+        .itemOutputs("gtceu:neutron_activator")
+        .EUt(7680)
+        .duration(200)
+
+    gtr.assembler("kubejs:speeding_pipe")
+        .itemInputs("ad_astra:fluid_pipe_duct", "gtceu:stainless_steel_huge_fluid_pipe", "16x gtceu:blue_alloy_rod", "#gtceu:circuits/ev", "32x gtceu:mercury_barium_calcium_cuprate_single_wire", "32x gtceu:beryllium_plate")
+        .itemOutputs("kubejs:speeding_pipe")
+        .EUt(1920)
+        .duration(200)
+
+    gtr.assembler("kubejs:process_machine_casing")
+        .itemInputs("gtceu:solid_machine_casing", "2x #gtceu:circuits/iv", "2x gtceu:double_stainless_steel_plate")
+        .inputFluids("gtceu:fall_king 576")
+        .itemOutputs("kubejs:process_machine_casing")
+        .EUt(7680)
+        .duration(200)
 })
