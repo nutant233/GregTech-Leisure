@@ -14034,4 +14034,11 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:process_machine_casing")
         .EUt(7680)
         .duration(200)
+
+    gtr.assembler("gtceu:disassembly")
+        .itemInputs("gtceu:assembly_line", "4x gtceu:naquadah_alloy_gear", "16x gtceu:luv_robot_arm", "8x gtceu:luv_conveyor_module", "8x gtceu:luv_emitter", "4x gtceu:double_naquadah_alloy_plate")
+        .inputFluids("gtceu:naquadah 1440")
+        .itemOutputs("gtceu:disassembly")
+        .EUt(7680)
+        .duration(800)
 })
