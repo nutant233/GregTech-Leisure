@@ -6576,7 +6576,7 @@ ServerEvents.recipes((event) => {
 
         [["120x gtceu:quartzite_ore",
             "80x gtceu:certus_quartz_ore",
-            "320x gtceu:tin_ore",
+            "140x gtceu:zircon_ore",
             "160x gtceu:cassiterite_ore",
             "60x gtceu:hematite_ore",
             "30x gtceu:gold_ore"], "13"],

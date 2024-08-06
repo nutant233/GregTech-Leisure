@@ -9,6 +9,7 @@ const $ComputationProviderMachine = Java.loadClass("com.gregtechceu.gtceu.common
 const $Slaughterhouse = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.Slaughterhouse")
 const $DysonSphere = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.generator.DysonSphere")
 const $StorageMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.StorageMachine")
+const $AssemblyLineMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.AssemblyLineMachine")
 const $ItemRecipeCapability = Java.loadClass("com.gregtechceu.gtceu.api.capability.recipe.ItemRecipeCapability")
 const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
 const $TeamUtil = Java.loadClass("com.hepdd.gtmthings.utils.TeamUtil")
@@ -626,10 +627,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/fusion_reactor")
 
-    event.create("advanced_assembly_line", "multiblock")
+    event.create("advanced_assembly_line", "multiblock", (holder) => new $AssemblyLineMachine(holder))
         .rotationState(RotationState.ALL)
         .recipeType("assembly_line")
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.6), GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => $AssemblyLineMachine.recipeModifier(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern(definition =>
             FactoryBlockPattern.start("back", "up", "right")
@@ -649,7 +650,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.OPTICAL_DATA_RECEPTION).setExactLimit(1)))
                 .where("A", Predicates.blocks("gtceu:assembly_line_casing"))
                 .where("R", Predicates.blocks("gtceu:laminated_glass"))
-                .where("T", Predicates.blocks("kubejs:advanced_assembly_line_unit"))
+                .where("T", Predicates.countBlock("Unit", "kubejs:advanced_assembly_line_unit"))
                 .where("#", Predicates.any())
                 .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/multiblock/assembly_line")
@@ -1070,7 +1071,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("space_elevator")
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1)))
+        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 4)))
         .appearanceBlock(() => Block.getBlock("kubejs:space_elevator_mechanical_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start("right", "down", "front")
@@ -1128,7 +1129,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .workableCasingRenderer("kubejs:block/space_elevator_mechanical_casing", "gtceu:block/space_elevator")
 
-    function isSpaceElevatorModule(machine) {
+    function getSpaceElevatorModule(machine) {
         let level = machine.self().getLevel()
         let pos = machine.self().getPos()
         let coordinates = [pos.offset(8, -2, 3),
@@ -1148,19 +1149,26 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 for (let j in coordinatess) {
                     let logic = $GTCapabilityHelper.getRecipeLogic(level, coordinatess[j], null)
                     if (logic != null && logic.getMachine().self().getRecipeType() == GTRecipeTypes.get("space_elevator") && logic.isWorking() && logic.getProgress() > 80) {
-                        return true
+                        return logic.machine.self().getTier() - 8
                     }
                 }
             }
         }
-        return false
+        return -1
     }
 
     event.create("assembler_module", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("assembler_module")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe) => {
+            let tier = getSpaceElevatorModule(machine)
+            if (tier < 0) {
+                return null
+            } else {
+                return GTRecipeModifiers.reduction(recipe, 1, Math.pow(0.8, tier))
+            }
+        }, GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:space_elevator_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1174,26 +1182,20 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("a", Predicates.blocks("kubejs:module_base"))
                 .where("c", Predicates.blocks("kubejs:module_connector"))
                 .build())
-        .beforeWorking(machine => {
-            if (isSpaceElevatorModule(machine)) {
-                return true
-            }
-            machine.getRecipeLogic().interruptRecipe()
-            return false
-        })
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
-                if (isSpaceElevatorModule(machine)) {
-                    return true
+                if (getSpaceElevatorModule(machine) < 0) {
+                    machine.getRecipeLogic().interruptRecipe()
+                    return false
                 }
-                machine.getRecipeLogic().interruptRecipe()
-                return false
             }
             return true
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.literal("该模块" + (isSpaceElevatorModule(controller) ? "已" : "未") + "成功安装"))
+                let tier = getSpaceElevatorModule(controller)
+                components.add(Component.literal("该模块" + (tier < 0 ? "未" : "已") + "成功安装"))
+                components.add(Component.literal("耗时倍数x" + Math.pow(0.8, tier)))
             }
         })
         .workableCasingRenderer("kubejs:block/space_elevator_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
@@ -1203,7 +1205,14 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .allowExtendedFacing(false)
         .recipeType("miner_module")
         .recipeType("drilling_module")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe) => {
+            let tier = getSpaceElevatorModule(machine)
+            if (tier < 0) {
+                return null
+            } else {
+                return GTRecipeModifiers.reduction(recipe, 1, Math.pow(0.8, tier))
+            }
+        }, GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:space_elevator_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1216,26 +1225,20 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("a", Predicates.blocks("kubejs:module_base"))
                 .where("c", Predicates.blocks("kubejs:module_connector"))
                 .build())
-        .beforeWorking(machine => {
-            if (isSpaceElevatorModule(machine)) {
-                return true
-            }
-            machine.getRecipeLogic().interruptRecipe()
-            return false
-        })
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
-                if (isSpaceElevatorModule(machine)) {
-                    return true
+                if (getSpaceElevatorModule(machine) < 0) {
+                    machine.getRecipeLogic().interruptRecipe()
+                    return false
                 }
-                machine.getRecipeLogic().interruptRecipe()
-                return false
             }
             return true
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.literal("该模块" + (isSpaceElevatorModule(controller) ? "已" : "未") + "成功安装"))
+                let tier = getSpaceElevatorModule(controller)
+                components.add(Component.literal("该模块" + (tier < 0 ? "未" : "已") + "成功安装"))
+                components.add(Component.literal("耗时倍数x" + Math.pow(0.8, tier)))
             }
         })
         .workableCasingRenderer("kubejs:block/space_elevator_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
@@ -2233,7 +2236,16 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .allowExtendedFacing(false)
         .allowFlip(false)
         .recipeType("bedrock_drilling_rig")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe) => {
+            let level = machine.self().getLevel()
+            if (Math.random() < 0.1) {
+                level.setBlockAndUpdate(machine.self().getPos().offset(0, -9, 0), Blocks.AIR.defaultBlockState())
+            }
+            if (level.getBlock(machine.self().getPos().offset(0, -9, 0)).getId() == "minecraft:bedrock") {
+                return recipe
+            }
+            return null
+        }, GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:echo_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("aaaaaaaaaaa", "a         a", "a         a", "ab       ba", "a         a", "a         a", "a         a", "a    b    a", "aaaaaaaaaaa")
@@ -2261,17 +2273,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("g", Predicates.blocks("kubejs:machine_casing_grinding_head"))
             .where(" ", Predicates.any())
             .build())
-        .beforeWorking(machine => {
-            let level = machine.self().getLevel()
-            if (Math.random() < 0.1) {
-                level.setBlockAndUpdate(machine.self().getPos().offset(0, -9, 0), Blocks.AIR.defaultBlockState())
-            }
-            if (level.getBlock(machine.self().getPos().offset(0, -9, 0)).getId() == "minecraft:bedrock") {
-                return true
-            }
-            machine.getRecipeLogic().interruptRecipe()
-            return false
-        })
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_sturdy_hsse", "gtceu:block/multiblock/cleanroom")
 
     event.create("cooling_tower", "multiblock")
