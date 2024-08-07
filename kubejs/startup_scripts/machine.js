@@ -2194,7 +2194,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("e", Predicates.blocks("gtceu:hastelloy_n_frame"))
                 .where("f", Predicates.blocks("kubejs:advanced_assembly_line_unit"))
                 .where("g", Predicates.blocks("gtceu:tungsten_steel_frame"))
-                .where("h", Predicates.blocks("gtceu:assembly_line_grating"))
+                .where("h", Predicates.blocks("kubejs:spacetime_assembly_line_unit"))
                 .where("i", Predicates.blocks("gtceu:ptfe_pipe_casing"))
                 .where("-", Predicates.abilities(PartAbility.MUFFLER))
                 .build())

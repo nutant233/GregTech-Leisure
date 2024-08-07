@@ -207,13 +207,16 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
             GenerateDisassembly.generateDisassembly(recipeBuilder, provider)
         })
 
-    event.create("precision_assembler")
+    GTRecipeTypes.register("precision_assembler", "multiblock")
         .setEUIO("in")
         .setMaxTooltips(4)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(4, 1, 4, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ASSEMBLER)
+        .onRecipeBuild((recipeBuilder, provider) => {
+            GenerateDisassembly.generateDisassembly(recipeBuilder, provider)
+        })
 
     event.create("space_elevator")
         .setEUIO("in")
@@ -221,13 +224,16 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setMaxIOSize(1, 0, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
 
-    event.create("assembler_module")
+    GTRecipeTypes.register("assembler_module", "multiblock")
         .setEUIO("in")
         .setMaxTooltips(4)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(16, 1, 4, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ASSEMBLER)
+        .onRecipeBuild((recipeBuilder, provider) => {
+            GenerateDisassembly.generateDisassembly(recipeBuilder, provider)
+        })
 
     event.create("miner_module")
         .setEUIO("in")
@@ -313,13 +319,16 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.FUSIONLOOP)
 
-    event.create("dimensional_focus_engraving_array")
+    GTRecipeTypes.register("dimensional_focus_engraving_array", "multiblock")
         .setEUIO("in")
         .setMaxTooltips(6)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(2, 1, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC)
+        .onRecipeBuild((recipeBuilder, provider) => {
+            ResearchManager.createDefaultResearchRecipe(recipeBuilder, provider)
+        })
 
     GTRecipeTypes.LASER_ENGRAVER_RECIPES.onRecipeBuild((recipeBuilder, provider) => {
         let recipe = GTRecipeTypes.get("dimensional_focus_engraving_array").copyFrom(recipeBuilder)

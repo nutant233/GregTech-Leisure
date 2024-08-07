@@ -566,20 +566,6 @@
 			x: 0.0d
 			y: -1.0d
 		}
-		{
-			dependencies: ["7204F1B6BCC74F1C"]
-			description: ["化学浸洗机和高压釜的激光版本"]
-			id: "303E9AA0B0FDC4B2"
-			shape: "gear"
-			size: 1.2d
-			tasks: [{
-				id: "5426D1E5C57673C9"
-				item: "gtceu:crystalline_infinity"
-				type: "item"
-			}]
-			x: 9.0d
-			y: -1.0d
-		}
 	]
 	subtitle: ["Tier8-UV"]
 	title: "极限压"

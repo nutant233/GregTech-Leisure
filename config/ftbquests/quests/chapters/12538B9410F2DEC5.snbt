@@ -384,20 +384,6 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["1385E89DD3FD663B"]
-			description: ["如果你的资源很丰富"]
-			id: "1CAAEFA8B3E36A6F"
-			shape: "gear"
-			size: 1.2d
-			tasks: [{
-				id: "0B823A70DC6BF902"
-				item: "gtceu:mage_assembler"
-				type: "item"
-			}]
-			x: -9.5d
-			y: 4.5d
-		}
-		{
 			dependencies: ["0A2D46609F5C3CAB"]
 			description: ["输入石油，输出产物"]
 			id: "61838E13426B2B88"

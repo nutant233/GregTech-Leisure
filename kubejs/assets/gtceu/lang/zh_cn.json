@@ -611,7 +611,7 @@
   "gtceu.recipe.cleanroom_law.display_name": "绝对超净间",
   "gtceu.recipe.ev_min": "最小中子动能：%s MeV",
   "gtceu.recipe.ev_max": "最大中子动能：%s MeV",
-  "gtceu.recipe.evt": "每t动能消耗：%s KeV",
+  "gtceu.recipe.evt": "每刻中子动能消耗：%s KeV",
   "gtceu.recipe.nano_forge_tier": "纳米锻炉等级：%s",
   "gtceu.rocket_engine": "火箭引擎",
   "gtceu.slaughterhouse": "屠宰场",
