@@ -739,7 +739,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     machine.holder.self().getPersistentData().putLong("helium", helium - 1024000000)
                     return $WirelessEnergyManager.addEUToGlobalEnergyMap(uuid, $BigInteger.valueOf(- (5277655810867200 * (8 ** oc))))
                 }
-                if (machine.inputFluid("gtceu:hydrogen 100000").build()) {
+                if (machine.inputFluid("gtceu:hydrogen 100000")) {
                     machine.holder.self().getPersistentData().putLong("hydrogen", hydrogen + 10000000)
                 }
                 if (machine.inputFluid("gtceu:helium 1000000")) {
