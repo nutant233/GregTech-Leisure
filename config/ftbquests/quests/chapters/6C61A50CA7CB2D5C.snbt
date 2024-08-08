@@ -1,0 +1,293 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "6C61A50CA7CB2D5C"
+	group: "40551FF3A34D90BA"
+	icon: {
+		Count: 1
+		id: "ad_astra:tier_1_rocket"
+		tag: {
+			BotariumData: {
+				StoredFluids: [{
+					Amount: 0L
+					Fluid: "minecraft:empty"
+				}]
+			}
+		}
+	}
+	id: "6C61A50CA7CB2D5C"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "043B581110AB9161"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "3FD0AB8B3E23B1A9"
+				item: "ad_astra:nasa_workbench"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"71DFD2EF1B03BDAA"
+				"6CC32F9550D73065"
+				"6C93F5B2AF430594"
+				"079CCDAEE4AD2447"
+				"18EB3995478B2414"
+				"347CD713F71D41D0"
+				"0D865B38481F3106"
+			]
+			description: [""]
+			id: "18A773A6B710C658"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "0FEF16DD8A55FB39"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_1_rocket"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			can_repeat: false
+			dependencies: ["009E71EC51F5B0EF"]
+			id: "71DFD2EF1B03BDAA"
+			tasks: [{
+				id: "13964F33CFA57B8E"
+				item: "ad_astra:rocket_nose_cone"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"079CCDAEE4AD2447"
+				"009E71EC51F5B0EF"
+			]
+			id: "18EB3995478B2414"
+			tasks: [{
+				id: "3BAF475CBE010CE7"
+				item: "ad_astra:steel_engine"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["009E71EC51F5B0EF"]
+			description: ["总共需要3个，2个用来做火箭，1个用来做钢引擎"]
+			id: "079CCDAEE4AD2447"
+			tasks: [{
+				id: "2349775386C0D068"
+				item: "ad_astra:steel_tank"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"6CC32F9550D73065"
+				"009E71EC51F5B0EF"
+			]
+			id: "6C93F5B2AF430594"
+			tasks: [{
+				id: "0162567E930BB2AF"
+				item: "ad_astra:rocket_fin"
+				type: "item"
+			}]
+			x: 6.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["009E71EC51F5B0EF"]
+			description: ["总共需要14个，6个用来做火箭，8个用来做火箭尾翼"]
+			id: "6CC32F9550D73065"
+			tasks: [{
+				id: "196EC79A333D03F9"
+				item: "ad_astra:iron_plate"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"009E71EC51F5B0EF"
+				"6911B25AA0545E24"
+			]
+			description: ["你需要64桶才能起飞"]
+			id: "347CD713F71D41D0"
+			tasks: [{
+				id: "1C2CBCEB171603A4"
+				item: "gtceu:rocket_fuel_bucket"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["009E71EC51F5B0EF"]
+			id: "0D865B38481F3106"
+			rewards: [{
+				id: "29C4EDC665FC5FB6"
+				item: {
+					Count: 1
+					id: "avaritia:infinity_bow"
+					tag: { }
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "78106A40B925926E"
+					item: {
+						Count: 1
+						id: "ad_astra:space_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "56B90821A3B41D67"
+					item: {
+						Count: 1
+						id: "ad_astra:space_pants"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "20162066E7AC33C8"
+					item: {
+						Count: 1
+						id: "ad_astra:space_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "23E45AD825016BFD"
+					item: {
+						Count: 1
+						id: "ad_astra:space_suit"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "宇航服"
+			x: 8.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"7940CFD732610594"
+				"043B581110AB9161"
+			]
+			hide_dependent_lines: true
+			id: "009E71EC51F5B0EF"
+			tasks: [{
+				id: "18403D645ACF9211"
+				title: "准备前往T1"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["009E71EC51F5B0EF"]
+			id: "5977502EB593EFF4"
+			tasks: [{
+				id: "13F88C17E0CB1F79"
+				item: "gtceu:methanol_bucket"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["009E71EC51F5B0EF"]
+			id: "5246BC7D720ECE4A"
+			tasks: [{
+				id: "6625D07C32DDC7A0"
+				item: "gtceu:ammonia_bucket"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["009E71EC51F5B0EF"]
+			id: "77308962EE9DAA52"
+			tasks: [{
+				id: "1042F9FE861FDCFA"
+				item: "gtceu:hypochlorous_acid_bucket"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"5977502EB593EFF4"
+				"5246BC7D720ECE4A"
+				"77308962EE9DAA52"
+			]
+			id: "6911B25AA0545E24"
+			tasks: [{
+				id: "0900F3F6F8460BFF"
+				item: "gtceu:dimethylhydrazine_bucket"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["18A773A6B710C658"]
+			id: "23C2F99FC949AF0A"
+			tasks: [{
+				dimension: "ad_astra:moon"
+				id: "2CCD7DD07A345FE5"
+				type: "dimension"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			id: "683F6BF5F0151288"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "1BF49A9E58E5AB03"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_2_rocket"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 14.0d
+			y: 0.0d
+		}
+	]
+	title: "探索宇宙"
+}
