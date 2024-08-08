@@ -59,6 +59,7 @@
   },
   "gtceu": {
     "auto_output_info": true,
+    "primitive_pump": true,
     "workable_provider": true,
     "transformer": true,
     "controllable_provider": true,
