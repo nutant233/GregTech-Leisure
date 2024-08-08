@@ -433,8 +433,8 @@
 				item: "gtceu:mpic_chip"
 				type: "item"
 			}]
-			x: 1.0d
-			y: -2.0d
+			x: -1.0d
+			y: -0.5d
 		}
 		{
 			dependencies: [
@@ -468,7 +468,7 @@
 				item: "gtceu:ev_cutter"
 				type: "item"
 			}]
-			x: 1.0d
+			x: 0.5d
 			y: -0.5d
 		}
 		{

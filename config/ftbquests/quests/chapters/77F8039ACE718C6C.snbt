@@ -26,39 +26,12 @@
 				item: "gtceu:bronze_ingot"
 				type: "item"
 			}]
-			title: "蒸汽时代"
+			title: "蒸汽时代ULV"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["5F5F348E3A34827E"]
-			description: [
-				"很明显你无法一开始就获得电，现在你用的是蒸汽"
-				"蒸汽机器使用与JEI中列出的1:1比例的EU到蒸汽的相应数量的蒸汽。"
-				"低压蒸汽机器运行速度是JEI中列出的一半。"
-				"高压蒸汽机器的速度与JEI中指示的速度相同,但蒸汽消耗量为2倍，获得钢后解锁。"
-				"蒸汽机器&a&d可以运行所有LV级及以下配方&r，因此可以代替同类型的低压电力机器。"
-			]
-			id: "3446AD45B912ABBF"
-			rewards: [{
-				count: 64
-				id: "06B488AB78DE23AC"
-				item: "avaritia:compressed_chest"
-				type: "item"
-			}]
-			tasks: [{
-				id: "52A4B59BB8DBEB50"
-				title: "蒸汽来源"
-				type: "checkmark"
-			}]
-			x: 2.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"3446AD45B912ABBF"
-				"3E24582C7386F7E3"
-			]
+			dependencies: ["3E24582C7386F7E3"]
 			description: ["蒸汽是烧水来的，现在的你需要一些水"]
 			id: "4E96A08CF12D496A"
 			tasks: [{
@@ -93,7 +66,7 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["3446AD45B912ABBF"]
+			dependencies: ["2B9D62FB6BF39201"]
 			description: ["选一个做"]
 			id: "4BFC342697BDE75A"
 			tasks: [
@@ -172,7 +145,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["3446AD45B912ABBF"]
+			dependencies: ["2B9D62FB6BF39201"]
 			id: "5C936EF307594737"
 			tasks: [{
 				id: "00E7B6F2A5F20C06"
@@ -253,7 +226,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["3446AD45B912ABBF"]
+			dependencies: ["2B9D62FB6BF39201"]
 			id: "30F031CD02425ED7"
 			tasks: [{
 				id: "7D7E7EBAB75A2F8D"
@@ -326,7 +299,7 @@
 			y: -0.5d
 		}
 		{
-			dependencies: ["3446AD45B912ABBF"]
+			dependencies: ["2B9D62FB6BF39201"]
 			description: ["它可以讲三个锭锤成两个板，比手搓有更高的效率"]
 			id: "6525C9DE2A276238"
 			tasks: [{
@@ -646,28 +619,6 @@
 		{
 			dependencies: ["5F5F348E3A34827E"]
 			description: [
-				"研磨机让你摆脱了使用&3研钵&r将物品磨成粉末的痛苦过程，但代价是时间，在这台机器中处理一块铁矿石需要二十秒 - 是熔炉熔炼一个锭的两倍时间!"
-				"研磨机只会输出JEI配方中显示的第一件物品，&a其他&f槽被锁定，直到你制作一个&6HV&r研磨机。"
-				"&o重要&r的建议：实际上，直接熔炼&a现在&f更好!&a效率&f损失通过更快的采矿得到弥补，使用研磨机主要是来制作像&a&a黏土粉&f&r这样的物品!"
-			]
-			hide_dependency_lines: true
-			id: "546C4B45CF4E914C"
-			rewards: [{
-				id: "082EA9E5553CE487"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
-			tasks: [{
-				id: "0FAA4C39D6E8CE12"
-				item: "gtceu:lp_steam_macerator"
-				type: "item"
-			}]
-			x: 10.0d
-			y: -4.0d
-		}
-		{
-			dependencies: ["5F5F348E3A34827E"]
-			description: [
 				"蒸汽机器需要&a&d设置排气口&r，运行一次后就需要排气，否则就无法工作"
 				"使用扳手右键以设置排气口"
 			]
@@ -734,6 +685,20 @@
 			}]
 			x: 12.0d
 			y: -2.0d
+		}
+		{
+			dependencies: [
+				"5F5F348E3A34827E"
+				"4E96A08CF12D496A"
+			]
+			id: "2B9D62FB6BF39201"
+			tasks: [{
+				id: "61D5BA33A860F807"
+				title: "蒸汽来源"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Tire0-ULV"]
