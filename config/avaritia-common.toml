@@ -1,10 +1,10 @@
 
-#Avaritia Base Config
-[general]
+#Avaritia Config
+[tools]
 	#Does the super mode of endless tools retain stone and soil
 	"Is Stone" = false
 	#Whether to merge matter cluster
-	"Is Merge Matter Cluster" = false
+	"Is Merge Matter Cluster" = true
 	#Range damage value of the right key of Infinity sword
 	#Range: 100 ~ 100000
 	"Sword Range Damage" = 10000
@@ -13,6 +13,8 @@
 	"Sword Attack Range" = 32
 	#Does the right key range attack of endless sword attack neutral creatures
 	"Is Sword Damage Animal" = false
+	#Does the right key spawn lightning with range of attack
+	"Is Sword Cause Lightning" = false
 	#Infinity bow scattering light arrow damage
 	#Range: 100 ~ 100000
 	"Sub Arrow Damage" = 10000
@@ -34,6 +36,12 @@
 	#Singularity default time required
 	#Range: > 0
 	"Singularity Time Required" = 240
-	#Does the right key spawn lightning with range of attack
-	"Is Sword Cause Lightning" = false
+
+[emc]
+	#Emc of Neutron Pile
+	#Range: > 0
+	"Neutron Pile Emc" = 100
+	#Emc of Totem Of Undying
+	#Range: > 0
+	"Vanilla Totem Emc" = 1000
 

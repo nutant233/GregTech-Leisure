@@ -28,6 +28,7 @@
   "gtceu:maintenance_info": null,
   "gtceu:multiblock_structure": null,
   "gtceu:parallel_info": null,
+  "gtceu:primitive_pump": null,
   "gtceu:recipe_logic_provider": null,
   "gtceu:recipe_output_info": null,
   "gtceu:stained_color": null,
