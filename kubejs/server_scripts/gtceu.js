@@ -8177,7 +8177,7 @@ ServerEvents.recipes((event) => {
 
     gtr.plasma_condenser("gtceu:hassium")
         .inputFluids("gtceu:metastable_hassium_plasma 1000", "gtceu:liquid_helium 100000")
-        .outputFluids("gtceu:helium 100000", "gtceu:metastable_hassium 1000")
+        .outputFluids("gtceu:helium 100000", "gtceu:liquid_metastable_hassium 1000")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(1200)
 
