@@ -52,7 +52,7 @@
 				item: "gtceu:lv_robot_arm"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -64,7 +64,7 @@
 				item: "gtceu:lv_conveyor_module"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
@@ -152,10 +152,10 @@
 		}
 		{
 			dependencies: [
-				"20F6BF1EDC6EBDC1"
 				"32CE144D9A9F0943"
 				"3F38CC8C8D650202"
 				"198ED0A20800F3ED"
+				"20F6BF1EDC6EBDC1"
 			]
 			icon_scale: 2.0d
 			id: "07D0D7005DA4F446"
@@ -166,19 +166,19 @@
 				item: "gtceu:electric_blast_furnace"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 6.0d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["3E50EE376968519F"]
+			dependencies: ["3117BF8E4782DB2A"]
 			id: "32CE144D9A9F0943"
 			tasks: [{
 				id: "66CE417A92BDA931"
 				item: "gtceu:lv_energy_input_hatch"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 4.0d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
@@ -207,8 +207,8 @@
 				}
 			]
 			title: "一些仓室"
-			x: 0.0d
-			y: 8.0d
+			x: 8.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -227,7 +227,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -240,7 +240,7 @@
 				item: "gtceu:lv_assembler"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 2.0d
 		}
 		{
@@ -294,8 +294,8 @@
 				item: "gtceu:invar_ingot"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 8.0d
+			x: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -331,8 +331,8 @@
 				item: "gtceu:lv_electrolyzer"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 8.0d
+			x: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["6E3B42BCBA6064F5"]
@@ -344,8 +344,8 @@
 				item: "gtceu:aluminium_dust"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 8.0d
+			x: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -359,8 +359,8 @@
 				item: "gtceu:aluminium_ingot"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 6.0d
+			x: 10.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -386,8 +386,8 @@
 				item: "kubejs:elite_control_circuit"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 0.0d
+			x: 12.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["3E50EE376968519F"]
@@ -576,22 +576,19 @@
 				item: "gtceu:mv_machine_hull"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 4.0d
+			x: 12.0d
+			y: 2.0d
 		}
 		{
-			dependencies: [
-				"3E50EE376968519F"
-				"35F31D71CC8B67CF"
-			]
+			dependencies: ["35F31D71CC8B67CF"]
 			id: "49ABB341017BAE85"
 			tasks: [{
 				id: "4B0294376308A36D"
 				item: "gtceu:copper_single_cable"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 4.0d
+			x: 10.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["11B60450D7F3C188"]
@@ -601,8 +598,8 @@
 				item: "gtceu:aluminium_plate"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 6.0d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -616,8 +613,8 @@
 				item: "gtceu:rubber_bucket"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 2.0d
+			x: 10.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["0223A643A5066452"]
@@ -628,8 +625,8 @@
 				item: "gtceu:lv_chemical_reactor"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 2.0d
+			x: 12.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["335ED39019FC62E7"]
@@ -650,6 +647,17 @@
 			title: "硫粉和生橡胶"
 			x: 8.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["3E50EE376968519F"]
+			id: "3117BF8E4782DB2A"
+			tasks: [{
+				id: "5A00FC384A33FB54"
+				item: "gtceu:lv_voltage_coil"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
 		}
 	]
 	title: "低压LV"
