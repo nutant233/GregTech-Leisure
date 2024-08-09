@@ -509,7 +509,7 @@
 				item: "gtceu:data_bank"
 				type: "item"
 			}]
-			x: -1.5d
+			x: -2.5d
 			y: -2.0d
 		}
 		{
@@ -521,7 +521,7 @@
 				item: "gtceu:advanced_data_access_hatch"
 				type: "item"
 			}]
-			x: -1.5d
+			x: -2.5d
 			y: -0.5d
 		}
 		{
@@ -702,6 +702,20 @@
 			}]
 			x: 7.0d
 			y: -5.0d
+		}
+		{
+			dependencies: ["7F8C2ECC7CE2BF20"]
+			description: ["可以将机器拆解，使用装配线与组装机配方"]
+			id: "02797C478FA2BEFC"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "10E4CFCD88F31954"
+				item: "gtceu:disassembly"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -2.0d
 		}
 	]
 	subtitle: ["Tier5-IV"]

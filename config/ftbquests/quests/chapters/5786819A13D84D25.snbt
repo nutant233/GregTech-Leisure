@@ -577,6 +577,20 @@
 			x: 6.0d
 			y: 3.5d
 		}
+		{
+			dependencies: ["783379F3A7557CEE"]
+			description: ["提取机和流体固化器的激光版，拥有无损超频，使用温度并行机制，温度每提升900K，并行数×2"]
+			id: "174B8FFFC1745311"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "38F98C857B04D47D"
+				item: "gtceu:mega_extractor"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.5d
+		}
 	]
 	subtitle: ["Tier9-UHV"]
 	title: "极高压"
