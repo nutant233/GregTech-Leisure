@@ -608,15 +608,6 @@
 			y: 6.0d
 		}
 		{
-			id: "7A194CE125399B48"
-			tasks: [{
-				id: "18FDDDD64E2FD903"
-				type: "checkmark"
-			}]
-			x: -2.0d
-			y: 4.0d
-		}
-		{
 			dependencies: ["5F5F348E3A34827E"]
 			description: [
 				"蒸汽机器需要&a&d设置排气口&r，运行一次后就需要排气，否则就无法工作"

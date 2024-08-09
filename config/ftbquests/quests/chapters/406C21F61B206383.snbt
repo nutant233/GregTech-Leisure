@@ -1,0 +1,21 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "406C21F61B206383"
+	group: "40551FF3A34D90BA"
+	icon: "gtceu:void_miner"
+	id: "406C21F61B206383"
+	order_index: 1
+	quest_links: [ ]
+	quests: [{
+		id: "428A5046C78BBCE3"
+		tasks: [{
+			id: "3C7E7F9F42937308"
+			title: "资源获取"
+			type: "checkmark"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "资源获取"
+}
