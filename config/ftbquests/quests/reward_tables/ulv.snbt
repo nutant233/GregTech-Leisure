@@ -1,0 +1,8 @@
+{
+	icon: "gtceu:ulv_machine_hull"
+	id: "5541FA095F14CC21"
+	loot_size: 1
+	order_index: 3
+	rewards: [ ]
+	title: "ULV奖励袋"
+}

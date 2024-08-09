@@ -479,6 +479,7 @@
 		{
 			dependencies: ["3E2F61B1A26AD378"]
 			id: "79AE49C5DE7900FF"
+			size: 2.0d
 			tasks: [{
 				id: "7DEB147BF481A274"
 				item: "gtceu:kanthal_coil_block"
