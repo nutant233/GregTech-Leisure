@@ -4332,6 +4332,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("~", Predicates.controller(Predicates.blocks(definition.get())))
                 .where("A", Predicates.blocks("kubejs:hyper_mechanical_casing")
                     .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                    .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
                     .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1)))
                 .where("B", Predicates.blocks("gtceu:naquadah_alloy_frame"))
                 .where("C", Predicates.blocks("kubejs:iridium_casing"))
