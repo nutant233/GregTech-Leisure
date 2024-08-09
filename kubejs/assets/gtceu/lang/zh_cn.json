@@ -1649,5 +1649,11 @@
   "block.gtceu.neutron_sensor": "中子传感器",
   "block.gtceu.ulv_neutron_accelerator": "§8ULV 中子加速器§r",
   "block.gtceu.uv_neutron_accelerator": "§3UV 中子加速器§r",
-  "block.gtceu.zpm_neutron_accelerator": "§cZPM 中子加速器§r"
+  "block.gtceu.zpm_neutron_accelerator": "§cZPM 中子加速器§r",
+  "block.gtceu.uhv_neutron_accelerator": "§4UHV 中子加速器§r",
+  "block.gtceu.uev_neutron_accelerator": "§aUEV 中子加速器§r",
+  "block.gtceu.uiv_neutron_accelerator": "§2UIV 中子加速器§r",
+  "block.gtceu.uxv_neutron_accelerator": "§eUXV 中子加速器§r",
+  "block.gtceu.opv_neutron_accelerator": "§9§lOpV 中子加速器§r",
+  "block.gtceu.max_neutron_accelerator": "§c§lMAX 中子加速器§r"
 }
