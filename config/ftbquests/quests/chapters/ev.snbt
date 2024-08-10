@@ -68,6 +68,8 @@
 				"7DE362B6EF9C3800"
 			]
 			id: "5000DCB028460D47"
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "13452B1A4ADEC0C0"
 				item: "gtceu:nano_processor_computer"
@@ -207,7 +209,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["4288A0EFF13D1F93"]
@@ -229,7 +231,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["3526A3770E9CCB1E"]
@@ -260,7 +262,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 4.0d
+			y: 8.0d
 		}
 		{
 			id: "7DE362B6EF9C3800"
@@ -470,7 +472,7 @@
 				item: "gtceu:platinum_group_sludge_dust"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: -3.0d
 		}
 		{
@@ -490,7 +492,7 @@
 			]
 			title: "铂与钯"
 			x: 2.0d
-			y: 0.0d
+			y: 4.0d
 		}
 		{
 			id: "056D5A2274001900"
@@ -499,7 +501,7 @@
 				item: "gtceu:nitric_acid_bucket"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: -3.0d
 		}
 		{
@@ -511,7 +513,7 @@
 				item: "gtceu:aqua_regia_bucket"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: -2.0d
 		}
 		{
@@ -525,7 +527,7 @@
 				item: "gtceu:platinum_slag_dust"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 8.0d
 			y: -3.0d
 		}
 		{
@@ -539,7 +541,7 @@
 				item: "gtceu:platinum_raw_dust"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 10.0d
 			y: -3.0d
 		}
 		{
@@ -553,7 +555,7 @@
 				item: "gtceu:palladium_raw_dust"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 12.0d
 			y: -3.0d
 		}
 		{
@@ -567,7 +569,7 @@
 				item: "gtceu:platinum_sludge_residue_dust"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 14.0d
 			y: -3.0d
 		}
 		{
@@ -581,7 +583,7 @@
 				item: "gtceu:inert_metal_mixture_dust"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: -3.0d
 		}
 		{
@@ -598,7 +600,7 @@
 				item: "gtceu:rarest_metal_mixture_dust"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: -3.0d
 		}
 		{
@@ -624,7 +626,7 @@
 				item: "gtceu:polytetrafluoroethylene_plate"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 10.0d
 			y: 4.0d
 		}
 		{
@@ -646,7 +648,7 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
+			x: 7.0d
 			y: -2.0d
 		}
 		{
@@ -657,7 +659,7 @@
 				item: "gtceu:leach_residue_dust"
 				type: "item"
 			}]
-			x: 10.5d
+			x: 8.5d
 			y: -2.0d
 		}
 		{
@@ -672,7 +674,7 @@
 				item: "gtceu:sodium_rutheniate_dust"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: -2.0d
 		}
 		{
@@ -683,7 +685,7 @@
 				item: "gtceu:iridium_metal_residue_dust"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: -2.0d
 		}
 		{
@@ -694,7 +696,7 @@
 				item: "gtceu:acidic_osmium_solution_bucket"
 				type: "item"
 			}]
-			x: 7.0d
+			x: 5.0d
 			y: -2.0d
 		}
 		{
@@ -705,7 +707,7 @@
 				item: "gtceu:iridium_dioxide_dust"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: -1.0d
 		}
 		{
@@ -716,7 +718,7 @@
 				item: "gtceu:iridium_dust"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
@@ -727,7 +729,7 @@
 				item: "gtceu:osmium_tetroxide_dust"
 				type: "item"
 			}]
-			x: 7.0d
+			x: 5.0d
 			y: -1.0d
 		}
 		{
@@ -738,84 +740,134 @@
 				item: "gtceu:osmium_dust"
 				type: "item"
 			}]
-			x: 7.0d
+			x: 5.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["447948ACBDAF1D5A"]
 			id: "3A816A08848067B0"
-			tasks: [{
-				id: "33EAC6FF223BFEC9"
-				item: "gtceu:roughly_rhodium_metal_dust"
-				type: "item"
-			}]
-			x: 9.0d
+			tasks: [
+				{
+					id: "33EAC6FF223BFEC9"
+					item: "gtceu:roughly_rhodium_metal_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "558E68DA7C3103ED"
+					type: "checkmark"
+				}
+			]
+			x: 7.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["3A816A08848067B0"]
 			id: "3E439E4735E85BE5"
-			tasks: [{
-				id: "19419BA850D12934"
-				item: "gtceu:rhodium_salt_dust"
-				type: "item"
-			}]
-			x: 10.0d
+			tasks: [
+				{
+					id: "19419BA850D12934"
+					item: "gtceu:rhodium_salt_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "4883DCDBB6868D36"
+					type: "checkmark"
+				}
+			]
+			x: 8.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["3E439E4735E85BE5"]
 			id: "737542A27F32418F"
-			tasks: [{
-				id: "1DF06FAB724C577E"
-				item: "gtceu:rhodium_salt_solution_bucket"
-				type: "item"
-			}]
-			x: 11.0d
+			tasks: [
+				{
+					id: "1DF06FAB724C577E"
+					item: "gtceu:rhodium_salt_solution_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "2652754592AFD2CC"
+					type: "checkmark"
+				}
+			]
+			x: 9.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["737542A27F32418F"]
 			id: "1745E379DAEA5EE0"
-			tasks: [{
-				id: "16D5062BB781CD95"
-				item: "gtceu:rhodium_nitrate_dust"
-				type: "item"
-			}]
-			x: 12.0d
+			tasks: [
+				{
+					id: "16D5062BB781CD95"
+					item: "gtceu:rhodium_nitrate_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "21DB0D927149AE17"
+					type: "checkmark"
+				}
+			]
+			x: 10.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["1745E379DAEA5EE0"]
 			id: "712E7D1F539B51A8"
-			tasks: [{
-				id: "459E521C65860513"
-				item: "gtceu:rhodium_filter_cake_dust"
-				type: "item"
-			}]
-			x: 13.0d
+			tasks: [
+				{
+					id: "459E521C65860513"
+					item: "gtceu:rhodium_filter_cake_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "00B99609CDA405C6"
+					type: "checkmark"
+				}
+			]
+			x: 11.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["712E7D1F539B51A8"]
 			id: "73399771638FD112"
-			tasks: [{
-				id: "04C94B060214C917"
-				item: "gtceu:rhodium_filter_cake_solution_bucket"
-				type: "item"
-			}]
-			x: 14.0d
+			tasks: [
+				{
+					id: "04C94B060214C917"
+					item: "gtceu:rhodium_filter_cake_solution_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "394D4E69C251078D"
+					type: "checkmark"
+				}
+			]
+			x: 12.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["73399771638FD112"]
 			id: "18FB4DDA55B7D430"
-			tasks: [{
-				id: "17292F329ACCF7A7"
-				item: "gtceu:reprecipitated_rhodium_dust"
-				type: "item"
-			}]
-			x: 15.0d
+			optional: true
+			tasks: [
+				{
+					id: "17292F329ACCF7A7"
+					item: "gtceu:reprecipitated_rhodium_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "20DCA52F1DFFA94B"
+					type: "checkmark"
+				}
+			]
+			x: 13.0d
 			y: -1.0d
 		}
 		{
@@ -826,7 +878,7 @@
 				item: "gtceu:rhodium_dust"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 14.0d
 			y: -1.0d
 		}
 		{
@@ -848,51 +900,80 @@
 					type: "item"
 				}
 			]
-			x: 13.0d
+			x: 11.0d
 			y: -2.0d
 		}
 		{
 			dependencies: ["515CC449D60C6B6F"]
 			id: "5C12F24D7C0DB328"
-			tasks: [{
-				id: "18ED9710724B22C6"
-				item: "gtceu:ruthenium_tetroxide_bucket"
-				type: "item"
-			}]
-			x: 8.0d
+			optional: true
+			tasks: [
+				{
+					id: "18ED9710724B22C6"
+					item: "gtceu:ruthenium_tetroxide_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0942DD5664B498DA"
+					type: "checkmark"
+				}
+			]
+			x: 6.0d
 			y: -1.0d
 		}
 		{
 			dependencies: ["5C12F24D7C0DB328"]
 			id: "277E11D01F736C89"
-			tasks: [{
-				id: "3F47C69329E4940B"
-				item: "gtceu:ruthenium_tetroxide_hot_bucket"
-				type: "item"
-			}]
-			x: 8.0d
+			tasks: [
+				{
+					id: "3F47C69329E4940B"
+					item: "gtceu:ruthenium_tetroxide_hot_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7458D756C52CA570"
+					type: "checkmark"
+				}
+			]
+			x: 6.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["277E11D01F736C89"]
 			id: "1378ED1EC657A5D8"
-			tasks: [{
-				id: "3524EF5F33337353"
-				item: "gtceu:ruthenium_tetroxide_lq_bucket"
-				type: "item"
-			}]
-			x: 9.0d
+			tasks: [
+				{
+					id: "3524EF5F33337353"
+					item: "gtceu:ruthenium_tetroxide_lq_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "789796FD0D9D48BE"
+					type: "checkmark"
+				}
+			]
+			x: 7.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["1378ED1EC657A5D8"]
 			id: "6458E7BCD8D06C86"
-			tasks: [{
-				id: "66D25854C8643D8D"
-				item: "gtceu:ruthenium_tetroxide_dust"
-				type: "item"
-			}]
-			x: 10.0d
+			tasks: [
+				{
+					id: "66D25854C8643D8D"
+					item: "gtceu:ruthenium_tetroxide_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7CC80098F63F28EB"
+					type: "checkmark"
+				}
+			]
+			x: 8.0d
 			y: 0.0d
 		}
 		{
@@ -903,7 +984,7 @@
 				item: "gtceu:ruthenium_dust"
 				type: "item"
 			}]
-			x: 11.0d
+			x: 9.0d
 			y: 0.0d
 		}
 		{
@@ -917,7 +998,7 @@
 				item: "gtceu:rtm_alloy_dust"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 12.0d
 			y: 0.0d
 		}
 		{
@@ -1006,7 +1087,7 @@
 				item: "minecraft:nether_star"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -1020,13 +1101,14 @@
 				item: "gtceu:raw_desh"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 14.0d
 			y: 0.0d
 		}
 		{
 			dependencies: [
 				"7AEC0D308494C0F8"
 				"51AA4887F2DC9747"
+				"0375D068023B13D7"
 			]
 			id: "0889DB18E2C68D67"
 			rewards: [{
@@ -1051,8 +1133,53 @@
 				}
 			]
 			title: "四阶火箭"
+			x: 16.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4DDFAAF4A8E0622A"]
+			id: "5CCD191A904B528A"
+			size: 2.0d
+			tasks: [{
+				id: "05372C97F5667E15"
+				item: "gtceu:void_miner"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1EA6BA3CBF4BE5DB"]
+			id: "7852E4465B3CAF80"
+			tasks: [{
+				id: "77EDD867889A3EA6"
+				item: "gtceu:uranium_triplatinum_ingot"
+				type: "item"
+			}]
 			x: 18.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["7852E4465B3CAF80"]
+			id: "0375D068023B13D7"
+			tasks: [{
+				id: "14874859671EC41A"
+				item: "gtceu:ev_field_generator"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0375D068023B13D7"]
+			id: "650980AB3D2A6AF6"
+			tasks: [{
+				id: "7D1205F365E0C204"
+				item: "gtceu:large_gas_collector"
+				type: "item"
+			}]
+			x: 18.0d
+			y: -2.0d
 		}
 	]
 	title: "超高压EV"

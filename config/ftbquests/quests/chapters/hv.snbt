@@ -543,6 +543,18 @@
 			x: 14.0d
 			y: 0.0d
 		}
+		{
+			dependencies: ["1A48D2DB936FF632"]
+			description: ["终于可以获得研磨的副产物了"]
+			id: "24A12D2F592DC50D"
+			tasks: [{
+				id: "68B4BAC1D648029B"
+				item: "gtceu:hv_macerator"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
 	]
 	title: "高压HV"
 }

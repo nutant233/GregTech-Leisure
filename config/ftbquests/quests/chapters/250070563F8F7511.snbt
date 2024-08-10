@@ -13,6 +13,7 @@
 				"25A6B2F421327892"
 				"4F864738509B6DCA"
 				"4536535E8DA71D5B"
+				"575A2A1E4F56FF34"
 			]
 			description: ["在开始之前需要先浏览一遍旁边的任务。"]
 			hide_dependency_lines: true
@@ -94,14 +95,28 @@
 		}
 		{
 			description: [
-				"该整合包修改了前期部分流程，降低了前期的难度。"
-				"调整了格雷科技的部分配置使其简单化。"
-				"添加了新的发电方式，减少能源上的困难。"
-				"在中后期，资源丰富，游戏理解提升后逐渐回归格雷科技的难度。"
-				"拓展到MAX阶段使格雷科技的科技线更完整。"
+				"一个主打休闲的格雷科技整合包，相对于其他格雷包难度更低"
+				""
+				"主要流程"
+				"蒸汽ULV：收集基础资源，更大更强蒸汽机器，炼钢，超维度泥土锻炉。"
+				"低压LV：基础电力机器，电力高炉，GT版数字采矿机。"
+				"中压MV：硅晶体，石油处理，燃油发电，升级机器。"
+				"高压HV：处理器，大化反，一阶火箭登月，蒸馏塔，钛，虚空采矿机。"
+				"超高压EV：纳米处理器，二三四阶火箭，钨，铂系金属。"
+				"强导压IV：量子处理器，合金冶炼炉，五阶火箭，大型机器，装配线，数据库。"
+				"剧差压LUV：晶体处理器，硅岩，六阶火箭，核聚变MK1，计算机，研究站。"
+				"零点压ZPM：湿件处理器，核聚变MK2，七阶火箭，硅岩反应堆。"
+				"极限压UV：生物活性处理器，核聚变MK3，深度处理稀土，电路装配线，太空电梯。"
+				"极高压UHV：光学处理器，恒星锻炉，超能硅岩爆弹，超能反应堆。"
+				"极超压UEV：奇异处理器，超临界合成，基岩处理，精金。"
+				"极巨压UIV：寰宇处理器，宇宙探测，质量发生器，夸克。"
+				"极顶压UXV：超因果处理器，龙，宇宙中子素，无尽，超维度锻炉。"
+				"过载压OPV：超时空电路，宇宙模拟，时空，奇点，永恒。"
+				"上限压MAX：创造物品合成。"
 			]
 			icon: "minecraft:structure_void"
 			id: "4536535E8DA71D5B"
+			min_width: 350
 			tasks: [{
 				id: "653FC7E3CCCA0A5E"
 				title: "关于内容"
@@ -346,60 +361,6 @@
 			id: "6A7BE998C2EC882D"
 			rewards: [
 				{
-					id: "4E126BA77EF7DDCE"
-					item: {
-						Count: 1
-						id: "gtceu:duranium_hammer"
-						tag: {
-							DisallowContainerItem: 0b
-							Enchantments: [{
-								id: "minecraft:unbreaking"
-								lvl: 3s
-							}]
-							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
-							}
-							GT.Tool: {
-								AttackDamage: 13.0f
-								AttackSpeed: -2.5f
-								Damage: 0
-								Enchantability: 33
-								HarvestLevel: 5
-								MaxDamage: 8191
-								ToolSpeed: 18.0f
-							}
-							HideFlags: 2
-							RepairCost: 1
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "48F3F836CBAF7FB6"
-					item: {
-						Count: 1
-						id: "gtceu:duranium_file"
-						tag: {
-							DisallowContainerItem: 0b
-							Enchantments: [{
-								id: "minecraft:unbreaking"
-								lvl: 3s
-							}]
-							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
-							}
-							GT.Tool: {
-								Damage: 0
-								Enchantability: 33
-								MaxDamage: 8191
-							}
-							HideFlags: 2
-							RepairCost: 1
-						}
-					}
-					type: "item"
-				}
-				{
 					id: "6FB84C6CFD46A0F1"
 					item: {
 						Count: 1
@@ -408,7 +369,7 @@
 							DisallowContainerItem: 0b
 							Enchantments: [{
 								id: "minecraft:unbreaking"
-								lvl: 3s
+								lvl: 999s
 							}]
 							GT.Behaviours: { }
 							GT.Tool: {
@@ -418,6 +379,50 @@
 							}
 							HideFlags: 2
 							RepairCost: 1
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "43DB6E0844CC0989"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_hammer"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								HarvestLevel: 6
+								MaxDamage: 65534
+								ToolSpeed: 184.0f
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1E277D3D320568AE"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_file"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								MaxDamage: 65534
+							}
+							HideFlags: 2
+							Unbreakable: 1b
 						}
 					}
 					type: "item"
@@ -506,6 +511,7 @@
 					type: "item"
 				}
 			]
+			title: "铜粉和锡粉"
 			x: 5.5d
 			y: -2.5d
 		}
@@ -554,7 +560,11 @@
 		}
 		{
 			dependencies: ["52A0EE026A3D3A79"]
-			description: ["手持终端潜行右键可以自动搭建多方块结构，如果是空手则会显示预览"]
+			description: [
+				"手持终端潜行右键可以自动搭建多方块结构，如果是空手则会显示预览"
+				""
+				"自动搭建有一点问题，特别是在创造模式，推荐先不要在背包中放功能仓室只放结构方块，在搭建出主体结构后再手动放上功能仓室"
+			]
 			id: "4AB25C15F0B05AA0"
 			optional: true
 			rewards: [{
@@ -679,74 +689,86 @@
 				"扳手右键点击可以&9&l设置GT机器的端口&r，而潜行右键点击可以&9&l旋转机器&r，也可以代替镐子破坏机器"
 				"螺丝刀可以&9&l打开机器覆盖板"
 				"剪线钳可以&9&l连接线缆"
+				"{@pagebreak}"
+				"扳手："
+				"手持扳手对准可使用扳手的方块时，方块各面会显示出九宫格，："
+				"其中中心的最多，棱其次，角最小。"
+				"当右键机器面的中心时，则可将正面旋转到该面（仅有面区分的非GT机器）或将输出口调到该面（对于GT机器）；当右键棱时，则将面旋转到相应棱方向的面；右键角时，则将面旋转到右击面的对面。但如果右键的是无面的区分的非GT机器，则以上操作均拆卸下机器。当Shift右键面中心时，则可将正面旋转到该面（对于所有机器），其他对于棱和角一样。对于无面的区分的非GT机器，则以上操作均拆卸下机器。"
+				"右击管道的面的中心时，无变化；但右键棱则可连接/断开相应棱方向的管道；右键角则连接/断开对面方向的管道。Shift右键则可以控制是否输入相应面。"
+				"右键原木、干草块、比较器、中继器、南瓜、南瓜灯、活塞、粘性活塞、投掷器、发射器、熔炉、箱子、陷阱箱、末影箱、漏斗的非正面时，可以转向；"
+				"右键工作台、书架、南瓜、南瓜灯、活塞、粘性活塞、投掷器、发射器、熔炉、箱子、陷阱箱、末影箱、漏斗的正面时，可以拆卸。"
+				"但是除了这些，类似拉杆、铁轨之类的方块仍然可以被旋转或拆卸。"
+				"{@pagebreak}"
+				"软锤："
+				"右键可开启/关闭机器。"
+				"右键点亮的红石灯，可以将其熄灭，反之亦然。"
+				"右键动力铁轨，可以直接激活，反之亦然。"
+				"右键原木、干草块、活塞、粘性活塞、投掷器、发射器、南瓜、南瓜灯、熔炉、箱子、陷阱箱或漏斗，可以将方块转向；"
+				""
+				"螺丝刀："
+				"用于调整各种输出口和合成零件。"
+				"右击机器的正面及输出口时，可以调整是否允许从输出面输入。"
+				"注：虽然手持螺丝刀对着导线和管道确实会有九宫格，但是实测却无作用。"
+				"正确说法：如果九宫格对应的面可以被螺丝刀操控，则相当于直接操控该面；如果不能，则无效果。且操作规律同扳手。"
+				"右键比较器、中继器时，可以转向。"
+				""
+				"撬棍："
+				"用于撬动铁轨和撬开各种板条箱，以及拆卸覆盖板。"
 			]
 			id: "1F663A6C2DD1DB60"
 			rewards: [
 				{
-					id: "62E0F2DF5D9B8EF2"
+					id: "3953AFA6DC255A9D"
 					item: {
 						Count: 1
-						id: "gtceu:duranium_wire_cutter"
+						id: "gtceu:neutronium_wrench"
 						tag: {
 							DisallowContainerItem: 0b
-							Enchantments: [{
-								id: "minecraft:unbreaking"
-								lvl: 3s
-							}]
+							GT.Behaviours: {
+								Mode: 2b
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								HarvestLevel: 6
+								MaxDamage: 65534
+								ToolSpeed: 184.0f
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "47195CDC24BB0499"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_screwdriver"
+						tag: {
+							DisallowContainerItem: 0b
 							GT.Behaviours: {
 								RelocateMinedBlocks: 1b
 							}
 							GT.Tool: {
 								Damage: 0
 								Enchantability: 33
-								HarvestLevel: 5
-								MaxDamage: 8191
-								ToolSpeed: 18.0f
+								MaxDamage: 65534
 							}
 							HideFlags: 2
-							RepairCost: 1
+							Unbreakable: 1b
 						}
 					}
 					type: "item"
 				}
 				{
-					id: "40D1EAB8C4EA8EB9"
+					id: "0C92E28D8F481344"
 					item: {
 						Count: 1
-						id: "gtceu:duranium_screwdriver"
+						id: "gtceu:neutronium_saw"
 						tag: {
 							DisallowContainerItem: 0b
-							Enchantments: [{
-								id: "minecraft:unbreaking"
-								lvl: 3s
-							}]
-							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
-							}
-							GT.Tool: {
-								AttackDamage: 11.0f
-								AttackSpeed: 3.3f
-								Damage: 0
-								Enchantability: 33
-								MaxDamage: 8191
-							}
-							HideFlags: 2
-							RepairCost: 1
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "60B5CC8C455099B7"
-					item: {
-						Count: 1
-						id: "gtceu:duranium_saw"
-						tag: {
-							DisallowContainerItem: 0b
-							Enchantments: [{
-								id: "minecraft:unbreaking"
-								lvl: 3s
-							}]
 							GT.Behaviours: {
 								HarvestIce: 1b
 								RelocateMinedBlocks: 1b
@@ -754,7 +776,76 @@
 							GT.Tool: {
 								Damage: 0
 								Enchantability: 33
-								MaxDamage: 8191
+								MaxDamage: 65534
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2B53D098FE44E1E7"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_wire_cutter"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								HarvestLevel: 6
+								MaxDamage: 65534
+								ToolSpeed: 184.0f
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2F2ECAEB122EA729"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_knife"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								AttackDamage: 100.0f
+								AttackSpeed: 3.5f
+								Damage: 0
+								Enchantability: 33
+								MaxDamage: 65534
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3AE5213059754673"
+					item: {
+						Count: 1
+						id: "gtceu:polybenzimidazole_mallet"
+						tag: {
+							DisallowContainerItem: 0b
+							Enchantments: [{
+								id: "minecraft:unbreaking"
+								lvl: 999s
+							}]
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 10
+								MaxDamage: 1023
 							}
 							HideFlags: 2
 							RepairCost: 1
@@ -763,57 +854,24 @@
 					type: "item"
 				}
 				{
-					id: "605C8535DAF9A2C6"
+					id: "43B75892B602126D"
 					item: {
 						Count: 1
-						id: "gtceu:duranium_knife"
+						id: "gtceu:neutronium_crowbar"
 						tag: {
 							DisallowContainerItem: 0b
-							Enchantments: [{
-								id: "minecraft:unbreaking"
-								lvl: 3s
-							}]
 							GT.Behaviours: {
 								RelocateMinedBlocks: 1b
 							}
 							GT.Tool: {
-								AttackDamage: 12.0f
-								AttackSpeed: 3.3f
 								Damage: 0
 								Enchantability: 33
-								MaxDamage: 8191
+								HarvestLevel: 6
+								MaxDamage: 65534
+								ToolSpeed: 184.0f
 							}
 							HideFlags: 2
-							RepairCost: 1
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "101FE472B243F704"
-					item: {
-						Count: 1
-						id: "gtceu:duranium_wrench"
-						tag: {
-							DisallowContainerItem: 0b
-							Enchantments: [{
-								id: "minecraft:unbreaking"
-								lvl: 3s
-							}]
-							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
-							}
-							GT.Tool: {
-								AttackDamage: 13.0f
-								AttackSpeed: -2.5f
-								Damage: 0
-								Enchantability: 33
-								HarvestLevel: 5
-								MaxDamage: 8191
-								ToolSpeed: 18.0f
-							}
-							HideFlags: 2
-							RepairCost: 1
+							Unbreakable: 1b
 						}
 					}
 					type: "item"
@@ -903,6 +961,44 @@
 					item: {
 						Count: 1
 						id: "gtceu:iron_wrench"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 14
+								HarvestLevel: 2
+								MaxDamage: 255
+								ToolSpeed: 6.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4AB4BAEA70096ED0"
+					item: {
+						Count: 1
+						id: "gtceu:wood_mallet"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 10
+								MaxDamage: 127
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7D3B7BFBCCA97435"
+					item: {
+						Count: 1
+						id: "gtceu:iron_crowbar"
 						tag: {
 							DisallowContainerItem: 0b
 							GT.Behaviours: { }
@@ -1085,6 +1181,52 @@
 			title: "超级存储"
 			x: 7.5d
 			y: -1.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["050FD340224F7AB6"]
+			description: ["第一行就是最多连锁数量，设置时不建议太大"]
+			icon: {
+				Count: 1
+				id: "ae2:fluix_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "64D9F1266FDE5FFE"
+			rewards: [{
+				command: "/ftbultimine serverconfig"
+				id: "73FADAC6A80B392D"
+				type: "command"
+			}]
+			tasks: [{
+				id: "49D06A3D2A085A61"
+				title: "更快的挖矿"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -1.0d
+		}
+		{
+			description: [
+				"鼠标移动到一个物品上面!（背包，右侧搜索栏，jei中"
+				""
+				"按r查看合成！！！"
+				"按u查看用途！！！"
+				""
+				"打开界面后上面有两个带箭头的行"
+				"第一行和最上的图标一样可以切换合成工具（点击这一行的文字可以查看这种方式的所有合成表）"
+				"第二行可以翻页（很多物品有大量的合成方法，请仔细浏览）"
+			]
+			icon: "kubejs:rotating_transparent_surface"
+			id: "575A2A1E4F56FF34"
+			tasks: [{
+				id: "076E6DC515FD655D"
+				title: "JEI简介"
+				type: "checkmark"
+			}]
+			x: -8.5d
+			y: -0.5d
 		}
 	]
 	title: "由此开始"

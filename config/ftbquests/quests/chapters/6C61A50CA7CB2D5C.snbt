@@ -610,7 +610,10 @@
 			dependencies: [
 				"7AEC0D308494C0F8"
 				"51AA4887F2DC9747"
+				"0375D068023B13D7"
 			]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
 			id: "187BE1A67AF10798"
 			tasks: [{
 				id: "1F5143D93FEC05B0"
@@ -715,20 +718,19 @@
 			tasks: [{
 				dimension: "kubejs:ceres"
 				id: "4661CE23F70EE69E"
-				title: "古神星"
+				title: "谷神星"
 				type: "dimension"
 			}]
 			x: 38.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["5F482FD80B1E9CB3"]
+			dependencies: ["602F48807D4A89A6"]
 			id: "2BB52D1C09C418A9"
 			tasks: [{
-				dimension: "minecraft:the_nether"
-				id: "11B1D29E35F676FE"
-				title: "地狱"
-				type: "dimension"
+				id: "7EC35064B342F50D"
+				item: "kubejs:nether_data"
+				type: "item"
 			}]
 			x: 29.0d
 			y: 0.0d
@@ -785,6 +787,273 @@
 			]
 			title: "月球的矿"
 			x: 9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["23C2F99FC949AF0A"]
+			id: "2E189BB17587F157"
+			tasks: [
+				{
+					id: "4F4581A6BBDA7AAE"
+					item: "gtceu:helium_bucket"
+					type: "item"
+				}
+				{
+					id: "1E449DEB2B7B3063"
+					item: "gtceu:helium_3_bucket"
+					type: "item"
+				}
+			]
+			title: "月球的流体矿脉"
+			x: 9.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["702471643821B0DE"]
+			id: "3D5E0BA1F8F013FC"
+			tasks: [
+				{
+					id: "7B362C2D0A3F2B34"
+					item: "gtceu:raw_scheelite"
+					type: "item"
+				}
+				{
+					id: "5868448726EB5F85"
+					item: "gtceu:raw_tungstate"
+					type: "item"
+				}
+				{
+					id: "4340E734E1FCE59F"
+					item: "gtceu:raw_lithium"
+					type: "item"
+				}
+				{
+					id: "67BCA48FD653C9D5"
+					item: "gtceu:raw_cooperite"
+					type: "item"
+				}
+				{
+					id: "4F64CB1271C10AD6"
+					item: "gtceu:raw_bornite"
+					type: "item"
+				}
+				{
+					id: "36885808EF010639"
+					item: "gtceu:raw_platinum"
+					type: "item"
+				}
+				{
+					id: "2945D20FC740FB45"
+					item: "gtceu:raw_palladium"
+					type: "item"
+				}
+				{
+					id: "49159B1279181E8F"
+					item: "gtceu:raw_pyrochlore"
+					type: "item"
+				}
+				{
+					id: "41E24DC7270AF2D1"
+					item: "gtceu:raw_apatite"
+					type: "item"
+				}
+				{
+					id: "02C7ED74D08CBD20"
+					item: "gtceu:raw_tricalcium_phosphate"
+					type: "item"
+				}
+			]
+			title: "火星的矿"
+			x: 17.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["702471643821B0DE"]
+			id: "457BA0CCBA39709A"
+			tasks: [{
+				id: "61D3F1750DE46B40"
+				item: "gtceu:radon_bucket"
+				type: "item"
+			}]
+			title: "火星的流体矿脉"
+			x: 17.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["602F48807D4A89A6"]
+			description: [""]
+			id: "66BBE21B86B35170"
+			tasks: [
+				{
+					id: "053580F012F38F61"
+					item: "gtceu:raw_desh"
+					type: "item"
+				}
+				{
+					id: "0133550C8342EFE1"
+					item: "gtceu:raw_magnesite"
+					type: "item"
+				}
+				{
+					id: "576FEDA169E057F5"
+					item: "gtceu:raw_sulfur"
+					type: "item"
+				}
+				{
+					id: "61DF7F4FD46F331E"
+					item: "gtceu:raw_pyrite"
+					type: "item"
+				}
+				{
+					id: "34BAD952486803D1"
+					item: "gtceu:raw_sphalerite"
+					type: "item"
+				}
+				{
+					id: "23C0BD54CD211593"
+					item: "gtceu:raw_bentonite"
+					type: "item"
+				}
+				{
+					id: "589DD66CA5B99DFA"
+					item: "gtceu:raw_magnetite"
+					type: "item"
+				}
+				{
+					id: "2C3A195F85EA60B6"
+					item: "gtceu:raw_olivine"
+					type: "item"
+				}
+				{
+					id: "5157C46CB2B214A2"
+					item: "gtceu:raw_glauconite_sand"
+					type: "item"
+				}
+			]
+			title: "金星的矿"
+			x: 27.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["240EDC34562E580F"]
+			id: "755BA509E954B7DC"
+			tasks: [
+				{
+					id: "6428D6EEAEE1BA91"
+					item: "gtceu:raw_calorite"
+					type: "item"
+				}
+				{
+					id: "478CD9D688916D24"
+					item: "gtceu:raw_cobalt"
+					type: "item"
+				}
+				{
+					id: "35C30A631D599917"
+					item: "gtceu:raw_magnesite"
+					type: "item"
+				}
+				{
+					id: "5DD0B8141CB6F828"
+					item: "gtceu:raw_garnierite"
+					type: "item"
+				}
+				{
+					id: "1127E4740231AECC"
+					item: "gtceu:raw_nickel"
+					type: "item"
+				}
+				{
+					id: "659704C6C7AD926D"
+					item: "gtceu:raw_cobaltite"
+					type: "item"
+				}
+				{
+					id: "7BC6862957021AA4"
+					item: "gtceu:raw_pentlandite"
+					type: "item"
+				}
+			]
+			title: "水星的矿"
+			x: 28.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["602F48807D4A89A6"]
+			id: "01CE2C1DC8A32201"
+			tasks: [{
+				id: "17B5CE2CD59AA220"
+				item: "gtceu:sulfuric_acid_bucket"
+				type: "item"
+			}]
+			title: "金星的流体矿脉"
+			x: 27.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["240EDC34562E580F"]
+			id: "4384E49FECF0451D"
+			tasks: [{
+				id: "068685245F0512CB"
+				item: "gtceu:deuterium_bucket"
+				type: "item"
+			}]
+			title: "水星的流体矿脉"
+			x: 28.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5010011959CF5337"]
+			id: "48DFA1EF82126177"
+			tasks: [{
+				id: "712CE912BBCC97FA"
+				item: "gtceu:raw_ostrum"
+				type: "item"
+			}]
+			title: "谷神星的矿"
+			x: 38.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5010011959CF5337"]
+			id: "41BAD19014E33CB2"
+			tasks: [
+				{
+					id: "1C9DDA595033297C"
+					item: "gtceu:neon_bucket"
+					type: "item"
+				}
+				{
+					id: "17B2C5CD61139B40"
+					item: "gtceu:krypton_bucket"
+					type: "item"
+				}
+				{
+					id: "0B78A22B254CF866"
+					item: "gtceu:radon_bucket"
+					type: "item"
+				}
+				{
+					id: "29F4B46653D2282E"
+					item: "gtceu:xenon_bucket"
+					type: "item"
+				}
+			]
+			title: "谷神星的流体矿脉"
+			x: 38.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2BB52D1C09C418A9"]
+			description: ["使用远古反应核，相邻放金块角落放绿宝石块"]
+			id: "778546543F6413E7"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "46F65CA6CFE50917"
+				title: "地狱"
+				type: "dimension"
+			}]
+			x: 29.0d
 			y: 2.0d
 		}
 	]
