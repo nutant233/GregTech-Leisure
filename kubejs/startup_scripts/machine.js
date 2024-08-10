@@ -631,7 +631,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("advanced_assembly_line", "multiblock", (holder) => new $AssemblyLineMachine(holder))
         .rotationState(RotationState.ALL)
         .recipeType("assembly_line")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => $AssemblyLineMachine.recipeModifier(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => $AssemblyLineMachine.recipeModifier(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern(definition =>
             FactoryBlockPattern.start("back", "up", "right")
