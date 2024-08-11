@@ -21,6 +21,12 @@
 - 过载压：超时空电路，宇宙模拟，时空，奇点，永恒。
 - 上限压：创造物品合成。
 
+## 协议
+
+- 核心代码 - [AGPL v3](https://github.com/nutant233/GregTech-Leisure/blob/main/LICENSE)
+- 纹理 - [AGPL v3](https://github.com/nutant233/GregTech-Leisure/blob/main/LICENSE)
+- 任务文本 - [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)
+
 ## 鸣谢作品
 
 - 部分处理线，多方块结构，纹理来自 **[Gregicality Legacy](https://github.com/GregTechCEu/gregicality-legacy)**
@@ -30,3 +36,5 @@
 - 部分处理线来自 **[GregTech 6](https://github.com/GregTech6/gregtech6)**
 - 部分纹理来自 **[Gregicality Science](https://github.com/GregTechCEu/gregicality-science)**
 - 部分纹理来自 **[Mekanism](https://github.com/mekanism/Mekanism)**
+- 部分纹理来自 **[Deeper And Darker](https://github.com/KyaniteMods/DeeperAndDarker)**
+- 部分任务文本来自 **[GregTech Community Pack](https://github.com/GregTechCEu/GregTech-Community-Pack)**
