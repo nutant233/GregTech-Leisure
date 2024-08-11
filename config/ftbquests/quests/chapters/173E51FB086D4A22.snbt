@@ -5,7 +5,7 @@
 	group: "40551FF3A34D90BA"
 	icon: "gtceu:mv_fluid_drilling_rig"
 	id: "173E51FB086D4A22"
-	order_index: 2
+	order_index: 3
 	quest_links: [
 		{
 			id: "23D2FC4204AB8AFE"

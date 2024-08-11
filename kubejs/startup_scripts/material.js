@@ -3533,4 +3533,6 @@ GTCEuStartupEvents.materialModification(() => {
     GTMaterials.get("er_lu_oxides_solution").setFormula("(Er2O3)(Tm2O3)(Yb2O3)(Lu2O3)")
     GTMaterials.get("earth_crystal").getProperty(PropertyKey.ORE).setOreByProducts(GTMaterials.get("perditio_crystal"))
     GTMaterials.get("ignis_crystal").getProperty(PropertyKey.ORE).setOreByProducts(GTMaterials.get("perditio_crystal"))
+    GTMaterials.PotassiumSulfate.setComponents("2x potassium", "1x sulfur", "4x oxygen")
+    GTMaterials.AmmoniumChloride.setComponents("1x nitrogen", "4x hydrogen", "1x chlorine")
 })
