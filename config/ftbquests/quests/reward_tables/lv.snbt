@@ -1,0 +1,21 @@
+{
+	icon: "gtceu:lv_machine_hull"
+	id: "5CCA764B7B6E182B"
+	loot_size: 1
+	order_index: 4
+	rewards: [
+		{ item: "gtceu:silver_credit", weight: 0.4f }
+		{ item: "gtceu:cupronickel_credit", weight: 0.8f }
+		{ item: "gtceu:gold_credit", weight: 0.05f }
+		{ item: "gtceu:ancient_gold_coin", weight: 0.1f }
+		{ count: 32, item: "gtceu:lv_electric_motor" }
+		{ count: 16, item: "gtceu:aluminium_ingot", weight: 0.4f }
+		{ count: 16, item: "gtceu:conductive_alloy_ingot" }
+		{ count: 64, item: "gtceu:gallium_dust", weight: 0.5f }
+		{ count: 64, item: "gtceu:aluminium_dust" }
+		{ count: 64, item: "gtceu:rubber_ingot" }
+		{ count: 64, item: "gtceu:steel_ingot" }
+		{ item: "gtceu:copper_credit", weight: 2.0f }
+	]
+	title: "LV奖励袋"
+}

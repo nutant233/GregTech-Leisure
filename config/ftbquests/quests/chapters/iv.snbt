@@ -8,6 +8,10 @@
 	order_index: 5
 	quest_links: [ ]
 	quests: [{
+		dependencies: [
+			"1EC6366E9611F2AD"
+			"5000DCB028460D47"
+		]
 		id: "150D6CF93A723425"
 		shape: "rsquare"
 		size: 2.0d

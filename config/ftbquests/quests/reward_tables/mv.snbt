@@ -1,0 +1,21 @@
+{
+	icon: "gtceu:mv_machine_hull"
+	id: "76C8457F9E84E8A9"
+	loot_size: 1
+	order_index: 5
+	rewards: [
+		{ item: "gtceu:silver_credit", weight: 0.8f }
+		{ item: "gtceu:gold_credit", weight: 0.4f }
+		{ item: "gtceu:platinum_credit", weight: 0.01f }
+		{ item: "gtceu:ancient_gold_coin", weight: 0.1f }
+		{ count: 16, item: "gtceu:stainless_steel_ingot", weight: 0.5f }
+		{ item: "gtceu:silicon_boule", weight: 0.2f }
+		{ count: 8, item: "gtceu:polyethylene_plate", weight: 0.2f }
+		{ count: 64, item: "gtceu:chromium_dust" }
+		{ count: 64, item: "gtceu:manganese_dust" }
+		{ count: 16, item: "gtceu:mv_electric_motor" }
+		{ count: 64, item: "gtceu:aluminium_ingot" }
+		{ item: "gtceu:cupronickel_credit", weight: 3.0f }
+	]
+	title: "MV奖励袋"
+}

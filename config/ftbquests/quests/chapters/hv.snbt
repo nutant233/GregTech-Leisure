@@ -15,6 +15,12 @@
 			]
 			hide_dependent_lines: true
 			id: "1A48D2DB936FF632"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7BDCCF5C340573FE"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			shape: "rsquare"
 			size: 2.0d
 			tasks: [{
@@ -29,6 +35,12 @@
 		{
 			dependencies: ["74D9136DE32F9129"]
 			id: "1EC6366E9611F2AD"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "094F326DB54AC32F"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			shape: "rsquare"
 			size: 2.0d
 			tasks: [{
@@ -42,6 +54,12 @@
 		{
 			dependencies: ["4DDF10E2B541BCBF"]
 			id: "7940CFD732610594"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7E45DC8A60E3A614"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			shape: "rsquare"
 			size: 2.0d
 			tasks: [{
@@ -58,6 +76,12 @@
 				"1C320B245EAC8D14"
 			]
 			id: "4DDF10E2B541BCBF"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0B4DB840B4DF83C1"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "054FD71E04CD34FC"
 				item: "gtceu:hv_circuit_assembler"
@@ -69,6 +93,12 @@
 		{
 			dependencies: ["4302F67F2B0B22D0"]
 			id: "26FA6E064EF9FF5B"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5F2720D13F11CF86"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [
 				{
 					id: "1A199FD6643AADF7"
@@ -92,6 +122,12 @@
 				"4967FCD7B2675E94"
 			]
 			id: "4302F67F2B0B22D0"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "59D6FB4FD133817E"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "009EE8D1C5AC4CBD"
 				item: "minecraft:ender_eye"
@@ -103,6 +139,12 @@
 		{
 			dependencies: ["61049DA87C6DEFC6"]
 			id: "3E9C078C4BABAE3B"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "37F5B54BCDBC034E"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "0AA5FB1BA702DF77"
 				item: "minecraft:blaze_powder"
@@ -114,6 +156,12 @@
 		{
 			dependencies: ["1A48D2DB936FF632"]
 			id: "61049DA87C6DEFC6"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1579A90E1F19828F"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "388AD19F722DB366"
 				item: "gtceu:hv_chemical_reactor"
@@ -125,6 +173,12 @@
 		{
 			description: ["用屠宰场，或者你也可以用聚爆压缩机"]
 			id: "6B416753B41DE9D3"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "135AB2B3FEB05927"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "575D1DBEC4A5CC60"
 				item: "minecraft:ender_pearl"
@@ -139,6 +193,12 @@
 				"157A951DA379C259"
 			]
 			id: "3FCF807491579B94"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5AD8960FE6F5B278"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "1259CD7048B5DE84"
 				item: "gtceu:micro_processor"
@@ -150,6 +210,12 @@
 		{
 			dependencies: ["3FCF807491579B94"]
 			id: "18CA398800CC2E1B"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "41F809B20C20EC5B"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "2C8B079C13E74751"
 				item: "gtceu:micro_processor_assembly"
@@ -164,6 +230,12 @@
 				"5E9EA7E22BE663AF"
 			]
 			id: "1C320B245EAC8D14"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4578216A318038CB"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "759C0F5C1FCC6D04"
 				item: "gtceu:micro_processor_computer"
@@ -175,6 +247,12 @@
 		{
 			dependencies: ["1C320B245EAC8D14"]
 			id: "3461BF0D74E5E8DF"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3F53E0028DF8A3F0"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "4C4E9514C39EE1F0"
 				item: "gtceu:micro_processor_mainframe"
@@ -186,6 +264,12 @@
 		{
 			dependencies: ["314E6600CD806FA0"]
 			id: "5E9EA7E22BE663AF"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7EF2167F56F7851A"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "0106634910539280"
 				item: "gtceu:cleaning_maintenance_hatch"
@@ -197,6 +281,12 @@
 		{
 			dependencies: ["1A48D2DB936FF632"]
 			id: "314E6600CD806FA0"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "531ABE740A7EAB07"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [
 				{
 					id: "51A8847E7B6D06D3"
@@ -216,6 +306,12 @@
 		{
 			dependencies: ["5EECD56BF0EC1539"]
 			id: "0243CEA5EE705EB0"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6BA7D8CC5B2E1AA1"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "0843D22E4B02D63E"
 				item: "gtceu:plastic_printed_circuit_board"
@@ -228,6 +324,12 @@
 			dependencies: ["7940CFD732610594"]
 			description: ["前往探索宇宙章节了解更多"]
 			id: "0931ECBAAD9252C7"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "63E1132991D96CDF"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [
 				{
 					id: "5A00D926C53F953B"
@@ -255,6 +357,12 @@
 		{
 			dependencies: ["1A48D2DB936FF632"]
 			id: "5EECD56BF0EC1539"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7614D3E6D0F30279"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "5009E0AA80514313"
 				item: "gtceu:plastic_circuit_board"
@@ -266,6 +374,12 @@
 		{
 			dependencies: ["26FA6E064EF9FF5B"]
 			id: "6F85AB2294DA3310"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "43C905C2BA4CDFFC"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "0E4B176D3DF3D8F5"
 				item: "gtceu:fishing_ground"
@@ -278,6 +392,12 @@
 			dependencies: ["7940CFD732610594"]
 			description: ["前往石化生化章节了解更多"]
 			id: "2EAAF5A6510D0EFE"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "794DEF9DEFF04A44"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [
 				{
 					id: "1A9ABA22BF878A3D"
@@ -302,6 +422,12 @@
 		{
 			dependencies: ["7940CFD732610594"]
 			id: "027197A71E630966"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7163BF955A0FFE9E"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "67020EF8AE962E62"
 				item: "gtceu:vacuum_freezer"
@@ -314,6 +440,12 @@
 			dependencies: ["027197A71E630966"]
 			description: ["可以从空气中获得氦气和氩气都是烧制更高级金属的保护气"]
 			id: "2610283E00EC04E4"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3384227487CED620"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "438ED371C645C82D"
 				item: "gtceu:liquid_air_bucket"
@@ -325,6 +457,12 @@
 		{
 			dependencies: ["1A48D2DB936FF632"]
 			id: "06F68B574AC84B7B"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "07354A11E505912E"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "13A390535ABFA12A"
 				item: "gtceu:hv_assembler"
@@ -339,6 +477,12 @@
 				"06F68B574AC84B7B"
 			]
 			id: "75DAAFAD21F1451C"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "784615D42B55B12A"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			size: 2.0d
 			tasks: [{
 				id: "14FEB5E23CFFB069"
@@ -351,6 +495,12 @@
 		{
 			dependencies: ["0BE334D9B0575DCD"]
 			id: "0A8178183C888BE0"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "00606B04F964441A"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "3E9AD74BC94DB5D5"
 				item: "gtceu:hv_cutter"
@@ -362,6 +512,12 @@
 		{
 			dependencies: ["0A8178183C888BE0"]
 			id: "676D1982102F4E79"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "16EF6E0286E86FC5"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "6B2D53D953086706"
 				item: "gtceu:lpic_chip"
@@ -373,6 +529,12 @@
 		{
 			dependencies: ["47E43CE78A75BB63"]
 			id: "0BE334D9B0575DCD"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "197BC57D3896C961"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "4394414AFDD8E56B"
 				item: "gtceu:lpic_wafer"
@@ -384,6 +546,12 @@
 		{
 			dependencies: ["4967FCD7B2675E94"]
 			id: "47E43CE78A75BB63"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4E03338ADAA2674F"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "45AA5B60D5D7B721"
 				item: "gtceu:orange_glass_lens"
@@ -395,6 +563,12 @@
 		{
 			dependencies: ["1A48D2DB936FF632"]
 			id: "4967FCD7B2675E94"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "255DE727A9022BE9"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "27DFEA3AEE09C688"
 				item: "gtceu:hv_chemical_bath"
@@ -406,6 +580,12 @@
 		{
 			dependencies: ["06F68B574AC84B7B"]
 			id: "157A951DA379C259"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7C1B7E0A6C4F902C"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [
 				{
 					id: "00D5736963F13047"
@@ -442,11 +622,19 @@
 			dependency_requirement: "one_completed"
 			description: ["聚四氟乙烯，简称PTFE是一种独特的塑料材料，具有卓越的化学稳定性、耐热性、低摩擦系数和非粘性表面，用作化学加工设备的零件、电子绝缘材料、泵和阀门的密封件。"]
 			id: "11186961491B1773"
-			rewards: [{
-				id: "3BBDECB636770611"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "3BBDECB636770611"
+					item: "gtceu:gold_credit"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "758CB7FC25DA94E4"
+					table_id: 9099047041404322891L
+					type: "random"
+				}
+			]
 			tasks: [{
 				id: "3E80F0C58C4A3699"
 				item: "gtceu:polytetrafluoroethylene_ingot"
@@ -458,6 +646,12 @@
 		{
 			dependencies: ["11186961491B1773"]
 			id: "29450DC426C4E2D6"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "17FBD9F00E9171BE"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "42EC7CCD50B1D828"
 				item: "gtceu:large_chemical_reactor"
@@ -470,11 +664,19 @@
 			dependencies: ["027197A71E630966"]
 			description: ["这种合金具有优异的耐腐蚀性、耐高温性和机械性能，常用于制造耐热、耐腐蚀的设备和部件。"]
 			id: "6843AB3573F42310"
-			rewards: [{
-				id: "44C0B24431F76A98"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "44C0B24431F76A98"
+					item: "gtceu:gold_credit"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "17AC7AB9F2C71521"
+					table_id: 9099047041404322891L
+					type: "random"
+				}
+			]
 			tasks: [{
 				id: "07F31D51E577D06C"
 				item: "gtceu:nichrome_ingot"
@@ -486,6 +688,12 @@
 		{
 			dependencies: ["6843AB3573F42310"]
 			id: "42E88FC72902FC0B"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "38F357EBB12EBD51"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			size: 2.0d
 			tasks: [{
 				id: "25491710B97DE83B"
@@ -498,6 +706,12 @@
 		{
 			dependencies: ["0931ECBAAD9252C7"]
 			id: "360787FE602FBF66"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2010868D7F64C04A"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "6FE53B164E07E8FA"
 				item: "gtceu:rutile_dust"
@@ -509,6 +723,12 @@
 		{
 			dependencies: ["360787FE602FBF66"]
 			id: "1AC5A3B5522F78D9"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "43615AC82099BB77"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "07BD08C2A849233A"
 				item: "gtceu:titanium_tetrachloride_bucket"
@@ -523,6 +743,12 @@
 				"027197A71E630966"
 			]
 			id: "74D9136DE32F9129"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7DBF51E1CDA71F19"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "18D78F45AECF373E"
 				item: "gtceu:titanium_ingot"
@@ -535,6 +761,12 @@
 			dependencies: ["2EAAF5A6510D0EFE"]
 			description: ["在EV的时候你就需要大量的奇奇怪怪的化工原料，现在不把石化生化联合产线搭好，后面EV会非常坐牢"]
 			id: "57A4521AB4244810"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0A60C61F6A547055"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "45688891118E1797"
 				title: "石化生化产线特别有必要"
@@ -547,13 +779,72 @@
 			dependencies: ["1A48D2DB936FF632"]
 			description: ["终于可以获得研磨的副产物了"]
 			id: "24A12D2F592DC50D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "73DF63144B63E0DD"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
 			tasks: [{
 				id: "68B4BAC1D648029B"
 				item: "gtceu:hv_macerator"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A48D2DB936FF632"]
+			description: ["这个系列的最后一个"]
+			id: "46BFDB71190C1F49"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "13C59E4E141D5328"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
+			tasks: [{
+				id: "7DDB9B944116C1C1"
+				item: "gtceu:vibrant_alloy_ingot"
+				type: "item"
+			}]
+			title: "HV的便宜超导"
+			x: -2.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["1A48D2DB936FF632"]
+			id: "05360F828860DB6F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "09D7C91394F7618A"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
+			tasks: [{
+				id: "3743494D34E98762"
+				item: "gtceu:infinite_water_cover"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1A48D2DB936FF632"]
+			id: "58936CEB6176A18B"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "52622599036F32E5"
+				table_id: 9099047041404322891L
+				type: "random"
+			}]
+			tasks: [{
+				id: "456C48E25C1F5649"
+				item: "gtceu:implosion_compressor"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 6.0d
 		}
 	]
 	title: "高压HV"
