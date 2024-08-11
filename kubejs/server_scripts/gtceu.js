@@ -387,17 +387,6 @@ ServerEvents.recipes((event) => {
         C: "minecraft:repeating_command_block"
     })
 
-    event.shaped("kubejs:multi_functional_casing", [
-        "BCB",
-        "DAD",
-        "BCB"
-    ], {
-        A: "gtceu:solid_machine_casing",
-        B: "gtceu:double_aluminium_plate",
-        C: "gtceu:mv_electric_motor",
-        D: "gtceu:mv_electric_piston"
-    })
-
     event.shaped("gtceu:processing_plant", [
         "BCB",
         "DAD",
@@ -14055,4 +14044,10 @@ ServerEvents.recipes((event) => {
     ["addData(java.lang.String,int)"]("ev_max", 900)
     ["addData(java.lang.String,int)"]("evt", 5760)
         .duration(800)
+
+    gtr.assembler("kubejs:multi_functional_casing")
+        .itemInputs("gtceu:aluminium_frame","2x gtceu:aluminium_plate","gtceu:mv_electric_motor","gtceu:mv_electric_piston","gtceu:bronze_rotor")
+        .itemOutputs("kubejs:multi_functional_casing")
+        .EUt(30)
+        .duration(300)
 })

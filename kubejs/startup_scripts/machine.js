@@ -2717,14 +2717,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("bender")
         .recipeType("compressor")
         .recipeType("forge_hammer")
-        .recipeType("cutter")
         .recipeType("extruder")
         .recipeType("lathe")
         .recipeType("wiremill")
         .recipeType("forming_press")
-        .recipeType("polarizer")
-        .recipeType("laser_engraver")
-        .recipeType("fluid_solidifier")
         .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 0.8, 0.9), GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - 1)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -2751,9 +2747,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 case GTRecipeTypes.FORGE_HAMMER_RECIPES:
                     isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_forge_hammer"
                     break
-                case GTRecipeTypes.CUTTER_RECIPES:
-                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_cutter"
-                    break
                 case GTRecipeTypes.EXTRUDER_RECIPES:
                     isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_extruder"
                     break
@@ -2765,15 +2758,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     break
                 case GTRecipeTypes.FORMING_PRESS_RECIPES:
                     isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_forming_press"
-                    break
-                case GTRecipeTypes.POLARIZER_RECIPES:
-                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_polarizer"
-                    break
-                case GTRecipeTypes.FLUID_SOLIDFICATION_RECIPES:
-                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_fluid_solidifier"
-                    break
-                case GTRecipeTypes.LASER_ENGRAVER_RECIPES:
-                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_laser_engraver"
                     break
                 default:
                     break
@@ -2838,8 +2822,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("thermal_centrifuge")
         .recipeType("electrolyzer")
         .recipeType("sifter")
-        .recipeType("macerator")
-        .recipeType("extractor")
         .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 0.8, 0.9), GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - 1)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -2869,12 +2851,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 case GTRecipeTypes.SIFTER_RECIPES:
                     isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_sifter"
                     break
-                case GTRecipeTypes.MACERATOR_RECIPES:
-                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_macerator"
-                    break
-                case GTRecipeTypes.EXTRACTOR_RECIPES:
-                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_extractor"
-                    break
                 default:
                     break
             }
@@ -2892,7 +2868,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
 
     event.create("mixed_plant", "multiblock", (holder) => new $StorageMachine(holder, 1))
         .rotationState(RotationState.ALL)
-        .recipeType("chemical_reactor")
         .recipeType("mixer")
         .recipeType("chemical_bath")
         .recipeType("ore_washer")
@@ -2914,9 +2889,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             let tier = machine.self().getTier()
             let isrecipe = false
             switch (machine.self().getRecipeType()) {
-                case GTRecipeTypes.CHEMICAL_RECIPES:
-                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_chemical_reactor"
-                    break
                 case GTRecipeTypes.MIXER_RECIPES:
                     isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_mixer"
                     break
