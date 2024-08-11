@@ -140,6 +140,7 @@
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
+			description: ["用它将物品磁化"]
 			hide_dependency_lines: true
 			id: "51F0CE5F1BCC78D1"
 			tasks: [{
@@ -157,6 +158,7 @@
 				"198ED0A20800F3ED"
 				"20F6BF1EDC6EBDC1"
 			]
+			description: ["你需要在高炉上放两个LV能源仓以将高炉超频到MV，这样它可以运行MV的配方"]
 			icon_scale: 2.0d
 			id: "07D0D7005DA4F446"
 			shape: "circle"
@@ -171,6 +173,7 @@
 		}
 		{
 			dependencies: ["3117BF8E4782DB2A"]
+			description: ["这是为多方块结构供电的方块"]
 			id: "32CE144D9A9F0943"
 			tasks: [{
 				id: "66CE417A92BDA931"
@@ -182,6 +185,7 @@
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
+			description: ["这是高炉需要的仓室"]
 			hide_dependency_lines: true
 			id: "3F38CC8C8D650202"
 			tasks: [
@@ -234,6 +238,7 @@
 				"0332882DFA45B956"
 				"3DDFE62FF48A9135"
 			]
+			description: ["组装机是组装机，电路组装机是电路组装机，不要看错了"]
 			id: "3E50EE376968519F"
 			tasks: [{
 				id: "0A32B247C01822D2"
@@ -248,6 +253,7 @@
 				"29A8EC2EB3240278"
 				"2D6BB32B642AE8BA"
 			]
+			description: ["从物品中提取东西"]
 			id: "63C2FA96C708C125"
 			tasks: [{
 				id: "061EC839843C4CDA"
@@ -475,6 +481,7 @@
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
+			description: ["用它烧制锻铁和退火铜"]
 			hide_dependency_lines: true
 			id: "524AC325E68AEB3A"
 			tasks: [{
@@ -509,6 +516,7 @@
 		}
 		{
 			dependencies: ["2D6BB32B642AE8BA"]
+			description: ["帮助你获取氮气和氧气"]
 			hide_dependency_lines: true
 			id: "5C12B96341807611"
 			tasks: [{

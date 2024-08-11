@@ -660,6 +660,8 @@
   "item.gtceu.super_portable_item_storage_cell": "超级便携物品存储元件",
   "item.gtceu.tool.vajra": "%s金钢杵",
   "item.gtceu.transcendent_max_battery": "超·终极电池",
+  "item.gtceu.primitive_robot_arm": "原始机械臂",
+  "item.gtceu.primitive_fluid_regulator": "原始流体校准器",
   "item.kubejs.actinium_superhydride_plasma_containment_cell": "超氢化锕等离子体密闭容器",
   "item.kubejs.advanced_control_circuit": "§c高级控制电路",
   "item.kubejs.aerographene": "石墨烯气凝胶",
@@ -1649,5 +1651,11 @@
   "block.gtceu.neutron_sensor": "中子传感器",
   "block.gtceu.ulv_neutron_accelerator": "§8ULV 中子加速器§r",
   "block.gtceu.uv_neutron_accelerator": "§3UV 中子加速器§r",
-  "block.gtceu.zpm_neutron_accelerator": "§cZPM 中子加速器§r"
+  "block.gtceu.zpm_neutron_accelerator": "§cZPM 中子加速器§r",
+  "block.gtceu.uhv_neutron_accelerator": "§4UHV 中子加速器§r",
+  "block.gtceu.uev_neutron_accelerator": "§aUEV 中子加速器§r",
+  "block.gtceu.uiv_neutron_accelerator": "§2UIV 中子加速器§r",
+  "block.gtceu.uxv_neutron_accelerator": "§eUXV 中子加速器§r",
+  "block.gtceu.opv_neutron_accelerator": "§9§lOpV 中子加速器§r",
+  "block.gtceu.max_neutron_accelerator": "§c§lMAX 中子加速器§r"
 }

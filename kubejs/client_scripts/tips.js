@@ -97,7 +97,8 @@ ItemEvents.tooltip(event => {
         "gtceu:cooling_tower",
         "gtceu:super_blast_smelter",
         "gtceu:super_particle_collider",
-        "gtceu:large_chemical_plant"], "允许同时使用激光仓")
+        "gtceu:large_chemical_plant",
+        "gtceu:star_ultimate_material_forge_factory"], "允许同时使用激光仓")
     event.add(["gtceu:magic_manufacturer",
         "gtceu:sps_crafting",
         "gtceu:chemical_plant",

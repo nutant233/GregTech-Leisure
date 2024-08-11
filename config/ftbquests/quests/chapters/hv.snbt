@@ -82,8 +82,8 @@
 				}
 			]
 			title: "HV发射器与传感器"
-			x: 6.0d
-			y: 2.0d
+			x: 8.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -119,8 +119,8 @@
 				item: "gtceu:hv_chemical_reactor"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 2.0d
+			x: 2.0d
+			y: 0.0d
 		}
 		{
 			description: ["用屠宰场，或者你也可以用聚爆压缩机"]
@@ -131,7 +131,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -271,7 +271,7 @@
 				item: "gtceu:fishing_ground"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 0.0d
 		}
 		{
@@ -296,7 +296,7 @@
 				}
 			]
 			title: "石化生化产线"
-			x: 10.0d
+			x: 12.0d
 			y: 0.0d
 		}
 		{
@@ -319,8 +319,8 @@
 				item: "gtceu:liquid_air_bucket"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 0.0d
+			x: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1A48D2DB936FF632"]
@@ -339,6 +339,7 @@
 				"06F68B574AC84B7B"
 			]
 			id: "75DAAFAD21F1451C"
+			size: 2.0d
 			tasks: [{
 				id: "14FEB5E23CFFB069"
 				item: "gtceu:hv_energy_input_hatch"
@@ -451,7 +452,7 @@
 				item: "gtceu:polytetrafluoroethylene_ingot"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
@@ -462,7 +463,7 @@
 				item: "gtceu:large_chemical_reactor"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 0.0d
 		}
 		{
@@ -485,13 +486,14 @@
 		{
 			dependencies: ["6843AB3573F42310"]
 			id: "42E88FC72902FC0B"
+			size: 2.0d
 			tasks: [{
 				id: "25491710B97DE83B"
 				item: "gtceu:nichrome_coil_block"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 6.0d
+			x: 12.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["0931ECBAAD9252C7"]
@@ -528,6 +530,30 @@
 			}]
 			x: 14.0d
 			y: 6.0d
+		}
+		{
+			dependencies: ["2EAAF5A6510D0EFE"]
+			description: ["在EV的时候你就需要大量的奇奇怪怪的化工原料，现在不把石化生化联合产线搭好，后面EV会非常坐牢"]
+			id: "57A4521AB4244810"
+			tasks: [{
+				id: "45688891118E1797"
+				title: "石化生化产线特别有必要"
+				type: "checkmark"
+			}]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A48D2DB936FF632"]
+			description: ["终于可以获得研磨的副产物了"]
+			id: "24A12D2F592DC50D"
+			tasks: [{
+				id: "68B4BAC1D648029B"
+				item: "gtceu:hv_macerator"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
 		}
 	]
 	title: "高压HV"

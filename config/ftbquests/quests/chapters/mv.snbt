@@ -342,7 +342,7 @@
 				}
 			]
 			title: "传感器与发射器"
-			x: 8.0d
+			x: 10.0d
 			y: 10.0d
 		}
 		{
@@ -353,7 +353,7 @@
 				item: "gtceu:flawless_emerald_gem"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 8.0d
 			y: 10.0d
 		}
 		{
@@ -364,7 +364,7 @@
 				item: "gtceu:mv_sifter"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 6.0d
 			y: 10.0d
 		}
 		{
@@ -440,11 +440,12 @@
 				item: "gtceu:transistor"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["58B03CD99B6C3A8B"]
+			description: ["用水给热锭降温"]
 			id: "65B89B0B9AEFDE00"
 			tasks: [{
 				id: "54BF488BF5529328"
@@ -479,6 +480,7 @@
 		{
 			dependencies: ["3E2F61B1A26AD378"]
 			id: "79AE49C5DE7900FF"
+			size: 2.0d
 			tasks: [{
 				id: "7DEB147BF481A274"
 				item: "gtceu:kanthal_coil_block"
@@ -496,44 +498,52 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
+			dependencies: ["7296C57805F5DC96"]
+			hide_dependency_lines: true
 			id: "66060C8BB69F1AD9"
 			tasks: [{
 				id: "653A8C3A0132C035"
 				item: "gtceu:greenhouse"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 0.0d
+			x: 12.0d
+			y: 2.0d
 		}
 		{
+			dependencies: ["7296C57805F5DC96"]
+			hide_dependency_lines: true
 			id: "06D1ABE453F52DF1"
 			tasks: [{
 				id: "3F82567D39D93499"
 				item: "gtceu:pyrolyse_oven"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 2.0d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
+			dependencies: ["128671E4DC47EF55"]
+			hide_dependency_lines: true
 			id: "4AF1D57BE5C49B3E"
 			tasks: [{
 				id: "30E289B545587E51"
 				item: "gtceu:mv_fluid_drilling_rig"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 4.0d
+			x: 12.0d
+			y: 6.0d
 		}
 		{
+			dependencies: ["128671E4DC47EF55"]
 			description: [
 				"高效的生产机器，放入多个输入总线并开启隔离可以一台机器执行多个电路或者模具的配方"
 				"单方块机器需放入工厂GUI内，如果放入的机器等级和工厂等级不同，工厂就不会工作。"
 				"关于并行，可以去提示章节查看"
 			]
+			hide_dependency_lines: true
 			id: "2F5CB842110A5DB2"
 			rewards: [{
 				id: "446F69FCEDAB6897"
@@ -563,18 +573,105 @@
 					type: "item"
 				}
 			]
-			x: 14.0d
-			y: 6.0d
+			x: 12.0d
+			y: 8.0d
 		}
 		{
+			dependencies: ["17E9AB180BA36353"]
+			hide_dependency_lines: true
 			id: "32960AFE43AFF989"
 			tasks: [{
 				id: "52264D6386C28A0A"
 				item: "gtceu:large_steam_input_hatch"
 				type: "item"
 			}]
+			x: 12.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["7296C57805F5DC96"]
+			description: ["必备"]
+			hide_dependency_lines: true
+			id: "6B09F1B78A5FCF7D"
+			rewards: [{
+				id: "27FBBDBF26D6342A"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "22DE2B728BF46F3E"
+				item: "gtceu:mv_extruder"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["79382D841C3CEB78"]
+			description: ["无CD，可穿墙"]
+			hide_dependency_lines: true
+			id: "0BB44C475666B862"
+			rewards: [{
+				id: "14C6E9E428FDF4A9"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2D126E194E987083"
+				item: "travelanchors:travel_staff"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"79AE49C5DE7900FF"
+				"56EA21AD61D2ACB1"
+			]
+			description: ["蚀刻产量是普通单晶硅的4倍，有了HV激光蚀刻机后才能使用"]
+			hide_dependency_lines: true
+			id: "506DFA831FEBD175"
+			rewards: [{
+				id: "4F4C3889BEC1738E"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "00F2B98E327F18B6"
+				item: "gtceu:phosphorus_boule"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["56EA21AD61D2ACB1"]
+			description: [
+				"2个普通能源仓有4A功率，但会将配方等级提升，从而导致如通用工厂机器需要更高的条件来运行，"
+				"但如果只放一个4A能源仓，那么机器将只会提升功率而不提升配方等级，可以让通用工厂用MV机器跑出HV的速度，如果你放2个4A，那么机器也会提升配方等级，和普通的相比多了1倍功率，这不会带来超频效果，但是如果机器可以并行，那么将会比普通仓获得更多并行"
+			]
+			hide_dependency_lines: true
+			id: "58723DA3E76316E6"
+			tasks: [{
+				id: "71B4A10905B2A6BA"
+				item: "gtceu:mv_energy_input_hatch_4a"
+				type: "item"
+			}]
 			x: 14.0d
 			y: 8.0d
+		}
+		{
+			dependencies: ["58723DA3E76316E6"]
+			description: ["正如4A的特性，这个可以让你用MV小机器使用EV级功率"]
+			id: "2C27BE2FD2AA1ACA"
+			tasks: [{
+				id: "1478049EA53577F1"
+				item: "gtceu:mv_energy_input_hatch_16a"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 10.0d
 		}
 	]
 	title: "中压MV"

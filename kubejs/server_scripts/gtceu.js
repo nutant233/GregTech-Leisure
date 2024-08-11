@@ -27,6 +27,31 @@ ServerEvents.recipes((event) => {
     event.shapeless("gtceu:spacetime_nonuple_fluid_pipe", ["gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe", "gtceu:spacetime_small_fluid_pipe"])
     event.shapeless("gtceu:spacetime_large_fluid_pipe", ["gtceu:spacetime_normal_fluid_pipe", "gtceu:spacetime_normal_fluid_pipe"])
     event.shapeless("gtceu:spacetime_huge_fluid_pipe", ["gtceu:spacetime_large_fluid_pipe", "gtceu:spacetime_large_fluid_pipe"])
+    event.shaped(Item.of("gtceu:primitive_robot_arm", 64), [
+        "AAA",
+        "BEB",
+        "CDE"
+    ], {
+        A: "gtceu:potin_tiny_fluid_pipe",
+        B: "gtceu:bronze_gear",
+        C: "kubejs:precision_steam_mechanism",
+        D: "#gtceu:circuits/ulv",
+        E: "gtceu:bronze_rod"
+    })
+
+    event.shaped(Item.of("gtceu:primitive_fluid_regulator", 64), [
+        "BAE",
+        "DFA",
+        "ECB"
+    ], {
+        A: "gtceu:potin_tiny_fluid_pipe",
+        B: "gtceu:bronze_rotor",
+        C: "kubejs:precision_steam_mechanism",
+        D: "#gtceu:circuits/ulv",
+        E: "gtceu:bronze_bolt",
+        F: "gtceu:copper_normal_fluid_pipe"
+    })
+
     event.shaped("gtmthings:creative_laser_hatch", [
         "ABA",
         "BCB",
@@ -9038,7 +9063,7 @@ ServerEvents.recipes((event) => {
             .duration(2 * c[1])
             .circuit(c[1])
             .EUt(GTValues.VA[GTValues.MAX])
-            .stationResearch(b => b.researchStack(Item.of(c[1] == 1 ? "kubejs:supracausal_mainframe" : "kubejs:suprachronal_" + tiers[c[1] - 1][0]))
+            .stationResearch(b => b.researchStack(Item.of(c[1] == 1 ? "kubejs:supracausal_mainframe" : "kubejs:suprachronal_" + tiers[c[1] - 2][0]))
                 .dataStack(Item.of("gtceu:data_module"))
                 .EUt(GTValues.VA[GTValues.MAX])
                 .CWUt(8192))

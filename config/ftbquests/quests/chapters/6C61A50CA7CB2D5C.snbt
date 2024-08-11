@@ -16,7 +16,7 @@
 		}
 	}
 	id: "6C61A50CA7CB2D5C"
-	order_index: 2
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
@@ -54,7 +54,7 @@
 				}
 				type: "item"
 			}]
-			x: 8.0d
+			x: 7.0d
 			y: 0.0d
 		}
 		{
@@ -66,7 +66,7 @@
 				item: "ad_astra:rocket_nose_cone"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 5.0d
 			y: 0.0d
 		}
 		{
@@ -80,7 +80,7 @@
 				item: "ad_astra:steel_engine"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 5.5d
 			y: 1.5d
 		}
 		{
@@ -92,7 +92,7 @@
 				item: "ad_astra:steel_tank"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 4.0d
 			y: 1.0d
 		}
 		{
@@ -106,7 +106,7 @@
 				item: "ad_astra:rocket_fin"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 5.5d
 			y: -1.5d
 		}
 		{
@@ -118,7 +118,7 @@
 				item: "ad_astra:iron_plate"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 4.0d
 			y: -1.0d
 		}
 		{
@@ -133,7 +133,7 @@
 				item: "gtceu:rocket_fuel_bucket"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 7.0d
 			y: 2.0d
 		}
 		{
@@ -195,7 +195,7 @@
 				}
 			]
 			title: "宇航服"
-			x: 8.0d
+			x: 7.0d
 			y: -2.0d
 		}
 		{
@@ -221,8 +221,8 @@
 				item: "gtceu:methanol_bucket"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 2.5d
+			x: 5.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["009E71EC51F5B0EF"]
@@ -232,8 +232,8 @@
 				item: "gtceu:ammonia_bucket"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 3.5d
+			x: 5.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["009E71EC51F5B0EF"]
@@ -243,8 +243,8 @@
 				item: "gtceu:hypochlorous_acid_bucket"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 4.5d
+			x: 5.5d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -258,8 +258,8 @@
 				item: "gtceu:dimethylhydrazine_bucket"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 3.5d
+			x: 7.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["18A773A6B710C658"]
@@ -269,10 +269,15 @@
 				id: "2CCD7DD07A345FE5"
 				type: "dimension"
 			}]
-			x: 10.0d
+			title: "月球"
+			x: 9.0d
 			y: 0.0d
 		}
 		{
+			dependencies: [
+				"1AF18E39A3A062EC"
+				"33BF09337B6A9E03"
+			]
 			id: "683F6BF5F0151288"
 			shape: "rsquare"
 			size: 2.0d
@@ -285,9 +290,772 @@
 				}
 				type: "item"
 			}]
-			x: 14.0d
+			x: 15.0d
 			y: 0.0d
 		}
+		{
+			dependencies: ["63C8DD19C6B76899"]
+			id: "1AF18E39A3A062EC"
+			tasks: [{
+				id: "3DBC4234EB306F24"
+				item: "ad_astra:steel_plate"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"509A4CEE0C308165"
+				"3FBDEBFA58D0B01F"
+			]
+			id: "33BF09337B6A9E03"
+			tasks: [{
+				id: "573976A2941AAE9D"
+				item: "gtceu:rocket_fuel_rp_1_bucket"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["36EDAB1E6F9E8618"]
+			id: "3FBDEBFA58D0B01F"
+			tasks: [{
+				id: "38B3D54BA79B5655"
+				item: "gtceu:rp_1_bucket"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["63C8DD19C6B76899"]
+			id: "509A4CEE0C308165"
+			tasks: [{
+				id: "4AFDE648EB424D67"
+				item: "gtceu:liquid_oxygen_bucket"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4E2549EFE6D9AA7B"]
+			id: "36EDAB1E6F9E8618"
+			tasks: [{
+				id: "560A66A757B837D8"
+				item: "gtceu:kerosene_bucket"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["34BED884F1A28343"]
+			id: "4E2549EFE6D9AA7B"
+			tasks: [
+				{
+					id: "46EDDE8B99914FD7"
+					item: "gtceu:coal_tar_bucket"
+					type: "item"
+				}
+				{
+					id: "514363511A811AAA"
+					item: "gtceu:coke_dust"
+					type: "item"
+				}
+			]
+			title: "煤焦油和焦煤粉"
+			x: 13.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["63C8DD19C6B76899"]
+			id: "34BED884F1A28343"
+			tasks: [{
+				id: "16752FF94443D990"
+				item: "gtceu:coal_gas_bucket"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"75DAAFAD21F1451C"
+				"027197A71E630966"
+				"74D9136DE32F9129"
+				"42E88FC72902FC0B"
+			]
+			hide_dependent_lines: true
+			id: "63C8DD19C6B76899"
+			tasks: [{
+				id: "384ACA3C35EF65EF"
+				title: "准备前往T2"
+				type: "checkmark"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["683F6BF5F0151288"]
+			id: "702471643821B0DE"
+			tasks: [{
+				dimension: "ad_astra:mars"
+				id: "7429ACF48E70AF34"
+				title: "火星"
+				type: "dimension"
+			}]
+			x: 17.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5B65662B72C369E7"]
+			hide_dependent_lines: true
+			id: "123FD5A979F5750D"
+			tasks: [{
+				id: "510DE6C196A786EA"
+				title: "准备前往T3"
+				type: "checkmark"
+			}]
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"32E0200043820896"
+				"1C5997EE2E91844A"
+			]
+			id: "5F482FD80B1E9CB3"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "55C77A386AC3C452"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_3_rocket"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 25.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["15EBA5EB9706DCD5"]
+			id: "32E0200043820896"
+			tasks: [{
+				id: "5573D2EB65A35E2C"
+				item: "ad_astra:steel_block"
+				type: "item"
+			}]
+			x: 23.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["123FD5A979F5750D"]
+			id: "15EBA5EB9706DCD5"
+			tasks: [{
+				id: "0356FC0F1E13D250"
+				item: "gtceu:dense_tungsten_steel_plate"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6A16D86A6B8963DC"]
+			id: "1C5997EE2E91844A"
+			tasks: [{
+				id: "3F3C3022BE3E94AF"
+				item: "gtceu:dense_hydrazine_fuel_mixture_bucket"
+				type: "item"
+			}]
+			x: 25.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["606199C34AD69974"]
+			id: "6A16D86A6B8963DC"
+			tasks: [{
+				id: "3D5292F2889B4C26"
+				item: "gtceu:hydrazine_bucket"
+				type: "item"
+			}]
+			x: 25.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"50E554A0F172FEF4"
+				"26490ED393A09C12"
+			]
+			id: "606199C34AD69974"
+			tasks: [{
+				id: "1113D511CB4E0C7B"
+				item: "gtceu:hydrogen_peroxide_bucket"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["123FD5A979F5750D"]
+			id: "50E554A0F172FEF4"
+			tasks: [{
+				id: "52A3EA5288880E34"
+				item: "gtceu:anthracene_bucket"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["357F8943B37E231D"]
+			id: "26490ED393A09C12"
+			tasks: [{
+				id: "5D55249FB2842404"
+				item: "gtceu:ethylanthrahydroquinone_bucket"
+				type: "item"
+			}]
+			x: 23.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["589789F9FC81A557"]
+			description: ["这个是催化剂，再下下个反应中会还给你的，不需要做很多"]
+			id: "357F8943B37E231D"
+			tasks: [{
+				id: "0C831FE92299304B"
+				item: "gtceu:ethylanthraquinone_bucket"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["706B6132C6C42BAE"]
+			id: "589789F9FC81A557"
+			tasks: [{
+				id: "3C452C7920E689D1"
+				item: "gtceu:phthalic_anhydride_dust"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"7B3D7412BEA6862A"
+				"6C689993C9BCE006"
+			]
+			dependency_requirement: "one_completed"
+			id: "706B6132C6C42BAE"
+			tasks: [{
+				id: "4F3B4AB73159303F"
+				item: "gtceu:phthalic_acid_bucket"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["123FD5A979F5750D"]
+			id: "7B3D7412BEA6862A"
+			tasks: [{
+				id: "713CDD966CF89ADF"
+				item: "gtceu:naphthalene_bucket"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["123FD5A979F5750D"]
+			id: "6C689993C9BCE006"
+			tasks: [{
+				id: "184F0AF60546CBA4"
+				item: "gtceu:dimethylbenzene_bucket"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5F482FD80B1E9CB3"]
+			id: "602F48807D4A89A6"
+			tasks: [{
+				dimension: "ad_astra:venus"
+				id: "6120571D7D2195C0"
+				title: "金星"
+				type: "dimension"
+			}]
+			x: 27.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F482FD80B1E9CB3"]
+			id: "240EDC34562E580F"
+			tasks: [{
+				dimension: "ad_astra:mercury"
+				id: "75BE9C3C745B47E6"
+				title: "水星"
+				type: "dimension"
+			}]
+			x: 28.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"7AEC0D308494C0F8"
+				"51AA4887F2DC9747"
+				"0375D068023B13D7"
+			]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "187BE1A67AF10798"
+			tasks: [{
+				id: "1F5143D93FEC05B0"
+				title: "准备前往T4"
+				type: "checkmark"
+			}]
+			x: 30.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"319C0E4BEAC04A0B"
+				"702FD56CE44EC704"
+				"04681E3BD6F2CF5F"
+				"3CB4691B75D15158"
+			]
+			id: "27A7B0A7984A95E2"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "2204C487CC933D37"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_4_rocket"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 36.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["04681E3BD6F2CF5F"]
+			id: "702FD56CE44EC704"
+			tasks: [{
+				id: "786550BEFBFEFA9D"
+				item: "ad_astra:desh_tank"
+				type: "item"
+			}]
+			x: 34.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["04681E3BD6F2CF5F"]
+			id: "319C0E4BEAC04A0B"
+			tasks: [{
+				id: "4FE6718F1D28FC3D"
+				item: "ad_astra:desh_engine"
+				type: "item"
+			}]
+			x: 34.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2BDEEF40A69151F5"]
+			id: "04681E3BD6F2CF5F"
+			tasks: [{
+				id: "59F4ABB36634A0A1"
+				item: "ad_astra:desh_plate"
+				type: "item"
+			}]
+			x: 33.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["187BE1A67AF10798"]
+			id: "2BDEEF40A69151F5"
+			tasks: [{
+				id: "486C2ED3FDA620F9"
+				item: "ad_astra:desh_ingot"
+				type: "item"
+			}]
+			x: 31.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["48E9439ABC35D129"]
+			id: "3CB4691B75D15158"
+			tasks: [{
+				id: "22A97D23795E4286"
+				item: "gtceu:rocket_fuel_cn3h7o3_bucket"
+				type: "item"
+			}]
+			x: 36.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["187BE1A67AF10798"]
+			hide_dependency_lines: true
+			id: "48E9439ABC35D129"
+			tasks: [{
+				id: "01B057C002B715FF"
+				item: "gtceu:monomethylhydrazine_bucket"
+				type: "item"
+			}]
+			x: 36.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["27A7B0A7984A95E2"]
+			id: "5010011959CF5337"
+			tasks: [{
+				dimension: "kubejs:ceres"
+				id: "4661CE23F70EE69E"
+				title: "谷神星"
+				type: "dimension"
+			}]
+			x: 38.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["602F48807D4A89A6"]
+			id: "2BB52D1C09C418A9"
+			tasks: [{
+				id: "7EC35064B342F50D"
+				item: "kubejs:nether_data"
+				type: "item"
+			}]
+			x: 29.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["23C2F99FC949AF0A"]
+			id: "603ED43DD7A89BF3"
+			tasks: [
+				{
+					id: "734B4AC51FAF51DA"
+					item: "gtceu:raw_bauxite"
+					type: "item"
+				}
+				{
+					id: "5EA3102A28A00339"
+					item: "gtceu:raw_ilmenite"
+					type: "item"
+				}
+				{
+					id: "6E41CC1205203487"
+					item: "gtceu:raw_aluminium"
+					type: "item"
+				}
+				{
+					id: "7BD806947FFC69BA"
+					item: "gtceu:raw_uraninite"
+					type: "item"
+				}
+				{
+					id: "7E6AB6B1F16EFB41"
+					item: "gtceu:raw_pitchblende"
+					type: "item"
+				}
+				{
+					id: "2CE2A66C255AC323"
+					item: "gtceu:raw_thorium"
+					type: "item"
+				}
+				{
+					id: "329C5B93ECCB6FE0"
+					item: "gtceu:raw_bastnasite"
+					type: "item"
+				}
+				{
+					id: "6B80D3BC373D553B"
+					item: "gtceu:raw_monazite"
+					type: "item"
+				}
+				{
+					id: "0930EE8B3FE52194"
+					item: "gtceu:raw_neodymium"
+					type: "item"
+				}
+			]
+			title: "月球的矿"
+			x: 9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["23C2F99FC949AF0A"]
+			id: "2E189BB17587F157"
+			tasks: [
+				{
+					id: "4F4581A6BBDA7AAE"
+					item: "gtceu:helium_bucket"
+					type: "item"
+				}
+				{
+					id: "1E449DEB2B7B3063"
+					item: "gtceu:helium_3_bucket"
+					type: "item"
+				}
+			]
+			title: "月球的流体矿脉"
+			x: 9.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["702471643821B0DE"]
+			id: "3D5E0BA1F8F013FC"
+			tasks: [
+				{
+					id: "7B362C2D0A3F2B34"
+					item: "gtceu:raw_scheelite"
+					type: "item"
+				}
+				{
+					id: "5868448726EB5F85"
+					item: "gtceu:raw_tungstate"
+					type: "item"
+				}
+				{
+					id: "4340E734E1FCE59F"
+					item: "gtceu:raw_lithium"
+					type: "item"
+				}
+				{
+					id: "67BCA48FD653C9D5"
+					item: "gtceu:raw_cooperite"
+					type: "item"
+				}
+				{
+					id: "4F64CB1271C10AD6"
+					item: "gtceu:raw_bornite"
+					type: "item"
+				}
+				{
+					id: "36885808EF010639"
+					item: "gtceu:raw_platinum"
+					type: "item"
+				}
+				{
+					id: "2945D20FC740FB45"
+					item: "gtceu:raw_palladium"
+					type: "item"
+				}
+				{
+					id: "49159B1279181E8F"
+					item: "gtceu:raw_pyrochlore"
+					type: "item"
+				}
+				{
+					id: "41E24DC7270AF2D1"
+					item: "gtceu:raw_apatite"
+					type: "item"
+				}
+				{
+					id: "02C7ED74D08CBD20"
+					item: "gtceu:raw_tricalcium_phosphate"
+					type: "item"
+				}
+			]
+			title: "火星的矿"
+			x: 17.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["702471643821B0DE"]
+			id: "457BA0CCBA39709A"
+			tasks: [{
+				id: "61D3F1750DE46B40"
+				item: "gtceu:radon_bucket"
+				type: "item"
+			}]
+			title: "火星的流体矿脉"
+			x: 17.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["602F48807D4A89A6"]
+			description: [""]
+			id: "66BBE21B86B35170"
+			tasks: [
+				{
+					id: "053580F012F38F61"
+					item: "gtceu:raw_desh"
+					type: "item"
+				}
+				{
+					id: "0133550C8342EFE1"
+					item: "gtceu:raw_magnesite"
+					type: "item"
+				}
+				{
+					id: "576FEDA169E057F5"
+					item: "gtceu:raw_sulfur"
+					type: "item"
+				}
+				{
+					id: "61DF7F4FD46F331E"
+					item: "gtceu:raw_pyrite"
+					type: "item"
+				}
+				{
+					id: "34BAD952486803D1"
+					item: "gtceu:raw_sphalerite"
+					type: "item"
+				}
+				{
+					id: "23C0BD54CD211593"
+					item: "gtceu:raw_bentonite"
+					type: "item"
+				}
+				{
+					id: "589DD66CA5B99DFA"
+					item: "gtceu:raw_magnetite"
+					type: "item"
+				}
+				{
+					id: "2C3A195F85EA60B6"
+					item: "gtceu:raw_olivine"
+					type: "item"
+				}
+				{
+					id: "5157C46CB2B214A2"
+					item: "gtceu:raw_glauconite_sand"
+					type: "item"
+				}
+			]
+			title: "金星的矿"
+			x: 27.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["240EDC34562E580F"]
+			id: "755BA509E954B7DC"
+			tasks: [
+				{
+					id: "6428D6EEAEE1BA91"
+					item: "gtceu:raw_calorite"
+					type: "item"
+				}
+				{
+					id: "478CD9D688916D24"
+					item: "gtceu:raw_cobalt"
+					type: "item"
+				}
+				{
+					id: "35C30A631D599917"
+					item: "gtceu:raw_magnesite"
+					type: "item"
+				}
+				{
+					id: "5DD0B8141CB6F828"
+					item: "gtceu:raw_garnierite"
+					type: "item"
+				}
+				{
+					id: "1127E4740231AECC"
+					item: "gtceu:raw_nickel"
+					type: "item"
+				}
+				{
+					id: "659704C6C7AD926D"
+					item: "gtceu:raw_cobaltite"
+					type: "item"
+				}
+				{
+					id: "7BC6862957021AA4"
+					item: "gtceu:raw_pentlandite"
+					type: "item"
+				}
+			]
+			title: "水星的矿"
+			x: 28.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["602F48807D4A89A6"]
+			id: "01CE2C1DC8A32201"
+			tasks: [{
+				id: "17B5CE2CD59AA220"
+				item: "gtceu:sulfuric_acid_bucket"
+				type: "item"
+			}]
+			title: "金星的流体矿脉"
+			x: 27.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["240EDC34562E580F"]
+			id: "4384E49FECF0451D"
+			tasks: [{
+				id: "068685245F0512CB"
+				item: "gtceu:deuterium_bucket"
+				type: "item"
+			}]
+			title: "水星的流体矿脉"
+			x: 28.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["5010011959CF5337"]
+			id: "48DFA1EF82126177"
+			tasks: [{
+				id: "712CE912BBCC97FA"
+				item: "gtceu:raw_ostrum"
+				type: "item"
+			}]
+			title: "谷神星的矿"
+			x: 38.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5010011959CF5337"]
+			id: "41BAD19014E33CB2"
+			tasks: [
+				{
+					id: "1C9DDA595033297C"
+					item: "gtceu:neon_bucket"
+					type: "item"
+				}
+				{
+					id: "17B2C5CD61139B40"
+					item: "gtceu:krypton_bucket"
+					type: "item"
+				}
+				{
+					id: "0B78A22B254CF866"
+					item: "gtceu:radon_bucket"
+					type: "item"
+				}
+				{
+					id: "29F4B46653D2282E"
+					item: "gtceu:xenon_bucket"
+					type: "item"
+				}
+			]
+			title: "谷神星的流体矿脉"
+			x: 38.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2BB52D1C09C418A9"]
+			description: ["使用远古反应核，相邻放金块角落放绿宝石块"]
+			id: "778546543F6413E7"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "46F65CA6CFE50917"
+				title: "地狱"
+				type: "dimension"
+			}]
+			x: 29.0d
+			y: 2.0d
+		}
 	]
-	title: "探索宇宙"
+	title: "探索世界"
 }
