@@ -29,9 +29,10 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
             return $LocalizationUtils.format("gtceu.recipe.temperature", $FormattingUtil.formatNumbers(data.getInt("ebf_temp")))
         })
         .addDataInfo(data => {
-            let requiredCoil = $ICoilType.getMinRequiredType(data.getInt("ebf_temp"))
+            let temp = data.getInt("ebf_temp")
+            let requiredCoil = $ICoilType.getMinRequiredType(temp)
             if (LDLib.isClient() && requiredCoil != null && requiredCoil.getMaterial() != null) {
-                return $LocalizationUtils.format("gtceu.recipe.coil.tier", $I18n.get(requiredCoil.getMaterial().getUnlocalizedName()))
+                return $LocalizationUtils.format("gtceu.recipe.coil.tier", (temp > 21600 && temp <= 32000) ? "超级热容" : $I18n.get(requiredCoil.getMaterial().getUnlocalizedName()))
             }
             return ""
         })
