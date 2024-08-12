@@ -16,7 +16,6 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "gtceu:mixer/rocket_fuel_from_dinitrogen_tetroxide" })
     event.remove({ id: "gtceu:centrifuge/rare_earth_separation" })
     event.remove({ output: "gtceu:nan_certificate" })
-    event.remove({ output: "gregiceng:crafting_io_buffer" })
     event.remove({ output: "gtceu:cleaning_maintenance_hatch" })
     event.remove({ output: "gtceu:cupronickel_credit", type: "gtceu:forming_press" })
     event.shapeless("gtceu:suprachronal_assembly_line_module", "gtceu:suprachronal_assembly_line")
@@ -301,6 +300,38 @@ ServerEvents.recipes((event) => {
         C: "gtceu:uev_robot_arm",
         D: "gtceu:law_filter_casing",
         E: "gtceu:sterile_cleaning_maintenance_hatch"
+    })
+
+    event.shaped("gtceu:cleaning_configuration_maintenance_hatch", [
+        "DCD",
+        "CAC",
+        "DCD"
+    ], {
+        A: "gtceu:auto_configuration_maintenance_hatch",
+        C: "#gtceu:circuits/luv",
+        D: "gtceu:cleaning_maintenance_hatch"
+    })
+
+    event.shaped("gtceu:sterile_configuration_cleaning_maintenance_hatch", [
+        "DCD",
+        "BAB",
+        "DCD"
+    ], {
+        A: "gtceu:uhv_machine_hull",
+        B: "gtceu:uhv_field_generator",
+        C: "gtceu:cleaning_configuration_maintenance_hatch",
+        D: "gtceu:sterile_cleaning_maintenance_hatch"
+    })
+
+    event.shaped("gtceu:law_configuration_cleaning_maintenance_hatch", [
+        "DCD",
+        "BAB",
+        "DCD"
+    ], {
+        A: "gtceu:uxv_machine_hull",
+        B: "gtceu:uxv_field_generator",
+        C: "gtceu:sterile_configuration_cleaning_maintenance_hatch",
+        D: "gtceu:law_cleaning_maintenance_hatch"
     })
 
     event.shaped("gtceu:dragon_egg_copier", [

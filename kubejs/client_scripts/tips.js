@@ -37,7 +37,7 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:large_recycler", "电压等级每高出EV1级，最大并行数x4")
     event.add("gtceu:void_fluid_drilling_rig", "读取数据钻取虚空的流体")
     event.add("gtceu:large_void_miner", ["精准模式消耗精华采集指定矿脉", "随机模式消耗10KB的钻井液和更长的耗时随机采集所有矿石", "随机模式注意输出空间要足够，推荐使用ME输出总成"])
-    event.add("gtceu:stellar_forge", ["每4倍功率提升3倍速度", "利用爆弹在瞬间产生的巨大能量来熔合物质", "§7在运行时供能不足可能导致星球毁灭"])
+    event.add("gtceu:stellar_forge", ["利用爆弹在瞬间产生的巨大能量来熔合物质", "§7在运行时供能不足可能导致星球毁灭"])
     event.add("gtceu:large_rock_crusher", "需要在输入仓中放入对应流体")
     event.add("gtceu:plasma_condenser", "等离子专用冷冻机")
     event.add("gtceu:rare_earth_centrifugal", "稀土专用离心机")
@@ -103,8 +103,10 @@ ItemEvents.tooltip(event => {
         "gtceu:sps_crafting",
         "gtceu:chemical_plant",
         "gtceu:circuit_printer",
+        "gtceu:crystalline_infinity",
         "gtceu:large_chemical_reactor",
         "gtceu:space_probe_surface_reception",
+        "gtceu:superconducting_electromagnetism",
         "gtceu:dimensionally_transcendent_plasma_forge",
         "gtceu:dimensional_focus_engraving_array",
         "gtceu:advanced_sps_crafting",
@@ -125,6 +127,7 @@ ItemEvents.tooltip(event => {
         "gtceu:mega_wiremill",
         "gtceu:holy_separator",
         "gtceu:mega_extractor",
+        "gtceu:stellar_forge",
         "gtceu:mass_fabricator",
         "gtceu:a_mass_fabricator",
         "gtceu:star_ultimate_material_forge_factory",
@@ -151,6 +154,7 @@ ItemEvents.tooltip(event => {
         "gtceu:precision_assembler",
         "gtceu:fishing_ground",
         "gtceu:pcb_factory",
+        "gtceu:plasma_condenser",
         "gtceu:super_particle_collider",
         "gtceu:engraving_laser_plant",
         "gtceu:dimensionally_transcendent_mixer",
