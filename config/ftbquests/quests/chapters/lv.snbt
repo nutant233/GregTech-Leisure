@@ -17,6 +17,12 @@
 			dependencies: ["51B9A72C19F84F0E"]
 			description: ["电动马达是一种将电能转换为机械能的装置。它的工作原理基于电磁感应，当电流通过电动机的线圈时，会在磁场中产生力，这个力使得电动机的转子旋转，从而驱动负载工作。电动马达广泛应用于各种工业、商业和家用电器中。"]
 			id: "0223A643A5066452"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "694E8EBD7F32B511"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "24996B85BAF15356"
 				item: "gtceu:lv_electric_motor"
@@ -29,6 +35,12 @@
 			dependencies: ["0223A643A5066452"]
 			description: ["电力活塞是由电力驱动的往复运动装置，可以将电动机的旋转运动转换为直线往复运动。这样的装置可以用于各种应用，如压缩机、气动执行器、机械臂等。"]
 			id: "29A8EC2EB3240278"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "778C17359B803B91"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "5F0D1E840CD57B74"
 				item: "gtceu:lv_electric_piston"
@@ -47,6 +59,12 @@
 				"这些部件还可以用作覆盖版"
 			]
 			id: "0332882DFA45B956"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6EA9C3A60EEA6F64"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "67355131E7E55AAE"
 				item: "gtceu:lv_robot_arm"
@@ -59,6 +77,12 @@
 			dependencies: ["0223A643A5066452"]
 			description: ["传送带是一种运输机械，用于将材料或产品从一个地点搬运到另一个地点。它由一个或多个连续的带状结构组成，围绕两个滚筒旋转，这些滚筒作为驱动和支撑点。传送带可以水平运行，也可以倾斜或垂直运行，以适应不同的搬运需求。"]
 			id: "3DDFE62FF48A9135"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "237B6465AC817C7C"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "4913190E81A4B668"
 				item: "gtceu:lv_conveyor_module"
@@ -70,6 +94,12 @@
 		{
 			dependencies: ["0223A643A5066452"]
 			id: "2D6BB32B642AE8BA"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1421B197E6D8EC83"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "5DBFDA1AF623D088"
 				item: "gtceu:lv_electric_pump"
@@ -84,6 +114,12 @@
 				"553B2D61416792DC"
 			]
 			id: "51B9A72C19F84F0E"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "36730E69BCF0ED93"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			shape: "rsquare"
 			size: 2.0d
 			tasks: [{
@@ -99,6 +135,12 @@
 			description: ["让你更加高效的获得导线和细导线"]
 			hide_dependent_lines: true
 			id: "0CF19CAFB3355075"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "29FCDFD4BACE1027"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "588BCA87500214EF"
 				item: "gtceu:lv_wiremill"
@@ -115,6 +157,12 @@
 			description: ["让你更高效的获得板和箔，一锭出一板，一锭出四箔"]
 			hide_dependent_lines: true
 			id: "3DC0B933936357B3"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "306DA8D765DE6EB0"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "137AFD6CB3927548"
 				item: "gtceu:lv_bender"
@@ -130,6 +178,12 @@
 			]
 			description: ["让你更高效的获得杆和螺丝，一锭出两杆，一螺栓出一螺丝"]
 			id: "048455FFC9BDC82A"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "068B1BBDB5BDF734"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "57EDE3A779842162"
 				item: "gtceu:lv_lathe"
@@ -143,6 +197,12 @@
 			description: ["用它将物品磁化"]
 			hide_dependency_lines: true
 			id: "51F0CE5F1BCC78D1"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "62D6AD63F700CB4F"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "3DA43E9650F117DD"
 				item: "gtceu:lv_polarizer"
@@ -161,6 +221,12 @@
 			description: ["你需要在高炉上放两个LV能源仓以将高炉超频到MV，这样它可以运行MV的配方"]
 			icon_scale: 2.0d
 			id: "07D0D7005DA4F446"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6A1D1F3313E1B6E2"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			shape: "circle"
 			size: 2.0d
 			tasks: [{
@@ -175,6 +241,12 @@
 			dependencies: ["3117BF8E4782DB2A"]
 			description: ["这是为多方块结构供电的方块"]
 			id: "32CE144D9A9F0943"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "283B4DB2F24B9F46"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "66CE417A92BDA931"
 				item: "gtceu:lv_energy_input_hatch"
@@ -188,6 +260,12 @@
 			description: ["这是高炉需要的仓室"]
 			hide_dependency_lines: true
 			id: "3F38CC8C8D650202"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4B54B9A7ACA13519"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [
 				{
 					id: "7DD304EE89C9B95E"
@@ -222,6 +300,12 @@
 				"36E33432C72763C8"
 			]
 			id: "20F6BF1EDC6EBDC1"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7D032426B0489122"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			shape: "circle"
 			size: 2.0d
 			tasks: [{
@@ -240,6 +324,12 @@
 			]
 			description: ["组装机是组装机，电路组装机是电路组装机，不要看错了"]
 			id: "3E50EE376968519F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0AAEB2419805D860"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "0A32B247C01822D2"
 				item: "gtceu:lv_assembler"
@@ -255,6 +345,12 @@
 			]
 			description: ["从物品中提取东西"]
 			id: "63C2FA96C708C125"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "22C6C0B9045E16D5"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "061EC839843C4CDA"
 				item: "gtceu:lv_extractor"
@@ -269,6 +365,12 @@
 				"77406A75BD5839C2"
 			]
 			id: "7CC28185463F24C2"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4E32FCBFFA853B3D"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "1B0AD5C6137AEFCE"
 				item: "gtceu:cupronickel_ingot"
@@ -280,6 +382,12 @@
 		{
 			dependencies: ["63C2FA96C708C125"]
 			id: "18C2AB18B354F774"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5D5A80A461C441CB"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "27384B8F957A3BC0"
 				item: "gtceu:tin_alloy_bucket"
@@ -295,6 +403,12 @@
 			]
 			hide_dependency_lines: true
 			id: "198ED0A20800F3ED"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5C956704F4408FB5"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "1CB9DD3F4D92C8FD"
 				item: "gtceu:invar_ingot"
@@ -309,6 +423,12 @@
 				"7CC28185463F24C2"
 			]
 			id: "7F9F473B8C508676"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "26868589BBEC2CFE"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "75A397E09A1E76A7"
 				item: "gtceu:cupronickel_double_wire"
@@ -320,6 +440,12 @@
 		{
 			dependencies: ["3DC0B933936357B3"]
 			id: "36E33432C72763C8"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6F09674EF8CD68E2"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "1CC54740C4BEE22C"
 				item: "gtceu:bronze_foil"
@@ -332,6 +458,12 @@
 			dependencies: ["51B9A72C19F84F0E"]
 			hide_dependency_lines: true
 			id: "6E3B42BCBA6064F5"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "00A70BF5AD994F84"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "2FE273B543714BD1"
 				item: "gtceu:lv_electrolyzer"
@@ -345,6 +477,12 @@
 			description: ["LV阶段你的铝粉只能通过电解蓝宝石和绿色蓝宝石粉获得"]
 			hide_dependency_lines: false
 			id: "73EFFB71A1A827D6"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3BA4E9F5D797ADF9"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "2E83C5426C90F1A6"
 				item: "gtceu:aluminium_dust"
@@ -359,6 +497,12 @@
 				"07D0D7005DA4F446"
 			]
 			id: "11B60450D7F3C188"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "35A54B0FB74426F2"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			size: 2.0d
 			tasks: [{
 				id: "298A039260B352D6"
@@ -374,6 +518,12 @@
 				"006BBE4D312A2E2E"
 			]
 			id: "7D399E31506924A0"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "59E352590B1715B4"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "0F9DE31D5976C043"
 				item: "gtceu:good_electronic_circuit"
@@ -385,6 +535,12 @@
 		{
 			dependencies: ["7D399E31506924A0"]
 			id: "40C39645B1DE2488"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "36A3533A654D9B40"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			shape: "rsquare"
 			size: 2.0d
 			tasks: [{
@@ -398,6 +554,12 @@
 		{
 			dependencies: ["3E50EE376968519F"]
 			id: "3A97E85643D2F8AC"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "158D12395AC7063E"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "395F73DF4EA428B0"
 				item: "gtceu:phenolic_circuit_board"
@@ -412,6 +574,12 @@
 				"1BF78ABAD1FF993F"
 			]
 			id: "006BBE4D312A2E2E"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "25C5E279A298D16D"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "4E8A56A18EA1888B"
 				item: "gtceu:phenolic_printed_circuit_board"
@@ -423,6 +591,12 @@
 		{
 			dependencies: ["0CF19CAFB3355075"]
 			id: "1BF78ABAD1FF993F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "69142A754900F3B2"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "5D16B78D90582E29"
 				item: "gtceu:silver_single_wire"
@@ -434,6 +608,12 @@
 		{
 			dependencies: ["6D63FB02A50F8249"]
 			id: "0877362A9EE36FB3"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2AB319C1567A0162"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "632999DA643003E5"
 				item: "gtceu:diode"
@@ -448,6 +628,12 @@
 				"30359A44D8B7E7A1"
 			]
 			id: "6D63FB02A50F8249"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3380F5B2CC8EC92E"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "3DBD74652FB4B8BF"
 				item: "gtceu:gallium_arsenide_dust"
@@ -459,6 +645,12 @@
 		{
 			description: ["砷粉的来源是雄黄"]
 			id: "5705516829BB38BE"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0C273E7A9768351B"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "7C622FF1D777475A"
 				item: "gtceu:arsenic_dust"
@@ -471,6 +663,12 @@
 			dependencies: ["335ED39019FC62E7"]
 			description: ["镓粉的来源是热离闪锌矿"]
 			id: "30359A44D8B7E7A1"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "76BC9DFD0D967738"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "74A9E28D77F8768D"
 				item: "gtceu:gallium_dust"
@@ -484,6 +682,12 @@
 			description: ["用它烧制锻铁和退火铜"]
 			hide_dependency_lines: true
 			id: "524AC325E68AEB3A"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2EAAB66C97275B41"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "4F2FF11089D97406"
 				item: "gtceu:lv_arc_furnace"
@@ -495,6 +699,12 @@
 		{
 			dependencies: ["51F0CE5F1BCC78D1"]
 			id: "18DC7021FF2C7EEB"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "714720337B92E3A0"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "06EC3C1BF7D124CB"
 				item: "gtceu:magnetic_steel_rod"
@@ -506,6 +716,12 @@
 		{
 			dependencies: ["524AC325E68AEB3A"]
 			id: "31B5C9A6F8FB0BA2"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2B29A729A9EA55ED"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "0C8DEF275C16A96E"
 				item: "gtceu:annealed_copper_ingot"
@@ -519,6 +735,12 @@
 			description: ["帮助你获取氮气和氧气"]
 			hide_dependency_lines: true
 			id: "5C12B96341807611"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7B23C2B1CF975F7B"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "13AD3E7E937E345D"
 				item: "gtceu:lv_gas_collector"
@@ -532,6 +754,12 @@
 			description: ["推荐用大型蒸汽离心机离心"]
 			icon: "gtceu:nitrogen_bucket"
 			id: "05707E2FF325F723"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2669576BE6706CB2"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "34EEC000DAD79557"
 				title: "氮气和氧气"
@@ -545,6 +773,12 @@
 			description: ["这个是lv阶段的超导材料"]
 			hide_dependency_lines: true
 			id: "44DD16023AF842F1"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1D3162B0CD18FF18"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "001139BEE7311878"
 				item: "gtceu:conductive_alloy_ingot"
@@ -562,6 +796,12 @@
 			description: ["自动化的好帮手，还有升级版本"]
 			hide_dependency_lines: true
 			id: "3D8CF0C08F6A3075"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "23878D2EF1F60B0E"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "785EB9D4772FE036"
 				item: "gtceu:lv_buffer"
@@ -577,6 +817,12 @@
 				"49ABB341017BAE85"
 			]
 			id: "388E5C1034C54D19"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7D0CEDBF3835E093"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			shape: "rsquare"
 			size: 2.0d
 			tasks: [{
@@ -590,6 +836,12 @@
 		{
 			dependencies: ["35F31D71CC8B67CF"]
 			id: "49ABB341017BAE85"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "73FA17F4829C8DCB"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "4B0294376308A36D"
 				item: "gtceu:copper_single_cable"
@@ -601,6 +853,12 @@
 		{
 			dependencies: ["11B60450D7F3C188"]
 			id: "54034055F57DDAA5"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1022A167BA2CE0F5"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "20A2D5C286E8A31E"
 				item: "gtceu:aluminium_plate"
@@ -616,6 +874,12 @@
 			]
 			description: ["你需要用硫粉和生橡胶末在化学反应釜里面反应"]
 			id: "35F31D71CC8B67CF"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "29A33507B3C4DA70"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "7C49A402D20FE1B1"
 				item: "gtceu:rubber_bucket"
@@ -628,6 +892,12 @@
 			dependencies: ["0223A643A5066452"]
 			hide_dependency_lines: true
 			id: "27A9D4E765101CB9"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6EF1180888228DB8"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "708FD829786614CE"
 				item: "gtceu:lv_chemical_reactor"
@@ -640,6 +910,12 @@
 			dependencies: ["335ED39019FC62E7"]
 			description: ["硫来自于远古世界，生橡胶来自于离心黏性树脂"]
 			id: "5D4ADE3F2E57635C"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "04341E47ADCB4EC9"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [
 				{
 					id: "1F83D0A9E7203CB7"
@@ -659,6 +935,12 @@
 		{
 			dependencies: ["3E50EE376968519F"]
 			id: "3117BF8E4782DB2A"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3598635DB66E5902"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
 			tasks: [{
 				id: "5A00FC384A33FB54"
 				item: "gtceu:lv_voltage_coil"
@@ -666,6 +948,23 @@
 			}]
 			x: 4.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["07D0D7005DA4F446"]
+			id: "162419C388E435A8"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "32F30C28AB212A98"
+				table_id: 6686286663350360107L
+				type: "random"
+			}]
+			tasks: [{
+				id: "3B0FC802776754DB"
+				item: "gtceu:slaughterhouse"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.0d
 		}
 	]
 	title: "低压LV"

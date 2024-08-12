@@ -16,7 +16,8 @@
 		}
 	}
 	id: "6C61A50CA7CB2D5C"
-	order_index: 3
+	order_index: 1
+	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
 		{
@@ -395,7 +396,7 @@
 				title: "准备前往T2"
 				type: "checkmark"
 			}]
-			x: 10.0d
+			x: 11.0d
 			y: 0.0d
 		}
 		{
@@ -419,7 +420,7 @@
 				title: "准备前往T3"
 				type: "checkmark"
 			}]
-			x: 18.0d
+			x: 19.0d
 			y: 0.0d
 		}
 		{
@@ -1055,6 +1056,519 @@
 			}]
 			x: 29.0d
 			y: 2.0d
+		}
+		{
+			dependencies: [
+				"21ABCDF5C4F8DA56"
+				"3FDEFC482256CD66"
+				"1DD2166E800E4311"
+				"75A54472EEAF6BB0"
+			]
+			id: "459ADFC4C826B296"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "408A175395E2C39A"
+				item: {
+					Count: 1
+					id: "ad_astra_rocketed:tier_5_rocket"
+					tag: {
+						BotariumData: {
+							StoredFluids: [{
+								Amount: 0L
+								Fluid: "minecraft:empty"
+							}]
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1DD2166E800E4311"]
+			id: "3FDEFC482256CD66"
+			tasks: [{
+				id: "3C5E0DFD65A2B324"
+				item: "ad_astra:ostrum_tank"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["1DD2166E800E4311"]
+			id: "21ABCDF5C4F8DA56"
+			tasks: [{
+				id: "2168C9499000475E"
+				item: "ad_astra:ostrum_engine"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4AF53867138C5BDA"]
+			id: "1DD2166E800E4311"
+			tasks: [{
+				id: "669051BFFB5C1273"
+				item: "ad_astra:ostrum_plate"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5322AB6C014C301F"]
+			id: "4AF53867138C5BDA"
+			tasks: [{
+				id: "63F1A8FBBC359D84"
+				item: "ad_astra:ostrum_ingot"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "5322AB6C014C301F"
+			tasks: [{
+				id: "5FAC15E60CEBC936"
+				title: "准备前往T5"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5322AB6C014C301F"]
+			id: "75A54472EEAF6BB0"
+			tasks: [{
+				id: "33C81AA0CA99EAF5"
+				item: "gtceu:rocket_fuel_h8n4c2o4_bucket"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"2F56A0B77A38264B"
+				"7115413F9AB554BB"
+				"2E21FB9E04F9C325"
+				"191930A854469664"
+			]
+			id: "045213D417DE5A75"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "16809C9FCCE23728"
+				item: {
+					Count: 1
+					id: "ad_astra_rocketed:tier_6_rocket"
+					tag: {
+						BotariumData: {
+							StoredFluids: [{
+								Amount: 0L
+								Fluid: "minecraft:empty"
+							}]
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 18.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2F56A0B77A38264B"]
+			id: "7115413F9AB554BB"
+			tasks: [{
+				id: "3BE7A703E743FA3E"
+				item: "ad_astra:calorite_tank"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["2F56A0B77A38264B"]
+			id: "2E21FB9E04F9C325"
+			tasks: [{
+				id: "04E0C423E8F68978"
+				item: "ad_astra:calorite_engine"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["165545C7E3F36727"]
+			id: "2F56A0B77A38264B"
+			tasks: [{
+				id: "67DF9C552F4B67BF"
+				item: "ad_astra:calorite_plate"
+				type: "item"
+			}]
+			x: 15.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7EE091FC5E255C22"]
+			id: "165545C7E3F36727"
+			tasks: [{
+				id: "3C74DFAA3271AC68"
+				item: "ad_astra:calorite_ingot"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 8.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "7EE091FC5E255C22"
+			tasks: [{
+				id: "7D768C7E49D71356"
+				title: "准备前往T6"
+				type: "checkmark"
+			}]
+			x: 12.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7EE091FC5E255C22"]
+			id: "191930A854469664"
+			tasks: [{
+				id: "22DB27707E826EAF"
+				item: "ad_astra:cryo_fuel_bucket"
+				type: "item"
+			}]
+			x: 18.5d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"7B19818378510998"
+				"72ED3FB127914FD7"
+			]
+			id: "7F2F3993847A837B"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "6FC1EFAE4A36FFD1"
+				item: {
+					Count: 1
+					id: "ad_astra_rocketed:tier_7_rocket"
+					tag: {
+						BotariumData: {
+							StoredFluids: [{
+								Amount: 0L
+								Fluid: "minecraft:empty"
+							}]
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 27.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["72ED3FB127914FD7"]
+			id: "7B19818378510998"
+			tasks: [{
+				id: "3BEC6C89E3401479"
+				item: "gtceu:stellar_energy_rocket_fuel_bucket"
+				type: "item"
+			}]
+			x: 27.0d
+			y: 10.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "72ED3FB127914FD7"
+			tasks: [{
+				id: "7224D725A4FDC289"
+				title: "准备前往T7"
+				type: "checkmark"
+			}]
+			x: 25.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["459ADFC4C826B296"]
+			id: "73613E3EBEFFB326"
+			tasks: [{
+				dimension: "kubejs:io"
+				id: "322F6EC282672EDF"
+				title: "木卫一"
+				type: "dimension"
+			}]
+			x: 9.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["459ADFC4C826B296"]
+			id: "761877FE2F5E2E2E"
+			tasks: [{
+				dimension: "kubejs:ganymede"
+				id: "1C809A36C617A480"
+				title: "木卫三"
+				type: "dimension"
+			}]
+			x: 10.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["73613E3EBEFFB326"]
+			id: "793E9EC16B16BA5C"
+			tasks: [
+				{
+					id: "7A60CC225A62E827"
+					item: "gtceu:raw_naquadah"
+					type: "item"
+				}
+				{
+					id: "04B98AF7EBA6D607"
+					item: "gtceu:raw_celestine"
+					type: "item"
+				}
+				{
+					id: "59EB363E1AF4A068"
+					item: "gtceu:raw_trona"
+					type: "item"
+				}
+			]
+			title: "木卫一的矿"
+			x: 9.5d
+			y: 10.0d
+		}
+		{
+			dependencies: ["73613E3EBEFFB326"]
+			id: "2A2DDCC3A347CCFC"
+			tasks: [{
+				id: "5E5086AB16E5F4B3"
+				item: "gtceu:coal_gas_bucket"
+				type: "item"
+			}]
+			title: "木卫一的流体矿脉"
+			x: 9.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["761877FE2F5E2E2E"]
+			id: "20AD3C5F77D665FC"
+			tasks: [{
+				id: "77526A485334B9A0"
+				item: "gtceu:hydrochloric_acid_bucket"
+				type: "item"
+			}]
+			title: "木卫三的流体矿脉"
+			x: 10.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["761877FE2F5E2E2E"]
+			id: "5A5C5923DADD33E5"
+			tasks: [{
+				id: "31F911C5925689BB"
+				item: "gtceu:raw_zircon"
+				type: "item"
+			}]
+			title: "木卫三的矿"
+			x: 10.5d
+			y: 10.0d
+		}
+		{
+			dependencies: ["045213D417DE5A75"]
+			id: "61140578961B01A9"
+			tasks: [{
+				dimension: "kubejs:pluto"
+				id: "31DA86E1A97BF813"
+				title: "冥王星"
+				type: "dimension"
+			}]
+			x: 20.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["045213D417DE5A75"]
+			id: "22B38057B7705160"
+			tasks: [{
+				dimension: "kubejs:enceladus"
+				id: "41C8995FDDD8DF81"
+				title: "土卫二"
+				type: "dimension"
+			}]
+			x: 21.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["045213D417DE5A75"]
+			id: "7E8D49D03B9CF783"
+			tasks: [{
+				dimension: "kubejs:titan"
+				id: "2660E03A1F112547"
+				title: "土卫六"
+				type: "dimension"
+			}]
+			x: 22.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["61140578961B01A9"]
+			id: "2AE3DE0BC3CD1D5B"
+			tasks: [{
+				id: "0F4C07DD6A1BB112"
+				item: "kubejs:end_data"
+				type: "item"
+			}]
+			x: 23.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2AE3DE0BC3CD1D5B"]
+			id: "5E3EDA6C94CEC3C4"
+			tasks: [{
+				dimension: "minecraft:the_end"
+				id: "0FC672E8CA7E4414"
+				title: "末地"
+				type: "dimension"
+			}]
+			x: 23.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["61140578961B01A9"]
+			id: "72053827D58EF156"
+			tasks: [{
+				id: "66BE265D649EB639"
+				item: "gtceu:nitric_acid_bucket"
+				type: "item"
+			}]
+			title: "冥王星的流体矿脉"
+			x: 20.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["22B38057B7705160"]
+			id: "55918DAD44A0C882"
+			tasks: [
+				{
+					id: "663DF3FA4783DFB6"
+					item: "gtceu:chlorine_bucket"
+					type: "item"
+				}
+				{
+					id: "25D3E0C068BC8AFF"
+					item: "gtceu:fluorine_bucket"
+					type: "item"
+				}
+			]
+			title: "土卫二的流体矿脉"
+			x: 21.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["7E8D49D03B9CF783"]
+			id: "68E3E08DF18CC2C5"
+			tasks: [
+				{
+					id: "58832CB953B7CBD2"
+					item: "gtceu:methane_bucket"
+					type: "item"
+				}
+				{
+					id: "44D33818118A4848"
+					item: "gtceu:benzene_bucket"
+					type: "item"
+				}
+				{
+					id: "19643D23DDE3A4A1"
+					item: "gtceu:charcoal_byproducts_bucket"
+					type: "item"
+				}
+			]
+			title: "土卫六的流体矿脉"
+			x: 22.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["7F2F3993847A837B"]
+			id: "25AA088531768F81"
+			tasks: [{
+				dimension: "ad_astra:glacio"
+				id: "7016F7E78116220B"
+				title: "霜原星"
+				type: "dimension"
+			}]
+			x: 28.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["25AA088531768F81"]
+			id: "76EA305BEB66FA42"
+			tasks: [{
+				id: "3F23E72784A107E4"
+				item: "kubejs:glacio_spirit"
+				type: "item"
+			}]
+			title: "霜原星特产"
+			x: 28.5d
+			y: 10.0d
+		}
+		{
+			hide_dependency_lines: true
+			hide_dependent_lines: true
+			id: "5A185A4065DD7FCF"
+			tasks: [{
+				id: "7A40F8D4992B0D2A"
+				title: "准备前往T8"
+				type: "checkmark"
+			}]
+			x: 31.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5A185A4065DD7FCF"]
+			id: "60FA18C7093410F8"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "591DE1FAA4F7D9C3"
+				item: "gtceu:space_elevator"
+				type: "item"
+			}]
+			x: 33.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["60FA18C7093410F8"]
+			id: "7796B2AE8F20C564"
+			tasks: [{
+				dimension: "kubejs:barnarda"
+				id: "4C86D85114E0D472"
+				title: "巴纳德C"
+				type: "dimension"
+			}]
+			x: 35.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7796B2AE8F20C564"]
+			id: "34B06A20D5B71CC9"
+			tasks: [{
+				id: "7DC96849FFCF07D7"
+				item: "gtceu:unknowwater_bucket"
+				type: "item"
+			}]
+			title: "巴纳德C的流体矿脉"
+			x: 35.0d
+			y: 10.0d
 		}
 	]
 	title: "探索世界"

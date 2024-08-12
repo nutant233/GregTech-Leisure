@@ -287,7 +287,7 @@ ServerEvents.recipes((event) => {
         "DED"
     ], {
         A: "gtceu:hv_machine_hull",
-        C: "gtceu:configurable_maintenance_hatch",
+        C: "gtceu:hv_emitter",
         D: "gtceu:filter_casing",
         E: "gtceu:auto_maintenance_hatch"
     })
@@ -3616,6 +3616,16 @@ ServerEvents.recipes((event) => {
         .duration(480)
         .EUt(-2048)
 
+    gtr.naquadah_reactor("gtceu:naquadah")
+        .inputFluids("gtceu:naquadah 1")
+        .duration(20)
+        .EUt(-8192)
+
+    gtr.naquadah_reactor("gtceu:enriched_naquadah")
+        .inputFluids("gtceu:enriched_naquadah 1")
+        .duration(30)
+        .EUt(-8192)
+
     gtr.naquadah_reactor("gtceu:naquadah_fuel")
         .inputFluids("gtceu:naquadah_fuel 1")
         .duration(875)
@@ -5123,31 +5133,31 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:naquadah_solution 1000", "gtceu:fluorine 1000")
         .outputFluids("gtceu:fluorine_cracked_aquadah 1000")
         .circuit(1)
-        .EUt(GTValues.VA[GTValues.LuV])
-        .duration(800)
+        .EUt(GTValues.VA[GTValues.UV])
+        .duration(120)
 
     gtr.cracker("gtceu:radon_cracked_enriched_aquadah")
         .inputFluids("gtceu:enriched_naquadah_solution 1000", "gtceu:radon 1000")
         .outputFluids("gtceu:radon_cracked_enriched_aquadah 1000")
         .circuit(1)
-        .EUt(GTValues.VA[GTValues.ZPM])
-        .duration(800)
+        .EUt(GTValues.VA[GTValues.UHV])
+        .duration(160)
 
     gtr.distillation_tower("gtceu:naquadah_fuel")
         .inputFluids("gtceu:fluorine_cracked_aquadah 1000")
-        .outputFluids("gtceu:naquadah_fuel 400", "gtceu:nitric_acid 200", "gtceu:enriched_naquadah_waste 200", "gtceu:ammonia 200", "gtceu:fluorine 200")
+        .outputFluids("gtceu:naquadah_fuel 800", "gtceu:nitric_acid 200", "gtceu:enriched_naquadah_waste 100", "gtceu:ammonia 200", "gtceu:fluorine 200")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(600)
 
     gtr.distillation_tower("gtceu:enriched_naquadah_fuel")
         .inputFluids("gtceu:radon_cracked_enriched_aquadah 1000")
-        .outputFluids("gtceu:enriched_naquadah_fuel 400", "gtceu:naquadria_waste 200", "gtceu:radon 200", "gtceu:fluorine 200")
+        .outputFluids("gtceu:enriched_naquadah_fuel 800", "gtceu:naquadria_waste 100", "gtceu:radon 200", "gtceu:fluorine 200")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(600)
 
     gtr.large_chemical_reactor("gtceu:hyper_fuel_1")
         .inputFluids("gtceu:naquadria_solution 1000", "gtceu:naquadah_fuel 1000", "gtceu:enriched_naquadah_fuel 1000", "gtceu:thorium 2304")
-        .outputFluids("gtceu:hyper_fuel_1 2000")
+        .outputFluids("gtceu:hyper_fuel_1 3000")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(400)
 
@@ -9426,14 +9436,14 @@ ServerEvents.recipes((event) => {
         ["minecraft:salmon", 21.3],
         ["minecraft:tropical_fish", 1.7],
         ["minecraft:pufferfish", 11.1],
-        [Item.of("minecraft:bow", "{Damage:100}"), 0.8],
+        [Item.of("minecraft:bow", "{Damage:100}").weakNBT(), 0.8],
         ["minecraft:experience_bottle", 0.8],
         ["minecraft:name_tag", 0.8],
         ["minecraft:nautilus_shell", 0.8],
         ["minecraft:saddle", 0.8],
         ["minecraft:lily_pad", 1.7],
         ["minecraft:bowl", 1],
-        [Item.of("minecraft:fishing_rod", "{Damage:30,RepairCost:3}").enchant("minecraft:luck_of_the_sea", 2).enchant("minecraft:lure", 2), 0.2],
+        [Item.of("minecraft:fishing_rod", "{Damage:30,RepairCost:3}").enchant("minecraft:luck_of_the_sea", 2).enchant("minecraft:lure", 2).weakNBT(), 0.2],
         ["minecraft:leather", 1],
         ["minecraft:rotten_flesh", 1],
         ["minecraft:stick", 0.5],
@@ -9460,7 +9470,7 @@ ServerEvents.recipes((event) => {
     })
     gtr.packer("gtceu:zero_point_module")
         .itemInputs("64x kubejs:zero_point_module_fragments")
-        .itemOutputs(Item.of("gtceu:zero_point_module", "{Charge:2000000000000L}"))
+        .itemOutputs(Item.of("gtceu:zero_point_module", "{Charge:2000000000000L}").weakNBT())
         .EUt(120)
         .duration(2000)
 
@@ -14050,4 +14060,13 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:multi_functional_casing")
         .EUt(30)
         .duration(300)
+
+    gtr.assembly_line("gtceu:auto_configuration_maintenance_hatch")
+        .itemInputs("gtceu:iv_machine_hull", "4x gtceu:configurable_maintenance_hatch", "8x gtceu:iv_conveyor_module", "8x gtceu:iv_robot_arm", "16x #gtceu:circuits/iv", "4x gtceu:iv_emitter", "4x gtceu:iv_sensor", "gtceu:rad_away_pill", "gtceu:paracetamol_pill", "16x gtceu:stainless_steel_foil")
+        .inputFluids("gtceu:lubricant 1000", "gtceu:soldering_alloy 576", "gtceu:cupronickel 576", "gtceu:brass 576")
+        .itemOutputs("gtceu:auto_configuration_maintenance_hatch")
+        .EUt(GTValues.VA[GTValues.LuV])
+        .duration(800)
+    ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of("gtceu:auto_maintenance_hatch")).dataStack(Item.of("gtceu:data_orb")).EUt(GTValues.VA[GTValues.IV]).duration(8000))
+
 })

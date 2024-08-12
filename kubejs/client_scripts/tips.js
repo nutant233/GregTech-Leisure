@@ -64,7 +64,7 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:dimensionally_transcendent_mixer", "运行搅拌机配方时每秒进度额外增加1秒")
     event.add("gtceu:pcb_factory", ["放入纳米蜂群可获得减免", "可使用金和振金，每个提升1%速度", "振金还可使能耗降低4倍"])
     event.add("gtceu:space_probe_surface_reception", "不要遮挡")
-    event.add(["gtceu:mega_alloy_blast_smelter", "gtceu:mega_blast_furnace"], "耗时倍数x0.8")
+    event.add("gtceu:mega_alloy_blast_smelter", "耗时倍数x0.8")
     event.add("gtceu:super_blast_smelter", "耗时倍数x0.2")
     event.add("gtceu:dyson_sphere", ["发射戴森球模块后开始工作", "每次运行都有(模块数量/128 + 1)%的概率损坏一次模块", "当损坏高于60%时，输出效率降低为(100-损坏值)%", "当损坏达到100%时减少一次模块发射数量", "在损坏值高于70%时发射不会增加发射次数，但会将损坏值清零", "产能功率由发射的模块数量决定", "每次发射可使功率增加1A MAX"])
     event.add("gtceu:bedrock_drilling_rig", ["需要基岩在钻头下方", "每次运行都有10%的概率破坏基岩"])
@@ -140,6 +140,7 @@ ItemEvents.tooltip(event => {
         "gtceu:holy_separator",
         "gtceu:a_mass_fabricator",
         "gtceu:crystalline_infinity",
+        "gtceu:dragon_egg_copier",
         "gtceu:superconducting_electromagnetism",
         "gtceu:suprachronal_assembly_line",
         "gtceu:dimensionally_transcendent_plasma_forge",

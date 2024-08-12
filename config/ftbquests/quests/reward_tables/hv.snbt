@@ -1,0 +1,22 @@
+{
+	icon: "gtceu:hv_machine_hull"
+	id: "7E464F134979444B"
+	loot_size: 1
+	order_index: 6
+	rewards: [
+		{ item: "gtceu:gold_credit", weight: 0.8f }
+		{ item: "gtceu:platinum_credit", weight: 0.4f }
+		{ item: "gtceu:osmium_credit", weight: 0.05f }
+		{ item: "gtceu:ancient_gold_coin", weight: 0.5f }
+		{ count: 64, item: "gtceu:rutile_dust", weight: 0.5f }
+		{ count: 8, item: "gtceu:titanium_ingot", weight: 0.5f }
+		{ count: 32, item: "gtceu:polytetrafluoroethylene_ingot", weight: 0.2f }
+		{ count: 16, item: "gtceu:hv_electric_motor" }
+		{ count: 32, item: "gtceu:polyethylene_plate" }
+		{ item: "gtceu:silicon_boule", weight: 0.5f }
+		{ count: 64, item: "gtceu:stainless_steel_ingot" }
+		{ item: "gtceu:silver_credit", weight: 2.0f }
+	]
+	tags: [""]
+	title: "HV奖励袋"
+}
