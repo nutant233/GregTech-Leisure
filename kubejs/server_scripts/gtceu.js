@@ -16,7 +16,6 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "gtceu:mixer/rocket_fuel_from_dinitrogen_tetroxide" })
     event.remove({ id: "gtceu:centrifuge/rare_earth_separation" })
     event.remove({ output: "gtceu:nan_certificate" })
-    event.remove({ output: "gtceu:rad_away_dust" })
     event.remove({ output: "gregiceng:crafting_io_buffer" })
     event.remove({ output: "gtceu:cleaning_maintenance_hatch" })
     event.remove({ output: "gtceu:cupronickel_credit", type: "gtceu:forming_press" })
@@ -288,7 +287,7 @@ ServerEvents.recipes((event) => {
         "DED"
     ], {
         A: "gtceu:hv_machine_hull",
-        C: "gtceu:configurable_maintenance_hatch",
+        C: "gtceu:hv_emitter",
         D: "gtceu:filter_casing",
         E: "gtceu:auto_maintenance_hatch"
     })
@@ -9448,14 +9447,14 @@ ServerEvents.recipes((event) => {
         ["minecraft:salmon", 21.3],
         ["minecraft:tropical_fish", 1.7],
         ["minecraft:pufferfish", 11.1],
-        [Item.of("minecraft:bow", "{Damage:100}"), 0.8],
+        [Item.of("minecraft:bow", "{Damage:100}").weakNBT(), 0.8],
         ["minecraft:experience_bottle", 0.8],
         ["minecraft:name_tag", 0.8],
         ["minecraft:nautilus_shell", 0.8],
         ["minecraft:saddle", 0.8],
         ["minecraft:lily_pad", 1.7],
         ["minecraft:bowl", 1],
-        [Item.of("minecraft:fishing_rod", "{Damage:30,RepairCost:3}").enchant("minecraft:luck_of_the_sea", 2).enchant("minecraft:lure", 2), 0.2],
+        [Item.of("minecraft:fishing_rod", "{Damage:30,RepairCost:3}").enchant("minecraft:luck_of_the_sea", 2).enchant("minecraft:lure", 2).weakNBT(), 0.2],
         ["minecraft:leather", 1],
         ["minecraft:rotten_flesh", 1],
         ["minecraft:stick", 0.5],
@@ -9482,7 +9481,7 @@ ServerEvents.recipes((event) => {
     })
     gtr.packer("gtceu:zero_point_module")
         .itemInputs("64x kubejs:zero_point_module_fragments")
-        .itemOutputs(Item.of("gtceu:zero_point_module", "{Charge:2000000000000L}"))
+        .itemOutputs(Item.of("gtceu:zero_point_module", "{Charge:2000000000000L}").weakNBT())
         .EUt(120)
         .duration(2000)
 
@@ -14066,4 +14065,12 @@ ServerEvents.recipes((event) => {
     ["addData(java.lang.String,int)"]("ev_max", 900)
     ["addData(java.lang.String,int)"]("evt", 5760)
         .duration(800)
+
+    gtr.assembly_line("gtceu:auto_configuration_maintenance_hatch")
+        .itemInputs("gtceu:iv_machine_hull", "4x gtceu:configurable_maintenance_hatch", "8x gtceu:iv_conveyor_module", "8x gtceu:iv_robot_arm", "16x #gtceu:circuits/iv", "4x gtceu:iv_emitter", "4x gtceu:iv_sensor", "gtceu:rad_away_pill", "gtceu:paracetamol_pill", "16x gtceu:stainless_steel_foil")
+        .inputFluids("gtceu:lubricant 1000", "gtceu:soldering_alloy 576", "gtceu:cupronickel 576", "gtceu:brass 576")
+        .itemOutputs("gtceu:auto_configuration_maintenance_hatch")
+        .EUt(GTValues.VA[GTValues.LuV])
+        .duration(800)
+    ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of("gtceu:auto_maintenance_hatch")).dataStack(Item.of("gtceu:data_orb")).EUt(GTValues.VA[GTValues.IV]).duration(8000))
 })

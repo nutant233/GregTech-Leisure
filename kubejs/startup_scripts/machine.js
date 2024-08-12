@@ -1930,7 +1930,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("dragon_egg_copier", "multiblock")
         .rotationState(RotationState.ALL)
         .recipeType("dragon_egg_copier")
-        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([GTRecipeModifiers.SUBTICK_PARALLEL, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:dragon_strength_tritanium_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1941,6 +1941,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("b", Predicates.blocks("kubejs:dragon_strength_tritanium_casing")
                     .setMinGlobalLimited(10)
                     .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+                    .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
                 .where("c", Predicates.blocks("kubejs:magic_core"))
                 .where("d", Predicates.blocks("gtceu:uev_muffler_hatch"))

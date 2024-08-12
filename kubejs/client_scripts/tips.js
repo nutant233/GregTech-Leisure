@@ -140,6 +140,7 @@ ItemEvents.tooltip(event => {
         "gtceu:holy_separator",
         "gtceu:a_mass_fabricator",
         "gtceu:crystalline_infinity",
+        "gtceu:dragon_egg_copier",
         "gtceu:superconducting_electromagnetism",
         "gtceu:suprachronal_assembly_line",
         "gtceu:dimensionally_transcendent_plasma_forge",
