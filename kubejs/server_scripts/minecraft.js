@@ -2,10 +2,8 @@
 ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
 
-    event.remove({ output: "minecraft:glass_pane", mod: "gtceu" })
-    event.remove({ output: "minecraft:netherite_ingot", input: "minecraft:gold_ingot" })
-    event.remove({ output: "minecraft:golden_apple", mod: "minecraft" })
-    event.remove({ output: "minecraft:ender_eye", mod: "minecraft" })
+    event.remove({ id: "minecraft:netherite_ingot" })
+    event.remove({ id: "minecraft:ender_eye" })
 
     event.shaped("minecraft:sculk_sensor", [
         "ABA",
@@ -26,29 +24,6 @@ ServerEvents.recipes((event) => {
         A: "kubejs:echobone",
         B: "gtceu:echo_dust",
         D: "minecraft:sculk_sensor"
-    })
-
-    const ores = [
-        "minecraft:coal_ore",
-        "minecraft:deepslate_coal_ore",
-        "minecraft:iron_ore",
-        "minecraft:deepslate_iron_ore",
-        "minecraft:copper_ore",
-        "minecraft:deepslate_copper_ore",
-        "minecraft:gold_ore",
-        "minecraft:deepslate_gold_ore",
-        "minecraft:redstone_ore",
-        "minecraft:deepslate_redstone_ore",
-        "minecraft:emerald_ore",
-        "minecraft:deepslate_emerald_ore",
-        "minecraft:lapis_ore",
-        "minecraft:deepslate_lapis_ore",
-        "minecraft:diamond_ore",
-        "minecraft:deepslate_diamond_ore",
-        "minecraft:nether_gold_ore",
-        "minecraft:nether_quartz_ore"]
-    ores.forEach((ore) => {
-        event.remove({ input: ore })
     })
 
     gtr.chemical_reactor("gtceu:ghast_tear")

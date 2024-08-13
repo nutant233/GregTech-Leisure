@@ -1614,7 +1614,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("mega_alloy_blast_smelter", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(recipe, 1, 0.8), GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.GCYM_REDUCTION, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.SUBTICK_PARALLEL, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
         .appearanceBlock(GCyMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .recipeType("alloy_blast_smelter")
         .pattern(definition => FactoryBlockPattern.start()
@@ -3470,6 +3470,9 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .rotationState(RotationState.ALL)
             .recipeType(recipeType)
             .generator(true)
+            .tooltips(Component.literal("可使用变电动力仓"))
+            .tooltips(Component.translatable("gtceu.universal.tooltip.base_production_eut", $FormattingUtil.formatNumbers(GTValues.V[tier] * value)))
+            .tooltips(Component.translatable("gtceu.multiblock.turbine.efficiency_tooltip", GTValues.VNF[tier]))
             .recipeModifier((machine, recipe) => $LargeTurbineMachine.recipeModifier(machine, recipe))
             .appearanceBlock(casing)
             .pattern(definition => FactoryBlockPattern.start()
@@ -3495,24 +3498,24 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .workableCasingRenderer(baseCasing, overlayModel)
     }
 
-    registerMegaTurbine("steam_mega_turbine", GTValues.EV, 24, GTRecipeTypes.STEAM_TURBINE_FUELS, GTBlocks.CASING_STEEL_TURBINE, GTBlocks.CASING_STEEL_GEARBOX,
+    registerMegaTurbine("steam_mega_turbine", GTValues.EV, 36, GTRecipeTypes.STEAM_TURBINE_FUELS, GTBlocks.CASING_STEEL_TURBINE, GTBlocks.CASING_STEEL_GEARBOX,
         "gtceu:block/casings/mechanic/machine_casing_turbine_steel", "gtceu:block/multiblock/generator/large_steam_turbine")
-    registerMegaTurbine("gas_mega_turbine", GTValues.IV, 36, GTRecipeTypes.GAS_TURBINE_FUELS, GTBlocks.CASING_STAINLESS_TURBINE, GTBlocks.CASING_STAINLESS_STEEL_GEARBOX,
+    registerMegaTurbine("gas_mega_turbine", GTValues.IV, 48, GTRecipeTypes.GAS_TURBINE_FUELS, GTBlocks.CASING_STAINLESS_TURBINE, GTBlocks.CASING_STAINLESS_STEEL_GEARBOX,
         "gtceu:block/casings/mechanic/machine_casing_turbine_stainless_steel", "gtceu:block/multiblock/generator/large_gas_turbine")
-    registerMegaTurbine("rocket_mega_turbine", GTValues.IV, 48, GTRecipeTypes.get("rocket_engine"), GTBlocks.CASING_TITANIUM_TURBINE, GTBlocks.CASING_STAINLESS_STEEL_GEARBOX,
+    registerMegaTurbine("rocket_mega_turbine", GTValues.IV, 64, GTRecipeTypes.get("rocket_engine"), GTBlocks.CASING_TITANIUM_TURBINE, GTBlocks.CASING_STAINLESS_STEEL_GEARBOX,
         "gtceu:block/casings/mechanic/machine_casing_turbine_titanium", "gtceu:block/multiblock/generator/large_gas_turbine")
-    registerMegaTurbine("plasma_mega_turbine", GTValues.LuV, 54, GTRecipeTypes.PLASMA_GENERATOR_FUELS, GTBlocks.CASING_TUNGSTENSTEEL_TURBINE, GTBlocks.CASING_TUNGSTENSTEEL_GEARBOX,
+    registerMegaTurbine("plasma_mega_turbine", GTValues.LuV, 72, GTRecipeTypes.PLASMA_GENERATOR_FUELS, GTBlocks.CASING_TUNGSTENSTEEL_TURBINE, GTBlocks.CASING_TUNGSTENSTEEL_GEARBOX,
         "gtceu:block/casings/mechanic/machine_casing_turbine_tungstensteel", "gtceu:block/multiblock/generator/large_plasma_turbine")
-    registerMegaTurbine("supercritical_mega_steam_turbine", GTValues.ZPM, 72, GTRecipeTypes.SUPERCRITICAL_STEAM_TURBINE_FUELS, GTBlocks.CASING_SUPERCRITICAL_TURBINE, GTBlocks.CASING_TUNGSTENSTEEL_GEARBOX,
+    registerMegaTurbine("supercritical_mega_steam_turbine", GTValues.ZPM, 128, GTRecipeTypes.SUPERCRITICAL_STEAM_TURBINE_FUELS, GTBlocks.CASING_SUPERCRITICAL_TURBINE, GTBlocks.CASING_TUNGSTENSTEEL_GEARBOX,
         "kubejs:block/supercritical_turbine_casing", "gtceu:block/multiblock/generator/large_plasma_turbine")
 
-    GTMachines.registerLargeTurbine("rocket_large_turbine", GTValues.EV, 6,
+    GTMachines.registerLargeTurbine("rocket_large_turbine", GTValues.EV, 12,
         GTRecipeTypes.get("rocket_engine"),
         GTBlocks.CASING_TITANIUM_TURBINE, GTBlocks.CASING_TITANIUM_GEARBOX,
         GTCEu.id("block/casings/mechanic/machine_casing_turbine_titanium"),
         GTCEu.id("block/multiblock/generator/large_gas_turbine"))
 
-    GTMachines.registerLargeTurbine("supercritical_steam_turbine", GTValues.LuV, 6,
+    GTMachines.registerLargeTurbine("supercritical_steam_turbine", GTValues.LuV, 12,
         GTRecipeTypes.SUPERCRITICAL_STEAM_TURBINE_FUELS,
         GTBlocks.CASING_SUPERCRITICAL_TURBINE, GTBlocks.CASING_TUNGSTENSTEEL_GEARBOX,
         new ResourceLocation("kubejs:block/supercritical_turbine_casing"),

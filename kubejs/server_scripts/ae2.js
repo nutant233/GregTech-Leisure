@@ -2,9 +2,9 @@
 ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
 
-    event.remove({ output: "ae2:certus_quartz_crystal", input: "ae2:quartz_block" })
-    event.remove({ output: "ae2:controller" })
-    event.remove({ output: "ae2:blank_pattern" })
+    event.remove({ id: "ae2:misc/deconstruction_certus_quartz_block" })
+    event.remove({ id: "ae2:network/block/controller" })
+    event.remove({ id: "ae2:network/cratfing/blank_pattern" })
     event.remove({ id: "ae2:network/parts/export_bus" })
     event.remove({ id: "ae2:network/parts/import_bus" })
     event.remove({ id: "ae2:network/wireless_part" })
@@ -13,7 +13,7 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "ae2:materials/advancedcard" })
     event.remove({ id: "ae2:materials/basiccard" })
     event.remove({ id: "ae2:network/crafting/cpu_crafting_unit" })
-    event.replaceInput({ output: "expatternprovider:fishbig" }, "minecraft:pufferfish", "gtceu:cosmic_ingot")
+    event.replaceInput({ id: "expatternprovider:fishbig" }, "minecraft:pufferfish", "gtceu:cosmic_ingot")
     event.shapeless("infinitycells:infinity_cell", ["ae2:item_cell_housing", "kubejs:infinite_cell_component"])
     event.shapeless("infinitycells:infinity_fluid_cell", ["ae2:fluid_cell_housing", "kubejs:infinite_cell_component"])
 

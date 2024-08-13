@@ -1,10 +1,6 @@
 //priority: 99
 ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
-    event.remove({ output: "minecraft:coarse_dirt", mod: "gtceu" })
-    event.remove({ input: "minecraft:pumpkin_seeds", mod: "gtceu", not: { input: "minecraft:wheat_seeds" } })
-    event.remove({ input: "minecraft:melon_seeds", mod: "gtceu", not: { input: "minecraft:wheat_seeds" } })
-    event.remove({ input: "minecraft:beetroot_seeds", mod: "gtceu", not: { input: "minecraft:wheat_seeds" } })
 
     event.shaped("kubejs:warped_ender_pearl", [
         "ABA",

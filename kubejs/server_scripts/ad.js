@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
     const gtr = event.recipes.gtceu
-    const items = ["ad_astra:compressor",
+    const id = ["ad_astra:compressor",
         "ad_astra:coal_generator",
         "ad_astra:etrionic_blast_furnace",
         "ad_astra:fuel_refinery",
@@ -19,17 +19,40 @@ ServerEvents.recipes(event => {
         "ad_astra:steel_tank",
         "ad_astra:rocket_fin",
         "ad_astra:rocket_nose_cone",
-        "ad_astra:desh_ingot",
-        "ad_astra:ostrum_ingot",
-        "ad_astra:calorite_ingot",
+        "ad_astra:smelting/desh_ingot_from_smelting_deepslate_desh_ore",
+        "ad_astra:smelting/desh_ingot_from_smelting_moon_desh_ore",
+        "ad_astra:smelting/desh_ingot_from_smelting_raw_desh",
+        "ad_astra:smelting/ostrum_ingot_from_smelting_deepslate_ostrum_ore",
+        "ad_astra:smelting/ostrum_ingot_from_smelting_mars_ostrum_ore",
+        "ad_astra:smelting/ostrum_ingot_from_smelting_raw_ostrum",
+        "ad_astra:smelting/calorite_ingot_from_smelting_deepslate_calorite_ore",
+        "ad_astra:smelting/calorite_ingot_from_smelting_venus_calorite_ore",
+        "ad_astra:smelting/calorite_ingot_from_smelting_raw_calorite",
+        "ad_astra:smelting/ice_shard_from_smelting_deepslate_ice_shard_ore",
+        "ad_astra:smelting/ice_shard_from_smelting_glacio_ice_shard_ore",
+        "ad_astra:smelting/ice_shard_from_smelting_mars_ice_shard_ore",
+        "ad_astra:smelting/ice_shard_from_smelting_moon_ice_shard_ore",
+        "ad_astra:blasting/desh_ingot_from_blasting_deepslate_desh_ore",
+        "ad_astra:blasting/desh_ingot_from_blasting_moon_desh_ore",
+        "ad_astra:blasting/desh_ingot_from_blasting_raw_desh",
+        "ad_astra:blasting/ostrum_ingot_from_blasting_deepslate_ostrum_ore",
+        "ad_astra:blasting/ostrum_ingot_from_blasting_mars_ostrum_ore",
+        "ad_astra:blasting/ostrum_ingot_from_blasting_raw_ostrum",
+        "ad_astra:blasting/calorite_ingot_from_blasting_deepslate_calorite_ore",
+        "ad_astra:blasting/calorite_ingot_from_blasting_venus_calorite_ore",
+        "ad_astra:blasting/calorite_ingot_from_blasting_raw_calorite",
+        "ad_astra:blasting/ice_shard_from_blasting_deepslate_ice_shard_ore",
+        "ad_astra:blasting/ice_shard_from_blasting_glacio_ice_shard_ore",
+        "ad_astra:blasting/ice_shard_from_blasting_mars_ice_shard_ore",
+        "ad_astra:blasting/ice_shard_from_blasting_moon_ice_shard_ore",
         "ad_astra:steel_block",
         "ad_astra:energizer",
         "ad_astra:steel_cable",
         "ad_astra:desh_cable",
         "ad_astra:cable_duct",
         "ad_astra:steel_ingot"]
-    items.forEach(item => {
-        event.remove({ output: item })
+    id.forEach(i => {
+        event.remove({ id: i })
     })
     event.remove({ type: "ad_astra:compressing" })
     event.remove({ type: "ad_astra:alloying" })
@@ -37,7 +60,6 @@ ServerEvents.recipes(event => {
     event.remove({ type: "ad_astra:nasa_workbench" })
     event.remove({ type: "ad_astra:oxygen_loading" })
     event.remove({ type: "ad_astra:refining" })
-    event.remove({ output: "ad_astra:ice_shard", mod: "ad_astra" })
     event.shapeless("ad_astra:energizer", "gtceu:ulv_charger_4x")
 
     gtr.compressor("ad_astra:ice_shard")
@@ -485,7 +507,6 @@ ServerEvents.recipes(event => {
         .itemOutputs("ad_astra:ostrum_engine")
         .EUt(7680)
         .duration(400)
-
 
     gtr.assembler("ad_astra:calorite_tank")
         .itemInputs("gtceu:tungstensteel_fluid_cell", "8x gtceu:naquadah_normal_fluid_pipe", "gtceu:luv_electric_pump", "8x gtceu:enriched_naquadah_plate", "4x ad_astra:calorite_plate")
