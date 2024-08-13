@@ -88,7 +88,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
 
     //element
     GTMaterials.Mendelevium.setProperty(PropertyKey.WIRE, new $WireProperties(GTValues.V[GTValues.UHV], 4, 16))
-    GTMaterials.Neutronium.addFlags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SPRING_SMALL)
+    GTMaterials.Neutronium.addFlags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_SPRING_SMALL)
     GTMaterials.Neutronium.setProperty(PropertyKey.WIRE, new $WireProperties(GTValues.V[GTValues.UIV], 2, 64))
     GTMaterials.Carbon.setProperty(PropertyKey.INGOT, new $IngotProperty())
     GTMaterials.RadAway.addFlags(GTMaterialFlags.DISABLE_DECOMPOSITION)
@@ -401,7 +401,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .element(GTElements.get("quantanium"))
         .color(0x0dff02)
         .iconSet(GTMaterialIconSet.METALLIC)
-        .flags(GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_FRAME)
+        .flags(GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FRAME)
 
     event.create("vibranium")
         .ingot()
@@ -1030,6 +1030,15 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .color(0xd2bfaa)
         .iconSet(GTMaterialIconSet.METALLIC)
         .flags(GTMaterialFlags.GENERATE_PLATE)
+
+    event.create("mar_m_200_steel")
+        .ingot()
+        .fluid()
+        .blastTemp(4600, "high", GTValues.VA[GTValues.IV], 100)
+        .components("2x niobium", "9x chromium", "5x aluminium", "2x titanium", "10x cobalt", "13x tungsten", "18x nickel")
+        .color(0x515151)
+        .iconSet(GTMaterialIconSet.METALLIC)
+        .flags(GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.DISABLE_DECOMPOSITION)
 
     event.create("lanthanoids_1")
         .dust()

@@ -1,4 +1,14 @@
 ItemEvents.tooltip(event => {
+    function mega_turbine(turbine, tier, value) {
+        event.add(turbine, Text.of(Component.literal("可使用变电动力仓")))
+        event.add(turbine, Text.of(Component.translatable("gtceu.universal.tooltip.base_production_eut", GTValues.V[tier] * value)))
+        event.add(turbine, Text.of(Component.translatable("gtceu.multiblock.turbine.efficiency_tooltip", GTValues.VNF[tier])))
+    }
+    mega_turbine("gtceu:steam_mega_turbine", GTValues.EV, 24)
+    mega_turbine("gtceu:gas_mega_turbine", GTValues.IV, 36)
+    mega_turbine("gtceu:rocket_mega_turbine", GTValues.IV, 48)
+    mega_turbine("gtceu:plasma_mega_turbine", GTValues.LuV, 54)
+    mega_turbine("gtceu:supercritical_mega_steam_turbine", GTValues.ZPM, 72)
     event.add("kubejs:basic_control_circuit", "§aULV级电路")
     event.add("kubejs:advanced_control_circuit", "§cLV级电路")
     event.add("kubejs:elite_control_circuit", "§bMV级电路")
@@ -74,6 +84,10 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:annihilate_generator", ["终极质能转换"])
     event.add("gtceu:sphere_of_harmony", ["创造一个微缩宇宙，并获取里面的资源", "这台多方块机器需要太多EU，无法用常规手段供能", "由无线EU网络直接供给EU，具体数值可在GUI内查看", "工作前需设置好电路", "执行特殊超频模式，每提升16倍功率提升2倍速度，超频由编程电路调节", "1号不执行超频，2-4分别执行1，2，3次超频", "启动需1024B的宇宙素，与1024KB的氢和氦", "氢和氦存储在机器内部，在机器准备工作之前会持续消耗"])
     event.add("gtceu:integrated_ore_processor", ["一步完成矿石处理", "1号电路为研磨-研磨-离心", "2号电路为研磨-洗矿-热离-研磨", "3号电路为研磨-洗矿-研磨-离心", "4号电路为研磨-洗矿-筛选-离心", "5号电路为研磨-浸洗-热离-研磨", "6号电路为研磨-浸洗-研磨-离心", "7号电路为研磨-浸洗-筛选-离心"])
+    event.add("gtceu:chemical_energy_devourer", [Text.of(Component.translatable("gtceu.universal.tooltip.base_production_eut", GTValues.V[GTValues.ZPM])),
+    Text.of(Component.translatable("gtceu.universal.tooltip.uses_per_hour_lubricant", 2000)),
+    Text.of(Component.literal("提供§f120L/s§7的液态氧，并消耗§f双倍§7燃料以产生高达§f" + GTValues.V[GTValues.UV] + "§7EU/t的功率。")),
+    Text.of(Component.literal("再额外提供§f80L/s§7的四氧化二氮，并消耗§f四倍§7燃料以产生高达§f" + GTValues.V[GTValues.UHV] + "§7EU/t的功率。"))])
     event.add(["gtceu:dimensionally_transcendent_plasma_forge",
         "gtceu:advanced_sps_crafting",
         "gtceu:naquadah_reactor",
@@ -101,6 +115,7 @@ ItemEvents.tooltip(event => {
         "gtceu:star_ultimate_material_forge_factory"], "允许同时使用激光仓")
     event.add(["gtceu:magic_manufacturer",
         "gtceu:sps_crafting",
+        "gtceu:plasma_condenser",
         "gtceu:chemical_plant",
         "gtceu:circuit_printer",
         "gtceu:crystalline_infinity",
@@ -134,8 +149,7 @@ ItemEvents.tooltip(event => {
         "gtceu:dragon_egg_copier",
         "gtceu:cooling_tower",
         "gtceu:large_chemical_plant"], Text.keybind("gtceu.machine.perfect_oc"))
-    event.add(["gtceu:plasma_condenser",
-        "gtceu:rare_earth_centrifugal",
+    event.add(["gtceu:rare_earth_centrifugal",
         "gtceu:chemical_plant",
         "gtceu:matter_fabricator",
         "gtceu:advanced_assembly_line",
@@ -154,7 +168,6 @@ ItemEvents.tooltip(event => {
         "gtceu:precision_assembler",
         "gtceu:fishing_ground",
         "gtceu:pcb_factory",
-        "gtceu:plasma_condenser",
         "gtceu:super_particle_collider",
         "gtceu:engraving_laser_plant",
         "gtceu:dimensionally_transcendent_mixer",

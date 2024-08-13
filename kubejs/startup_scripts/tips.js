@@ -26,11 +26,6 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", e
         addtooltip("普通的设备无法使用它")
         event.getToolTip().add(Component.literal("§2等级-").append(Component.literal(TextUtil.white_blue("未知"))))
     }
-    function mega_turbine(tier, value) {
-        event.getToolTip().add(Component.literal("可使用变电动力仓"))
-        event.getToolTip().add(Component.translatable("gtceu.universal.tooltip.base_production_eut", GTValues.V[tier] * value))
-        event.getToolTip().add(Component.translatable("gtceu.multiblock.turbine.efficiency_tooltip", GTValues.VNF[tier]))
-    }
     const tiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"]
     tiers.forEach((suprachronal) => {
         if (event.getItemStack().getId() == "kubejs:suprachronal_" + suprachronal) {
@@ -44,24 +39,6 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", e
         }
     })
     switch (event.getItemStack().getId()) {
-        case "gtceu:steam_mega_turbine":
-            mega_turbine(GTValues.EV, 24)
-            break
-        case "gtceu:gas_mega_turbine":
-            mega_turbine(GTValues.IV, 32)
-            break
-        case "gtceu:plasma_mega_turbine":
-            mega_turbine(GTValues.LuV, 48)
-            break
-        case "gtceu:rocket_mega_turbine":
-            mega_turbine(GTValues.IV, 48)
-            break
-        case "gtceu:chemical_energy_devourer":
-            event.getToolTip().add(Component.translatable("gtceu.universal.tooltip.base_production_eut", GTValues.V[GTValues.ZPM]))
-            event.getToolTip().add(Component.translatable("gtceu.universal.tooltip.uses_per_hour_lubricant", 2000))
-            event.getToolTip().add(Component.literal("提供§f120L/s§7的液态氧，并消耗§f双倍§7燃料以产生高达§f" + GTValues.V[GTValues.UV] + "§7EU/t的功率。"))
-            event.getToolTip().add(Component.literal("再额外提供§f80L/s§7的四氧化二氮，并消耗§f四倍§7燃料以产生高达§f" + GTValues.V[GTValues.UHV] + "§7EU/t的功率。"))
-            break
         case "gtceu:dimensionally_transcendent_dirt_forge":
             addfull_colortooltip("原始人的第一个巨构")
             break
