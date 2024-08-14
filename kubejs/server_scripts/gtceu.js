@@ -14008,6 +14008,17 @@ ServerEvents.recipes((event) => {
             .dataStack(Item.of("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UEV])
             .CWUt(256))
+    
+    gtr.assembly_line("gtceu:mega_canner")
+        .itemInputs("16x gtceu:uev_canner", "16x gtceu:uev_robot_arm", "32x gtceu:uev_electric_piston", "16x gtceu:uev_electric_pump", "32x gtceu:double_lafium_plate", "32x gtceu:double_naquadria_plate", "4x #gtceu:circuits/uiv")
+        .inputFluids("gtceu:naquadria 4608", "gtceu:orichalcum_plasma 2304", "gtceu:mithril_plasma 2304", "gtceu:darmstadtium 4608")
+        .itemOutputs("gtceu:mega_canner")
+        .EUt(GTValues.VA[GTValues.UEV])
+        .duration(800)
+        .stationResearch(b => b.researchStack(Item.of("gtceu:uiv_canner"))
+            .dataStack(Item.of("gtceu_data_module"))
+            .EUt(GTValues.VA[GTValues.UEV])
+            .CWUt(256))
 
     gtr.chemical_reactor("gtceu:sodium_hydroxide_dust")
         .itemInputs("gtceu:sodium_dust")
