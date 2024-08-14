@@ -93,6 +93,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.Carbon.setProperty(PropertyKey.INGOT, new $IngotProperty())
     GTMaterials.RadAway.addFlags(GTMaterialFlags.DISABLE_DECOMPOSITION)
     GTMaterials.Platinum.addFlags(GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_SPRING_SMALL)
+    GTMaterials.Chromium.addFlags(GTMaterialFlags.GENERATE_GEAR)
     GTMaterials.Carbon.addFlags(GENERATE_NANOSWARM)
     GTMaterials.Iron.addFlags(GENERATE_NANOSWARM)
     GTMaterials.Glowstone.addFlags(GENERATE_NANOSWARM)
@@ -859,7 +860,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .components("4x iron", "1x kanthal", "5x invar", "1x sulfur", "1x silicon", "1x carbon")
         .color(0x4e270b)
         .iconSet(GTMaterialIconSet.METALLIC)
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.DECOMPOSITION_BY_CENTRIFUGING)
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.DECOMPOSITION_BY_CENTRIFUGING)
 
     event.create("inconel_792")
         .ingot()
@@ -868,7 +869,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .components("2x nickel", "1x niobium", "2x aluminium", "1x nichrome")
         .color(0x44974a)
         .iconSet(GTMaterialIconSet.METALLIC)
-        .flags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.DISABLE_DECOMPOSITION)
+        .flags(GTMaterialFlags.GENERATE_BOLT_SCREW, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.DISABLE_DECOMPOSITION)
 
     event.create("pikyonium")
         .ingot()

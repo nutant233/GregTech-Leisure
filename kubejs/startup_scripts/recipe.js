@@ -462,7 +462,6 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE)
 
-
     event.create("weather_control")
         .setEUIO("in")
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)

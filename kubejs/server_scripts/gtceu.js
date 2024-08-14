@@ -12,8 +12,6 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "gtceu:large_chemical_reactor/ethylene_from_ethanol" })
     event.remove({ id: "gtceu:chemical_reactor/stem_cells" })
     event.remove({ id: "gtceu:large_chemical_reactor/stem_cells" })
-    event.remove({ id: "gtceu:chemical_reactor/vinyl_chloride_from_chlorine" })
-    event.remove({ id: "gtceu:large_chemical_reactor/vinyl_chloride_from_chlorine" })
     event.remove({ id: "gtceu:electrolyzer/bone_meal_electrolysis" })
     event.remove({ id: "gtceu:mixer/rocket_fuel_from_dinitrogen_tetroxide" })
     event.remove({ id: "gtceu:centrifuge/rare_earth_separation" })
@@ -788,6 +786,58 @@ ServerEvents.recipes((event) => {
         A: "gtceu:lapotronic_energy_orb_cluster",
         B: "gtceu:luv_transformer_16a",
         C: "gtceu:luv_machine_hull"
+    })
+
+    event.shaped("gtceu:lv_semi_fluid", [
+        "ADA",
+        "BEB",
+        "CFC"
+    ], {
+        A: "gtceu:lv_electric_piston",
+        B: "gtceu:lv_electric_motor",
+        C: "gtceu:potin_gear",
+        D: "#gtceu:circuits/lv",
+        E: "gtceu:lv_machine_hull",
+        F: "gtceu:cobalt_double_cable"
+    })
+
+    event.shaped("gtceu:mv_semi_fluid", [
+        "ADA",
+        "BEB",
+        "CFC"
+    ], {
+        A: "gtceu:mv_electric_piston",
+        B: "gtceu:mv_electric_motor",
+        C: "gtceu:eglin_steel_gear",
+        D: "#gtceu:circuits/mv",
+        E: "gtceu:mv_machine_hull",
+        F: "gtceu:annealed_copper_double_cable"
+    })
+
+    event.shaped("gtceu:hv_semi_fluid", [
+        "ADA",
+        "BEB",
+        "CFC"
+    ], {
+        A: "gtceu:hv_electric_piston",
+        B: "gtceu:hv_electric_motor",
+        C: "gtceu:chromium_gear",
+        D: "#gtceu:circuits/hv",
+        E: "gtceu:hv_machine_hull",
+        F: "gtceu:electrum_double_cable"
+    })
+
+    event.shaped("gtceu:large_semi_fluid_generator", [
+        "ADA",
+        "BEB",
+        "CFC"
+    ], {
+        A: "gtceu:ev_electric_piston",
+        B: "gtceu:ev_electric_motor",
+        C: "gtceu:inconel_792_gear",
+        D: "#gtceu:circuits/ev",
+        E: "gtceu:ev_machine_hull",
+        F: "gtceu:nichrome_double_cable"
     })
 
     event.smithing("kubejs:create_hpca_component", "kubejs:command_block_core", "gtceu:super_computation_component", "kubejs:suprachronal_mainframe_complex")
@@ -1651,6 +1701,7 @@ ServerEvents.recipes((event) => {
 
     gtr.assembly_line("gtceu:precision_assembler")
         .itemInputs("4x gtceu:zpm_robot_arm",
+            "4x gtceu:zpm_electric_piston",
             "4x gtceu:zpm_conveyor_module",
             "4x #gtceu:circuits/uv",
             "8x gtceu:platinum_screw",
@@ -1659,6 +1710,7 @@ ServerEvents.recipes((event) => {
             "8x gtceu:ruridit_screw",
             "8x gtceu:mar_m_200_steel_rod",
             "4x gtceu:trinium_gear",
+            "8x gtceu:double_inconel_792_plate",
             "8x gtceu:double_hastelloy_n_plate")
         .inputFluids("gtceu:soldering_alloy 5760", "gtceu:tantalum 5760", "gtceu:manganese_phosphide 5760", "gtceu:magnesium_diboride 5760")
         .itemOutputs("gtceu:precision_assembler")
@@ -2795,6 +2847,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("gtceu:large_recycler")
         .itemInputs("4x gtceu:double_vanadium_steel_plate",
             "4x gtceu:black_bronze_gear",
+            "8x gtceu:eglin_steel_rod",
             "4x gtceu:hv_electric_motor",
             "4x gtceu:hv_emitter",
             "4x #gtceu:circuits/ev",
@@ -2867,7 +2920,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.assembler("kubejs:space_elevator_mechanical_casing")
-        .itemInputs("gtceu:hssg_frame", "6x gtceu:double_pikyonium_plate")
+        .itemInputs("gtceu:hssg_frame", "6x gtceu:inconel_792_plate", "6x gtceu:double_pikyonium_plate")
         .itemOutputs("2x kubejs:space_elevator_mechanical_casing")
         .EUt(16)
         .duration(50)
@@ -14170,12 +14223,4 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:antimatter 1000")
         .duration(2000)
         .EUt(480)
-
-    gtr.chemical_reactor("gtceu:vinyl_chloride_from_chlorine")
-        .circuit(1)
-        .inputFluids(GTMaterials.Chlorine.getFluid(2000))
-        .inputFluids(GTMaterials.Ethylene.getFluid(1000))
-        .outputFluids(GTMaterials.VinylChloride.getFluid(1000))
-        .outputFluids(GTMaterials.HydrochloricAcid.getFluid(1000))
-        .duration(160).EUt(GTValues.VA[GTValues.LV])
 })
