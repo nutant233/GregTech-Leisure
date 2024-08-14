@@ -3802,6 +3802,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
                 .where("B", Predicates.blocks("gtceu:crushing_wheels"))
                 .where("C", Predicates.blocks("gtceu:maraging_steel_300_frame"))
+                .where(" ", Predicates.air())
                 .build())
         .workableCasingRenderer("gtceu:block/casings/gcym/secure_maceration_casing", "gtceu:block/machines/rock_crusher")
 
@@ -3890,6 +3891,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("D", Predicates.blocks("kubejs:hollow_casing"))
                 .where("E", Predicates.blocks("kubejs:molecular_casing"))
                 .where("F", Predicates.blocks("kubejs:containment_field_generator"))
+                .where(" ", Predicates.any())
                 .build())
         .workableCasingRenderer("kubejs:block/iridium_casing", "gtceu:block/multiblock/fusion_reactor")
 
@@ -3918,6 +3920,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS))
                     .or(Predicates.abilities(PartAbility.INPUT_LASER)))
                 .where("C", Predicates.blocks("gtceu:ruridit_frame"))
+                .where(" ", Predicates.any())
                 .build())
         .beforeWorking((machine, recipe) => {
             if (recipe.data.getInt("nano_forge_tier") == 1 && machine.getMachineStorageItem().getId() == "gtceu:carbon_nanoswarm") {
@@ -3966,6 +3969,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.INPUT_LASER)))
                 .where("B", Predicates.blocks("gtceu:assembly_line_unit"))
                 .where("D", Predicates.blocks("gtceu:ruridit_frame"))
+                .where(" ", Predicates.any())
                 .build())
         .beforeWorking((machine, recipe) => {
             if (recipe.data.getInt("nano_forge_tier") < 3 && machine.getMachineStorageItem().getId() == "gtceu:neutronium_nanoswarm") {
@@ -4015,6 +4019,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.INPUT_LASER)))
                 .where("B", Predicates.blocks("kubejs:advanced_assembly_line_unit"))
                 .where("C", Predicates.blocks("gtceu:ruridit_frame"))
+                .where(" ", Predicates.any())
                 .build())
         .beforeWorking((machine, recipe) => {
             if (machine.getMachineStorageItem().getId() == "gtceu:draconium_nanoswarm") {
@@ -4307,6 +4312,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("E", Predicates.blocks("gtceu:assembly_line_unit"))
                 .where("F", Predicates.blocks("gtceu:tempered_glass"))
                 .where("G", Predicates.heatingCoils())
+                .where(" ", Predicates.any())
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
@@ -4348,6 +4354,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("D", Predicates.heatingCoils())
                 .where("E", Predicates.blocks("kubejs:molecular_casing"))
                 .where("F", Predicates.blocks("gtceu:tungstensteel_pipe_casing"))
+                .where(" ", Predicates.any())
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
@@ -4376,4 +4383,44 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("B", Predicates.blocks("gtceu:assembly_line_unit"))
                 .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/multiblock/assembly_line")
+
+    event.create("element_copying", "multiblock")
+        .rotationState(RotationState.ALL)
+        .recipeType("element_copying")
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
+        .pattern((definition) =>
+            FactoryBlockPattern.start()
+                .aisle("     AAFAA     ", "     AAFAA     ", "      AAA      ")
+                .aisle("   AAAAAAAAA   ", "   AACCCCCAA   ", "     ADADA     ")
+                .aisle("  AAAAABAAAAA  ", "  ACCCABACCCA  ", "   AAE ~ EAA   ")
+                .aisle(" AAAAA   AAAAA ", " ACCAA   AACCA ", "  AE       EA  ")
+                .aisle(" AAA       AAA ", " ACA       ACA ", "  A         A  ")
+                .aisle("AAAA       AAAA", "ACCA       ACCA", " AE         EA ")
+                .aisle("AAA         AAA", "ACA         ACA", "AD           DA")
+                .aisle("FAB         BAF", "FCB         BCF", "AA           AA")
+                .aisle("AAA         AAA", "ACA         ACA", "AD           DA")
+                .aisle("AAAA       AAAA", "ACCA       ACCA", " AE         EA ")
+                .aisle(" AAA       AAA ", " ACA       ACA ", "  A         A  ")
+                .aisle(" AAAAA   AAAAA ", " ACCAA   AACCA ", "  AE       EA  ")
+                .aisle("  AAAAABAAAAA  ", "  ACCCABACCCA  ", "   AAE   EAA   ")
+                .aisle("   AAAAAAAAA   ", "   AACCCCCAA   ", "     ADADA     ")
+                .aisle("     AAFAA     ", "     AAFAA     ", "      AAA      ")
+                .where("~", Predicates.controller(Predicates.blocks(definition.get())))
+                .where("A", Predicates.blocks("kubejs:molecular_casing")
+                    .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(4))
+                    .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setMaxGlobalLimited(1))
+                    .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMaxGlobalLimited(1))
+                    .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(5))
+                    .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1))
+                    .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
+                    .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2)))
+                .where("B", Predicates.blocks("gtceu:hyper_core"))
+                .where("C", Predicates.blocks("kubejs:molecular_coil"))
+                .where("D", Predicates.blocks("kubejs:hollow_casing"))
+                .where("E", Predicates.blocks("kubejs:containment_field_generator"))
+                .where("F", Predicates.blocks("gtceu:electrolytic_cell"))
+                .where(" ", Predicates.any())
+                .build())
+        .workableCasingRenderer("kubejs:block/molecular_casing", "gtceu:block/multiblock/fusion_reactor")
 })
