@@ -760,6 +760,36 @@ ServerEvents.recipes((event) => {
         C: "gtceu:bronze_frame"
     })
 
+    event.shaped("gtceu:ev_lightning_rod", [
+        "ABA",
+        "BCB",
+        "ABA"
+    ], {
+        A: "gtceu:lapotron_crystal",
+        B: "gtceu:ev_transformer_16a",
+        C: "gtceu:ev_machine_hull"
+    })
+
+    event.shaped("gtceu:iv_lightning_rod", [
+        "ABA",
+        "BCB",
+        "ABA"
+    ], {
+        A: "gtceu:lapotronic_energy_orb",
+        B: "gtceu:iv_transformer_16a",
+        C: "gtceu:iv_machine_hull"
+    })
+
+    event.shaped("gtceu:luv_lightning_rod", [
+        "ABA",
+        "BCB",
+        "ABA"
+    ], {
+        A: "gtceu:lapotronic_energy_orb_cluster",
+        B: "gtceu:luv_transformer_16a",
+        C: "gtceu:luv_machine_hull"
+    })
+
     event.smithing("kubejs:create_hpca_component", "kubejs:command_block_core", "gtceu:super_computation_component", "kubejs:suprachronal_mainframe_complex")
     event.smithing("gtceu:create_computation", "kubejs:command_block_core", "gtceu:high_performance_computation_array", "kubejs:suprachronal_mainframe_complex")
     event.smithing("kubejs:space_fermium_helmet", "ad_astra:netherite_space_helmet", "kubejs:fermium_helmet", "ad_astra:oxygen_distributor")
