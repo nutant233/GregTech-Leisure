@@ -22,7 +22,7 @@ ServerEvents.recipes((event) => {
         "ABA"
     ], {
         A: "kubejs:echobone",
-        B: "gtceu:echo_dust",
+        B: 'gtceu:echo_rod',
         D: "minecraft:sculk_sensor"
     })
 
@@ -65,7 +65,7 @@ ServerEvents.recipes((event) => {
         .EUt(120)
 
     gtr.assembler("minecraft:reinforced_deepslate")
-        .itemInputs("minecraft:deepslate", "4x minecraft:echo_shard", "4x kubejs:echobone")
+        .itemInputs("minecraft:deepslate", "gtceu:echo_block", "4x kubejs:echobone")
         .inputFluids("gtceu:echo 1440")
         .itemOutputs("minecraft:reinforced_deepslate")
         .duration(200)

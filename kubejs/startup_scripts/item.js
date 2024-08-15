@@ -359,6 +359,7 @@ StartupEvents.registry("item", event => {
         event.create("combined_singularity_" + i)
     }
     event.create("inverter")
+    event.create("giga_chad")
 })
 ItemEvents.modification(event => {
     event.modify("gtceu:raw_coal", modification => {

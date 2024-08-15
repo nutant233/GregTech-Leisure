@@ -1,0 +1,22 @@
+{
+  "favorites": [],
+  "lookup_history": [
+    "item:minecraft:spyglass",
+    "item:ae2:lime_smart_cable",
+    "item:gtceu:tiny_ytterbium_oxide_dust",
+    "item:gtceu:small_caesium_dust",
+    "item:gtceu:small_red_garnet_dust",
+    "item:gtceu:cobalt_nugget",
+    "item:gtceu:long_wrought_iron_rod",
+    "item:gtceu:hot_titanium_ingot",
+    "item:gtceu:moon_stone_tantalite_ore"
+  ],
+  "craft_history": [],
+  "recipe_defaults": {
+    "added": [],
+    "tags": {},
+    "resolutions": {},
+    "disabled": []
+  },
+  "hidden_stacks": []
+}

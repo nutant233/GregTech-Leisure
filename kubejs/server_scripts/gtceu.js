@@ -3368,7 +3368,7 @@ ServerEvents.recipes((event) => {
         .cleanroom(CleanroomType.CLEANROOM)
 
     gtr.sps_crafting("gtceu:echoite_plasma")
-        .itemInputs("16x minecraft:echo_shard", "kubejs:rhenium_plasma_containment_cell")
+        .itemInputs("16x gtceu:exquisite_echo_gem", "kubejs:rhenium_plasma_containment_cell")
         .inputFluids("gtceu:mana 16000", "gtceu:enderium 1152", "gtceu:infuscolium 1152")
         .outputFluids("gtceu:echoite_plasma 2304")
         .itemOutputs("kubejs:plasma_containment_cell")
@@ -3578,7 +3578,7 @@ ServerEvents.recipes((event) => {
         .cleanroom(CleanroomType.LAW_CLEANROOM)
 
     gtr.precision_assembler("kubejs:reinforced_echo_shard")
-        .itemInputs("4x minecraft:echo_shard", "4x kubejs:echobone", "2x minecraft:netherite_scrap", "gtceu:double_echoite_plate")
+        .itemInputs("4x gtceu:echo_plate", "4x kubejs:echobone", "2x minecraft:netherite_scrap", "gtceu:double_echoite_plate")
         .inputFluids("gtceu:liquid_hydrogen 8000", "gtceu:echoite_plasma 1000")
         .itemOutputs("kubejs:reinforced_echo_shard")
         .EUt(GTValues.VA[GTValues.UEV])
@@ -12057,44 +12057,6 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.UEV])
             .CWUt(256))
 
-    gtr.assembler("gregiceng:crafting_io_buffer")
-        .itemInputs("gregiceng:luv_input_buffer", "expatternprovider:ingredient_buffer", "expatternprovider:ex_pattern_provider", "expatternprovider:pattern_provider_upgrade", "#gtceu:circuits/uv", "2x gtceu:opal_plate")
-        .inputFluids("gtceu:soldering_alloy 576")
-        .itemOutputs("gregiceng:crafting_io_buffer")
-        .EUt(122880)
-        .duration(400)
-
-    gtr.assembler("gregiceng:crafting_io_slave")
-        .itemInputs("gregiceng:luv_input_buffer", "expatternprovider:ingredient_buffer", "expatternprovider:ex_pattern_provider", "expatternprovider:pattern_provider_upgrade", "#gtceu:circuits/uv", "kubejs:entangled_singularity", "2x gtceu:opal_plate")
-        .inputFluids("gtceu:soldering_alloy 576")
-        .itemOutputs("gregiceng:crafting_io_slave")
-        .EUt(122880)
-        .duration(400)
-
-    gtr.assembler("gregiceng:stocking_bus")
-        .itemInputs("gtceu:me_input_bus", "ae2:storage_bus")
-        .itemOutputs("gregiceng:stocking_bus")
-        .EUt(480)
-        .duration(200)
-
-    gtr.assembler("gregiceng:stocking_hatch")
-        .itemInputs("gtceu:me_input_hatch", "ae2:storage_bus")
-        .itemOutputs("gregiceng:stocking_hatch")
-        .EUt(480)
-        .duration(200)
-
-    gtr.assembler("gregiceng:adv_stocking_bus")
-        .itemInputs("gregiceng:stocking_bus", "merequester:requester")
-        .itemOutputs("gregiceng:adv_stocking_bus")
-        .EUt(480)
-        .duration(200)
-
-    gtr.assembler("gregiceng:adv_stocking_hatch")
-        .itemInputs("gregiceng:stocking_hatch", "merequester:requester")
-        .itemOutputs("gregiceng:adv_stocking_hatch")
-        .EUt(480)
-        .duration(200)
-
     gtr.assembler("kubejs:force_field_glass")
         .itemInputs("gtceu:laminated_glass", "gtceu:uhv_field_generator", "4x gtceu:long_naquadah_alloy_rod", "2x gtceu:long_mithril_rod", "4x gtceu:double_uranium_rhodium_dinaquadide_plate", "2x gtceu:double_naquadah_alloy_plate")
         .inputFluids("gtceu:mutated_living_solder 1296")
@@ -14061,7 +14023,7 @@ ServerEvents.recipes((event) => {
             .dataStack(Item.of("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UEV])
             .CWUt(256))
-    
+
     gtr.assembly_line("gtceu:mega_canner")
         .itemInputs("16x gtceu:uev_canner", "16x gtceu:uev_robot_arm", "32x gtceu:uev_electric_piston", "16x gtceu:uev_electric_pump", "32x gtceu:double_lafium_plate", "32x gtceu:double_naquadria_plate", "4x #gtceu:circuits/uiv")
         .inputFluids("gtceu:naquadria 4608", "gtceu:orichalcum_plasma 2304", "gtceu:mithril_plasma 2304", "gtceu:darmstadtium 4608")
@@ -14245,4 +14207,12 @@ ServerEvents.recipes((event) => {
             .dataStack(Item.of("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UXV])
             .CWUt(2048))
+
+    gtr.electric_blast_furnace("kubejs:giga_chad")
+        .itemInputs("64x gtceu:uiv_field_generator", "64x gtceu:uxv_field_generator", "64x gtceu:opv_field_generator")
+        .inputFluids("gtceu:exciteddtec 10000000")
+        .itemOutputs("kubejs:giga_chad")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(4000)
+        .blastFurnaceTemp(36000)
 })

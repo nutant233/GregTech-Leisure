@@ -225,6 +225,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.Indium.getProperty(PropertyKey.ORE).setOreByProducts([GTMaterials.Aluminium, GTMaterials.Zinc])
     GTMaterials.NaquadahEnriched.setProperty(PropertyKey.ORE, new $OreProperty())
     GTMaterials.NaquadahEnriched.getProperty(PropertyKey.ORE).setOreByProducts([GTMaterials.Naquadah, GTMaterials.Sulfur])
+    GTMaterials.Echo.setProperty(PropertyKey.FLUID, new $FluidProperty(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()))
 
     event.create("barnarda_air")
         .gas()
@@ -686,7 +687,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .fluid()
         .element(GTElements.get("transcendentmetal"))
         .color(0xffffff)
-        .iconSet(Java.loadClass("com.epimorphismmc.monomorphism.data.chemical.material.info.MOMaterialIconSet").CUSTOM_TRANSCENDENT_MENTAL)
+        .iconSet(GTMaterialIconSet.METALLIC)
         .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD)
 
     event.create("uruium")
@@ -1289,14 +1290,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     event.create("compressed_stone")
         .dust()
         .color(0x696969)
-        .components("1x concrete")
-        .iconSet(GTMaterialIconSet.DULL)
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-
-    event.create("echo")
-        .dust()
-        .fluid()
-        .color(0x004d39)
         .components("1x concrete")
         .iconSet(GTMaterialIconSet.DULL)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
