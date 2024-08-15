@@ -2,36 +2,11 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "173E51FB086D4A22"
-	group: "40551FF3A34D90BA"
+	group: "24F4987B35ABEE82"
 	icon: "gtceu:mv_fluid_drilling_rig"
 	id: "173E51FB086D4A22"
-	order_index: 3
-	quest_links: [
-		{
-			id: "23D2FC4204AB8AFE"
-			linked_quest: "51B9A72C19F84F0E"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			id: "56DA55DD71CE30C7"
-			linked_quest: "6E3B42BCBA6064F5"
-			x: 4.0d
-			y: 2.0d
-		}
-		{
-			id: "06E68266FB9CFED3"
-			linked_quest: "27A9D4E765101CB9"
-			x: 3.0d
-			y: 5.0d
-		}
-		{
-			id: "5651E635C1B0CA7F"
-			linked_quest: "7296C57805F5DC96"
-			x: 8.0d
-			y: 0.0d
-		}
-	]
+	order_index: 7
+	quest_links: [ ]
 	quests: [
 		{
 			id: "088C594495CADBA1"
@@ -54,10 +29,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"51B9A72C19F84F0E"
-				"2D6BB32B642AE8BA"
-			]
 			description: ["lv时期可选的获得石油的手段"]
 			hide_dependency_lines: true
 			id: "6DEAA19092FBCF99"
@@ -86,7 +57,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["2D6BB32B642AE8BA"]
 			id: "0B00D881C861FEB2"
 			tasks: [{
 				id: "105FCEFBC3B166E7"
@@ -115,7 +85,6 @@
 			dependencies: [
 				"63FEF796CFF5E8DF"
 				"045D76184BFBD4D6"
-				"27A9D4E765101CB9"
 			]
 			description: ["含硫石脑油加氢气"]
 			id: "071C1482A33D97FB"
@@ -128,10 +97,7 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"071C1482A33D97FB"
-				"27A9D4E765101CB9"
-			]
+			dependencies: ["071C1482A33D97FB"]
 			description: ["化学反应釜加蒸汽三号电路"]
 			id: "70E703942B61C86C"
 			tasks: [{
@@ -171,10 +137,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"6E3B42BCBA6064F5"
-				"751BF4CAEE613BBA"
-			]
+			dependencies: ["751BF4CAEE613BBA"]
 			description: ["你最开始的氢来自于电解水"]
 			id: "045D76184BFBD4D6"
 			tasks: [{
@@ -186,7 +149,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["7296C57805F5DC96"]
 			description: [
 				"虚空获取油"
 				"只能安装一个能源仓，2个机器会停机"

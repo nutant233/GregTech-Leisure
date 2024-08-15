@@ -24,7 +24,10 @@
 	]
 	quests: [
 		{
-			dependencies: ["0A5B42B66B1D4A98"]
+			dependencies: [
+				"0A5B42B66B1D4A98"
+				"766D051A40AB5324"
+			]
 			id: "7F92A8EE58AD5BA2"
 			tasks: [{
 				id: "7247977F19E25C6A"
@@ -630,6 +633,29 @@
 			]
 			x: 1.0d
 			y: -2.5d
+		}
+		{
+			dependencies: ["169F331B1D2B9DFE"]
+			id: "766D051A40AB5324"
+			tasks: [
+				{
+					id: "2033E704723D1C29"
+					item: "gtceu:neutron_activator"
+					type: "item"
+				}
+				{
+					id: "52D36F7181BD1B42"
+					item: "gtceu:neutron_sensor"
+					type: "item"
+				}
+				{
+					id: "7E710037106A0AA7"
+					item: "gtceu:iv_neutron_accelerator"
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -4.0d
 		}
 	]
 	subtitle: ["Tier6-LuV"]

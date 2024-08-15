@@ -2,10 +2,10 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "406C21F61B206383"
-	group: "40551FF3A34D90BA"
+	group: "24F4987B35ABEE82"
 	icon: "gtceu:void_miner"
 	id: "406C21F61B206383"
-	order_index: 2
+	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
@@ -58,10 +58,7 @@
 			y: 1.0d
 		}
 		{
-			dependencies: [
-				"448C87D8EC767B4D"
-				"1E7344C133C99565"
-			]
+			dependencies: ["448C87D8EC767B4D"]
 			description: ["这是个好东西，虚空采矿，速度也快，但是你需要一条三种宝石浆液的产线（不超频72B/h），但是这是值得的"]
 			id: "629F2B12627B60E3"
 			tasks: [{
@@ -73,10 +70,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"428A5046C78BBCE3"
-				"51B9A72C19F84F0E"
-			]
+			dependencies: ["428A5046C78BBCE3"]
 			id: "2DAE1D451E9DAFCE"
 			tasks: [{
 				id: "61448B0A865FB418"

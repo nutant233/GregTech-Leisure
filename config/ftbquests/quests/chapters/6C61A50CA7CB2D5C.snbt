@@ -2,7 +2,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "6C61A50CA7CB2D5C"
-	group: "40551FF3A34D90BA"
+	group: "24F4987B35ABEE82"
 	icon: {
 		Count: 1
 		id: "ad_astra:tier_1_rocket"
@@ -16,7 +16,7 @@
 		}
 	}
 	id: "6C61A50CA7CB2D5C"
-	order_index: 1
+	order_index: 5
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
@@ -200,10 +200,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"7940CFD732610594"
-				"043B581110AB9161"
-			]
+			dependencies: ["043B581110AB9161"]
 			hide_dependent_lines: true
 			id: "009E71EC51F5B0EF"
 			tasks: [{
@@ -383,12 +380,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"75DAAFAD21F1451C"
-				"027197A71E630966"
-				"74D9136DE32F9129"
-				"42E88FC72902FC0B"
-			]
 			hide_dependent_lines: true
 			id: "63C8DD19C6B76899"
 			tasks: [{
@@ -412,7 +403,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["5B65662B72C369E7"]
 			hide_dependent_lines: true
 			id: "123FD5A979F5750D"
 			tasks: [{
@@ -608,11 +598,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"7AEC0D308494C0F8"
-				"51AA4887F2DC9747"
-				"0375D068023B13D7"
-			]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "187BE1A67AF10798"

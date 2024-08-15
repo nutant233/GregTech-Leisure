@@ -2,10 +2,10 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: "rsquare"
 	filename: "49ED18A26C5A1B83"
-	group: "40551FF3A34D90BA"
+	group: "24F4987B35ABEE82"
 	icon: "gtceu:electric_blast_furnace"
 	id: "49ED18A26C5A1B83"
-	order_index: 0
+	order_index: 4
 	progression_mode: "flexible"
 	quest_links: [ ]
 	quests: [
@@ -1403,7 +1403,6 @@
 			y: 12.0d
 		}
 		{
-			dependencies: ["5F5F348E3A34827E"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "40405034AE9D9945"
@@ -1416,7 +1415,6 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["51B9A72C19F84F0E"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "5930E12A8BCAF996"
@@ -1429,7 +1427,6 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["7296C57805F5DC96"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "36742169BE411C01"
@@ -1442,7 +1439,6 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["1A48D2DB936FF632"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "32BD532132423050"
@@ -1455,7 +1451,6 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["1E7344C133C99565"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "45096D94AE6F7864"
