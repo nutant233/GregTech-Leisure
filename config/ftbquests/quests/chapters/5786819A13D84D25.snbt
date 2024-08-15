@@ -591,6 +591,20 @@
 			x: 6.0d
 			y: 0.5d
 		}
+		{
+			dependencies: ["783379F3A7557CEE"]
+			description: ["装罐机的激光版本，拥有无损超频"]
+			id: "7833098408DB2057"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "5266F8533351D5E1"
+				item: "gtceu:mega_canner"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 3.5d
+		}
 	]
 	subtitle: ["Tier9-UHV"]
 	title: "极高压"
