@@ -914,6 +914,18 @@
 			x: -11.0d
 			y: 2.5d
 		}
+		{
+			dependencies: ["60256053364FB125"]
+			description: ["是的你现在就可以做了"]
+			id: "6898C03D7BB65A15"
+			tasks: [{
+				id: "57CB8918F2C75000"
+				item: "ae2:creative_energy_cell"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.0d
+		}
 	]
 	subtitle: ["Tier3-HV"]
 	title: "高压"
