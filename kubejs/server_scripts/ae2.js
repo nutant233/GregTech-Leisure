@@ -3,8 +3,8 @@ ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
 
     event.remove({ id: "ae2:misc/deconstruction_certus_quartz_block" })
-    event.remove({ id: "ae2:network/block/controller" })
-    event.remove({ id: "ae2:network/cratfing/blank_pattern" })
+    event.remove({ id: "ae2:network/blocks/controller" })
+    event.remove({ id: "ae2:network/crafting/patterns_blank" })
     event.remove({ id: "ae2:network/parts/export_bus" })
     event.remove({ id: "ae2:network/parts/import_bus" })
     event.remove({ id: "ae2:network/wireless_part" })

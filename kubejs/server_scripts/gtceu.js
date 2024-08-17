@@ -4375,9 +4375,9 @@ ServerEvents.recipes((event) => {
         .duration(80)
 
     gtr.chemical_reactor("gtceu:barium_chloride_dust")
-        .inputFluids("gtceu:hydrochloric_acid 1000")
-        .itemInputs("6x gtceu:barite_dust")
-        .outputFluids("gtceu:carbon_dioxide 1000", "minecraft:water 1000")
+        .inputFluids("gtceu:hydrochloric_acid 2000")
+        .itemInputs("6x gtceu:barium_dust")
+        .outputFluids("gtceu:hydrogen 2000")
         .itemOutputs("3x gtceu:barium_chloride_dust")
         .EUt(120)
         .duration(60)
@@ -6602,7 +6602,7 @@ ServerEvents.recipes((event) => {
             "60x gtceu:endstone_plutonium_ore",
             "20x gtceu:endstone_trinium_ore"], "kubejs:naquadah_vein_essence"]]
 
-    const all_ores = overworld_ores.concat(overworld_ores, nether_ores, end_ores)
+    const all_ores = overworld_ores.concat(nether_ores, end_ores)
 
     let recipe = gtr.random_ore("random_ore")
         .inputFluids("gtceu:drilling_fluid 10000000")
@@ -14215,4 +14215,8 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(4000)
         .blastFurnaceTemp(36000)
+
+    gtr.fission_reactor("1")
+        .circuit(1)
+        .duration(2000)
 })

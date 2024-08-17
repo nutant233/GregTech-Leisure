@@ -494,4 +494,10 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
             return $LocalizationUtils.format("gtceu.recipe.nano_forge_tier", $FormattingUtil.formatNumbers(data.getInt("nano_forge_tier")))
         })
         .setSound(GTSoundEntries.SCIENCE)
+
+    GTRecipeTypes.register("fission_reactor", "multiblock")
+        .setMaxIOSize(1, 1, 1, 1)
+        .setEUIO("in")
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.ARC)
 })

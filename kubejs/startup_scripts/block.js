@@ -802,6 +802,15 @@ StartupEvents.registry("block", event => {
         .tagBlock("forge:mineable/wrench")
         .requiresTool(true)
         .textureOverrideRenderer("minecraft:block/cube_all", { "all": new ResourceLocation("gtceu", "block/casings/solid/machine_casing_solid_steel") })
+
+        event.create("fission_reactor_casing", "gtceu:renderer")
+        .noValidSpawns(true)
+        .soundType("metal")
+        .mapColor("metal")
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("forge:mineable/wrench")
+        .requiresTool(true)
+        .textureOverrideRenderer("minecraft:block/cube_all", { "all": new ResourceLocation("kubejs", "block/fission_reactor_casing") })
 })
 StartupEvents.registry("fluid", event => {
     event.create("gelid_cryotheum")

@@ -62,6 +62,8 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTBlocks.createActiveCasing("spacetimecontinuumripper", "block/variant/spacetimecontinuumripper")
     GTBlocks.createActiveCasing("spacetimebendingcore", "block/variant/spacetimebendingcore")
     GTBlocks.createActiveCasing("qft_coil", "block/variant/qft_coil")
+    GTBlocks.createActiveCasing("fission_fuel_assembly", "block/variant/fission_fuel_assembly")
+    GTBlocks.createActiveCasing("cooler", "block/variant/cooler")
     const $DustProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty")
     const $IngotProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty")
     const $FluidProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty")
@@ -226,6 +228,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.NaquadahEnriched.setProperty(PropertyKey.ORE, new $OreProperty())
     GTMaterials.NaquadahEnriched.getProperty(PropertyKey.ORE).setOreByProducts([GTMaterials.Naquadah, GTMaterials.Sulfur])
     GTMaterials.Echo.setProperty(PropertyKey.FLUID, new $FluidProperty(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()))
+    GTMaterials.Graphite.setProperty(PropertyKey.INGOT, new $IngotProperty())
 
     event.create("barnarda_air")
         .gas()
@@ -1041,6 +1044,15 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .color(0x515151)
         .iconSet(GTMaterialIconSet.METALLIC)
         .flags(GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.DISABLE_DECOMPOSITION)
+
+    event.create("reactor_steel")
+        .ingot()
+        .fluid()
+        .blastTemp(3800, "high", GTValues.VA[GTValues.HV], 700)
+        .components("15x iron", "1x niobium", "4x vanadium", "2x carbon")
+        .color(0xb4b3b0)
+        .iconSet(GTMaterialIconSet.SHINY)
+        .flags(GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.DISABLE_DECOMPOSITION)
 
     event.create("lanthanoids_1")
         .dust()
