@@ -500,4 +500,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setEUIO("in")
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC)
+        .addDataInfo(data => {
+            return $LocalizationUtils.format("gtceu.recipe.frheat", $FormattingUtil.formatNumbers(data.getInt("FRheat")))
+        })
 })

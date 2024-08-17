@@ -3534,6 +3534,13 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .ore()
         .color(0xd36232)
         .iconSet(GTMaterialIconSet.BRIGHT)
+
+    event.create("hot_sodium_potassium")
+        .fluid()
+        .color(0x64fcb4)
+        .components("1x sodium", "1x potassium")
+        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+        .iconSet(GTMaterialIconSet.FINE)
 })
 GTCEuStartupEvents.materialModification(() => {
     GTMaterials.get("zirconium_hafnium_chloride").setFormula("ZrHfCl₄")

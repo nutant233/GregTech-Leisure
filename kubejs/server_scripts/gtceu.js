@@ -14218,5 +14218,14 @@ ServerEvents.recipes((event) => {
 
     gtr.fission_reactor("1")
         .circuit(1)
+        .EUt(6)
         .duration(2000)
+    ["addData(java.lang.String,int)"]("FRheat", 3)
+
+    gtr.heat_exchanger("gtceu:sodium_potassium")
+        .inputFluids("gtceu:hot_sodium_potassium 1")
+        .inputFluids("minecraft:water 20")
+        .outputFluids("gtceu:sodium_potassium 1")
+        .outputFluids("gtceu:steam 3200")
+        .duration(200)
 })

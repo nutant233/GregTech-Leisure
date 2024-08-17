@@ -327,6 +327,8 @@ machines:
     # Default: 2
     tungstensteelBoilerHeatSpeed: 16
 
+  enablePrimitiveVoidOre: false
+
 client:
   # Whether or not to enable Emissive Textures for GregTech Machines.
   # Default: true
