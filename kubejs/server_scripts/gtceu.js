@@ -14207,11 +14207,18 @@ ServerEvents.recipes((event) => {
         .duration(4000)
         .blastFurnaceTemp(36000)
 
-    gtr.heat_exchanger("gtceu:sodium_potassium")
+    gtr.heat_exchanger("gtceu:hot_sodium_potassium")
         .inputFluids("gtceu:hot_sodium_potassium 1")
         .inputFluids("minecraft:water 20")
         .outputFluids("gtceu:sodium_potassium 1")
         .outputFluids("gtceu:steam 3200")
+        .duration(200)
+
+    gtr.heat_exchanger("gtceu:supercritical_sodium_potassium")
+        .inputFluids("gtceu:supercritical_sodium_potassium 1")
+        .inputFluids("gtceu:steam 1600")
+        .outputFluids("gtceu:sodium_potassium 1")
+        .outputFluids("gtceu:supercritical_steam 1600")
         .duration(200)
 
     gtr.assembler("kubejs:fission_reactor_casing")
@@ -14283,7 +14290,7 @@ ServerEvents.recipes((event) => {
         .duration(60)
 
     gtr.canner("kubejs:reactor_naquadah_simple")
-        .itemInputs("kubejs:reactor_fuel_rod", "gtceu:naquadah_dust")
+        .itemInputs("kubejs:tungsten_carbide_reactor_fuel_rod", "gtceu:naquadah_dust")
         .inputFluids("gtceu:thorium 144")
         .itemOutputs("kubejs:reactor_naquadah_simple")
         .EUt(30720)

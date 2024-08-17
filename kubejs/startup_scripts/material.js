@@ -3541,7 +3541,14 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .color(0x64fcb4)
         .components("1x sodium", "1x potassium")
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-        .iconSet(GTMaterialIconSet.FINE)
+        .iconSet(GTMaterialIconSet.SAND)
+
+    event.create("supercritical_sodium_potassium")
+    [FluidStorageKey](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(1500))
+        .color(0x64fcb4)
+        .components("1x sodium", "1x potassium")
+        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+        .iconSet(GTMaterialIconSet.LAPIS)
 })
 GTCEuStartupEvents.materialModification(() => {
     GTMaterials.get("zirconium_hafnium_chloride").setFormula("ZrHfCl₄")

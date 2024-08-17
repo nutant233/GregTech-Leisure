@@ -1482,7 +1482,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/machines/gas_collector")
 
-    event.create("aggregation_device", "multiblock", (holder) => new $FusionReactorMachine(holder, GTValues.MAX))
+    event.create("aggregation_device", "multiblock", (holder) => new $FusionReactorMachine(holder, GTValues.UEV))
         .rotationState(RotationState.ALL)
         .recipeType("aggregation_device")
         .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getFusionReactorParallel(), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
