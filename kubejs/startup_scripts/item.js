@@ -360,6 +360,20 @@ StartupEvents.registry("item", event => {
     }
     event.create("inverter")
     event.create("giga_chad")
+    event.create("reactor_fuel_rod")
+    event.create("tungsten_carbide_reactor_fuel_rod")
+    function create_reactor(name) {
+        event.create("reactor_" + name + "_simple")
+        event.create("reactor_" + name + "_dual")
+        event.create("reactor_" + name + "_quad")
+        event.create("depleted_reactor_" + name + "_simple")
+        event.create("depleted_reactor_" + name + "_dual")
+        event.create("depleted_reactor_" + name + "_quad")
+    }
+    create_reactor("uranium")
+    create_reactor("thorium")
+    create_reactor("mox")
+    create_reactor("naquadah")
 })
 ItemEvents.modification(event => {
     event.modify("gtceu:raw_coal", modification => {

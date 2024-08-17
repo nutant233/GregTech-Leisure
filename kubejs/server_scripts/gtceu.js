@@ -3306,18 +3306,6 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(160)
 
-    gtr.decay_hastener("kubejs:nuclear_waste_1")
-        .inputFluids("gtceu:uranium_235 144")
-        .itemOutputs("kubejs:nuclear_waste")
-        .EUt(120)
-        .duration(16000)
-
-    gtr.decay_hastener("kubejs:nuclear_waste_2")
-        .inputFluids("gtceu:plutonium_241 144")
-        .itemOutputs("kubejs:nuclear_waste")
-        .EUt(120)
-        .duration(4000)
-
     gtr.decay_hastener("kubejs:rutherfordium_dust")
         .inputFluids("gtceu:seaborgium 144")
         .itemOutputs("gtceu:rutherfordium_dust")
@@ -9571,7 +9559,7 @@ ServerEvents.recipes((event) => {
         ["minecraft:ink_sac", 0.1],
         ["minecraft:tripwire_hook", 1],
         ["gtceu:ancient_gold_coin", 0.024],
-        ["kubejs:nuclear_waste", 0.019],
+        ["avaritia:neutron_pile", 0.019],
         ["kubejs:zero_point_module_fragments", 0.012]
     ]
     const a = [[1, 1], [2, 1.1], [3, 1.2], [4, 1.8]]
@@ -12183,6 +12171,9 @@ ServerEvents.recipes((event) => {
     implosion_compressor_add(["ae2:singularity", "kubejs:warped_ender_pearl"], "kubejs:entangled_singularity", 1)
     implosion_compressor_add("4x gtceu:certus_quartz_gem", "ae2:charged_certus_quartz_crystal", 4)
     implosion_compressor_add(["4x ad_astra:steel_plate", "2x gtceu:dense_tungsten_steel_plate"], "ad_astra:steel_block", 1)
+    implosion_compressor_add(["64x avaritia:neutron_pile", "64x avaritia:neutron_pile"], "avaritia:neutron_nugget", 1)
+    implosion_compressor_add("9x avaritia:neutron_nugget", "avaritia:neutron_ingot", 1)
+    implosion_compressor_add("9x avaritia:neutron_ingot", "avaritia:neutron", 1)
 
     gtr.electric_implosion_compressor("minecraft:diamond")
         .itemInputs("64x minecraft:coal")
@@ -14216,16 +14207,224 @@ ServerEvents.recipes((event) => {
         .duration(4000)
         .blastFurnaceTemp(36000)
 
-    gtr.fission_reactor("1")
-        .circuit(1)
-        .EUt(6)
-        .duration(2000)
-    ["addData(java.lang.String,int)"]("FRheat", 3)
-
     gtr.heat_exchanger("gtceu:sodium_potassium")
         .inputFluids("gtceu:hot_sodium_potassium 1")
         .inputFluids("minecraft:water 20")
         .outputFluids("gtceu:sodium_potassium 1")
         .outputFluids("gtceu:steam 3200")
         .duration(200)
+
+    gtr.assembler("kubejs:fission_reactor_casing")
+        .itemInputs("gtceu:vanadium_steel_frame", "6x gtceu:lead_plate", "6x gtceu:reactor_steel_plate")
+        .itemOutputs("2x kubejs:fission_reactor_casing")
+        .EUt(30)
+        .duration(50)
+
+    gtr.assembler("gtceu:cooler")
+        .itemInputs("kubejs:fission_reactor_casing", "2x gtceu:annealed_copper_hex_wire", "8x gtceu:vanadium_steel_tiny_fluid_pipe", "4x gtceu:stainless_steel_plate")
+        .inputFluids("gtceu:soldering_alloy 288")
+        .itemOutputs("gtceu:cooler")
+        .EUt(120)
+        .duration(200)
+
+    gtr.assembler("gtceu:fission_fuel_assembly")
+        .itemInputs("gtceu:graphite_block", "4x gtceu:long_stainless_steel_rod", "4x gtceu:double_reactor_steel_plate")
+        .inputFluids("gtceu:soldering_alloy 288")
+        .itemOutputs("gtceu:fission_fuel_assembly")
+        .EUt(120)
+        .duration(200)
+
+    gtr.assembler("gtceu:fission_reactor")
+        .itemInputs("gtceu:iv_machine_hull", "4x kubejs:circuit_resonatic_iv", "gtceu:computer_monitor_cover", "4x gtceu:neutron_reflector", "8x gtceu:dense_reactor_steel_plate")
+        .inputFluids("gtceu:soldering_alloy 288")
+        .itemOutputs("gtceu:fission_reactor")
+        .EUt(480)
+        .duration(200)
+
+    gtr.centrifuge("gtceu:neutronium_block")
+        .notConsumable("gtceu:neutronium_nanoswarm")
+        .itemInputs("avaritia:neutron")
+        .itemOutputs("9x gtceu:naquadah_dust", "9x gtceu:neutronium_dust")
+        .EUt(GTValues.VA[GTValues.UIV])
+        .duration(800)
+
+    gtr.forming_press("kubejs:reactor_fuel_rod")
+        .notConsumable("gtceu:cell_extruder_mold")
+        .itemInputs("gtceu:magnetic_steel_ingot")
+        .itemOutputs("kubejs:reactor_fuel_rod")
+        .EUt(30)
+        .duration(200)
+
+    gtr.forming_press("kubejs:tungsten_carbide_reactor_fuel_rod")
+        .notConsumable("gtceu:cell_extruder_mold")
+        .itemInputs("gtceu:magnetic_neodymium_ingot", "gtceu:tungsten_carbide_ingot")
+        .itemOutputs("kubejs:tungsten_carbide_reactor_fuel_rod")
+        .EUt(120)
+        .duration(200)
+
+    gtr.canner("kubejs:reactor_uranium_simple")
+        .itemInputs("kubejs:reactor_fuel_rod", "6x gtceu:uranium_dust")
+        .inputFluids("gtceu:uranium_235 48")
+        .itemOutputs("kubejs:reactor_uranium_simple")
+        .EUt(1920)
+        .duration(60)
+
+    gtr.canner("kubejs:reactor_thorium_simple")
+        .itemInputs("kubejs:reactor_fuel_rod", "3x gtceu:thorium_dust")
+        .itemOutputs("kubejs:reactor_thorium_simple")
+        .EUt(480)
+        .duration(60)
+
+    gtr.canner("kubejs:reactor_mox_simple")
+        .itemInputs("kubejs:reactor_fuel_rod", "6x gtceu:uranium_dust")
+        .inputFluids("gtceu:plutonium 432")
+        .itemOutputs("kubejs:reactor_mox_simple")
+        .EUt(7680)
+        .duration(60)
+
+    gtr.canner("kubejs:reactor_naquadah_simple")
+        .itemInputs("kubejs:reactor_fuel_rod", "gtceu:naquadah_dust")
+        .inputFluids("gtceu:thorium 144")
+        .itemOutputs("kubejs:reactor_naquadah_simple")
+        .EUt(30720)
+        .duration(60)
+
+    function assemble_fuel(name, isnq) {
+        let rod = isnq ? "4x gtceu:tungsten_carbide_rod" : "4x gtceu:steel_rod"
+        gtr.assembler("kubejs:reactor_" + name + "_dual")
+            .circuit(2)
+            .itemInputs("2x kubejs:reactor_" + name + "_simple", rod)
+            .itemOutputs("kubejs:reactor_" + name + "_dual")
+            .EUt(30)
+            .duration(40)
+
+        gtr.assembler("kubejs:reactor_" + name + "_quad")
+            .circuit(4)
+            .itemInputs("2x kubejs:reactor_" + name + "_dual", rod)
+            .itemOutputs("kubejs:reactor_" + name + "_quad")
+            .EUt(30)
+            .duration(80)
+    }
+
+    assemble_fuel("uranium", false)
+    assemble_fuel("thorium", false)
+    assemble_fuel("mox", false)
+    assemble_fuel("naquadah", true)
+
+    function centrifuge_fuel(name, isnq, product, chance, extra) {
+        let rod = isnq ? "gtceu:tungsten_carbide_rod" : "gtceu:steel_rod"
+        let fuel_rod = isnq ? "kubejs:tungsten_carbide_reactor_fuel_rod" : "kubejs:reactor_fuel_rod"
+        gtr.centrifuge("kubejs:depleted_reactor_" + name + "_simple")
+            .itemInputs("kubejs:depleted_reactor_" + name + "_simple")
+            .itemOutputs(fuel_rod)
+            .chancedOutput(product, chance, extra)
+            .chancedOutput("kubejs:nuclear_waste", 1600, 500)
+            .EUt(480)
+            .duration(40)
+
+        gtr.centrifuge("kubejs:depleted_reactor_" + name + "_dual")
+            .itemInputs("kubejs:depleted_reactor_" + name + "_dual")
+            .itemOutputs("2x " + fuel_rod, "4x " + rod)
+            .chancedOutput("2x " + product, chance, extra)
+            .chancedOutput("kubejs:nuclear_waste", 3600, 500)
+            .EUt(480)
+            .duration(80)
+
+        gtr.centrifuge("kubejs:depleted_reactor_" + name + "_quad")
+            .itemInputs("kubejs:depleted_reactor_" + name + "_quad")
+            .itemOutputs("4x " + fuel_rod, "12x " + rod)
+            .chancedOutput("4x " + product, chance, extra)
+            .chancedOutput("kubejs:nuclear_waste", 8000, 500)
+            .EUt(480)
+            .duration(160)
+    }
+
+    centrifuge_fuel("uranium", false, "gtceu:plutonium_dust", 2500, 100)
+    centrifuge_fuel("thorium", false, "gtceu:uranium_dust", 4000, 500)
+    centrifuge_fuel("mox", false, "kubejs:nuclear_waste", 2000, 1000)
+    centrifuge_fuel("naquadah", true, "gtceu:plutonium_dust", 8000, 200)
+
+    gtr.fission_reactor("kubejs:reactor_thorium_simple")
+        .itemInputs("kubejs:reactor_thorium_simple")
+        .itemOutputs("kubejs:depleted_reactor_thorium_simple")
+        .EUt(6)
+        .duration(1200)
+    ["addData(java.lang.String,int)"]("FRheat", 1)
+
+    gtr.fission_reactor("kubejs:reactor_thorium_dual")
+        .itemInputs("kubejs:reactor_thorium_dual")
+        .itemOutputs("kubejs:depleted_reactor_thorium_dual")
+        .EUt(8)
+        .duration(1800)
+    ["addData(java.lang.String,int)"]("FRheat", 2)
+
+    gtr.fission_reactor("kubejs:reactor_thorium_quad")
+        .itemInputs("kubejs:reactor_thorium_quad")
+        .itemOutputs("kubejs:depleted_reactor_thorium_quad")
+        .EUt(10)
+        .duration(2700)
+    ["addData(java.lang.String,int)"]("FRheat", 3)
+
+    gtr.fission_reactor("kubejs:reactor_uranium_simple")
+        .itemInputs("kubejs:reactor_uranium_simple")
+        .itemOutputs("kubejs:depleted_reactor_uranium_simple")
+        .EUt(3)
+        .duration(2000)
+    ["addData(java.lang.String,int)"]("FRheat", 4)
+
+    gtr.fission_reactor("kubejs:reactor_uranium_dual")
+        .itemInputs("kubejs:reactor_uranium_dual")
+        .itemOutputs("kubejs:depleted_reactor_uranium_dual")
+        .EUt(4)
+        .duration(3000)
+    ["addData(java.lang.String,int)"]("FRheat", 5)
+
+    gtr.fission_reactor("kubejs:reactor_uranium_quad")
+        .itemInputs("kubejs:reactor_uranium_quad")
+        .itemOutputs("kubejs:depleted_reactor_uranium_quad")
+        .EUt(5)
+        .duration(4500)
+    ["addData(java.lang.String,int)"]("FRheat", 6)
+
+    gtr.fission_reactor("kubejs:reactor_mox_simple")
+        .itemInputs("kubejs:reactor_mox_simple")
+        .itemOutputs("kubejs:depleted_reactor_mox_simple")
+        .EUt(1)
+        .duration(1400)
+    ["addData(java.lang.String,int)"]("FRheat", 6)
+
+    gtr.fission_reactor("kubejs:reactor_mox_dual")
+        .itemInputs("kubejs:reactor_mox_dual")
+        .itemOutputs("kubejs:depleted_reactor_mox_dual")
+        .EUt(2)
+        .duration(2100)
+    ["addData(java.lang.String,int)"]("FRheat", 7)
+
+    gtr.fission_reactor("kubejs:reactor_mox_quad")
+        .itemInputs("kubejs:reactor_mox_quad")
+        .itemOutputs("kubejs:depleted_reactor_mox_quad")
+        .EUt(3)
+        .duration(3200)
+    ["addData(java.lang.String,int)"]("FRheat", 8)
+
+    gtr.fission_reactor("kubejs:reactor_naquadah_simple")
+        .itemInputs("kubejs:reactor_naquadah_simple")
+        .itemOutputs("kubejs:depleted_reactor_naquadah_simple")
+        .EUt(3)
+        .duration(16000)
+    ["addData(java.lang.String,int)"]("FRheat", 6)
+
+    gtr.fission_reactor("kubejs:reactor_naquadah_dual")
+        .itemInputs("kubejs:reactor_naquadah_dual")
+        .itemOutputs("kubejs:depleted_reactor_naquadah_dual")
+        .EUt(5)
+        .duration(24000)
+    ["addData(java.lang.String,int)"]("FRheat", 7)
+
+    gtr.fission_reactor("kubejs:reactor_naquadah_quad")
+        .itemInputs("kubejs:reactor_naquadah_quad")
+        .itemOutputs("kubejs:depleted_reactor_naquadah_quad")
+        .EUt(7)
+        .duration(36000)
+    ["addData(java.lang.String,int)"]("FRheat", 8)
 })

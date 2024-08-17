@@ -496,7 +496,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setSound(GTSoundEntries.SCIENCE)
 
     GTRecipeTypes.register("fission_reactor", "multiblock")
-        .setMaxIOSize(1, 1, 1, 1)
+        .setMaxIOSize(1, 1, 0, 0)
         .setEUIO("in")
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC)

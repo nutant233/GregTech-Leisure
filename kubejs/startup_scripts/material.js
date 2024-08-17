@@ -229,6 +229,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.NaquadahEnriched.getProperty(PropertyKey.ORE).setOreByProducts([GTMaterials.Naquadah, GTMaterials.Sulfur])
     GTMaterials.Echo.setProperty(PropertyKey.FLUID, new $FluidProperty(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()))
     GTMaterials.Graphite.setProperty(PropertyKey.INGOT, new $IngotProperty())
+    GTMaterials.VanadiumSteel.addFlags(GTMaterialFlags.GENERATE_FRAME)
 
     event.create("barnarda_air")
         .gas()
@@ -869,7 +870,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     event.create("inconel_792")
         .ingot()
         .fluid()
-        .blastTemp(6200, "high")
+        .blastTemp(5200, "high")
         .components("2x nickel", "1x niobium", "2x aluminium", "1x nichrome")
         .color(0x44974a)
         .iconSet(GTMaterialIconSet.METALLIC)
@@ -3536,7 +3537,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet(GTMaterialIconSet.BRIGHT)
 
     event.create("hot_sodium_potassium")
-        .fluid()
+    [FluidStorageKey](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(825))
         .color(0x64fcb4)
         .components("1x sodium", "1x potassium")
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
