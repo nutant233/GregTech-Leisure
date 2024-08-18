@@ -3499,13 +3499,13 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .workableCasingRenderer(baseCasing, overlayModel)
     }
 
-    registerMegaTurbine("steam_mega_turbine", GTValues.EV, 36, GTRecipeTypes.STEAM_TURBINE_FUELS, GTBlocks.CASING_STEEL_TURBINE, GTBlocks.CASING_STEEL_GEARBOX,
+    registerMegaTurbine("steam_mega_turbine", GTValues.EV, 32, GTRecipeTypes.STEAM_TURBINE_FUELS, GTBlocks.CASING_STEEL_TURBINE, GTBlocks.CASING_STEEL_GEARBOX,
         "gtceu:block/casings/mechanic/machine_casing_turbine_steel", "gtceu:block/multiblock/generator/large_steam_turbine")
-    registerMegaTurbine("gas_mega_turbine", GTValues.IV, 48, GTRecipeTypes.GAS_TURBINE_FUELS, GTBlocks.CASING_STAINLESS_TURBINE, GTBlocks.CASING_STAINLESS_STEEL_GEARBOX,
+    registerMegaTurbine("gas_mega_turbine", GTValues.IV, 32, GTRecipeTypes.GAS_TURBINE_FUELS, GTBlocks.CASING_STAINLESS_TURBINE, GTBlocks.CASING_STAINLESS_STEEL_GEARBOX,
         "gtceu:block/casings/mechanic/machine_casing_turbine_stainless_steel", "gtceu:block/multiblock/generator/large_gas_turbine")
     registerMegaTurbine("rocket_mega_turbine", GTValues.IV, 64, GTRecipeTypes.get("rocket_engine"), GTBlocks.CASING_TITANIUM_TURBINE, GTBlocks.CASING_STAINLESS_STEEL_GEARBOX,
         "gtceu:block/casings/mechanic/machine_casing_turbine_titanium", "gtceu:block/multiblock/generator/large_gas_turbine")
-    registerMegaTurbine("plasma_mega_turbine", GTValues.LuV, 72, GTRecipeTypes.PLASMA_GENERATOR_FUELS, GTBlocks.CASING_TUNGSTENSTEEL_TURBINE, GTBlocks.CASING_TUNGSTENSTEEL_GEARBOX,
+    registerMegaTurbine("plasma_mega_turbine", GTValues.LuV, 64, GTRecipeTypes.PLASMA_GENERATOR_FUELS, GTBlocks.CASING_TUNGSTENSTEEL_TURBINE, GTBlocks.CASING_TUNGSTENSTEEL_GEARBOX,
         "gtceu:block/casings/mechanic/machine_casing_turbine_tungstensteel", "gtceu:block/multiblock/generator/large_plasma_turbine")
     registerMegaTurbine("supercritical_mega_steam_turbine", GTValues.ZPM, 128, GTRecipeTypes.SUPERCRITICAL_STEAM_TURBINE_FUELS, GTBlocks.CASING_SUPERCRITICAL_TURBINE, GTBlocks.CASING_TUNGSTENSTEEL_GEARBOX,
         "kubejs:block/supercritical_turbine_casing", "gtceu:block/multiblock/generator/large_plasma_turbine")
