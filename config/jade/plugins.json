@@ -64,6 +64,8 @@
     "transformer": true,
     "controllable_provider": true,
     "exhaust_vent_info": true,
+    "me_pattern_buffer": true,
+    "me_pattern_buffer_proxy": true,
     "multiblock_structure": true,
     "recipe_logic_provider": true,
     "maintenance_info": true,
@@ -86,9 +88,6 @@
   "expatternprovider": {
     "jade_chamber": true,
     "jade_wireless": true
-  },
-  "gregiceng": {
-    "crafting_io_buffer": true
   },
   "ae2": {
     "part_icon": true,

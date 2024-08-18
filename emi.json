@@ -1,0 +1,67 @@
+{
+  "favorites": [],
+  "lookup_history": [
+    "item:gtceu:luv_buffer",
+    "item:gtceu:luv_dual_input_hatch",
+    "item:gtceu:neutron_activator",
+    "item:gtceu:uv_parallel_hatch",
+    "item:gtceu:ev_buffer",
+    "item:gtceu:ev_dual_input_hatch",
+    "item:gtceu:lv_dual_input_hatch",
+    {
+      "type": "fluid",
+      "id": "gtceu:methylamine",
+      "amount": 0
+    },
+    {
+      "type": "fluid",
+      "id": "gtceu:phenylenedioxydiacetic_acid",
+      "amount": 0
+    },
+    "item:gtceu:electric_blast_furnace",
+    "item:gtceu:hot_tungsten_carbide_ingot",
+    "item:gtceu:crushed_trona_ore",
+    "item:kubejs:glacio_spirit",
+    {
+      "type": "fluid",
+      "id": "gtceu:oganesson_breeding_base",
+      "amount": 0
+    },
+    "item:gtceu:clay_dust",
+    {
+      "type": "fluid",
+      "id": "gtceu:isochloropropane",
+      "amount": 0
+    },
+    {
+      "type": "fluid",
+      "id": "gtceu:temporalfluid",
+      "amount": 0
+    },
+    "item:gtceu:ruthenium_trinium_americium_neutronate_dust",
+    "item:gtceu:hot_ruthenium_trinium_americium_neutronate_ingot",
+    "item:gtceu:refined_tartarite_ore",
+    "item:gtceu:small_black_steel_dust",
+    "item:gtceu:chemical_energy_devourer",
+    {
+      "type": "fluid",
+      "id": "gtceu:meitnerium",
+      "amount": 0
+    },
+    "item:gtceu:mv_world_data_scanner",
+    {
+      "type": "fluid",
+      "id": "gtceu:iridium",
+      "amount": 0
+    },
+    "item:minecraft:dark_oak_fence"
+  ],
+  "craft_history": [],
+  "recipe_defaults": {
+    "added": [],
+    "tags": {},
+    "resolutions": {},
+    "disabled": []
+  },
+  "hidden_stacks": []
+}

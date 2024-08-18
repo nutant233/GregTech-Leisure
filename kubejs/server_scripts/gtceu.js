@@ -8673,6 +8673,18 @@ ServerEvents.recipes((event) => {
         .EUt(30720)
         .duration(120)
 
+    gtr.decay_hastener("gtceu:polonium_dust")
+        .inputFluids("gtceu:bismuth 144")
+        .itemOutputs("gtceu:polonium_dust")
+        .EUt(480)
+        .duration(8000)
+
+    gtr.decay_hastener("gtceu:copper76_dust")
+        .inputFluids("gtceu:copper 144")
+        .itemOutputs("gtceu:copper76_dust")
+        .EUt(1920)
+        .duration(4000)
+
     gtr.centrifuge("gtceu:flerovium")
         .inputFluids("gtceu:flyb_plasma 1000")
         .outputFluids("gtceu:flerovium 288", "gtceu:ytterbium_178 288")
@@ -10378,7 +10390,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.EV])
 
     gtr.assembler("kubejs:accelerated_pipeline")
-        .itemInputs("gtceu:europium_quadruple_fluid_pipe", "2x gtceu:luv_voltage_coil", "#gtceu:circuits/luv", "gtceu:niobium_nitride_single_cable", "gtceu:double_neodymium_plate")
+        .itemInputs("gtceu:europium_quadruple_fluid_pipe", "2x gtceu:luv_voltage_coil", "#gtceu:circuits/luv", "gtceu:niobium_nitride_single_cable", "gtceu:copper76_dust", "gtceu:double_neodymium_plate")
         .itemOutputs("kubejs:accelerated_pipeline")
         .inputFluids("gtceu:soldering_alloy 288")
         .duration(400)
@@ -14053,6 +14065,7 @@ ServerEvents.recipes((event) => {
         gtr.assembler("gtceu:" + i[0] + "_neutron_accelerator")
             .itemInputs("gtceu:" + i[0] + "_machine_hull", "kubejs:inverter", i[1] == 1 ? "2x gtceu:lead_rotor" : "2x gtceu:" + i[0] + "_electric_motor", "gtceu:double_beryllium_plate", "2x gtceu:polyvinyl_chloride_plate")
             .itemOutputs("gtceu:" + i[0] + "_neutron_accelerator")
+            .inputFluids("gtceu:polonium 288")
             .EUt(30)
             .duration(400)
     })
@@ -14065,7 +14078,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.assembler("gtceu:neutron_activator")
-        .itemInputs("gtceu:iv_machine_hull", "4x gtceu:soc", "#gtceu:circuits/iv", "2x gtceu:data_stick", "gtceu:ev_sensor", "2x gtceu:ev_emitter", "gtceu:uranium_235_block", "2x gtceu:neutron_reflector")
+        .itemInputs("gtceu:iv_machine_hull", "4x gtceu:soc", "#gtceu:circuits/iv", "2x gtceu:data_stick", "gtceu:ev_sensor", "2x gtceu:ev_emitter", "gtceu:uranium_235_block", "gtceu:polonium_block", "2x gtceu:neutron_reflector")
         .inputFluids("gtceu:stainless_steel 1296")
         .itemOutputs("gtceu:neutron_activator")
         .EUt(7680)
@@ -14318,38 +14331,38 @@ ServerEvents.recipes((event) => {
     assemble_fuel("mox", false)
     assemble_fuel("naquadah", true)
 
-    function centrifuge_fuel(name, isnq, product, chance, extra) {
+    function centrifuge_fuel(name, isnq, product, output, chance, extra) {
         let rod = isnq ? "gtceu:tungsten_carbide_rod" : "gtceu:steel_rod"
         let fuel_rod = isnq ? "kubejs:tungsten_carbide_reactor_fuel_rod" : "kubejs:reactor_fuel_rod"
         gtr.centrifuge("kubejs:depleted_reactor_" + name + "_simple")
             .itemInputs("kubejs:depleted_reactor_" + name + "_simple")
             .itemOutputs(fuel_rod)
-            .chancedOutput(product, chance, extra)
-            .chancedOutput("kubejs:nuclear_waste", 1600, 500)
+            .chancedOutput(output + "x " + product, chance, extra)
+            .chancedOutput("2x kubejs:nuclear_waste", 1600, 500)
             .EUt(480)
             .duration(40)
 
         gtr.centrifuge("kubejs:depleted_reactor_" + name + "_dual")
             .itemInputs("kubejs:depleted_reactor_" + name + "_dual")
             .itemOutputs("2x " + fuel_rod, "4x " + rod)
-            .chancedOutput("2x " + product, chance, extra)
-            .chancedOutput("kubejs:nuclear_waste", 3600, 500)
+            .chancedOutput(2 * output + "x " + product, chance, extra)
+            .chancedOutput("4x kubejs:nuclear_waste", 3600, 500)
             .EUt(480)
             .duration(80)
 
         gtr.centrifuge("kubejs:depleted_reactor_" + name + "_quad")
             .itemInputs("kubejs:depleted_reactor_" + name + "_quad")
             .itemOutputs("4x " + fuel_rod, "12x " + rod)
-            .chancedOutput("4x " + product, chance, extra)
-            .chancedOutput("kubejs:nuclear_waste", 8000, 500)
+            .chancedOutput(4 * output + "x " + product, chance, extra)
+            .chancedOutput("8x kubejs:nuclear_waste", 8000, 500)
             .EUt(480)
             .duration(160)
     }
 
-    centrifuge_fuel("uranium", false, "gtceu:plutonium_dust", 2500, 100)
-    centrifuge_fuel("thorium", false, "gtceu:uranium_dust", 4000, 500)
-    centrifuge_fuel("mox", false, "kubejs:nuclear_waste", 2000, 1000)
-    centrifuge_fuel("naquadah", true, "gtceu:plutonium_dust", 8000, 200)
+    centrifuge_fuel("uranium", false, "gtceu:plutonium_dust", 4, 2500, 100)
+    centrifuge_fuel("thorium", false, "gtceu:uranium_dust", 2, 4000, 500)
+    centrifuge_fuel("mox", false, "kubejs:nuclear_waste", 6, 2000, 1000)
+    centrifuge_fuel("naquadah", true, "gtceu:plutonium_dust", 1, 8000, 200)
 
     gtr.fission_reactor("kubejs:reactor_thorium_simple")
         .itemInputs("kubejs:reactor_thorium_simple")
