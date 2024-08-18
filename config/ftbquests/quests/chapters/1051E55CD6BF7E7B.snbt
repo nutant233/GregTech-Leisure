@@ -307,6 +307,25 @@
 			x: 5.5d
 			y: 4.0d
 		}
+		{
+			dependencies: [
+				"5F145D9019C4BC48"
+				"31B4B834D5DD87DB"
+			]
+			id: "2C8028746220AEBA"
+			rewards: [{
+				id: "7DC22D8C70A5FD74"
+				item: "minecraft:grass"
+				type: "item"
+			}]
+			tasks: [{
+				id: "51FC498DB7A8FE4B"
+				title: "未完待续"
+				type: "checkmark"
+			}]
+			x: 5.5d
+			y: 5.5d
+		}
 	]
 	subtitle: ["Tier14-MAX"]
 	title: "上限压"

@@ -1089,6 +1089,18 @@
 			x: -9.5d
 			y: 7.5d
 		}
+		{
+			dependencies: ["0C4C092066795074"]
+			description: ["你会需要它的，注意是总线隔离，无法隔离流体"]
+			id: "6F910A405710F926"
+			tasks: [{
+				id: "4576AF0CDDD74379"
+				item: "gtceu:lv_dual_input_hatch"
+				type: "item"
+			}]
+			x: -14.5d
+			y: -2.0d
+		}
 	]
 	subtitle: ["Tier1-LV"]
 	title: "低压"

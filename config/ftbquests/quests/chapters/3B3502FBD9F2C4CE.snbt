@@ -439,21 +439,6 @@
 			y: -5.0d
 		}
 		{
-			dependencies: ["4BFA114E12BCB163"]
-			description: ["有点无用"]
-			id: "212BCFCFAECAA9D2"
-			optional: true
-			shape: "gear"
-			size: 1.3d
-			tasks: [{
-				id: "78635E0E03C36A5B"
-				item: "gtceu:power_substation"
-				type: "item"
-			}]
-			x: 7.0d
-			y: -6.5d
-		}
-		{
 			dependencies: [
 				"7DCA0B7C9F3C3ACF"
 				"0526B4AC0CAF99A5"
@@ -503,13 +488,13 @@
 			description: ["大容量数据存储，并且可以为多个装配线提供数据"]
 			id: "5F0A175D6704A8D0"
 			shape: "gear"
-			size: 1.2d
+			size: 1.0d
 			tasks: [{
 				id: "488C1A3FC0D7CCB6"
 				item: "gtceu:data_bank"
 				type: "item"
 			}]
-			x: -2.5d
+			x: -1.5d
 			y: -2.0d
 		}
 		{
@@ -521,7 +506,7 @@
 				item: "gtceu:advanced_data_access_hatch"
 				type: "item"
 			}]
-			x: -2.5d
+			x: -1.5d
 			y: -0.5d
 		}
 		{
@@ -714,7 +699,51 @@
 				item: "gtceu:disassembly"
 				type: "item"
 			}]
-			x: -0.5d
+			x: 0.0d
+			y: -1.7999999999999998d
+		}
+		{
+			dependencies: ["1F0956C3BD4745A1"]
+			description: ["高温用于发电，低温用于生产资源"]
+			id: "365298DB6520227A"
+			shape: "gear"
+			tasks: [
+				{
+					id: "2599970FD2D9C38B"
+					item: "gtceu:fission_reactor"
+					type: "item"
+				}
+				{
+					id: "5AB7E0809991C089"
+					item: "gtceu:fission_fuel_assembly"
+					type: "item"
+				}
+				{
+					id: "3BD80B994699252C"
+					item: "gtceu:cooler"
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: -9.5d
+		}
+		{
+			dependencies: ["27BA6EBA81622516"]
+			description: ["比库存输入好使"]
+			id: "5608182772E855EC"
+			tasks: [
+				{
+					id: "5165B2AF5BB3CD54"
+					item: "gtceu:me_stocking_input_bus"
+					type: "item"
+				}
+				{
+					id: "742D2DB2293262B4"
+					item: "gtceu:me_stocking_input_hatch"
+					type: "item"
+				}
+			]
+			x: -3.5d
 			y: -2.0d
 		}
 	]

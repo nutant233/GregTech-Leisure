@@ -163,7 +163,7 @@
 				item: "gtceu:steam_large_turbine"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 3.5d
 			y: -0.5d
 		}
 		{
@@ -177,7 +177,7 @@
 				item: "gtceu:gas_large_turbine"
 				type: "item"
 			}]
-			x: -1.0d
+			x: 3.5d
 			y: 1.0d
 		}
 		{
@@ -212,7 +212,7 @@
 				item: "gtceu:steam_mega_turbine"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 6.5d
 			y: 1.0d
 		}
 		{
@@ -223,7 +223,7 @@
 				item: "gtceu:extreme_combustion_engine"
 				type: "item"
 			}]
-			x: 0.5d
+			x: 2.0d
 			y: 2.5d
 		}
 		{
@@ -234,7 +234,7 @@
 				item: "gtceu:gas_mega_turbine"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 3.5d
 			y: 2.5d
 		}
 		{
@@ -288,7 +288,7 @@
 				item: "gtceu:luv_naquadah_reactor"
 				type: "item"
 			}]
-			x: -1.0d
+			x: 0.5d
 			y: 4.0d
 		}
 		{
@@ -299,7 +299,7 @@
 				item: "gtceu:iv_naquadah_reactor"
 				type: "item"
 			}]
-			x: -1.0d
+			x: 0.5d
 			y: 2.5d
 		}
 		{
@@ -331,7 +331,7 @@
 				item: "gtceu:chemical_energy_devourer"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 5.0d
 			y: 4.0d
 		}
 		{
@@ -342,7 +342,7 @@
 				item: "gtceu:rocket_mega_turbine"
 				type: "item"
 			}]
-			x: 3.5d
+			x: 5.0d
 			y: 2.5d
 		}
 		{
@@ -353,7 +353,7 @@
 				item: "gtceu:plasma_large_turbine"
 				type: "item"
 			}]
-			x: 0.5d
+			x: 2.0d
 			y: 4.0d
 		}
 		{
@@ -379,7 +379,7 @@
 			y: 7.0d
 		}
 		{
-			description: ["最高OpV级别电力，非常强力"]
+			description: ["最高MAX级别电力，非常强力"]
 			id: "24BBFCFCAFE0ECD5"
 			tasks: [{
 				id: "16259075AA2E440D"
@@ -397,7 +397,7 @@
 				item: "gtceu:rocket_large_turbine"
 				type: "item"
 			}]
-			x: 3.5d
+			x: 5.0d
 			y: 1.0d
 		}
 		{
@@ -411,7 +411,7 @@
 			y: 8.5d
 		}
 		{
-			description: ["相比硅岩，更省燃料，最高64A MAX输出"]
+			description: ["相比硅岩，更省燃料，最高256A MAX输出"]
 			id: "548E8FA4B1004534"
 			tasks: [{
 				id: "5079AC2040FDA3AA"
@@ -443,7 +443,7 @@
 			y: 10.0d
 		}
 		{
-			description: ["最高4096A MAX输出"]
+			description: ["最高16384A MAX输出"]
 			id: "25F672CF48091CEC"
 			tasks: [{
 				id: "7F7D348C6E55EC07"
@@ -473,6 +473,99 @@
 			}]
 			x: -2.5d
 			y: 11.5d
+		}
+		{
+			description: ["烧点简单的燃料"]
+			id: "6EF3C749D06C7262"
+			tasks: [{
+				id: "329F1BD301166219"
+				item: "gtceu:lv_semi_fluid"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -3.5d
+		}
+		{
+			id: "28507EACD363F3D1"
+			tasks: [{
+				id: "1D47416F630379AB"
+				item: "gtceu:mv_semi_fluid"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			id: "236EB8B88EA504C9"
+			tasks: [{
+				id: "778BDD1B9F40E23F"
+				item: "gtceu:hv_semi_fluid"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -0.5d
+		}
+		{
+			id: "4E8004D6D020E5E5"
+			tasks: [{
+				id: "37D6A5F6A1C6D304"
+				item: "gtceu:large_semi_fluid_generator"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			description: ["每次成功的雷击会填充1/4的能量"]
+			id: "45656BC02DC740CE"
+			tasks: [{
+				id: "11BBDF10AD954709"
+				item: "gtceu:ev_lightning_rod"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			id: "61B0C3E3C0B7E6EE"
+			tasks: [{
+				id: "31A9D370C6B93F87"
+				item: "gtceu:iv_lightning_rod"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.5d
+		}
+		{
+			id: "36ED28C6C3F2CDEC"
+			tasks: [{
+				id: "5BEE28B100FC5354"
+				item: "gtceu:luv_lightning_rod"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			description: ["搭配热交换机使用，可使用等离子或者裂变堆获得燃料"]
+			id: "749FFDD88305518C"
+			tasks: [{
+				id: "7EE83AF0AE0CD89E"
+				item: "gtceu:supercritical_steam_turbine"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 4.0d
+		}
+		{
+			id: "301FD6AEF56EDB77"
+			tasks: [{
+				id: "039203DBB3645A9D"
+				item: "gtceu:supercritical_mega_steam_turbine"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 5.5d
 		}
 	]
 	title: "如何发电"

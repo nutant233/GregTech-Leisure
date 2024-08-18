@@ -871,6 +871,25 @@
 			x: 1.5d
 			y: 4.0d
 		}
+		{
+			dependencies: ["2ECB47CBE5DC6E49"]
+			description: ["比接口贴输入仓好使"]
+			id: "4733601BAA393129"
+			tasks: [
+				{
+					id: "2D1A8AD53F4AA52E"
+					item: "gtceu:me_input_bus"
+					type: "item"
+				}
+				{
+					id: "68E3D83ED48A95CC"
+					item: "gtceu:me_input_hatch"
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: -2.0d
+		}
 	]
 	subtitle: ["Tier4-EV"]
 	title: "超高压"

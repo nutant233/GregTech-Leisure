@@ -1,6 +1,21 @@
 {
   "favorites": [],
   "lookup_history": [
+    "item:gtceu:luv_emitter",
+    "item:gtceu:me_pattern_buffer",
+    "item:gtceu:me_input_hatch",
+    "item:gtceu:me_stocking_input_hatch",
+    "item:gtceu:me_stocking_input_bus",
+    "item:gtceu:supercritical_steam_turbine",
+    "item:gtceu:ev_lightning_rod",
+    "item:gtceu:steam_mega_turbine",
+    "item:gtceu:rocket_large_turbine",
+    "item:gtceu:large_semi_fluid_generator",
+    {
+      "type": "fluid",
+      "id": "gtceu:mana",
+      "amount": 0
+    },
     "item:gtceu:luv_buffer",
     "item:gtceu:luv_dual_input_hatch",
     "item:gtceu:neutron_activator",
