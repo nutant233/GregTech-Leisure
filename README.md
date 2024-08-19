@@ -1,7 +1,19 @@
 # GregTech Leisure
 ## 格雷科技休闲版
 
-一个主打休闲的格雷科技整合包，相对于其他格雷包难度更低
+一个以[格雷科技现代版（GregTechCEu Modern）](https://github.com/GregTechCEu/GregTech-Modern)为核心的低难度多流程格雷科技整合包。
+
+## 添加与修改
+
+添加了各种强力的蒸汽多方块结构，使蒸汽时代的生产力达到IV大型机器的水平。
+
+加强蒸汽产出，发电产出，燃料热值，并添加新的发电方式，使能源不再是头疼的问题。
+
+将二合一仓，多安能源仓提前至LV，简化前期电路制作，无线电网，以及各种强力工具来减少前期负担。
+
+各个星球基岩流体，一套完整的虚空资源生成线路，解决资源问题。
+
+在GTM配置还可开启原始虚空采矿机与婴儿模式来进一步降低游戏难度。
 
 ## 主要流程
 
@@ -21,10 +33,21 @@
 - 过载压：超时空电路，宇宙模拟，时空，奇点，永恒。
 - 上限压：创造物品合成。
 
+## 其他信息
+
+如果遇到bug，对该整合包有任何意见，可在issue区域或者QQ群反馈。
+
+QQ交流群：456040951。
+
+[服务端仓库链接](https://github.com/GTriXy/GregTech-Leisure-Server)
+
+[MC百科链接](https://www.mcmod.cn/modpack/769.html)
+
 ## 协议
 
 - 核心代码 - [AGPL v3](https://github.com/nutant233/GregTech-Leisure/blob/main/LICENSE)
-- 纹理 - [AGPL v3](https://github.com/nutant233/GregTech-Leisure/blob/main/LICENSE)
+- 整合包本体 - [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+- 纹理 - [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)
 - 任务文本 - [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/)
 
 ## 鸣谢作品
