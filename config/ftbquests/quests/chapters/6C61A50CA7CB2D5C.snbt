@@ -201,6 +201,7 @@
 		}
 		{
 			dependencies: ["043B581110AB9161"]
+			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "009E71EC51F5B0EF"
 			tasks: [{
@@ -319,33 +320,57 @@
 		{
 			dependencies: ["36EDAB1E6F9E8618"]
 			id: "3FBDEBFA58D0B01F"
-			tasks: [{
-				id: "38B3D54BA79B5655"
-				item: "gtceu:rp_1_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "38B3D54BA79B5655"
+					item: "gtceu:rp_1_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "290ECF45289E9905"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 15.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["63C8DD19C6B76899"]
 			id: "509A4CEE0C308165"
-			tasks: [{
-				id: "4AFDE648EB424D67"
-				item: "gtceu:liquid_oxygen_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4AFDE648EB424D67"
+					item: "gtceu:liquid_oxygen_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0010D9422789330C"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 13.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["4E2549EFE6D9AA7B"]
 			id: "36EDAB1E6F9E8618"
-			tasks: [{
-				id: "560A66A757B837D8"
-				item: "gtceu:kerosene_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "560A66A757B837D8"
+					item: "gtceu:kerosene_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0C2E89B247E0E85E"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 14.0d
 			y: 4.0d
 		}
@@ -356,12 +381,19 @@
 				{
 					id: "46EDDE8B99914FD7"
 					item: "gtceu:coal_tar_bucket"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "514363511A811AAA"
 					item: "gtceu:coke_dust"
+					optional_task: true
 					type: "item"
+				}
+				{
+					id: "412EC917430435D6"
+					optional_task: true
+					type: "checkmark"
 				}
 			]
 			title: "煤焦油和焦煤粉"
@@ -371,11 +403,19 @@
 		{
 			dependencies: ["63C8DD19C6B76899"]
 			id: "34BED884F1A28343"
-			tasks: [{
-				id: "16752FF94443D990"
-				item: "gtceu:coal_gas_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "16752FF94443D990"
+					item: "gtceu:coal_gas_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "55034866BAB8E55C"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 12.0d
 			y: 4.0d
 		}
@@ -457,6 +497,7 @@
 		}
 		{
 			dependencies: ["6A16D86A6B8963DC"]
+			dependency_requirement: "one_completed"
 			id: "1C5997EE2E91844A"
 			tasks: [{
 				id: "3F3C3022BE3E94AF"
@@ -469,11 +510,19 @@
 		{
 			dependencies: ["606199C34AD69974"]
 			id: "6A16D86A6B8963DC"
-			tasks: [{
-				id: "3D5292F2889B4C26"
-				item: "gtceu:hydrazine_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "3D5292F2889B4C26"
+					item: "gtceu:hydrazine_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "408E65A78F512D05"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 25.0d
 			y: 4.0d
 		}
@@ -483,33 +532,57 @@
 				"26490ED393A09C12"
 			]
 			id: "606199C34AD69974"
-			tasks: [{
-				id: "1113D511CB4E0C7B"
-				item: "gtceu:hydrogen_peroxide_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "1113D511CB4E0C7B"
+					item: "gtceu:hydrogen_peroxide_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "5971D89094BE2377"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 24.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["123FD5A979F5750D"]
 			id: "50E554A0F172FEF4"
-			tasks: [{
-				id: "52A3EA5288880E34"
-				item: "gtceu:anthracene_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "52A3EA5288880E34"
+					item: "gtceu:anthracene_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1477EA302B7D2C87"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 24.0d
 			y: 3.0d
 		}
 		{
 			dependencies: ["357F8943B37E231D"]
 			id: "26490ED393A09C12"
-			tasks: [{
-				id: "5D55249FB2842404"
-				item: "gtceu:ethylanthrahydroquinone_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "5D55249FB2842404"
+					item: "gtceu:ethylanthrahydroquinone_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "40B7B5E346EE96BE"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 23.0d
 			y: 4.0d
 		}
@@ -517,22 +590,38 @@
 			dependencies: ["589789F9FC81A557"]
 			description: ["这个是催化剂，再下下个反应中会还给你的，不需要做很多"]
 			id: "357F8943B37E231D"
-			tasks: [{
-				id: "0C831FE92299304B"
-				item: "gtceu:ethylanthraquinone_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "0C831FE92299304B"
+					item: "gtceu:ethylanthraquinone_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "08D8871D66256B70"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 22.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["706B6132C6C42BAE"]
 			id: "589789F9FC81A557"
-			tasks: [{
-				id: "3C452C7920E689D1"
-				item: "gtceu:phthalic_anhydride_dust"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "3C452C7920E689D1"
+					item: "gtceu:phthalic_anhydride_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "58879157D53270F7"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 21.0d
 			y: 4.0d
 		}
@@ -543,33 +632,57 @@
 			]
 			dependency_requirement: "one_completed"
 			id: "706B6132C6C42BAE"
-			tasks: [{
-				id: "4F3B4AB73159303F"
-				item: "gtceu:phthalic_acid_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4F3B4AB73159303F"
+					item: "gtceu:phthalic_acid_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "5ED7461DEB480E59"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 20.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["123FD5A979F5750D"]
 			id: "7B3D7412BEA6862A"
-			tasks: [{
-				id: "713CDD966CF89ADF"
-				item: "gtceu:naphthalene_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "713CDD966CF89ADF"
+					item: "gtceu:naphthalene_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "5B062BEDA570EC35"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 20.0d
 			y: 5.0d
 		}
 		{
 			dependencies: ["123FD5A979F5750D"]
 			id: "6C689993C9BCE006"
-			tasks: [{
-				id: "184F0AF60546CBA4"
-				item: "gtceu:dimethylbenzene_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "184F0AF60546CBA4"
+					item: "gtceu:dimethylbenzene_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "62D498D596792A96"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 20.0d
 			y: 3.0d
 		}
@@ -690,11 +803,19 @@
 			dependencies: ["187BE1A67AF10798"]
 			hide_dependency_lines: true
 			id: "48E9439ABC35D129"
-			tasks: [{
-				id: "01B057C002B715FF"
-				item: "gtceu:monomethylhydrazine_bucket"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "01B057C002B715FF"
+					item: "gtceu:monomethylhydrazine_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "141E95011AA0739D"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
 			x: 36.0d
 			y: 4.0d
 		}
@@ -1554,6 +1675,251 @@
 			title: "巴纳德C的流体矿脉"
 			x: 35.0d
 			y: 10.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["23C2F99FC949AF0A"]
+			description: ["每个星球飞一次就够了"]
+			id: "21D8A596F5BE438E"
+			rewards: [{
+				command: "/execute in ad_astra:moon run tp 0 200 0"
+				elevate_perms: true
+				id: "68C04E0EA66271B7"
+				type: "command"
+			}]
+			tasks: [{
+				id: "2412EE7E9063BDA3"
+				title: "去月球"
+				type: "checkmark"
+			}]
+			x: 9.0d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["702471643821B0DE"]
+			id: "10BFE6FF4FE640CF"
+			rewards: [{
+				command: "/execute in ad_astra:mars run tp 0 200 0"
+				id: "515FE430072534D3"
+				type: "command"
+			}]
+			tasks: [{
+				id: "66C8190979BFB1CA"
+				title: "去火星"
+				type: "checkmark"
+			}]
+			x: 17.0d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["602F48807D4A89A6"]
+			id: "07645AD74EFE2F30"
+			rewards: [{
+				command: "/execute in ad_astra:venus run tp 0 200 0"
+				id: "4947CE478EC8131D"
+				type: "command"
+			}]
+			tasks: [{
+				id: "4D5EAA5BD05BC8EE"
+				title: "去金星"
+				type: "checkmark"
+			}]
+			x: 27.0d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["240EDC34562E580F"]
+			id: "78CA1579D445E245"
+			rewards: [{
+				command: "/execute in ad_astra:mercury run tp 0 200 0"
+				elevate_perms: true
+				id: "109555A7B7DC83BA"
+				type: "command"
+			}]
+			tasks: [{
+				id: "65E12B4243187B9D"
+				title: "去水星"
+				type: "checkmark"
+			}]
+			x: 28.0d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["5010011959CF5337"]
+			id: "5DDB65F09BF7CB42"
+			rewards: [{
+				command: "/execute in kubejs:ceres run tp 0 200 0"
+				elevate_perms: true
+				id: "5DABDE58E85A1554"
+				type: "command"
+			}]
+			tasks: [{
+				id: "424BF1AD5819C169"
+				title: "去谷神星"
+				type: "checkmark"
+			}]
+			x: 38.0d
+			y: -2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["73613E3EBEFFB326"]
+			id: "0605583CFB358CAA"
+			rewards: [{
+				command: "/execute in kubejs:io run tp 0 200 0"
+				elevate_perms: true
+				id: "1B9F96DC71464F25"
+				type: "command"
+			}]
+			tasks: [{
+				id: "02714C21C6345C06"
+				title: "去木卫一"
+				type: "checkmark"
+			}]
+			x: 9.5d
+			y: 6.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["761877FE2F5E2E2E"]
+			id: "523A8CBF30530A08"
+			rewards: [{
+				command: "/execute in kubejs:ganymede run tp 0 200 0"
+				elevate_perms: true
+				id: "1D27BEFA544DC7B3"
+				type: "command"
+			}]
+			tasks: [{
+				id: "3FE00886E723F536"
+				title: "去木卫三"
+				type: "checkmark"
+			}]
+			x: 10.5d
+			y: 6.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["61140578961B01A9"]
+			id: "03EB99A257E23BB0"
+			rewards: [{
+				command: "/execute in kubejs:pluto run tp 0 200 0"
+				elevate_perms: true
+				id: "66072C4B76BF5F96"
+				type: "command"
+			}]
+			tasks: [{
+				id: "3BACCC11A97FD667"
+				title: "去冥王星"
+				type: "checkmark"
+			}]
+			x: 20.0d
+			y: 6.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["22B38057B7705160"]
+			id: "5F4A69C996774D27"
+			rewards: [{
+				command: "/execute in kubejs:enceladus run tp 0 200 0"
+				elevate_perms: true
+				id: "06FD20BA0DFAD74B"
+				type: "command"
+			}]
+			tasks: [{
+				id: "40D2A94D63372038"
+				title: "去土卫二"
+				type: "checkmark"
+			}]
+			x: 21.0d
+			y: 6.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["7E8D49D03B9CF783"]
+			id: "42E7589D84B33100"
+			rewards: [{
+				command: "/execute in kubejs:titan run tp 0 200 0"
+				elevate_perms: true
+				id: "5B3F450A220D031D"
+				type: "command"
+			}]
+			tasks: [{
+				id: "026940E80D77F49F"
+				title: "去土卫六"
+				type: "checkmark"
+			}]
+			x: 22.0d
+			y: 6.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["7796B2AE8F20C564"]
+			id: "49CD5A099F2C481D"
+			rewards: [{
+				command: "/execute in kubejs:barnarda run tp 0 200 0"
+				elevate_perms: true
+				id: "088F8105E0E97885"
+				type: "command"
+			}]
+			tasks: [{
+				id: "4809719A86B423CA"
+				title: "去巴纳德C"
+				type: "checkmark"
+			}]
+			x: 35.0d
+			y: 6.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["25AA088531768F81"]
+			id: "308E80493652A74D"
+			rewards: [{
+				command: "/execute in ad_astra:glacio run tp 0 200 0"
+				elevate_perms: true
+				id: "23A2A64020DAD06D"
+				type: "command"
+			}]
+			tasks: [{
+				id: "3358381CBFE3BCD9"
+				title: "去霜原星"
+				type: "checkmark"
+			}]
+			x: 28.5d
+			y: 6.0d
+		}
+		{
+			id: "2917E1F587244EAA"
+			tasks: [{
+				dimension: "kubejs:ancient_world"
+				id: "0CECD4BAC6C3D2A4"
+				title: "远古世界"
+				type: "dimension"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["2917E1F587244EAA"]
+			description: ["让你方便一点"]
+			id: "2A7DCD5C4BED8E3D"
+			rewards: [{
+				command: "/execute in kubejs:ancient_world run tp 0 200 0"
+				elevate_perms: true
+				id: "22B3FCAD4E46DCCA"
+				type: "command"
+			}]
+			tasks: [{
+				id: "3E0B96E6350FED35"
+				title: "去远古世界"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 4.0d
 		}
 	]
 	title: "探索世界"

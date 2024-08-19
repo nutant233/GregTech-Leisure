@@ -20,7 +20,7 @@
 				title: "多方块结构"
 				type: "checkmark"
 			}]
-			x: -12.0d
+			x: -10.0d
 			y: -2.0d
 		}
 		{
@@ -34,7 +34,7 @@
 				title: "各种功能方块"
 				type: "checkmark"
 			}]
-			x: -10.0d
+			x: -8.0d
 			y: -2.0d
 		}
 		{
@@ -2437,7 +2437,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 10.0d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -2451,7 +2451,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 10.0d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -2465,7 +2465,7 @@
 				type: "item"
 			}]
 			x: 28.0d
-			y: 10.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["19C7474792787EE9"]
@@ -2476,7 +2476,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 12.0d
+			y: 14.0d
 		}
 		{
 			dependencies: ["234661B47841AA2B"]
@@ -2487,7 +2487,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 12.0d
+			y: 14.0d
 		}
 		{
 			dependencies: ["5930E12A8BCAF996"]
@@ -2508,7 +2508,7 @@
 				item: "gtceu:block_conversion_room"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 14.0d
 			y: 14.0d
 		}
 		{
@@ -2543,6 +2543,103 @@
 			}]
 			x: -4.0d
 			y: 14.0d
+		}
+		{
+			dependencies: ["6D3BE9E3D76C71F9"]
+			id: "21B4AC077D650888"
+			tasks: [{
+				id: "050AE8EA53DC5484"
+				item: "gtceu:heat_exchanger"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"21B4AC077D650888"
+				"6D3BE9E3D76C71F9"
+			]
+			id: "7D2EE78F3D30E31B"
+			tasks: [{
+				id: "4204AAEB9F708F06"
+				item: "gtceu:supercritical_steam_turbine"
+				type: "item"
+			}]
+			x: 26.0d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"6D3BE9E3D76C71F9"
+				"7D2EE78F3D30E31B"
+			]
+			id: "2E9DCF7DCDC64E67"
+			tasks: [{
+				id: "51565780EBBC5C8A"
+				item: "gtceu:supercritical_mega_steam_turbine"
+				type: "item"
+			}]
+			x: 28.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["65C4F7EDC0E9D99D"]
+			id: "6DA70545DD14A77E"
+			tasks: [{
+				id: "5016DB7B9847D883"
+				item: "gtceu:mega_canner"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["1443E064A0AB0B8B"]
+			id: "2C69B970398512F2"
+			tasks: [{
+				id: "25CEEF5CD6569838"
+				item: "gtceu:fission_reactor"
+				type: "item"
+			}]
+			x: 28.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"5019F5F1A660DB40"
+				"4BA21E95563903C6"
+			]
+			id: "7D021939D9850C51"
+			tasks: [{
+				id: "3985BDD2169528FD"
+				item: "gtceu:element_copying"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["6D3BE9E3D76C71F9"]
+			id: "6B124B57A0E7B565"
+			tasks: [{
+				id: "4DAE2FA0BA88AB69"
+				item: "gtceu:neutron_activator"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 16.0d
+		}
+		{
+			id: "376F6857ABEF60BF"
+			tasks: [{
+				icon: "gtceu:portable_debug_scanner"
+				id: "654C1D74F045820D"
+				type: "custom"
+			}]
+			title: "这里有182个多方块"
+			x: -12.0d
+			y: -2.0d
 		}
 	]
 	title: "多方块结构"
