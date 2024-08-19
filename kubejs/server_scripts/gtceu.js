@@ -7725,7 +7725,7 @@ ServerEvents.recipes((event) => {
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:crystalmatrix_plasma")
         .notConsumable("avaritia:infinity_catalyst")
-        .itemInputs("16x kubejs:corporeal_matter")
+        .itemInputs("avaritia:crystal_matrix")
         .inputFluids("gtceu:uu_matter 1000000", "gtceu:free_proton_gas 20000")
         .outputFluids("gtceu:crystalmatrix_plasma 10000", "gtceu:dimensionallytranscendentresidue 100")
         .EUt(GTValues.VA[GTValues.MAX])
@@ -8120,7 +8120,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.stellar_forge("gtceu:crystalmatrix_plasma")
-        .itemInputs("kubejs:leptonic_charge", "16x kubejs:corporeal_matter")
+        .itemInputs("kubejs:leptonic_charge", "avaritia:crystal_matrix", "16x kubejs:corporeal_matter")
         .inputFluids("gtceu:free_proton_gas 20000")
         .outputFluids("gtceu:crystalmatrix_plasma 1000")
         .EUt(GTValues.VA[GTValues.UXV])
@@ -12186,6 +12186,10 @@ ServerEvents.recipes((event) => {
     implosion_compressor_add(["64x avaritia:neutron_pile", "64x avaritia:neutron_pile"], "avaritia:neutron_nugget", 1)
     implosion_compressor_add("9x avaritia:neutron_nugget", "avaritia:neutron_ingot", 1)
     implosion_compressor_add("9x avaritia:neutron_ingot", "avaritia:neutron", 1)
+    implosion_compressor_add(["64x avaritia:compressed_crafting_table", "64x avaritia:compressed_crafting_table"], "avaritia:double_compressed_crafting_table", 1)
+    implosion_compressor_add(["4x gtceu:exquisite_diamond_gem", "minecraft:netherite_scrap"], "avaritia:diamond_lattice", 1)
+    implosion_compressor_add(["8x avaritia:diamond_lattice", "minecraft:nether_star"], "avaritia:crystal_matrix", 1)
+    implosion_compressor_add(["2x minecraft:chest", "2x ae2:smooth_sky_stone_chest"], "avaritia:compressed_chest", 1)
 
     gtr.electric_implosion_compressor("minecraft:diamond")
         .itemInputs("64x minecraft:coal")
@@ -14255,7 +14259,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.assembler("gtceu:fission_reactor")
-        .itemInputs("gtceu:iv_machine_hull", "4x kubejs:circuit_resonatic_iv", "gtceu:computer_monitor_cover", "4x gtceu:neutron_reflector", "8x gtceu:dense_reactor_steel_plate")
+        .itemInputs("gtceu:iv_machine_hull", "4x #gtceu:circuits/uv", "gtceu:computer_monitor_cover", "4x gtceu:neutron_reflector", "8x gtceu:dense_reactor_steel_plate")
         .inputFluids("gtceu:soldering_alloy 288")
         .itemOutputs("gtceu:fission_reactor")
         .EUt(480)

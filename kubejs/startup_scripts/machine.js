@@ -1585,7 +1585,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("engraving_laser_plant", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe) => {
+            if (machine.getRecipeType() == GTRecipeTypes.LASER_ENGRAVER_RECIPES) {
+                return GTRecipeModifiers.hatchParallel(machine, recipe, false).getFirst()
+            }
+            return recipe
+        }, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:pikyonium_machine_casing"))
         .recipeType("precision_laser_engraver")
         .recipeType("laser_engraver")
@@ -1661,7 +1666,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .rotationState(RotationState.ALL)
         .recipeType("dimensionally_transcendent_mixer")
         .recipeType("mixer")
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe) => {
+            if (machine.getRecipeType() == GTRecipeTypes.MIXER_RECIPES) {
+                return GTRecipeModifiers.reduction(recipe, 1, 0.2)
+            }
+            return recipe
+        }, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:dimensionally_transcendent_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start()
@@ -1687,15 +1697,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("f", Predicates.blocks("kubejs:neutronium_pipe_casing"))
                 .where(" ", Predicates.any())
                 .build())
-        .onWorking(machine => {
-            if (machine.getOffsetTimer() % 20 == 0) {
-                if (machine.self().getRecipeType() == GTRecipeTypes.MIXER_RECIPES) {
-                    let logic = machine.getRecipeLogic()
-                    logic.setProgress(logic.getProgress() + 20)
-                }
-            }
-            return true
-        })
         .workableCasingRenderer("kubejs:block/dimensionally_transcendent_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("qft", "multiblock")

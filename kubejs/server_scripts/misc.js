@@ -52,6 +52,16 @@ ServerEvents.recipes((event) => {
         B: "minecraft:clock"
     })
 
+    event.shaped("avaritia:extreme_crafting_table", [
+        "ABA",
+        "BCB",
+        "ABA"
+    ], {
+        A: "gtceu:exquisite_lapis_gem",
+        B: "avaritia:crystal_matrix",
+        C: "avaritia:double_compressed_crafting_table"
+    })
+
     gtr.weather_control("1")
         .circuit(1)
         .duration(200)
@@ -112,6 +122,12 @@ ServerEvents.recipes((event) => {
         .itemInputs("kubejs:shining_obsidian")
         .inputFluids("gtceu:ender_eye 1152")
         .itemOutputs("kubejs:ender_obsidian")
+        .EUt(480)
+        .duration(200)
+
+    gtr.compressor("avaritia:compressed_crafting_table")
+        .itemInputs("64x minecraft:crafting_table")
+        .itemOutputs("avaritia:compressed_crafting_table")
         .EUt(480)
         .duration(200)
 })

@@ -50,7 +50,8 @@ ServerEvents.recipes(event => {
         "ad_astra:steel_cable",
         "ad_astra:desh_cable",
         "ad_astra:cable_duct",
-        "ad_astra:steel_ingot"]
+        "ad_astra:steel_ingot",
+        "ad_astra:nasa_workbench"]
     id.forEach(i => {
         event.remove({ id: i })
     })
@@ -61,6 +62,19 @@ ServerEvents.recipes(event => {
     event.remove({ type: "ad_astra:oxygen_loading" })
     event.remove({ type: "ad_astra:refining" })
     event.shapeless("ad_astra:energizer", "gtceu:ulv_charger_4x")
+
+    event.shaped("ad_astra:nasa_workbench", [
+        "ABA",
+        "CDC",
+        "FEF"
+    ], {
+        A: "gtceu:hv_robot_arm",
+        B: "gtceu:hv_emitter",
+        C: "minecraft:redstone_torch",
+        D: "avaritia:compressed_crafting_table",
+        E: "gtceu:steel_block",
+        F: "gtceu:double_steel_plate"
+    })
 
     gtr.compressor("ad_astra:ice_shard")
         .itemInputs("minecraft:blue_ice")
