@@ -19,7 +19,6 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:star_ultimate_material_forge_factory", "最大并行数：1000")
     event.add("gtceu:create_computation", "需要输入MAX级电压")
     event.add("gtceu:slaughterhouse", ["电动刷怪塔，自动杀怪", "电压等级每高出MV1级，每次处理次数+8", "1号电路为非敌对生物，2号为敌对生物", "实体生成模式为玩家击杀的实际掉落，需要非和平模式", "非实体生成模式为虚拟掉落，可以和平模式，由玩家击杀的掉落物无法获取", "注意机器内部除玩家外任何实体都会被攻击"])
-    event.add("gtceu:aggregation_device", "启动耗能为4800MEU")
     event.add("gtceu:dimensionally_transcendent_steam_boiler", ["最大蒸汽产出：4096000mB/t", "需要连续运行1个小时才能达到最大输出"])
     event.add("kubejs:essence_block", "将骨块放置在转换室获得")
     event.add("kubejs:draconium_block_charged", "将注入龙力的黑曜石放置在转换室获得")

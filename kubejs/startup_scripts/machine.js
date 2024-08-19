@@ -1,5 +1,4 @@
 // priority: 96
-const $FusionReactorMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.FusionReactorMachine")
 const $SpaceElevator = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.SpaceElevator")
 const $LargeBoilerMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.steam.LargeBoilerMachine")
 const $LargeTurbineMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.generator.LargeTurbineMachine")
@@ -1482,10 +1481,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/machines/gas_collector")
 
-    event.create("aggregation_device", "multiblock", (holder) => new $FusionReactorMachine(holder, GTValues.UEV))
+    event.create("aggregation_device", "multiblock")
         .rotationState(RotationState.ALL)
         .recipeType("aggregation_device")
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getFusionReactorParallel(), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(16, 4 * (machine.self().getTier() - GTValues.UEV)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(GTBlocks.FUSION_CASING)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1507,6 +1506,11 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("g", Predicates.abilities(PartAbility.EXPORT_ITEMS))
                 .where(" ", Predicates.any())
                 .build())
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(Math.min(16, 4 * (controller.self().getTier() - GTValues.UEV)))).darkPurple()).gray())
+            }
+        })
         .workableCasingRenderer("gtceu:block/casings/fusion/fusion_casing", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("super_particle_collider", "multiblock")
