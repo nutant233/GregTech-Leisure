@@ -76,7 +76,7 @@ ServerEvents.tags("item", event => {
     })
 })
 ServerEvents.tags("block", event => {
-    const blocks = ["gtceu:power_core", "gtceu:1m_storage", "gtceu:4m_storage", "gtceu:16m_storage", "gtceu:64m_storage", "gtceu:256m_storage", "gtceu:256g_storage", "gtceu:power_module", "gtceu:law_filter_casing", "gtceu:hyper_core", "gtceu:super_computation_component", "gtceu:super_cooler_component", "gtceu:spacetimecontinuumripper", "gtceu:spacetimebendingcore", "gtceu:qft_coil"]
+    const blocks = ["gtceu:fission_fuel_assembly", "gtceu:supercritical_turbine_casing", "gtceu:cooler", "gtceu:power_core", "gtceu:1m_storage", "gtceu:4m_storage", "gtceu:16m_storage", "gtceu:64m_storage", "gtceu:256m_storage", "gtceu:256g_storage", "gtceu:power_module", "gtceu:law_filter_casing", "gtceu:hyper_core", "gtceu:super_computation_component", "gtceu:super_cooler_component", "gtceu:spacetimecontinuumripper", "gtceu:spacetimebendingcore", "gtceu:qft_coil"]
     blocks.forEach((block) => {
         event.add("minecraft:mineable/pickaxe", block)
         event.add("forge:mineable/wrench", block)
