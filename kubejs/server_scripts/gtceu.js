@@ -14226,16 +14226,16 @@ ServerEvents.recipes((event) => {
 
     gtr.heat_exchanger("gtceu:hot_sodium_potassium")
         .inputFluids("gtceu:hot_sodium_potassium 1")
-        .inputFluids("minecraft:water 40")
+        .inputFluids("minecraft:water 160")
         .outputFluids("gtceu:sodium_potassium 1")
-        .outputFluids("gtceu:steam 6400")
+        .outputFluids("gtceu:steam 25600")
         .duration(200)
 
     gtr.heat_exchanger("gtceu:supercritical_sodium_potassium")
         .inputFluids("gtceu:supercritical_sodium_potassium 1")
-        .inputFluids("gtceu:distilled_water 20")
+        .inputFluids("gtceu:distilled_water 80")
         .outputFluids("gtceu:sodium_potassium 1")
-        .outputFluids("gtceu:supercritical_steam 3200")
+        .outputFluids("gtceu:supercritical_steam 12800")
         .duration(200)
 
     gtr.assembler("kubejs:fission_reactor_casing")
