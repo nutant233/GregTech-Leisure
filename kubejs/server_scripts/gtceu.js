@@ -14259,7 +14259,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.assembler("gtceu:fission_reactor")
-        .itemInputs("gtceu:iv_machine_hull", "4x #gtceu:circuits/uv", "gtceu:computer_monitor_cover", "4x gtceu:neutron_reflector", "8x gtceu:dense_reactor_steel_plate")
+        .itemInputs("gtceu:iv_machine_hull", "4x #gtceu:circuits/iv", "gtceu:computer_monitor_cover", "4x gtceu:neutron_reflector", "8x gtceu:dense_reactor_steel_plate")
         .inputFluids("gtceu:soldering_alloy 288")
         .itemOutputs("gtceu:fission_reactor")
         .EUt(480)
