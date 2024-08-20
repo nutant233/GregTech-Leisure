@@ -1,0 +1,344 @@
+{
+	"basics": {
+		"favorites": [],
+		"hiddenFavorites": [],
+		"displayHistory": [],
+		"cheating": false,
+		"favoritesEnabled": true,
+		"reduceMotion": false,
+		"keyBindings": {
+			"useNativeKeybinds": false,
+			"recipeKeybind": {
+				"keyCode": "key.keyboard.r",
+				"modifier": 0
+			},
+			"usageKeybind": {
+				"keyCode": "key.keyboard.u",
+				"modifier": 0
+			},
+			"hideKeybind": {
+				"keyCode": "key.keyboard.o",
+				"modifier": 2
+			},
+			"previousPageKeybind": {
+				"keyCode": "key.keyboard.unknown",
+				"modifier": 0
+			},
+			"nextPageKeybind": {
+				"keyCode": "key.keyboard.unknown",
+				"modifier": 0
+			},
+			"focusSearchFieldKeybind": {
+				"keyCode": "key.keyboard.unknown",
+				"modifier": 0
+			},
+			"copyRecipeIdentifierKeybind": {
+				"keyCode": "key.mouse.middle",
+				"modifier": 0
+			},
+			"favoriteKeybind": {
+				"keyCode": "key.keyboard.a",
+				"modifier": 0
+			},
+			"exportImageKeybind": {
+				"keyCode": "key.keyboard.f8",
+				"modifier": 0
+			},
+			"previousScreenKeybind": {
+				"keyCode": "key.keyboard.backspace",
+				"modifier": 0
+			}
+		},
+		// Declares whether REI is visible.
+		"overlayVisible": true,
+		"cheatingStyle": "GRAB"
+	},
+	"appearance": {
+		"recipeScreenType": "ORIGINAL",
+		// Declares the appearance of REI windows.
+		"theme": "LIGHT",
+		"layout": {
+			// Declares the position of the search field.
+			"searchFieldLocation": "CENTER",
+			// Declares the position of the config button.
+			"configButtonLocation": "LOWER",
+			// Declares whether the craftable filter button is enabled.
+			"showCraftableOnlyButton": true
+		},
+		// Declares the appearance of recipe's border.
+		"recipeBorder": "DEFAULT",
+		// Declares whether entry panel is scrolled.
+		"scrollingEntryListWidget": false,
+		// Declares whether entry panel should be invisible when not searching
+		"hideEntryPanelIfIdle": false,
+		"rainbow": false,
+		"horizontalEntriesBoundaries": 1.0,
+		"verticalEntriesBoundaries": 1.0,
+		"horizontalEntriesBoundariesColumns": 50,
+		"verticalEntriesBoundariesRows": 1000,
+		"horizontalEntriesBoundariesAlignment": 1.0,
+		"verticalEntriesBoundariesAlignment": 0.5,
+		"favoritesHorizontalEntriesBoundaries": 1.0,
+		"favoritesHorizontalEntriesBoundariesColumns": 50,
+		"syntaxHighlightingMode": "COLORFUL",
+		"isFocusModeZoomed": false
+	},
+	"functionality": {
+		"inputMethod": "rei:pinyin",
+		// Declares whether REI should remove the recipe book.
+		"disableRecipeBook": false,
+		// Declares whether mob effects should be on the left side instead of the right side.
+		"leftSideMobEffects": false,
+		// Declares whether subsets is enabled.
+		"isSubsetsEnabled": false,
+		"allowInventoryHighlighting": true,
+		"itemCheatingMode": "REI_LIKE"
+	},
+	"advanced": {
+		"tooltips": {
+			// Declares whether REI should append mod names to entries.
+			"appendModNames": true,
+			// Declares whether favorites tooltip should be displayed.
+			"displayFavoritesTooltip": false,
+			"displayIMEHints": false
+		},
+		"layout": {
+			// The ordering of the items on the entry panel.
+			"entryPanelOrdering": "REGISTRY_ASCENDING",
+			// Declares the maximum amount of recipes displayed in a page if possible.
+			"maxRecipesPerPage": 8,
+			// Declares the maximum amount of recipes displayed in a page if possible.
+			"maxRecipesPageHeight": 300,
+			// Declares whether entry rendering time should be debugged.
+			"debugRenderTimeRequired": false,
+			// Merges displays with equal contents under 1 display.
+			"mergeDisplayUnderOne": true,
+			"favoriteAddWidgetMode": "ALWAYS_VISIBLE"
+		},
+		"accessibility": {
+			"entrySize": 1.0,
+			// Declares the position of the entry panel.
+			"displayPanelLocation": "RIGHT",
+			// Declares how the scrollbar in composite screen should act.
+			"compositeScrollBarPermanent": false,
+			"toastDisplayedOnCopyIdentifier": true,
+			// Declares whether REI should use compact tabs for categories.
+			"useCompactTabs": true,
+			// Declares whether REI should use compact tab buttons for categories.
+			"useCompactTabButtons": false
+		},
+		"search": {
+			// Declares whether search time should be debugged.
+			"debugSearchTimeRequired": false,
+			// Declares whether REI should search async.
+			"asyncSearch": true,
+			// Declares how many entries should be grouped one async search.
+			"asyncSearchPartitionSize": 100,
+			"patchAsyncThreadCrash": true,
+			"tooltipSearch": "ALWAYS",
+			"tagSearch": "PREFIX",
+			"identifierSearch": "ALWAYS",
+			"modSearch": "PREFIX"
+		},
+		"commands": {
+			// Declares the command used to change gamemode.
+			"gamemodeCommand": "/gamemode {gamemode}",
+			// Declares the command used in servers to cheat items.
+			"giveCommand": "/give {player_name} {item_identifier}{nbt} {count}",
+			// Declares the command used to change weather.
+			"weatherCommand": "/weather {weather}",
+			// Declares the command used to change time.
+			"timeCommand": "/time set {time}"
+		},
+		"miscellaneous": {
+			// Declares whether arrows in containers should be clickable.
+			"clickableRecipeArrows": true,
+			"registerRecipesInAnotherThread": false,
+			"newFastEntryRendering": true,
+			"cachingFastEntryRendering": false,
+			"cachingDisplayLookup": true,
+			"categorySettings": {
+				"filteringQuickCraftCategories": { },
+				"categoryOrdering": [
+					"minecraft:plugins/crafting",
+					"minecraft:plugins/smelting",
+					"minecraft:plugins/smoking",
+					"minecraft:plugins/blasting",
+					"minecraft:plugins/campfire",
+					"minecraft:plugins/stone_cutting",
+					"minecraft:plugins/fuel",
+					"minecraft:plugins/brewing",
+					"minecraft:plugins/composting",
+					"minecraft:plugins/stripping",
+					"minecraft:plugins/smithing",
+					"minecraft:plugins/anvil",
+					"minecraft:plugins/beacon_base",
+					"minecraft:plugins/beacon_payment",
+					"minecraft:plugins/tilling",
+					"minecraft:plugins/pathing",
+					"minecraft:plugins/waxing",
+					"minecraft:plugins/wax_scraping",
+					"minecraft:plugins/oxidizing",
+					"minecraft:plugins/oxidation_scraping",
+					"ad_astra:compressing",
+					"ad_astra:alloying",
+					"ad_astra:oxygen_loading",
+					"ad_astra:fuel_refining",
+					"ad_astra:cryo_freezing",
+					"ad_astra:nasa_workbench",
+					"ftbquests:quest",
+					"ftbquests:loot_crate",
+					"gtceu:multiblock_info",
+					"gtceu:ore_processing_diagram",
+					"gtceu:ore_vein_diagram",
+					"gtceu:bedrock_fluid_diagram",
+					"gtceu:steam_boiler",
+					"gtceu:electric_furnace",
+					"gtceu:alloy_smelter",
+					"gtceu:arc_furnace",
+					"gtceu:assembler",
+					"gtceu:autoclave",
+					"gtceu:bender",
+					"gtceu:brewery",
+					"gtceu:macerator",
+					"gtceu:canner",
+					"gtceu:centrifuge",
+					"gtceu:chemical_bath",
+					"gtceu:chemical_reactor",
+					"gtceu:compressor",
+					"gtceu:cutter",
+					"gtceu:distillery",
+					"gtceu:electrolyzer",
+					"gtceu:electromagnetic_separator",
+					"gtceu:extractor",
+					"gtceu:extruder",
+					"gtceu:fermenter",
+					"gtceu:fluid_heater",
+					"gtceu:fluid_solidifier",
+					"gtceu:forge_hammer",
+					"gtceu:forming_press",
+					"gtceu:lathe",
+					"gtceu:mixer",
+					"gtceu:ore_washer",
+					"gtceu:packer",
+					"gtceu:polarizer",
+					"gtceu:laser_engraver",
+					"gtceu:sifter",
+					"gtceu:thermal_centrifuge",
+					"gtceu:wiremill",
+					"gtceu:circuit_assembler",
+					"gtceu:gas_collector",
+					"gtceu:air_scrubber",
+					"gtceu:research_station",
+					"gtceu:rock_breaker",
+					"gtceu:scanner",
+					"gtceu:combustion_generator",
+					"gtceu:semi_fluid_generator",
+					"gtceu:gas_turbine",
+					"gtceu:steam_turbine",
+					"gtceu:plasma_generator",
+					"gtceu:supercritical_steam_turbine",
+					"gtceu:large_boiler",
+					"gtceu:coke_oven",
+					"gtceu:primitive_blast_furnace",
+					"gtceu:electric_blast_furnace",
+					"gtceu:distillation_tower",
+					"gtceu:evaporation",
+					"gtceu:pyrolyse_oven",
+					"gtceu:cracker",
+					"gtceu:implosion_compressor",
+					"gtceu:vacuum_freezer",
+					"gtceu:assembly_line",
+					"gtceu:large_chemical_reactor",
+					"gtceu:fusion_reactor",
+					"gtceu:alloy_blast_smelter",
+					"gtceu:electric_implosion_compressor",
+					"gtceu:disassembly",
+					"gtceu:neutron_activator",
+					"gtceu:heat_exchanger",
+					"gtceu:element_copying",
+					"gtceu:dimensionally_transcendent_plasma_forge",
+					"gtceu:circuit_assembly_line",
+					"gtceu:suprachronal_assembly_line",
+					"gtceu:precision_assembler",
+					"gtceu:assembler_module",
+					"gtceu:dimensional_focus_engraving_array",
+					"gtceu:gravitation_shockburst",
+					"gtceu:distort",
+					"gtceu:nano_forge",
+					"gtceu:fission_reactor",
+					"gtceu:greenhouse",
+					"gtceu:stellar_forge",
+					"gtceu:plasma_condenser",
+					"gtceu:rare_earth_centrifugal",
+					"gtceu:magic_manufacturer",
+					"gtceu:sps_crafting",
+					"gtceu:matter_fabricator",
+					"gtceu:void_miner",
+					"gtceu:large_void_miner",
+					"gtceu:random_ore",
+					"gtceu:void_fluid_drilling_rig",
+					"gtceu:world_data_scanner",
+					"gtceu:annihilate_generator",
+					"gtceu:hyper_reactor",
+					"gtceu:advanced_hyper_reactor",
+					"gtceu:large_naquadah_reactor",
+					"gtceu:naquadah_reactor",
+					"gtceu:rocket_engine",
+					"gtceu:cosmos_simulation",
+					"gtceu:space_probe_surface_reception",
+					"gtceu:decay_hastener",
+					"gtceu:large_recycler",
+					"gtceu:mass_fabricator",
+					"gtceu:space_elevator",
+					"gtceu:miner_module",
+					"gtceu:drilling_module",
+					"gtceu:fishing_ground",
+					"gtceu:large_infuser",
+					"gtceu:large_rotary",
+					"gtceu:block_conversion",
+					"gtceu:incubator",
+					"gtceu:pcb_factory",
+					"gtceu:lava_furnace",
+					"gtceu:large_gas_collector",
+					"gtceu:aggregation_device",
+					"gtceu:super_particle_collider",
+					"gtceu:precision_laser_engraver",
+					"gtceu:dimensionally_transcendent_mixer",
+					"gtceu:neutron_compressor",
+					"gtceu:qft",
+					"gtceu:super_computation",
+					"gtceu:integrated_ore_processor",
+					"gtceu:dragon_egg_copier",
+					"gtceu:door_of_create",
+					"gtceu:bedrock_drilling_rig",
+					"gtceu:create_aggregation",
+					"gtceu:ultimate_material_forge",
+					"gtceu:slaughterhouse",
+					"gtceu:dyson_sphere",
+					"gtceu:petrochemical_plant",
+					"gtceu:dungeon",
+					"gtceu:weather_control",
+					"gtmthings:digital_miner",
+					"ae2:item_transformation",
+					"ae2:condenser",
+					"ae2:ae2.inscriber",
+					"ae2:attunement",
+					"ae2:charger",
+					"roughlyenoughitems:plugins/information",
+					"minecraft:plugins/tag"
+				],
+				"hiddenCategories": []
+			}
+		},
+		"filtering": {
+			"filteredStacks": [],
+			"shouldFilterDisplays": true,
+			"filteringRules": [
+				"{id:\"roughlyenoughitems:manual\",rule:{}}",
+				"{id:\"roughlyenoughitems:basic\",rule:{}}",
+				"{id:\"roughlyenoughitems:hidden_from_recipe_viewers\",rule:{}}"
+			]
+		}
+	}
+}
