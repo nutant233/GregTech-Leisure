@@ -14317,14 +14317,12 @@ ServerEvents.recipes((event) => {
     function assemble_fuel(name, isnq) {
         let rod = isnq ? "4x gtceu:tungsten_carbide_rod" : "4x gtceu:steel_rod"
         gtr.assembler("kubejs:reactor_" + name + "_dual")
-            .circuit(2)
             .itemInputs("2x kubejs:reactor_" + name + "_simple", rod)
             .itemOutputs("kubejs:reactor_" + name + "_dual")
             .EUt(30)
             .duration(40)
 
         gtr.assembler("kubejs:reactor_" + name + "_quad")
-            .circuit(4)
             .itemInputs("2x kubejs:reactor_" + name + "_dual", rod)
             .itemOutputs("kubejs:reactor_" + name + "_quad")
             .EUt(30)
