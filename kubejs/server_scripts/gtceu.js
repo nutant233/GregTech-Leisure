@@ -14237,6 +14237,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:sodium_potassium 1")
         .outputFluids("gtceu:supercritical_steam 12800")
         .duration(200)
+    ["addData(java.lang.String,long)"]("eu", 12800)
 
     gtr.assembler("kubejs:fission_reactor_casing")
         .itemInputs("gtceu:vanadium_steel_frame", "6x gtceu:lead_plate", "6x gtceu:reactor_steel_plate")
