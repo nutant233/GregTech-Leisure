@@ -1956,7 +1956,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("blaze_blast_furnace", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
         .recipeType("electric_blast_furnace")
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 1, 0.5), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4, false).getFirst(), (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 1, 0.5), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 64, false).getFirst(), (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
         .appearanceBlock(() => Block.getBlock("kubejs:blaze_blast_furnace_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("XXX", "CCC", "CCC", "XXX")
@@ -1989,7 +1989,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal("4").darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal("64").darkPurple()).gray())
                 components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of($FormattingUtil.formatNumbers((controller.getCoilType().getCoilTemperature() + 100 * Math.max(0, controller.getTier() - GTValues.MV))) + "K").red()))
             }
         })
@@ -1998,7 +1998,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("cold_ice_freezer", "multiblock")
         .rotationState(RotationState.ALL)
         .recipeType("vacuum_freezer")
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 1, 0.5), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 1, 0.5), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 64, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:cold_ice_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("XXX", "XXX", "XXX")
@@ -2030,7 +2030,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal("4")).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal("64")).gray())
             }
         })
         .workableCasingRenderer("kubejs:block/cold_ice_casing", "gtceu:block/multiblock/vacuum_freezer")
