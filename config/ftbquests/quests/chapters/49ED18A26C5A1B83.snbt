@@ -367,6 +367,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "18DF7BD5424C42C2"
+			rewards: [{
+				id: "388FF7AB05012649"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "1F4D6E17C8653F61"
 				item: "gtceu:primitive_blast_furnace"
@@ -382,6 +387,11 @@
 			]
 			dependency_requirement: "one_started"
 			id: "369BD7F046987CB2"
+			rewards: [{
+				id: "31BDEAAEC9846ADD"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
 			size: 2.0d
 			tasks: [{
 				id: "18E383DE56A0FCFF"
@@ -394,6 +404,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "14B9F8B8BB4FB8EE"
+			rewards: [{
+				id: "76D1106E19A6CD5F"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "7B3AB142A4992E94"
 				item: "gtceu:bronze_large_boiler"
@@ -454,6 +469,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "5B84CF1D367582E4"
+			rewards: [{
+				id: "399EFC1F9D6357B0"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "4FB2D4251A56E0E3"
 				item: "gtceu:steam_oven"
@@ -469,6 +489,11 @@
 			]
 			dependency_requirement: "one_started"
 			id: "67D7D6E7D2F3D8B3"
+			rewards: [{
+				id: "562F9A31C1A0F119"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
 			size: 2.0d
 			tasks: [{
 				id: "4831728CD372B9AF"
@@ -481,6 +506,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "293762688F27FD99"
+			rewards: [{
+				id: "7DF3BAD69DBA3312"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "7E8CE46EE2DFF56A"
 				item: "gtceu:steam_grinder"
@@ -496,6 +526,11 @@
 			]
 			dependency_requirement: "one_started"
 			id: "51A1A2397AF521D9"
+			rewards: [{
+				id: "24FF32CB7B18CCFA"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "62A40548C20A4310"
 				item: "gtceu:large_steam_macerator"
@@ -507,6 +542,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "4877DB6020D6BFBC"
+			rewards: [{
+				id: "0206FE34856C052B"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "7619FF42134B3ED2"
 				item: "gtceu:steam_piston_hammer"
@@ -518,6 +558,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "7902A7E9ADB189D9"
+			rewards: [{
+				id: "3EDB7AE82465C94D"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "35F12473994F904B"
 				item: "gtceu:steam_pressor"
@@ -529,6 +574,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "77406A75BD5839C2"
+			rewards: [{
+				id: "585642EE54B83659"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "2AEC60CE651B6400"
 				item: "gtceu:steam_foundry"
@@ -540,6 +590,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "0B96B20B2FEE77CE"
+			rewards: [{
+				id: "1922BAE13BB38B91"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "1454A4D453C3E27E"
 				item: "gtceu:steam_mixer"
@@ -555,6 +610,11 @@
 			]
 			dependency_requirement: "one_started"
 			id: "37CD2592D45E71E0"
+			rewards: [{
+				id: "5FBDC870A7F6845D"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "35F532684CE5F88C"
 				item: "gtceu:large_steam_mixer"
@@ -566,6 +626,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "7FF9045E4B4B2459"
+			rewards: [{
+				id: "0BD7F7C7684E077E"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "440816FA8D648C70"
 				item: "gtceu:large_steam_centrifuge"
@@ -577,6 +642,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "7AE52BAD2043947A"
+			rewards: [{
+				id: "0488DD683F95B131"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "4DEA5FEBD6461E5F"
 				item: "gtceu:large_steam_thermal_centrifuge"
@@ -588,6 +658,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "4043EFEBD3B3F866"
+			rewards: [{
+				id: "0FB16C631F887CFB"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "282F36F20F540214"
 				item: "gtceu:steam_bath"
@@ -603,6 +678,11 @@
 			]
 			dependency_requirement: "one_started"
 			id: "4D7B7F0FA6962066"
+			rewards: [{
+				id: "1FCFFE2DFCAF7170"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "32FE2B3978582F49"
 				item: "gtceu:large_steam_bath"
@@ -614,6 +694,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "20640FDFDB9A19EA"
+			rewards: [{
+				id: "46E21B1A48B15274"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "5EBAAC64FCA23A6C"
 				item: "gtceu:steam_ore_washer"
@@ -629,6 +714,11 @@
 			]
 			dependency_requirement: "one_started"
 			id: "63EC74F3B67B9E2E"
+			rewards: [{
+				id: "793323F6F34AFBCF"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "5D864E297DE95B6E"
 				item: "gtceu:large_steam_ore_washer"
@@ -697,6 +787,11 @@
 			dependencies: ["40405034AE9D9945"]
 			description: ["原始人也要组装电路"]
 			id: "0A65389266654B6A"
+			rewards: [{
+				id: "1DD067753C0683D3"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "08CFD0E0ECD34F97"
 				item: "gtceu:large_steam_circuit_assembler"
@@ -1170,6 +1265,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "2576EB4B191FA2C2"
+			rewards: [{
+				id: "57C2F1FEBAA3E709"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "694E93AAE449976E"
 				item: "gtceu:primitive_pump"
@@ -1181,6 +1281,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "2868F50AE67459A0"
+			rewards: [{
+				id: "6457317FC227CBA1"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "3F252D04A2CA9A6C"
 				item: "gtceu:coke_oven"
@@ -1192,6 +1297,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "5A3ED2E3807DC4F8"
+			rewards: [{
+				id: "2F88A797F0792973"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "0F8C11179A5C3EDB"
 				item: "gtceu:wooden_multiblock_tank"
@@ -1203,6 +1313,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "1AA844E565DA56CE"
+			rewards: [{
+				id: "27F504A2F25AF5FC"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "27C60DD71B3C55C1"
 				item: "gtceu:steel_multiblock_tank"
@@ -2220,6 +2335,11 @@
 			]
 			dependency_requirement: "one_started"
 			id: "2F1F6A9D3B3F52A2"
+			rewards: [{
+				id: "24FC5D02B8380FAE"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "0C482B46A9A5B0C5"
 				item: "gtceu:lava_furnace"
@@ -2242,6 +2362,11 @@
 		{
 			dependencies: ["40405034AE9D9945"]
 			id: "200B218E6C4560B5"
+			rewards: [{
+				id: "1E144DF1F2B4F903"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "1A160B9D2DF9246E"
 				item: "gtceu:charcoal_pile_igniter"

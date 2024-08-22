@@ -1681,17 +1681,26 @@
 			dependencies: ["23C2F99FC949AF0A"]
 			description: ["每个星球飞一次就够了"]
 			id: "21D8A596F5BE438E"
+			optional: true
 			rewards: [{
 				command: "/execute in ad_astra:moon run tp 0 200 0"
 				elevate_perms: true
 				id: "68C04E0EA66271B7"
 				type: "command"
 			}]
-			tasks: [{
-				id: "2412EE7E9063BDA3"
-				title: "去月球"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "2412EE7E9063BDA3"
+					title: "去月球"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "6ABB2332B88272D4"
+					item: { Count: 64, id: "ad_astra:moon_cobblestone" }
+					type: "item"
+				}
+			]
 			x: 9.0d
 			y: -2.0d
 		}
@@ -1699,16 +1708,26 @@
 			can_repeat: true
 			dependencies: ["702471643821B0DE"]
 			id: "10BFE6FF4FE640CF"
+			optional: true
 			rewards: [{
 				command: "/execute in ad_astra:mars run tp 0 200 0"
 				id: "515FE430072534D3"
 				type: "command"
 			}]
-			tasks: [{
-				id: "66C8190979BFB1CA"
-				title: "去火星"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "66C8190979BFB1CA"
+					title: "去火星"
+					type: "checkmark"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "0ED7E3CD65E5469F"
+					item: "ad_astra:mars_cobblestone"
+					type: "item"
+				}
+			]
 			x: 17.0d
 			y: -2.0d
 		}
@@ -1716,16 +1735,25 @@
 			can_repeat: true
 			dependencies: ["602F48807D4A89A6"]
 			id: "07645AD74EFE2F30"
+			optional: true
 			rewards: [{
 				command: "/execute in ad_astra:venus run tp 0 200 0"
 				id: "4947CE478EC8131D"
 				type: "command"
 			}]
-			tasks: [{
-				id: "4D5EAA5BD05BC8EE"
-				title: "去金星"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "4D5EAA5BD05BC8EE"
+					title: "去金星"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "4FAA1E636E416966"
+					item: { Count: 64, id: "ad_astra:venus_cobblestone" }
+					type: "item"
+				}
+			]
 			x: 27.0d
 			y: -2.0d
 		}
@@ -1733,17 +1761,26 @@
 			can_repeat: true
 			dependencies: ["240EDC34562E580F"]
 			id: "78CA1579D445E245"
+			optional: true
 			rewards: [{
 				command: "/execute in ad_astra:mercury run tp 0 200 0"
 				elevate_perms: true
 				id: "109555A7B7DC83BA"
 				type: "command"
 			}]
-			tasks: [{
-				id: "65E12B4243187B9D"
-				title: "去水星"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "65E12B4243187B9D"
+					title: "去水星"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "3C8AAEC1C2A9B9BF"
+					item: { Count: 64, id: "ad_astra:mercury_cobblestone" }
+					type: "item"
+				}
+			]
 			x: 28.0d
 			y: -2.0d
 		}
@@ -1751,17 +1788,26 @@
 			can_repeat: true
 			dependencies: ["5010011959CF5337"]
 			id: "5DDB65F09BF7CB42"
+			optional: true
 			rewards: [{
 				command: "/execute in kubejs:ceres run tp 0 200 0"
 				elevate_perms: true
 				id: "5DABDE58E85A1554"
 				type: "command"
 			}]
-			tasks: [{
-				id: "424BF1AD5819C169"
-				title: "去谷神星"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "424BF1AD5819C169"
+					title: "去谷神星"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "7174AE19C524F445"
+					item: { Count: 64, id: "kubejs:ceresstone" }
+					type: "item"
+				}
+			]
 			x: 38.0d
 			y: -2.0d
 		}
@@ -1769,17 +1815,26 @@
 			can_repeat: true
 			dependencies: ["73613E3EBEFFB326"]
 			id: "0605583CFB358CAA"
+			optional: true
 			rewards: [{
 				command: "/execute in kubejs:io run tp 0 200 0"
 				elevate_perms: true
 				id: "1B9F96DC71464F25"
 				type: "command"
 			}]
-			tasks: [{
-				id: "02714C21C6345C06"
-				title: "去木卫一"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "02714C21C6345C06"
+					title: "去木卫一"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "0F3AB0117F6602E6"
+					item: { Count: 64, id: "kubejs:iostone" }
+					type: "item"
+				}
+			]
 			x: 9.5d
 			y: 6.0d
 		}
@@ -1787,17 +1842,26 @@
 			can_repeat: true
 			dependencies: ["761877FE2F5E2E2E"]
 			id: "523A8CBF30530A08"
+			optional: true
 			rewards: [{
 				command: "/execute in kubejs:ganymede run tp 0 200 0"
 				elevate_perms: true
 				id: "1D27BEFA544DC7B3"
 				type: "command"
 			}]
-			tasks: [{
-				id: "3FE00886E723F536"
-				title: "去木卫三"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "3FE00886E723F536"
+					title: "去木卫三"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "38A54F21FDC5603F"
+					item: { Count: 64, id: "kubejs:ganymedestone" }
+					type: "item"
+				}
+			]
 			x: 10.5d
 			y: 6.0d
 		}
@@ -1805,17 +1869,26 @@
 			can_repeat: true
 			dependencies: ["61140578961B01A9"]
 			id: "03EB99A257E23BB0"
+			optional: true
 			rewards: [{
 				command: "/execute in kubejs:pluto run tp 0 200 0"
 				elevate_perms: true
 				id: "66072C4B76BF5F96"
 				type: "command"
 			}]
-			tasks: [{
-				id: "3BACCC11A97FD667"
-				title: "去冥王星"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "3BACCC11A97FD667"
+					title: "去冥王星"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "2B2EC379C1CC0C27"
+					item: { Count: 64, id: "kubejs:plutostone" }
+					type: "item"
+				}
+			]
 			x: 20.0d
 			y: 6.0d
 		}
@@ -1823,17 +1896,26 @@
 			can_repeat: true
 			dependencies: ["22B38057B7705160"]
 			id: "5F4A69C996774D27"
+			optional: true
 			rewards: [{
 				command: "/execute in kubejs:enceladus run tp 0 200 0"
 				elevate_perms: true
 				id: "06FD20BA0DFAD74B"
 				type: "command"
 			}]
-			tasks: [{
-				id: "40D2A94D63372038"
-				title: "去土卫二"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "40D2A94D63372038"
+					title: "去土卫二"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "24C9CE6BA536FCCE"
+					item: { Count: 64, id: "kubejs:enceladusstone" }
+					type: "item"
+				}
+			]
 			x: 21.0d
 			y: 6.0d
 		}
@@ -1841,17 +1923,26 @@
 			can_repeat: true
 			dependencies: ["7E8D49D03B9CF783"]
 			id: "42E7589D84B33100"
+			optional: true
 			rewards: [{
 				command: "/execute in kubejs:titan run tp 0 200 0"
 				elevate_perms: true
 				id: "5B3F450A220D031D"
 				type: "command"
 			}]
-			tasks: [{
-				id: "026940E80D77F49F"
-				title: "去土卫六"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "026940E80D77F49F"
+					title: "去土卫六"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "52EC06F7E4E99FC3"
+					item: { Count: 64, id: "kubejs:titanstone" }
+					type: "item"
+				}
+			]
 			x: 22.0d
 			y: 6.0d
 		}
@@ -1859,17 +1950,26 @@
 			can_repeat: true
 			dependencies: ["7796B2AE8F20C564"]
 			id: "49CD5A099F2C481D"
+			optional: true
 			rewards: [{
 				command: "/execute in kubejs:barnarda run tp 0 200 0"
 				elevate_perms: true
 				id: "088F8105E0E97885"
 				type: "command"
 			}]
-			tasks: [{
-				id: "4809719A86B423CA"
-				title: "去巴纳德C"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "4809719A86B423CA"
+					title: "去巴纳德C"
+					type: "checkmark"
+				}
+				{
+					count: 8L
+					id: "640CDE6670CBC97E"
+					item: { Count: 8, id: "kubejs:barnarda_leaves" }
+					type: "item"
+				}
+			]
 			x: 35.0d
 			y: 6.0d
 		}
@@ -1877,17 +1977,26 @@
 			can_repeat: true
 			dependencies: ["25AA088531768F81"]
 			id: "308E80493652A74D"
+			optional: true
 			rewards: [{
 				command: "/execute in ad_astra:glacio run tp 0 200 0"
 				elevate_perms: true
 				id: "23A2A64020DAD06D"
 				type: "command"
 			}]
-			tasks: [{
-				id: "3358381CBFE3BCD9"
-				title: "去霜原星"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "3358381CBFE3BCD9"
+					title: "去霜原星"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "22E9BFE7A82D1764"
+					item: { Count: 64, id: "ad_astra:glacio_cobblestone" }
+					type: "item"
+				}
+			]
 			x: 28.5d
 			y: 6.0d
 		}
@@ -1907,17 +2016,26 @@
 			dependencies: ["2917E1F587244EAA"]
 			description: ["让你方便一点"]
 			id: "2A7DCD5C4BED8E3D"
+			optional: true
 			rewards: [{
 				command: "/execute in kubejs:ancient_world run tp 0 200 0"
 				elevate_perms: true
 				id: "22B3FCAD4E46DCCA"
 				type: "command"
 			}]
-			tasks: [{
-				id: "3E0B96E6350FED35"
-				title: "去远古世界"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "3E0B96E6350FED35"
+					title: "去远古世界"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "4D86490802C9358F"
+					item: { Count: 64, id: "minecraft:diorite" }
+					type: "item"
+				}
+			]
 			x: 0.0d
 			y: 4.0d
 		}
