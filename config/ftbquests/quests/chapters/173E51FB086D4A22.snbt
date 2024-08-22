@@ -240,6 +240,10 @@
 					optional_task: true
 					type: "item"
 				}
+				{
+					id: "1023D863BF2A4BA0"
+					type: "checkmark"
+				}
 			]
 			title: "一些生物线的东西"
 			x: 10.0d
