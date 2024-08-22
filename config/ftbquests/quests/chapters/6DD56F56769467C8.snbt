@@ -895,6 +895,18 @@
 				"建议先做个一组多"
 			]
 			id: "5749CAD673EE6816"
+			rewards: [
+				{
+					id: "6C137C29946FFA6F"
+					item: "gtceu:primitive_robot_arm"
+					type: "item"
+				}
+				{
+					id: "1C6EB6E0A4F67497"
+					item: "gtceu:primitive_fluid_regulator"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			size: 1.2d
 			tasks: [{
