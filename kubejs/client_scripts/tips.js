@@ -53,7 +53,7 @@ ItemEvents.tooltip(event => {
     event.add("ad_astra:oxygen_loader", "§c仅合成，无法产出氧气")
     event.add(["gtceu:dimensionally_transcendent_dirt_forge", "gtceu:dimensionally_transcendent_steam_oven"], ["拥有524288的最大并行", "并且直接完成配方"])
     event.add(["gtceu:large_chemical_plant", "gtceu:chemical_plant"], "线圈等级每高出白铜一级能耗降低5%")
-    event.add(["gtceu:processing_plant", "gtceu:assemble_plant", "gtceu:separated_plant", "gtceu:mixed_plant"], ["耗能倍数x0.8", "耗时倍数x0.9", "每种模式都需要放入一个对应电压等级的机器才能运行", "电压等级每高出LV一级，最大并行数+4，上限为16"])
+    event.add(["gtceu:processing_plant", "gtceu:assemble_plant", "gtceu:separated_plant", "gtceu:mixed_plant"], ["耗能倍数x0.9", "耗时倍数x0.8", "每种模式都需要放入一个对应电压等级的机器才能运行", "电压等级每高出LV一级，最大并行数+4"])
     event.add("gtceu:space_elevator", ["可安装最多8个拓展模块", "查询JEI多方块信息获取模块位置", "提升电压等级可为模块提供耗时减免"])
     event.add("gtceu:suprachronal_assembly_line_module", "安装在超时空装配线两侧")
     event.add("gtceu:suprachronal_assembly_line", ["§8§l不可视之触", "可在两侧拓展模块，模块与主机共享并行数", "查询JEI多方块信息获取模块位置"])
