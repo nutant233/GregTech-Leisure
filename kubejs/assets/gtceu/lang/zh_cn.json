@@ -195,6 +195,8 @@
   "block.gtceu.mega_canner": "特大装罐机",
   "block.gtceu.mega_extractor": "特大相变仪",
   "block.gtceu.mega_presser": "特大机床",
+  "block.gtceu.mega_steam_input_hatch": "特大蒸汽输入仓",
+  "block.gtceu.mega_steam_output_hatch": "特大蒸汽输出仓",
   "block.gtceu.mega_wiremill": "特大线材轧机",
   "block.gtceu.mixed_plant": "通用混合厂",
   "block.gtceu.mv_dual_input_hatch": "§bMV§r输入总成",
@@ -1864,7 +1866,7 @@
   "tagprefix.mercury_stone": "水星石%s矿石",
   "tagprefix.moon_stone": "月石%s矿石",
   "tagprefix.nanoswarm": "%s纳米蜂群",
-  "tagprefix.titanstone": "泰坦星%s矿石",
   "tagprefix.plutostone": "冥王星%s矿石",
+  "tagprefix.titanstone": "土卫六%s矿石",
   "tagprefix.venus_stone": "金星石%s矿石"
 }
