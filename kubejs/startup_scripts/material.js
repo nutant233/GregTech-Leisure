@@ -231,6 +231,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.Echo.setProperty(PropertyKey.FLUID, new $FluidProperty(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()))
     GTMaterials.Graphite.setProperty(PropertyKey.INGOT, new $IngotProperty())
     GTMaterials.VanadiumSteel.addFlags(GTMaterialFlags.GENERATE_FRAME)
+    GTMaterials.Lutetium.setProperty(PropertyKey.INGOT, new $IngotProperty())
 
     event.create("barnarda_air")
         .gas()
@@ -699,6 +700,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .ingot()
         .fluid()
         .ore()
+        .addOreByproducts(GTMaterials.Europium)
         .blastTemp(14600, "higher", GTValues.VA[GTValues.UIV], 1200)
         .element(GTElements.get("uruium"))
         .color(0x87ceeb)
@@ -3527,6 +3529,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .dust()
         .fluid()
         .ore()
+        .addOreByproducts(GTMaterials.Lanthanum)
         .color(0xdede00)
         .iconSet(GTMaterialIconSet.BRIGHT)
 
@@ -3534,6 +3537,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .dust()
         .fluid()
         .ore()
+        .addOreByproducts(GTMaterials.Americium)
         .color(0xd36232)
         .iconSet(GTMaterialIconSet.BRIGHT)
 
