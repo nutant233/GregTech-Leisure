@@ -3789,7 +3789,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.FURNACE_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.dimensionally_transcendent_dirt_forge.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
-            Component.translatable("gtceu.furnace")))
+            Component.translatable("compass.node.gtceu.steam/steam_furnace")))
         .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 0.01, 1), (machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0)])
         .appearanceBlock(GTBlocks.CASING_COKE_BRICKS)
         .pattern(definition =>
