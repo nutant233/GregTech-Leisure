@@ -629,6 +629,13 @@ StartupEvents.registry("block", event => {
         .texture("south", "kubejs:block/speeding_pipe_side")
         .texture("east", "kubejs:block/speeding_pipe_side")
         .texture("west", "kubejs:block/speeding_pipe_side")
+    event.create("restraint_device", "basic")
+        .noValidSpawns(true)
+        .soundType("metal")
+        .mapColor("metal")
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("forge:mineable/wrench")
+        .requiresTool(true)
 
     //ctm
     event.create("dimension_injection_casing", "gtceu:renderer")
@@ -820,7 +827,7 @@ StartupEvents.registry("block", event => {
         .tagBlock("forge:mineable/wrench")
         .requiresTool(true)
         .textureOverrideRenderer("minecraft:block/cube_all", { "all": new ResourceLocation("kubejs", "block/degenerate_rhenium_constrained_casing") })
-    
+
     event.create("rhenium_reinforced_energy_glass", "gtceu:renderer_glass")
         .noValidSpawns(true)
         .soundType("metal")
@@ -830,15 +837,6 @@ StartupEvents.registry("block", event => {
         .requiresTool(true)
         .defaultTranslucent()
         .textureOverrideRenderer("minecraft:block/cube_all", { "all": new ResourceLocation("kubejs", "block/rhenium_reinforced_borosilicate_glass") })
-    
-    event.create("titaniumsteel_tictaranium_restraint_device", "gtceu:renderer")
-        .noValidSpawns(true)
-        .soundType("metal")
-        .mapColor("metal")
-        .tagBlock("mineable/pickaxe")
-        .tagBlock("forge:mineable/wrench")
-        .requiresTool(true)
-        .textureOverrideRenderer("minecraft:block/cube_all", { "all": new ResourceLocation("kubejs", "block/titaniumsteel_tictaranium_restraint_device") })
 })
 StartupEvents.registry("fluid", event => {
     event.create("gelid_cryotheum")

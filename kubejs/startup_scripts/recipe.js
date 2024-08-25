@@ -505,7 +505,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         })
 
     GTRecipeTypes.register("fuel_refining", "multiblock")
-        .setMaxIOSize(3, 1, 6, 1)
+        .setMaxIOSize(3, 0, 6, 1)
         .setEUIO("in")
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .addDataInfo(data => {
@@ -521,7 +521,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setSound(GTSoundEntries.ARC)
 
     GTRecipeTypes.register("atomic_energy_excitation", "multiblock")
-        .setMaxIOSize(6, 0, 9, 2)
+        .setMaxIOSize(3, 0, 6, 1)
         .setEUIO("in")
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .addDataInfo(data => {
