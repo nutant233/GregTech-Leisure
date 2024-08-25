@@ -14415,5 +14415,5 @@ ServerEvents.recipes((event) => {
         .itemOutputs("gtceu:data_orb")
         .EUt(1200)
         .duration(400)
-        .cleanroom(CleanroomType.STERILE_CLEANROOM)
+        .cleanroom(CleanroomType.CLEANROOM)
 })
