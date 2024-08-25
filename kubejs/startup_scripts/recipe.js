@@ -503,4 +503,36 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .addDataInfo(data => {
             return $LocalizationUtils.format("gtceu.recipe.frheat", $FormattingUtil.formatNumbers(data.getInt("FRheat")))
         })
+
+    GTRecipeTypes.register("fuel_refining", "multiblock")
+        .setMaxIOSize(3, 1, 6, 1)
+        .setEUIO("in")
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .addDataInfo(data => {
+            return $LocalizationUtils.format("gtceu.recipe.temperature", $FormattingUtil.formatNumbers(data.getInt("ebf_temp")))
+        })
+        .addDataInfo(data => {
+            let requiredCoil = $ICoilType.getMinRequiredType(data.getInt("ebf_temp"))
+            if (LDLib.isClient() && requiredCoil != null && requiredCoil.getMaterial() != null) {
+                return $LocalizationUtils.format("gtceu.recipe.coil.tier", $I18n.get(requiredCoil.getMaterial().getUnlocalizedName()))
+            }
+            return ""
+        })
+        .setSound(GTSoundEntries.ARC)
+
+    GTRecipeTypes.register("atomic_energy_excitation", "multiblock")
+        .setMaxIOSize(6, 0, 9, 2)
+        .setEUIO("in")
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .addDataInfo(data => {
+            return $LocalizationUtils.format("gtceu.recipe.temperature", $FormattingUtil.formatNumbers(data.getInt("ebf_temp")))
+        })
+        .addDataInfo(data => {
+            let requiredCoil = $ICoilType.getMinRequiredType(data.getInt("ebf_temp"))
+            if (LDLib.isClient() && requiredCoil != null && requiredCoil.getMaterial() != null) {
+                return $LocalizationUtils.format("gtceu.recipe.coil.tier", $I18n.get(requiredCoil.getMaterial().getUnlocalizedName()))
+            }
+            return ""
+        })
+        .setSound(GTSoundEntries.ARC)
 })
