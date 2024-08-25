@@ -2247,14 +2247,14 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     event.create("hyper_fuel_3")
         .fluid()
         .color(0x7a7c3c)
-        .components("1x hyper_fuel_2", "1x plutonium_241", "1x adamantine", "1x mendelevium")
+        .components("1x hyper_fuel_2", "1x plutonium_241", "1x adamantine", "1x lawrencium")
         .iconSet(GTMaterialIconSet.DULL)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
 
     event.create("hyper_fuel_4")
         .fluid()
         .color(0x3f4028)
-        .components("1x hyper_fuel_3", "1x californium", "1x neutronium", "1x taranium")
+        .components("1x hyper_fuel_3", "1x nobelium", "1x neutronium", "1x taranium")
         .iconSet(GTMaterialIconSet.DULL)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
 

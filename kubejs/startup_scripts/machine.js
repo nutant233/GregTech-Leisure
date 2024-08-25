@@ -4971,4 +4971,59 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.countBlock("Cooler", "gtceu:cooler")))
                 .build())
         .workableCasingRenderer("kubejs:block/fission_reactor_casing", "gtceu:block/multiblock/fusion_reactor")
+
+    event.create("atomic_energy_excitation_plant", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
+        .rotationState(RotationState.NON_Y_AXIS)
+        .recipeType("fuel_refining")
+        .recipeType("atomic_energy_excitation")
+        .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
+        .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
+        .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
+        .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
+            Component.translatable("gtceu.atomic_energy_excitation"), Component.translatable("gtceu.fuel_refining")))
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .appearanceBlock(() => Block.getBlock("kubejs:degenerate_rhenium_constrained_casing"))
+        .pattern((definition) =>
+            FactoryBlockPattern.start()
+                .aisle("                   ", "                   ", "                   ", "                   ", "         A         ", "        ABA        ", "        CCC        ", "        ABA        ", "         A         ", "                   ", "                   ", "                   ", "                   ")
+                .aisle("DDD             DDD", "EEE     AAA     EEE", "EEE   AA A AA   EEE", "EEE  A   A   A  EEE", " B   A  AAA  A   B ", " A  A  AA#AA  A  A ", " AAAB  CC#CC  BAAA ", "    A  AA#AA  A    ", "     A  AAA  A     ", "     A   A   A     ", "      AA A AA      ", "        ABA        ", "                   ")
+                .aisle("DDD     AAA     DDD", "E#E   AAFGFAA   E#E", "E#E  AHHAHAHHA  E#E", "E#E AHAAAHAAAHA E#E", "A#A AHA AIA AHA A#A", "AHAAFA B###B AFAAHA", "AFHHGA C#J#C AGHHFA", " AAAFA B###B AFAAA ", "    AHA AIA AHA    ", "    AHAAAHAAAHA    ", "     AHHAHAHHA     ", "      AAFGFAA      ", "        AAA        ")
+                .aisle("DDD             DDD", "EEE     A~A     EEE", "EEE   AA A AA   EEE", "EEE  A   A   A  EEE", " B   A  AAA  A   B ", " A  A  AA#AA  A  A ", " AAAB  CC#CC  BAAA ", "    A  AA#AA  A    ", "     A  AAA  A     ", "     A   A   A     ", "      AA A AA      ", "        ABA        ", "                   ")
+                .aisle("                   ", "                   ", "                   ", "                   ", "         A         ", "        ABA        ", "        CCC        ", "        ABA        ", "         A         ", "                   ", "                   ", "                   ", "                   ")
+                .where("~", Predicates.controller(Predicates.blocks(definition.get())))
+                .where("A", Predicates.blocks("kubejs:degenerate_rhenium_constrained_casing"))
+                .where("B", Predicates.blocks("kubejs:rhenium_reinforced_energy_glass"))
+                .where("C", Predicates.heatingCoils())
+                .where("D", Predicates.blocks("kubejs:dimensionally_transcendent_casing"))
+                .where("E", Predicates.blocks("kubejs:dimension_injection_casing")
+                    .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setMaxGlobalLimited(2))
+                    .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1))
+                    .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(4))
+                    .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(1))
+                    .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMaxGlobalLimited(1))
+                    .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+                    .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1)))
+                .where("F", Predicates.blocks("kubejs:accelerated_pipeline"))
+                .where("G", Predicates.blocks("kubejs:titaniumsteel_tictaranium_restraint_device"))
+                .where("H", Predicates.blocks("kubejs:neutronium_pipe_casing"))
+                .where("I", Predicates.blocks("kubejs:containment_field_generator"))
+                .where("J", Predicates.blocks("kubejs:aggregatione_core"))
+                .where(" ", Predicates.any())
+                .where("#", Predicates.air())
+                .build())
+        .beforeWorking((machine, recipe) => {
+            if (recipe.data.getInt("ebf_temp") <= machine.getCoilType().getCoilTemperature()) {
+                return true
+            }
+            machine.getRecipeLogic().interruptRecipe()
+            return false
+        })
+        .additionalDisplay((controller, components) => {
+            if (controller.isFormed()) {
+                components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of($FormattingUtil.formatNumbers(controller.getCoilType().getCoilTemperature()) + "K").red()))
+            }
+        })
+        .workableCasingRenderer("kubejs:block/degenerate_rhenium_constrained_casing", "gtceu:block/multiblock/fusion_reactor")
+            
+
 })
