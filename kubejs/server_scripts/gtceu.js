@@ -18,6 +18,7 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "gtceu:extruder/nan_certificate" })
     event.remove({ id: "gtceu:shaped/maintenance_hatch_cleaning" })
     event.remove({ id: "gtceu:forming_press/credit_cupronickel" })
+    event.remove({ id: "gtceu:electrolyzer/tungstic_acid_electrolysis" })
     event.shapeless("gtceu:suprachronal_assembly_line_module", "gtceu:suprachronal_assembly_line")
     event.shapeless("gtceu:suprachronal_assembly_line", "gtceu:suprachronal_assembly_line_module")
     event.shapeless("gtceu:spacetime_small_fluid_pipe", ["gtceu:spacetime_tiny_fluid_pipe", "gtceu:spacetime_tiny_fluid_pipe"])
@@ -3160,7 +3161,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.forming_press("kubejs:scintillator_crystal")
-        .itemInputs("2x gtceu:mithril_plate", "gtceu:thallium_thulium_doped_caesium_iodide_dust", "gtceu:polycyclic_aromatic_mixture_dust", "2x gtceu:tungsten_dust", "2x gtceu:bismuth_dust", "2x gtceu:germanium_dust")
+        .itemInputs("gtceu:vibranium_plate", "gtceu:thallium_thulium_doped_caesium_iodide_dust", "gtceu:polycyclic_aromatic_mixture_dust", "gtceu:cadmium_tungstate_dust", "gtceu:bismuth_germanate_dust", "2x gtceu:mithril_plate")
         .itemOutputs("kubejs:scintillator_crystal")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(280)
@@ -4031,15 +4032,15 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(200)
 
-    gtr.chemical_reactor("gtceu:germanium_dioxide_solution_dust")
-        .inputFluids("gtceu:germanium_tetrachloride_solution 1000", "minecraft:water 2000")
-        .itemOutputs("gtceu:germanium_dioxide_solution_dust")
-        .outputFluids("gtceu:diluted_hydrochloric_acid 4000")
+    gtr.dehydrator("gtceu:germanium_dioxide_dust")
+        .inputFluids("gtceu:germanium_tetrachloride_solution 1000", "gtceu:hydrogen 4000")
+        .itemOutputs("gtceu:germanium_dioxide_dust")
+        .outputFluids("gtceu:hydrochloric_acid 4000")
         .EUt(30)
         .duration(800)
 
     gtr.electric_blast_furnace("gtceu:germanium_dust")
-        .itemInputs("gtceu:germanium_dioxide_solution_dust")
+        .itemInputs("gtceu:germanium_dioxide_dust")
         .inputFluids("gtceu:hydrogen 4000")
         .itemOutputs("gtceu:germanium_dust")
         .EUt(120)
@@ -4186,12 +4187,11 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.HV])
         .duration(200)
 
-    gtr.chemical_reactor("gtceu:boron_trioxide_dust")
+    gtr.dehydrator("gtceu:boron_trioxide_dust")
         .inputFluids("gtceu:boric_acide 2000")
         .itemOutputs("5x gtceu:boron_trioxide_dust")
         .EUt(GTValues.VA[GTValues.HV])
         .duration(400)
-        .circuit(1)
 
     gtr.chemical_reactor("gtceu:pyridine")
         .inputFluids("gtceu:formaldehyde 2000", "gtceu:acetaldehyde 1000", "gtceu:ammonia 1000")
@@ -4253,10 +4253,10 @@ ServerEvents.recipes((event) => {
         .circuit(4)
         .duration(80)
 
-    gtr.mixer("gtceu:silica_gel_dust")
+    gtr.mixer("gtceu:silica_gel_base")
         .itemInputs("3x gtceu:silicon_dioxide_dust", "3x gtceu:sodium_hydroxide_dust")
-        .inputFluids("minecraft:water 1000")
-        .itemOutputs("3x gtceu:silica_gel_dust")
+        .inputFluids("gtceu:distilled_water 1000")
+        .outputFluids("gtceu:silica_gel_base 1000")
         .EUt(120)
         .duration(80)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -4660,7 +4660,7 @@ ServerEvents.recipes((event) => {
             "16x gtceu:chromium_trioxide_dust",
             "14x gtceu:phosphorus_pentoxide_dust",
             "12x gtceu:cubic_zirconia_dust",
-            "12x gtceu:germanium_dioxide_solution_dust",
+            "12x gtceu:germanium_dioxide_dust",
             "12x gtceu:silicon_dioxide_dust",
             "10x gtceu:arsenic_trioxide_dust",
             "10x gtceu:antimony_trioxide_dust",
@@ -5327,10 +5327,10 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(150)
 
-    gtr.large_chemical_reactor("gtceu:polyimide")
+    gtr.large_chemical_reactor("gtceu:paa")
         .itemInputs("18x gtceu:pyromellitic_dianhydride_dust")
         .inputFluids("gtceu:oxydianiline 1000")
-        .outputFluids("gtceu:polyimide 1008")
+        .outputFluids("gtceu:paa 1000")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(400)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -5640,10 +5640,10 @@ ServerEvents.recipes((event) => {
         .duration(160)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.chemical_reactor("gtceu:stearic_acid")
+    gtr.chemical_reactor("gtceu:deglycerated_soap")
         .inputFluids("gtceu:soap 1000")
         .itemInputs("gtceu:salt_dust")
-        .outputFluids("gtceu:stearic_acid 800", "gtceu:glycerol 200")
+        .outputFluids("gtceu:deglycerated_soap 800", "gtceu:glycerol 200")
         .EUt(2000)
         .duration(160)
 
@@ -11125,11 +11125,9 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(210)
 
-    gtr.large_chemical_reactor("gtceu:phthalic_anhydride_dust")
+    gtr.dehydrator("gtceu:phthalic_anhydride_dust")
         .inputFluids("gtceu:phthalic_acid 1000")
-        .circuit(1)
         .itemOutputs("15x gtceu:phthalic_anhydride_dust")
-        .outputFluids("minecraft:water 1000")
         .EUt(480)
         .duration(400)
 
@@ -11766,7 +11764,7 @@ ServerEvents.recipes((event) => {
         .EUt(30)
         .duration(80)
 
-    gtr.distillery("kubejs:graphene_iron_plate")
+    gtr.dehydrator("kubejs:graphene_iron_plate")
         .notConsumable("gtceu:long_yttrium_barium_cuprate_rod")
         .inputFluids("gtceu:glucose_iron_solution 1000")
         .itemOutputs("kubejs:graphene_iron_plate")
@@ -12889,7 +12887,7 @@ ServerEvents.recipes((event) => {
         .EUt(1920)
         .duration(200)
 
-    gtr.large_chemical_reactor("gtceu:monomethylhydrazine")
+    gtr.dehydrator("gtceu:monomethylhydrazine")
         .inputFluids("gtceu:hydrazine 1000", "gtceu:hydrogen 2000")
         .itemInputs("gtceu:carbon_dust")
         .outputFluids("gtceu:monomethylhydrazine 1000")
@@ -14588,4 +14586,89 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(800)
 
+    gtr.dehydrator("gtceu:polyimide")
+        .inputFluids("gtceu:paa 144")
+        .outputFluids("gtceu:polyimide 144")
+        .EUt(30)
+        .duration(270)
+
+    gtr.dehydrator("gtceu:stearic_acid")
+        .inputFluids("gtceu:deglycerated_soap 1000")
+        .outputFluids("gtceu:stearic_acid 800")
+        .itemOutputs("gtceu:salt_dust")
+        .EUt(2000)
+        .duration(160)
+
+    gtr.dehydrator("gtceu:tungsten_trioxide_dust")
+        .itemInputs("7x gtceu:tungstic_acid_dust")
+        .itemOutputs("4x gtceu:tungsten_trioxide_dust")
+        .EUt(120)
+        .duration(150)
+
+    gtr.dehydrator("gtceu:silica_gel_dust")
+        .inputFluids("gtceu:silica_gel_base 1000")
+        .itemOutputs("3x gtceu:silica_gel_dust", "2x gtceu:salt_dust")
+        .EUt(480)
+        .duration(130)
+        .cleanroom(CleanroomType.CLEANROOM)
+
+    gtr.dehydrator("gtceu:salt_dust")
+        .inputFluids("gtceu:salt_water 1000")
+        .itemOutputs("2x gtceu:salt_dust")
+        .EUt(30)
+        .duration(160)
+
+    gtr.chemical_reactor("gtceu:tungsten_dust")
+        .inputFluids("gtceu:hydrogen 6000")
+        .itemInputs("4x gtceu:tungsten_trioxide_dust")
+        .outputFluids("minecraft:water 3000")
+        .itemOutputs("gtceu:tungsten_dust")
+        .EUt(120)
+        .duration(60)
+
+    gtr.chemical_reactor("gtceu:tungsten_trioxide_dust")
+        .itemInputs("2x gtceu:tungsten_carbide_dust")
+        .inputFluids("gtceu:oxygen 4000")
+        .itemOutputs("4x gtceu:tungsten_trioxide_dust")
+        .outputFluids("gtceu:carbon_monoxide 1000")
+        .EUt(480)
+        .duration(200)
+
+    gtr.electric_blast_furnace("gtceu:cadmium_tungstate_dust")
+        .itemInputs("4x gtceu:tungsten_trioxide_dust", "2x gtceu:cadmium_sulfide_dust")
+        .inputFluids("gtceu:oxygen 3000")
+        .itemOutputs("6x gtceu:cadmium_tungstate_dust")
+        .outputFluids("gtceu:sulfur_dioxide 1000")
+        .EUt(120)
+        .duration(320)
+        .blastFurnaceTemp(2800)
+
+    gtr.alloy_smelter("gtceu:cadmium_sulfide_dust")
+        .itemInputs("1x gtceu:cadmium_dust", "1x gtceu:sulfur_dust")
+        .itemOutputs("2x gtceu:cadmium_sulfide_dust")
+        .EUt(30)
+        .duration(2400)
+
+    gtr.electric_blast_furnace("gtceu:bismuth_germanate_dust")
+        .itemInputs("3x gtceu:germanium_dioxide_dust")
+        .inputFluids("gtceu:bismuth_nitrate_solution 4000")
+        .itemOutputs("33x gtceu:bismuth_germanate_dust")
+        .outputFluids("gtceu:nitrogen_dioxide 12000")
+        .EUt(5000000)
+        .duration(80)
+        .blastFurnaceTemp(7600)
+
+    gtr.chemical_reactor("gtceu:germanium_dioxide_dust")
+        .itemInputs("gtceu:germanium_dust")
+        .inputFluids("gtceu:oxygen 2000")
+        .itemOutputs("3x gtceu:germanium_dioxide_dust")
+        .EUt(120)
+        .duration(400)
+
+    gtr.large_chemical_reactor("gtceu:bismuth_nitrate_solution")
+        .itemInputs("gtceu:bismuth_dust")
+        .inputFluids("gtceu:nitric_acid 6000")
+        .outputFluids("gtceu:bismuth_nitrate_solution 1000", "gtceu:nitrogen_dioxide 3000", "minecraft:water 2000")
+        .EUt(30)
+        .duration(350)
 })

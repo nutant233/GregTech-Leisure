@@ -1324,7 +1324,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet(GTMaterialIconSet.DULL)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
 
-    event.create("germanium_dioxide_solution")
+    event.create("germanium_dioxide")
         .dust()
         .color(0xffffff)
         .components("1x germanium", "2x oxygen")
@@ -3560,6 +3560,48 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .element(GTElements.get("copper76"))
         .color(0xe77c56)
         .iconSet(GTMaterialIconSet.BRIGHT)
+
+    event.create("cadmium_sulfide")
+        .dust()
+        .components("1x cadmium", "1x sulfur")
+        .color(0xd4ba19)
+        .iconSet(GTMaterialIconSet.DULL)
+
+    event.create("cadmium_tungstate")
+        .dust()
+        .components("1x cadmium", "1x tungsten", "4x oxygen")
+        .color(0x757770)
+        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+        .iconSet(GTMaterialIconSet.DULL)
+
+    event.create("bismuth_germanate")
+        .dust()
+        .components("12x bismuth", "1x germanium", "20x oxygen")
+        .color(0x4ea839)
+        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+        .iconSet(GTMaterialIconSet.DULL)
+
+    event.create("bismuth_nitrate_solution")
+        .fluid()
+        .components("1x water", "1x bismuth", "3x nitrogen", "9x oxygen")
+        .color(0xa4a7a8)
+        .iconSet(GTMaterialIconSet.DULL)
+
+    event.create("paa")
+        .fluid()
+        .components("22x carbon", "14x hydrogen", "2x nitrogen", "7x oxygen")
+        .color(0xead05e)
+        .iconSet(GTMaterialIconSet.DULL)
+
+    event.create("silica_gel_base")
+        .fluid()
+        .color(0x39967a)
+        .iconSet(GTMaterialIconSet.DULL)
+
+    event.create("deglycerated_soap")
+        .fluid()
+        .color(0xffb000)
+        .iconSet(GTMaterialIconSet.DULL)
 })
 GTCEuStartupEvents.materialModification(() => {
     GTMaterials.get("zirconium_hafnium_chloride").setFormula("ZrHfCl₄")
