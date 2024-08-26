@@ -596,22 +596,22 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     function getHyperReactorMaxParallel(machine, recipe) {
         let canParallel = false
         switch ($RecipeHelper.getOutputEUt(recipe)) {
-            case GTValues.V[GTValues.UHV]:
+            case GTValues.V[GTValues.UEV]:
                 if (machine.inputFluid("gtceu:orichalcum_plasma 1")) {
                     canParallel = true
                 }
                 break
-            case GTValues.V[GTValues.UEV]:
+            case GTValues.V[GTValues.UIV]:
                 if (machine.inputFluid("gtceu:enderium_plasma 1")) {
                     canParallel = true
                 }
                 break
-            case GTValues.V[GTValues.UIV]:
+            case GTValues.V[GTValues.UXV]:
                 if (machine.inputFluid("gtceu:infuscolium_plasma 1")) {
                     canParallel = true
                 }
                 break
-            case GTValues.V[GTValues.UXV]:
+            case GTValues.V[GTValues.OpV]:
                 if (machine.inputFluid("gtceu:metastable_hassium_plasma 1")) {
                     canParallel = true
                 }

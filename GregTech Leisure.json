@@ -112,7 +112,7 @@
       "--launchTarget",
       "forgeclient",
       "--fml.forgeVersion",
-      "47.3.5",
+      "47.3.7",
       "--fml.mcVersion",
       "1.20.1",
       "--fml.forgeGroup",
@@ -500,24 +500,24 @@
       }
     },
     {
-      "name": "net.minecraftforge:fmlloader:1.20.1-47.3.5",
+      "name": "net.minecraftforge:fmlloader:1.20.1-47.3.7",
       "downloads": {
         "artifact": {
-          "path": "net/minecraftforge/fmlloader/1.20.1-47.3.5/fmlloader-1.20.1-47.3.5.jar",
-          "url": "https://maven.minecraftforge.net/net/minecraftforge/fmlloader/1.20.1-47.3.5/fmlloader-1.20.1-47.3.5.jar",
-          "sha1": "0dc36aaad8320f6c0a0a006ba6dfe8b548c0a0ec",
-          "size": 264783
+          "path": "net/minecraftforge/fmlloader/1.20.1-47.3.7/fmlloader-1.20.1-47.3.7.jar",
+          "url": "https://maven.minecraftforge.net/net/minecraftforge/fmlloader/1.20.1-47.3.7/fmlloader-1.20.1-47.3.7.jar",
+          "sha1": "2e7788b018c38f524f4c71715b678e2e8675c743",
+          "size": 264940
         }
       }
     },
     {
-      "name": "net.minecraftforge:fmlearlydisplay:1.20.1-47.3.5",
+      "name": "net.minecraftforge:fmlearlydisplay:1.20.1-47.3.7",
       "downloads": {
         "artifact": {
-          "path": "net/minecraftforge/fmlearlydisplay/1.20.1-47.3.5/fmlearlydisplay-1.20.1-47.3.5.jar",
-          "url": "https://maven.minecraftforge.net/net/minecraftforge/fmlearlydisplay/1.20.1-47.3.5/fmlearlydisplay-1.20.1-47.3.5.jar",
-          "sha1": "26dd5e9a33fb4938a189b2766b8d5f1daec1ab48",
-          "size": 170832
+          "path": "net/minecraftforge/fmlearlydisplay/1.20.1-47.3.7/fmlearlydisplay-1.20.1-47.3.7.jar",
+          "url": "https://maven.minecraftforge.net/net/minecraftforge/fmlearlydisplay/1.20.1-47.3.7/fmlearlydisplay-1.20.1-47.3.7.jar",
+          "sha1": "cd216c5307ab651be8363097c8769ae26e9f36c8",
+          "size": 170425
         }
       }
     },
@@ -1861,21 +1861,21 @@
       "sha1": "6c48521eed01fe2e8ecdadbd5ae348415f3c47da",
       "size": 8001795
     },
-    "client": {
-      "url": "https://piston-data.mojang.com/v1/objects/0c3ec587af28e5a785c0b4a7b8a30f9a8f78f838/client.jar",
-      "sha1": "0c3ec587af28e5a785c0b4a7b8a30f9a8f78f838",
-      "size": 23028853
-    },
     "server": {
       "url": "https://piston-data.mojang.com/v1/objects/84194a2f286ef7c14ed7ce0090dba59902951553/server.jar",
       "sha1": "84194a2f286ef7c14ed7ce0090dba59902951553",
       "size": 47791053
+    },
+    "client": {
+      "url": "https://piston-data.mojang.com/v1/objects/0c3ec587af28e5a785c0b4a7b8a30f9a8f78f838/client.jar",
+      "sha1": "0c3ec587af28e5a785c0b4a7b8a30f9a8f78f838",
+      "size": 23028853
     }
   },
   "logging": {},
   "type": "release",
-  "time": "2024-07-06T05:45:16+08:00",
-  "releaseTime": "2024-07-06T05:45:16+08:00",
+  "time": "2024-08-21T04:16:03+08:00",
+  "releaseTime": "2024-08-21T04:16:03+08:00",
   "minimumLauncherVersion": 21,
   "root": true,
   "patches": [
@@ -3399,15 +3399,15 @@
           "sha1": "6c48521eed01fe2e8ecdadbd5ae348415f3c47da",
           "size": 8001795
         },
-        "client": {
-          "url": "https://piston-data.mojang.com/v1/objects/0c3ec587af28e5a785c0b4a7b8a30f9a8f78f838/client.jar",
-          "sha1": "0c3ec587af28e5a785c0b4a7b8a30f9a8f78f838",
-          "size": 23028853
-        },
         "server": {
           "url": "https://piston-data.mojang.com/v1/objects/84194a2f286ef7c14ed7ce0090dba59902951553/server.jar",
           "sha1": "84194a2f286ef7c14ed7ce0090dba59902951553",
           "size": 47791053
+        },
+        "client": {
+          "url": "https://piston-data.mojang.com/v1/objects/0c3ec587af28e5a785c0b4a7b8a30f9a8f78f838/client.jar",
+          "sha1": "0c3ec587af28e5a785c0b4a7b8a30f9a8f78f838",
+          "size": 23028853
         }
       },
       "logging": {
@@ -3434,14 +3434,14 @@
     },
     {
       "id": "forge",
-      "version": "47.3.5",
+      "version": "47.3.7",
       "priority": 30000,
       "arguments": {
         "game": [
           "--launchTarget",
           "forgeclient",
           "--fml.forgeVersion",
-          "47.3.5",
+          "47.3.7",
           "--fml.mcVersion",
           "1.20.1",
           "--fml.forgeGroup",
@@ -3769,32 +3769,32 @@
           }
         },
         {
-          "name": "net.minecraftforge:fmlloader:1.20.1-47.3.5",
+          "name": "net.minecraftforge:fmlloader:1.20.1-47.3.7",
           "downloads": {
             "artifact": {
-              "path": "net/minecraftforge/fmlloader/1.20.1-47.3.5/fmlloader-1.20.1-47.3.5.jar",
-              "url": "https://maven.minecraftforge.net/net/minecraftforge/fmlloader/1.20.1-47.3.5/fmlloader-1.20.1-47.3.5.jar",
-              "sha1": "0dc36aaad8320f6c0a0a006ba6dfe8b548c0a0ec",
-              "size": 264783
+              "path": "net/minecraftforge/fmlloader/1.20.1-47.3.7/fmlloader-1.20.1-47.3.7.jar",
+              "url": "https://maven.minecraftforge.net/net/minecraftforge/fmlloader/1.20.1-47.3.7/fmlloader-1.20.1-47.3.7.jar",
+              "sha1": "2e7788b018c38f524f4c71715b678e2e8675c743",
+              "size": 264940
             }
           }
         },
         {
-          "name": "net.minecraftforge:fmlearlydisplay:1.20.1-47.3.5",
+          "name": "net.minecraftforge:fmlearlydisplay:1.20.1-47.3.7",
           "downloads": {
             "artifact": {
-              "path": "net/minecraftforge/fmlearlydisplay/1.20.1-47.3.5/fmlearlydisplay-1.20.1-47.3.5.jar",
-              "url": "https://maven.minecraftforge.net/net/minecraftforge/fmlearlydisplay/1.20.1-47.3.5/fmlearlydisplay-1.20.1-47.3.5.jar",
-              "sha1": "26dd5e9a33fb4938a189b2766b8d5f1daec1ab48",
-              "size": 170832
+              "path": "net/minecraftforge/fmlearlydisplay/1.20.1-47.3.7/fmlearlydisplay-1.20.1-47.3.7.jar",
+              "url": "https://maven.minecraftforge.net/net/minecraftforge/fmlearlydisplay/1.20.1-47.3.7/fmlearlydisplay-1.20.1-47.3.7.jar",
+              "sha1": "cd216c5307ab651be8363097c8769ae26e9f36c8",
+              "size": 170425
             }
           }
         }
       ],
       "logging": {},
       "type": "release",
-      "time": "2024-07-06T05:45:16+08:00",
-      "releaseTime": "2024-07-06T05:45:16+08:00"
+      "time": "2024-08-21T04:16:03+08:00",
+      "releaseTime": "2024-08-21T04:16:03+08:00"
     }
   ]
 }
