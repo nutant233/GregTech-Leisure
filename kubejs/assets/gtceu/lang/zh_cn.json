@@ -803,6 +803,7 @@
   "gtceu.multiblock.large_combustion_engine.Joint_boosted": "§b联合促燃中",
   "gtceu.multiblock.large_combustion_engine.supply_dinitrogen_tetroxide_to_boost": "提供四氧化二氮来联合促燃",
   "gtceu.multiblock.laser.tooltip": "允许使用激光仓",
+  "gtceu.multiblock.pattern.error.tier": "§c必须使用同种等级方块§r",
   "gtceu.nano_forge": "纳米蜂群工厂",
   "gtceu.naquadah_reactor": "硅岩反应堆",
   "gtceu.neutron_activator": "中子活化",
