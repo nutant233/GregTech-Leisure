@@ -538,4 +538,13 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
             return ""
         })
         .setSound(GTSoundEntries.ARC)
+
+    GTRecipeTypes.register("component_assembly_line", "multiblock")
+        .setMaxIOSize(9, 1, 9, 0)
+        .setEUIO("in")
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .addDataInfo(data => {
+            return $LocalizationUtils.format("gtceu.recipe.ca_tier", $FormattingUtil.formatNumbers(data.getInt("CATier")))
+        })
+        .setSound(GTSoundEntries.ASSEMBLER)
 })

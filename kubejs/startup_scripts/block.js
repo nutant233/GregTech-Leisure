@@ -828,6 +828,16 @@ StartupEvents.registry("block", event => {
         .requiresTool(true)
         .defaultTranslucent()
         .textureOverrideRenderer("minecraft:block/cube_all", { "all": new ResourceLocation("kubejs", "block/rhenium_reinforced_borosilicate_glass") })
+
+    event.create("hsss_reinforced_borosilicate_glass", "gtceu:renderer_glass")
+        .noValidSpawns(true)
+        .soundType("metal")
+        .mapColor("metal")
+        .tagBlock("mineable/pickaxe")
+        .tagBlock("forge:mineable/wrench")
+        .requiresTool(true)
+        .defaultTranslucent()
+        .textureOverrideRenderer("minecraft:block/cube_all", { "all": new ResourceLocation("kubejs", "block/hsss_reinforced_borosilicate_glass")})
 })
 StartupEvents.registry("fluid", event => {
     event.create("gelid_cryotheum")
