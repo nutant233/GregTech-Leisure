@@ -1227,7 +1227,7 @@ ServerEvents.recipes((event) => {
             .CWUt(64))
 
     gtr.assembly_line("gtceu:stellar_forge")
-        .itemInputs("4x kubejs:stellar_containment_casing",
+        .itemInputs("4x gtceu:stellar_containment_casing",
             "64x gtceu:naquadah_alloy_bolt",
             "32x gtceu:trinium_plate",
             "64x gtceu:darmstadtium_screw",
@@ -3610,6 +3610,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:exciteddtec 10000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
 
     gtr.annihilate_generator("kubejs:neutronium_antimatter_fuel_rod")
@@ -4541,6 +4542,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:vibranium_plasma 1152")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     //zylon
     gtr.electric_blast_furnace("gtceu:zylon_dust")
@@ -4631,6 +4633,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:taranium_rich_liquid_helium_4_plasma 10000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.fermenter("gtceu:taranium_dust")
         .inputFluids("gtceu:taranium_rich_liquid_helium_4 1000")
@@ -4995,6 +4998,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:hot_oganesson 16000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     //hassium
     gtr.mixer("gtceu:scandium_titanium_50_mixture")
@@ -5009,6 +5013,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:metastable_hassium_plasma 2304")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     //kevlar
     gtr.chemical_bath("gtceu:kevlar_plate")
@@ -5187,6 +5192,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:cosmic_mesh_plasma 1000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:chaos_plasma")
         .itemInputs("kubejs:chaos_shard")
@@ -5816,6 +5822,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:moscovium 2304")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("gtceu:livermorium")
         .itemInputs("kubejs:antimatter_charge")
@@ -5823,6 +5830,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:livermorium 2304")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("gtceu:tennessine")
         .itemInputs("kubejs:naquadria_charge")
@@ -5830,6 +5838,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:tennessine 4608")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.precision_assembler("kubejs:ctc_guidance_unit")
         .itemInputs("64x kubejs:cosmic_ram_chip", "kubejs:supracausal_processing_core", "gtceu:data_module", "kubejs:nuclear_clock")
@@ -7726,6 +7735,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:temporalfluid 1000")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(800)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.stellar_forge("gtceu:temporalfluid")
         .itemInputs("4x kubejs:quantum_chromodynamic_charge", "kubejs:hypercube")
@@ -7733,6 +7743,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:temporalfluid 500", "gtceu:spatialfluid 500")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(800)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:dimensionallytranscendentresidue")
         .inputFluids("gtceu:dimensionallytranscendentcrudecatalyst 100", "gtceu:raw_star_matter_plasma 100")
@@ -7907,10 +7918,10 @@ ServerEvents.recipes((event) => {
         .EUt(16)
         .duration(50)
 
-    gtr.assembler("kubejs:stellar_containment_casing")
+    gtr.assembler("gtceu:stellar_containment_casing")
         .itemInputs("gtceu:trinium_frame", "16x gtceu:trinium_screw", "gtceu:uv_field_generator", "gtceu:yttrium_barium_cuprate_quadruple_wire", "4x gtceu:naquadah_alloy_rod", "4x gtceu:double_highurabilityompoundteel_plate")
         .inputFluids("gtceu:neutronium 144")
-        .itemOutputs("kubejs:stellar_containment_casing")
+        .itemOutputs("gtceu:stellar_containment_casing")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(140)
 
@@ -8029,6 +8040,7 @@ ServerEvents.recipes((event) => {
             .outputFluids(fusion_reactor[2] + " " + fusion_reactor[3])
             .EUt(GTValues.VA[GTValues.UEV])
             .duration(200)
+        ["addData(java.lang.String,int)"]("SCTier", 1)
     })
     gtr.stellar_forge("kubejs:neutron_plasma_containment_cell")
         .inputFluids("gtceu:neutronium 1000", "gtceu:heavy_lepton_mixture 1000")
@@ -8036,6 +8048,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:neutron_plasma_containment_cell")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("gtceu:free_proton_gas")
         .itemInputs("kubejs:naquadria_charge", "kubejs:contained_high_density_protonic_matter")
@@ -8043,6 +8056,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:time_dilation_containment_unit")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("gtceu:enderium_plasma")
         .inputFluids("gtceu:ender_eye 2304", "gtceu:lead 2304", "gtceu:bismuth 2304", "gtceu:platinum 1152", "gtceu:liquid_ender_air 100000")
@@ -8050,6 +8064,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:enderium_plasma 2304")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("gtceu:adamantium_plasma")
         .inputFluids("gtceu:orichalcum 576", "gtceu:tin 1024", "gtceu:antimony 864", "gtceu:iron 1152", "gtceu:mercury 1000")
@@ -8057,12 +8072,14 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:adamantium_plasma 2304")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("gtceu:degenerate_rhenium_plasma")
         .itemInputs("kubejs:naquadria_charge", "5x gtceu:double_rhenium_plate")
         .outputFluids("gtceu:degenerate_rhenium_plasma 10000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("gtceu:infuscolium_plasma")
         .inputFluids("gtceu:adamantine 2304", "gtceu:mana 10000")
@@ -8070,6 +8087,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:infuscolium_plasma 2304")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("gtceu:legendarium_plasma")
         .inputFluids("gtceu:naquadriatictaranium 576", "gtceu:trinium 288", "gtceu:duranium 288", "gtceu:tritanium 288", "gtceu:orichalcum 288", "gtceu:mithril 288", "gtceu:adamantium 288", "gtceu:adamantine 288", "gtceu:vibranium 288")
@@ -8078,12 +8096,14 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:plasma_containment_cell")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     gtr.stellar_forge("gtceu:quark_gluon_plasma")
         .itemInputs("kubejs:leptonic_charge", "10x gtceu:degenerate_rhenium_dust")
         .outputFluids("gtceu:quark_gluon_plasma 10000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     gtr.stellar_forge("gtceu:heavy_quark_degenerate_matter_plasma")
         .inputFluids("gtceu:heavy_quark_enriched_mixture 1152", "gtceu:flerovium 144", "gtceu:oganesson 144", "gtceu:hassium 144", "gtceu:deuterium 1000")
@@ -8091,12 +8111,14 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:heavy_quark_degenerate_matter_plasma 1152")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     gtr.stellar_forge("kubejs:contained_high_density_protonic_matter")
         .itemInputs("kubejs:leptonic_charge", "kubejs:time_dilation_containment_unit", "kubejs:charged_triplet_neutronium_sphere")
         .itemOutputs("kubejs:contained_high_density_protonic_matter")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     gtr.stellar_forge("gtceu:crystalmatrix_plasma")
         .itemInputs("kubejs:leptonic_charge", "avaritia:crystal_matrix", "16x kubejs:corporeal_matter")
@@ -8104,6 +8126,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:crystalmatrix_plasma 1000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     gtr.stellar_forge("gtceu:starmetal_plasma")
         .itemInputs("kubejs:leptonic_charge", "10x kubejs:resonating_gem")
@@ -8111,18 +8134,21 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:starmetal_plasma 1000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     gtr.stellar_forge("gtceu:high_energy_quark_gluon_plasma")
         .itemInputs("kubejs:quantum_chromodynamic_charge", "10x gtceu:double_heavy_quark_degenerate_matter_plate")
         .outputFluids("gtceu:high_energy_quark_gluon_plasma 2000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     gtr.stellar_forge("gtceu:quantumchromodynamically_confined_matter_plasma")
         .itemInputs("kubejs:quantum_chromodynamic_charge", "20x kubejs:quantumchromodynamic_protective_plating")
         .outputFluids("gtceu:quantumchromodynamically_confined_matter_plasma 2000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.stellar_forge("gtceu:draconiumawakened_plasma")
         .inputFluids("gtceu:draconium 2000", "gtceu:quantumchromodynamically_confined_matter 2000")
@@ -8130,6 +8156,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:draconiumawakened_plasma 2000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.stellar_forge("gtceu:dense_neutron_plasma")
         .inputFluids("gtceu:periodicium 2736", "gtceu:gluons 6000", "gtceu:heavy_lepton_mixture 6000")
@@ -8137,12 +8164,14 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:dense_neutron_plasma 6000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.stellar_forge("kubejs:extremely_durable_plasma_cell")
         .itemInputs("kubejs:quantum_chromodynamic_charge", "2x kubejs:dense_neutron_plasma_cell")
         .itemOutputs("kubejs:cosmic_neutron_plasma_cell", "kubejs:extremely_durable_plasma_cell")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.stellar_forge("gtceu:infinity_ingot")
         .inputFluids("gtceu:crystalmatrix 2000", "gtceu:cosmicneutronium 1000")
@@ -8151,42 +8180,49 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:infinity 10")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.stellar_forge("kubejs:contained_reissner_nordstrom_singularity")
         .itemInputs("kubejs:naquadria_charge", "64x kubejs:time_dilation_containment_unit", "64x kubejs:charged_triplet_neutronium_sphere")
         .itemOutputs("64x kubejs:contained_reissner_nordstrom_singularity")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("kubejs:contained_kerr_newmann_singularity")
         .itemInputs("kubejs:leptonic_charge", "64x kubejs:contained_reissner_nordstrom_singularity")
         .itemOutputs("kubejs:contained_kerr_newmann_singularity", "63x kubejs:time_dilation_containment_unit")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     gtr.stellar_forge("kubejs:contained_exotic_matter")
         .itemInputs("kubejs:leptonic_charge", "kubejs:contained_high_density_protonic_matter", "9x gtceu:tiny_degenerate_rhenium_dust")
         .itemOutputs("kubejs:contained_exotic_matter")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 2)
 
     gtr.stellar_forge("kubejs:recursively_folded_negative_space")
         .itemInputs("kubejs:quantum_chromodynamic_charge", "2x kubejs:macrowormhole_generator", "2x kubejs:temporal_matter")
         .itemOutputs("kubejs:recursively_folded_negative_space")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.stellar_forge("kubejs:eigenfolded_kerr_manifold")
         .itemInputs("kubejs:quantum_chromodynamic_charge", "kubejs:stabilized_wormhole_generator", "kubejs:recursively_folded_negative_space")
         .itemOutputs("kubejs:eigenfolded_kerr_manifold")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.stellar_forge("kubejs:ctc_computational_unit")
         .itemInputs("kubejs:quantum_chromodynamic_charge", "kubejs:eigenfolded_kerr_manifold", "kubejs:ctc_computational_unit_container")
         .itemOutputs("kubejs:ctc_computational_unit")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     const fluids = ["argon", "helium", "nickel", "iron", "nitrogen", "oxygen", "mithril", "orichalcum", "enderium", "adamantium", "infuscolium", "echoite", "vibranium", "taranium_rich_liquid_helium_4", "legendarium", "heavy_quark_degenerate_matter", "starmetal", "quantumchromodynamically_confined_matter", "astraltitanium", "celestialtungsten"]
     fluids.forEach((fluid) => {
@@ -10353,6 +10389,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:dragon_heart")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("kubejs:chaos_shard")
         .itemInputs("kubejs:quantum_chromodynamic_charge", "kubejs:infused_obsidian", "minecraft:bedrock")
@@ -10360,6 +10397,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:chaos_shard")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 3)
 
     gtr.mixer("gtceu:hastelloy_n_dust")
         .itemInputs("2x gtceu:iridium_dust", "4x gtceu:molybdenum_dust", "2x gtceu:chromium_dust", "2x gtceu:titanium_dust", "15x gtceu:nickel_dust")
@@ -11485,6 +11523,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:actinium_superhydride_plasma 36000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.canner("kubejs:actinium_superhydride_plasma_containment_cell")
         .notConsumable("gtceu:infuscolium_nanoswarm")
@@ -12007,7 +12046,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("gtceu:star_ultimate_material_forge_factory")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1200)
-        .stationResearch(b => b.researchStack(Item.of("kubejs:stellar_containment_casing"))
+        .stationResearch(b => b.researchStack(Item.of("gtceu:stellar_containment_casing"))
             .dataStack(Item.of("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UIV])
             .CWUt(1024))
@@ -13895,6 +13934,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:astraltitanium_plasma 1000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.stellar_forge("gtceu:celestialtungsten_plasma")
         .itemInputs("kubejs:naquadria_charge")
@@ -13902,6 +13942,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:celestialtungsten_plasma 1000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
+    ["addData(java.lang.String,int)"]("SCTier", 1)
 
     gtr.arc_furnace("kubejs:cosmic_singularity")
         .itemInputs("avaritia:eternal_singularity")
@@ -14671,4 +14712,18 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:bismuth_nitrate_solution 1000", "gtceu:nitrogen_dioxide 3000", "minecraft:water 2000")
         .EUt(30)
         .duration(350)
+
+    gtr.assembler("gtceu:advanced_stellar_containment_casing")
+        .itemInputs("gtceu:stellar_containment_casing", "gtceu:uhv_field_generator", "8x gtceu:vibranium_screw", "gtceu:enderite_octal_wire", "4x gtceu:taranium_plate")
+        .itemOutputs("gtceu:advanced_stellar_containment_casing")
+        .inputFluids("gtceu:astraltitanium 144")
+        .EUt(GTValues.VA[GTValues.UEV])
+        .duration(280)
+
+    gtr.assembler("gtceu:ultimate_stellar_containment_casing")
+        .itemInputs("gtceu:advanced_stellar_containment_casing", "gtceu:uev_field_generator", "8x gtceu:vibramantium_screw", "gtceu:legendarium_quadruple_wire", "8x gtceu:heavy_quark_degenerate_matter_plate")
+        .itemOutputs("gtceu:ultimate_stellar_containment_casing")
+        .inputFluids("gtceu:celestialtungsten 144")
+        .EUt(GTValues.VA[GTValues.UIV])
+        .duration(460)
 })

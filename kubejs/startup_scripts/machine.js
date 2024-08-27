@@ -106,7 +106,13 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .workableCasingRenderer("gtceu:block/casings/voltage/ulv/side", "gtceu:block/multiblock/implosion_compressor")
 
-    event.create("stellar_forge", "multiblock")
+    let scmap = Predicates.createTierCasingsMap()
+
+    GTBlocks.createTierCasings("stellar_containment_casing", new ResourceLocation("kubejs", "block/stellar_containment_casing"), scmap, 1)
+    GTBlocks.createTierCasings("advanced_stellar_containment_casing", new ResourceLocation("kubejs", "block/stellar_containment_casing"), scmap, 2)
+    GTBlocks.createTierCasings("ultimate_stellar_containment_casing", new ResourceLocation("kubejs", "block/stellar_containment_casing"), scmap, 3)
+
+    event.create("stellar_forge", "multiblock", (holder) => new $TierCasingMachine(holder, "SCTier"))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
         .recipeType("stellar_forge")
@@ -137,7 +143,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .or(Predicates.autoAbilities(definition.getRecipeTypes()))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
             .where("c", Predicates.blocks("gtceu:fusion_coil"))
-            .where("d", Predicates.blocks("kubejs:stellar_containment_casing"))
+            .where("d", Predicates.tierCasings(scmap, "SCTier"))
             .where(" ", Predicates.any())
             .build())
         .beforeWorking(machine => {
@@ -1748,7 +1754,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             return recipe
         }, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
-        .appearanceBlock(() => Block.getBlock("kubejs:pikyonium_machine_casing"))
+        .appearanceBlock(() => Block.getBlock("kubejs:iridium_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("     AAAAA     ", "     AEEEA     ", "AAAAAAEEEAAAAAA", "AEEEEEEEEEEEEEA", "AAAAAAEEEAAAAAA", "     AEEEA     ", "     AAAAA     ")
             .aisle("AAAAAAAAAAAAAAA", "AAAAAFFFFFAAAAA", "AAAAAFFFFFAAAAA", "AAAAAFFFFFAAAAA", "AAAAAFFFFFAAAAA", "AAAAAFFFFFAAAAA", "AAAAAAAAAAAAAAA")
@@ -3339,7 +3345,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("D", Predicates.blocks("gtceu:high_power_casing"))
                 .where("E", Predicates.blocks("kubejs:hollow_casing"))
                 .where("F", Predicates.blocks("kubejs:force_field_glass"))
-                .where("G", Predicates.blocks("kubejs:stellar_containment_casing"))
+                .where("G", Predicates.blocks("kubejs:ultimate_stellar_containment_casing"))
                 .where(" ", Predicates.any())
                 .build())
         .additionalDisplay((controller, components) => {
@@ -5085,29 +5091,4 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where(" ", Predicates.any())
                 .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_robust_tungstensteel", "gtceu:block/multiblock/gcym/large_maceration_tower")
-
-    //测试
-    let camap = Predicates.createTierCasingsMap()
-
-    GTBlocks.createTierCasings("ca1", new ResourceLocation("gtceu:block/casings/solid/machine_casing_clean_stainless_steel"), camap, 1)
-    GTBlocks.createTierCasings("ca2", new ResourceLocation("gtceu:block/casings/solid/machine_casing_robust_tungstensteel"), camap, 2)
-
-    event.create("test", "multiblock", (holder) => new $TierCasingMachine(holder, "CATier"))
-        .rotationState(RotationState.ALL)
-        .recipeType(GTRecipeTypes.DUMMY)
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK))
-        .appearanceBlock(() => Block.getBlock("kubejs:process_machine_casing"))
-        .pattern((definition) =>
-            FactoryBlockPattern.start()
-                .aisle("AAA", "AAA", "AAA")
-                .aisle("AAA", "ABA", "AAA")
-                .aisle("AAA", "A~A", "AAA")
-                .where("~", Predicates.controller(Predicates.blocks(definition.get())))
-                .where("A", Predicates.blocks("kubejs:process_machine_casing")
-                    .or(Predicates.autoAbilities(definition.getRecipeTypes()))
-                    .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
-                .where("B", Predicates.tierCasings(camap, "CATier"))
-                .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/multiblock/assembly_line")
-
 })

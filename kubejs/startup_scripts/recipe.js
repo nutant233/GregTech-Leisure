@@ -14,12 +14,15 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_BATH, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.COOLING)
 
-    event.create("stellar_forge")
+    GTRecipeTypes.register("stellar_forge", "multiblock")
         .setEUIO("in")
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(3, 2, 9, 2)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC)
+        .addDataInfo(data => {
+            return $LocalizationUtils.format("gtceu.recipe.stellar_containment_tier", $FormattingUtil.formatNumbers(data.getInt("SCTier")))
+        })
 
     GTRecipeTypes.register("dimensionally_transcendent_plasma_forge", "multiblock")
         .setMaxIOSize(2, 2, 2, 2)

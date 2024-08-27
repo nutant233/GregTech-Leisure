@@ -7,7 +7,6 @@ ItemEvents.tooltip(event => {
     event.add("kubejs:warped_ender_pearl", "潜行右键可设置个人传送点，右键传送到传送点")
     event.add("kubejs:hyper_stable_self_healing_adhesive", "§7选择性完全粘合，即使在撕裂或损坏时也有效")
     event.add("kubejs:black_body_naquadria_supersolid", "§7如液体般流动，不反射任何电磁波，完美地将其吸收与传递")
-    event.add("kubejs:stellar_containment_casing", "§7生成最大可抵御超新星爆发的力场防护")
     event.add("kubejs:command_wand", "需要左手拿着命令方块，且只能放在创造稳定核心上方")
     event.add("kubejs:uruium_coil_block", ["可为超维度等离子锻炉提供32000K炉温", "恒星锻炉模式仅可使用该线圈"])
     event.add("kubejs:essence_block", "将骨块放置在转换室获得")

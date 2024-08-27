@@ -665,15 +665,6 @@ StartupEvents.registry("block", event => {
         .requiresTool(true)
         .textureOverrideRenderer("minecraft:block/cube_all", { "all": new ResourceLocation("gtceu", "block/casings/solid/machine_casing_sturdy_hsse") })
 
-    event.create("stellar_containment_casing", "gtceu:renderer")
-        .noValidSpawns(true)
-        .soundType("metal")
-        .mapColor("metal")
-        .tagBlock("mineable/pickaxe")
-        .tagBlock("forge:mineable/wrench")
-        .requiresTool(true)
-        .textureOverrideRenderer("minecraft:block/cube_all", { "all": new ResourceLocation("kubejs", "block/stellar_containment_casing") })
-
     event.create("aluminium_bronze_casing", "gtceu:renderer")
         .noValidSpawns(true)
         .soundType("metal")
