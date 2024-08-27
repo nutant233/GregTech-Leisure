@@ -55,7 +55,6 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create("quantanium", 800, 800, -1, null, "Qt", false)
 })
 GTCEuStartupEvents.registry("gtceu:material", event => {
-    GTBlocks.createActiveCasing("power_module", "block/variant/power_module")
     GTBlocks.createActiveCasing("power_core", "block/variant/power_core")
     GTBlocks.createActiveCasing("hyper_core", "block/variant/hyper_core")
     GTBlocks.createActiveCasing("super_computation_component", "block/variant/super_computation_component")

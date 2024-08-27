@@ -1178,6 +1178,14 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .workableCasingRenderer("kubejs:block/oxidation_resistant_hastelloy_n_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
+    let sepmmap = Predicates.createTierCasingsMap()
+
+    GTBlocks.createActiveTierCasing("power_module", "block/variant/power_module", sepmmap, 1)
+    GTBlocks.createActiveTierCasing("power_module_2", "block/variant/power_module", sepmmap, 2)
+    GTBlocks.createActiveTierCasing("power_module_3", "block/variant/power_module", sepmmap, 3)
+    GTBlocks.createActiveTierCasing("power_module_4", "block/variant/power_module", sepmmap, 4)
+    GTBlocks.createActiveTierCasing("power_module_5", "block/variant/power_module", sepmmap, 5)
+
     event.create("space_elevator", "multiblock", (holder) => new $SpaceElevator(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
@@ -1233,7 +1241,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("E", Predicates.blocks("kubejs:space_elevator_support"))
                 .where("H", Predicates.blocks("gtceu:neutronium_frame"))
                 .where("F", Predicates.blocks("kubejs:space_elevator_internal_support"))
-                .where("C", Predicates.blocks("gtceu:power_module"))
+                .where("C", Predicates.tierCasings(sepmmap, "SEPMTier"))
                 .where("A", Predicates.blocks("kubejs:high_strength_concrete"))
                 .where("D", Predicates.blocks("kubejs:space_elevator_mechanical_casing"))
                 .where("M", Predicates.blocks("gtceu:power_core"))
@@ -3142,6 +3150,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("sifter")
         .recipeType("macerator")
         .recipeType("extractor")
+        .recipeType("dehydrator")
         .tooltips(Component.translatable("gtceu.machine.eut_multiplier.tooltip", 0.9))
         .tooltips(Component.translatable("gtceu.machine.duration_multiplier.tooltip", 0.8))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.0"))
@@ -3187,6 +3196,9 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     break
                 case GTRecipeTypes.EXTRACTOR_RECIPES:
                     isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_extractor"
+                    break
+                case GTRecipeTypes.DEHYDRATOR_RECIPES:
+                    isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_dehydrator"
                     break
                 default:
                     break
