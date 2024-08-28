@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "formed=false": {
+      "model": "gtceu:block/crafting/4m_storage"
+    },
+    "formed=true": {
+      "model": "gtceu:block/crafting/4m_storage_formed"
+    }
+  }
+}

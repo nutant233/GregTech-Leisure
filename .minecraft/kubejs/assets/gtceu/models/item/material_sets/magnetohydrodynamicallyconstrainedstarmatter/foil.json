@@ -1,0 +1,7 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "gtceu:item/material_sets/magnetohydrodynamicallyconstrainedstarmatter/foil",
+    "layer1": "gtceu:item/material_sets/magnetohydrodynamicallyconstrainedstarmatter/foil_overlay"
+  }
+}

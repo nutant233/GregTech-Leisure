@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "kubejs:barnarda_log"
+    }
+  ],
+  "result": {
+    "item": "kubejs:barnarda_planks",
+    "count": 4
+  }
+}

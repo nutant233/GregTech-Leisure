@@ -1,0 +1,10 @@
+{
+  "dimension": "kubejs:ceres",
+  "gravity": 3.528,
+  "orbit": "kubejs:ceres_orbit",
+  "oxygen": false,
+  "solar_power": 14,
+  "solar_system": "ad_astra:solar_system",
+  "temperature": -120,
+  "tier": 4
+}

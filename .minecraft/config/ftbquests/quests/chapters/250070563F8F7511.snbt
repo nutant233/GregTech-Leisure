@@ -1,0 +1,1233 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "250070563F8F7511"
+	group: ""
+	icon: "minecraft:grass_block"
+	id: "250070563F8F7511"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"25A6B2F421327892"
+				"4F864738509B6DCA"
+				"4536535E8DA71D5B"
+				"575A2A1E4F56FF34"
+			]
+			description: ["在开始之前需要先浏览一遍旁边的任务。"]
+			hide_dependency_lines: true
+			icon: "minecraft:grass_block"
+			id: "075D368E91231337"
+			rewards: [{
+				id: "2CF9C7981E9F7DE5"
+				item: {
+					Count: 1
+					id: "ae2:fluix_axe"
+					tag: {
+						Damage: 0
+						Enchantments: [
+							{
+								id: "minecraft:unbreaking"
+								lvl: 3s
+							}
+							{
+								id: "minecraft:efficiency"
+								lvl: 5s
+							}
+						]
+						RepairCost: 3
+					}
+				}
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				id: "20A638BEB859B6BC"
+				title: "开始"
+				type: "checkmark"
+			}]
+			x: -6.5d
+			y: -2.5d
+		}
+		{
+			description: [
+				"默认M打开地图，按T可以传送至鼠标指向的地点"
+				"界面左上角可以认领与加载区块"
+				"按住～键可以启用连锁"
+				"默认TAB键快速打开任务"
+				"更详细的提示可在&b&l提示章节&r查看"
+				"默认关闭了飞行惯性，可在GT配置-游戏玩法找到"
+			]
+			icon: "ftbquests:book"
+			id: "4F864738509B6DCA"
+			rewards: [{
+				id: "723CCD5BBA07EEDA"
+				item: "gtceu:copper_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "177349E6447C2C3A"
+				title: "其他提示"
+				type: "checkmark"
+			}]
+			x: -6.5d
+			y: -4.5d
+		}
+		{
+			description: [
+				"这个任务包含了一些在游戏过程中的重要信息。"
+				"这套任务旨在引导你完成格雷科技进展的主要里程碑。"
+				"推荐在和平模式下游玩，因为敌对生物带来的好处很少。"
+				"只要你觉得合适，可以随意使用地图传送。"
+				"最重要的，格雷科技会出现很复杂的配方，需要先熟练使用JEI。"
+			]
+			icon: "minecraft:command_block_minecart"
+			id: "25A6B2F421327892"
+			tasks: [{
+				id: "767FB3AAC7684750"
+				title: "游玩之前"
+				type: "checkmark"
+			}]
+			x: -8.5d
+			y: -2.5d
+		}
+		{
+			description: [
+				"一个主打休闲的格雷科技整合包，相对于其他格雷包难度更低"
+				""
+				"主要流程"
+				"蒸汽ULV：收集基础资源，更大更强蒸汽机器，炼钢，超维度泥土锻炉。"
+				"低压LV：基础电力机器，电力高炉，GT版数字采矿机。"
+				"中压MV：硅晶体，石油处理，燃油发电，升级机器。"
+				"高压HV：处理器，大化反，一阶火箭登月，蒸馏塔，钛，虚空采矿机。"
+				"超高压EV：纳米处理器，二三四阶火箭，钨，铂系金属。"
+				"强导压IV：量子处理器，合金冶炼炉，五阶火箭，大型机器，装配线，数据库。"
+				"剧差压LUV：晶体处理器，硅岩，六阶火箭，核聚变MK1，计算机，研究站。"
+				"零点压ZPM：湿件处理器，核聚变MK2，七阶火箭，硅岩反应堆。"
+				"极限压UV：生物活性处理器，核聚变MK3，深度处理稀土，电路装配线，太空电梯。"
+				"极高压UHV：光学处理器，恒星锻炉，超能硅岩爆弹，超能反应堆。"
+				"极超压UEV：奇异处理器，超临界合成，基岩处理，精金。"
+				"极巨压UIV：寰宇处理器，宇宙探测，质量发生器，夸克。"
+				"极顶压UXV：超因果处理器，龙，宇宙中子素，无尽，超维度锻炉。"
+				"过载压OPV：超时空电路，宇宙模拟，时空，奇点，永恒。"
+				"上限压MAX：创造物品合成。"
+			]
+			icon: "minecraft:structure_void"
+			id: "4536535E8DA71D5B"
+			min_width: 350
+			tasks: [{
+				id: "653FC7E3CCCA0A5E"
+				title: "关于内容"
+				type: "checkmark"
+			}]
+			x: -8.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["075D368E91231337"]
+			description: [
+				"这个怎么获得就不用多说了。"
+				"这个任务会给你一个探矿仪，潜行右键可以切换模式，流体模式目前还用不到。"
+			]
+			id: "77DF4A561164B530"
+			rewards: [{
+				id: "624C887B89A0A253"
+				item: {
+					Count: 1
+					id: "gtceu:prospector.luv"
+					tag: {
+						Charge: 1000000000L
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "4FF3F7FDB78E5053"
+				item: "minecraft:crafting_table"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["77DF4A561164B530"]
+			description: ["石器时代"]
+			icon: "minecraft:cobblestone"
+			id: "2DC6C5D7DDA578F7"
+			rewards: [{
+				count: 10
+				id: "26CD53567ABEF77A"
+				item: {
+					Count: 1
+					id: "ae2:fluix_pickaxe"
+					tag: {
+						Damage: 0
+						Enchantments: [
+							{
+								id: "minecraft:unbreaking"
+								lvl: 3s
+							}
+							{
+								id: "minecraft:efficiency"
+								lvl: 5s
+							}
+						]
+						RepairCost: 3
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "426437E5876CC96A"
+				item: "minecraft:cobblestone"
+				type: "item"
+			}]
+			title: "获得圆石"
+			x: -2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["2DC6C5D7DDA578F7"]
+			description: ["高炉更快"]
+			id: "0EA3AAE338C0FE7A"
+			rewards: [{
+				count: 8
+				id: "6BBB541521787C80"
+				item: "minecraft:blast_furnace"
+				type: "item"
+			}]
+			tasks: [{
+				id: "04BF77BE023E656F"
+				item: "minecraft:furnace"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["77DF4A561164B530"]
+			description: ["你不用担心黑暗了"]
+			disable_toast: true
+			icon: {
+				Count: 1
+				id: "minecraft:potion"
+				tag: {
+					Potion: "minecraft:long_night_vision"
+				}
+			}
+			id: "525ED642C7A365D1"
+			optional: true
+			rewards: [{
+				command: "/effect give @p minecraft:night_vision 100000 0 true"
+				elevate_perms: true
+				exclude_from_claim_all: true
+				id: "08BEFC60D3DA3529"
+				type: "command"
+			}]
+			tasks: [{
+				id: "0F388023136A8A7C"
+				title: "获得夜视"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["77DF4A561164B530"]
+			description: [
+				"黑曜石可以去虚空世界，哭泣黑曜石可以去超平坦世界，传送X,Z坐标为主世界坐标x100"
+				"这里GT的太阳能设备无法工作"
+			]
+			icon: "minecraft:obsidian"
+			id: "07AC1B02299EF734"
+			rewards: [
+				{
+					id: "29C2D0C50033539C"
+					item: {
+						Count: 1
+						id: "constructionwand:infinity_wand"
+						tag: {
+							wand_options: { }
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6EC17DCD4A7DF139"
+					item: "minecraft:crying_obsidian"
+					type: "item"
+				}
+				{
+					id: "4FAF4CE9DB085C12"
+					item: "constructionwand:core_angel"
+					type: "item"
+				}
+				{
+					id: "2886B347BD9A06B9"
+					item: "minecraft:obsidian"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2FB6F5ECEC5CFC30"
+				type: "checkmark"
+			}]
+			title: "虚空世界建造基地"
+			x: -4.5d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["07AC1B02299EF734"]
+			icon: "minecraft:white_concrete"
+			id: "3223AEF42BD9327C"
+			optional: true
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7815B2F4016EF12E"
+				table_id: 9058340522588536399L
+				type: "choice"
+			}]
+			tasks: [{
+				id: "3F5BA005D0E9BE0A"
+				title: "无限的建筑材料"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["050FD340224F7AB6"]
+			description: ["进入铁器时代"]
+			icon: "minecraft:iron_ingot"
+			id: "2C6F506ADD78F277"
+			rewards: [{
+				id: "1DC27EA1D26C5D2F"
+				item: {
+					Count: 1
+					id: "ae2:portable_item_cell_16k"
+					tag: {
+						internalCurrentPower: 2000000.0d
+					}
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "28215E02018149ED"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "67DD6CA240F794CA"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					id: "5C55D2E7ACAEE4CA"
+					item: "gtceu:tin_ingot"
+					type: "item"
+				}
+			]
+			title: "收集矿物"
+			x: 1.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["2C6F506ADD78F277"]
+			description: [
+				"GT的大部分物品在工作台合成时需要用到工具"
+				"锤子的次要功能是通过右键单击&9&l静音机器"
+			]
+			icon: {
+				Count: 1
+				id: "gtceu:iron_hammer"
+				tag: {
+					DisallowContainerItem: 0b
+					GT.Behaviours: { }
+					GT.Tool: {
+						Damage: 0
+						Enchantability: 14
+						HarvestLevel: 2
+						MaxDamage: 255
+						ToolSpeed: 6.0f
+					}
+					HideFlags: 2
+				}
+			}
+			id: "6A7BE998C2EC882D"
+			rewards: [
+				{
+					id: "6FB84C6CFD46A0F1"
+					item: {
+						Count: 1
+						id: "gtceu:damascus_steel_mortar"
+						tag: {
+							DisallowContainerItem: 0b
+							Enchantments: [{
+								id: "minecraft:unbreaking"
+								lvl: 999s
+							}]
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								MaxDamage: 1023
+							}
+							HideFlags: 2
+							RepairCost: 1
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "43DB6E0844CC0989"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_hammer"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								HarvestLevel: 6
+								MaxDamage: 65534
+								ToolSpeed: 184.0f
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1E277D3D320568AE"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_file"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								MaxDamage: 65534
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "2CBE8FF328FE35AC"
+					item: {
+						Count: 1
+						id: "gtceu:iron_hammer"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 14
+								HarvestLevel: 2
+								MaxDamage: 255
+								ToolSpeed: 6.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "75B26C1A65DF3848"
+					item: {
+						Count: 1
+						id: "gtceu:iron_file"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 14
+								MaxDamage: 255
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6D4A489A3578B8B0"
+					item: {
+						Count: 1
+						id: "gtceu:iron_mortar"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 14
+								MaxDamage: 255
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "制作工具"
+			x: 3.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["6A7BE998C2EC882D"]
+			description: ["使用研钵磨成粉后用徒手搅拌"]
+			id: "133BC85B5D3EF1CB"
+			rewards: [{
+				id: "0DA275C860355A9D"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "327FF4C13FFEC8B6"
+					item: "gtceu:copper_dust"
+					type: "item"
+				}
+				{
+					id: "788C88B4C8AD93FC"
+					item: "gtceu:tin_dust"
+					type: "item"
+				}
+			]
+			title: "铜粉和锡粉"
+			x: 5.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["133BC85B5D3EF1CB"]
+			description: ["蒸汽时代主要材料"]
+			id: "4B6F43302E963F5E"
+			rewards: [{
+				id: "45521EDF902431C8"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "57C6A23ADA9034AA"
+				item: "gtceu:bronze_ingot"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["2C6F506ADD78F277"]
+			description: ["锻铁是低碳的铁合金，比铁性能更好"]
+			id: "52A0EE026A3D3A79"
+			rewards: [{
+				id: "11FB0702EB3F7E18"
+				item: "gtceu:copper_credit"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "1172C9C38B0C9D97"
+					item: "gtceu:wrought_iron_nugget"
+					type: "item"
+				}
+				{
+					id: "11CC7209E677F77B"
+					item: "gtceu:wrought_iron_ingot"
+					type: "item"
+				}
+			]
+			title: "锻铁"
+			x: 1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["52A0EE026A3D3A79"]
+			description: [
+				"手持终端潜行右键可以自动搭建多方块结构，如果是空手则会显示预览"
+				""
+				"自动搭建有一点问题，特别是在创造模式，推荐先不要在背包中放功能仓室只放结构方块，在搭建出主体结构后再手动放上功能仓室"
+			]
+			id: "4AB25C15F0B05AA0"
+			optional: true
+			rewards: [{
+				id: "4990434DB8C2B79E"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "765279B72A3A7F43"
+				item: "gtceu:terminal"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4AB25C15F0B05AA0"]
+			description: [
+				"如果你不喜欢用指令或者小地图"
+				"默认Y键可以切换槽位"
+			]
+			icon: "kubejs:warped_ender_pearl"
+			id: "72AFAC66A9EC5F1A"
+			rewards: [{
+				id: "16D977A5C13DD6A2"
+				item: "kubejs:warped_ender_pearl"
+				type: "item"
+			}]
+			tasks: [{
+				id: "26A4AD36BD56873A"
+				title: "传送器"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2C6F506ADD78F277"]
+			description: ["去小市场兑换宝物，注意钻石是耐烧王，推荐给锅炉用"]
+			id: "2E6B876A85B30554"
+			rewards: [{
+				id: "4C4D7911A44B42C2"
+				item: "gtceu:ancient_gold_coin"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "4CD84934E0B48CD4"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "1EE7EFCCC10CA395"
+					item: "gtceu:lead_ingot"
+					type: "item"
+				}
+				{
+					id: "7C87E9AE267A441A"
+					item: "gtceu:silver_ingot"
+					type: "item"
+				}
+				{
+					id: "68643AA8783BC7E6"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "729E31CB328745E5"
+					item: "gtceu:nickel_ingot"
+					type: "item"
+				}
+			]
+			title: "更多矿"
+			x: 0.8d
+			y: -4.0d
+		}
+		{
+			dependencies: ["2C6F506ADD78F277"]
+			description: ["使用铁砧升级"]
+			id: "0A047A198C30D7FD"
+			optional: true
+			rewards: [
+				{
+					id: "0E8E94B52A21BFCA"
+					item: "toolbelt:pouch"
+					type: "item"
+				}
+				{
+					id: "52E43E748CD9D5CE"
+					item: "gtceu:copper_credit"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "7A23943381FB2DC4"
+				item: "toolbelt:belt"
+				type: "item"
+			}]
+			x: 2.2d
+			y: -4.0d
+		}
+		{
+			dependencies: ["050FD340224F7AB6"]
+			description: ["在这里粗煤矿可以直接拿来当燃料用"]
+			id: "4C943E88E3926A9A"
+			rewards: [{
+				id: "3C50340F6A70A194"
+				item: "gtceu:copper_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "30667165CE23DFCE"
+				item: "gtceu:raw_coal"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["6A7BE998C2EC882D"]
+			description: [
+				"扳手右键点击可以&9&l设置GT机器的端口&r，而潜行右键点击可以&9&l旋转机器&r，也可以代替镐子破坏机器"
+				"螺丝刀可以&9&l打开机器覆盖板"
+				"剪线钳可以&9&l连接线缆"
+				"{@pagebreak}"
+				"扳手："
+				"手持扳手对准可使用扳手的方块时，方块各面会显示出九宫格，："
+				"其中中心的最多，棱其次，角最小。"
+				"当右键机器面的中心时，则可将正面旋转到该面（仅有面区分的非GT机器）或将输出口调到该面（对于GT机器）；当右键棱时，则将面旋转到相应棱方向的面；右键角时，则将面旋转到右击面的对面。但如果右键的是无面的区分的非GT机器，则以上操作均拆卸下机器。当Shift右键面中心时，则可将正面旋转到该面（对于所有机器），其他对于棱和角一样。对于无面的区分的非GT机器，则以上操作均拆卸下机器。"
+				"右击管道的面的中心时，无变化；但右键棱则可连接/断开相应棱方向的管道；右键角则连接/断开对面方向的管道。Shift右键则可以控制是否输入相应面。"
+				"右键原木、干草块、比较器、中继器、南瓜、南瓜灯、活塞、粘性活塞、投掷器、发射器、熔炉、箱子、陷阱箱、末影箱、漏斗的非正面时，可以转向；"
+				"右键工作台、书架、南瓜、南瓜灯、活塞、粘性活塞、投掷器、发射器、熔炉、箱子、陷阱箱、末影箱、漏斗的正面时，可以拆卸。"
+				"但是除了这些，类似拉杆、铁轨之类的方块仍然可以被旋转或拆卸。"
+				"{@pagebreak}"
+				"软锤："
+				"右键可开启/关闭机器。"
+				"右键点亮的红石灯，可以将其熄灭，反之亦然。"
+				"右键动力铁轨，可以直接激活，反之亦然。"
+				"右键原木、干草块、活塞、粘性活塞、投掷器、发射器、南瓜、南瓜灯、熔炉、箱子、陷阱箱或漏斗，可以将方块转向；"
+				""
+				"螺丝刀："
+				"用于调整各种输出口和合成零件。"
+				"右击机器的正面及输出口时，可以调整是否允许从输出面输入。"
+				"注：虽然手持螺丝刀对着导线和管道确实会有九宫格，但是实测却无作用。"
+				"正确说法：如果九宫格对应的面可以被螺丝刀操控，则相当于直接操控该面；如果不能，则无效果。且操作规律同扳手。"
+				"右键比较器、中继器时，可以转向。"
+				""
+				"撬棍："
+				"用于撬动铁轨和撬开各种板条箱，以及拆卸覆盖板。"
+			]
+			id: "1F663A6C2DD1DB60"
+			rewards: [
+				{
+					id: "3953AFA6DC255A9D"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_wrench"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								Mode: 2b
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								HarvestLevel: 6
+								MaxDamage: 65534
+								ToolSpeed: 184.0f
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "47195CDC24BB0499"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_screwdriver"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								MaxDamage: 65534
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0C92E28D8F481344"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_saw"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								HarvestIce: 1b
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								MaxDamage: 65534
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2B53D098FE44E1E7"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_wire_cutter"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								HarvestLevel: 6
+								MaxDamage: 65534
+								ToolSpeed: 184.0f
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2F2ECAEB122EA729"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_knife"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								AttackDamage: 100.0f
+								AttackSpeed: 3.5f
+								Damage: 0
+								Enchantability: 33
+								MaxDamage: 65534
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3AE5213059754673"
+					item: {
+						Count: 1
+						id: "gtceu:polybenzimidazole_mallet"
+						tag: {
+							DisallowContainerItem: 0b
+							Enchantments: [{
+								id: "minecraft:unbreaking"
+								lvl: 999s
+							}]
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 10
+								MaxDamage: 1023
+							}
+							HideFlags: 2
+							RepairCost: 1
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "43B75892B602126D"
+					item: {
+						Count: 1
+						id: "gtceu:neutronium_crowbar"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								RelocateMinedBlocks: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 33
+								HarvestLevel: 6
+								MaxDamage: 65534
+								ToolSpeed: 184.0f
+							}
+							HideFlags: 2
+							Unbreakable: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "23148C33657FFC60"
+					item: {
+						Count: 1
+						id: "gtceu:iron_wire_cutter"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 14
+								HarvestLevel: 2
+								MaxDamage: 255
+								ToolSpeed: 6.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "512E4BCCAB2B9D22"
+					item: {
+						Count: 1
+						id: "gtceu:iron_screwdriver"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 14
+								MaxDamage: 255
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "488D299ED5C3EADF"
+					item: {
+						Count: 1
+						id: "gtceu:iron_saw"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: {
+								HarvestIce: 1b
+							}
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 14
+								MaxDamage: 255
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "52AE2ABE91E6D909"
+					item: {
+						Count: 1
+						id: "gtceu:iron_knife"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								AttackDamage: 2.0f
+								AttackSpeed: 3.0f
+								Damage: 0
+								Enchantability: 14
+								MaxDamage: 255
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "67B43C5CC46DE41B"
+					item: {
+						Count: 1
+						id: "gtceu:iron_wrench"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 14
+								HarvestLevel: 2
+								MaxDamage: 255
+								ToolSpeed: 6.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "4AB4BAEA70096ED0"
+					item: {
+						Count: 1
+						id: "gtceu:wood_mallet"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 10
+								MaxDamage: 127
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7D3B7BFBCCA97435"
+					item: {
+						Count: 1
+						id: "gtceu:iron_crowbar"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 14
+								HarvestLevel: 2
+								MaxDamage: 255
+								ToolSpeed: 6.0f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "更多工具"
+			x: 3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1F663A6C2DD1DB60"]
+			description: [
+				"生产杂酚油，可以对焦炉物品(主方块)按U键可以跳转到JEI页面查看多方块结构"
+				"具体请到提示页面&b&l机器章节的多方块部分&r查看"
+			]
+			icon: "gtceu:coke_oven"
+			id: "12E605EC5CFDE71A"
+			rewards: [{
+				id: "11023544A8C72E30"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{
+					id: "3ADD45CC260064D7"
+					item: "gtceu:coke_oven"
+					type: "item"
+				}
+				{
+					count: 25L
+					id: "64C7B22ED83480AB"
+					item: "gtceu:coke_oven_bricks"
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4B6F43302E963F5E"]
+			description: ["有了青铜，你可以开始制作各种蒸汽驱动的机器了"]
+			icon: "gtceu:lp_steam_alloy_smelter"
+			id: "46F82A0A3D57C225"
+			rewards: [{
+				id: "07408B5DAB665BC8"
+				item: "gtceu:copper_credit"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "529B5BE92883F9CE"
+				title: "蒸汽时代"
+				type: "checkmark"
+			}]
+			x: 9.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["12E605EC5CFDE71A"]
+			description: ["相当于一个没有GUI的焦炉主方块，可以使用管道或者漏斗交互"]
+			id: "4E01FAE893654321"
+			rewards: [{
+				id: "21D31A1CAA1B89AD"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7CE6D963CAE47A61"
+				item: "gtceu:coke_oven_hatch"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2DC6C5D7DDA578F7"]
+			description: [
+				"格雷科技的矿石都是以矿脉形式生成的，每个矿脉都有特定的矿石"
+				"JEI可查看矿脉生成信息。"
+				"具体矿脉内容可到矿石生成章节查看。"
+				"连锁可以采集所有矿石。"
+			]
+			id: "050FD340224F7AB6"
+			rewards: [{
+				id: "373E50B37DA19C04"
+				item: "gtceu:copper_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4AF61558B2A48848"
+				item: "gtceu:raw_tin"
+				type: "item"
+			}]
+			title: "矿石生成"
+			x: -0.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["2DC6C5D7DDA578F7"]
+			description: ["这是你需要收集的植物"]
+			id: "79D4AD9908A4578A"
+			rewards: [{
+				id: "2284459A885572C5"
+				item: "gtceu:copper_credit"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "35C774E2B111952D"
+					item: "minecraft:sugar_cane"
+					type: "item"
+				}
+				{
+					id: "2E3FFC0A31D39AA0"
+					item: "gtceu:rubber_sapling"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["4B6F43302E963F5E"]
+			icon: "kubejs:infinite_cell_component"
+			id: "7198356C944E053A"
+			rewards: [
+				{
+					id: "7480CA9E0C881C90"
+					item: {
+						Count: 1
+						id: "gtceu:super_portable_item_storage_cell"
+						tag: {
+							internalCurrentPower: 2000000000
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7E40E854D6E1AE44"
+					item: {
+						Count: 1
+						id: "gtceu:super_portable_fluid_storage_cell"
+						tag: {
+							internalCurrentPower: 2000000000
+						}
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					id: "373DF3479C5D655D"
+					item: "gtceu:bronze_crate"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "39860496FDB73E14"
+					item: "gtceu:bronze_drum"
+					type: "item"
+				}
+			]
+			title: "超级存储"
+			x: 7.5d
+			y: -1.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["050FD340224F7AB6"]
+			description: ["第一行就是最多连锁数量，设置时不建议太大"]
+			icon: {
+				Count: 1
+				id: "ae2:fluix_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "64D9F1266FDE5FFE"
+			rewards: [{
+				command: "/ftbultimine serverconfig"
+				id: "73FADAC6A80B392D"
+				type: "command"
+			}]
+			tasks: [{
+				id: "49D06A3D2A085A61"
+				title: "更快的挖矿"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -1.0d
+		}
+		{
+			description: [
+				"鼠标移动到一个物品上面!（背包，右侧搜索栏，jei中"
+				""
+				"按r查看合成！！！"
+				"按u查看用途！！！"
+				""
+				"打开界面后上面有两个带箭头的行"
+				"第一行和最上的图标一样可以切换合成工具（点击这一行的文字可以查看这种方式的所有合成表）"
+				"第二行可以翻页（很多物品有大量的合成方法，请仔细浏览）"
+			]
+			icon: "kubejs:rotating_transparent_surface"
+			id: "575A2A1E4F56FF34"
+			tasks: [{
+				id: "076E6DC515FD655D"
+				title: "JEI简介"
+				type: "checkmark"
+			}]
+			x: -8.5d
+			y: -0.5d
+		}
+	]
+	title: "由此开始"
+}

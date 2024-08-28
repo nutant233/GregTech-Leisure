@@ -1,0 +1,591 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "173E51FB086D4A22"
+	group: "24F4987B35ABEE82"
+	icon: "gtceu:mv_fluid_drilling_rig"
+	id: "173E51FB086D4A22"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			id: "088C594495CADBA1"
+			tasks: [{
+				id: "769CAD13CEAFBEB3"
+				title: "HV"
+				type: "checkmark"
+			}]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			id: "7171B45BCD083364"
+			tasks: [{
+				id: "130194FAF884E3A1"
+				title: "IV"
+				type: "checkmark"
+			}]
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			description: ["lv时期可选的获得石油的手段"]
+			hide_dependency_lines: true
+			id: "6DEAA19092FBCF99"
+			rewards: [{
+				id: "61884E75889139DF"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "42E23ED61B2417CC"
+				item: "gtceu:lv_pump"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["6DEAA19092FBCF99"]
+			id: "2451D79084562C67"
+			tasks: [{
+				id: "2410E462E07D486C"
+				item: "gtceu:oil_medium_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			id: "0B00D881C861FEB2"
+			tasks: [{
+				id: "105FCEFBC3B166E7"
+				item: "gtceu:lv_distillery"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"2451D79084562C67"
+				"0B00D881C861FEB2"
+			]
+			description: ["蒸馏室三号电路"]
+			id: "63FEF796CFF5E8DF"
+			tasks: [{
+				id: "014038349888FC2A"
+				item: "gtceu:sulfuric_naphtha_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"63FEF796CFF5E8DF"
+				"045D76184BFBD4D6"
+			]
+			description: ["含硫石脑油加氢气"]
+			id: "071C1482A33D97FB"
+			tasks: [{
+				id: "5487A28C3E9B45E0"
+				item: "gtceu:naphtha_bucket"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["071C1482A33D97FB"]
+			description: ["化学反应釜加蒸汽三号电路"]
+			id: "70E703942B61C86C"
+			tasks: [{
+				id: "43A2C8C1FC309DE4"
+				item: "gtceu:severely_steam_cracked_naphtha_bucket"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"70E703942B61C86C"
+				"0B00D881C861FEB2"
+			]
+			description: ["蒸馏室十号电路"]
+			id: "0C5B23E443F1A5D5"
+			tasks: [{
+				id: "4AE736F84D6F23E1"
+				item: "gtceu:ethylene_bucket"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["63FEF796CFF5E8DF"]
+			description: ["将硫化氢电解以进行氢的循环"]
+			icon: "gtceu:hydrogen_sulfide_bucket"
+			id: "751BF4CAEE613BBA"
+			tasks: [{
+				id: "58FAC5989D41DC20"
+				title: "硫化氢"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["751BF4CAEE613BBA"]
+			description: ["你最开始的氢来自于电解水"]
+			id: "045D76184BFBD4D6"
+			tasks: [{
+				id: "33CEFF88B7CF0789"
+				item: "gtceu:hydrogen_bucket"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			description: [
+				"虚空获取油"
+				"只能安装一个能源仓，2个机器会停机"
+			]
+			hide_dependency_lines: true
+			id: "481B6E85DA1906B8"
+			rewards: [{
+				id: "7328C7E17857D82B"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "12DB235FA5E46543"
+				item: "gtceu:mv_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"0C5B23E443F1A5D5"
+				"44BE0FD4ABE696F1"
+			]
+			dependency_requirement: "one_completed"
+			id: "1B27E863E90AB90E"
+			tasks: [{
+				id: "47E3DB83C132B814"
+				title: "乙烯"
+				type: "checkmark"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"05CD37217916D998"
+				"3C808016095484BF"
+			]
+			id: "44BE0FD4ABE696F1"
+			tasks: [{
+				id: "170E4A149A78AC0E"
+				item: "gtceu:ethylene_bucket"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -2.0d
+		}
+		{
+			description: ["从硫粉到二氧化硫，到三氧化硫，到硫酸"]
+			id: "05CD37217916D998"
+			tasks: [{
+				id: "738BC7720302C1E8"
+				item: "gtceu:sulfuric_acid_bucket"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["126010F57E9BD7A5"]
+			id: "3C808016095484BF"
+			tasks: [{
+				id: "60A93A7ACB07843C"
+				item: "gtceu:ethanol_bucket"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -4.0d
+		}
+		{
+			id: "126010F57E9BD7A5"
+			tasks: [
+				{
+					id: "24D29CBC5A3065A0"
+					item: "gtceu:biomass_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7F57C4F635287E0B"
+					item: "gtceu:fermented_biomass_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1C7452CE23263B3B"
+					item: "gtceu:wood_vinegar_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1023D863BF2A4BA0"
+					type: "checkmark"
+				}
+			]
+			title: "一些生物线的东西"
+			x: 10.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["481B6E85DA1906B8"]
+			id: "445FA314F08B0F0C"
+			tasks: [
+				{
+					id: "07EF26FD4ED24C9A"
+					item: "gtceu:oil_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "028146424BDA896C"
+					item: "gtceu:oil_medium_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "12FECA2985000CC4"
+					item: "gtceu:oil_heavy_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "41E4608897A131B8"
+					item: "gtceu:oil_light_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7F8CFEF35E38D08B"
+					item: "gtceu:salt_water_bucket"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "现在你能在地下采到的"
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1B27E863E90AB90E"]
+			id: "17DDE8CC39438A32"
+			tasks: [{
+				id: "7F162CF0218BE9DC"
+				item: "gtceu:polyvinyl_chloride_bucket"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["1B27E863E90AB90E"]
+			id: "2A312C620F9B58F9"
+			tasks: [{
+				id: "01038AFF1ECC31FA"
+				item: "gtceu:polyethylene_bucket"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["17DDE8CC39438A32"]
+			id: "3BF89185AEB4D1D5"
+			tasks: [{
+				id: "4CC37056BBF4E13E"
+				item: "gtceu:polyvinyl_chloride_plate"
+				type: "item"
+			}]
+			x: 14.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2A312C620F9B58F9"]
+			id: "426D0530EE68DF73"
+			tasks: [{
+				id: "06E00F6C4DE2B487"
+				item: "gtceu:polyethylene_plate"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 0.5d
+		}
+		{
+			id: "2040F67216F6C725"
+			tasks: [{
+				id: "7F53AFE5D79C776C"
+				item: "gtceu:distillation_tower"
+				type: "item"
+			}]
+			x: 18.0d
+			y: -0.5d
+		}
+		{
+			id: "485917419310BF87"
+			tasks: [{
+				id: "2B0F2D5706778E89"
+				item: "gtceu:cracker"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["7BC592264A9788F7"]
+			id: "1EBBA5A10A8A48DB"
+			tasks: [
+				{
+					id: "4902C15F4020348D"
+					item: "gtceu:biomass_bucket"
+					type: "item"
+				}
+				{
+					id: "0DDD4FEF0A92C5BD"
+					item: "gtceu:fermented_biomass_bucket"
+					type: "item"
+				}
+				{
+					id: "615692B475A3F760"
+					item: "gtceu:charcoal_byproducts_bucket"
+					type: "item"
+				}
+				{
+					id: "0392DF1F714A7B13"
+					item: "gtceu:wood_gas_bucket"
+					type: "item"
+				}
+				{
+					id: "41513D2F7BE22436"
+					item: "gtceu:wood_vinegar_bucket"
+					type: "item"
+				}
+				{
+					id: "34DB3997C2DB6C20"
+					item: "gtceu:wood_tar_bucket"
+					type: "item"
+				}
+				{
+					id: "63B36588D80E8240"
+					item: "gtceu:coal_tar_bucket"
+					type: "item"
+				}
+				{
+					id: "578EA3ED0A7075F6"
+					item: "gtceu:coal_gas_bucket"
+					type: "item"
+				}
+			]
+			title: "从热解炉流出来的东西"
+			x: 18.0d
+			y: -4.0d
+		}
+		{
+			id: "7BC592264A9788F7"
+			tasks: [{
+				id: "33BFAD022D518BEC"
+				item: "gtceu:pyrolyse_oven"
+				type: "item"
+			}]
+			x: 18.0d
+			y: -6.0d
+		}
+		{
+			id: "48F93DF69CC7F8ED"
+			tasks: [{
+				id: "4F6E879F80E0E7D7"
+				item: "gtceu:fishing_ground"
+				type: "item"
+			}]
+			x: 20.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["48F93DF69CC7F8ED"]
+			id: "1B326CA2576D9A14"
+			tasks: [{
+				id: "3A9B19492CD9D472"
+				item: "gtceu:fish_oil_bucket"
+				type: "item"
+			}]
+			x: 20.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1B326CA2576D9A14"]
+			id: "2EDDFD731AAE8741"
+			tasks: [{
+				id: "38B653ADADF5877E"
+				item: "gtceu:glycerol_bucket"
+				type: "item"
+			}]
+			x: 20.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1B326CA2576D9A14"]
+			id: "0E700196E963B732"
+			tasks: [{
+				id: "0628D35AAD31AE7A"
+				item: "gtceu:bio_diesel_bucket"
+				type: "item"
+			}]
+			x: 22.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["445FA314F08B0F0C"]
+			id: "54E25887B23DDCA9"
+			tasks: [
+				{
+					id: "493BA5D42FED824B"
+					item: "gtceu:light_fuel_bucket"
+					type: "item"
+				}
+				{
+					id: "1D431E087EFD0C04"
+					item: "gtceu:heavy_fuel_bucket"
+					type: "item"
+				}
+				{
+					id: "70EA44AEC29590D1"
+					item: "gtceu:naphtha_bucket"
+					type: "item"
+				}
+				{
+					id: "4D26D6BBF69DE128"
+					item: "gtceu:refinery_gas_bucket"
+					type: "item"
+				}
+			]
+			title: "四桶油"
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["445FA314F08B0F0C"]
+			id: "49B8A676093DFC98"
+			tasks: [
+				{
+					id: "12B08FA8803B1924"
+					item: "gtceu:chlorine_bucket"
+					type: "item"
+				}
+				{
+					id: "1E937E3577D014B8"
+					item: "gtceu:sodium_hydroxide_dust"
+					type: "item"
+				}
+			]
+			title: "电解盐水"
+			x: 10.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["54E25887B23DDCA9"]
+			id: "37FF6008CC5760AD"
+			tasks: [{
+				id: "0B47C13CEF784833"
+				item: "gtceu:diesel_bucket"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"549FA505130C82D4"
+				"37FF6008CC5760AD"
+				"0E700196E963B732"
+			]
+			dependency_requirement: "one_completed"
+			id: "0F2EBD31E1C4FDF6"
+			tasks: [{
+				id: "7B4B41A131A3E7D3"
+				item: "gtceu:cetane_boosted_diesel_bucket"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 0.0d
+		}
+		{
+			id: "549FA505130C82D4"
+			tasks: [{
+				id: "22E34E3DC71014EB"
+				item: "gtceu:tetranitromethane_bucket"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["66CFEE6DC6A4CF34"]
+			id: "3BDEA7EB4CF81918"
+			tasks: [{
+				id: "6ED048751FB6C1EB"
+				item: "gtceu:polytetrafluoroethylene_ingot"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"45EE0AC3D5680B1F"
+				"6277F42774893AA3"
+			]
+			id: "66CFEE6DC6A4CF34"
+			tasks: [{
+				id: "5F3B5D69F11A578D"
+				item: "gtceu:tetrafluoroethylene_bucket"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 6.0d
+		}
+		{
+			description: ["氟来源于电解黄玉或蓝黄玉，氢来源于离心黄铁或者离心针叶铁或者电解水"]
+			id: "45EE0AC3D5680B1F"
+			tasks: [{
+				id: "6CE9955A904D1993"
+				item: "gtceu:hydrofluoric_acid_bucket"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 8.0d
+		}
+		{
+			description: ["气态甲烷前期可来源于离心橡胶原木，氯可以来源于电解盐或岩盐或盐水"]
+			id: "6277F42774893AA3"
+			tasks: [{
+				id: "11C400810AEC9330"
+				item: "gtceu:chloroform_bucket"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 4.0d
+		}
+	]
+	title: "石化与生化"
+}

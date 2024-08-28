@@ -1,0 +1,47 @@
+
+#Avaritia Config
+[tools]
+	#Does the super mode of endless tools retain stone and soil
+	"Is Stone" = false
+	#Whether to merge matter cluster
+	"Is Merge Matter Cluster" = true
+	#Range damage value of the right key of Infinity sword
+	#Range: 100 ~ 100000
+	"Sword Range Damage" = 10000
+	#Infinity sword right click attack range
+	#Range: 8 ~ 64
+	"Sword Attack Range" = 32
+	#Does the right key range attack of endless sword attack neutral creatures
+	"Is Sword Damage Animal" = false
+	#Does the right key spawn lightning with range of attack
+	"Is Sword Cause Lightning" = false
+	#Infinity bow scattering light arrow damage
+	#Range: 100 ~ 100000
+	"Sub Arrow Damage" = 10000
+	#Chain number of endless axe cutting trees
+	#Range: 16 ~ 128
+	"Axe Chain Count" = 64
+	#Food effect time scaling factor
+	#Range: 0.1 ~ 5.0
+	"Food Time" = 1.0
+	#The range of Infinity PickAxe can break
+	#Range: 2 ~ 32
+	"PickAxe Break Range" = 8
+	#The range of Infinity Shovel can break
+	#Range: 2 ~ 32
+	"Shovel Break Range" = 8
+	#The product tick of NeutronCollector
+	#Range: > 1200
+	"Neutron Collector Product Tick" = 3600
+	#Singularity default time required
+	#Range: > 0
+	"Singularity Time Required" = 240
+
+[emc]
+	#Emc of Neutron Pile
+	#Range: > 0
+	"Neutron Pile Emc" = 100
+	#Emc of Totem Of Undying
+	#Range: > 0
+	"Vanilla Totem Emc" = 1000
+

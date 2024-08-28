@@ -1,0 +1,13 @@
+{
+  "parent": "gtceu:item/material_sets/dull/plate",
+  "textures": {
+    "halo": "avaritia:misc/halo_noise"
+  },
+  "loader": "avaritia:halo",
+  "halo": {
+    "texture": "#halo",
+    "color": -1711276033,
+    "size": 6,
+    "pulse": false
+  }
+}
