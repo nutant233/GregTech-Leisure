@@ -1,0 +1,10 @@
+{
+  "dimension": "kubejs:barnarda",
+  "gravity":  8.722,
+  "orbit": "kubejs:barnarda_orbit",
+  "oxygen": true,
+  "solar_power": 14,
+  "solar_system": "ad_astra:barnarda",
+  "temperature": 10,
+  "tier": 8
+}

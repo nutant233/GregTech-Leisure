@@ -1,0 +1,16 @@
+{
+	"x": 20,
+	"y": 60,
+	"width": 120,
+	"height": 20,
+	"langKey": "menu.quit",
+	"u": 0,
+	"v": 0,
+	"hoverU": 0,
+	"hoverV": 20,
+	"texWidth": 200,
+	"texHeight": 40,
+	"texture": "packmenu:textures/gui/button.png",
+	"action": "QUIT",
+	"anchor": "MIDDLE_LEFT"
+}

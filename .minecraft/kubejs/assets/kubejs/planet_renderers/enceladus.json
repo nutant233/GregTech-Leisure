@@ -1,0 +1,19 @@
+{
+  "custom_clouds": true,
+  "custom_sky": true,
+  "custom_weather": false,
+  "dimension": "kubejs:enceladus",
+  "has_fog": true,
+  "has_thick_fog": false,
+  "render_in_rain": false,
+  "sky_renderables": [],
+  "star_colors": [
+    {
+      "data": -1,
+      "weight": 1
+    }
+  ],
+  "stars": 1500,
+  "sunrise_angle": 0,
+  "sunrise_color": 2079743
+}

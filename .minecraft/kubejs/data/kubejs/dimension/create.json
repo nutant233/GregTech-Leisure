@@ -1,0 +1,18 @@
+{
+  "type": "kubejs:create",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "lakes": false,
+      "features": false,
+      "biome": "kubejs:void",
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 1
+        }
+      ],
+      "structure_overrides": []
+    }
+  }
+}

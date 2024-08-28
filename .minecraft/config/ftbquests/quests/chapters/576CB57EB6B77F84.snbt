@@ -1,0 +1,572 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "576CB57EB6B77F84"
+	group: "24F4987B35ABEE82"
+	icon: "ad_astra:coal_generator"
+	id: "576CB57EB6B77F84"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			id: "7577061AE4366606"
+			tasks: [{
+				id: "208E887FE1E45C23"
+				title: "LV"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["59D7F512A30C4290"]
+			dependency_requirement: "one_completed"
+			description: [
+				"只要蒸汽足够，16A的LV是很厉害的，注意线缆不要放低于16A的"
+				"推荐制作一个大型锅炉来生产蒸汽"
+			]
+			id: "4C591AA4F1D907C1"
+			tasks: [{
+				id: "243E535AEDB5D1A5"
+				item: "gtceu:lv_steam_turbine"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -3.5d
+		}
+		{
+			description: ["虽然有这个发电机，但是在这个阶段制作燃料很困难"]
+			id: "11CBF5394DE28373"
+			tasks: [{
+				id: "64A4900F3622DCD3"
+				item: "gtceu:lv_combustion"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -3.5d
+		}
+		{
+			description: ["和同阶段的内燃一样"]
+			id: "2103464D61DAF017"
+			tasks: [{
+				id: "1D2E4E5A4DEFD377"
+				item: "gtceu:lv_gas_turbine"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -3.5d
+		}
+		{
+			id: "05C8B854877A8A7D"
+			tasks: [{
+				id: "503E4DDF1F1A68CC"
+				title: "MV"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: -2.0d
+		}
+		{
+			description: ["蒸汽还是很厉害"]
+			id: "18E1B2BB5CD96398"
+			tasks: [{
+				id: "77D31323DD63EC0C"
+				item: "gtceu:mv_steam_turbine"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			description: ["如果你有需要，可以在这个阶段可以开始制作燃料了"]
+			id: "2EDFF445746B7571"
+			tasks: [{
+				id: "007DBD60D0CD1C12"
+				item: "gtceu:mv_combustion"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			description: ["有了内燃机的燃料，燃气也会有了"]
+			id: "07103C13615B4340"
+			tasks: [{
+				id: "7D9607E817F5F3C8"
+				item: "gtceu:mv_gas_turbine"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -2.0d
+		}
+		{
+			id: "6934C9C15FAAD00A"
+			tasks: [{
+				id: "2206076670EC76B3"
+				title: "HV"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: -0.5d
+		}
+		{
+			description: ["蒸汽已经准备淘汰了"]
+			id: "67A3AFD69B00EC4C"
+			tasks: [{
+				id: "73693527D6E35992"
+				item: "gtceu:hv_steam_turbine"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -0.5d
+		}
+		{
+			description: ["可以跑满功率，如果你电力紧缺，推荐这个发电方式"]
+			id: "4AE439A017FF5A04"
+			tasks: [{
+				id: "31B6DE310917805B"
+				item: "gtceu:hv_combustion"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -0.5d
+		}
+		{
+			description: ["和内燃一样，也可以跑满功率"]
+			id: "5F1205B5A2B98E21"
+			tasks: [{
+				id: "41A77DEE3ADFAD06"
+				item: "gtceu:hv_gas_turbine"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -0.5d
+		}
+		{
+			id: "62D8D7B8C9730557"
+			tasks: [{
+				id: "0CE1A9B25F5823C9"
+				title: "EV"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: 1.0d
+		}
+		{
+			description: [
+				"这种涡轮在目前的性能不如小发电机"
+				"注意不要遮挡转子"
+			]
+			id: "1B77B2C00B24906E"
+			tasks: [{
+				id: "72AF5205FE80B133"
+				item: "gtceu:steam_large_turbine"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -0.5d
+		}
+		{
+			description: [
+				"内燃和燃气的区别开始显现"
+				"注意转子支架不能低最低要求，即EV，否则会显示效率-1"
+			]
+			id: "38918D31E5A969C1"
+			tasks: [{
+				id: "225A42BE61876F4A"
+				item: "gtceu:gas_large_turbine"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 1.0d
+		}
+		{
+			description: [
+				"很方便，稳定的发电，随时启动"
+				"注意不要遮挡面部"
+			]
+			id: "763DDE9819C3986C"
+			tasks: [{
+				id: "3D82B481E29DAE6B"
+				item: "gtceu:large_combustion_engine"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 1.0d
+		}
+		{
+			id: "5460CFE78B89DC30"
+			tasks: [{
+				id: "4B7E26D82AAFA0A5"
+				title: "IV"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: 2.5d
+		}
+		{
+			description: ["特大涡轮的发电量都非常巨大，即使是蒸汽也很强力，注意每一个转子都不能遮挡"]
+			id: "6196565B3DE59BF1"
+			tasks: [{
+				id: "625BBCED62255415"
+				item: "gtceu:steam_mega_turbine"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 1.0d
+		}
+		{
+			description: ["升级版，效率更高"]
+			id: "3DFD3D7C8DF30B75"
+			tasks: [{
+				id: "14FBA3E915BD5C17"
+				item: "gtceu:extreme_combustion_engine"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.5d
+		}
+		{
+			description: ["非常强力"]
+			id: "1FF27C8CE8BD4041"
+			tasks: [{
+				id: "7A3302436045F131"
+				item: "gtceu:gas_mega_turbine"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 2.5d
+		}
+		{
+			description: ["非常强力的单方块发电机"]
+			id: "1BDB51F089ED52D3"
+			tasks: [{
+				id: "0D3FDB5461E50DF0"
+				item: "gtceu:ev_rocket_engine"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.0d
+		}
+		{
+			description: ["很强力"]
+			id: "1A76E49604336B50"
+			tasks: [{
+				id: "3A071C147BA1B580"
+				item: "gtceu:iv_rocket_engine"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			id: "504BA5B399BFA571"
+			tasks: [{
+				id: "326C22F23137507B"
+				title: "LuV"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: 4.0d
+		}
+		{
+			description: ["还是很强力"]
+			id: "5960AA3D42E0F886"
+			tasks: [{
+				id: "68AC62415412A2A1"
+				item: "gtceu:luv_rocket_engine"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 4.0d
+		}
+		{
+			description: ["硅岩燃料很耐烧"]
+			id: "2CC7E0E80D23E7EF"
+			tasks: [{
+				id: "562C661F9252E3AF"
+				item: "gtceu:luv_naquadah_reactor"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 4.0d
+		}
+		{
+			description: ["虽然有这个发电机，但是这个阶段燃料无法获取"]
+			id: "48991235C17FB211"
+			tasks: [{
+				id: "5AF1CFBEC9280D1A"
+				item: "gtceu:iv_naquadah_reactor"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 2.5d
+		}
+		{
+			description: ["最后一个单方块发电机"]
+			id: "67A37C28F37F2C3D"
+			tasks: [{
+				id: "43FD10D740D6DCB4"
+				item: "gtceu:zpm_naquadah_reactor"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 5.5d
+		}
+		{
+			id: "1BD6F43D61ABF744"
+			tasks: [{
+				id: "1661853C8F3910C0"
+				title: "ZPM"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: 5.5d
+		}
+		{
+			description: ["很强力的稳定发电方式"]
+			id: "666098A2D466C77A"
+			tasks: [{
+				id: "05ADF526AE790643"
+				item: "gtceu:chemical_energy_devourer"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			description: ["比特大燃气更强力"]
+			id: "2CF58B9EF4F70090"
+			tasks: [{
+				id: "5ACF147740945167"
+				item: "gtceu:rocket_mega_turbine"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 2.5d
+		}
+		{
+			description: ["用聚变出的等离子发电"]
+			id: "5E76606D0601E263"
+			tasks: [{
+				id: "3EE9E5A4C22EB8A5"
+				item: "gtceu:plasma_large_turbine"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			description: ["最强的特大涡轮"]
+			hide_dependency_lines: false
+			id: "48462EE64EA29340"
+			tasks: [{
+				id: "70FB2E5BE288D032"
+				item: "gtceu:plasma_mega_turbine"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 5.5d
+		}
+		{
+			id: "44F827B28C513D5B"
+			tasks: [{
+				id: "513C7F42EA555C43"
+				title: "UV"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: 7.0d
+		}
+		{
+			description: ["最高MAX级别电力，非常强力"]
+			id: "24BBFCFCAFE0ECD5"
+			tasks: [{
+				id: "16259075AA2E440D"
+				item: "gtceu:large_naquadah_reactor"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 7.0d
+		}
+		{
+			description: ["单方块火箭引擎的升级版，非常强力"]
+			id: "408C3C831B65D6F1"
+			tasks: [{
+				id: "32BCA52A82F7C585"
+				item: "gtceu:rocket_large_turbine"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			id: "4B33F47839538D7B"
+			tasks: [{
+				id: "5B512F241E6679D1"
+				title: "UHV"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: 8.5d
+		}
+		{
+			description: ["相比硅岩，更省燃料，最高256A MAX输出"]
+			id: "548E8FA4B1004534"
+			tasks: [{
+				id: "5079AC2040FDA3AA"
+				item: "gtceu:hyper_reactor"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 8.5d
+		}
+		{
+			description: ["满模块时可达10000A MAX输出"]
+			id: "082BB082BE18C820"
+			tasks: [{
+				id: "4DC11532BC403AB3"
+				item: "gtceu:dyson_sphere"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 10.0d
+		}
+		{
+			id: "19C7474792787EE9"
+			tasks: [{
+				id: "2E8606C5E07D1D88"
+				title: "UIV"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: 10.0d
+		}
+		{
+			description: ["最高16384A MAX输出"]
+			id: "25F672CF48091CEC"
+			tasks: [{
+				id: "7F7D348C6E55EC07"
+				item: "gtceu:advanced_hyper_reactor"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 10.0d
+		}
+		{
+			id: "31779C5096523FEF"
+			tasks: [{
+				id: "28E9E67B5567ABFB"
+				title: "OpV"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: 11.5d
+		}
+		{
+			description: ["最高1048576A MAX输出，并且结构支持4面共享"]
+			id: "1893C9D673253B79"
+			tasks: [{
+				id: "7E9DC235BCE8E7BF"
+				item: "gtceu:annihilate_generator"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 11.5d
+		}
+		{
+			description: ["烧点简单的燃料"]
+			id: "6EF3C749D06C7262"
+			tasks: [{
+				id: "329F1BD301166219"
+				item: "gtceu:lv_semi_fluid"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -3.5d
+		}
+		{
+			id: "28507EACD363F3D1"
+			tasks: [{
+				id: "1D47416F630379AB"
+				item: "gtceu:mv_semi_fluid"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			id: "236EB8B88EA504C9"
+			tasks: [{
+				id: "778BDD1B9F40E23F"
+				item: "gtceu:hv_semi_fluid"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -0.5d
+		}
+		{
+			id: "4E8004D6D020E5E5"
+			tasks: [{
+				id: "37D6A5F6A1C6D304"
+				item: "gtceu:large_semi_fluid_generator"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			description: ["每次成功的雷击会填充1/4的能量"]
+			id: "45656BC02DC740CE"
+			tasks: [{
+				id: "11BBDF10AD954709"
+				item: "gtceu:ev_lightning_rod"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			id: "61B0C3E3C0B7E6EE"
+			tasks: [{
+				id: "31A9D370C6B93F87"
+				item: "gtceu:iv_lightning_rod"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.5d
+		}
+		{
+			id: "36ED28C6C3F2CDEC"
+			tasks: [{
+				id: "5BEE28B100FC5354"
+				item: "gtceu:luv_lightning_rod"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 4.0d
+		}
+		{
+			description: ["搭配热交换机使用，可使用等离子或者裂变堆获得燃料"]
+			id: "749FFDD88305518C"
+			tasks: [{
+				id: "7EE83AF0AE0CD89E"
+				item: "gtceu:supercritical_steam_turbine"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 4.0d
+		}
+		{
+			id: "301FD6AEF56EDB77"
+			tasks: [{
+				id: "039203DBB3645A9D"
+				item: "gtceu:supercritical_mega_steam_turbine"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 5.5d
+		}
+	]
+	title: "如何发电"
+}

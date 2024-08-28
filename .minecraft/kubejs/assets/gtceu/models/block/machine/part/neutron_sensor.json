@@ -1,0 +1,25 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "block/block",
+  "textures": {
+    "particle": "gtceu:block/overlay/machine/overlay_hatch",
+    "overlay_hatch": "gtceu:block/overlay/machine/overlay_neutron_sensor",
+    "overlay_hatch_emissive": "gtceu:block/overlay/machine/overlay_neutron_sensor_emissive"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 0],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "texture": "#overlay_hatch", "cullface": "north"}
+      }
+    },
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 0],
+      "faces": {
+        "north": {"uv": [0, 0, 16, 16], "texture": "#overlay_hatch_emissive", "cullface": "north", "tintindex": -101, "emissivity":  15}
+      }
+    }
+  ]
+}

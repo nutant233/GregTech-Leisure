@@ -1,0 +1,15 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "kubejs:item/singularity/combined_singularity_13",
+    "layer1": "kubejs:item/singularity/combined_singularity_13_overlay",
+    "halo": "avaritia:misc/halo"
+  },
+  "loader": "avaritia:halo",
+  "halo": {
+    "texture": "#halo",
+    "color": -16777216,
+    "size": 4,
+    "pulse": false
+  }
+}

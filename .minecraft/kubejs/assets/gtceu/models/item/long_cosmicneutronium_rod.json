@@ -1,0 +1,15 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gtceu:item/material_sets/dull/rod_long",
+    "layer1": "gtceu:item/material_sets/dull/rod_long_secondary",
+    "halo": "avaritia:misc/halo_noise"
+  },
+  "loader": "avaritia:halo",
+  "halo": {
+    "texture": "#halo",
+    "color": -1711276033,
+    "size": 6,
+    "pulse": false
+  }
+}

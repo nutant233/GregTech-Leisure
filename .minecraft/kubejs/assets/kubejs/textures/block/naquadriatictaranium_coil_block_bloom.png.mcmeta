@@ -1,0 +1,9 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/naquadriatictaranium_coil_block_bloom_ctm",
+        "emissive": true
+    },
+    "shimmer": {
+        "bloom": true
+    }
+}

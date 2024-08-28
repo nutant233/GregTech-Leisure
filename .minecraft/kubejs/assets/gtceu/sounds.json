@@ -1,0 +1,20 @@
+{
+  "dtpf": {
+    "sounds": [
+      {
+        "type": "file",
+        "name": "gtceu:dtpf"
+      }
+    ],
+    "subtitle": "gtceu.subtitle.dtpf"
+  },
+  "fusionloop": {
+    "sounds": [
+      {
+        "type": "file",
+        "name": "gtceu:fusionloop"
+      }
+    ],
+    "subtitle": "gtceu.subtitle.fusionloop"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "kubejs:block/barnarda_planks"
+  },
+  "render_type": "solid"
+}
