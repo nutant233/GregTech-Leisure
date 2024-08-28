@@ -600,9 +600,31 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
     GTRecipeTypes.register("isa_mill", "multiblock")
         .setMaxIOSize(2, 1, 1, 0)
         .setEUIO("in")
-        .setProgressBar(GuiTextures.PROGRESS_BAR_MASS_FAB, FillDirection.LEFT_TO_RIGHT)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.MACERATOR)
         .addDataInfo(data => {
             if (LDLib.isClient()) return $LocalizationUtils.format("gtceu.recipe.grindball", getGrindball(data.getInt("grindball")))
+        })
+
+    GTRecipeTypes.register("flotating_beneficiation", "multiblock")
+        .setMaxIOSize(2, 0, 1, 1)
+        .setEUIO("in")
+        .setProgressBar(GuiTextures.PROGRESS_BAR_BATH, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.CHEMICAL)
+
+    GTRecipeTypes.register("vacuum_drying", "multiblock")
+        .setMaxIOSize(1, 6, 1, 2)
+        .setEUIO("in")
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.COOLING)
+        .addDataInfo(data => {
+            return $LocalizationUtils.format("gtceu.recipe.temperature", $FormattingUtil.formatNumbers(data.getInt("ebf_temp")))
+        })
+        .addDataInfo(data => {
+            let requiredCoil = $ICoilType.getMinRequiredType(data.getInt("ebf_temp"))
+            if (LDLib.isClient() && requiredCoil != null && requiredCoil.getMaterial() != null) {
+                return $LocalizationUtils.format("gtceu.recipe.coil.tier", $I18n.get(requiredCoil.getMaterial().getUnlocalizedName()))
+            }
+            return ""
         })
 })

@@ -82,6 +82,12 @@ StartupEvents.registry("item", event => {
             .texture("kubejs:item/" + vein)
             .tag("kubjes:vein_essence")
     })
+    const milled_ores = [
+        "nickel", "platinum", "almandine", "grossular", "pyrope", "spessartine", "chalcopyrite", "pentlandite", "sphalerite", "monazite", "redstone"]
+    milled_ores.forEach((milled_ore) => {
+        event.create("milled_" + milled_ore)
+            .texture("kubejs:item/milled/milled_" + milled_ore)
+    })
     event.create("space_essence")
     event.create("bedrock_destroyer", "pickaxe")
     event.create("lepton_trap_crystal")
