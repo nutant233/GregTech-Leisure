@@ -35,8 +35,11 @@
 
 ## 其他信息
 
-[下载链接](https://codeload.github.com/nutant233/GregTech-Leisure/zip/refs/heads/main)
+[客户端下载链接](https://codeload.github.com/nutant233/GregTech-Leisure/zip/refs/heads/main)
 可导入到启动器安装。
+
+[服务端下载链接](https://codeload.github.com/nutant233/GregTech-Leisure/zip/refs/heads/Server)
+解压运行。
 
 如果遇到bug，对该整合包有任何意见，可在issue区域或者QQ群反馈。
 
