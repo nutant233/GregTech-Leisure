@@ -1,0 +1,20 @@
+{
+  "name": "太阳能板",
+  "icon": "ad_astra:solar_panel",
+  "sortnum": 1,
+  "category": "ad_astra:the_moon",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "太阳能板",
+      "item": "ad_astra:solar_panel",
+      "text": "太阳能电池板是燃煤发电机的升级版，每tick产生更多的电能的同时也能自给自足。它的发电量取决于地球与太阳的距离以及是否有雾。因此，将太阳能电池板放置在靠近太阳的位置更有效。太阳能电池板在卫星轨道上也会产生更多的能量，因为没有大气层阻挡光线。"
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "太阳能板",
+      "text": "你可以在太阳能板的GUI中查看当前的太阳能板的电能产出。",
+      "recipe": "ad_astra:solar_panel"
+    }
+  ]
+}

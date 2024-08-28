@@ -1,0 +1,528 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "12538B9410F2DEC5"
+	group: "68CBF1606D696C68"
+	icon: "gtceu:zpm_electric_motor"
+	id: "12538B9410F2DEC5"
+	order_index: 7
+	quest_links: [
+		{
+			id: "5EEBF7A4BECF0BAA"
+			linked_quest: "0B89B3108EB4A01F"
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			id: "0A5828AFCC7D442F"
+			linked_quest: "0485D45408234C99"
+			x: -0.5d
+			y: -1.5d
+		}
+		{
+			id: "46BFC6BCC3440819"
+			linked_quest: "4A058FA1859A00D1"
+			x: -0.5d
+			y: 0.0d
+		}
+	]
+	quests: [
+		{
+			dependencies: [
+				"38D23D186C444492"
+				"5E9E2F25AE1EC731"
+			]
+			description: ["适合做生物研究"]
+			id: "04B1D03A3FE114F1"
+			tasks: [
+				{
+					id: "42A2A3DE0D71F79C"
+					item: "gtceu:sterilizing_filter_casing"
+					type: "item"
+				}
+				{
+					id: "42A0398691BDA897"
+					item: "gtceu:sterile_cleaning_maintenance_hatch"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4DD127E33DCEC616"
+				"0B89B3108EB4A01F"
+				"233CA36D529EC3FB"
+				"4ECACC2A6159D332"
+				"298369255C8130F7"
+				"4A058FA1859A00D1"
+				"0485D45408234C99"
+				"52DF531AFB3A07CE"
+			]
+			description: ["更进一步"]
+			id: "77759D1FE48F958B"
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "00D112DFCD012D77"
+				item: "gtceu:zpm_fusion_reactor"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"77759D1FE48F958B"
+				"6A59FA11D10C648A"
+			]
+			id: "38D23D186C444492"
+			tasks: [{
+				id: "33183645B439CFDB"
+				item: "gtceu:tritanium_ingot"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["503C03C654730F65"]
+			description: ["制作方式变了"]
+			id: "051792ED136C96D0"
+			tasks: [{
+				id: "7DFA913411D706CB"
+				item: "gtceu:wetware_circuit_board"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["04B1D03A3FE114F1"]
+			icon: "gtceu:bacteria_bucket"
+			id: "503C03C654730F65"
+			tasks: [{
+				id: "67D7250ABEBDE5E2"
+				title: "细菌产线"
+				type: "checkmark"
+			}]
+			x: -6.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"503C03C654730F65"
+				"079FEA1875012A69"
+			]
+			id: "64EAB77978C87CE9"
+			tasks: [{
+				id: "6B0EF909ED8DFCFD"
+				item: "gtceu:stem_cells"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"64EAB77978C87CE9"
+				"051792ED136C96D0"
+			]
+			id: "46855799A4471E34"
+			tasks: [{
+				id: "0623E66A9C488A49"
+				item: "gtceu:neuro_processing_unit"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["46855799A4471E34"]
+			description: ["使用有机培养的干细胞与电子刺激相互作用，快速执行大规模计算。"]
+			id: "425D7CD010B9C90E"
+			tasks: [{
+				id: "1C1B32F4B3E713A2"
+				item: "gtceu:wetware_processor"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["425D7CD010B9C90E"]
+			id: "582AFD622AA67792"
+			tasks: [{
+				id: "63AC52623C55FBD6"
+				item: "gtceu:wetware_processor_assembly"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["582AFD622AA67792"]
+			id: "7CF037F2C4BF55B5"
+			tasks: [{
+				id: "5E77549BE2B175D2"
+				item: "gtceu:wetware_processor_computer"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["77759D1FE48F958B"]
+			id: "7C23CC6ADDC33EA0"
+			tasks: [{
+				id: "68B49A32B28AECEA"
+				item: "gtceu:darmstadtium_ingot"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["77759D1FE48F958B"]
+			id: "73C70C42B7EF5D4F"
+			tasks: [{
+				id: "1E7062E4355C5661"
+				item: "gtceu:americium_ingot"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["38D23D186C444492"]
+			id: "59CA7B4A4A417B53"
+			tasks: [{
+				id: "660C7300DF6A9A97"
+				item: "gtceu:tritanium_coil_block"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"59CA7B4A4A417B53"
+				"52DF531AFB3A07CE"
+				"6A59FA11D10C648A"
+			]
+			description: ["UV超导体"]
+			id: "62D2B830A98424BB"
+			tasks: [{
+				id: "188D424E2FE3A663"
+				item: "gtceu:enriched_naquadah_trinium_europium_duranide_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"62D2B830A98424BB"
+				"7CF037F2C4BF55B5"
+			]
+			id: "0A2D46609F5C3CAB"
+			tasks: [{
+				id: "31A360FB27D6251A"
+				item: "gtceu:wetware_processor_mainframe"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7C23CC6ADDC33EA0"]
+			id: "5D4131C48F9BAE46"
+			shape: "gear"
+			tasks: [{
+				id: "271AD42D98889163"
+				item: "gtceu:decay_hastener"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"5B01312E34A3AD60"
+				"0F22A8CE63F369CA"
+				"52DF531AFB3A07CE"
+				"4172820CE8E15F90"
+			]
+			id: "4DD127E33DCEC616"
+			tasks: [{
+				id: "5E1809039C58C20B"
+				item: "gtceu:fusion_coil"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0A2D46609F5C3CAB"]
+			description: ["更长，更快，无需有序"]
+			id: "172FC2F2B20CD187"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "1F71F073D091459C"
+				item: "gtceu:advanced_assembly_line"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0A2D46609F5C3CAB"]
+			description: ["后面的电路装配线要使用"]
+			id: "1385E89DD3FD663B"
+			tasks: [{
+				id: "68A5969FB9056BA3"
+				item: "kubejs:precision_circuit_assembly_robot_mk1"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"38D23D186C444492"
+				"62D2B830A98424BB"
+			]
+			description: [
+				"一台计算机提供的算力是不够的，如果要合并算力就需要这台机器"
+				"在使用前确保计算机上安装了桥接组件"
+			]
+			id: "5E86110BBAEA92BA"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "1DF9E2E28B0FC970"
+				item: "gtceu:network_switch"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"5D4131C48F9BAE46"
+				"7C4C11E7C931C01B"
+			]
+			description: ["可以高速处理mk3前的聚变配方，有轻微损耗。"]
+			id: "2802E34A99CE1D79"
+			shape: "gear"
+			size: 1.3d
+			tasks: [{
+				id: "30BC4BA2F6A606D5"
+				item: "gtceu:super_particle_collider"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"0507FDF7BECE29AF"
+				"52DF531AFB3A07CE"
+			]
+			id: "5E9E2F25AE1EC731"
+			tasks: [{
+				id: "3C99AB623FB588D4"
+				item: "gtceu:zpm_emitter"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"0B89B3108EB4A01F"
+				"5E9E2F25AE1EC731"
+			]
+			hide_dependent_lines: true
+			id: "7C4C11E7C931C01B"
+			tasks: [{
+				id: "1A1852A8E4DD94CF"
+				item: "gtceu:zpm_field_generator"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["118FDF6D9F868002"]
+			id: "6A59FA11D10C648A"
+			tasks: [{
+				id: "4C1F30305CB157EA"
+				item: "gtceu:duranium_ingot"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"6A59FA11D10C648A"
+				"0A2D46609F5C3CAB"
+			]
+			description: ["OP"]
+			id: "35C61EF7C0FBD32F"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "64C7755B5517C918"
+				item: "gtceu:integrated_ore_processor"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0A2D46609F5C3CAB"]
+			description: ["输入石油，输出产物"]
+			id: "61838E13426B2B88"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "6FEB78AB1D5BDDCA"
+				item: "gtceu:petrochemical_plant"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"7C4C11E7C931C01B"
+				"04B1D03A3FE114F1"
+			]
+			description: ["前往太阳系之外"]
+			id: "7FD1D1D8ED72D40C"
+			rewards: [{
+				id: "4BCD53BFF7E94B0A"
+				item: {
+					Count: 1
+					id: "avaritia:infinity_shovel"
+					tag: { }
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "50DBDD703AB9CE43"
+					item: {
+						Count: 1
+						id: "ad_astra_rocketed:tier_7_rocket"
+						tag: {
+							BotariumData: {
+								StoredFluids: [{
+									Amount: 0L
+									Fluid: "minecraft:empty"
+								}]
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0B69AA49652FBF95"
+					item: "gtceu:stellar_energy_rocket_fuel_bucket"
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7FD1D1D8ED72D40C"]
+			id: "079FEA1875012A69"
+			tasks: [{
+				count: 4L
+				id: "32F1F3F299981C4F"
+				item: { Count: 4, id: "kubejs:glacio_spirit" }
+				type: "item"
+			}]
+			x: -6.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["64EAB77978C87CE9"]
+			description: ["纳米机器人"]
+			id: "02F523E003E1C93D"
+			tasks: [{
+				id: "50ACEB6385D60F9C"
+				item: "gtceu:carbon_nanoswarm"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["02F523E003E1C93D"]
+			description: ["大批量纳米机器人生产"]
+			id: "3B098EA4601A7827"
+			tasks: [{
+				id: "429C36800C493E79"
+				item: "gtceu:nano_forge_1"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["5E9E2F25AE1EC731"]
+			id: "6C24E5BA18FE8CF5"
+			tasks: [
+				{
+					id: "230E8001CE426D4F"
+					item: "gtmthings:wireless_computation_transmitter_hatch"
+					type: "item"
+				}
+				{
+					id: "3536A2F8BBFA6517"
+					item: "gtmthings:wireless_computation_receiver_hatch"
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: -3.0d
+		}
+		{
+			dependencies: [
+				"02F523E003E1C93D"
+				"035C470213E8B4DB"
+			]
+			description: ["优化你的产线"]
+			id: "16C93F76F74CB8DB"
+			tasks: [{
+				id: "42B8B94BB1B32E83"
+				item: "gtceu:chemical_distort"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0A2D46609F5C3CAB"]
+			description: ["电解机、电磁选矿机和两极磁化机的激光版本"]
+			id: "3565D2D5E0A2CEDF"
+			shape: "gear"
+			size: 1.2d
+			tasks: [{
+				id: "30D756E7388280AB"
+				item: "gtceu:superconducting_electromagnetism"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 4.5d
+		}
+	]
+	subtitle: ["Tier7-ZPM"]
+	title: "零点压"
+}

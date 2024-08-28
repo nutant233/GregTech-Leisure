@@ -1,0 +1,12 @@
+{
+  "type": "ae2:inscriber",
+  "ingredients": {
+    "middle": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "mode": "inscribe",
+  "result": {
+    "item": "gtceu:ender_pearl_dust"
+  }
+}

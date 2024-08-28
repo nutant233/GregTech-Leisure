@@ -1,0 +1,14 @@
+{
+    "block.mae2.4x_crafting_accelerator": "4x并行处理单元",
+    "block.mae2.16x_crafting_accelerator": "16x并行处理单元",
+    "block.mae2.64x_crafting_accelerator": "64x并行处理单元",
+    "block.mae2.256x_crafting_accelerator": "256x并行处理单元",
+    "block.mae2.max_crafting_storage": "MAX合成存储器",
+    "block.mae2.max_crafting_accelerator": "MAX并行处理单元",
+    "item.mae2.pattern_p2p_tunnel": "样板p2p通道",
+    "item.mae2.pattern_multi_p2p_tunnel": "样板多节点p2p通道",
+    "item.mae2.fe_multi_p2p_tunnel": "FE多节点p2p通道",
+    "item.mae2.fluid_multi_p2p_tunnel": "流体多节点p2p通道",
+    "item.mae2.item_multi_p2p_tunnel": "物品多节点p2p通道",
+    "item.mae2.redstone_multi_p2p_tunnel": "红石多节点p2p通道"
+}

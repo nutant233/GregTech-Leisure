@@ -1,0 +1,22 @@
+{
+  "name": "material.gtceu.spacetime",
+  "colors": [
+    "caccda",
+    "9a9ca6"
+  ],
+  "timeRequired": 240,
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "tag": "forge:ingots/spacetime",
+        "type": "forge:tag_empty"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:ingots/spacetime"
+  },
+  "enabled": true,
+  "recipeDisabled": false
+}
