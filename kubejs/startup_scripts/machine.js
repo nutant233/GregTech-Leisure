@@ -1209,6 +1209,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("space_elevator")
         .tooltips(Component.translatable("gtceu.machine.space_elevator.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.space_elevator.tooltip.1"))
+        .tooltips(Component.translatable("gtceu.machine.space_elevator.tooltip.2"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.space_elevator")))
         .recipeModifier((machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 100000, false).getFirst())
@@ -1305,12 +1306,20 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.resource_collection.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.assembler_module")))
-        .recipeModifiers([(machine, recipe) => {
+        .recipeModifier((machine, recipe) => {
             let tier = getSpaceElevatorModule(machine)
-            let recipe1 = GTRecipeModifiers.accurateParallel(machine, recipe, Math.pow(4, tier[1] - 1), false).getFirst()
-            recipe1.duration = recipe1.duration * Math.pow(0.8, tier[0])
-            return recipe1
-        }, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+            if (tier[0] < 0) {
+                return null
+            }
+            if (recipe.data.getInt("SEPMTier") > tier[1]) {
+                return null
+            }
+            let recipe1 = GTRecipeModifiers.reduction(machine, recipe, 1, Math.pow(0.8, tier[0]))
+            if (recipe1 != null) {
+                return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe1, Math.pow(4, tier[1] - 1), false).getFirst(), machine.getOverclockVoltage())
+            }
+            return null
+        })
         .appearanceBlock(() => Block.getBlock("kubejs:space_elevator_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1323,17 +1332,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("a", Predicates.blocks("kubejs:module_base"))
                 .where("c", Predicates.blocks("kubejs:module_connector"))
                 .build())
-        .beforeWorking((machine, recipe) => {
-            let tier = getSpaceElevatorModule(machine)
-            if (tier[0] < 0) {
-                machine.getRecipeLogic().interruptRecipe()
-                return false
-            } else if (recipe.getInt("SEPMTier") > tier[1]) {
-                machine.getRecipeLogic().interruptRecipe()
-                return false
-            }
-            return true
-        })
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
                 if (getSpaceElevatorModule(machine)[0] < 0) {
@@ -1347,7 +1345,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             if (controller.isFormed()) {
                 let tier = getSpaceElevatorModule(controller)
                 components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(Math.pow(4, tier[1] - 1))).darkPurple()).gray())
-                components.add(Component.literal("该模块" + (tier[0] < 0 ? "未" : "已") + "成功安装"))
+                components.add(Component.literal((tier[0] < 0 ? "未" : "已") + "连接正在运行的太空电梯"))
                 components.add(Component.translatable("gtceu.machine.duration_multiplier.tooltip", Math.pow(0.8, tier[0])))
             }
         })
@@ -1361,12 +1359,17 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.resource_collection.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.miner_module"), Component.translatable("gtceu.drilling_module")))
-        .recipeModifiers([(machine, recipe) => {
+        .recipeModifier((machine, recipe) => {
             let tier = getSpaceElevatorModule(machine)
-            let recipe1 = GTRecipeModifiers.accurateParallel(machine, recipe, Math.pow(4, tier[1] - 1), false).getFirst()
-            recipe1.duration = recipe1.duration * Math.pow(0.8, tier[0])
-            return recipe1
-        }, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+            if (tier[0] < 0) {
+                return null
+            }
+            let recipe1 = GTRecipeModifiers.reduction(machine, recipe, 1, Math.pow(0.8, tier[0]))
+            if (recipe1 != null) {
+                return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe1, Math.pow(4, tier[1] - 1), false).getFirst(), machine.getOverclockVoltage())
+            }
+            return null
+        })
         .appearanceBlock(() => Block.getBlock("kubejs:space_elevator_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1400,7 +1403,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             if (controller.isFormed()) {
                 let tier = getSpaceElevatorModule(controller)
                 components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(Math.pow(4, tier[1] - 1))).darkPurple()).gray())
-                components.add(Component.literal("该模块" + (tier[0] < 0 ? "未" : "已") + "成功安装"))
+                components.add(Component.literal((tier[0] < 0 ? "未" : "已") + "连接正在运行的太空电梯"))
                 components.add(Component.translatable("gtceu.machine.duration_multiplier.tooltip", Math.pow(0.8, tier[0])))
             }
         })
@@ -3202,13 +3205,14 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.duration_multiplier.tooltip", 0.8))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.1"))
-        .tooltips(Component.translatable("gtceu.machine.available_recipe_map_6.tooltip",
+        .tooltips(Component.translatable("gtceu.machine.available_recipe_map_7.tooltip",
             Component.translatable("gtceu.centrifuge"),
             Component.translatable("gtceu.thermal_centrifuge"),
             Component.translatable("gtceu.electrolyzer"),
             Component.translatable("gtceu.sifter"),
             Component.translatable("gtceu.macerator"),
-            Component.translatable("gtceu.extractor")))
+            Component.translatable("gtceu.extractor"),
+            Component.translatable("gtceu.dehydrator")))
         .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -5097,7 +5101,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.advanced_integrated_ore_processor.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.integrated_ore_processor")))
-        .recipeModifier((machine, recipe) => GTRecipeModifiers.accurateParallel(machine, GTRecipeModifiers.reduction(machine, recipe, 1, 0), 2147483647, false).getFirst())
+        .recipeModifier((machine, recipe) => {
+            recipe.duration = 0
+            return GTRecipeModifiers.accurateParallel(machine, recipe, 2147483647, false).getFirst()
+        })
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -5287,6 +5294,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("flotating_beneficiation")
         .tooltips(Component.translatable("gtceu.machine.flotation_cell_regulator.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
+        .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.flotating_beneficiation")))
         .recipeModifiers([GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
@@ -5310,6 +5318,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(1))
                     .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(2))
                     .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMaxGlobalLimited(1))
+                    .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setExactLimit(1))
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
                 .where("C", Predicates.blocks("kubejs:hastelloy_n_75_pipe"))
                 .where("E", Predicates.blocks("kubejs:hastelloy_n_75_casing"))
