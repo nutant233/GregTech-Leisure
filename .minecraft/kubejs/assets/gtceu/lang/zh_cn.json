@@ -831,6 +831,7 @@
   "gtceu.machine.space_elevator.set_out": "启程",
   "gtceu.machine.space_elevator.tooltip.0": "可安装最多8个拓展模块",
   "gtceu.machine.space_elevator.tooltip.1": "提升电压等级可为模块提供耗时减免",
+  "gtceu.machine.space_elevator.tooltip.2": "更高的电压需要更多的算力来维持",
   "gtceu.machine.space_probe_surface_reception.tooltip.0": "不要遮挡",
   "gtceu.machine.sphere_of_harmony.tooltip.0": "创造一个微缩宇宙，并获取里面的资源",
   "gtceu.machine.sphere_of_harmony.tooltip.1": "这台多方块机器需要太多EU，无法用常规手段供能",

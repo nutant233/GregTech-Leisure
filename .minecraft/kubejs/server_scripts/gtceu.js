@@ -2656,7 +2656,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:soldering_alloy 4096", "gtceu:mendelevium 4096", "gtceu:nobelium 4096", "gtceu:lawrencium 4096")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(1600)
-        .stationResearch(b => b.researchStack(Item.of("gtceu:power_module"))
+        .stationResearch(b => b.researchStack(Item.of("ad_astra_rocketed:tier_7_rocket"))
             .EUt(GTValues.VA[GTValues.UV])
             .dataStack(Item.of("gtceu:data_module"))
             .CWUt(64))
@@ -4079,13 +4079,13 @@ ServerEvents.recipes((event) => {
 
     gtr.dehydrator("gtceu:germanium_dioxide_dust")
         .inputFluids("gtceu:germanium_tetrachloride_solution 1000", "gtceu:hydrogen 4000")
-        .itemOutputs("gtceu:germanium_dioxide_dust")
+        .itemOutputs("3x gtceu:germanium_dioxide_dust")
         .outputFluids("gtceu:hydrochloric_acid 4000")
         .EUt(30)
         .duration(800)
 
     gtr.electric_blast_furnace("gtceu:germanium_dust")
-        .itemInputs("gtceu:germanium_dioxide_dust")
+        .itemInputs("3x gtceu:germanium_dioxide_dust")
         .inputFluids("gtceu:hydrogen 4000")
         .itemOutputs("gtceu:germanium_dust")
         .EUt(120)
@@ -14811,7 +14811,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:europium_frame",
             "6x gtceu:dense_rhodium_plated_palladium_plate",
             "4x gtceu:luv_field_generator",
-            '6x gtceu:luv_electric_pump',
+            "6x gtceu:luv_electric_pump",
             "8x gtceu:luv_robot_arm",
             "10x gtceu:luv_sensor",
             "16x gtceu:luv_conveyor_module",
@@ -14833,7 +14833,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:naquadah_alloy_frame",
             "6x gtceu:dense_naquadah_alloy_plate",
             "4x gtceu:zpm_field_generator",
-            '6x gtceu:zpm_electric_pump',
+            "6x gtceu:zpm_electric_pump",
             "8x gtceu:zpm_robot_arm",
             "10x gtceu:zpm_sensor",
             "16x gtceu:zpm_conveyor_module",
@@ -14855,7 +14855,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:tritanium_frame",
             "24x gtceu:double_tritanium_plate",
             "4x gtceu:uv_field_generator",
-            '6x gtceu:uv_electric_pump',
+            "6x gtceu:uv_electric_pump",
             "8x gtceu:uv_robot_arm",
             "10x gtceu:uv_sensor",
             "16x gtceu:uv_conveyor_module",
@@ -14877,7 +14877,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:mithril_frame",
             "24x gtceu:double_mithril_plate",
             "4x gtceu:uhv_field_generator",
-            '6x gtceu:uhv_electric_pump',
+            "6x gtceu:uhv_electric_pump",
             "8x gtceu:uhv_robot_arm",
             "10x gtceu:uhv_sensor",
             "16x gtceu:uhv_conveyor_module",
@@ -14899,7 +14899,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:quantanium_frame",
             "24x gtceu:double_echoite_plate",
             "4x gtceu:uev_field_generator",
-            '6x gtceu:uev_electric_pump',
+            "6x gtceu:uev_electric_pump",
             "8x gtceu:uev_robot_arm",
             "10x gtceu:uev_sensor",
             "16x gtceu:uev_conveyor_module",
@@ -14921,7 +14921,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:vibranium_frame",
             "24x gtceu:double_vibranium_plate",
             "4x gtceu:uiv_field_generator",
-            '6x gtceu:uiv_electric_pump',
+            "6x gtceu:uiv_electric_pump",
             "8x gtceu:uiv_robot_arm",
             "10x gtceu:uiv_sensor",
             "16x gtceu:uiv_conveyor_module",
@@ -14943,7 +14943,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:draconium_frame",
             "24x gtceu:double_draconiumawakened_plate",
             "4x gtceu:uxv_field_generator",
-            '6x gtceu:uxv_electric_pump',
+            "6x gtceu:uxv_electric_pump",
             "8x gtceu:uxv_robot_arm",
             "10x gtceu:uxv_sensor",
             "16x gtceu:uxv_conveyor_module",
@@ -14965,7 +14965,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:infinity_frame",
             "24x gtceu:double_hypogen_plate",
             "4x gtceu:opv_field_generator",
-            '6x gtceu:opv_electric_pump',
+            "6x gtceu:opv_electric_pump",
             "8x gtceu:opv_robot_arm",
             "10x gtceu:opv_sensor",
             "16x gtceu:opv_conveyor_module",
@@ -14987,7 +14987,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("gtceu:eternity_frame",
             "24x gtceu:double_transcendentmetal_plate",
             "4x gtceu:max_field_generator",
-            '6x gtceu:max_electric_pump',
+            "6x gtceu:max_electric_pump",
             "8x gtceu:max_robot_arm",
             "10x gtceu:max_sensor",
             "16x gtceu:max_conveyor_module",
@@ -16470,7 +16470,7 @@ ServerEvents.recipes((event) => {
 
     gtr.distillation_tower("gtceu:turpentine")
         .inputFluids("gtceu:steam_cracked_turpentine 1000")
-        .outputFluids("gtceu:turpentine 1000", "gtceu:naphtha 1000")
+        .outputFluids("gtceu:turpentine 1000", "gtceu:naphtha 900")
         .EUt(GTValues.VA[GTValues.EV])
         .duration(400)
 
@@ -16487,4 +16487,11 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:leached_turpentine 1000")
         .EUt(GTValues.VA[GTValues.HV])
         .duration(80)
+
+    gtr.chemical_reactor("gtceu:potash_dust")
+        .itemInputs("2x gtceu:potassium_dust")
+        .inputFluids("gtceu:oxygen 1000")
+        .itemOutputs("3x gtceu:potash_dust")
+        .EUt(7)
+        .duration(120)
 })
