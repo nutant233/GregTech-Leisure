@@ -14603,7 +14603,7 @@ ServerEvents.recipes((event) => {
     gtr.atomic_energy_excitation("gtceu:naquadah_fuel")
         .notConsumable("gtceu:orichalcum_nanoswarm")
         .itemInputs("16x gtceu:naquadah_dust")
-        .inputFluids("gtceu:hydrogen 30000", "gtceu:hydrogen 15000", "gtceu:fluorine 8000", "gtceu:nitric_acid 8000")
+        .inputFluids("gtceu:hydrogen 30000", "gtceu:nitrogen 15000", "gtceu:fluorine 8000", "gtceu:nitric_acid 8000")
         .outputFluids("gtceu:naquadah_fuel 20000")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(4000)
