@@ -14639,7 +14639,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:hyper_fuel_1 24000")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(3800)
-        .blastFurnaceTemp(21600)
+        .blastFurnaceTemp(11600)
 
     gtr.atomic_energy_excitation("gtceu:hyper_fuel_2")
         .itemInputs("4x gtceu:dubnium_dust", "6x gtceu:fermium_dust")
