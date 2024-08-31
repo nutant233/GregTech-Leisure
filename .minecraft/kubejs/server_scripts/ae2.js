@@ -338,4 +338,15 @@ ServerEvents.recipes((event) => {
             D: "ae2:cell_component_16k"
         })
     }
+
+    event.shaped(Item.of("expatternprovider:infinity_cell", `{record:{"#c":"ae2:i",id:"kubejs:universal_wrench"}}`), [
+        "BAB",
+        "ADA",
+        "CCC"
+    ], {
+        A: "gtceu:neutronium_wrench",
+        B: "ae2:quartz_glass",
+        C: "minecraft:diamond",
+        D: "ae2:cell_component_16k"
+    })
 })

@@ -370,6 +370,12 @@ StartupEvents.registry("item", event => {
     event.create("grindball_aluminium")
         .unstackable()
         .maxDamage(100)
+    event.create("universal_wrench")
+        
+})
+ServerEvents.tags("item", event => {
+    event.add("forge:tools/wrench", "kubejs:universal_wrench")
+    event.add("forge:tools/wrenches", "kubejs:universal_wrench")
 })
 ItemEvents.modification(event => {
     event.modify("gtceu:raw_coal", modification => {
