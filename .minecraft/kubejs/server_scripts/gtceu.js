@@ -11187,14 +11187,14 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(400)
 
-    gtr.qft("gtceu.grade_8_purified_water")
+    gtr.qft("gtceu:grade_8_purified_water")
         .circuit(1)
         .inputFluids("minecraft:water 8000")
         .outputFluids("gtceu.grade_8_purified_water 1000")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(20)
 
-    gtr.qft("gtceu.grade_16_purified_water")
+    gtr.qft("gtceu:grade_16_purified_water")
         .circuit(2)
         .inputFluids("minecraft:water 16000")
         .outputFluids("gtceu.grade_16_purified_water 1000")
