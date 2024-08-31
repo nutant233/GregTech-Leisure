@@ -13876,6 +13876,14 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(6000)
 
+    gtr.distort("gtceu:cosmic_superconductor")
+        .notConsumable("gtceu:infuscolium_nanoswarm")
+        .itemInputs("gtceu:phosphorus_dust","18x gtceu:sulfur_dust","6x gtceu:sodium_dust","gtceu:thallium_dust","6x gtceu:rhenium_chloride_dust","5x gtceu:hassium_chloride_dust","36x gtceu:atinium_hydride_dust","14x gtceu:charged_caesium_cerium_cobalt_indium_dust")
+        .inputFluids("gtceu:chlorine 34000","gtceu:fluorine 3000","gtceu:ethylene 12000","gtceu:oxygen 46000","gtceu:hydrogen 102000","gtceu:uu_matter 2000","gtceu:quark_gluon_plasma 17000","gtceu:benzene 3000","gtceu:acetone 6000")        
+        .outputFluids("gtceu:cosmic_superconductor 10000")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .blastFurnaceTemp(36000)
+        .duration(4000)
 
     gtr.qft("gtceu:fullerene_polymer_matrix_pulp_dust")
         .notConsumable("gtceu:starmetal_nanoswarm")
@@ -14639,7 +14647,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:hyper_fuel_1 24000")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(3800)
-        .blastFurnaceTemp(11600)
+        .blastFurnaceTemp(13200)
 
     gtr.atomic_energy_excitation("gtceu:hyper_fuel_2")
         .itemInputs("4x gtceu:dubnium_dust", "6x gtceu:fermium_dust")
