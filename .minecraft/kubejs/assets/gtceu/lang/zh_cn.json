@@ -764,7 +764,7 @@
   "gtceu.machine.greenhouse.tooltip.0": "需要阳光才能运行",
   "gtceu.machine.greenhouse.tooltip.1": "如太阳光照不足，速度就会减缓",
   "gtceu.machine.heat_exchanger.tooltip.0": "每次处理全部输入的热流体",
-  "gtceu.machine.heat_exchanger.tooltip.1": "需要保证输入的蒸汽能将流体全部冷却",
+  "gtceu.machine.heat_exchanger.tooltip.1": "需要保证输入的冷却液能将流体全部冷却",
   "gtceu.machine.hyper_reactor.tooltip.0": "每次运行前提供额外的1mb等离子体将获得16的并行",
   "gtceu.machine.hyper_reactor.tooltip.1": "不同燃料所需的等离子体不同",
   "gtceu.machine.hyper_reactor.tooltip.2": "从1-4顺序为：山铜，末影，魔金，亚稳态𬭶",

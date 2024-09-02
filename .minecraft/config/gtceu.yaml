@@ -188,6 +188,15 @@ machines:
   # Default: false
   steelSteamMultiblocks: false
 
+  # Whether to enable the cleanroom, required for various recipes.
+  # Default: true
+  enableCleanroom: true
+
+  # Whether multiblocks should ignore all cleanroom requirements.
+  # This does nothing if enableCleanroom is false.
+  # Default: false
+  cleanMultiblocks: false
+
   # Block to replace mined ores with in the miner and multiblock miner.
   # Default: minecraft:cobblestone
   replaceMinedBlocksWith: minecraft:cobblestone
@@ -327,8 +336,6 @@ machines:
     # Default: 2
     tungstensteelBoilerHeatSpeed: 16
 
-  enablePrimitiveVoidOre: false
-
 client:
   # Whether or not to enable Emissive Textures for GregTech Machines.
   # Default: true
@@ -459,10 +466,6 @@ gameplay:
   # WARNING: INCOMPLETE
   # Default: false
   enableCompass: false
-
-  disableDrift: true
-
-  babyMode: false
 
 # Config options for Mod Compatibility
 compat:

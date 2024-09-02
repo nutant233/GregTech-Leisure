@@ -1,16 +1,16 @@
 // priority: 96
-const $SpaceElevator = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.SpaceElevator")
+const $SpaceElevator = Java.loadClass("org.gtlcore.gtlcore.common.machine.SpaceElevator")
 const $LargeBoilerMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.steam.LargeBoilerMachine")
 const $LargeTurbineMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.generator.LargeTurbineMachine")
-const $SteamParallelMultiblockMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.steam.SteamParallelMultiblockMachine")
+const $LargeSteamParallelMultiblockMachine = Java.loadClass("org.gtlcore.gtlcore.common.machine.LargeSteamParallelMultiblockMachine")
 const $CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.gtceu.api.machine.multiblock.CoilWorkableElectricMultiblockMachine")
-const $ComputationProviderMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.research.ComputationProviderMachine")
-const $Slaughterhouse = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.Slaughterhouse")
-const $DysonSphere = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.generator.DysonSphere")
-const $StorageMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.StorageMachine")
-const $AssemblyLineMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.AssemblyLineMachine")
-const $FissionReactorMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.FissionReactorMachine")
-const $TierCasingMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.TierCasingMachine")
+const $ComputationProviderMachine = Java.loadClass("org.gtlcore.gtlcore.common.machine.ComputationProviderMachine")
+const $Slaughterhouse = Java.loadClass("org.gtlcore.gtlcore.common.machine.Slaughterhouse")
+const $DysonSphere = Java.loadClass("org.gtlcore.gtlcore.common.machine.generator.DysonSphere")
+const $StorageMachine = Java.loadClass("org.gtlcore.gtlcore.common.machine.StorageMachine")
+const $GTLAssemblyLineMachine = Java.loadClass("org.gtlcore.gtlcore.common.machine.GTLAssemblyLineMachine")
+const $FissionReactorMachine = Java.loadClass("org.gtlcore.gtlcore.common.machine.FissionReactorMachine")
+const $TierCasingMachine = Java.loadClass("org.gtlcore.gtlcore.common.machine.TierCasingMachine")
 const $ItemRecipeCapability = Java.loadClass("com.gregtechceu.gtceu.api.capability.recipe.ItemRecipeCapability")
 const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
 const $TeamUtil = Java.loadClass("com.hepdd.gtmthings.utils.TeamUtil")
@@ -18,6 +18,10 @@ const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUt
 const $WirelessEnergyManager = Java.loadClass("com.hepdd.gtmthings.api.misc.WirelessEnergyManager")
 const $BigInteger = Java.loadClass("java.math.BigInteger")
 const $GTCapabilityHelper = Java.loadClass("com.gregtechceu.gtceu.api.capability.GTCapabilityHelper")
+const GTLRecipeModifiers = Java.loadClass("org.gtlcore.gtlcore.common.data.GTLRecipeModifiers")
+const GTLPredicates = Java.loadClass("org.gtlcore.gtlcore.api.pattern.GTLPredicates")
+const GTLBlocks = Java.loadClass("org.gtlcore.gtlcore.common.data.GTLBlocks")
+const GTLRecipeTypes = Java.loadClass("org.gtlcore.gtlcore.common.data.GTLRecipeTypes")
 const tiers = [["ulv", 0], ["lv", 1], ["mv", 2], ["hv", 3], ["ev", 4], ["iv", 5], ["luv", 6], ["zpm", 7], ["uv", 8], ["uhv", 9], ["uev", 10], ["uiv", 11], ["uxv", 12], ["opv", 13], ["max", 14]]
 const cov_recipe = { "minecraft:bone_block": "kubejs:essence_block", "minecraft:oak_log": "minecraft:crimson_stem", "minecraft:birch_log": "minecraft:warped_stem", "gtceu:calcium_block": "minecraft:bone_block", "minecraft:moss_block": "minecraft:sculk", "minecraft:grass_block": "minecraft:moss_block", "kubejs:infused_obsidian": "kubejs:draconium_block_charged" }
 const mobList1 = ["chicken", "rabbit", "sheep", "cow", "horse", "pig", "donkey", "skeleton_horse", "villager", "iron_golem", "wolf", "goat", "parrot", "camel", "cat", "fox", "llama", "panda", "polar_bear"]
@@ -29,6 +33,7 @@ for (let i = -2; i <= 2; i++)
         for (let K = -2; K <= 2; K++) { poses.push([i, j, K]) }
 
 GTCEuStartupEvents.registry("gtceu:machine", event => {
+
     event.create("world_data_scanner", "simple", GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV, GTValues.UEV, GTValues.UIV, GTValues.UXV, GTValues.OpV)
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType("world_data_scanner", true, true)
@@ -106,12 +111,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .workableCasingRenderer("gtceu:block/casings/voltage/ulv/side", "gtceu:block/multiblock/implosion_compressor")
 
-    let scmap = Predicates.createTierCasingsMap()
-
-    GTBlocks.createTierCasings("stellar_containment_casing", new ResourceLocation("kubejs", "block/stellar_containment_casing"), scmap, 1)
-    GTBlocks.createTierCasings("advanced_stellar_containment_casing", new ResourceLocation("kubejs", "block/stellar_containment_casing"), scmap, 2)
-    GTBlocks.createTierCasings("ultimate_stellar_containment_casing", new ResourceLocation("kubejs", "block/stellar_containment_casing"), scmap, 3)
-
     event.create("stellar_forge", "multiblock", (holder) => new $TierCasingMachine(holder, "SCTier"))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
@@ -143,7 +142,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .or(Predicates.autoAbilities(definition.getRecipeTypes()))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
             .where("c", Predicates.blocks("gtceu:fusion_coil"))
-            .where("d", Predicates.tierCasings(scmap, "SCTier"))
+            .where("d", Predicates.tierCasings(GTLBlocks.scmap, "SCTier"))
             .where(" ", Predicates.any())
             .build())
         .workableCasingRenderer("gtceu:block/casings/gcym/atomic_casing", "gtceu:block/multiblock/electric_blast_furnace")
@@ -513,7 +512,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_chemical_reactor")))
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.chemicalPlantOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTLRecipeModifiers.chemicalPlantOverclock(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -561,7 +560,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.advanced_hyper_reactor")))
         .generator(true)
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.fastParallel(machine, recipe, getAdvancedHyperReactorMaxParallel(machine), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.fastParallel(machine, recipe, getAdvancedHyperReactorMaxParallel(machine), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:enhance_hyper_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -628,7 +627,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.hyper_reactor")))
         .generator(true)
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.fastParallel(machine, recipe, getHyperReactorMaxParallel(machine, recipe), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.fastParallel(machine, recipe, getHyperReactorMaxParallel(machine, recipe), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:enhance_hyper_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -680,7 +679,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/fusion_reactor")
 
-    event.create("advanced_assembly_line", "multiblock", (holder) => new $AssemblyLineMachine(holder))
+    event.create("advanced_assembly_line", "multiblock", (holder) => new $GTLAssemblyLineMachine(holder))
         .rotationState(RotationState.ALL)
         .recipeType("assembly_line")
         .tooltips(Component.translatable("gtceu.machine.advanced_assembly_line.tooltip.0"))
@@ -689,7 +688,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.assembly_line")))
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => $AssemblyLineMachine.recipeModifier(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => $GTLAssemblyLineMachine.recipeModifier(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern(definition =>
             FactoryBlockPattern.start("back", "up", "right")
@@ -709,7 +708,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.OPTICAL_DATA_RECEPTION).setExactLimit(1)))
                 .where("A", Predicates.blocks("gtceu:assembly_line_casing"))
                 .where("R", Predicates.blocks("gtceu:laminated_glass"))
-                .where("T", Predicates.countBlock("Unit", "kubejs:advanced_assembly_line_unit"))
+                .where("T", GTLPredicates.countBlock("Unit", "kubejs:advanced_assembly_line_unit"))
                 .where("#", Predicates.any())
                 .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel", "gtceu:block/multiblock/assembly_line")
@@ -792,7 +791,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("C", Predicates.blocks("kubejs:dimensional_bridge_casing"))
                 .where(" ", Predicates.any())
                 .build())
-        .recipeModifier((machine, recipe) => {
+        .recipeModifier((machine, recipe, params, result) => {
             recipe.duration = 2400 / (2 ** getSphereOfHarmonyOC(machine))
             return recipe
         })
@@ -959,7 +958,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("s", Predicates.blocks("kubejs:dimensional_bridge_casing"))
                 .where(" ", Predicates.any())
                 .build())
-        .beforeWorking((machine, recipe) => {
+        .beforeWorking((machine, recipe, params, result) => {
             if (machine.getCoilType().getCoilTemperature() == 273) {
                 if (machine.getRecipeType() == GTRecipeTypes.get("stellar_forge")) {
                     return true
@@ -1015,7 +1014,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.large_recycler.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_recycler")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 ** (machine.self().getTier() - 4), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 ** (machine.self().getTier() - 4), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(GTBlocks.STEEL_HULL)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1080,7 +1079,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.mass_fabricator")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 0.8, 0.5), GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.8, 0.5), GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(GTBlocks.MACHINE_CASING_UXV)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1119,7 +1118,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.circuit_assembly_line.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.circuit_assembly_line")))
-        .recipeModifiers([(machine, recipe) => {
+        .recipeModifiers([(machine, recipe, params, result) => {
             let item = machine.getMachineStorageItem()
             let isParallel = false
             switch ($RecipeHelper.getInputEUt(recipe)) {
@@ -1195,14 +1194,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .workableCasingRenderer("kubejs:block/oxidation_resistant_hastelloy_n_mechanical_casing", "gtceu:block/multiblock/gcym/large_assembler")
 
-    let sepmmap = Predicates.createTierCasingsMap()
-
-    GTBlocks.createActiveTierCasing("power_module", "block/variant/power_module", sepmmap, 1)
-    GTBlocks.createActiveTierCasing("power_module_2", "block/variant/power_module", sepmmap, 2)
-    GTBlocks.createActiveTierCasing("power_module_3", "block/variant/power_module", sepmmap, 3)
-    GTBlocks.createActiveTierCasing("power_module_4", "block/variant/power_module", sepmmap, 4)
-    GTBlocks.createActiveTierCasing("power_module_5", "block/variant/power_module", sepmmap, 5)
-
     event.create("space_elevator", "multiblock", (holder) => new $SpaceElevator(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
@@ -1212,7 +1203,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.space_elevator.tooltip.2"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.space_elevator")))
-        .recipeModifier((machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 100000, false).getFirst())
+        .recipeModifier((machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 100000, false).getFirst())
         .appearanceBlock(() => Block.getBlock("kubejs:space_elevator_mechanical_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start("right", "down", "front")
@@ -1260,7 +1251,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("E", Predicates.blocks("kubejs:space_elevator_support"))
                 .where("H", Predicates.blocks("gtceu:neutronium_frame"))
                 .where("F", Predicates.blocks("kubejs:space_elevator_internal_support"))
-                .where("C", Predicates.tierCasings(sepmmap, "SEPMTier"))
+                .where("C", Predicates.tierCasings(GTLBlocks.sepmmap, "SEPMTier"))
                 .where("A", Predicates.blocks("kubejs:high_strength_concrete"))
                 .where("D", Predicates.blocks("kubejs:space_elevator_mechanical_casing"))
                 .where("M", Predicates.blocks("gtceu:power_core"))
@@ -1306,7 +1297,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.resource_collection.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.assembler_module")))
-        .recipeModifier((machine, recipe) => {
+        .recipeModifier((machine, recipe, params, result) => {
             let tier = getSpaceElevatorModule(machine)
             if (tier[0] < 0) {
                 return null
@@ -1314,7 +1305,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             if (recipe.data.getInt("SEPMTier") > tier[1]) {
                 return null
             }
-            let recipe1 = GTRecipeModifiers.reduction(machine, recipe, 1, Math.pow(0.8, tier[0]))
+            let recipe1 = GTLRecipeModifiers.reduction(machine, recipe, 1, Math.pow(0.8, tier[0]))
             if (recipe1 != null) {
                 return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe1, Math.pow(4, tier[1] - 1), false).getFirst(), machine.getOverclockVoltage())
             }
@@ -1359,12 +1350,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.resource_collection.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.miner_module"), Component.translatable("gtceu.drilling_module")))
-        .recipeModifier((machine, recipe) => {
+        .recipeModifier((machine, recipe, params, result) => {
             let tier = getSpaceElevatorModule(machine)
             if (tier[0] < 0) {
                 return null
             }
-            let recipe1 = GTRecipeModifiers.reduction(machine, recipe, 1, Math.pow(0.8, tier[0]))
+            let recipe1 = GTLRecipeModifiers.reduction(machine, recipe, 1, Math.pow(0.8, tier[0]))
             if (recipe1 != null) {
                 return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe1, Math.pow(4, tier[1] - 1), false).getFirst(), machine.getOverclockVoltage())
             }
@@ -1583,7 +1574,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.pcb_factory")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, machine.getMachineStorageItem().getId() == "gtceu:vibranium_nanoswarm" ? 0.25 : 1, getPCBReduction(machine)), GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, machine.getMachineStorageItem().getId() == "gtceu:vibranium_nanoswarm" ? 0.25 : 1, getPCBReduction(machine)), GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(GCyMBlocks.CASING_WATERTIGHT)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1655,7 +1646,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.large_gas_collector.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_gas_collector")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 100000, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 100000, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("aaaaa", "abbba", "abbba", "abbba", "aaaaa")
@@ -1681,7 +1672,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.aggregation_device")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 2 ** (machine.self().getTier() - GTValues.UEV), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 2 ** (machine.self().getTier() - GTValues.UEV), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(GTBlocks.FUSION_CASING)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1793,7 +1784,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.precision_laser_engraver"), Component.translatable("gtceu.laser_engraver")))
-        .recipeModifiers([(machine, recipe) => {
+        .recipeModifiers([(machine, recipe, params, result) => {
             if (machine.getRecipeType() == GTRecipeTypes.LASER_ENGRAVER_RECIPES) {
                 return GTRecipeModifiers.hatchParallel(machine, recipe, false).getFirst()
             }
@@ -1830,7 +1821,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("mega_alloy_blast_smelter", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
-        .recipeModifiers([GTRecipeModifiers.GCYM_REDUCTION, GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.GCYM_REDUCTION, GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
         .appearanceBlock(GCyMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .recipeType("alloy_blast_smelter")
         .tooltips(Component.translatable("gtceu.machine.eut_multiplier.tooltip", 0.8))
@@ -1887,9 +1878,9 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.dimensionally_transcendent_mixer"), Component.translatable("gtceu.mixer")))
-        .recipeModifiers([(machine, recipe) => {
+        .recipeModifiers([(machine, recipe, params, result) => {
             if (machine.getRecipeType() == GTRecipeTypes.MIXER_RECIPES) {
-                return GTRecipeModifiers.reduction(machine, recipe, 1, 0.2)
+                return GTLRecipeModifiers.reduction(machine, recipe, 1, 0.2)
             }
             return recipe
         }, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
@@ -2031,7 +2022,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
     event.create("super_blast_smelter", "multiblock", (holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .allowExtendedFacing(false)
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 1, 0.2), GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 1, 0.2), GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
         .appearanceBlock(GCyMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .recipeType("electric_blast_furnace")
         .recipeType("alloy_blast_smelter")
@@ -2113,7 +2104,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_chemical_reactor")))
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.chemicalPlantOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTLRecipeModifiers.chemicalPlantOverclock(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -2227,7 +2218,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.electric_blast_furnace.tooltip.2"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.electric_blast_furnace")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 1, 0.5), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 64, false).getFirst(), (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 1, 0.5), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 64, false).getFirst(), (machine, recipe, params, result) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
         .appearanceBlock(() => Block.getBlock("kubejs:blaze_blast_furnace_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("XXX", "CCC", "CCC", "XXX")
@@ -2274,7 +2265,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.blaze_blast_furnace.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.vacuum_freezer")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 1, 0.5), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 64, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 1, 0.5), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 64, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:cold_ice_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("XXX", "XXX", "XXX")
@@ -2395,7 +2386,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.cracker")))
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.crackerOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTRecipeModifiers.crackerOverclock(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -2841,7 +2832,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_3.tooltip",
             Component.translatable("gtceu.suprachronal_assembly_line"), Component.translatable("gtceu.assembly_line"), Component.translatable("gtceu.circuit_assembly_line")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 1, 0.4), GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 1, 0.4), GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start("up", "back", "left")
@@ -2942,7 +2933,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.assembly_line"), Component.translatable("gtceu.circuit_assembly_line")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 1, 0.4), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, GTRecipeModifiers.getHatchParallel(getSuprachronalAssemblyLine(machine)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 1, 0.4), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, GTLRecipeModifiers.getHatchParallel(getSuprachronalAssemblyLine(machine)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern(definition => FactoryBlockPattern.start()
             .aisle(" D ", " E ", " D ")
@@ -2977,7 +2968,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(GTRecipeModifiers.getHatchParallel(getSuprachronalAssemblyLine(controller)))).darkPurple()).gray())
+                components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(GTLRecipeModifiers.getHatchParallel(getSuprachronalAssemblyLine(controller)))).darkPurple()).gray())
                 components.add(Component.literal("该模块" + (getSuprachronalAssemblyLine(controller) != null ? "已" : "未") + "成功安装"))
             }
         })
@@ -3079,7 +3070,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             Component.translatable("gtceu.polarizer"),
             Component.translatable("gtceu.laser_engraver"),
             Component.translatable("gtceu.fluid_solidifier")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
                 .aisle("bbb", "bbb", "bbb")
@@ -3154,7 +3145,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.assembler"), Component.translatable("gtceu.circuit_assembler")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
                 .aisle("bbb", "bbb", "bbb")
@@ -3213,7 +3204,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             Component.translatable("gtceu.macerator"),
             Component.translatable("gtceu.extractor"),
             Component.translatable("gtceu.dehydrator")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
                 .aisle("bbb", "bbb", "bbb")
@@ -3248,7 +3239,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 case GTRecipeTypes.EXTRACTOR_RECIPES:
                     isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_extractor"
                     break
-                case GTRecipeTypes.DEHYDRATOR_RECIPES:
+                case GTLRecipeTypes.DEHYDRATOR_RECIPES:
                     isrecipe = machine.getMachineStorageItem().getId() == "gtceu:" + tiers[tier][0] + "_dehydrator"
                     break
                 default:
@@ -3281,7 +3272,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             Component.translatable("gtceu.mixer"),
             Component.translatable("gtceu.chemical_bath"),
             Component.translatable("gtceu.ore_washer")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:multi_functional_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -3334,7 +3325,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.ultimate_material_forge")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, 1000, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 1000, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -3418,12 +3409,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .workableCasingRenderer("kubejs:block/molecular_casing", "gtceu:block/multiblock/fusion_reactor")
 
-    event.create("steam_piston_hammer", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 8))
+    event.create("steam_piston_hammer", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 8))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.FORGE_HAMMER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.forge_hammer")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 1))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 1))
         .addOutputLimit($ItemRecipeCapability.CAP, 1)
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3457,12 +3448,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/machines/forge_hammer")
 
-    event.create("steam_pressor", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 8))
+    event.create("steam_pressor", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 8))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.COMPRESSOR_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.compressor")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 1))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 1))
         .addOutputLimit($ItemRecipeCapability.CAP, 1)
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3480,12 +3471,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/steam_pressor")
 
-    event.create("steam_foundry", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 8))
+    event.create("steam_foundry", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 8))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.ALLOY_SMELTER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.alloy_smelter")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 1))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 1))
         .addOutputLimit($ItemRecipeCapability.CAP, 1)
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3503,12 +3494,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/machines/alloy_smelter")
 
-    event.create("large_steam_macerator", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
+    event.create("large_steam_macerator", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.MACERATOR_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.macerator")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .addOutputLimit($ItemRecipeCapability.CAP, 1)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3534,12 +3525,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_grinder")
 
-    event.create("large_steam_circuit_assembler", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
+    event.create("large_steam_circuit_assembler", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.CIRCUIT_ASSEMBLER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.circuit_assembler")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("AAA", "AAA", "DDD", " D ")
@@ -3567,12 +3558,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_circuit_assembler")
 
-    event.create("large_steam_mixer", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
+    event.create("large_steam_mixer", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.MIXER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.mixer")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle(" AAAAAAA ", " AAAAAAA ", " AAAAAAA ", " AAAAAAA ", " AAAAAAA ", " AAAAAAA ", " AAAAAAA ")
@@ -3600,12 +3591,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_mixer")
 
-    event.create("steam_mixer", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 8))
+    event.create("steam_mixer", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 8))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.MIXER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.mixer")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.8))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.8))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle(" AAA ", " AAA ", " AAA ")
@@ -3633,12 +3624,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_mixer")
 
-    event.create("large_steam_centrifuge", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
+    event.create("large_steam_centrifuge", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.CENTRIFUGE_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.centrifuge")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("           ", "   AAAAA   ", "  AAAAAAA  ", "   AAAAA   ", "           ")
@@ -3669,12 +3660,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_centrifuge")
 
-    event.create("large_steam_thermal_centrifuge", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
+    event.create("large_steam_thermal_centrifuge", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.THERMAL_CENTRIFUGE_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.thermal_centrifuge")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle(" AAAAA ", " BBBBB ", " BBBBB ", " BBBBB ", "       ")
@@ -3699,12 +3690,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_thermal_centrifuge")
 
-    event.create("large_steam_bath", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
+    event.create("large_steam_bath", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.CHEMICAL_BATH_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.chemical_bath")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA")
@@ -3732,12 +3723,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/machines/chemical_bath")
 
-    event.create("steam_bath", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 8))
+    event.create("steam_bath", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 8))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.CHEMICAL_BATH_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.chemical_bath")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.8))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.8))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("AAAAA", "AAAAA", "AAAAA")
@@ -3762,12 +3753,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/machines/chemical_bath")
 
-    event.create("large_steam_ore_washer", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 64))
+    event.create("large_steam_ore_washer", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 64))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.ORE_WASHER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.ore_washer")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA", "AAAAAAAAA")
@@ -3794,12 +3785,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_bronze_plated_bricks", "gtceu:block/multiblock/steam_ore_washer")
 
-    event.create("steam_ore_washer", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 8))
+    event.create("steam_ore_washer", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 8))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.ORE_WASHER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.ore_washer")))
-        .recipeModifier((machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.8))
+        .recipeModifier((machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.8))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("AAAAA", "AAAAA", "AAAAA")
@@ -3829,7 +3820,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.dimensionally_transcendent_dirt_forge.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.primitive_blast_furnace")))
-        .recipeModifier((machine, recipe) => {
+        .recipeModifier((machine, recipe, params, result) => {
             let recipe1 = recipe.copy()
             recipe1.duration = 0
             recipe1 = GTRecipeModifiers.fastParallel(machine, recipe1, 524288, false).getFirst()
@@ -3854,13 +3845,13 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .workableCasingRenderer("gtceu:block/casings/solid/machine_primitive_bricks", "gtceu:block/multiblock/primitive_blast_furnace")
 
-    event.create("dimensionally_transcendent_steam_oven", "multiblock", (holder) => new $SteamParallelMultiblockMachine(holder, 524288))
+    event.create("dimensionally_transcendent_steam_oven", "multiblock", (holder) => new $LargeSteamParallelMultiblockMachine(holder, 524288))
         .rotationState(RotationState.ALL)
         .recipeType(GTRecipeTypes.FURNACE_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.dimensionally_transcendent_dirt_forge.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("compass.node.gtceu.steam/steam_furnace")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.reduction(machine, recipe, 0.01, 1), (machine, recipe) => $SteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.01, 1), (machine, recipe, params, result) => $LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0)])
         .appearanceBlock(GTBlocks.CASING_COKE_BRICKS)
         .pattern(definition =>
             dtpf().where("a", Predicates.controller(Predicates.blocks(definition.get())))
@@ -3885,7 +3876,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.large_boiler.heat_time_tooltip", 4096000 / 32 / 20))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_boiler")))
-        .recipeModifier((machine, recipe) => $LargeBoilerMachine.recipeModifier(machine, recipe))
+        .recipeModifier((machine, recipe, params, result) => $LargeBoilerMachine.recipeModifier(machine, recipe))
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern(definition =>
             dtpf().where("a", Predicates.controller(Predicates.blocks(definition.get())))
@@ -3909,7 +3900,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .tooltips(Component.literal("可使用变电动力仓"))
             .tooltips(Component.translatable("gtceu.universal.tooltip.base_production_eut", $FormattingUtil.formatNumbers(GTValues.V[tier] * value)))
             .tooltips(Component.translatable("gtceu.multiblock.turbine.efficiency_tooltip", GTValues.VNF[tier]))
-            .recipeModifier((machine, recipe) => $LargeTurbineMachine.recipeModifier(machine, recipe))
+            .recipeModifier((machine, recipe, params, result) => $LargeTurbineMachine.recipeModifier(machine, recipe))
             .appearanceBlock(casing)
             .pattern(definition => FactoryBlockPattern.start()
                 .aisle("AAAAAAA", "AAAAAAA", "AAEAEAA", "AAAAAAA", "AAEAEAA", "AAAAAAA", "AAAAAAA")
@@ -3926,7 +3917,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
                     .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(8))
                     .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMaxGlobalLimited(2)))
-                .where("B", Predicates.RotorBlock())
+                .where("B", GTLPredicates.RotorBlock())
                 .where("D", Predicates.blocks(gear.get()))
                 .where("E", Predicates.abilities(PartAbility.OUTPUT_ENERGY).or(Predicates.abilities(PartAbility.SUBSTATION_OUTPUT_ENERGY)))
                 .where("M", Predicates.abilities(PartAbility.MUFFLER))
@@ -4053,7 +4044,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.dyson_sphere.tooltip.6"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.dyson_sphere")))
-        .recipeModifier((machine, recipe) => $DysonSphere.recipeModifier(machine, recipe))
+        .recipeModifier((machine, recipe, params, result) => $DysonSphere.recipeModifier(machine, recipe))
         .appearanceBlock(() => Block.getBlock("kubejs:multi_functional_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4127,7 +4118,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.petrochemical_plant")))
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.crackerOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTRecipeModifiers.crackerOverclock(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4220,7 +4211,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.pyrolyse_oven")))
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe) => GTRecipeModifiers.pyrolyseOvenOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTRecipeModifiers.pyrolyseOvenOverclock(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4384,7 +4375,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.nano_forge")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount(), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount(), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4407,7 +4398,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("C", Predicates.blocks("gtceu:ruridit_frame"))
                 .where(" ", Predicates.any())
                 .build())
-        .beforeWorking((machine, recipe) => {
+        .beforeWorking((machine, recipe, params, result) => {
             if (recipe.data.getInt("nano_forge_tier") == 1 && machine.getMachineStorageItem().getId() == "gtceu:carbon_nanoswarm") {
                 return true
             }
@@ -4435,7 +4426,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.nano_forge")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (2 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (3 - recipe.data.getInt("nano_forge_tier")), 4), recipe, machine.getOverclockVoltage())])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (2 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe, params, result) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (3 - recipe.data.getInt("nano_forge_tier")), 4), recipe, machine.getOverclockVoltage())])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4462,7 +4453,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("D", Predicates.blocks("gtceu:ruridit_frame"))
                 .where(" ", Predicates.any())
                 .build())
-        .beforeWorking((machine, recipe) => {
+        .beforeWorking((machine, recipe, params, result) => {
             if (recipe.data.getInt("nano_forge_tier") < 3 && machine.getMachineStorageItem().getId() == "gtceu:neutronium_nanoswarm") {
                 return true
             }
@@ -4491,7 +4482,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.nano_forge")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (3 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (4 - recipe.data.getInt("nano_forge_tier")), 4), recipe, machine.getOverclockVoltage())])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (3 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe, params, result) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (4 - recipe.data.getInt("nano_forge_tier")), 4), recipe, machine.getOverclockVoltage())])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4519,7 +4510,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("C", Predicates.blocks("gtceu:ruridit_frame"))
                 .where(" ", Predicates.any())
                 .build())
-        .beforeWorking((machine, recipe) => {
+        .beforeWorking((machine, recipe, params, result) => {
             if (machine.getMachineStorageItem().getId() == "gtceu:draconium_nanoswarm") {
                 return true
             }
@@ -4545,7 +4536,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.distort")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.max(1, (machine.getCoilType().getCoilTemperature() - recipe.data.getInt("ebf_temp")) / 100 * 4), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.max(1, (machine.getCoilType().getCoilTemperature() - recipe.data.getInt("ebf_temp")) / 100 * 4), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4574,7 +4565,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("E", Predicates.heatingCoils())
                 .where(" ", Predicates.any())
                 .build())
-        .beforeWorking((machine, recipe) => {
+        .beforeWorking((machine, recipe, params, result) => {
             if (recipe.data.getInt("ebf_temp") <= machine.getCoilType().getCoilTemperature()) {
                 return true
             }
@@ -4596,7 +4587,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.dimensional_focus_engraving_array")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(GCyMBlocks.CASING_LASER_SAFE_ENGRAVING)
         .pattern((definition) =>
             FactoryBlockPattern.start("back", "up", "right")
@@ -4723,7 +4714,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.wiremill")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:oxidation_resistant_hastelloy_n_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4788,7 +4779,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_3.tooltip",
             Component.translatable("gtceu.bender"), Component.translatable("gtceu.forge_hammer"), Component.translatable("gtceu.forming_press")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4848,7 +4839,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.extractor"), Component.translatable("gtceu.fluid_solidifier")))
-        .recipeModifiers([(machine, recipe) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:hyper_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -5015,7 +5006,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.fission_reactor.tooltip.15"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.fission_reactor")))
-        .recipeModifier((machine, recipe) => $FissionReactorMachine.recipeModifier(machine, recipe))
+        .recipeModifier((machine, recipe, params, result) => $FissionReactorMachine.recipeModifier(machine, recipe))
         .appearanceBlock(() => Block.getBlock("kubejs:fission_reactor_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -5037,8 +5028,8 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS).setMaxGlobalLimited(1))
                     .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(1)))
                 .where("B", Predicates.blocks("gtceu:laminated_glass").or(Predicates.blocks("kubejs:fission_reactor_casing")))
-                .where("C", Predicates.air().or(Predicates.countBlock("FuelAssembly", "gtceu:fission_fuel_assembly"))
-                    .or(Predicates.countBlock("Cooler", "gtceu:cooler")))
+                .where("C", Predicates.air().or(GTLPredicates.countBlock("FuelAssembly", "gtceu:fission_fuel_assembly"))
+                    .or(GTLPredicates.countBlock("Cooler", "gtceu:cooler")))
                 .build())
         .workableCasingRenderer("kubejs:block/fission_reactor_casing", "gtceu:block/multiblock/fusion_reactor")
 
@@ -5080,7 +5071,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where(" ", Predicates.any())
                 .where("#", Predicates.air())
                 .build())
-        .beforeWorking((machine, recipe) => {
+        .beforeWorking((machine, recipe, params, result) => {
             if (recipe.data.getInt("ebf_temp") <= machine.getCoilType().getCoilTemperature()) {
                 return true
             }
@@ -5101,7 +5092,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.advanced_integrated_ore_processor.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.integrated_ore_processor")))
-        .recipeModifier((machine, recipe) => {
+        .recipeModifier((machine, recipe, params, result) => {
             recipe.duration = 0
             return GTRecipeModifiers.accurateParallel(machine, recipe, 2147483647, false).getFirst()
         })
@@ -5157,11 +5148,6 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where(" ", Predicates.any())
                 .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_robust_tungstensteel", "gtceu:block/multiblock/gcym/large_maceration_tower")
-
-    let calmap = Predicates.createTierCasingsMap()
-    tiers.slice(1).forEach((t) => {
-        GTBlocks.createTierCasings("component_assembly_line_casing_" + t[0], new ResourceLocation("kubejs:block/component_assembly_line_casing_" + t[0]), calmap, t[1])
-    })
 
     event.create("component_assembly_line", "multiblock", (holder) => new $TierCasingMachine(holder, "CATier"))
         .rotationState(RotationState.ALL)
@@ -5225,7 +5211,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1)))
                 .where("I", Predicates.blocks("gtceu:hastelloy_n_frame"))
                 .where("J", Predicates.blocks("kubejs:advanced_assembly_line_unit"))
-                .where("K", Predicates.tierCasings(calmap, "CATier"))
+                .where("K", Predicates.tierCasings(GTLBlocks.calmap, "CATier"))
                 .where("L", Predicates.blocks("gtceu:ptfe_pipe_casing"))
                 .where("M", Predicates.blocks("gtceu:tungsten_steel_frame"))
                 .where("N", Predicates.blocks("kubejs:iridium_casing")
@@ -5252,7 +5238,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.isa_mill")))
-        .recipeModifier((machine, recipe) => {
+        .recipeModifier((machine, recipe, params, result) => {
             let item = machine.getMachineStorageItem()
             if (getGrindball(item.getId()) >= recipe.data.getInt("grindball")) {
                 let damage = item.getDamageValue()
@@ -5340,8 +5326,8 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.coil_parallel"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.vacuum_drying"), Component.translatable("gtceu.dehydrator")))
-        .recipeModifier((machine, recipe) => {
-            if (machine.self().getRecipeType() == GTRecipeTypes.DEHYDRATOR_RECIPES) {
+        .recipeModifier((machine, recipe, params, result) => {
+            if (machine.self().getRecipeType() == GTLRecipeTypes.DEHYDRATOR_RECIPES) {
                 return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), machine.getOverclockVoltage())
             } else {
                 return GTRecipeModifiers.ebfOverclock(machine, recipe)
@@ -5367,7 +5353,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .build())
         .additionalDisplay((controller, components) => {
             if (controller.isFormed()) {
-                if (controller.self().getRecipeType() == GTRecipeTypes.DEHYDRATOR_RECIPES) {
+                if (controller.self().getRecipeType() == GTLRecipeTypes.DEHYDRATOR_RECIPES) {
                     components.add(Component.translatable("gtceu.multiblock.parallel", Component.literal($FormattingUtil.formatNumbers(Math.min(2147483647, 2 ** (controller.getCoilType().getCoilTemperature() / 900)))).darkPurple()).gray())
                 }
                 components.add(Component.translatable("gtceu.multiblock.blast_furnace.max_temperature", Text.of($FormattingUtil.formatNumbers(controller.getCoilType().getCoilTemperature()) + "K").red()))

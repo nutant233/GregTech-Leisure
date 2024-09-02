@@ -7,7 +7,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
     const $ItemStack = Java.loadClass("net.minecraft.world.item.ItemStack")
     const $CycleItemStackHandler = Java.loadClass("com.lowdragmc.lowdraglib.utils.CycleItemStackHandler")
     const $I18n = LDLib.isClient() ? Java.loadClass("net.minecraft.client.resources.language.I18n") : null
-    const GenerateDisassembly = Java.loadClass("com.gregtechceu.gtceu.data.recipe.GenerateDisassembly")
+    const GenerateDisassembly = Java.loadClass("org.gtlcore.gtlcore.data.recipe.GenerateDisassembly")
     const ResearchManager = Java.loadClass("com.gregtechceu.gtceu.utils.ResearchManager")
 
     event.create("greenhouse")
@@ -42,7 +42,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setMaxIOSize(2, 2, 2, 2)
         .setEUIO("in")
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.DTPF)
+        .setSound(GTSoundEntries.ARC)
         .addDataInfo(data => {
             return $LocalizationUtils.format("gtceu.recipe.temperature", $FormattingUtil.formatNumbers(data.getInt("ebf_temp")))
         })
@@ -350,7 +350,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(0, 0, 2, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.FUSIONLOOP)
+        .setSound(GTSoundEntries.ARC)
 
     GTRecipeTypes.register("dimensional_focus_engraving_array", "multiblock")
         .setEUIO("in")

@@ -55,15 +55,6 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create("quantanium", 800, 800, -1, null, "Qt", false)
 })
 GTCEuStartupEvents.registry("gtceu:material", event => {
-    GTBlocks.createActiveCasing("power_core", "block/variant/power_core")
-    GTBlocks.createActiveCasing("hyper_core", "block/variant/hyper_core")
-    GTBlocks.createActiveCasing("super_computation_component", "block/variant/super_computation_component")
-    GTBlocks.createActiveCasing("super_cooler_component", "block/variant/super_cooler_component")
-    GTBlocks.createActiveCasing("spacetimecontinuumripper", "block/variant/spacetimecontinuumripper")
-    GTBlocks.createActiveCasing("spacetimebendingcore", "block/variant/spacetimebendingcore")
-    GTBlocks.createActiveCasing("qft_coil", "block/variant/qft_coil")
-    GTBlocks.createActiveCasing("fission_fuel_assembly", "block/variant/fission_fuel_assembly")
-    GTBlocks.createActiveCasing("cooler", "block/variant/cooler")
     const $DustProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty")
     const $IngotProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty")
     const $FluidProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty")
@@ -581,7 +572,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet(GTMaterialIconSet.METALLIC)
         .flags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_FINE_WIRE)
         .cableProperties(GTValues.V[GTValues.UIV], 32, 0, true)
-        .toolStats(ToolProperty.Builder.of(6.0, 100.0, 64, 6, GTToolType.VAJRA).magnetic().unbreakable().build())
+     //   .toolStats(ToolProperty.Builder.of(6.0, 100.0, 64, 6, Java.loadClass("org.gtlcore.gtlcore.api.item.tool.GTLToolType").VAJRA).magnetic().unbreakable().build())
 
     event.create("legendarium")
         .ingot()
@@ -761,7 +752,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .fluid()
         .element(GTElements.get("transcendentmetal"))
         .color(0xffffff)
-        .iconSet(Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.info.CustomRendererMaterialIconSet").CUSTOM_TRANSCENDENT_MENTAL)
+        .iconSet(Java.loadClass("org.gtlcore.gtlcore.api.data.chemical.material.info.CustomRendererMaterialIconSet").CUSTOM_TRANSCENDENT_MENTAL)
         .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD)
 
     event.create("uruium")
