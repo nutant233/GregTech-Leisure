@@ -2561,10 +2561,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 let level = machine.self().getLevel()
                 let pos = machine.self().getPos().offset(0, -16, 0)
                 let block = level.getBlock(pos).getId()
-                if (machine.inputItem(Item.of("kubejs:chain_command_block_core")) && block == "kubejs:command_block_broken") {
+                if (machine.inputItem(Registries.getItemStack("kubejs:chain_command_block_core")) && block == "kubejs:command_block_broken") {
                     level.setBlockAndUpdate(pos, Block.getBlock("minecraft:chain_command_block").defaultBlockState())
                 }
-                if (machine.inputItem(Item.of("kubejs:repeating_command_block_core")) && block == "kubejs:chain_command_block_broken") {
+                if (machine.inputItem(Registries.getItemStack("kubejs:repeating_command_block_core")) && block == "kubejs:chain_command_block_broken") {
                     level.setBlockAndUpdate(pos, Block.getBlock("minecraft:repeating_command_block").defaultBlockState())
                 }
             }

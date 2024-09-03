@@ -307,7 +307,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("gtlcore:max_storage")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(400)
-    ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of("gtlcore:256m_storage")).dataStack(Item.of("gtceu:data_stick")).EUt(GTValues.VA[GTValues.LuV]).duration(1200))
+    ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Registries.getItemStack("gtlcore:256m_storage")).dataStack(Registries.getItemStack("gtceu:data_stick")).EUt(GTValues.VA[GTValues.LuV]).duration(1200))
 
     gtr.assembly_line("kubejs:infinite_cell_component")
         .itemInputs("16x gtlcore:max_storage", "gtceu:data_bank", "16x gtceu:data_module", "64x ae2:creative_energy_cell", "64x #gtceu:circuits/uev", "64x gtceu:ruthenium_trinium_americium_neutronate_hex_wire", "4x gtceu:double_neutronium_plate")
@@ -315,7 +315,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:infinite_cell_component")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(2400)
-    ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of("gtlcore:cell_component_256m")).dataStack(Item.of("gtceu:data_orb")).EUt(GTValues.VA[GTValues.UV]).duration(2400))
+    ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Registries.getItemStack("gtlcore:cell_component_256m")).dataStack(Registries.getItemStack("gtceu:data_orb")).EUt(GTValues.VA[GTValues.UV]).duration(2400))
 
     for (let index = 1; index < 5; index++) {
         gtr.assembler(`mae2:${4 ** index}x_crafting_accelerator`)
