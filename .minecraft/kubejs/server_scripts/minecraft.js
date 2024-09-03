@@ -130,7 +130,7 @@ ServerEvents.recipes((event) => {
         .chancedOutput("minecraft:dragon_egg", 2000, 1000)
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(200)
-        .cleanroom(CleanroomType.LAW_CLEANROOM)
+        .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
     gtr.fermenter("minecraft:poisonous_potato")
         .itemInputs("minecraft:potato")

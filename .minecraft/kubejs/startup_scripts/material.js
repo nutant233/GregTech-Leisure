@@ -95,9 +95,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .generationCondition(mat => mat.hasFlag(GENERATE_MILLED))
 
     //element
-    GTMaterials.Mendelevium.setProperty(PropertyKey.WIRE, new $WireProperties(GTValues.V[GTValues.UHV], 4, 16))
-    GTMaterials.Neutronium.addFlags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_SPRING_SMALL)
-    GTMaterials.Neutronium.setProperty(PropertyKey.WIRE, new $WireProperties(GTValues.V[GTValues.UIV], 2, 64))
+    GTMaterials.Neutronium.addFlags(GENERATE_NANOSWARM)
     GTMaterials.Carbon.setProperty(PropertyKey.INGOT, new $IngotProperty())
     GTMaterials.RadAway.addFlags(GTMaterialFlags.DISABLE_DECOMPOSITION)
     GTMaterials.Platinum.addFlags(GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_SPRING_SMALL)

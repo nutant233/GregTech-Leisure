@@ -526,7 +526,7 @@
 			id: "67D93082DA7185CC"
 			tasks: [{
 				id: "6791BE188E97863E"
-				item: "gtceu:law_filter_casing"
+				item: "gtlcore:law_filter_casing"
 				type: "item"
 			}]
 			x: -0.5d

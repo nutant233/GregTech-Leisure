@@ -898,12 +898,12 @@
 			rewards: [
 				{
 					id: "6C137C29946FFA6F"
-					item: "gtceu:primitive_robot_arm"
+					item: "gtlcore:primitive_robot_arm"
 					type: "item"
 				}
 				{
 					id: "1C6EB6E0A4F67497"
-					item: "gtceu:primitive_fluid_regulator"
+					item: "gtlcore:primitive_fluid_regulator"
 					type: "item"
 				}
 			]

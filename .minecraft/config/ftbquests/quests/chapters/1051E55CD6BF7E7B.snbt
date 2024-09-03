@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "1051E55CD6BF7E7B"
 	group: "68CBF1606D696C68"
-	icon: "gtceu:max_electric_motor"
+	icon: "gtlcore:max_electric_motor"
 	id: "1051E55CD6BF7E7B"
 	order_index: 14
 	quest_links: [{

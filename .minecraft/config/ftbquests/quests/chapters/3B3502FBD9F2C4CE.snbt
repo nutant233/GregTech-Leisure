@@ -715,12 +715,12 @@
 				}
 				{
 					id: "5AB7E0809991C089"
-					item: "gtceu:fission_fuel_assembly"
+					item: "gtlcore:fission_fuel_assembly"
 					type: "item"
 				}
 				{
 					id: "3BD80B994699252C"
-					item: "gtceu:cooler"
+					item: "gtlcore:cooler"
 					type: "item"
 				}
 			]
