@@ -496,10 +496,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_inert_ptfe", "gtceu:block/machines/chemical_reactor")
 
     function getAdvancedHyperReactorMaxParallel(machine) {
-        if (machine.inputFluid("gtceu:starmetal_plasma 1")) {
+        if (MachineIO.inputFluid(machine, "gtceu:starmetal_plasma 1")) {
             return 8
         }
-        if (machine.inputFluid("gtceu:dense_neutron_plasma 1")) {
+        if (MachineIO.inputFluid(machine, "gtceu:dense_neutron_plasma 1")) {
             return 16
         }
         return 1
@@ -547,22 +547,22 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         let canParallel = false
         switch ($RecipeHelper.getOutputEUt(recipe)) {
             case GTValues.V[GTValues.UEV]:
-                if (machine.inputFluid("gtceu:orichalcum_plasma 1")) {
+                if (MachineIO.inputFluid(machine, "gtceu:orichalcum_plasma 1")) {
                     canParallel = true
                 }
                 break
             case GTValues.V[GTValues.UIV]:
-                if (machine.inputFluid("gtceu:enderium_plasma 1")) {
+                if (MachineIO.inputFluid(machine, "gtceu:enderium_plasma 1")) {
                     canParallel = true
                 }
                 break
             case GTValues.V[GTValues.UXV]:
-                if (machine.inputFluid("gtceu:infuscolium_plasma 1")) {
+                if (MachineIO.inputFluid(machine, "gtceu:infuscolium_plasma 1")) {
                     canParallel = true
                 }
                 break
             case GTValues.V[GTValues.OpV]:
-                if (machine.inputFluid("gtceu:metastable_hassium_plasma 1")) {
+                if (MachineIO.inputFluid(machine, "gtceu:metastable_hassium_plasma 1")) {
                     canParallel = true
                 }
                 break
@@ -635,16 +635,16 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .workableCasingRenderer("kubejs:block/hyper_mechanical_casing", "gtceu:block/multiblock/fusion_reactor")
 
     function getSphereOfHarmonyOC(machine) {
-        if (machine.notConsumableCircuit(4)) {
+        if (MachineIO.notConsumableCircuit(machine, 4)) {
             return 3
         }
-        if (machine.notConsumableCircuit(3)) {
+        if (MachineIO.notConsumableCircuit(machine, 3)) {
             return 2
         }
-        if (machine.notConsumableCircuit(2)) {
+        if (MachineIO.notConsumableCircuit(machine, 2)) {
             return 1
         }
-        if (machine.notConsumableCircuit(1)) {
+        if (MachineIO.notConsumableCircuit(machine, 1)) {
             return 0
         }
         return null
@@ -727,10 +727,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     machine.holder.self().getPersistentData().putLong("helium", helium - 1024000000)
                     return $WirelessEnergyManager.addEUToGlobalEnergyMap(uuid, $BigInteger.valueOf(- (5277655810867200 * (8 ** oc))), machine)
                 }
-                if (machine.inputFluid("gtceu:hydrogen 100000")) {
+                if (MachineIO.inputFluid(machine, "gtceu:hydrogen 100000")) {
                     machine.holder.self().getPersistentData().putLong("hydrogen", hydrogen + 10000000)
                 }
-                if (machine.inputFluid("gtceu:helium 1000000")) {
+                if (MachineIO.inputFluid(machine, "gtceu:helium 1000000")) {
                     machine.holder.self().getPersistentData().putLong("helium", helium + 10000000)
                 }
             }
@@ -1797,7 +1797,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                     .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
                     .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1)))
                 .where("a", Predicates.blocks("gtlcore:spacetimecontinuumripper"))
-                .where("c", Predicates.blocks("gtceu:spacetimebendingcore"))
+                .where("c", Predicates.blocks("gtlcore:spacetimebendingcore"))
                 .where("d", Predicates.blocks("kubejs:manipulator"))
                 .where("e", Predicates.blocks("kubejs:force_field_glass"))
                 .where("f", Predicates.blocks("gtlcore:qft_coil"))
@@ -2067,7 +2067,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("#", Predicates.air())
             .build())
         .beforeWorking(machine => {
-            if (machine.inputFluid("gtceu:blaze " + (2 ** (machine.self().getTier() - 2)) * 10)) {
+            if (MachineIO.inputFluid(machine, "gtceu:blaze " + (2 ** (machine.self().getTier() - 2)) * 10)) {
                 return true
             }
             machine.getRecipeLogic().interruptRecipe()
@@ -2076,7 +2076,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
                 let tier = machine.self().getTier()
-                if (machine.inputFluid("gtceu:blaze " + (2 ** (tier - 2)) * 10)) {
+                if (MachineIO.inputFluid(machine, "gtceu:blaze " + (2 ** (tier - 2)) * 10)) {
                     return true
                 }
                 machine.getRecipeLogic().setProgress(0)
@@ -2113,7 +2113,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("#", Predicates.blocks("gtceu:luv_hermetic_casing"))
             .build())
         .beforeWorking(machine => {
-            if (machine.inputFluid("gtceu:ice " + (2 ** (machine.self().getTier())) * 10)) {
+            if (MachineIO.inputFluid(machine, "gtceu:ice " + (2 ** (machine.self().getTier())) * 10)) {
                 return true
             }
             machine.getRecipeLogic().interruptRecipe()
@@ -2122,7 +2122,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .onWorking(machine => {
             if (machine.getOffsetTimer() % 20 == 0) {
                 let tier = machine.self().getTier()
-                if (machine.inputFluid("gtceu:ice " + (2 ** (tier)) * 10)) {
+                if (MachineIO.inputFluid(machine, "gtceu:ice " + (2 ** (tier)) * 10)) {
                     return true
                 }
                 machine.getRecipeLogic().setProgress(0)
@@ -2561,10 +2561,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 let level = machine.self().getLevel()
                 let pos = machine.self().getPos().offset(0, -16, 0)
                 let block = level.getBlock(pos).getId()
-                if (machine.inputItem(Registries.getItemStack("kubejs:chain_command_block_core")) && block == "kubejs:command_block_broken") {
+                if (MachineIO.inputItem(machine, Registries.getItemStack("kubejs:chain_command_block_core")) && block == "kubejs:command_block_broken") {
                     level.setBlockAndUpdate(pos, Block.getBlock("minecraft:chain_command_block").defaultBlockState())
                 }
-                if (machine.inputItem(Registries.getItemStack("kubejs:repeating_command_block_core")) && block == "kubejs:chain_command_block_broken") {
+                if (MachineIO.inputItem(machine, Registries.getItemStack("kubejs:repeating_command_block_core")) && block == "kubejs:chain_command_block_broken") {
                     level.setBlockAndUpdate(pos, Block.getBlock("minecraft:repeating_command_block").defaultBlockState())
                 }
             }
@@ -3962,13 +3962,13 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             let level = machine.getLevel()
             let dim = level.getDimension()
             let server = level.getServer()
-            if (machine.notConsumableCircuit(1)) {
+            if (MachineIO.notConsumableCircuit(machine, 1)) {
                 server.runCommandSilent(`execute in ${dim} run weather clear`)
             }
-            if (machine.notConsumableCircuit(2)) {
+            if (MachineIO.notConsumableCircuit(machine, 2)) {
                 server.runCommandSilent(`execute in ${dim} run weather rain`)
             }
-            if (machine.notConsumableCircuit(3)) {
+            if (MachineIO.notConsumableCircuit(machine, 3)) {
                 server.runCommandSilent(`execute in ${dim} run weather thunder`)
             }
         })

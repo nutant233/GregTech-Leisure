@@ -58,7 +58,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     const $DustProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty")
     const $IngotProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty")
     const $FluidProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty")
-    const $WireProperties = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties")
     const $OreProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty")
     const $BlastProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty")
     const $MaterialFlag = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag")
@@ -570,7 +569,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet(GTMaterialIconSet.METALLIC)
         .flags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_FINE_WIRE)
         .cableProperties(GTValues.V[GTValues.UIV], 32, 0, true)
-     //   .toolStats(ToolProperty.Builder.of(6.0, 100.0, 64, 6, Java.loadClass("org.gtlcore.gtlcore.api.item.tool.GTLToolType").VAJRA).magnetic().unbreakable().build())
+        .toolStats(ToolProperty.Builder.of(6.0, 100.0, 64, 6, GTLToolType.VAJRA).magnetic().unbreakable().build())
 
     event.create("legendarium")
         .ingot()
@@ -750,7 +749,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .fluid()
         .element(GTElements.get("transcendentmetal"))
         .color(0xffffff)
-        .iconSet(Java.loadClass("org.gtlcore.gtlcore.api.data.chemical.material.info.CustomRendererMaterialIconSet").CUSTOM_TRANSCENDENT_MENTAL)
+        .iconSet(CustomRendererMaterialIconSet.CUSTOM_TRANSCENDENT_MENTAL)
         .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD)
 
     event.create("uruium")

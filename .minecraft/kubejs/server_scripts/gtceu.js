@@ -2072,7 +2072,7 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.UXV])
             .CWUt(512))
 
-    gtr.assembly_line("gtceu:spacetimebendingcore")
+    gtr.assembly_line("gtlcore:spacetimebendingcore")
         .itemInputs("kubejs:manipulator",
             "4x gtceu:uiv_field_generator",
             "4x gtceu:uxv_robot_arm",
@@ -2082,7 +2082,7 @@ ServerEvents.recipes((event) => {
             "4x gtceu:double_hassium_plate",
             "4x gtceu:double_superheavy_h_alloy_plate")
         .inputFluids("gtceu:dimensionallytranscendentresplendentcatalyst 1000", "gtceu:thulium 2880", "gtceu:nobelium 2880", "gtceu:lawrencium 2880")
-        .itemOutputs("gtceu:spacetimebendingcore")
+        .itemOutputs("gtlcore:spacetimebendingcore")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(800)
         .stationResearch(b => b.researchStack(Registries.getItemStack("gtlcore:spacetimecontinuumripper"))
@@ -2677,12 +2677,12 @@ ServerEvents.recipes((event) => {
             .CWUt(64))
 
     gtr.assembly_line("gtceu:qft")
-        .itemInputs("8x gtceu:vibranium_frame", "4x gtlcore:spacetimecontinuumripper", "4x gtceu:spacetimebendingcore", "8x kubejs:precision_circuit_assembly_robot_mk4", "8x gtceu:uxv_sensor", "8x gtceu:uxv_robot_arm", "8x gtceu:uxv_electric_pump", "8x gtceu:uxv_field_generator", "8x #gtceu:circuits/opv", "gtlcore:extremely_max_battery", "64x gtceu:double_lafium_plate", "64x gtceu:double_titan_precision_steel_plate")
+        .itemInputs("8x gtceu:vibranium_frame", "4x gtlcore:spacetimecontinuumripper", "4x gtlcore:spacetimebendingcore", "8x kubejs:precision_circuit_assembly_robot_mk4", "8x gtceu:uxv_sensor", "8x gtceu:uxv_robot_arm", "8x gtceu:uxv_electric_pump", "8x gtceu:uxv_field_generator", "8x #gtceu:circuits/opv", "gtlcore:extremely_max_battery", "64x gtceu:double_lafium_plate", "64x gtceu:double_titan_precision_steel_plate")
         .itemOutputs("gtceu:qft")
         .inputFluids("gtceu:super_mutated_living_solder 1296", "gtceu:tairitsu 2880", "gtceu:soldering_alloy 2880", "gtceu:periodicium 2880")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(2400)
-        .stationResearch(b => b.researchStack(Registries.getItemStack("gtceu:spacetimebendingcore"))
+        .stationResearch(b => b.researchStack(Registries.getItemStack("gtlcore:spacetimebendingcore"))
             .EUt(GTValues.VA[GTValues.UXV])
             .dataStack(Registries.getItemStack("gtceu:data_module"))
             .CWUt(2048))
@@ -7802,7 +7802,7 @@ ServerEvents.recipes((event) => {
 
     gtr.dimensionally_transcendent_plasma_forge("gtceu:spacetime_ingot")
         .notConsumable("64x kubejs:ingot_field_shape")
-        .notConsumable("64x gtceu:spacetimebendingcore")
+        .notConsumable("64x gtlcore:spacetimebendingcore")
         .inputFluids("gtceu:spacetime 1000", "gtceu:raw_star_matter_plasma 1000")
         .outputFluids("gtceu:dimensionallytranscendentresidue 100")
         .itemOutputs("8x gtceu:spacetime_ingot")
@@ -11699,7 +11699,7 @@ ServerEvents.recipes((event) => {
             "64x gtceu:zpm_world_accelerator",
             "64x gtceu:uv_world_accelerator",
             "16x gtlcore:hyper_core",
-            "4x gtceu:spacetimebendingcore",
+            "4x gtlcore:spacetimebendingcore",
             "4x kubejs:dimensional_stability_casing",
             "4x kubejs:spacetime_compression_field_generator",
             "6x kubejs:topological_manipulator_unit",
