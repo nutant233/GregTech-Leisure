@@ -95,7 +95,7 @@ ServerEvents.recipes((event) => {
     gtr.space_elevator("1")
         .circuit(1)
         .duration(400)
-        .CWUt(16)
+        .CWUt(128)
         .EUt(GTValues.VA[GTValues.UV])
 
     gtr.door_of_create("1")
@@ -135,8 +135,6 @@ ServerEvents.recipes((event) => {
 
 const $GTCapabilityHelper = Java.loadClass("com.gregtechceu.gtceu.api.capability.GTCapabilityHelper")
 const $DamageTypes = Java.loadClass("net.minecraft.world.damagesource.DamageTypes")
-const $MenuHooks = Java.loadClass("earth.terrarium.botarium.common.menu.MenuHooks")
-const $PlanetsMenuProvider = Java.loadClass("earth.terrarium.adastra.common.menus.base.PlanetsMenuProvider")
 const $WirelessEnergyManager = Java.loadClass("com.hepdd.gtmthings.api.misc.WirelessEnergyManager")
 const $BigInteger = Java.loadClass("java.math.BigInteger")
 const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
@@ -468,11 +466,6 @@ NetworkEvents.dataReceived("global.flyingspeedKey.consumeClick", (event) => {
     if (event.player.getArmorSlots().toString() == "[1 infinity_boots, 1 infinity_pants, 1 infinity_chestplate, 1 infinity_helmet]") {
         flyspeed(event.player, 0.3)
     }
-})
-
-NetworkEvents.dataReceived("gt.se.st", event => {
-    event.player.addTag("spaceelevatorst")
-    $MenuHooks.openMenu(event.player, new $PlanetsMenuProvider())
 })
 
 NetworkEvents.dataReceived("global.nightvisionKey.consumeClick", event => {

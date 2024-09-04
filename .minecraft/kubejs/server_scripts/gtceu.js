@@ -14534,13 +14534,6 @@ ServerEvents.recipes((event) => {
         .EUt(7)
         .duration(200)
 
-    gtr.circuit_assembler("gtceu:data_orb")
-        .itemInputs("gtceu:epoxy_printed_circuit_board", "2x #gtceu:circuits/hv", "8x gtceu:ram_chip", "32x gtceu:nor_memory_chip", "32x gtceu:nand_memory_chip", "32x gtceu:fine_platinum_wire")
-        .itemOutputs("gtceu:data_orb")
-        .EUt(1200)
-        .duration(400)
-        .cleanroom(CleanroomType.CLEANROOM)
-
     gtr.fuel_refining("gtceu:cetane_boosted_diesel")
         .itemInputs("16x gtceu:carbon_dust")
         .inputFluids("gtceu:hydrogen 10000", "gtceu:oxygen 5000", "gtceu:light_fuel 10000", "gtceu:heavy_fuel 2000", "gtceu:nitration_mixture 4000")
