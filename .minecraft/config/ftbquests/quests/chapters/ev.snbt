@@ -2,10 +2,10 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "ev"
-	group: "53FD41080ED1E796"
+	group: "68CBF1606D696C68"
 	icon: "gtceu:ev_machine_hull"
 	id: "68D3F02D34DEAF83"
-	order_index: 4
+	order_index: 9
 	quest_links: [ ]
 	quests: [
 		{
@@ -49,7 +49,6 @@
 			dependencies: [
 				"2712564DCCFD49B7"
 				"413B25F5BA2BA39D"
-				"51C2F87C50FC5689"
 			]
 			id: "56F6FC6F9E106A2F"
 			rewards: [{
@@ -117,22 +116,6 @@
 			}]
 			x: 18.0d
 			y: 8.0d
-		}
-		{
-			dependencies: ["1D96227373B962A2"]
-			id: "51C2F87C50FC5689"
-			rewards: [{
-				id: "2F4B9BC403C560F0"
-				item: "gtceu:platinum_credit"
-				type: "item"
-			}]
-			tasks: [{
-				id: "2F7B471CB9F23321"
-				item: "gtceu:nano_cpu_chip"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 7.0d
 		}
 		{
 			id: "1D96227373B962A2"
@@ -475,7 +458,7 @@
 		{
 			dependencies: [
 				"5E8BE09F94C42304"
-				"128C3126D5B5DCF3"
+				"759F26B57097602E"
 			]
 			description: [
 				"如果你看到了这个粉是可以从矿物中获取的，请不要去寻找"
@@ -1507,6 +1490,17 @@
 			}]
 			x: 18.0d
 			y: 4.0d
+		}
+		{
+			dependencies: ["128C3126D5B5DCF3"]
+			id: "759F26B57097602E"
+			tasks: [{
+				id: "2C889814346AC9A0"
+				item: "gtceu:tungsten_trioxide_dust"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 2.0d
 		}
 	]
 	title: "超高压EV"

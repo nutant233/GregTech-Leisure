@@ -5,26 +5,35 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:uhv_electric_motor"
 	id: "5786819A13D84D25"
-	order_index: 9
+	order_index: 14
 	quest_links: [
 		{
 			id: "22199DF737024CBD"
 			linked_quest: "776563C5BA327495"
-			x: -2.0d
-			y: -4.0d
+			shape: "rsquare"
+			size: 2.0d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			id: "70FB0919B2F4EE20"
 			linked_quest: "01433D78C43AD215"
-			x: -3.5d
-			y: -5.5d
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			id: "7F9C7923EEED3AD7"
+			linked_quest: "035C470213E8B4DB"
+			shape: "rsquare"
+			size: 2.0d
+			x: 2.0d
+			y: 0.0d
 		}
 	]
 	quests: [
 		{
 			dependencies: [
 				"035C470213E8B4DB"
-				"3063F232F801D089"
 				"7204F1B6BCC74F1C"
 				"776563C5BA327495"
 				"3008FED65F71C459"
@@ -34,37 +43,37 @@
 				"第一次做会有些贵"
 			]
 			id: "433793B7470FAA09"
-			shape: "gear"
-			size: 1.5d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "02412DC87B9DA266"
 				item: "gtceu:stellar_forge"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -4.5d
+			x: 4.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["433793B7470FAA09"]
+			dependencies: ["3063F232F801D089"]
 			id: "76BAF48FA9D845C6"
 			tasks: [{
 				id: "16C7DE1FF416631A"
 				item: "gtceu:dubnium_ingot"
 				type: "item"
 			}]
-			x: 2.5d
-			y: -4.0d
+			x: 8.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["433793B7470FAA09"]
+			dependencies: ["3063F232F801D089"]
 			id: "5CD56CD71662D4A7"
 			tasks: [{
 				id: "393B76A2C2075C2D"
 				item: "gtceu:seaborgium_ingot"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -2.5d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["702EFE9BA62A8CDA"]
@@ -74,8 +83,8 @@
 				item: "kubejs:antimatter_charge"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -6.0d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["44126973CFF5550D"]
@@ -85,8 +94,8 @@
 				item: "gtceu:carbon_nanotubes_ingot"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -5.5d
+			x: 8.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -102,8 +111,8 @@
 				item: "kubejs:optical_processing_core"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -4.0d
+			x: 12.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["2711E6516920E825"]
@@ -114,8 +123,8 @@
 				item: "kubejs:optical_processor"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -4.0d
+			x: 14.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["460277B62B964613"]
@@ -125,8 +134,8 @@
 				item: "kubejs:optical_assembly"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -2.5d
+			x: 14.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["5B1757594AE08A2A"]
@@ -136,8 +145,8 @@
 				item: "kubejs:optical_computer"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -1.0d
+			x: 14.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -150,8 +159,8 @@
 				item: "kubejs:optical_mainframe"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 2.0d
+			x: 12.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["7C23CC6ADDC33EA0"]
@@ -163,7 +172,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -1.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -176,8 +185,8 @@
 				item: "kubejs:naquadria_charge"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -1.0d
+			x: 4.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["2DD8E128C6E3E41D"]
@@ -187,8 +196,8 @@
 				item: "gtceu:enderium_ingot"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 2.0d
+			x: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -196,14 +205,15 @@
 				"32A49A2CBFC934C8"
 			]
 			description: ["UEV超导体"]
+			hide_dependent_lines: true
 			id: "6B990D7D964DF559"
 			tasks: [{
 				id: "7681E9EB89F79679"
 				item: "gtceu:enderite_ingot"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 2.0d
+			x: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -216,8 +226,8 @@
 				item: "gtceu:adamantium_ingot"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 0.5d
+			x: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["76BAF48FA9D845C6"]
@@ -239,19 +249,20 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: -4.0d
+			x: 10.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["2DD8E128C6E3E41D"]
+			hide_dependent_lines: true
 			id: "2E05225ADF4D7D31"
 			tasks: [{
 				id: "02C39E225C1D5ECD"
 				item: "gtceu:degenerate_rhenium_plate"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 0.5d
+			x: 6.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -260,15 +271,15 @@
 			]
 			description: ["将废料转化"]
 			id: "2FBCD8BCE586ADB8"
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "1E707BD4FE3FEA6B"
 				item: "gtceu:matter_fabricator"
 				type: "item"
 			}]
-			x: -3.5d
-			y: 1.0d
+			x: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -282,8 +293,8 @@
 				item: "kubejs:titansteel_coil_block"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -1.0d
+			x: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["7370721CB75472C1"]
@@ -294,8 +305,8 @@
 				item: "gtceu:jasper_ore"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -2.5d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["384CC871242ECF6E"]
@@ -305,8 +316,8 @@
 				item: "kubejs:optical_slice"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -1.0d
+			x: 10.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["164C87812A3A465C"]
@@ -316,8 +327,8 @@
 				item: "kubejs:optical_soc"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -2.5d
+			x: 12.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -330,8 +341,8 @@
 				item: "kubejs:space_drone_mk2"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -4.0d
+			x: 0.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["32A49A2CBFC934C8"]
@@ -341,8 +352,8 @@
 				item: "kubejs:space_drone_mk3"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 0.5d
+			x: 2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["3BA7B0BA435252E0"]
@@ -353,22 +364,22 @@
 				item: "gtceu:kevlar_plate"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -2.5d
+			x: 10.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["7204F1B6BCC74F1C"]
 			description: ["精密电路基板专用生产机器"]
 			id: "0CF40DD5F6239209"
-			shape: "gear"
-			size: 1.3d
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "65BF39050B7B60AD"
 				item: "gtceu:pcb_factory"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 0.5d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -381,8 +392,8 @@
 				item: "kubejs:optical_printed_circuit_board"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -2.5d
+			x: 12.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -391,16 +402,17 @@
 				"7204F1B6BCC74F1C"
 			]
 			description: ["需要光刻胶和算力来进行精密联合激光蚀刻"]
+			hide_dependent_lines: true
 			id: "42081F59690E6469"
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "6B6EF476B6430A90"
 				item: "gtceu:engraving_laser_plant"
 				type: "item"
 			}]
-			x: -2.0d
-			y: -2.5d
+			x: 2.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["42081F59690E6469"]
@@ -410,8 +422,8 @@
 				item: "kubejs:photon_carrying_wafer"
 				type: "item"
 			}]
-			x: -2.0d
-			y: -1.0d
+			x: 6.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -424,8 +436,8 @@
 				item: "kubejs:nm_chip"
 				type: "item"
 			}]
-			x: -2.0d
-			y: -5.5d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["7C23CC6ADDC33EA0"]
@@ -436,8 +448,8 @@
 				item: "gtceu:fullerene_dust"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -5.5d
+			x: 14.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["7C23CC6ADDC33EA0"]
@@ -448,8 +460,8 @@
 				title: "环对苯撑"
 				type: "checkmark"
 			}]
-			x: 2.5d
-			y: -5.5d
+			x: 6.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["4BFA114E12BCB163"]
@@ -460,8 +472,8 @@
 				title: "聚氨脂树脂"
 				type: "checkmark"
 			}]
-			x: 1.5d
-			y: -2.5d
+			x: 8.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -474,22 +486,22 @@
 				item: "kubejs:optical_wafer"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -1.0d
+			x: 8.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["783379F3A7557CEE"]
 			description: ["更大，更强"]
 			id: "3DD334C5B070AF94"
 			shape: "gear"
-			size: 1.2d
+			size: 1.0d
 			tasks: [{
 				id: "12A231EAC2E4FD44"
 				item: "gtceu:cooling_tower"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 3.5d
+			x: 14.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -505,15 +517,15 @@
 				"{image:ftbquests:textures/picture/001.png width:192 height108 align:center}"
 			]
 			id: "72B80ADFE77198DD"
-			shape: "gear"
-			size: 1.5d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "2489A12E61345011"
 				item: "gtceu:suprachronal_assembly_line"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 2.0d
+			x: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["783379F3A7557CEE"]
@@ -525,85 +537,110 @@
 			]
 			id: "1BDEBBAF5BA9854E"
 			shape: "gear"
-			size: 1.3d
+			size: 1.0d
 			subtitle: "注意无论是否需要研究都必须连接数据库"
 			tasks: [{
 				id: "43EBC608B5383709"
 				item: "gtceu:dimensional_focus_engraving_array"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 2.0d
+			x: 10.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["783379F3A7557CEE"]
 			description: ["压缩机和压模机的激光版本，拥有无损超频"]
 			id: "6D6E342B03B9FE72"
 			shape: "gear"
-			size: 1.2d
+			size: 1.0d
 			tasks: [{
 				id: "5C5CC922CD9EF716"
 				item: "gtceu:field_extruder_factory"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 3.5d
+			x: 14.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["783379F3A7557CEE"]
 			description: ["线材轧机的激光版本，拥有无损超频，使用温度超频机制，温度每提升900K，并行数×2"]
 			id: "75E65C72F3C6BD43"
 			shape: "gear"
-			size: 1.2d
+			size: 1.0d
 			tasks: [{
 				id: "6FAEEFBEBAEAE58F"
 				item: "gtceu:mega_wiremill"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 0.5d
+			x: 11.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["783379F3A7557CEE"]
 			description: ["卷板机、锻造锤和冲压机床的激光版本，拥有无损超频，使用温度超频机制，温度每提升900K，并行数×2"]
 			id: "41BBD0FCCD5BEED2"
 			shape: "gear"
-			size: 1.2d
+			size: 1.0d
 			tasks: [{
 				id: "76AB32A27420A608"
 				item: "gtceu:mega_presser"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 3.5d
+			x: 13.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["783379F3A7557CEE"]
 			description: ["提取机和流体固化器的激光版，拥有无损超频，使用温度并行机制，温度每提升900K，并行数×2"]
 			id: "174B8FFFC1745311"
 			shape: "gear"
-			size: 1.2d
+			size: 1.0d
 			tasks: [{
 				id: "38F98C857B04D47D"
 				item: "gtceu:mega_extractor"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 0.5d
+			x: 12.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["783379F3A7557CEE"]
 			description: ["装罐机的激光版本，拥有无损超频"]
 			id: "7833098408DB2057"
 			shape: "gear"
-			size: 1.2d
+			size: 1.0d
 			tasks: [{
 				id: "5266F8533351D5E1"
 				item: "gtceu:mega_canner"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 3.5d
+			x: 14.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["035C470213E8B4DB"]
+			id: "0936769874A5F740"
+			tasks: [{
+				id: "1557E8CF828FFBEA"
+				item: "gtceu:uhv_energy_input_hatch"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["776563C5BA327495"]
+			description: ["UEV的基础材料"]
+			id: "713FF88279AD9A31"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "4FAE8DB663013B5C"
+				item: "gtceu:quantanium_ingot"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 8.0d
 		}
 	]
 	subtitle: ["Tier9-UHV"]

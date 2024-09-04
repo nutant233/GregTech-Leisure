@@ -5,19 +5,21 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:uv_electric_motor"
 	id: "2366BEB7A81C122D"
-	order_index: 8
+	order_index: 13
 	quest_links: [
 		{
 			id: "23C44004B0D7572C"
 			linked_quest: "73C70C42B7EF5D4F"
-			x: -2.0d
-			y: -4.0d
+			x: 0.0d
+			y: 2.0d
 		}
 		{
 			id: "3F71D8E597D26019"
 			linked_quest: "7C23CC6ADDC33EA0"
-			x: -3.5d
-			y: -2.5d
+			shape: "rsquare"
+			size: 2.0d
+			x: 2.0d
+			y: 0.0d
 		}
 	]
 	quests: [
@@ -30,29 +32,32 @@
 			]
 			description: ["最后一种了"]
 			id: "6C4F1C87F08F38AC"
-			shape: "gear"
-			size: 1.3d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "1A869FB7AB0C0536"
 				item: "gtceu:uv_fusion_reactor"
 				type: "item"
 			}]
-			x: -2.0d
-			y: -2.5d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["6C4F1C87F08F38AC"]
-			description: ["这个需求量很大，制作速度慢"]
+			description: [
+				"UHV的基础材料"
+				"这个需求量很大，制作速度慢"
+			]
 			id: "035C470213E8B4DB"
 			shape: "rsquare"
-			size: 1.3d
+			size: 2.0d
 			tasks: [{
 				id: "39B8A1A88BE55729"
 				item: "gtceu:neutronium_ingot"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -2.5d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
@@ -63,8 +68,8 @@
 				item: "gtceu:neutronium_boule"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -4.0d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1223F5F9BF7FF37F"]
@@ -74,8 +79,8 @@
 				item: "gtceu:highly_advanced_soc"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -4.0d
+			x: 10.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["24B011E770B7DF3F"]
@@ -108,8 +113,8 @@
 					type: "item"
 				}
 			]
-			x: 3.0d
-			y: 0.5d
+			x: 10.0d
+			y: 9.0d
 		}
 		{
 			dependencies: [
@@ -123,8 +128,8 @@
 				item: "kubejs:bioware_processor"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -1.0d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -138,19 +143,21 @@
 				item: "kubejs:bioware_assembly"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -1.0d
+			x: 12.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["76C32ADCD71DE8B8"]
 			id: "2AA1E574BA4327F8"
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "648367DCA2352C63"
 				item: "kubejs:bioware_computer"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -1.0d
+			x: 14.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -164,8 +171,8 @@
 				item: "kubejs:bioware_mainframe"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -1.0d
+			x: 14.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
@@ -176,8 +183,8 @@
 				item: "gtceu:ruthenium_trinium_americium_neutronate_ingot"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -2.5d
+			x: 12.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["66C0D17BAE340EB4"]
@@ -189,46 +196,47 @@
 				title: "聚酰亚胺"
 				type: "checkmark"
 			}]
-			x: 3.0d
-			y: 2.0d
+			x: 8.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["59CA7B4A4A417B53"]
+			hide_dependent_lines: true
 			id: "1FA9E56114BFABF5"
 			tasks: [{
 				id: "6A73DF3A0B7C1184"
 				item: "gtceu:pikyonium_ingot"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 2.0d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1FA9E56114BFABF5"]
 			id: "53EB6E99F976AF31"
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "2E802CA66A25BB20"
 				item: "gtceu:circuit_assembly_line"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 0.5d
+			x: 12.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["7204F1B6BCC74F1C"]
 			description: ["使用激光高速冷凝等离子体"]
 			id: "71D029B59C690121"
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "50C209A33583AD73"
 				item: "gtceu:plasma_condenser"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 0.5d
+			x: 16.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -242,8 +250,8 @@
 				item: "kubejs:bioware_processing_core"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -2.5d
+			x: 10.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -259,8 +267,8 @@
 				item: "kubejs:bioware_boule"
 				type: "item"
 			}]
-			x: 1.5d
-			y: -2.5d
+			x: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["7A7C73D046390488"]
@@ -271,8 +279,8 @@
 				item: "gtceu:assembler_module"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 2.0d
+			x: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["7A7C73D046390488"]
@@ -283,8 +291,8 @@
 				item: "gtceu:resource_collection"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 0.5d
+			x: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["31EDE3D976DE5A33"]
@@ -294,8 +302,8 @@
 				item: "kubejs:space_drone_mk1"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 0.5d
+			x: 6.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["7A7C73D046390488"]
@@ -307,8 +315,8 @@
 				item: "gtceu:abyssalalloy_ingot"
 				type: "item"
 			}]
-			x: -2.0d
-			y: -1.0d
+			x: 6.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["12F8275FC06FCFEE"]
@@ -318,8 +326,8 @@
 				item: "kubejs:abyssalalloy_coil_block"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 0.5d
+			x: 8.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -332,8 +340,8 @@
 				item: "gtceu:highurabilityompoundteel_ingot"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 2.0d
+			x: 10.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -341,6 +349,7 @@
 				"2802E34A99CE1D79"
 			]
 			description: ["新的魔幻金属"]
+			hide_dependent_lines: true
 			id: "776563C5BA327495"
 			tasks: [
 				{
@@ -354,8 +363,9 @@
 					type: "item"
 				}
 			]
-			x: -3.5d
-			y: -4.0d
+			title: "山铜与秘银"
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -369,8 +379,8 @@
 				item: "kubejs:tcetieseaweedextract"
 				type: "item"
 			}]
-			x: 1.5d
-			y: -1.0d
+			x: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -401,15 +411,15 @@
 					type: "item"
 				}
 			]
-			shape: "gear"
-			size: 1.3d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "2E049D2A5A1162D8"
 				item: "gtceu:space_elevator"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 2.0d
+			x: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -423,8 +433,8 @@
 				item: "kubejs:bioware_printed_circuit_board"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -2.5d
+			x: 8.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["264EA49453E188C4"]
@@ -434,8 +444,8 @@
 				item: "gtceu:neutronium_wafer"
 				type: "item"
 			}]
-			x: 1.5d
-			y: -4.0d
+			x: 8.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -449,8 +459,8 @@
 				item: "kubejs:rutherfordium_neutronium_boule"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -5.5d
+			x: 4.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["53DEE1A65051E06F"]
@@ -461,8 +471,8 @@
 				item: "gtceu:rutherfordium_dust"
 				type: "item"
 			}]
-			x: 1.5d
-			y: -5.5d
+			x: 3.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -476,8 +486,8 @@
 				item: "gtceu:actinium_dust"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -5.5d
+			x: 1.5d
+			y: 4.0d
 		}
 		{
 			description: ["从铀矿中获取"]
@@ -494,8 +504,8 @@
 					type: "item"
 				}
 			]
-			x: 4.5d
-			y: -5.5d
+			x: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1DFC7DC123A3D830"]
@@ -505,21 +515,21 @@
 				item: "gtceu:mega_blast_furnace"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -4.0d
+			x: 14.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["1DFC7DC123A3D830"]
 			id: "4500AC22EE5C09F0"
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "1B9D3E6BA58D1E74"
 				item: "gtceu:mega_vacuum_freezer"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -4.0d
+			x: 12.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -529,15 +539,15 @@
 			]
 			description: ["有些贵，但能用激光"]
 			id: "1FCD63F77E978107"
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "67242CD537B6FEC1"
 				item: "gtceu:super_blast_smelter"
 				type: "item"
 			}]
-			x: 9.0d
-			y: -2.5d
+			x: 16.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["1DFC7DC123A3D830"]
@@ -547,8 +557,8 @@
 				item: "gtceu:mega_alloy_blast_smelter"
 				type: "item"
 			}]
-			x: 7.5d
-			y: -2.5d
+			x: 14.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["6D83BAAC7DB34D51"]
@@ -563,8 +573,19 @@
 				title: "不明液体"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: -1.0d
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7C23CC6ADDC33EA0"]
+			id: "2719D88ECD353F24"
+			tasks: [{
+				id: "6BA667DA94DDC286"
+				item: "gtceu:uv_energy_input_hatch"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Tier8-UV"]

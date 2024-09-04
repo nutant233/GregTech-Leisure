@@ -5,7 +5,7 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:ev_electric_motor"
 	id: "7991563477588554"
-	order_index: 4
+	order_index: 8
 	quest_links: [{
 		id: "3B31B052BCE2B1E9"
 		linked_quest: "2ECB47CBE5DC6E49"
@@ -112,6 +112,8 @@
 				"14AF37055E614519"
 			]
 			description: ["IV阶段的主要材料"]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
 			id: "169F331B1D2B9DFE"
 			rewards: [{
 				id: "1EC9B483FEDE7471"
