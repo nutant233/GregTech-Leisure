@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "active=false": {
+            "model": "gtlcore:block/variant/qft_coil"
+        },
+        "active=true": {
+            "model": "gtlcore:block/variant/qft_coil_active"
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+        "all": "gtlcore:block/casings/component_assembly_line/component_assembly_line_casing_zpm"
+    }
+}
