@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "active=false": {
+            "model": "gtlcore:block/variant/super_computation_component"
+        },
+        "active=true": {
+            "model": "gtlcore:block/variant/super_computation_component_active"
+        }
+    }
+}

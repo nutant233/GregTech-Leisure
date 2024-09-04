@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gtlcore:block/damaged_advanced_hpca_component_side"
+  }
+}

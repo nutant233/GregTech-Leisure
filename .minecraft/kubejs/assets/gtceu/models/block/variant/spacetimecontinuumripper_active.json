@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "kubejs:block/spacetimecontinuumripper_active",
-    "up": "kubejs:block/manipulator",
-    "down": "kubejs:block/manipulator"
-  }
-}
