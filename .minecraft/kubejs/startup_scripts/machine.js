@@ -465,7 +465,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_chemical_reactor")))
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTLRecipeModifiers.chemicalPlantOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTLRecipeModifiers.chemicalPlantOverclock(machine, recipe, params, result)])
         .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1158,7 +1158,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             let recipe1 = GTLRecipeModifiers.reduction(machine, recipe, 1, Math.pow(0.8, tier[0]))
             if (recipe1 != null) {
-                return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe1, Math.pow(4, tier[1] - 1), false).getFirst(), machine.getOverclockVoltage())
+                return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe1, Math.pow(4, tier[1] - 1), false).getFirst(), machine.getOverclockVoltage(), params, result)
             }
             return null
         })
@@ -1208,7 +1208,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             }
             let recipe1 = GTLRecipeModifiers.reduction(machine, recipe, 1, Math.pow(0.8, tier[0]))
             if (recipe1 != null) {
-                return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe1, Math.pow(4, tier[1] - 1), false).getFirst(), machine.getOverclockVoltage())
+                return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe1, Math.pow(4, tier[1] - 1), false).getFirst(), machine.getOverclockVoltage(), params, result)
             }
             return null
         })
@@ -1801,7 +1801,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("f", Predicates.blocks("gtlcore:qft_coil"))
                 .where(" ", Predicates.any())
                 .build())
-        .workableCasingRenderer("kubejs:block/manipulator", "gtceu:block/multiblock/fusion_reactor")
+        .workableCasingRenderer("gtlcore:block/manipulator", "gtceu:block/multiblock/fusion_reactor")
 
     event.create("super_computation", "multiblock", (holder, args) => new $ComputationProviderMachine(holder, false, args))
         .rotationState(RotationState.NONE)
@@ -1936,7 +1936,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_chemical_reactor")))
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTLRecipeModifiers.chemicalPlantOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTLRecipeModifiers.chemicalPlantOverclock(machine, recipe, params, result)])
         .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4157,7 +4157,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.nano_forge")))
-        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (2 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe, params, result) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (3 - recipe.data.getInt("nano_forge_tier")), 4, false), recipe, machine.getOverclockVoltage())])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (2 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe, params, result) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (3 - recipe.data.getInt("nano_forge_tier")), 4, false), recipe, machine.getOverclockVoltage(), params, result)])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4213,7 +4213,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.nano_forge")))
-        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (3 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe, params, result) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (4 - recipe.data.getInt("nano_forge_tier")), 4, false), recipe, machine.getOverclockVoltage())])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (3 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe, params, result) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (4 - recipe.data.getInt("nano_forge_tier")), 4, false), recipe, machine.getOverclockVoltage(), params, result)])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4856,7 +4856,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 } else {
                     machine.setMachineStorageItem(Items.AIR)
                 }
-                return $RecipeHelper.applyOverclock(OverclockingLogic.PERFECT_OVERCLOCK, recipe, machine.getOverclockVoltage())
+                return $RecipeHelper.applyOverclock(OverclockingLogic.PERFECT_OVERCLOCK, recipe, machine.getOverclockVoltage(), params, result)
             }
             return null
         })
@@ -4936,7 +4936,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             Component.translatable("gtceu.vacuum_drying"), Component.translatable("gtceu.dehydrator")))
         .recipeModifier((machine, recipe, params, result) => {
             if (machine.self().getRecipeType() == GTRecipeTypes.get("dehydrator")) {
-                return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), machine.getOverclockVoltage())
+                return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK, GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), machine.getOverclockVoltage(), params, result)
             } else {
                 return GTRecipeModifiers.ebfOverclock(machine, recipe, params, result)
             }

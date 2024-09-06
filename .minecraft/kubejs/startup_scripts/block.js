@@ -336,6 +336,7 @@ StartupEvents.registry("block", event => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("forge:mineable/wrench")
         .requiresTool(true)
+        .textureAll("gtlcore:block/manipulator")
     event.create("blaze_blast_furnace_casing", "basic")
         .noValidSpawns(true)
         .soundType("metal")
@@ -710,6 +711,7 @@ StartupEvents.registry("block", event => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("forge:mineable/wrench")
         .requiresTool(true)
+        .textureAll("kubejs:block/extreme_strength_tritanium_casing")
 
     event.create("echo_casing", "basic")
         .noValidSpawns(true)
@@ -832,6 +834,7 @@ StartupEvents.registry("block", event => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("forge:mineable/wrench")
         .requiresTool(true)
+        .textureAll("kubejs:block/hyper_mechanical_casing")
 
     event.create("process_machine_casing", "basic")
         .noValidSpawns(true)
@@ -866,6 +869,7 @@ StartupEvents.registry("block", event => {
         .tagBlock("forge:mineable/wrench")
         .requiresTool(true)
         .defaultTranslucent()
+        .textureAll("kubejs:block/rhenium_reinforced_borosilicate_glass")
 
     event.create("hsss_reinforced_borosilicate_glass", "basic")
         .noValidSpawns(true)
