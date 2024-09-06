@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "77F8039ACE718C6C"
 	group: "68CBF1606D696C68"
-	icon: "gtceu:bronze_machine_casing"
+	icon: "gtlcore:primitive_robot_arm"
 	id: "77F8039ACE718C6C"
 	order_index: 0
 	quest_links: [ ]
@@ -1292,5 +1292,6 @@
 			y: 4.0d
 		}
 	]
-	title: "蒸汽时代ULV"
+	subtitle: ["Tier0-ULV"]
+	title: "蒸汽时代"
 }

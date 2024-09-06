@@ -9,8 +9,8 @@
 	quest_links: [{
 		id: "14F40CE0FBA07270"
 		linked_quest: "00A227F06D7F109E"
-		x: -4.5d
-		y: -4.5d
+		x: -5.0d
+		y: -5.0d
 	}]
 	quests: [
 		{
@@ -20,15 +20,15 @@
 				"32186EFF7020D432"
 			]
 			id: "3E5EBC2B23A503C1"
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "75AE43EB6B5AC68F"
 				item: "gtceu:sphere_of_harmony"
 				type: "item"
 			}]
-			x: -6.0d
-			y: -1.5d
+			x: -9.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["3E5EBC2B23A503C1"]
@@ -39,8 +39,8 @@
 				title: "时空"
 				type: "checkmark"
 			}]
-			x: -4.5d
-			y: -1.5d
+			x: -5.0d
+			y: -3.0d
 		}
 		{
 			dependencies: [
@@ -53,7 +53,7 @@
 				item: "kubejs:spacetime_catalyst"
 				type: "item"
 			}]
-			x: -4.5d
+			x: -3.0d
 			y: -3.0d
 		}
 		{
@@ -65,8 +65,8 @@
 				title: "恒星物质"
 				type: "checkmark"
 			}]
-			x: -6.0d
-			y: 0.0d
+			x: -7.0d
+			y: -7.0d
 		}
 		{
 			dependencies: [
@@ -80,8 +80,8 @@
 				item: "gtceu:transcendentmetal_ingot"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -1.5d
+			x: -1.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -94,8 +94,8 @@
 				item: "kubejs:hypercube"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -4.5d
+			x: 1.0d
+			y: -7.0d
 		}
 		{
 			dependencies: [
@@ -109,8 +109,8 @@
 				item: "kubejs:space_probe_mk3"
 				type: "item"
 			}]
-			x: -7.5d
-			y: -3.0d
+			x: -11.0d
+			y: -7.0d
 		}
 		{
 			dependencies: [
@@ -123,8 +123,8 @@
 				item: "kubejs:hyperdimensional_drone"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -1.5d
+			x: 1.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["736395E39993F727"]
@@ -135,8 +135,8 @@
 				item: "kubejs:suprachronal_max"
 				type: "item"
 			}]
-			x: 1.5d
-			y: -1.5d
+			x: 3.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -151,7 +151,7 @@
 				type: "item"
 			}]
 			x: -3.0d
-			y: 0.0d
+			y: -7.0d
 		}
 		{
 			dependencies: [
@@ -165,7 +165,7 @@
 				type: "item"
 			}]
 			x: -3.0d
-			y: -3.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -178,7 +178,7 @@
 				item: "kubejs:eternity_catalyst"
 				type: "item"
 			}]
-			x: -1.5d
+			x: -1.0d
 			y: -3.0d
 		}
 		{
@@ -189,8 +189,8 @@
 				item: "kubejs:infinity_coil_block"
 				type: "item"
 			}]
-			x: -3.0d
-			y: -4.5d
+			x: -4.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["30AEBB08CE6C88BA"]
@@ -200,7 +200,7 @@
 				item: "kubejs:suprachronal_mainframe_complex"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 3.0d
 			y: -3.0d
 		}
 		{
@@ -212,22 +212,22 @@
 				title: "磁流体约束恒星物质"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: -3.0d
+			x: 1.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["11A7CCFCEAB722F3"]
 			description: ["可以把你的最高级别激光仓填满"]
 			id: "0610CD9378D8B0AD"
 			shape: "gear"
-			size: 1.1d
+			size: 2.0d
 			tasks: [{
 				id: "50D76B27937DC429"
 				item: "gtceu:annihilate_generator"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -4.5d
+			x: 3.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["63998161D9D731E7"]
@@ -239,8 +239,8 @@
 				item: "gtceu:max_neutron_compressor"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 0.0d
+			x: -1.0d
+			y: -7.0d
 		}
 		{
 			dependencies: [
@@ -250,14 +250,14 @@
 			]
 			description: ["耗能固定为4A MAX"]
 			id: "296DE95F3BE7DC54"
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "68BE29A496275699"
 				item: "gtceu:door_of_create"
 				type: "item"
 			}]
-			x: 3.0d
+			x: 5.0d
 			y: -3.0d
 		}
 		{
@@ -269,8 +269,8 @@
 				item: "kubejs:dimension_creation_casing"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -1.5d
+			x: 5.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -283,8 +283,8 @@
 				item: "kubejs:chaos_shard"
 				type: "item"
 			}]
-			x: -6.0d
-			y: -4.5d
+			x: -9.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["57B09C66B637C894"]
@@ -294,8 +294,8 @@
 				item: "gtceu:chaos_ingot"
 				type: "item"
 			}]
-			x: -6.0d
-			y: -3.0d
+			x: -9.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["77CADF4536151255"]
@@ -306,8 +306,8 @@
 				title: "宇宙素"
 				type: "checkmark"
 			}]
-			x: -7.5d
-			y: -1.5d
+			x: -11.0d
+			y: -5.0d
 		}
 		{
 			dependencies: [
@@ -321,8 +321,8 @@
 				title: "流体本源物质"
 				type: "checkmark"
 			}]
-			x: -3.0d
-			y: -1.5d
+			x: -7.0d
+			y: -5.0d
 		}
 		{
 			dependencies: ["165C5D3656C33A89"]
@@ -332,8 +332,8 @@
 				item: "gtceu:dimensionallytranscendentstellarcatalyst_bucket"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 0.0d
+			x: -5.0d
+			y: -7.0d
 		}
 		{
 			dependencies: ["32186EFF7020D432"]
@@ -344,8 +344,8 @@
 				item: "kubejs:draconic_energy_core"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: 1.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["30AEBB08CE6C88BA"]
@@ -355,8 +355,8 @@
 				item: "gtceu:cosmic_ingot"
 				type: "item"
 			}]
-			x: 1.5d
-			y: -4.5d
+			x: 3.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["51D5E14423F35E6F"]
@@ -366,8 +366,8 @@
 				item: "expatternprovider:fishbig"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -4.5d
+			x: 5.0d
+			y: -1.0d
 		}
 	]
 	subtitle: ["Tier13-OpV"]

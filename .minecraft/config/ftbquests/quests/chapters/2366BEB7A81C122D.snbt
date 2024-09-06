@@ -114,7 +114,7 @@
 				}
 			]
 			x: 10.0d
-			y: 9.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -196,7 +196,7 @@
 				type: "checkmark"
 			}]
 			x: 8.0d
-			y: 9.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["59CA7B4A4A417B53"]
@@ -314,8 +314,8 @@
 				item: "gtceu:abyssalalloy_ingot"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 0.0d
+			x: 2.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["12F8275FC06FCFEE"]
@@ -325,8 +325,8 @@
 				item: "kubejs:abyssalalloy_coil_block"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 0.0d
+			x: 4.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -339,8 +339,8 @@
 				item: "gtceu:highurabilityompoundteel_ingot"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 0.0d
+			x: 6.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -348,7 +348,6 @@
 				"2802E34A99CE1D79"
 			]
 			description: ["新的魔幻金属"]
-			hide_dependent_lines: true
 			id: "776563C5BA327495"
 			tasks: [
 				{
@@ -584,6 +583,31 @@
 				type: "item"
 			}]
 			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2802E34A99CE1D79"
+				"07234E44D2E88932"
+			]
+			id: "24585C3114095227"
+			tasks: [{
+				id: "65B817A00EF55E55"
+				item: "kubejs:pellet_antimatter"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["035C470213E8B4DB"]
+			id: "07234E44D2E88932"
+			tasks: [{
+				id: "38B62996832E4704"
+				item: "gtceu:uv_field_generator"
+				type: "item"
+			}]
+			x: 8.0d
 			y: 0.0d
 		}
 	]

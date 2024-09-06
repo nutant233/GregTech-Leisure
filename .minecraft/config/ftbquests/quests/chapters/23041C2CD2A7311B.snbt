@@ -11,16 +11,16 @@
 			id: "266F13D1E89B47C1"
 			linked_quest: "559836CC234447C0"
 			shape: "rsquare"
-			size: 1.5d
-			x: 0.5d
-			y: -6.0d
+			size: 2.0d
+			x: 0.0d
+			y: 4.0d
 		}
 		{
 			id: "7ED0015FCA833C34"
 			linked_quest: "26607B94D873E07A"
 			shape: "rsquare"
 			size: 2.0d
-			x: 5.0d
+			x: 0.0d
 			y: -6.0d
 		}
 	]
@@ -36,8 +36,8 @@
 				item: "kubejs:contained_high_density_protonic_matter"
 				type: "item"
 			}]
-			x: -1.0d
-			y: -3.0d
+			x: 4.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1433920A4DDCE2B5"]
@@ -47,8 +47,8 @@
 				item: "gtceu:crystalmatrix_ingot"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -1.5d
+			x: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -63,7 +63,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -1.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -76,11 +76,14 @@
 				item: "kubejs:starmetal_coil_block"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["5E223597F71DB81D"]
+			dependencies: [
+				"5E223597F71DB81D"
+				"4A1F4AAAABC1DE23"
+			]
 			description: ["高纯龙素"]
 			id: "6A1F7D407BE033A9"
 			tasks: [{
@@ -88,8 +91,8 @@
 				item: "gtceu:draconium_dust"
 				type: "item"
 			}]
-			x: 3.5d
-			y: -3.0d
+			x: 2.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -103,8 +106,8 @@
 				item: "gtceu:draconium_ingot"
 				type: "item"
 			}]
-			x: 3.5d
-			y: -1.5d
+			x: 4.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["63C77EE3C70E20E7"]
@@ -114,8 +117,8 @@
 				item: "kubejs:contained_reissner_nordstrom_singularity"
 				type: "item"
 			}]
-			x: -2.5d
-			y: -4.5d
+			x: 6.0d
+			y: -8.0d
 		}
 		{
 			dependencies: [
@@ -128,8 +131,8 @@
 				item: "kubejs:contained_kerr_newmann_singularity"
 				type: "item"
 			}]
-			x: -4.0d
-			y: -4.5d
+			x: 8.0d
+			y: -8.0d
 		}
 		{
 			dependencies: ["30C7E9FE04629708"]
@@ -139,8 +142,8 @@
 				item: "kubejs:contained_kerr_singularity"
 				type: "item"
 			}]
-			x: -5.5d
-			y: -4.5d
+			x: 10.0d
+			y: -8.0d
 		}
 		{
 			dependencies: [
@@ -154,8 +157,8 @@
 				item: "kubejs:graviton_transducer"
 				type: "item"
 			}]
-			x: -2.5d
-			y: -3.0d
+			x: 6.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -169,8 +172,8 @@
 				item: "kubejs:topological_manipulator_unit"
 				type: "item"
 			}]
-			x: -4.0d
-			y: -3.0d
+			x: 8.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["5EEF654D4CD2168F"]
@@ -180,14 +183,13 @@
 				item: "kubejs:microwormhole_generator"
 				type: "item"
 			}]
-			x: -5.5d
-			y: -3.0d
+			x: 10.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
 				"5A4208D724465B97"
 				"0E69D0896D0218E3"
-				"1E2191E5E31DC8B0"
 				"2667AA2D0C0929B3"
 				"437E5E4108228333"
 				"583D5AF26EDAF7DF"
@@ -198,13 +200,12 @@
 				item: "kubejs:supracausal_processing_core"
 				type: "item"
 			}]
-			x: -4.0d
-			y: -1.5d
+			x: 8.0d
+			y: -2.05d
 		}
 		{
 			dependencies: [
 				"7843B0B9DF3F6FB3"
-				"49ED5C32664DDF6C"
 				"1BA07BC3DBFFF3E6"
 			]
 			description: ["利用虫洞，准确地在问题提出的时刻开始计算，以便在问题被问出时得到答案。"]
@@ -214,8 +215,8 @@
 				item: "kubejs:supracausal_processor"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 0.0d
+			x: 10.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -230,19 +231,22 @@
 				item: "kubejs:supracausal_assembly"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 1.5d
+			x: 12.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["2F82F4BCC261723A"]
+			hide_dependent_lines: true
 			id: "63C77EE3C70E20E7"
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "4A48DFBBFE8F0E83"
 				item: "kubejs:neutronium_sphere"
 				type: "item"
 			}]
-			x: -1.0d
-			y: -4.5d
+			x: 0.0d
+			y: -8.0d
 		}
 		{
 			dependencies: ["1433920A4DDCE2B5"]
@@ -253,8 +257,8 @@
 				title: "自由质子"
 				type: "checkmark"
 			}]
-			x: 0.5d
-			y: -3.0d
+			x: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["559836CC234447C0"]
@@ -264,8 +268,8 @@
 				item: "kubejs:space_probe_mk2"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -4.5d
+			x: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["41B4A5048EBCE287"]
@@ -276,8 +280,8 @@
 				title: "星能液"
 				type: "checkmark"
 			}]
-			x: 2.0d
-			y: -4.5d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["6FF53B92BA6D2370"]
@@ -288,13 +292,12 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -3.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
 				"108792B10FDEC848"
 				"1F1FCB0CA5696FF1"
-				"7B46E8DE77D0BE8F"
 			]
 			id: "74186877DB7DBE4D"
 			tasks: [{
@@ -302,8 +305,8 @@
 				item: "kubejs:quantum_chromodynamic_charge"
 				type: "item"
 			}]
-			x: -1.0d
-			y: -1.5d
+			x: 4.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -316,8 +319,8 @@
 				item: "kubejs:quantumchromodynamic_protective_plating"
 				type: "item"
 			}]
-			x: -2.5d
-			y: -1.5d
+			x: 4.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["64441B6414C20A57"]
@@ -327,18 +330,19 @@
 				item: "kubejs:relativistic_spinorial_memory_system"
 				type: "item"
 			}]
-			x: -4.0d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["559836CC234447C0"]
+			hide_dependency_lines: true
 			id: "1BA07BC3DBFFF3E6"
 			tasks: [{
 				id: "1359A5CB71BF3AC9"
 				item: "kubejs:manifold_oscillatory_power_cell"
 				type: "item"
 			}]
-			x: 0.5d
+			x: 10.0d
 			y: 0.0d
 		}
 		{
@@ -349,8 +353,8 @@
 				item: "kubejs:macrowormhole_generator"
 				type: "item"
 			}]
-			x: -5.5d
-			y: -1.5d
+			x: 12.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["15A1DA0756AD0044"]
@@ -360,8 +364,8 @@
 				item: "kubejs:recursively_folded_negative_space"
 				type: "item"
 			}]
-			x: -5.5d
-			y: 1.5d
+			x: 12.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["1433920A4DDCE2B5"]
@@ -371,8 +375,8 @@
 				item: "kubejs:contained_exotic_matter"
 				type: "item"
 			}]
-			x: 0.5d
-			y: 1.5d
+			x: 10.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -385,12 +389,13 @@
 				item: "kubejs:eigenfolded_kerr_manifold"
 				type: "item"
 			}]
-			x: -5.5d
-			y: 3.0d
+			x: 14.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["559836CC234447C0"]
 			description: ["需被动自动化"]
+			hide_dependency_lines: true
 			id: "4A1F4AAAABC1DE23"
 			shape: "gear"
 			tasks: [{
@@ -399,7 +404,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -6.0d
+			y: -6.5d
 		}
 		{
 			dependencies: ["2A29DA4239E6BA44"]
@@ -411,7 +416,7 @@
 				title: "拉多X"
 				type: "checkmark"
 			}]
-			x: -2.5d
+			x: 6.0d
 			y: 0.0d
 		}
 		{
@@ -419,14 +424,14 @@
 			description: ["很贵的机器"]
 			id: "2A29DA4239E6BA44"
 			shape: "gear"
-			size: 1.2d
+			size: 1.0d
 			tasks: [{
 				id: "08A25F44515BD5D7"
 				item: "gtceu:qft"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 1.5d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["15A1DA0756AD0044"]
@@ -436,8 +441,8 @@
 				item: "kubejs:stabilized_wormhole_generator"
 				type: "item"
 			}]
-			x: -5.5d
-			y: 0.0d
+			x: 14.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
@@ -450,8 +455,8 @@
 				item: "kubejs:charged_lepton_trap_crystal"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 1.5d
+			x: 8.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -465,8 +470,8 @@
 				item: "kubejs:supracausal_computer"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 3.0d
+			x: 14.0d
+			y: -1.9499999999999993d
 		}
 		{
 			dependencies: [
@@ -477,14 +482,14 @@
 			description: ["电路的顶点"]
 			id: "32186EFF7020D432"
 			shape: "diamond"
-			size: 1.5d
+			size: 2.0d
 			tasks: [{
 				id: "27BE9064DAF5CCF3"
 				item: "kubejs:supracausal_mainframe"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 4.5d
+			x: 16.0d
+			y: -1.9499999999999993d
 		}
 		{
 			dependencies: [
@@ -497,8 +502,8 @@
 				item: "kubejs:ctc_computational_unit"
 				type: "item"
 			}]
-			x: -4.0d
-			y: 4.5d
+			x: 16.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["2E46491F39351B94"]
@@ -508,8 +513,8 @@
 				item: "kubejs:ctc_computational_unit_container"
 				type: "item"
 			}]
-			x: -5.5d
-			y: 4.5d
+			x: 16.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
@@ -522,8 +527,8 @@
 				item: "kubejs:nuclear_clock"
 				type: "item"
 			}]
-			x: -4.0d
-			y: -6.0d
+			x: 6.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["00A227F06D7F109E"]
@@ -533,22 +538,25 @@
 				item: "kubejs:nuclear_star"
 				type: "item"
 			}]
-			x: 0.5d
-			y: 3.0d
+			x: 14.0d
+			y: 0.05000000000000071d
 		}
 		{
-			dependencies: ["5A61ABB6E4917C6C"]
+			dependencies: [
+				"5A61ABB6E4917C6C"
+				"0ED237B0CE3DDF59"
+			]
 			description: ["无尽之力"]
 			id: "00A227F06D7F109E"
 			shape: "rsquare"
-			size: 1.1d
+			size: 2.0d
 			tasks: [{
 				id: "4551291536D7C6FC"
 				item: "gtceu:infinity_ingot"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 3.0d
+			x: 14.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -561,8 +569,8 @@
 				item: "avaritia:infinity_catalyst"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 1.5d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["01EE0F4156F0578B"]
@@ -572,8 +580,8 @@
 				item: "gtceu:cosmicneutronium_ingot"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 3.0d
+			x: 16.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["29A581C935A339DD"]
@@ -583,8 +591,8 @@
 				item: "gtceu:periodicium_ingot"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 3.0d
+			x: 14.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["5A61ABB6E4917C6C"]
@@ -594,8 +602,8 @@
 				item: "kubejs:highly_dense_polymer_plate"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 4.5d
+			x: 16.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["233C152024BACC4E"]
@@ -605,8 +613,8 @@
 				item: "kubejs:cosmic_fabric"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 4.5d
+			x: 16.0d
+			y: 0.05000000000000071d
 		}
 		{
 			dependencies: ["375DD76CAEAD2CE1"]
@@ -616,19 +624,23 @@
 				item: "kubejs:awakened_core"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 1.5d
+			x: 12.0d
+			y: -0.5d
 		}
 		{
-			dependencies: ["108792B10FDEC848"]
+			dependencies: [
+				"108792B10FDEC848"
+				"0ED237B0CE3DDF59"
+			]
+			hide_dependency_lines: true
 			id: "375DD76CAEAD2CE1"
 			tasks: [{
 				id: "530622EE4C092735"
 				item: "gtceu:draconiumawakened_ingot"
 				type: "item"
 			}]
-			x: 3.5d
-			y: 0.0d
+			x: 12.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["108792B10FDEC848"]
@@ -638,8 +650,8 @@
 				item: "gtceu:nano_forge_3"
 				type: "item"
 			}]
-			x: 5.0d
-			y: -1.5d
+			x: 2.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["26607B94D873E07A"]
@@ -649,8 +661,8 @@
 				item: "gtceu:uxv_energy_input_hatch"
 				type: "item"
 			}]
-			x: 5.0d
-			y: -4.5d
+			x: 0.0d
+			y: -4.0d
 		}
 	]
 	subtitle: ["Tier12-UXV"]

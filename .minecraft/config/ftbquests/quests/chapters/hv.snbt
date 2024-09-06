@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "hv"
 	group: "68CBF1606D696C68"
-	icon: "gtceu:hv_machine_hull"
+	icon: "gtceu:hv_electric_motor"
 	id: "3FFA6F604319D492"
 	order_index: 3
 	quest_links: [ ]
@@ -840,5 +840,6 @@
 			y: 8.0d
 		}
 	]
-	title: "高压HV"
+	subtitle: ["Tier3-HV"]
+	title: "高压"
 }

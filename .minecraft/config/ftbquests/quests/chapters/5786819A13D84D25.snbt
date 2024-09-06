@@ -12,21 +12,21 @@
 			linked_quest: "776563C5BA327495"
 			shape: "rsquare"
 			size: 2.0d
-			x: 0.0d
-			y: 0.0d
+			x: 4.0d
+			y: 2.0d
 		}
 		{
 			id: "70FB0919B2F4EE20"
 			linked_quest: "01433D78C43AD215"
-			x: 4.0d
-			y: -2.0d
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			id: "7F9C7923EEED3AD7"
 			linked_quest: "035C470213E8B4DB"
 			shape: "rsquare"
 			size: 2.0d
-			x: 2.0d
+			x: 0.0d
 			y: 0.0d
 		}
 	]
@@ -50,7 +50,7 @@
 				item: "gtceu:stellar_forge"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 2.0d
 		}
 		{
@@ -73,14 +73,19 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 4.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["702EFE9BA62A8CDA"]
+			dependencies: [
+				"702EFE9BA62A8CDA"
+				"776563C5BA327495"
+			]
 			id: "3063F232F801D089"
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "6A331B95C454D30D"
-				item: "kubejs:antimatter_charge"
+				item: "gtceu:uhv_fusion_reactor"
 				type: "item"
 			}]
 			x: 6.0d
@@ -94,7 +99,7 @@
 				item: "gtceu:carbon_nanotubes_ingot"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 0.0d
 		}
 		{
@@ -262,7 +267,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -279,7 +284,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 2.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
@@ -293,8 +298,8 @@
 				item: "kubejs:titansteel_coil_block"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.0d
+			x: 2.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["7370721CB75472C1"]
@@ -305,8 +310,8 @@
 				item: "gtceu:jasper_ore"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 6.0d
+			x: 4.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["384CC871242ECF6E"]
@@ -341,8 +346,8 @@
 				item: "kubejs:space_drone_mk2"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 8.0d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["32A49A2CBFC934C8"]
@@ -412,7 +417,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["42081F59690E6469"]
@@ -436,8 +441,8 @@
 				item: "kubejs:nm_chip"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 0.0d
+			x: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["7C23CC6ADDC33EA0"]
@@ -460,7 +465,7 @@
 				title: "环对苯撑"
 				type: "checkmark"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
@@ -626,7 +631,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: -2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["776563C5BA327495"]
@@ -640,7 +645,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 8.0d
+			y: 4.0d
 		}
 	]
 	subtitle: ["Tier9-UHV"]

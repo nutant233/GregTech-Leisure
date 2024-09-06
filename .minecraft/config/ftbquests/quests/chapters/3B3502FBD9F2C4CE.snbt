@@ -142,6 +142,7 @@
 			y: 6.0d
 		}
 		{
+			dependencies: ["38480A52A13DA157"]
 			description: ["高速钢(HSS)是更耐磨的钢合金"]
 			id: "62B67704211A105D"
 			tasks: [{
@@ -223,6 +224,7 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["38480A52A13DA157"]
 			hide_dependent_lines: true
 			id: "079CD9FD65CB2ED2"
 			tasks: [{
@@ -300,6 +302,7 @@
 			y: 8.0d
 		}
 		{
+			dependencies: ["631707E722744406"]
 			id: "0FCA3B71669C8122"
 			tasks: [{
 				id: "431CBC4C1A32BCEC"
@@ -516,6 +519,7 @@
 			y: 2.0d
 		}
 		{
+			dependencies: ["38480A52A13DA157"]
 			description: ["更高级的玻璃"]
 			hide_dependent_lines: true
 			id: "148A5C927A0DCED1"
@@ -552,6 +556,7 @@
 			y: 8.0d
 		}
 		{
+			dependencies: ["38480A52A13DA157"]
 			description: ["用不完的蒸汽"]
 			id: "5744F6172D4E112B"
 			optional: true
@@ -686,23 +691,11 @@
 			description: ["高温用于发电，低温用于生产资源"]
 			id: "365298DB6520227A"
 			shape: "rsquare"
-			tasks: [
-				{
-					id: "2599970FD2D9C38B"
-					item: "gtceu:fission_reactor"
-					type: "item"
-				}
-				{
-					id: "5AB7E0809991C089"
-					item: "gtceu:fission_fuel_assembly"
-					type: "item"
-				}
-				{
-					id: "3BD80B994699252C"
-					item: "gtceu:cooler"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "2599970FD2D9C38B"
+				item: "gtceu:fission_reactor"
+				type: "item"
+			}]
 			x: 0.0d
 			y: 6.0d
 		}
@@ -737,6 +730,10 @@
 			y: 6.0d
 		}
 		{
+			dependencies: [
+				"20D5748D17E2C06D"
+				"17365ABC639496E6"
+			]
 			id: "7D8241E627194099"
 			tasks: [{
 				id: "21095623F1E9DBD4"
@@ -762,6 +759,7 @@
 			y: 8.0d
 		}
 		{
+			dependencies: ["17365ABC639496E6"]
 			id: "66DD7C8B90B058EA"
 			tasks: [{
 				id: "3E9B5EE61E385F61"
@@ -784,6 +782,7 @@
 			y: 8.0d
 		}
 		{
+			dependencies: ["38480A52A13DA157"]
 			description: ["你的线缆得开始用更高级的橡胶了"]
 			id: "7794BE986C48C92D"
 			tasks: [
@@ -801,6 +800,23 @@
 			title: "新的橡胶"
 			x: 4.0d
 			y: 2.0d
+		}
+		{
+			dependencies: [
+				"42129A63D97DDF28"
+				"4C43D30FD9B89965"
+			]
+			hide_dependent_lines: true
+			id: "38480A52A13DA157"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "01068F963A96E633"
+				title: "强导压IV"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Tier5-IV"]

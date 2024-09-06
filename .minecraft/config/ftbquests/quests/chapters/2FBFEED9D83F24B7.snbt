@@ -236,10 +236,8 @@
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"1F1FCB0CA5696FF1"
-				"72E0B47367FD35CC"
-			]
+			can_repeat: false
+			dependencies: ["72E0B47367FD35CC"]
 			hide_dependent_lines: true
 			id: "5FFDF6751BFBD4BF"
 			tasks: [{
