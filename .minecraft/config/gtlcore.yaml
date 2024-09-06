@@ -1,6 +1,8 @@
-disableDrift: true
+disableDrift: false
 
 enablePrimitiveVoidOre: false
+
+oreMultiplier: 4
 
 durationMultiplier: 1.0
 

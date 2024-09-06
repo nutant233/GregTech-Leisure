@@ -2,10 +2,10 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "lv"
-	group: "53FD41080ED1E796"
+	group: "68CBF1606D696C68"
 	icon: "gtceu:lv_machine_hull"
 	id: "393DD40CAFBB69A5"
-	order_index: 1
+	order_index: 3
 	quest_links: [{
 		id: "0B8B2F7F6C5F0B43"
 		linked_quest: "4C591AA4F1D907C1"
@@ -793,7 +793,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["35F31D71CC8B67CF"]
@@ -808,7 +808,7 @@
 				item: "gtceu:copper_single_cable"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: 4.0d
 		}
 		{
@@ -844,7 +844,7 @@
 				item: "gtceu:rubber_bucket"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: 6.0d
 		}
 		{
@@ -861,8 +861,8 @@
 				item: "gtceu:lv_chemical_reactor"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 6.0d
+			x: 10.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["335ED39019FC62E7"]
@@ -961,34 +961,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"54034055F57DDAA5"
-				"5C0E8D6806F1967A"
-			]
-			description: ["你可以开始用无线电了，这样就不用为怎么连电线而烦恼了"]
-			id: "3878E679F318BEAA"
-			rewards: [{
-				id: "61C1A547EC3F9E21"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
-			tasks: [
-				{
-					id: "35554AFF6D90220D"
-					item: "gtmthings:wireless_energy_monitor"
-					type: "item"
-				}
-				{
-					id: "7A881B47BFA51C9A"
-					item: "gtmthings:wireless_energy_interface"
-					type: "item"
-				}
-			]
-			title: "无线传电"
-			x: 12.0d
-			y: 2.0d
-		}
-		{
 			dependencies: ["07D0D7005DA4F446"]
 			id: "4EBCDD1E943F7350"
 			tasks: [{
@@ -1007,8 +979,8 @@
 				item: "gtceu:lv_field_generator"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 7.5d
+			x: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["0BBC0C3FB2E8C800"]
@@ -1018,42 +990,8 @@
 				item: "gtceu:slaughterhouse"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 7.5d
-		}
-		{
-			dependencies: ["62B5D5669A535245"]
-			id: "68AA964974DA306A"
-			tasks: [{
-				id: "1793B3DF6033D864"
-				item: "minecraft:ender_pearl"
-				type: "item"
-			}]
 			x: 10.0d
-			y: 7.5d
-		}
-		{
-			dependencies: ["68AA964974DA306A"]
-			id: "0A6D7D5727324130"
-			tasks: [{
-				id: "06651082910B6E84"
-				item: "gtceu:ender_pearl_plate"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 7.5d
-		}
-		{
-			dependencies: ["0A6D7D5727324130"]
-			hide_dependent_lines: true
-			id: "5C0E8D6806F1967A"
-			tasks: [{
-				id: "1794707BB11A1126"
-				item: "gtmthings:lv_wireless_energy_receive_cover"
-				type: "item"
-			}]
-			x: 14.0d
-			y: 7.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["0D3122E318CB119D"]

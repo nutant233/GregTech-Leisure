@@ -2015,7 +2015,7 @@
 				item: "gtceu:pcb_factory"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 8.0d
 			y: 18.0d
 		}
 		{
@@ -2115,7 +2115,7 @@
 				item: "gtceu:bedrock_drilling_rig"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 10.0d
 			y: 18.0d
 		}
 		{
@@ -2126,7 +2126,7 @@
 				item: "gtceu:aggregation_device"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 12.0d
 			y: 18.0d
 		}
 		{
@@ -2165,8 +2165,8 @@
 				item: "gtceu:qft"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 18.0d
+			x: 14.0d
+			y: 16.0d
 		}
 		{
 			dependencies: ["5019F5F1A660DB40"]
@@ -2187,7 +2187,7 @@
 				item: "gtceu:sphere_of_harmony"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 14.0d
 			y: 18.0d
 		}
 		{
@@ -2231,7 +2231,7 @@
 				item: "gtceu:create_computation"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 16.0d
 			y: 18.0d
 		}
 		{
@@ -2745,26 +2745,81 @@
 			y: 14.0d
 		}
 		{
-			dependencies: ["6D3BE9E3D76C71F9"]
-			id: "6B124B57A0E7B565"
-			tasks: [{
-				id: "4DAE2FA0BA88AB69"
-				item: "gtceu:neutron_activator"
-				type: "item"
-			}]
-			x: 14.0d
-			y: 16.0d
-		}
-		{
 			id: "376F6857ABEF60BF"
 			tasks: [{
 				icon: "gtceu:portable_debug_scanner"
 				id: "654C1D74F045820D"
 				type: "custom"
 			}]
-			title: "这里有182个多方块"
+			title: "这里有188个多方块"
 			x: -12.0d
 			y: -2.0d
+		}
+		{
+			dependencies: ["5672B9E868EDBE4D"]
+			id: "4868C061C42E207D"
+			tasks: [{
+				id: "6F827B491BBEFAE6"
+				item: "gtceu:isa_mill"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["5672B9E868EDBE4D"]
+			id: "768F3D85ABCE3640"
+			tasks: [{
+				id: "68885EBD34D3D834"
+				item: "gtceu:flotation_cell_regulator"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["5672B9E868EDBE4D"]
+			id: "4FB562E42CFEE64D"
+			tasks: [{
+				id: "1F1A06BFFE71A63F"
+				item: "gtceu:vacuum_drying_furnace"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 18.0d
+		}
+		{
+			dependencies: ["65C4F7EDC0E9D99D"]
+			id: "4AC5C7225A44A5A1"
+			tasks: [{
+				id: "378D287C4DA4BC84"
+				item: "gtceu:atomic_energy_excitation_plant"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["23DC6EEC1BCEF845"]
+			id: "2E4A5A581F9FCAF9"
+			tasks: [{
+				id: "6CD146597B0E0067"
+				item: "gtceu:advanced_integrated_ore_processor"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 20.0d
+		}
+		{
+			dependencies: ["253337A8CECFB499"]
+			id: "3932407899FC965D"
+			tasks: [{
+				id: "031B00FA92EC18BD"
+				item: "gtceu:component_assembly_line"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 20.0d
 		}
 	]
 	title: "多方块结构"

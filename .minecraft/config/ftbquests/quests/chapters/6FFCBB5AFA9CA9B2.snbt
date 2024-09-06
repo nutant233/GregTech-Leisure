@@ -5,7 +5,7 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:mv_electric_motor"
 	id: "6FFCBB5AFA9CA9B2"
-	order_index: 2
+	order_index: 4
 	quest_links: [{
 		id: "45FD3BFBF8133D17"
 		linked_quest: "150F409313B13620"

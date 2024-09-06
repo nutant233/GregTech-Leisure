@@ -424,13 +424,6 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.MACERATOR)
 
-    event.create("slaughterhouse")
-        .setEUIO("in")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(1, 0, 0, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.MACERATOR)
-
     event.create("dyson_sphere")
         .setEUIO("both")
         .setMaxTooltips(4)

@@ -5,13 +5,25 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:uxv_electric_motor"
 	id: "23041C2CD2A7311B"
-	order_index: 12
-	quest_links: [{
-		id: "266F13D1E89B47C1"
-		linked_quest: "559836CC234447C0"
-		x: 0.5d
-		y: -6.0d
-	}]
+	order_index: 17
+	quest_links: [
+		{
+			id: "266F13D1E89B47C1"
+			linked_quest: "559836CC234447C0"
+			shape: "rsquare"
+			size: 1.5d
+			x: 0.5d
+			y: -6.0d
+		}
+		{
+			id: "7ED0015FCA833C34"
+			linked_quest: "26607B94D873E07A"
+			shape: "rsquare"
+			size: 2.0d
+			x: 5.0d
+			y: -6.0d
+		}
+	]
 	quests: [
 		{
 			dependencies: [
@@ -628,6 +640,17 @@
 			}]
 			x: 5.0d
 			y: -1.5d
+		}
+		{
+			dependencies: ["26607B94D873E07A"]
+			id: "17F6AFC430A15CDA"
+			tasks: [{
+				id: "4100140D3535F108"
+				item: "gtceu:uxv_energy_input_hatch"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -4.5d
 		}
 	]
 	subtitle: ["Tier12-UXV"]
