@@ -8,54 +8,6 @@
 	order_index: 0
 	quest_links: [
 		{
-			id: "16750357F7EF12DB"
-			linked_quest: "412C1155C8BDB16A"
-			x: -3.0d
-			y: 0.5d
-		}
-		{
-			id: "7C723C08B49D3FBB"
-			linked_quest: "1E4739ED868346E7"
-			x: -3.0d
-			y: 2.0d
-		}
-		{
-			id: "16BED7869A69733C"
-			linked_quest: "60186540A44DB994"
-			x: -3.0d
-			y: 3.5d
-		}
-		{
-			id: "0AF02E0F71132439"
-			linked_quest: "2950FE6E6A7D7D98"
-			x: -3.0d
-			y: 5.0d
-		}
-		{
-			id: "1969B35AFAC7315E"
-			linked_quest: "028C3022C755630E"
-			x: -1.5d
-			y: 2.0d
-		}
-		{
-			id: "0C8AB3A28086F0E9"
-			linked_quest: "37C6B340B1A2A9C1"
-			x: -1.5d
-			y: 3.5d
-		}
-		{
-			id: "13B2F4B8CBF58D4E"
-			linked_quest: "4B6EBD1BA486C6EA"
-			x: -1.5d
-			y: 5.0d
-		}
-		{
-			id: "05DA71827F7BC66F"
-			linked_quest: "1781763C8F415030"
-			x: -1.5d
-			y: 6.5d
-		}
-		{
 			id: "5C15BF156B1CB4CA"
 			linked_quest: "31AC84CBD7C26566"
 			x: 0.0d
@@ -266,24 +218,6 @@
 			y: 5.0d
 		}
 		{
-			id: "60903B6B79D5AD2B"
-			linked_quest: "768D0EE2B7B540CD"
-			x: -7.5d
-			y: 0.5d
-		}
-		{
-			id: "3B153AE3B0836471"
-			linked_quest: "2D1FCB687CF422C4"
-			x: -7.5d
-			y: -1.0d
-		}
-		{
-			id: "2DFCAE6BA6AC2BBF"
-			linked_quest: "14AF37055E614519"
-			x: -7.5d
-			y: 2.0d
-		}
-		{
 			id: "2ECC534CAE891724"
 			linked_quest: "23B23867F311BF51"
 			x: -7.5d
@@ -312,24 +246,6 @@
 			linked_quest: "622395061792FB5E"
 			x: -7.5d
 			y: 18.5d
-		}
-		{
-			id: "7BBBE6D727523E17"
-			linked_quest: "5318093DC9D0A3AA"
-			x: -7.5d
-			y: 3.5d
-		}
-		{
-			id: "41BDF8F40D187A19"
-			linked_quest: "5DD304B2E21AA76D"
-			x: -4.5d
-			y: 3.5d
-		}
-		{
-			id: "56B393313519FF63"
-			linked_quest: "108B850B258E493B"
-			x: -1.5d
-			y: 0.5d
 		}
 		{
 			id: "3665E019AA6AB846"
@@ -390,18 +306,6 @@
 			linked_quest: "32186EFF7020D432"
 			x: 10.5d
 			y: 18.5d
-		}
-		{
-			id: "2C964CDA04287711"
-			linked_quest: "06CC5EDA9F5B9726"
-			x: -4.5d
-			y: -2.5d
-		}
-		{
-			id: "67B60692A8079905"
-			linked_quest: "5749CAD673EE6816"
-			x: -4.5d
-			y: -1.0d
 		}
 	]
 	quests: [
@@ -571,10 +475,6 @@
 			y: -2.5d
 		}
 		{
-			dependencies: [
-				"5749CAD673EE6816"
-				"783BF9B9CCDA5182"
-			]
 			id: "24B09672D3E0273D"
 			tasks: [{
 				id: "3E7920BFFDA9D8D0"
@@ -585,10 +485,7 @@
 			y: 0.5d
 		}
 		{
-			dependencies: [
-				"24B09672D3E0273D"
-				"3F3FBA77395EF2E1"
-			]
+			dependencies: ["24B09672D3E0273D"]
 			id: "2D7A89B294125993"
 			tasks: [{
 				id: "0982053D6DB23B03"

@@ -5,6 +5,7 @@ const $CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.g
 const $ComputationProviderMachine = Java.loadClass("org.gtlcore.gtlcore.common.machine.multiblock.electric.ComputationProviderMachine")
 const $DysonSphere = Java.loadClass("org.gtlcore.gtlcore.common.machine.multiblock.generator.DysonSphere")
 const $StorageMachine = Java.loadClass("org.gtlcore.gtlcore.common.machine.multiblock.electric.StorageMachine")
+const $MultipleRecipesMachine = Java.loadClass("org.gtlcore.gtlcore.common.machine.multiblock.electric.MultipleRecipesMachine")
 const $ItemRecipeCapability = Java.loadClass("com.gregtechceu.gtceu.api.capability.recipe.ItemRecipeCapability")
 const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
 const $TeamUtil = Java.loadClass("com.hepdd.gtmthings.utils.TeamUtil")
@@ -2490,7 +2491,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             .where("~", Predicates.controller(Predicates.blocks(definition.get())))
             .where("A", Predicates.blocks("kubejs:lafium_mechanical_casing"))
             .where("B", Predicates.blocks("gtceu:tempered_glass"))
-            .where("C", Predicates.blocks("gtceu:superconducting_coil"))
+            .where("C", Predicates.blocks("gtlcore:improved_superconductor_coil"))
             .where("D", Predicates.blocks("gtceu:molybdenum_disilicide_coil_block"))
             .where("E", Predicates.blocks("gtceu:electrolytic_cell"))
             .where("F", Predicates.blocks("kubejs:lafium_mechanical_casing")
@@ -4416,7 +4417,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .where("C", Predicates.blocks("kubejs:dimension_injection_casing"))
                 .where("D", Predicates.blocks("kubejs:molecular_coil"))
                 .where("E", Predicates.blocks("kubejs:containment_field_generator"))
-                .where("F", Predicates.blocks("gtceu:superconducting_coil"))
+                .where("F", Predicates.blocks("gtlcore:improved_superconductor_coil"))
                 .where("G", Predicates.blocks("gtceu:laser_safe_engraving_casing")
                     .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setMaxGlobalLimited(24))
                     .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setMaxGlobalLimited(2))
@@ -4767,17 +4768,13 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         })
         .workableCasingRenderer("kubejs:block/dimensionally_transcendent_casing", "gtceu:block/multiblock/fusion_reactor")
 
-    event.create("advanced_integrated_ore_processor", "multiblock")
+    event.create("advanced_integrated_ore_processor", "multiblock", (holder) => new $MultipleRecipesMachine(holder))
         .rotationState(RotationState.ALL)
         .recipeType("integrated_ore_processor")
         .tooltips(Component.translatable("gtceu.machine.integrated_ore_processor.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.advanced_integrated_ore_processor.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.integrated_ore_processor")))
-        .recipeModifier((machine, recipe, params, result) => {
-            recipe.duration = 0
-            return GTRecipeModifiers.accurateParallel(machine, recipe, 2147483647, false).getFirst()
-        })
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern((definition) =>
             FactoryBlockPattern.start()

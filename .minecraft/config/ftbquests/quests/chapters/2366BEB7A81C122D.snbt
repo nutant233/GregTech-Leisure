@@ -5,7 +5,7 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:uv_electric_motor"
 	id: "2366BEB7A81C122D"
-	order_index: 13
+	order_index: 8
 	quest_links: [
 		{
 			id: "23C44004B0D7572C"
@@ -187,7 +187,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["66C0D17BAE340EB4"]
 			description: ["聚酰亚胺是一种特种工程材料，广泛应用在航空、航天、微电子、纳米、液晶、分离膜、激光等领域"]
 			icon: "gtceu:polyimide_bucket"
 			id: "24B011E770B7DF3F"

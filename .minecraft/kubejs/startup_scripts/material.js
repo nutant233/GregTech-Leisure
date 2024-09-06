@@ -94,6 +94,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .generationCondition(mat => mat.hasFlag(GENERATE_MILLED))
 
     //element
+    GTMaterials.Aluminium.addFlags(GTMaterialFlags.GENERATE_ROTOR)
     GTMaterials.Neutronium.addFlags(GENERATE_NANOSWARM)
     GTMaterials.Carbon.setProperty(PropertyKey.INGOT, new $IngotProperty())
     GTMaterials.RadAway.addFlags(GTMaterialFlags.DISABLE_DECOMPOSITION)
@@ -103,7 +104,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.NaquadahAlloy.addFlags(GTMaterialFlags.GENERATE_FINE_WIRE)
     GTMaterials.RutheniumTriniumAmericiumNeutronate.addFlags(GTMaterialFlags.GENERATE_FINE_WIRE)
     GTMaterials.TitaniumTungstenCarbide.addFlags(GTMaterialFlags.GENERATE_GEAR)
-    GTMaterials.Trinium.addFlags(GTMaterialFlags.GENERATE_FRAME)
     GTMaterials.Europium.addFlags(GTMaterialFlags.GENERATE_SPRING_SMALL)
     GTMaterials.Germanium.setProperty(PropertyKey.INGOT, new $IngotProperty())
     GTMaterials.Germanium.addFlags(GTMaterialFlags.GENERATE_PLATE)
@@ -132,7 +132,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.Ytterbium.setProperty(PropertyKey.DUST, new $DustProperty())
     GTMaterials.Scandium.setProperty(PropertyKey.DUST, new $DustProperty())
     GTMaterials.Scandium.setProperty(PropertyKey.FLUID, new $FluidProperty(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()))
-    GTMaterials.Naquadria.addFlags(GTMaterialFlags.GENERATE_FRAME)
     GTMaterials.NaquadahEnriched.addFlags(GTMaterialFlags.GENERATE_FRAME)
     GTMaterials.NickelZincFerrite.addFlags(GTMaterialFlags.GENERATE_FOIL)
     GTMaterials.Promethium.setProperty(PropertyKey.DUST, new $DustProperty())
@@ -3812,6 +3811,11 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .color(0x104e8b)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
         .iconSet(GTMaterialIconSet.FLUID)
+
+    event.create("special_ceramics")
+        .dust()
+        .color(0x5c5909)
+        .iconSet(GTMaterialIconSet.DULL)
 })
 GTCEuStartupEvents.materialModification(() => {
     GTMaterials.get("zirconium_hafnium_chloride").setFormula("ZrHfCl₄")

@@ -370,6 +370,17 @@ StartupEvents.registry("item", event => {
     event.create("grindball_aluminium")
         .unstackable()
         .maxDamage(100)
+    event.create("hui_circuit_1")
+        .tooltip(Component.literal("§793015-T浮点运算/秒"))
+    event.create("hui_circuit_2")
+        .tooltip(Component.literal("§776M处理单元"))
+    event.create("hui_circuit_3")
+        .tooltip(Component.literal("§7无效RSA算法"))
+    event.create("hui_circuit_4")
+        .tooltip(Component.literal("§7第56梅森素数"))
+    event.create("hui_circuit_5")
+        .tooltip(Component.literal("§7佯谬"))
+    event.create("special_ceramics")
 })
 ItemEvents.modification(event => {
     event.modify("gtceu:raw_coal", modification => {

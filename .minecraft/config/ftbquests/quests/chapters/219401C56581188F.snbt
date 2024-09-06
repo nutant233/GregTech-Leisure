@@ -5,7 +5,7 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:uev_electric_motor"
 	id: "219401C56581188F"
-	order_index: 15
+	order_index: 10
 	quest_links: [
 		{
 			id: "10C4932409BC9EF8"
@@ -555,7 +555,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["66C0D17BAE340EB4"]
 			id: "68FBE0346D15916B"
 			tasks: [{
 				id: "296E4F77EC25E3C2"

@@ -141,15 +141,6 @@ const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHel
 const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUtil")
 const $ClipContext = Java.loadClass("net.minecraft.world.level.ClipContext")
 
-BlockEvents.rightClicked("kubejs:antimatter_charge", event => {
-    if (event.player.getHeldItem("main_hand") == null && event.player.getHeldItem("off_hand") == null) {
-        event.block.set("minecraft:air")
-        event.getLevel().createExplosion(event.block.x, event.block.y, event.block.z).strength(100).explosionMode("tnt").explode()
-        let entities = event.getLevel().getEntitiesWithin(AABB.of(event.block.x - 100, event.block.y - 50, event.block.z - 100, event.block.x + 100, event.block.y + 50, event.block.z + 100))
-        for (let entity of entities) { if (entity.isLiving()) { entity.attack(1000000) } }
-    }
-})
-
 BlockEvents.rightClicked("gtceu:sphere_of_harmony", event => {
     var machine = $GTCapabilityHelper.getRecipeLogic(event.level, event.block.pos, null).getMachine()
     if (machine.self().isFormed()) {
@@ -546,18 +537,6 @@ BlockEvents.leftClicked("minecraft:bedrock", (event) => {
 PlayerEvents.loggedIn(event => {
     if (event.player.persistentData.getInt("pearl") == null) {
         event.player.persistentData.putInt("pearl", 0)
-    }
-})
-
-BlockEvents.broken("gtceu:active_transformer", event => {
-    if ($GTCapabilityHelper.getRecipeLogic(event.level, event.block.pos, null).getMachine().self().isFormed()) {
-        let pos = event.block.pos
-        let coordinates = [pos.offset(1, 0, 0), pos.offset(-1, 0, 0), pos.offset(0, 0, -1), pos.offset(0, 0, 1), pos.offset(0, 1, 0), pos.offset(0, -1, 0)]
-        for (let i in coordinates) {
-            if (event.level.getBlock(coordinates[i]) == "gtceu:superconducting_coil") {
-                event.getLevel().createExplosion(coordinates[i].x, coordinates[i].y, coordinates[i].z).strength(20).explosionMode("tnt").explode()
-            }
-        }
     }
 })
 

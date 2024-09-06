@@ -5,7 +5,7 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:uxv_electric_motor"
 	id: "23041C2CD2A7311B"
-	order_index: 17
+	order_index: 12
 	quest_links: [
 		{
 			id: "266F13D1E89B47C1"

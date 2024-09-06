@@ -77,7 +77,7 @@ ServerEvents.tags("item", event => {
 })
 
 const blocks = ["gtlcore:fission_fuel_assembly",
-    "gtceu:supercritical_turbine_casing",
+    "gtlcore:supercritical_turbine_casing",
     "gtlcore:cooler",
     "gtceu:power_core",
     "gtlcore:1m_storage",

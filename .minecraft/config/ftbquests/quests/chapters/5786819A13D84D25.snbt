@@ -5,7 +5,7 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:uhv_electric_motor"
 	id: "5786819A13D84D25"
-	order_index: 14
+	order_index: 9
 	quest_links: [
 		{
 			id: "22199DF737024CBD"

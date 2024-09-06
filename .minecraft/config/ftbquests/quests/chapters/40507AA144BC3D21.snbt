@@ -5,7 +5,7 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:opv_electric_motor"
 	id: "40507AA144BC3D21"
-	order_index: 18
+	order_index: 13
 	quest_links: [{
 		id: "14F40CE0FBA07270"
 		linked_quest: "00A227F06D7F109E"

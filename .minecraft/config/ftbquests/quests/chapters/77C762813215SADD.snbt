@@ -1167,7 +1167,6 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["4141E85C2E200407"]
 			description: ["T1星球"]
 			id: "05DE58ADDB4B4E28"
 			rewards: [{
@@ -1213,7 +1212,6 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["446647433D821AF8"]
 			description: ["T2星球"]
 			id: "4C62EA42F0B042B2"
 			tasks: [{
@@ -1248,7 +1246,6 @@
 			y: 7.5d
 		}
 		{
-			dependencies: ["68FD7CC397CE75E4"]
 			description: ["T3星球"]
 			id: "131A1FB74BB801E0"
 			tasks: [{
@@ -1261,7 +1258,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["68FD7CC397CE75E4"]
 			description: ["T3星球"]
 			id: "14087C4B9AA96921"
 			tasks: [{
@@ -1274,7 +1270,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["48C89326DFB4BAA4"]
 			description: ["T4星球"]
 			id: "4DE912833E078CD0"
 			tasks: [{

@@ -5,7 +5,7 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:uiv_electric_motor"
 	id: "2FBFEED9D83F24B7"
-	order_index: 16
+	order_index: 11
 	quest_links: [
 		{
 			id: "57F5245E6B9E7B6C"
@@ -383,7 +383,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["2ECB47CBE5DC6E49"]
 			id: "72E0B47367FD35CC"
 			tasks: [{
 				id: "1D9470C90A72EC38"
@@ -431,7 +430,6 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["66C0D17BAE340EB4"]
 			description: ["看起来很复杂"]
 			icon: "gtceu:photopolymer_bucket"
 			id: "208FB88A70036325"
@@ -444,7 +442,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["66C0D17BAE340EB4"]
 			id: "5450D08C31AB23EF"
 			tasks: [{
 				id: "6282ECFD03A81811"

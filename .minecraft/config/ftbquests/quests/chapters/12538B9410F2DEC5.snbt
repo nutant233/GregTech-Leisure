@@ -5,7 +5,7 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:zpm_electric_motor"
 	id: "12538B9410F2DEC5"
-	order_index: 12
+	order_index: 7
 	quest_links: [
 		{
 			id: "5EEBF7A4BECF0BAA"

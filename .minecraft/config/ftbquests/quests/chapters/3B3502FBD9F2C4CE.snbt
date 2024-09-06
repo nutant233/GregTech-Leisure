@@ -5,21 +5,11 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:iv_electric_motor"
 	id: "3B3502FBD9F2C4CE"
-	order_index: 10
-	quest_links: [{
-		id: "2B4E585C4127E93D"
-		linked_quest: "169F331B1D2B9DFE"
-		shape: "rsquare"
-		size: 2.0d
-		x: 0.0d
-		y: 0.0d
-	}]
+	order_index: 5
+	quest_links: [ ]
 	quests: [
 		{
-			dependencies: [
-				"169F331B1D2B9DFE"
-				"148A5C927A0DCED1"
-			]
+			dependencies: ["148A5C927A0DCED1"]
 			description: ["可以是最后一种搅拌机"]
 			id: "0526B4AC0CAF99A5"
 			tasks: [{
@@ -31,10 +21,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"0526B4AC0CAF99A5"
-				"5318093DC9D0A3AA"
-			]
+			dependencies: ["0526B4AC0CAF99A5"]
 			description: ["来了一堆锭"]
 			id: "4058D1416D94BABB"
 			tasks: [
@@ -113,7 +100,6 @@
 		{
 			dependencies: [
 				"0526B4AC0CAF99A5"
-				"423A9192EABB347B"
 				"15580C25FF239402"
 			]
 			description: ["LuV阶段主要材料"]
@@ -156,7 +142,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["5318093DC9D0A3AA"]
 			description: ["高速钢(HSS)是更耐磨的钢合金"]
 			id: "62B67704211A105D"
 			tasks: [{
@@ -238,7 +223,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["169F331B1D2B9DFE"]
 			hide_dependent_lines: true
 			id: "079CD9FD65CB2ED2"
 			tasks: [{
@@ -250,7 +234,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["66C0D17BAE340EB4"]
 			description: [
 				"PBI新的塑料"
 				"比较麻烦,且后期需求量很大"
@@ -317,10 +300,6 @@
 			y: 8.0d
 		}
 		{
-			dependencies: [
-				"2E368B29B19E24FB"
-				"015FC8C9B776ECB7"
-			]
 			id: "0FCA3B71669C8122"
 			tasks: [{
 				id: "431CBC4C1A32BCEC"
@@ -400,7 +379,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["66C0D17BAE340EB4"]
 			icon: "gtceu:indium_concentrate_bucket"
 			id: "150F3113E9012C2F"
 			tasks: [{
@@ -414,7 +392,6 @@
 		{
 			dependencies: [
 				"3EAC914AA2073B05"
-				"434FF5775996562E"
 				"3B79A329196883EF"
 			]
 			id: "15F08D296DE33A44"
@@ -430,7 +407,6 @@
 			dependencies: [
 				"15F08D296DE33A44"
 				"079CD9FD65CB2ED2"
-				"169F331B1D2B9DFE"
 			]
 			description: ["升级"]
 			hide_dependent_lines: true
@@ -471,7 +447,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["78F4CDE52001D410"]
 			description: [
 				"扫描是研究的第一步，将JEI中显示的物品与一个闪存一起放置以进行扫描，这将消耗该物品并将数据放入闪存中。"
 				"稍后，配方将需要不同的数据存储物品进行研究，例如数据球，这个过程将保持不变，但将使用不同的数据存储物品。"
@@ -529,10 +504,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"169F331B1D2B9DFE"
-				"148A5C927A0DCED1"
-			]
+			dependencies: ["148A5C927A0DCED1"]
 			description: ["可以是最后一种切割机"]
 			id: "3B79A329196883EF"
 			tasks: [{
@@ -544,7 +516,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["6E3CDFF8C93D440B"]
 			description: ["更高级的玻璃"]
 			hide_dependent_lines: true
 			id: "148A5C927A0DCED1"
@@ -558,7 +529,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["5E077F4541D0F4B1"]
 			id: "22795A09A3BD7344"
 			tasks: [{
 				id: "7117E2CF984E0BF0"
@@ -582,7 +552,6 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["169F331B1D2B9DFE"]
 			description: ["用不完的蒸汽"]
 			id: "5744F6172D4E112B"
 			optional: true

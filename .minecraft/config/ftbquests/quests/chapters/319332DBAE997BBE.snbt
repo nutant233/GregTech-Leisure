@@ -5,7 +5,7 @@
 	group: "68CBF1606D696C68"
 	icon: "gtceu:luv_electric_motor"
 	id: "319332DBAE997BBE"
-	order_index: 11
+	order_index: 6
 	quest_links: [{
 		id: "2D863FE0CCAA0BFC"
 		linked_quest: "4BFA114E12BCB163"
@@ -452,7 +452,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["66C0D17BAE340EB4"]
 			description: ["新的材料"]
 			id: "076BD82842C349A3"
 			tasks: [{
@@ -483,7 +482,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["5E077F4541D0F4B1"]
 			id: "1F0C8D37619111BE"
 			tasks: [{
 				id: "733C183D65E9CA06"

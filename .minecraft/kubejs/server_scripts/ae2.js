@@ -302,7 +302,7 @@ ServerEvents.recipes((event) => {
     }
 
     gtr.assembly_line("gtlcore:max_storage")
-        .itemInputs("ae2:crafting_unit", "16x gtceu:cell_component_256m", "gtceu:data_bank", "16x gtceu:data_orb", "4x #gtceu:circuits/uhv", "4x gtceu:double_red_steel_plate")
+        .itemInputs("ae2:crafting_unit", "16x gtlcore:cell_component_256m", "gtceu:data_bank", "16x gtceu:data_orb", "4x #gtceu:circuits/uhv", "4x gtceu:double_red_steel_plate")
         .inputFluids("gtceu:soldering_alloy 576", "gtceu:pcb_coolant 2000")
         .itemOutputs("gtlcore:max_storage")
         .EUt(GTValues.VA[GTValues.UV])
