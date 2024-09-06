@@ -195,6 +195,7 @@
   "block.gtceu.mega_alloy_blast_smelter": "巨型合金冶炼炉",
   "block.gtceu.mega_canner": "特大装罐机",
   "block.gtceu.mega_extractor": "特大相变仪",
+  "block.gtceu.mega_fluid_heater": "宿舍违规电器",
   "block.gtceu.mega_presser": "特大机床",
   "block.gtceu.mega_steam_input_hatch": "特大蒸汽输入仓",
   "block.gtceu.mega_steam_output_hatch": "特大蒸汽输出仓",
@@ -1944,5 +1945,6 @@
   "tagprefix.nanoswarm": "%s纳米蜂群",
   "tagprefix.plutostone": "冥王星%s矿石",
   "tagprefix.titanstone": "土卫六%s矿石",
-  "tagprefix.venus_stone": "金星石%s矿石"
+  "tagprefix.venus_stone": "金星石%s矿石",
+  "gtceu.multiblock.mega_fluid_heater": "宿舍限电1500W，你们这是违规电器！"
 }

@@ -537,7 +537,7 @@
 			id: "67D93082DA7185CC"
 			tasks: [{
 				id: "6791BE188E97863E"
-				item: "gtceu:law_filter_casing"
+				item: "gtlcore:law_filter_casing"
 				type: "item"
 			}]
 			x: 6.0d
@@ -647,6 +647,20 @@
 			}]
 			x: 4.0d
 			y: -4.0d
+		}
+		{
+			dependencies: ["39F73A63746EE6E8"]
+			description: ["流体加热器的激光版本，拥有无损超频，使用温度超频机制，温度每提升900K，并行数×2"]
+			id: "411A274C7666B113"
+			shape: "gear"
+			size: 1.0d
+			tasks: [{
+				id: "54479AE6472F8C4F"
+				item: "gtceu:mega_fluid_heater"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 6.0d
 		}
 	]
 	subtitle: ["Tier10-UEV"]
