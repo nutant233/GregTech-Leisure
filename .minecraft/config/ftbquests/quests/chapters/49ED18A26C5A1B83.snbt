@@ -2419,7 +2419,7 @@
 				item: "gtceu:steam_large_turbine"
 				type: "item"
 			}]
-			x: 24.0d
+			x: 26.0d
 			y: 0.0d
 		}
 		{
@@ -2433,7 +2433,7 @@
 				item: "gtceu:steam_mega_turbine"
 				type: "item"
 			}]
-			x: 26.0d
+			x: 28.0d
 			y: 0.0d
 		}
 		{
@@ -2444,7 +2444,7 @@
 				item: "gtceu:gas_large_turbine"
 				type: "item"
 			}]
-			x: 24.0d
+			x: 26.0d
 			y: 2.0d
 		}
 		{
@@ -2458,7 +2458,7 @@
 				item: "gtceu:gas_mega_turbine"
 				type: "item"
 			}]
-			x: 26.0d
+			x: 28.0d
 			y: 2.0d
 		}
 		{
@@ -2748,7 +2748,7 @@
 				id: "654C1D74F045820D"
 				type: "custom"
 			}]
-			title: "这里有195个多方块"
+			title: "这里有198个多方块"
 			x: -12.0d
 			y: -2.0d
 		}
@@ -2918,6 +2918,39 @@
 			}]
 			x: 12.0d
 			y: 16.0d
+		}
+		{
+			dependencies: ["65C4F7EDC0E9D99D"]
+			id: "7E1B4060CF39DDF1"
+			tasks: [{
+				id: "0E609EEF75BF4ABA"
+				item: "gtceu:mega_fluid_heater"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["5930E12A8BCAF996"]
+			id: "51A93378CE8E3854"
+			tasks: [{
+				id: "4FD70AE24C719AB3"
+				item: "gtceu:generator_array"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["45096D94AE6F7864"]
+			id: "691036B243876022"
+			tasks: [{
+				id: "4591F611F2984EA1"
+				item: "gtceu:large_semi_fluid_generator"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 2.0d
 		}
 	]
 	title: "多方块结构"

@@ -401,11 +401,41 @@
 			dependencies: ["00579BDA1FA1BEC6"]
 			description: ["远古世界有一些有用的矿"]
 			id: "335ED39019FC62E7"
-			rewards: [{
-				id: "0AB3A8A039EB840F"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "0AB3A8A039EB840F"
+					item: "gtceu:gold_credit"
+					type: "item"
+				}
+				{
+					id: "120C3F2CEC94168B"
+					item: {
+						Count: 1
+						id: "gtceu:nanomuscle_helmet"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "1436494559DCBE1B"
+					item: {
+						Count: 1
+						id: "gtceu:avanced_nanomuscle_chestplate"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "542A36C70B6D39A1"
+					item: "gtceu:nanomuscle_leggings"
+					type: "item"
+				}
+				{
+					id: "4A5E920CBD312AF2"
+					item: "gtceu:nanomuscle_boots"
+					type: "item"
+				}
+			]
 			tasks: [{
 				dimension: "kubejs:ancient_world"
 				id: "7B798A358D3DA56B"
@@ -1097,11 +1127,19 @@
 		}
 		{
 			id: "664C46D5C12E7255"
-			rewards: [{
-				id: "3753CAA23389F755"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "3753CAA23389F755"
+					item: "gtceu:cupronickel_credit"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "4293BEFEC83DEFB3"
+					item: "ae2:speed_card"
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "46DB998969DFD278"
 				item: "ae2:inscriber"

@@ -1526,6 +1526,7 @@
 		}
 		{
 			dependencies: ["61140578961B01A9"]
+			description: ["手持末地数据才能安上末影之眼"]
 			id: "2AE3DE0BC3CD1D5B"
 			tasks: [{
 				id: "0F4C07DD6A1BB112"
@@ -1925,19 +1926,11 @@
 				id: "22B3FCAD4E46DCCA"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "3E0B96E6350FED35"
-					title: "去远古世界"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "4D86490802C9358F"
-					item: { Count: 64, id: "minecraft:diorite" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "3E0B96E6350FED35"
+				title: "去远古世界"
+				type: "checkmark"
+			}]
 			x: 0.0d
 			y: 4.0d
 		}
