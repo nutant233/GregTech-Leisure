@@ -1,5 +1,11 @@
 // priority: 100
 const LDLib = Java.loadClass("com.lowdragmc.lowdraglib.LDLib")
+const $DustProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty")
+const $IngotProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty")
+const $FluidProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty")
+const $OreProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty")
+const $BlastProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty")
+const $MaterialFlag = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag")
 GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create("orichalcum", 320, 320, -1, null, "Or", false)
     event.create("adamantium", 380, 380, -1, null, "An", false)
@@ -55,12 +61,6 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create("quantanium", 800, 800, -1, null, "Qt", false)
 })
 GTCEuStartupEvents.registry("gtceu:material", event => {
-    const $DustProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty")
-    const $IngotProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty")
-    const $FluidProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty")
-    const $OreProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty")
-    const $BlastProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty")
-    const $MaterialFlag = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag")
     const FluidStorageKey = "fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidBuilder)"
 
     const GENERATE_NANOSWARM = new $MaterialFlag.Builder("generate_nanoswarm")

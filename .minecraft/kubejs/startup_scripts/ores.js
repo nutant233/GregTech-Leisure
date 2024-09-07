@@ -1,4 +1,6 @@
 // priority: 95
+const BlockBehaviour = Java.loadClass("net.minecraft.world.level.block.state.BlockBehaviour")
+const BlockTags = Java.loadClass("net.minecraft.tags.BlockTags")
 WorldgenEvents.remove(event => {
     event.removeFeatureById("underground_ores", ["ad_astra:moon_desh_ore", "ad_astra:moon_iron_ore", "ad_astra:moon_ice_shard_ore",
         "ad_astra:mars_iron_ore", "ad_astra:mars_diamond_ore", "ad_astra:mars_ostrum_ore", "ad_astra:mars_ice_shard_ore",
@@ -8,8 +10,6 @@ WorldgenEvents.remove(event => {
         "ad_astra:glacio_lapis_ore", "ad_astra:glacio_deepslate_copper_ore", "ad_astra:glacio_deepslate_coal_ore"])
 })
 GTCEuStartupEvents.registry("gtceu:tag_prefix", event => {
-    const BlockBehaviour = Java.loadClass("net.minecraft.world.level.block.state.BlockBehaviour")
-    const BlockTags = Java.loadClass("net.minecraft.tags.BlockTags")
     TagPrefix.oreTagPrefix("moon_stone", BlockTags.MINEABLE_WITH_PICKAXE)
         .registerOre(() => Block.getBlock("ad_astra:moon_stone").defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),

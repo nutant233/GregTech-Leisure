@@ -1,15 +1,13 @@
 // priority: 97
+const $LocalizationUtils = Java.loadClass("com.lowdragmc.lowdraglib.utils.LocalizationUtils")
+const $ICoilType = Java.loadClass("com.gregtechceu.gtceu.api.block.ICoilType")
+const $ArrayList = Java.loadClass("java.util.ArrayList")
+const $ItemStack = Java.loadClass("net.minecraft.world.item.ItemStack")
+const $CycleItemStackHandler = Java.loadClass("com.lowdragmc.lowdraglib.utils.CycleItemStackHandler")
+const $I18n = LDLib.isClient() ? Java.loadClass("net.minecraft.client.resources.language.I18n") : null
+const GenerateDisassembly = Java.loadClass("org.gtlcore.gtlcore.data.recipe.GenerateDisassembly")
+const ResearchManager = Java.loadClass("com.gregtechceu.gtceu.utils.ResearchManager")
 GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
-    const $LocalizationUtils = Java.loadClass("com.lowdragmc.lowdraglib.utils.LocalizationUtils")
-    const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUtil")
-    const $ICoilType = Java.loadClass("com.gregtechceu.gtceu.api.block.ICoilType")
-    const $ArrayList = Java.loadClass("java.util.ArrayList")
-    const $ItemStack = Java.loadClass("net.minecraft.world.item.ItemStack")
-    const $CycleItemStackHandler = Java.loadClass("com.lowdragmc.lowdraglib.utils.CycleItemStackHandler")
-    const $I18n = LDLib.isClient() ? Java.loadClass("net.minecraft.client.resources.language.I18n") : null
-    const GenerateDisassembly = Java.loadClass("org.gtlcore.gtlcore.data.recipe.GenerateDisassembly")
-    const ResearchManager = Java.loadClass("com.gregtechceu.gtceu.utils.ResearchManager")
-
     event.create("greenhouse")
         .setEUIO("in")
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
@@ -370,13 +368,6 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setMaxIOSize(18, 1, 3, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE)
-
-    event.create("super_computation")
-        .setEUIO("in")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(0, 0, 0, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.COMPUTATION)
 
     event.create("dragon_egg_copier")
         .setEUIO("in")
