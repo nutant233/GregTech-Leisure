@@ -61,6 +61,7 @@
   "block.gtceu.fission_reactor": "裂变反应堆",
   "block.gtceu.flotation_cell_regulator": "工业浮选机",
   "block.gtceu.gas_mega_turbine": "特大燃气涡轮",
+  "block.gtceu.generator_array": "发电阵列",
   "block.gtceu.gravitation_shockburst": "引力震爆器",
   "block.gtceu.greenhouse": "温室",
   "block.gtceu.heat_exchanger": "热交换机",
@@ -726,6 +727,9 @@
   "gtceu.machine.fission_reactor.tooltip.9": "当供给量>=需求量时达到消耗冷却液条件，消耗提供的冷却液，消耗量为需求量x冷却液系数，并阻止反应堆升温",
   "gtceu.machine.flotation_cell_regulator.tooltip.0": "工业级浮游选矿池",
   "gtceu.machine.fusion_reactor.tooltip.a": "机器配方等级每高出机器等级1级，最大并行数x4，最高16",
+  "gtceu.machine.generator_array.tooltip.0": "强大的运行环境会让机器中的小发电机功率x2。",
+  "gtceu.machine.generator_array.tooltip.1": "可以开启无线电网模式，产生的电能会直接送入无线电网。",
+  "gtceu.machine.generator_array.wireless": "无线电网模式：",
   "gtceu.machine.greenhouse.tooltip.0": "需要阳光才能运行",
   "gtceu.machine.greenhouse.tooltip.1": "如太阳光照不足，速度就会减缓",
   "gtceu.machine.heat_exchanger.tooltip.0": "每次处理全部输入的热流体",
@@ -830,6 +834,7 @@
   "gtceu.multiblock.large_combustion_engine.Joint_boosted": "§b联合促燃中",
   "gtceu.multiblock.large_combustion_engine.supply_dinitrogen_tetroxide_to_boost": "提供四氧化二氮来联合促燃",
   "gtceu.multiblock.laser.tooltip": "允许使用激光仓",
+  "gtceu.multiblock.mega_fluid_heater": "宿舍限电1500W，你们这是违规电器！",
   "gtceu.multiblock.oc_amount": "超频次数：%s",
   "gtceu.multiblock.pattern.error.tier": "§c必须使用同种等级方块§r",
   "gtceu.multiblock.steam_parallel_machine.modification_oc": "修改超频次数：",
@@ -1945,6 +1950,5 @@
   "tagprefix.nanoswarm": "%s纳米蜂群",
   "tagprefix.plutostone": "冥王星%s矿石",
   "tagprefix.titanstone": "土卫六%s矿石",
-  "tagprefix.venus_stone": "金星石%s矿石",
-  "gtceu.multiblock.mega_fluid_heater": "宿舍限电1500W，你们这是违规电器！"
+  "tagprefix.venus_stone": "金星石%s矿石"
 }

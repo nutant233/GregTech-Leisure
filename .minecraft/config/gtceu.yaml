@@ -310,15 +310,15 @@ machines:
 
     # The heat speed of the Large Bronze Boiler.
     # Default: 1
-    bronzeBoilerHeatSpeed: 2
+    bronzeBoilerHeatSpeed: 1
 
     # The max temperature of the Large Steel Boiler.
     # Default: 1800
-    steelBoilerMaxTemperature: 14400
+    steelBoilerMaxTemperature: 12800
 
     # The heat speed of the Large Steel Boiler.
     # Default: 1
-    steelBoilerHeatSpeed: 4
+    steelBoilerHeatSpeed: 2
 
     # The max temperature of the Large Titanium Boiler.
     # Default: 3200
@@ -326,7 +326,7 @@ machines:
 
     # The heat speed of the Large Titanium Boiler.
     # Default: 1
-    titaniumBoilerHeatSpeed: 8
+    titaniumBoilerHeatSpeed: 4
 
     # The max temperature of the Large Tungstensteel Boiler.
     # Default: 6400
@@ -334,7 +334,7 @@ machines:
 
     # The heat speed of the Large Tungstensteel Boiler.
     # Default: 2
-    tungstensteelBoilerHeatSpeed: 16
+    tungstensteelBoilerHeatSpeed: 8
 
 client:
   # Whether or not to enable Emissive Textures for GregTech Machines.

@@ -2767,7 +2767,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("laser_engraver")
         .recipeType("fluid_solidifier")
         .tooltips(Component.translatable("gtceu.machine.eut_multiplier.tooltip", 0.9))
-        .tooltips(Component.translatable("gtceu.machine.duration_multiplier.tooltip", 0.8))
+        .tooltips(Component.translatable("gtceu.machine.duration_multiplier.tooltip", 0.6))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_11.tooltip",
@@ -2782,7 +2782,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             Component.translatable("gtceu.polarizer"),
             Component.translatable("gtceu.laser_engraver"),
             Component.translatable("gtceu.fluid_solidifier")))
-        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.6), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
                 .aisle("bbb", "bbb", "bbb")
@@ -2852,12 +2852,12 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("assembler")
         .recipeType("circuit_assembler")
         .tooltips(Component.translatable("gtceu.machine.eut_multiplier.tooltip", 0.9))
-        .tooltips(Component.translatable("gtceu.machine.duration_multiplier.tooltip", 0.8))
+        .tooltips(Component.translatable("gtceu.machine.duration_multiplier.tooltip", 0.6))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.assembler"), Component.translatable("gtceu.circuit_assembler")))
-        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.6), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
                 .aisle("bbb", "bbb", "bbb")
@@ -2905,7 +2905,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("extractor")
         .recipeType("dehydrator")
         .tooltips(Component.translatable("gtceu.machine.eut_multiplier.tooltip", 0.9))
-        .tooltips(Component.translatable("gtceu.machine.duration_multiplier.tooltip", 0.8))
+        .tooltips(Component.translatable("gtceu.machine.duration_multiplier.tooltip", 0.6))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_7.tooltip",
@@ -2916,7 +2916,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             Component.translatable("gtceu.macerator"),
             Component.translatable("gtceu.extractor"),
             Component.translatable("gtceu.dehydrator")))
-        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.6), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
                 .aisle("bbb", "bbb", "bbb")
@@ -2976,7 +2976,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("chemical_bath")
         .recipeType("ore_washer")
         .tooltips(Component.translatable("gtceu.machine.eut_multiplier.tooltip", 0.9))
-        .tooltips(Component.translatable("gtceu.machine.duration_multiplier.tooltip", 0.8))
+        .tooltips(Component.translatable("gtceu.machine.duration_multiplier.tooltip", 0.6))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_4.tooltip",
@@ -2984,7 +2984,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             Component.translatable("gtceu.mixer"),
             Component.translatable("gtceu.chemical_bath"),
             Component.translatable("gtceu.ore_washer")))
-        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.8), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.6), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:multi_functional_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()

@@ -20,11 +20,13 @@
 		}
 		{
 			dependency_requirement: "one_completed"
-			description: [
-				"只要蒸汽足够，16A的LV是很厉害的，注意线缆不要放低于16A的"
-				"推荐制作一个大型锅炉来生产蒸汽"
-			]
+			description: ["推荐制作一个大型锅炉来生产用不完的蒸汽"]
 			id: "4C591AA4F1D907C1"
+			rewards: [{
+				id: "59A093C0F82929A2"
+				item: "gtceu:generator_array"
+				type: "item"
+			}]
 			tasks: [{
 				id: "243E535AEDB5D1A5"
 				item: "gtceu:lv_steam_turbine"
@@ -120,7 +122,7 @@
 			y: -0.5d
 		}
 		{
-			description: ["可以跑满功率，如果你电力紧缺，推荐这个发电方式"]
+			description: ["如果你电力紧缺，推荐这个发电方式"]
 			id: "4AE439A017FF5A04"
 			tasks: [{
 				id: "31B6DE310917805B"
@@ -131,7 +133,7 @@
 			y: -0.5d
 		}
 		{
-			description: ["和内燃一样，也可以跑满功率"]
+			description: ["和内燃一样"]
 			id: "5F1205B5A2B98E21"
 			tasks: [{
 				id: "41A77DEE3ADFAD06"
