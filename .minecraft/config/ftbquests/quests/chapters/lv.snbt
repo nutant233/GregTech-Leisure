@@ -1127,6 +1127,17 @@
 			x: -4.0d
 			y: 6.0d
 		}
+		{
+			dependencies: ["4C591AA4F1D907C1"]
+			id: "1486FC9F82B2E56E"
+			tasks: [{
+				id: "5EE2778F62F08653"
+				item: "gtceu:generator_array"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -5.5d
+		}
 	]
 	subtitle: ["Tier1-LV"]
 	title: "低压"
