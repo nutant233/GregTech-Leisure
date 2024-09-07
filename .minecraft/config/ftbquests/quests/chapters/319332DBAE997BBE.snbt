@@ -16,7 +16,7 @@
 	}]
 	quests: [
 		{
-			dependencies: ["0A5B42B66B1D4A98"]
+			dependencies: ["73613E3EBEFFB326"]
 			description: ["在木卫一挖"]
 			id: "7F92A8EE58AD5BA2"
 			tasks: [{

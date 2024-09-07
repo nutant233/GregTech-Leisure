@@ -199,7 +199,10 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["043B581110AB9161"]
+			dependencies: [
+				"043B581110AB9161"
+				"1A48D2DB936FF632"
+			]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "009E71EC51F5B0EF"
@@ -262,6 +265,17 @@
 		{
 			dependencies: ["18A773A6B710C658"]
 			id: "23C2F99FC949AF0A"
+			rewards: [{
+				id: "5A008F62E47D1126"
+				item: {
+					Count: 1
+					id: "avaritia:infinity_totem"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
 			tasks: [{
 				dimension: "ad_astra:moon"
 				id: "2CCD7DD07A345FE5"
@@ -419,6 +433,7 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["1E7344C133C99565"]
 			hide_dependent_lines: true
 			id: "63C8DD19C6B76899"
 			tasks: [{
@@ -442,6 +457,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["5B65662B72C369E7"]
 			hide_dependent_lines: true
 			id: "123FD5A979F5750D"
 			tasks: [{
@@ -710,6 +726,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["7AEC0D308494C0F8"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "187BE1A67AF10798"
@@ -1151,7 +1168,10 @@
 		}
 		{
 			dependencies: ["2BB52D1C09C418A9"]
-			description: ["使用远古反应核，相邻放金块角落放绿宝石块"]
+			description: [
+				"终于可以去下界了"
+				"使用远古反应核，相邻放金块角落放绿宝石块"
+			]
 			id: "778546543F6413E7"
 			tasks: [{
 				dimension: "minecraft:the_nether"
@@ -1188,7 +1208,7 @@
 				}
 				type: "item"
 			}]
-			x: 8.0d
+			x: 11.0d
 			y: 8.0d
 		}
 		{
@@ -1199,7 +1219,7 @@
 				item: "ad_astra:ostrum_tank"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 9.5d
 			y: 7.0d
 		}
 		{
@@ -1210,7 +1230,7 @@
 				item: "ad_astra:ostrum_engine"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 9.5d
 			y: 9.0d
 		}
 		{
@@ -1221,7 +1241,7 @@
 				item: "ad_astra:ostrum_plate"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 8.0d
 			y: 8.0d
 		}
 		{
@@ -1232,10 +1252,12 @@
 				item: "ad_astra:ostrum_ingot"
 				type: "item"
 			}]
-			x: 3.5d
+			x: 6.5d
 			y: 8.0d
 		}
 		{
+			can_repeat: false
+			dependencies: ["38480A52A13DA157"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "5322AB6C014C301F"
@@ -1244,7 +1266,7 @@
 				title: "准备前往T5"
 				type: "checkmark"
 			}]
-			x: 2.0d
+			x: 5.0d
 			y: 8.0d
 		}
 		{
@@ -1255,7 +1277,7 @@
 				item: "gtceu:rocket_fuel_h8n4c2o4_bucket"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 11.0d
 			y: 10.0d
 		}
 		{
@@ -1284,7 +1306,7 @@
 				}
 				type: "item"
 			}]
-			x: 18.5d
+			x: 21.5d
 			y: 8.0d
 		}
 		{
@@ -1295,7 +1317,7 @@
 				item: "ad_astra:calorite_tank"
 				type: "item"
 			}]
-			x: 17.0d
+			x: 20.0d
 			y: 7.0d
 		}
 		{
@@ -1306,7 +1328,7 @@
 				item: "ad_astra:calorite_engine"
 				type: "item"
 			}]
-			x: 17.0d
+			x: 20.0d
 			y: 9.0d
 		}
 		{
@@ -1317,7 +1339,7 @@
 				item: "ad_astra:calorite_plate"
 				type: "item"
 			}]
-			x: 15.5d
+			x: 18.5d
 			y: 8.0d
 		}
 		{
@@ -1328,10 +1350,11 @@
 				item: "ad_astra:calorite_ingot"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 17.0d
 			y: 8.0d
 		}
 		{
+			dependencies: ["4BFA114E12BCB163"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "7EE091FC5E255C22"
@@ -1340,7 +1363,7 @@
 				title: "准备前往T6"
 				type: "checkmark"
 			}]
-			x: 12.5d
+			x: 15.5d
 			y: 8.0d
 		}
 		{
@@ -1351,7 +1374,7 @@
 				item: "ad_astra:cryo_fuel_bucket"
 				type: "item"
 			}]
-			x: 18.5d
+			x: 21.5d
 			y: 10.0d
 		}
 		{
@@ -1378,7 +1401,7 @@
 				}
 				type: "item"
 			}]
-			x: 27.0d
+			x: 30.0d
 			y: 8.0d
 		}
 		{
@@ -1389,10 +1412,11 @@
 				item: "gtceu:stellar_energy_rocket_fuel_bucket"
 				type: "item"
 			}]
-			x: 27.0d
+			x: 30.0d
 			y: 10.0d
 		}
 		{
+			dependencies: ["0485D45408234C99"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "72ED3FB127914FD7"
@@ -1401,7 +1425,7 @@
 				title: "准备前往T7"
 				type: "checkmark"
 			}]
-			x: 25.0d
+			x: 28.0d
 			y: 8.0d
 		}
 		{
@@ -1413,7 +1437,7 @@
 				title: "木卫一"
 				type: "dimension"
 			}]
-			x: 9.5d
+			x: 12.5d
 			y: 8.0d
 		}
 		{
@@ -1425,7 +1449,7 @@
 				title: "木卫三"
 				type: "dimension"
 			}]
-			x: 10.5d
+			x: 13.5d
 			y: 8.0d
 		}
 		{
@@ -1449,7 +1473,7 @@
 				}
 			]
 			title: "木卫一的矿"
-			x: 9.5d
+			x: 12.5d
 			y: 10.0d
 		}
 		{
@@ -1461,7 +1485,7 @@
 				type: "item"
 			}]
 			title: "木卫一的流体矿脉"
-			x: 9.5d
+			x: 12.5d
 			y: 12.0d
 		}
 		{
@@ -1473,7 +1497,7 @@
 				type: "item"
 			}]
 			title: "木卫三的流体矿脉"
-			x: 10.5d
+			x: 13.5d
 			y: 12.0d
 		}
 		{
@@ -1485,7 +1509,7 @@
 				type: "item"
 			}]
 			title: "木卫三的矿"
-			x: 10.5d
+			x: 13.5d
 			y: 10.0d
 		}
 		{
@@ -1497,7 +1521,7 @@
 				title: "冥王星"
 				type: "dimension"
 			}]
-			x: 20.0d
+			x: 23.0d
 			y: 8.0d
 		}
 		{
@@ -1509,7 +1533,7 @@
 				title: "土卫二"
 				type: "dimension"
 			}]
-			x: 21.0d
+			x: 24.0d
 			y: 8.0d
 		}
 		{
@@ -1521,19 +1545,19 @@
 				title: "土卫六"
 				type: "dimension"
 			}]
-			x: 22.0d
+			x: 25.0d
 			y: 8.0d
 		}
 		{
 			dependencies: ["61140578961B01A9"]
-			description: ["手持末地数据才能安上末影之眼"]
+			description: ["副手持数据即可将末影眼安装在框架上"]
 			id: "2AE3DE0BC3CD1D5B"
 			tasks: [{
 				id: "0F4C07DD6A1BB112"
 				item: "kubejs:end_data"
 				type: "item"
 			}]
-			x: 23.0d
+			x: 26.0d
 			y: 8.0d
 		}
 		{
@@ -1545,7 +1569,7 @@
 				title: "末地"
 				type: "dimension"
 			}]
-			x: 23.0d
+			x: 26.0d
 			y: 10.0d
 		}
 		{
@@ -1557,7 +1581,7 @@
 				type: "item"
 			}]
 			title: "冥王星的流体矿脉"
-			x: 20.0d
+			x: 23.0d
 			y: 12.0d
 		}
 		{
@@ -1576,7 +1600,7 @@
 				}
 			]
 			title: "土卫二的流体矿脉"
-			x: 21.0d
+			x: 24.0d
 			y: 12.0d
 		}
 		{
@@ -1600,7 +1624,7 @@
 				}
 			]
 			title: "土卫六的流体矿脉"
-			x: 22.0d
+			x: 25.0d
 			y: 12.0d
 		}
 		{
@@ -1612,7 +1636,7 @@
 				title: "霜原星"
 				type: "dimension"
 			}]
-			x: 28.5d
+			x: 31.5d
 			y: 8.0d
 		}
 		{
@@ -1624,10 +1648,11 @@
 				type: "item"
 			}]
 			title: "霜原星特产"
-			x: 28.5d
+			x: 31.5d
 			y: 10.0d
 		}
 		{
+			dependencies: ["7C23CC6ADDC33EA0"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "5A185A4065DD7FCF"
@@ -1636,7 +1661,7 @@
 				title: "准备前往T8"
 				type: "checkmark"
 			}]
-			x: 31.0d
+			x: 34.0d
 			y: 8.0d
 		}
 		{
@@ -1649,7 +1674,7 @@
 				item: "gtceu:space_elevator"
 				type: "item"
 			}]
-			x: 33.5d
+			x: 36.5d
 			y: 8.0d
 		}
 		{
@@ -1661,7 +1686,7 @@
 				title: "巴纳德C"
 				type: "dimension"
 			}]
-			x: 35.0d
+			x: 38.0d
 			y: 8.0d
 		}
 		{
@@ -1673,7 +1698,7 @@
 				type: "item"
 			}]
 			title: "巴纳德C的流体矿脉"
-			x: 35.0d
+			x: 38.0d
 			y: 10.0d
 		}
 		{
@@ -1786,7 +1811,7 @@
 				title: "去木卫一"
 				type: "checkmark"
 			}]
-			x: 9.5d
+			x: 12.5d
 			y: 6.0d
 		}
 		{
@@ -1805,7 +1830,7 @@
 				title: "去木卫三"
 				type: "checkmark"
 			}]
-			x: 10.5d
+			x: 13.5d
 			y: 6.0d
 		}
 		{
@@ -1824,7 +1849,7 @@
 				title: "去冥王星"
 				type: "checkmark"
 			}]
-			x: 20.0d
+			x: 23.0d
 			y: 6.0d
 		}
 		{
@@ -1843,7 +1868,7 @@
 				title: "去土卫二"
 				type: "checkmark"
 			}]
-			x: 21.0d
+			x: 24.0d
 			y: 6.0d
 		}
 		{
@@ -1862,7 +1887,7 @@
 				title: "去土卫六"
 				type: "checkmark"
 			}]
-			x: 22.0d
+			x: 25.0d
 			y: 6.0d
 		}
 		{
@@ -1881,7 +1906,7 @@
 				title: "去巴纳德C"
 				type: "checkmark"
 			}]
-			x: 35.0d
+			x: 38.0d
 			y: 6.0d
 		}
 		{
@@ -1900,7 +1925,7 @@
 				title: "去霜原星"
 				type: "checkmark"
 			}]
-			x: 28.5d
+			x: 31.5d
 			y: 6.0d
 		}
 		{
@@ -1912,7 +1937,7 @@
 				type: "dimension"
 			}]
 			x: 0.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			can_repeat: true
@@ -1932,7 +1957,41 @@
 				type: "checkmark"
 			}]
 			x: 0.0d
-			y: 4.0d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["778546543F6413E7"]
+			id: "18316E48C29988B5"
+			optional: true
+			rewards: [{
+				command: "/execute in minecraft:the_nether run tp 0 100 0"
+				id: "4CEB0A83900FB9A9"
+				type: "command"
+			}]
+			tasks: [{
+				id: "5EFD4C3F8B5176EB"
+				title: "去地狱"
+				type: "checkmark"
+			}]
+			x: 29.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5E3EDA6C94CEC3C4"]
+			id: "1308E1F15E72F288"
+			rewards: [{
+				command: "/execute in minecraft:the_end run tp 0 200 0"
+				id: "7FA690EB17C46096"
+				type: "command"
+			}]
+			tasks: [{
+				id: "68B276212C9C1722"
+				title: "去末地"
+				type: "checkmark"
+			}]
+			x: 26.0d
+			y: 6.0d
 		}
 	]
 	title: "探索世界"

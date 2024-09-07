@@ -707,8 +707,8 @@
 				}
 			]
 			title: "独居石"
-			x: 7.5d
-			y: -3.0d
+			x: 7.4d
+			y: -3.2d
 		}
 		{
 			description: ["绿宝石矿是这里最实用的矿石.需要小量使用来制造&bMV&r中的技术物品"]
@@ -796,8 +796,8 @@
 				}
 			]
 			title: "赛特斯石英"
-			x: 10.5d
-			y: -3.0d
+			x: 10.6d
+			y: -3.2d
 		}
 		{
 			description: [
@@ -868,8 +868,8 @@
 				}
 			]
 			title: "黄玉"
-			x: 10.5d
-			y: -1.0d
+			x: 10.6d
+			y: -0.8d
 		}
 		{
 			description: [
@@ -961,8 +961,8 @@
 				}
 			]
 			title: "硫磺"
-			x: 7.5d
-			y: -1.0d
+			x: 7.4d
+			y: -0.8d
 		}
 		{
 			description: [
@@ -1165,266 +1165,6 @@
 			title: "铀矿石"
 			x: 11.0d
 			y: 3.0d
-		}
-		{
-			description: ["T1星球"]
-			id: "05DE58ADDB4B4E28"
-			rewards: [{
-				id: "54923D7F2DA771F1"
-				item: {
-					Count: 1
-					id: "avaritia:infinity_totem"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			tasks: [{
-				dimension: "ad_astra:moon"
-				id: "0CCF7893157DA845"
-				type: "dimension"
-			}]
-			title: "月球"
-			x: -2.5d
-			y: 6.0d
-		}
-		{
-			id: "474E6E7630A9E796"
-			tasks: [
-				{
-					id: "1EFE52A83F0C0BDB"
-					item: "gtceu:raw_bauxite"
-					type: "item"
-				}
-				{
-					id: "5C9593A66829DFEA"
-					item: "gtceu:raw_neodymium"
-					type: "item"
-				}
-				{
-					id: "7A249FC614C1AEC3"
-					item: "gtceu:raw_uraninite"
-					type: "item"
-				}
-			]
-			x: -2.5d
-			y: 7.5d
-		}
-		{
-			description: ["T2星球"]
-			id: "4C62EA42F0B042B2"
-			tasks: [{
-				dimension: "ad_astra:mars"
-				id: "6D44494301AD728D"
-				type: "dimension"
-			}]
-			title: "火星"
-			x: -1.0d
-			y: 6.0d
-		}
-		{
-			id: "43C107D7BDD8D12F"
-			tasks: [
-				{
-					id: "7EB037A40AEF5C81"
-					item: "gtceu:raw_pyrochlore"
-					type: "item"
-				}
-				{
-					id: "036A98989E1E6DF5"
-					item: "gtceu:raw_cooperite"
-					type: "item"
-				}
-				{
-					id: "051475FE822D3061"
-					item: "gtceu:raw_scheelite"
-					type: "item"
-				}
-			]
-			x: -1.0d
-			y: 7.5d
-		}
-		{
-			description: ["T3星球"]
-			id: "131A1FB74BB801E0"
-			tasks: [{
-				dimension: "ad_astra:venus"
-				id: "37159426CAEC77F3"
-				type: "dimension"
-			}]
-			title: "金星"
-			x: 0.5d
-			y: 6.0d
-		}
-		{
-			description: ["T3星球"]
-			id: "14087C4B9AA96921"
-			tasks: [{
-				dimension: "ad_astra:mercury"
-				id: "08F2F7D4688E602C"
-				type: "dimension"
-			}]
-			title: "水星"
-			x: 2.0d
-			y: 6.0d
-		}
-		{
-			description: ["T4星球"]
-			id: "4DE912833E078CD0"
-			tasks: [{
-				dimension: "kubejs:ceres"
-				id: "6E219B8ED597BAC5"
-				type: "dimension"
-			}]
-			title: "谷神星"
-			x: 3.5d
-			y: 6.0d
-		}
-		{
-			dependencies: ["36F5A40D3976E512"]
-			description: ["T5星球"]
-			id: "0A5B42B66B1D4A98"
-			tasks: [{
-				dimension: "kubejs:io"
-				id: "62EC8B2587FB560F"
-				type: "dimension"
-			}]
-			title: "木卫一"
-			x: 5.0d
-			y: 6.0d
-		}
-		{
-			description: ["T5星球"]
-			id: "180FA93F5CD166C2"
-			tasks: [{
-				dimension: "kubejs:ganymede"
-				id: "070A4D3CD23896E1"
-				type: "dimension"
-			}]
-			title: "木卫三"
-			x: 6.5d
-			y: 6.0d
-		}
-		{
-			description: ["T6星球"]
-			id: "20B9421ED4FCE35A"
-			tasks: [{
-				dimension: "kubejs:pluto"
-				id: "1B81206FBBBD1109"
-				type: "dimension"
-			}]
-			title: "冥王星"
-			x: 8.0d
-			y: 6.0d
-		}
-		{
-			description: ["T6星球"]
-			id: "2BDF9E214E1B621E"
-			tasks: [{
-				dimension: "kubejs:enceladus"
-				id: "247459DC4DC5ED4E"
-				type: "dimension"
-			}]
-			title: "土卫二"
-			x: 9.5d
-			y: 6.0d
-		}
-		{
-			description: ["T6星球"]
-			id: "27711FD7F5A06446"
-			tasks: [{
-				dimension: "kubejs:titan"
-				id: "5BCECA5E83C28F92"
-				type: "dimension"
-			}]
-			title: "土卫六"
-			x: 11.0d
-			y: 6.0d
-		}
-		{
-			description: ["T7星球"]
-			id: "43612FDF66B1CEB6"
-			tasks: [{
-				dimension: "ad_astra:glacio"
-				id: "1BD372C4DA5C4D6E"
-				type: "dimension"
-			}]
-			title: "霜原星"
-			x: 12.5d
-			y: 6.0d
-		}
-		{
-			description: [
-				"可以去下界了"
-				"使用远古反应核，相邻放金块角落放绿宝石块"
-			]
-			id: "51C280A0A27F4DAC"
-			tasks: [
-				{
-					id: "75F99627162C0F72"
-					item: "gtceu:raw_desh"
-					type: "item"
-				}
-				{
-					id: "145E55AAA6A89DFD"
-					item: "kubejs:nether_data"
-					type: "item"
-				}
-			]
-			x: 0.5d
-			y: 7.5d
-		}
-		{
-			id: "02CC7A76AF55A9A1"
-			tasks: [{
-				id: "3F087AE2E6F06B29"
-				item: "gtceu:raw_calorite"
-				type: "item"
-			}]
-			x: 2.0d
-			y: 7.5d
-		}
-		{
-			id: "3123A37E2FD6F6A2"
-			tasks: [{
-				id: "52EC8C8B1E6561DB"
-				item: "gtceu:raw_naquadah"
-				type: "item"
-			}]
-			x: 5.0d
-			y: 7.5d
-		}
-		{
-			id: "0A494871DF5C536D"
-			tasks: [{
-				id: "4CE07759DF3A571D"
-				item: "gtceu:raw_ostrum"
-				type: "item"
-			}]
-			x: 3.5d
-			y: 7.5d
-		}
-		{
-			description: ["副手持数据即可将末影眼安装在框架上"]
-			id: "5EB9A45638074C39"
-			tasks: [{
-				id: "34CA7AA6562150CD"
-				item: "kubejs:end_data"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 7.5d
-		}
-		{
-			id: "5BDE8110FBA1FE95"
-			tasks: [{
-				id: "16F5DFC2821B098D"
-				item: "kubejs:glacio_spirit"
-				type: "item"
-			}]
-			x: 12.5d
-			y: 7.5d
 		}
 	]
 	title: "矿石生成"

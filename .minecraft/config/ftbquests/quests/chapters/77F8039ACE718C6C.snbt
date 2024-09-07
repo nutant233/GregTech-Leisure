@@ -1082,11 +1082,33 @@
 			hide_dependent_lines: true
 			icon: "gtceu:steam_piston_hammer"
 			id: "05BB1E1E38478F26"
-			rewards: [{
-				id: "32EB5557227152BB"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "2D8751AF3B8B1D6A"
+					item: "gtceu:steam_input_bus"
+					type: "item"
+				}
+				{
+					id: "3BC641A02C9D4998"
+					item: "gtceu:steam_output_bus"
+					type: "item"
+				}
+				{
+					id: "38DB793439A26752"
+					item: "gtceu:steam_input_hatch"
+					type: "item"
+				}
+				{
+					id: "58C24B68D0260EBD"
+					item: "gtceu:lv_input_hatch"
+					type: "item"
+				}
+				{
+					id: "5C377797179ABF3E"
+					item: "gtceu:lv_output_hatch"
+					type: "item"
+				}
+			]
 			size: 1.0d
 			tasks: [{
 				id: "6ACDB1E4B636D7F0"
