@@ -1,10 +1,10 @@
 
-#Avaritia Config
-[tools]
+#Avaritia Base Config
+[general]
 	#Does the super mode of endless tools retain stone and soil
 	"Is Stone" = false
 	#Whether to merge matter cluster
-	"Is Merge Matter Cluster" = true
+	"Is Merge Matter Cluster" = false
 	#Range damage value of the right key of Infinity sword
 	#Range: 100 ~ 100000
 	"Sword Range Damage" = 10000
@@ -36,12 +36,4 @@
 	#Singularity default time required
 	#Range: > 0
 	"Singularity Time Required" = 240
-
-[emc]
-	#Emc of Neutron Pile
-	#Range: > 0
-	"Neutron Pile Emc" = 100
-	#Emc of Totem Of Undying
-	#Range: > 0
-	"Vanilla Totem Emc" = 1000
 

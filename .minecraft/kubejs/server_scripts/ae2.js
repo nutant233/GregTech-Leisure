@@ -317,15 +317,6 @@ ServerEvents.recipes((event) => {
         .duration(2400)
     ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Registries.getItemStack("gtlcore:cell_component_256m")).dataStack(Registries.getItemStack("gtceu:data_orb")).EUt(GTValues.VA[GTValues.UV]).duration(2400))
 
-    for (let index = 1; index < 5; index++) {
-        gtr.assembler(`mae2:${4 ** index}x_crafting_accelerator`)
-            .itemInputs(index == 1 ? "ae2:crafting_accelerator" : `mae2:${4 ** (index - 1)}x_crafting_accelerator`, (2 ** index) + "x ae2:engineering_processor", getCellComponent(index))
-            .inputFluids("gtceu:soldering_alloy " + 72 * (2 ** index))
-            .itemOutputs(`mae2:${4 ** index}x_crafting_accelerator`)
-            .EUt(GTValues.VA[index - 1])
-            .duration(200)
-    }
-
     for (let index = 0; index < 33; index++) {
         event.shaped(Item.of("expatternprovider:infinity_cell", `{record:{"#c":"ae2:i",id:"gtceu:programmed_circuit",tag:{Configuration:${index}}}}`), [
             "BAB",
