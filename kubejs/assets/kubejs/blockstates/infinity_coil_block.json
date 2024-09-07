@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "active=false": {
+            "model": "kubejs:block/variant/infinity_coil_block"
+        },
+        "active=true": {
+            "model": "kubejs:block/variant/infinity_coil_block_bloom"
+        }
+    }
+}

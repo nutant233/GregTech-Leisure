@@ -188,6 +188,15 @@ machines:
   # Default: false
   steelSteamMultiblocks: false
 
+  # Whether to enable the cleanroom, required for various recipes.
+  # Default: true
+  enableCleanroom: true
+
+  # Whether multiblocks should ignore all cleanroom requirements.
+  # This does nothing if enableCleanroom is false.
+  # Default: false
+  cleanMultiblocks: false
+
   # Block to replace mined ores with in the miner and multiblock miner.
   # Default: minecraft:cobblestone
   replaceMinedBlocksWith: minecraft:cobblestone
@@ -301,15 +310,15 @@ machines:
 
     # The heat speed of the Large Bronze Boiler.
     # Default: 1
-    bronzeBoilerHeatSpeed: 2
+    bronzeBoilerHeatSpeed: 1
 
     # The max temperature of the Large Steel Boiler.
     # Default: 1800
-    steelBoilerMaxTemperature: 14400
+    steelBoilerMaxTemperature: 12800
 
     # The heat speed of the Large Steel Boiler.
     # Default: 1
-    steelBoilerHeatSpeed: 4
+    steelBoilerHeatSpeed: 2
 
     # The max temperature of the Large Titanium Boiler.
     # Default: 3200
@@ -317,7 +326,7 @@ machines:
 
     # The heat speed of the Large Titanium Boiler.
     # Default: 1
-    titaniumBoilerHeatSpeed: 8
+    titaniumBoilerHeatSpeed: 4
 
     # The max temperature of the Large Tungstensteel Boiler.
     # Default: 6400
@@ -325,9 +334,7 @@ machines:
 
     # The heat speed of the Large Tungstensteel Boiler.
     # Default: 2
-    tungstensteelBoilerHeatSpeed: 16
-
-  enablePrimitiveVoidOre: false
+    tungstensteelBoilerHeatSpeed: 8
 
 client:
   # Whether or not to enable Emissive Textures for GregTech Machines.
@@ -459,10 +466,6 @@ gameplay:
   # WARNING: INCOMPLETE
   # Default: false
   enableCompass: false
-
-  disableDrift: true
-
-  babyMode: false
 
 # Config options for Mod Compatibility
 compat:

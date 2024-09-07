@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "gtceu:item/super_portable_item_storage_cell",
-    "layer1": "ae2:item/portable_cell_led"
-  }
-}

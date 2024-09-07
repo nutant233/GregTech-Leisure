@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all":"kubejs:block/power_module",
-    "up": "kubejs:block/module",
-    "down": "kubejs:block/module"
-  }
-}

@@ -6,25 +6,10 @@
 	icon: "gtceu:iv_electric_motor"
 	id: "3B3502FBD9F2C4CE"
 	order_index: 5
-	quest_links: [
-		{
-			id: "30F257148C68333B"
-			linked_quest: "2E368B29B19E24FB"
-			x: -5.0d
-			y: -5.0d
-		}
-		{
-			id: "2B4E585C4127E93D"
-			linked_quest: "169F331B1D2B9DFE"
-			shape: "rsquare"
-			size: 1.5d
-			x: 2.0d
-			y: -6.5d
-		}
-	]
+	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["169F331B1D2B9DFE"]
+			dependencies: ["148A5C927A0DCED1"]
 			description: ["可以是最后一种搅拌机"]
 			id: "0526B4AC0CAF99A5"
 			tasks: [{
@@ -32,14 +17,11 @@
 				item: "gtceu:iv_mixer"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -6.5d
+			x: 0.0d
+			y: 2.0d
 		}
 		{
-			dependencies: [
-				"0526B4AC0CAF99A5"
-				"5318093DC9D0A3AA"
-			]
+			dependencies: ["0526B4AC0CAF99A5"]
 			description: ["来了一堆锭"]
 			id: "4058D1416D94BABB"
 			tasks: [
@@ -64,8 +46,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: -8.0d
+			x: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["4058D1416D94BABB"]
@@ -76,8 +58,8 @@
 			]
 			icon: "gtceu:alloy_blast_smelter"
 			id: "1F0956C3BD4745A1"
-			shape: "gear"
-			size: 1.3d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [
 				{
 					id: "369FD15BD477C9E7"
@@ -91,8 +73,8 @@
 					type: "item"
 				}
 			]
-			x: 5.5d
-			y: -8.0d
+			x: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1F0956C3BD4745A1"]
@@ -112,25 +94,26 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
-			y: -8.0d
+			x: 2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
 				"0526B4AC0CAF99A5"
-				"423A9192EABB347B"
+				"15580C25FF239402"
 			]
 			description: ["LuV阶段主要材料"]
+			hide_dependent_lines: true
 			id: "4BFA114E12BCB163"
 			shape: "rsquare"
-			size: 1.0d
+			size: 2.0d
 			tasks: [{
 				id: "121BAC69F16DF2AF"
 				item: "gtceu:rhodium_plated_palladium_ingot"
 				type: "item"
 			}]
-			x: 5.5d
-			y: -6.5d
+			x: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["150F3113E9012C2F"]
@@ -144,25 +127,22 @@
 				item: "gtceu:indium_dust"
 				type: "item"
 			}]
-			x: -3.0d
-			y: -6.5d
+			x: 12.0d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"3EAC914AA2073B05"
-				"35254A0EC193DF45"
-			]
+			description: ["可以用磷化铟，也可以用量子之眼"]
 			id: "68A3D32BFF9BF7F3"
 			tasks: [{
 				id: "05E8D6C7043D0BCD"
 				item: "gtceu:qbit_cpu_chip"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -6.5d
+			x: 18.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["5318093DC9D0A3AA"]
+			dependencies: ["38480A52A13DA157"]
 			description: ["高速钢(HSS)是更耐磨的钢合金"]
 			id: "62B67704211A105D"
 			tasks: [{
@@ -170,8 +150,8 @@
 				item: "gtceu:hssg_ingot"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -2.0d
+			x: 6.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -184,8 +164,8 @@
 				item: "gtceu:hssg_coil_block"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -3.5d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["7DCA0B7C9F3C3ACF"]
@@ -202,8 +182,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: -2.0d
+			x: 8.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -240,31 +220,35 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: -3.5d
+			x: 10.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["169F331B1D2B9DFE"]
+			dependencies: ["38480A52A13DA157"]
+			hide_dependent_lines: true
 			id: "079CD9FD65CB2ED2"
 			tasks: [{
 				id: "6C5DFE407694E794"
 				item: "gtceu:iv_assembler"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -5.0d
+			x: 8.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["66C0D17BAE340EB4"]
-			description: ["比较麻烦,且后期需求量很大"]
+			description: [
+				"PBI新的塑料"
+				"比较麻烦,且后期需求量很大"
+			]
 			id: "7531D52AF313CEEB"
 			tasks: [{
 				id: "647AACA023F507D1"
 				item: "gtceu:polybenzimidazole_plate"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -0.5d
+			title: "新的塑料"
+			x: 8.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -279,8 +263,8 @@
 				item: "gtceu:quantum_processor"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -5.0d
+			x: 16.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["31AC84CBD7C26566"]
@@ -290,19 +274,21 @@
 				item: "gtceu:quantum_processor_assembly"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -3.5d
+			x: 16.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["3F0D5B17665DF1CE"]
 			id: "506BE1A622532375"
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "4A198917EC175743"
 				item: "gtceu:quantum_processor_computer"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -2.0d
+			x: 16.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["506BE1A622532375"]
@@ -312,25 +298,25 @@
 				item: "gtceu:quantum_processor_mainframe"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -0.5d
+			x: 18.0d
+			y: 8.0d
 		}
 		{
-			dependencies: [
-				"2E368B29B19E24FB"
-				"015FC8C9B776ECB7"
-			]
+			dependencies: ["631707E722744406"]
 			id: "0FCA3B71669C8122"
 			tasks: [{
 				id: "431CBC4C1A32BCEC"
 				item: "gtceu:quantum_star"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -5.0d
+			x: 14.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["0FCA3B71669C8122"]
+			dependencies: [
+				"0FCA3B71669C8122"
+				"66DD7C8B90B058EA"
+			]
 			id: "27BA6EBA81622516"
 			tasks: [
 				{
@@ -344,15 +330,15 @@
 					type: "item"
 				}
 			]
-			x: -3.5d
-			y: -3.5d
+			x: 16.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
-				"27BA6EBA81622516"
-				"2CE5738B7A8225A6"
 				"148A5C927A0DCED1"
-				"15F08D296DE33A44"
+				"3AD2F40B030A6BC8"
+				"382F3E7588A0AD5E"
+				"2CE5738B7A8225A6"
 			]
 			description: [
 				"很贵，但IV之后必备。"
@@ -360,15 +346,15 @@
 				"物品和流体无需有序输入"
 			]
 			id: "7F8C2ECC7CE2BF20"
-			shape: "gear"
-			size: 1.5d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "07456C679DEEEE04"
 				item: "gtceu:assembly_line"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -3.5d
+			x: 12.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["27BA6EBA81622516"]
@@ -378,25 +364,24 @@
 				item: "gtceu:iv_circuit_assembler"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -3.5d
+			x: 16.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["027B25761BD830C8"]
 			description: ["不能使用2能源仓升压"]
 			id: "30A0D221474FB44A"
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "074FB16F523697D0"
 				item: "gtceu:large_circuit_assembler"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -2.0d
+			x: 18.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["66C0D17BAE340EB4"]
 			icon: "gtceu:indium_concentrate_bucket"
 			id: "150F3113E9012C2F"
 			tasks: [{
@@ -404,13 +389,12 @@
 				title: "铟富集溶液"
 				type: "checkmark"
 			}]
-			x: -3.0d
-			y: -8.0d
+			x: 10.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
 				"3EAC914AA2073B05"
-				"434FF5775996562E"
 				"3B79A329196883EF"
 			]
 			id: "15F08D296DE33A44"
@@ -419,24 +403,24 @@
 				item: "gtceu:hpic_chip"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -6.5d
+			x: 12.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
 				"15F08D296DE33A44"
 				"079CD9FD65CB2ED2"
-				"169F331B1D2B9DFE"
 			]
 			description: ["升级"]
+			hide_dependent_lines: true
 			id: "15580C25FF239402"
 			tasks: [{
 				id: "1C9F7F0D50ED81F7"
 				item: "gtceu:iv_energy_input_hatch"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -5.0d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -452,7 +436,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: -5.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["02D426BE0947F123"]
@@ -462,11 +446,10 @@
 				item: "gtceu:iv_field_generator"
 				type: "item"
 			}]
-			x: 5.5d
-			y: -3.5d
+			x: 4.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["78F4CDE52001D410"]
 			description: [
 				"扫描是研究的第一步，将JEI中显示的物品与一个闪存一起放置以进行扫描，这将消耗该物品并将数据放入闪存中。"
 				"稍后，配方将需要不同的数据存储物品进行研究，例如数据球，这个过程将保持不变，但将使用不同的数据存储物品。"
@@ -477,8 +460,8 @@
 				item: "gtceu:data_access_hatch"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -3.5d
+			x: 12.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -487,15 +470,15 @@
 			]
 			description: ["大容量数据存储，并且可以为多个装配线提供数据"]
 			id: "5F0A175D6704A8D0"
-			shape: "gear"
+			shape: "rsquare"
 			size: 1.0d
 			tasks: [{
 				id: "488C1A3FC0D7CCB6"
 				item: "gtceu:data_bank"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -2.0d
+			x: 14.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["5F0A175D6704A8D0"]
@@ -506,13 +489,13 @@
 				item: "gtceu:advanced_data_access_hatch"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -0.5d
+			x: 14.0d
+			y: 8.0d
 		}
 		{
 			description: [
-				"你可以从钕矿石，独居石或从不同的矿石中获取它作为副产品."
-				"为了获得更多稀土金属,应使用尽可能高等级的离心机,因为额外产物的几率更高."
+				"你可以从钕矿石，独居石或从不同的矿石中获取它作为副产品。"
+				"现在你需要做稀土处理了，你现在需要做成稀土氯化物然后加磁铁离心"
 			]
 			id: "6B71EE1A869ABCD5"
 			tasks: [{
@@ -520,14 +503,11 @@
 				item: "gtceu:rare_earth_dust"
 				type: "item"
 			}]
-			x: 5.5d
-			y: -5.0d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
-			dependencies: [
-				"169F331B1D2B9DFE"
-				"148A5C927A0DCED1"
-			]
+			dependencies: ["148A5C927A0DCED1"]
 			description: ["可以是最后一种切割机"]
 			id: "3B79A329196883EF"
 			tasks: [{
@@ -535,58 +515,60 @@
 				item: "gtceu:iv_cutter"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -6.5d
+			x: 10.0d
+			y: 2.0d
 		}
 		{
-			dependencies: ["6E3CDFF8C93D440B"]
+			dependencies: ["38480A52A13DA157"]
+			description: ["更高级的玻璃"]
+			hide_dependent_lines: true
 			id: "148A5C927A0DCED1"
 			tasks: [{
 				id: "62F5055E01F9396B"
 				item: "gtceu:laminated_glass"
 				type: "item"
 			}]
-			x: -1.5d
-			y: -5.0d
+			title: "新的玻璃"
+			x: 4.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["5E077F4541D0F4B1"]
 			id: "22795A09A3BD7344"
 			tasks: [{
 				id: "7117E2CF984E0BF0"
 				item: "gtceu:fiber_reinforced_printed_circuit_board"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -6.5d
+			x: 18.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["0F22A8CE63F369CA"]
 			id: "52070757274DC2B4"
-			shape: "gear"
-			size: 1.3d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "2C69C2E860BDFB1B"
 				item: "gtceu:blaze_blast_furnace"
 				type: "item"
 			}]
-			x: 5.5d
-			y: -2.0d
+			x: 4.0d
+			y: 8.0d
 		}
 		{
-			dependencies: ["169F331B1D2B9DFE"]
+			dependencies: ["38480A52A13DA157"]
 			description: ["用不完的蒸汽"]
 			id: "5744F6172D4E112B"
 			optional: true
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "7D98A152EE340D0E"
 				item: "gtceu:dimensionally_transcendent_steam_boiler"
 				type: "item"
 			}]
 			x: 2.0d
-			y: -8.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["0F22A8CE63F369CA"]
@@ -618,13 +600,15 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
-			y: -3.5d
+			title: "夸克高科套装"
+			x: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
 				"7DCA0B7C9F3C3ACF"
 				"4DE912833E078CD0"
+				"02D426BE0947F123"
 			]
 			id: "00E7CB7CD9296B1A"
 			tasks: [{
@@ -632,8 +616,8 @@
 				item: "ad_astra:ostrum_ingot"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -0.5d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -669,11 +653,11 @@
 					type: "item"
 				}
 			]
-			x: 5.5d
-			y: -0.5d
+			x: 6.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["6B71EE1A869ABCD5"]
+			dependencies: ["1F0956C3BD4745A1"]
 			id: "2AA63D77B0E86D2E"
 			rewards: [{
 				id: "74F83E0CD43D15C7"
@@ -685,47 +669,35 @@
 				item: "gtceu:fall_king_ingot"
 				type: "item"
 			}]
-			x: 7.0d
-			y: -5.0d
+			x: 0.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["7F8C2ECC7CE2BF20"]
 			description: ["可以将机器拆解，使用装配线与组装机配方"]
 			id: "02797C478FA2BEFC"
-			shape: "gear"
-			size: 1.2d
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "10E4CFCD88F31954"
 				item: "gtceu:disassembly"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -1.7999999999999998d
+			x: 14.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1F0956C3BD4745A1"]
 			description: ["高温用于发电，低温用于生产资源"]
 			id: "365298DB6520227A"
-			shape: "gear"
-			tasks: [
-				{
-					id: "2599970FD2D9C38B"
-					item: "gtceu:fission_reactor"
-					type: "item"
-				}
-				{
-					id: "5AB7E0809991C089"
-					item: "gtceu:fission_fuel_assembly"
-					type: "item"
-				}
-				{
-					id: "3BD80B994699252C"
-					item: "gtceu:cooler"
-					type: "item"
-				}
-			]
-			x: 5.5d
-			y: -9.5d
+			shape: "rsquare"
+			tasks: [{
+				id: "2599970FD2D9C38B"
+				item: "gtceu:fission_reactor"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["27BA6EBA81622516"]
@@ -743,8 +715,108 @@
 					type: "item"
 				}
 			]
-			x: -3.5d
-			y: -2.0d
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7D8241E627194099"]
+			id: "3AD2F40B030A6BC8"
+			tasks: [{
+				id: "311C889A68CDBC37"
+				item: "gtceu:assembly_line_unit"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"20D5748D17E2C06D"
+				"17365ABC639496E6"
+			]
+			id: "7D8241E627194099"
+			tasks: [{
+				id: "21095623F1E9DBD4"
+				item: "gtceu:ruridit_ingot"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"15F08D296DE33A44"
+				"27BA6EBA81622516"
+			]
+			hide_dependency_lines: true
+			id: "382F3E7588A0AD5E"
+			tasks: [{
+				id: "330473DB377410CA"
+				item: "gtceu:assembly_line_casing"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["17365ABC639496E6"]
+			id: "66DD7C8B90B058EA"
+			tasks: [{
+				id: "3E9B5EE61E385F61"
+				item: "gtceu:iridium_ingot"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2CE5738B7A8225A6"]
+			description: ["装配线的部分配方需要扫描过的闪存"]
+			id: "7A4A5E773AC5C003"
+			tasks: [{
+				id: "04B8AC9FE06215AC"
+				item: "gtceu:iv_scanner"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["38480A52A13DA157"]
+			description: ["你的线缆得开始用更高级的橡胶了"]
+			id: "7794BE986C48C92D"
+			tasks: [
+				{
+					id: "3BC56557E74FF20C"
+					item: "gtceu:silicone_rubber_plate"
+					type: "item"
+				}
+				{
+					id: "3BD63C09996689EA"
+					item: "gtceu:styrene_butadiene_rubber_plate"
+					type: "item"
+				}
+			]
+			title: "新的橡胶"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"42129A63D97DDF28"
+				"4C43D30FD9B89965"
+			]
+			hide_dependent_lines: true
+			id: "38480A52A13DA157"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "01068F963A96E633"
+				title: "强导压IV"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Tier5-IV"]

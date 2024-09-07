@@ -263,14 +263,14 @@ ServerEvents.recipes((event) => {
         .duration(400)
 
     function getCellComponent(index) {
-        return index > 4 ? `gtceu:cell_component_${4 ** (index - 5)}m` : `ae2:cell_component_${4 ** index}k`
+        return index > 4 ? `gtlcore:cell_component_${4 ** (index - 5)}m` : `ae2:cell_component_${4 ** index}k`
     }
 
     for (let index = 0; index < 5; index++) {
-        event.shapeless(`gtceu:${4 ** index}m_storage`, ["ae2:crafting_unit", getCellComponent(index + 5)])
-        event.shapeless(`gtceu:item_storage_cell_${4 ** index}m`, ["ae2:item_cell_housing", getCellComponent(index + 5)])
-        event.shapeless(`gtceu:fluid_storage_cell_${4 ** index}m`, ["ae2:fluid_cell_housing", getCellComponent(index + 5)])
-        event.shaped(`gtceu:item_storage_cell_${4 ** index}m`, [
+        event.shapeless(`gtlcore:${4 ** index}m_storage`, ["ae2:crafting_unit", getCellComponent(index + 5)])
+        event.shapeless(`gtlcore:item_storage_cell_${4 ** index}m`, ["ae2:item_cell_housing", getCellComponent(index + 5)])
+        event.shapeless(`gtlcore:fluid_storage_cell_${4 ** index}m`, ["ae2:fluid_cell_housing", getCellComponent(index + 5)])
+        event.shaped(`gtlcore:item_storage_cell_${4 ** index}m`, [
             "ABA",
             "BDB",
             "CCC"
@@ -280,7 +280,7 @@ ServerEvents.recipes((event) => {
             C: "minecraft:iron_ingot",
             D: getCellComponent(index + 5)
         })
-        event.shaped(`gtceu:fluid_storage_cell_${4 ** index}m`, [
+        event.shaped(`gtlcore:fluid_storage_cell_${4 ** index}m`, [
             "ABA",
             "BDB",
             "CCC"
@@ -301,21 +301,21 @@ ServerEvents.recipes((event) => {
             .duration(200)
     }
 
-    gtr.assembly_line("gtceu:256g_storage")
-        .itemInputs("ae2:crafting_unit", "16x gtceu:cell_component_256m", "gtceu:data_bank", "16x gtceu:data_orb", "4x #gtceu:circuits/uhv", "4x gtceu:double_red_steel_plate")
+    gtr.assembly_line("gtlcore:max_storage")
+        .itemInputs("ae2:crafting_unit", "16x gtlcore:cell_component_256m", "gtceu:data_bank", "16x gtceu:data_orb", "4x #gtceu:circuits/uhv", "4x gtceu:double_red_steel_plate")
         .inputFluids("gtceu:soldering_alloy 576", "gtceu:pcb_coolant 2000")
-        .itemOutputs("gtceu:256g_storage")
+        .itemOutputs("gtlcore:max_storage")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(400)
-    ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of("gtceu:256m_storage")).dataStack(Item.of("gtceu:data_stick")).EUt(GTValues.VA[GTValues.LuV]).duration(1200))
+    ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Registries.getItemStack("gtlcore:256m_storage")).dataStack(Registries.getItemStack("gtceu:data_stick")).EUt(GTValues.VA[GTValues.LuV]).duration(1200))
 
     gtr.assembly_line("kubejs:infinite_cell_component")
-        .itemInputs("16x gtceu:256g_storage", "gtceu:data_bank", "16x gtceu:data_module", "64x ae2:creative_energy_cell", "64x #gtceu:circuits/uev", "64x gtceu:ruthenium_trinium_americium_neutronate_hex_wire", "4x gtceu:double_neutronium_plate")
+        .itemInputs("16x gtlcore:max_storage", "gtceu:data_bank", "16x gtceu:data_module", "64x ae2:creative_energy_cell", "64x #gtceu:circuits/uev", "64x gtceu:ruthenium_trinium_americium_neutronate_hex_wire", "4x gtceu:double_neutronium_plate")
         .inputFluids("gtceu:mutated_living_solder 20000","gtceu:tairitsu 20000", "gtceu:pcb_coolant 100000")
         .itemOutputs("kubejs:infinite_cell_component")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(2400)
-    ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of("gtceu:cell_component_256m")).dataStack(Item.of("gtceu:data_orb")).EUt(GTValues.VA[GTValues.UV]).duration(2400))
+    ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Registries.getItemStack("gtlcore:cell_component_256m")).dataStack(Registries.getItemStack("gtceu:data_orb")).EUt(GTValues.VA[GTValues.UV]).duration(2400))
 
     for (let index = 1; index < 5; index++) {
         gtr.assembler(`mae2:${4 ** index}x_crafting_accelerator`)

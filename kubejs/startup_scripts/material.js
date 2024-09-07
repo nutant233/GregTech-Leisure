@@ -1,5 +1,11 @@
 // priority: 100
 const LDLib = Java.loadClass("com.lowdragmc.lowdraglib.LDLib")
+const $DustProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty")
+const $IngotProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty")
+const $FluidProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty")
+const $OreProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty")
+const $BlastProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty")
+const $MaterialFlag = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag")
 GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create("orichalcum", 320, 320, -1, null, "Or", false)
     event.create("adamantium", 380, 380, -1, null, "An", false)
@@ -55,22 +61,6 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create("quantanium", 800, 800, -1, null, "Qt", false)
 })
 GTCEuStartupEvents.registry("gtceu:material", event => {
-    GTBlocks.createActiveCasing("power_core", "block/variant/power_core")
-    GTBlocks.createActiveCasing("hyper_core", "block/variant/hyper_core")
-    GTBlocks.createActiveCasing("super_computation_component", "block/variant/super_computation_component")
-    GTBlocks.createActiveCasing("super_cooler_component", "block/variant/super_cooler_component")
-    GTBlocks.createActiveCasing("spacetimecontinuumripper", "block/variant/spacetimecontinuumripper")
-    GTBlocks.createActiveCasing("spacetimebendingcore", "block/variant/spacetimebendingcore")
-    GTBlocks.createActiveCasing("qft_coil", "block/variant/qft_coil")
-    GTBlocks.createActiveCasing("fission_fuel_assembly", "block/variant/fission_fuel_assembly")
-    GTBlocks.createActiveCasing("cooler", "block/variant/cooler")
-    const $DustProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty")
-    const $IngotProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty")
-    const $FluidProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty")
-    const $WireProperties = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.WireProperties")
-    const $OreProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty")
-    const $BlastProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty")
-    const $MaterialFlag = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlag")
     const FluidStorageKey = "fluid(com.gregtechceu.gtceu.api.fluids.store.FluidStorageKey,com.gregtechceu.gtceu.api.fluids.FluidBuilder)"
 
     const GENERATE_NANOSWARM = new $MaterialFlag.Builder("generate_nanoswarm")
@@ -104,9 +94,8 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .generationCondition(mat => mat.hasFlag(GENERATE_MILLED))
 
     //element
-    GTMaterials.Mendelevium.setProperty(PropertyKey.WIRE, new $WireProperties(GTValues.V[GTValues.UHV], 4, 16))
-    GTMaterials.Neutronium.addFlags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_SPRING_SMALL)
-    GTMaterials.Neutronium.setProperty(PropertyKey.WIRE, new $WireProperties(GTValues.V[GTValues.UIV], 2, 64))
+    GTMaterials.Aluminium.addFlags(GTMaterialFlags.GENERATE_ROTOR)
+    GTMaterials.Neutronium.addFlags(GENERATE_NANOSWARM)
     GTMaterials.Carbon.setProperty(PropertyKey.INGOT, new $IngotProperty())
     GTMaterials.RadAway.addFlags(GTMaterialFlags.DISABLE_DECOMPOSITION)
     GTMaterials.Platinum.addFlags(GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_SPRING_SMALL)
@@ -115,7 +104,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.NaquadahAlloy.addFlags(GTMaterialFlags.GENERATE_FINE_WIRE)
     GTMaterials.RutheniumTriniumAmericiumNeutronate.addFlags(GTMaterialFlags.GENERATE_FINE_WIRE)
     GTMaterials.TitaniumTungstenCarbide.addFlags(GTMaterialFlags.GENERATE_GEAR)
-    GTMaterials.Trinium.addFlags(GTMaterialFlags.GENERATE_FRAME)
     GTMaterials.Europium.addFlags(GTMaterialFlags.GENERATE_SPRING_SMALL)
     GTMaterials.Germanium.setProperty(PropertyKey.INGOT, new $IngotProperty())
     GTMaterials.Germanium.addFlags(GTMaterialFlags.GENERATE_PLATE)
@@ -144,7 +132,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.Ytterbium.setProperty(PropertyKey.DUST, new $DustProperty())
     GTMaterials.Scandium.setProperty(PropertyKey.DUST, new $DustProperty())
     GTMaterials.Scandium.setProperty(PropertyKey.FLUID, new $FluidProperty(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()))
-    GTMaterials.Naquadria.addFlags(GTMaterialFlags.GENERATE_FRAME)
     GTMaterials.NaquadahEnriched.addFlags(GTMaterialFlags.GENERATE_FRAME)
     GTMaterials.NickelZincFerrite.addFlags(GTMaterialFlags.GENERATE_FOIL)
     GTMaterials.Promethium.setProperty(PropertyKey.DUST, new $DustProperty())
@@ -581,7 +568,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet(GTMaterialIconSet.METALLIC)
         .flags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_FINE_WIRE)
         .cableProperties(GTValues.V[GTValues.UIV], 32, 0, true)
-        .toolStats(ToolProperty.Builder.of(6.0, 100.0, 64, 6, GTToolType.VAJRA).magnetic().unbreakable().build())
+        .toolStats(ToolProperty.Builder.of(6.0, 100.0, 64, 6, GTLToolType.VAJRA).magnetic().unbreakable().build())
 
     event.create("legendarium")
         .ingot()
@@ -761,7 +748,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .fluid()
         .element(GTElements.get("transcendentmetal"))
         .color(0xffffff)
-        .iconSet(Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.info.CustomRendererMaterialIconSet").CUSTOM_TRANSCENDENT_MENTAL)
+        .iconSet(CustomRendererMaterialIconSet.CUSTOM_TRANSCENDENT_MENTAL)
         .flags(GENERATE_NANOSWARM, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_ROTOR, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_LONG_ROD)
 
     event.create("uruium")
@@ -3824,6 +3811,11 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .color(0x104e8b)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
         .iconSet(GTMaterialIconSet.FLUID)
+
+    event.create("special_ceramics")
+        .dust()
+        .color(0x5c5909)
+        .iconSet(GTMaterialIconSet.DULL)
 })
 GTCEuStartupEvents.materialModification(() => {
     GTMaterials.get("zirconium_hafnium_chloride").setFormula("ZrHfCl₄")

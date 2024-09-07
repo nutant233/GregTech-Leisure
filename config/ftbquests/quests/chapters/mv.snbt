@@ -2,8 +2,8 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "mv"
-	group: "53FD41080ED1E796"
-	icon: "gtceu:mv_machine_hull"
+	group: "68CBF1606D696C68"
+	icon: "gtceu:mv_electric_motor"
 	id: "6AE49AAF3BDC94C1"
 	order_index: 2
 	quest_links: [ ]
@@ -896,5 +896,6 @@
 			y: 0.0d
 		}
 	]
-	title: "中压MV"
+	subtitle: ["Tier2-MV"]
+	title: "中压"
 }

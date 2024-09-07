@@ -1,15 +1,13 @@
 // priority: 97
+const $LocalizationUtils = Java.loadClass("com.lowdragmc.lowdraglib.utils.LocalizationUtils")
+const $ICoilType = Java.loadClass("com.gregtechceu.gtceu.api.block.ICoilType")
+const $ArrayList = Java.loadClass("java.util.ArrayList")
+const $ItemStack = Java.loadClass("net.minecraft.world.item.ItemStack")
+const $CycleItemStackHandler = Java.loadClass("com.lowdragmc.lowdraglib.utils.CycleItemStackHandler")
+const $I18n = LDLib.isClient() ? Java.loadClass("net.minecraft.client.resources.language.I18n") : null
+const GenerateDisassembly = Java.loadClass("org.gtlcore.gtlcore.data.recipe.GenerateDisassembly")
+const ResearchManager = Java.loadClass("com.gregtechceu.gtceu.utils.ResearchManager")
 GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
-    const $LocalizationUtils = Java.loadClass("com.lowdragmc.lowdraglib.utils.LocalizationUtils")
-    const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUtil")
-    const $ICoilType = Java.loadClass("com.gregtechceu.gtceu.api.block.ICoilType")
-    const $ArrayList = Java.loadClass("java.util.ArrayList")
-    const $ItemStack = Java.loadClass("net.minecraft.world.item.ItemStack")
-    const $CycleItemStackHandler = Java.loadClass("com.lowdragmc.lowdraglib.utils.CycleItemStackHandler")
-    const $I18n = LDLib.isClient() ? Java.loadClass("net.minecraft.client.resources.language.I18n") : null
-    const GenerateDisassembly = Java.loadClass("com.gregtechceu.gtceu.data.recipe.GenerateDisassembly")
-    const ResearchManager = Java.loadClass("com.gregtechceu.gtceu.utils.ResearchManager")
-
     event.create("greenhouse")
         .setEUIO("in")
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
@@ -17,32 +15,11 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_BATH, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.COOLING)
 
-    function getSCTier(tier) {
-        switch (tier) {
-            case 3:
-                return $I18n.get("gtceu.tier.ultimate")
-            case 2:
-                return $I18n.get("gtceu.tier.advanced")
-            default:
-                return $I18n.get("gtceu.tier.base")
-        }
-    }
-
-    GTRecipeTypes.register("stellar_forge", "multiblock")
-        .setEUIO("in")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(3, 2, 9, 2)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.ARC)
-        .addDataInfo(data => {
-            if (LDLib.isClient()) return $LocalizationUtils.format("gtceu.recipe.stellar_containment_tier", getSCTier(data.getInt("SCTier")))
-        })
-
     GTRecipeTypes.register("dimensionally_transcendent_plasma_forge", "multiblock")
         .setMaxIOSize(2, 2, 2, 2)
         .setEUIO("in")
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARC_FURNACE, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.DTPF)
+        .setSound(GTSoundEntries.ARC)
         .addDataInfo(data => {
             return $LocalizationUtils.format("gtceu.recipe.temperature", $FormattingUtil.formatNumbers(data.getInt("ebf_temp")))
         })
@@ -166,20 +143,6 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.COMBUSTION)
 
-    event.create("naquadah_reactor")
-        .setEUIO("out")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(0, 0, 1, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.COMBUSTION)
-
-    event.create("rocket_engine")
-        .setEUIO("out")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(0, 0, 1, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.JET_ENGINE)
-
     event.create("cosmos_simulation")
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(1, 120, 1, 18)
@@ -248,12 +211,6 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .onRecipeBuild((recipeBuilder, provider) => {
             GenerateDisassembly.generateDisassembly(recipeBuilder, provider)
         })
-
-    event.create("space_elevator")
-        .setEUIO("in")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(1, 0, 0, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
 
     GTRecipeTypes.register("assembler_module", "multiblock")
         .setEUIO("in")
@@ -350,7 +307,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(0, 0, 2, 1)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.FUSIONLOOP)
+        .setSound(GTSoundEntries.ARC)
 
     GTRecipeTypes.register("dimensional_focus_engraving_array", "multiblock")
         .setEUIO("in")
@@ -405,13 +362,6 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE)
 
-    event.create("super_computation")
-        .setEUIO("in")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(0, 0, 0, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.COMPUTATION)
-
     event.create("dragon_egg_copier")
         .setEUIO("in")
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
@@ -455,13 +405,6 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         .setEUIO("in")
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(2, 2, 2, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.MACERATOR)
-
-    event.create("slaughterhouse")
-        .setEUIO("in")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(1, 0, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.MACERATOR)
 
@@ -526,15 +469,6 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
         })
         .setSound(GTSoundEntries.SCIENCE)
 
-    GTRecipeTypes.register("fission_reactor", "multiblock")
-        .setMaxIOSize(1, 1, 0, 0)
-        .setEUIO("in")
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.ARC)
-        .addDataInfo(data => {
-            return $LocalizationUtils.format("gtceu.recipe.frheat", $FormattingUtil.formatNumbers(data.getInt("FRheat")))
-        })
-
     GTRecipeTypes.register("fuel_refining", "multiblock")
         .setMaxIOSize(3, 0, 6, 1)
         .setEUIO("in")
@@ -578,15 +512,6 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
             widgetGroup.addWidget(new SlotWidget(new $CycleItemStackHandler(items), 0, widgetGroup.getSize().width - 25, widgetGroup.getSize().height - 32, false, false))
         })
         .setSound(GTSoundEntries.ARC)
-
-    GTRecipeTypes.register("component_assembly_line", "multiblock")
-        .setMaxIOSize(9, 1, 9, 0)
-        .setEUIO("in")
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .addDataInfo(data => {
-            return $LocalizationUtils.format("gtceu.recipe.ca_tier", GTValues.VN[data.getInt("CATier")])
-        })
-        .setSound(GTSoundEntries.ASSEMBLER)
 
     function getGrindball(tier) {
         switch (tier) {

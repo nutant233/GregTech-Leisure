@@ -95,7 +95,7 @@ ServerEvents.recipes((event) => {
     gtr.space_elevator("1")
         .circuit(1)
         .duration(400)
-        .CWUt(16)
+        .CWUt(128)
         .EUt(GTValues.VA[GTValues.UV])
 
     gtr.door_of_create("1")
@@ -135,22 +135,11 @@ ServerEvents.recipes((event) => {
 
 const $GTCapabilityHelper = Java.loadClass("com.gregtechceu.gtceu.api.capability.GTCapabilityHelper")
 const $DamageTypes = Java.loadClass("net.minecraft.world.damagesource.DamageTypes")
-const $MenuHooks = Java.loadClass("earth.terrarium.botarium.common.menu.MenuHooks")
-const $PlanetsMenuProvider = Java.loadClass("earth.terrarium.adastra.common.menus.base.PlanetsMenuProvider")
 const $WirelessEnergyManager = Java.loadClass("com.hepdd.gtmthings.api.misc.WirelessEnergyManager")
 const $BigInteger = Java.loadClass("java.math.BigInteger")
 const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
 const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUtil")
 const $ClipContext = Java.loadClass("net.minecraft.world.level.ClipContext")
-
-BlockEvents.rightClicked("kubejs:antimatter_charge", event => {
-    if (event.player.getHeldItem("main_hand") == null && event.player.getHeldItem("off_hand") == null) {
-        event.block.set("minecraft:air")
-        event.getLevel().createExplosion(event.block.x, event.block.y, event.block.z).strength(100).explosionMode("tnt").explode()
-        let entities = event.getLevel().getEntitiesWithin(AABB.of(event.block.x - 100, event.block.y - 50, event.block.z - 100, event.block.x + 100, event.block.y + 50, event.block.z + 100))
-        for (let entity of entities) { if (entity.isLiving()) { entity.attack(1000000) } }
-    }
-})
 
 BlockEvents.rightClicked("gtceu:sphere_of_harmony", event => {
     var machine = $GTCapabilityHelper.getRecipeLogic(event.level, event.block.pos, null).getMachine()
@@ -470,11 +459,6 @@ NetworkEvents.dataReceived("global.flyingspeedKey.consumeClick", (event) => {
     }
 })
 
-NetworkEvents.dataReceived("gt.se.st", event => {
-    event.player.addTag("spaceelevatorst")
-    $MenuHooks.openMenu(event.player, new $PlanetsMenuProvider())
-})
-
 NetworkEvents.dataReceived("global.nightvisionKey.consumeClick", event => {
     if (event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]" || event.player.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]" || event.player.getArmorSlots().toString() == "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]") {
         if (event.player.persistentData.getBoolean("nv")) {
@@ -553,18 +537,6 @@ BlockEvents.leftClicked("minecraft:bedrock", (event) => {
 PlayerEvents.loggedIn(event => {
     if (event.player.persistentData.getInt("pearl") == null) {
         event.player.persistentData.putInt("pearl", 0)
-    }
-})
-
-BlockEvents.broken("gtceu:active_transformer", event => {
-    if ($GTCapabilityHelper.getRecipeLogic(event.level, event.block.pos, null).getMachine().self().isFormed()) {
-        let pos = event.block.pos
-        let coordinates = [pos.offset(1, 0, 0), pos.offset(-1, 0, 0), pos.offset(0, 0, -1), pos.offset(0, 0, 1), pos.offset(0, 1, 0), pos.offset(0, -1, 0)]
-        for (let i in coordinates) {
-            if (event.level.getBlock(coordinates[i]) == "gtceu:superconducting_coil") {
-                event.getLevel().createExplosion(coordinates[i].x, coordinates[i].y, coordinates[i].z).strength(20).explosionMode("tnt").explode()
-            }
-        }
     }
 })
 
