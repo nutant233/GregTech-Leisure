@@ -51,6 +51,7 @@
 				"34D6F0DF329B1877"
 				"369DCD1E26334632"
 				"2858C1A89BAF2624"
+				"24585C3114095227"
 			]
 			description: ["该阶段的核心机器"]
 			id: "7523FB4AAB1F89C3"
@@ -649,18 +650,17 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["39F73A63746EE6E8"]
-			description: ["流体加热器的激光版本，拥有无损超频，使用温度超频机制，温度每提升900K，并行数×2"]
-			id: "411A274C7666B113"
-			shape: "gear"
-			size: 1.0d
+			dependencies: ["588C2C0BED069F41"]
+			id: "0ED237B0CE3DDF59"
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
-				id: "54479AE6472F8C4F"
-				item: "gtceu:mega_fluid_heater"
+				id: "3D1314CB02CBCEAC"
+				item: "gtceu:uev_fusion_reactor"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 6.0d
+			x: 12.0d
+			y: 8.0d
 		}
 	]
 	subtitle: ["Tier10-UEV"]

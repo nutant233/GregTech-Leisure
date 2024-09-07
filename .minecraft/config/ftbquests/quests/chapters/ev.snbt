@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "ev"
 	group: "68CBF1606D696C68"
-	icon: "gtceu:ev_machine_hull"
+	icon: "gtceu:ev_electric_motor"
 	id: "68D3F02D34DEAF83"
 	order_index: 4
 	quest_links: [ ]
@@ -1503,5 +1503,6 @@
 			y: 2.0d
 		}
 	]
-	title: "超高压EV"
+	subtitle: ["Tier4-EV"]
+	title: "超高压"
 }

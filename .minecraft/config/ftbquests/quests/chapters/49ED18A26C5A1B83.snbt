@@ -1727,8 +1727,8 @@
 				item: "gtceu:power_substation"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 12.0d
+			x: 12.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["6D3BE9E3D76C71F9"]
@@ -1739,7 +1739,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 12.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["6D3BE9E3D76C71F9"]
@@ -1749,7 +1749,7 @@
 				item: "gtceu:luv_fusion_reactor"
 				type: "item"
 			}]
-			x: -2.0d
+			x: 4.0d
 			y: 14.0d
 		}
 		{
@@ -1763,7 +1763,7 @@
 				item: "gtceu:zpm_fusion_reactor"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 6.0d
 			y: 14.0d
 		}
 		{
@@ -1777,7 +1777,7 @@
 				item: "gtceu:uv_fusion_reactor"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 8.0d
 			y: 14.0d
 		}
 		{
@@ -1789,8 +1789,8 @@
 				item: "gtceu:super_particle_collider"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 14.0d
+			x: 14.0d
+			y: 18.0d
 		}
 		{
 			dependencies: ["5672B9E868EDBE4D"]
@@ -1800,8 +1800,8 @@
 				item: "gtceu:petrochemical_plant"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 6.0d
+			x: 12.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["5672B9E868EDBE4D"]
@@ -1811,22 +1811,19 @@
 				item: "gtceu:integrated_ore_processor"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 6.0d
+			x: 14.0d
+			y: 12.0d
 		}
 		{
-			dependencies: [
-				"1003B3EB3976B4AA"
-				"6A590699685D1D8A"
-			]
+			dependencies: ["6A590699685D1D8A"]
 			id: "0C18789B508763DF"
 			tasks: [{
 				id: "144461299F6741F6"
 				item: "gtceu:stellar_forge"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 14.0d
+			x: 14.0d
+			y: 16.0d
 		}
 		{
 			dependencies: [
@@ -1839,8 +1836,8 @@
 				item: "gtceu:star_ultimate_material_forge_factory"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 14.0d
+			x: 16.0d
+			y: 16.0d
 		}
 		{
 			dependencies: ["5672B9E868EDBE4D"]
@@ -2015,7 +2012,7 @@
 				item: "gtceu:pcb_factory"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 2.0d
 			y: 18.0d
 		}
 		{
@@ -2027,7 +2024,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 16.0d
+			y: 18.0d
 		}
 		{
 			dependencies: [
@@ -2041,7 +2038,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 16.0d
+			y: 18.0d
 		}
 		{
 			dependencies: [
@@ -2055,7 +2052,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 16.0d
+			y: 18.0d
 		}
 		{
 			dependencies: ["02FD5777A119864D"]
@@ -2066,7 +2063,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 16.0d
+			y: 18.0d
 		}
 		{
 			dependencies: [
@@ -2115,8 +2112,8 @@
 				item: "gtceu:bedrock_drilling_rig"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 18.0d
+			x: 4.0d
+			y: 20.0d
 		}
 		{
 			dependencies: ["65C4F7EDC0E9D99D"]
@@ -2126,8 +2123,8 @@
 				item: "gtceu:aggregation_device"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 18.0d
+			x: 6.0d
+			y: 20.0d
 		}
 		{
 			dependencies: [
@@ -2165,8 +2162,8 @@
 				item: "gtceu:qft"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 16.0d
+			x: 10.0d
+			y: 20.0d
 		}
 		{
 			dependencies: ["5019F5F1A660DB40"]
@@ -2176,8 +2173,8 @@
 				item: "gtceu:dragon_egg_copier"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 16.0d
+			x: 8.0d
+			y: 20.0d
 		}
 		{
 			dependencies: ["234661B47841AA2B"]
@@ -2187,8 +2184,8 @@
 				item: "gtceu:sphere_of_harmony"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 18.0d
+			x: 16.0d
+			y: 20.0d
 		}
 		{
 			dependencies: ["234661B47841AA2B"]
@@ -2198,7 +2195,7 @@
 				item: "gtceu:door_of_create"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 12.0d
 			y: 20.0d
 		}
 		{
@@ -2209,7 +2206,7 @@
 				item: "gtceu:max_neutron_compressor"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 14.0d
 			y: 20.0d
 		}
 		{
@@ -2220,7 +2217,7 @@
 				item: "gtceu:create_aggregation"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 18.0d
 			y: 20.0d
 		}
 		{
@@ -2231,8 +2228,8 @@
 				item: "gtceu:create_computation"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 18.0d
+			x: 22.0d
+			y: 20.0d
 		}
 		{
 			dependencies: ["3D79A180FDCC8B5B"]
@@ -2242,7 +2239,7 @@
 				item: "gtceu:gravitation_shockburst"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 20.0d
 			y: 20.0d
 		}
 		{
@@ -2356,8 +2353,8 @@
 				item: "gtceu:rare_earth_centrifugal"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 14.0d
+			x: 16.0d
+			y: 18.0d
 		}
 		{
 			dependencies: ["40405034AE9D9945"]
@@ -2633,8 +2630,8 @@
 				item: "gtceu:block_conversion_room"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 14.0d
+			x: 12.0d
+			y: 18.0d
 		}
 		{
 			dependencies: ["1443E064A0AB0B8B"]
@@ -2644,8 +2641,8 @@
 				item: "gtceu:neutron_activator"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 8.0d
+			x: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1443E064A0AB0B8B"]
@@ -2656,7 +2653,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["5672B9E868EDBE4D"]
@@ -2741,8 +2738,8 @@
 				item: "gtceu:element_copying"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 14.0d
+			x: 18.0d
+			y: 16.0d
 		}
 		{
 			id: "376F6857ABEF60BF"
@@ -2751,7 +2748,7 @@
 				id: "654C1D74F045820D"
 				type: "custom"
 			}]
-			title: "这里有188个多方块"
+			title: "这里有195个多方块"
 			x: -12.0d
 			y: -2.0d
 		}
@@ -2763,8 +2760,8 @@
 				item: "gtceu:isa_mill"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 18.0d
+			x: -2.0d
+			y: 14.0d
 		}
 		{
 			dependencies: ["5672B9E868EDBE4D"]
@@ -2774,8 +2771,8 @@
 				item: "gtceu:flotation_cell_regulator"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 18.0d
+			x: 0.0d
+			y: 14.0d
 		}
 		{
 			dependencies: ["5672B9E868EDBE4D"]
@@ -2785,8 +2782,8 @@
 				item: "gtceu:vacuum_drying_furnace"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 18.0d
+			x: 2.0d
+			y: 14.0d
 		}
 		{
 			dependencies: ["65C4F7EDC0E9D99D"]
@@ -2796,19 +2793,22 @@
 				item: "gtceu:atomic_energy_excitation_plant"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 20.0d
+			x: 22.0d
+			y: 14.0d
 		}
 		{
-			dependencies: ["23DC6EEC1BCEF845"]
+			dependencies: [
+				"23DC6EEC1BCEF845"
+				"61631D86D47D54F6"
+			]
 			id: "2E4A5A581F9FCAF9"
 			tasks: [{
 				id: "6CD146597B0E0067"
 				item: "gtceu:advanced_integrated_ore_processor"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 20.0d
+			x: 16.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["253337A8CECFB499"]
@@ -2820,6 +2820,104 @@
 			}]
 			x: -4.0d
 			y: 20.0d
+		}
+		{
+			dependencies: [
+				"6A590699685D1D8A"
+				"1003B3EB3976B4AA"
+			]
+			id: "6266818A4E07B6C0"
+			tasks: [{
+				id: "42B7D2856930C54C"
+				item: "gtceu:uhv_fusion_reactor"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"65C4F7EDC0E9D99D"
+				"6266818A4E07B6C0"
+			]
+			id: "76663A1DCB27B23E"
+			tasks: [{
+				id: "4E7761681A5314F4"
+				item: "gtceu:uev_fusion_reactor"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 14.0d
+		}
+		{
+			dependencies: [
+				"2055BDA7D6201897"
+				"6D3BE9E3D76C71F9"
+			]
+			id: "3ADF090AC4D79F83"
+			tasks: [{
+				id: "0631BA476430AC9E"
+				item: "gtceu:luv_compressed_fusion_reactor"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"352CFB0F948D448A"
+				"5672B9E868EDBE4D"
+			]
+			id: "051FFC493B0CD3FE"
+			tasks: [{
+				id: "63FC0B6A3ECBB021"
+				item: "gtceu:zpm_compressed_fusion_reactor"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"253337A8CECFB499"
+				"1003B3EB3976B4AA"
+			]
+			id: "733C3D2DE15B3665"
+			tasks: [{
+				id: "5ABFA57CFAADC2A2"
+				item: "gtceu:uv_compressed_fusion_reactor"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"6A590699685D1D8A"
+				"6266818A4E07B6C0"
+			]
+			id: "596438D407B66AA4"
+			tasks: [{
+				id: "1B231B9C1973DDDB"
+				item: "gtceu:uhv_compressed_fusion_reactor"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 16.0d
+		}
+		{
+			dependencies: [
+				"76663A1DCB27B23E"
+				"65C4F7EDC0E9D99D"
+			]
+			id: "749B0A45731259CC"
+			tasks: [{
+				id: "4DFD09227C1A238B"
+				item: "gtceu:uev_compressed_fusion_reactor"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 16.0d
 		}
 	]
 	title: "多方块结构"

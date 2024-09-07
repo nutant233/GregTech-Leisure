@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "lv"
 	group: "68CBF1606D696C68"
-	icon: "gtceu:lv_machine_hull"
+	icon: "gtceu:lv_electric_motor"
 	id: "393DD40CAFBB69A5"
 	order_index: 1
 	quest_links: [{
@@ -1128,5 +1128,6 @@
 			y: 6.0d
 		}
 	]
-	title: "低压LV"
+	subtitle: ["Tier1-LV"]
+	title: "低压"
 }

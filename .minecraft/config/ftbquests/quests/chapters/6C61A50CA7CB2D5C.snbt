@@ -1687,19 +1687,11 @@
 				id: "68C04E0EA66271B7"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "2412EE7E9063BDA3"
-					title: "去月球"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "6ABB2332B88272D4"
-					item: { Count: 64, id: "ad_astra:moon_cobblestone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "2412EE7E9063BDA3"
+				title: "去月球"
+				type: "checkmark"
+			}]
 			x: 9.0d
 			y: -2.0d
 		}
@@ -1713,20 +1705,11 @@
 				id: "515FE430072534D3"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "66C8190979BFB1CA"
-					title: "去火星"
-					type: "checkmark"
-				}
-				{
-					consume_items: true
-					count: 64L
-					id: "0ED7E3CD65E5469F"
-					item: "ad_astra:mars_cobblestone"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "66C8190979BFB1CA"
+				title: "去火星"
+				type: "checkmark"
+			}]
 			x: 17.0d
 			y: -2.0d
 		}
@@ -1740,19 +1723,11 @@
 				id: "4947CE478EC8131D"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "4D5EAA5BD05BC8EE"
-					title: "去金星"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "4FAA1E636E416966"
-					item: { Count: 64, id: "ad_astra:venus_cobblestone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "4D5EAA5BD05BC8EE"
+				title: "去金星"
+				type: "checkmark"
+			}]
 			x: 27.0d
 			y: -2.0d
 		}
@@ -1767,19 +1742,11 @@
 				id: "109555A7B7DC83BA"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "65E12B4243187B9D"
-					title: "去水星"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "3C8AAEC1C2A9B9BF"
-					item: { Count: 64, id: "ad_astra:mercury_cobblestone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "65E12B4243187B9D"
+				title: "去水星"
+				type: "checkmark"
+			}]
 			x: 28.0d
 			y: -2.0d
 		}
@@ -1794,19 +1761,11 @@
 				id: "5DABDE58E85A1554"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "424BF1AD5819C169"
-					title: "去谷神星"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "7174AE19C524F445"
-					item: { Count: 64, id: "kubejs:ceresstone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "424BF1AD5819C169"
+				title: "去谷神星"
+				type: "checkmark"
+			}]
 			x: 38.0d
 			y: -2.0d
 		}
@@ -1821,19 +1780,11 @@
 				id: "1B9F96DC71464F25"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "02714C21C6345C06"
-					title: "去木卫一"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "0F3AB0117F6602E6"
-					item: { Count: 64, id: "kubejs:iostone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "02714C21C6345C06"
+				title: "去木卫一"
+				type: "checkmark"
+			}]
 			x: 9.5d
 			y: 6.0d
 		}
@@ -1848,19 +1799,11 @@
 				id: "1D27BEFA544DC7B3"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "3FE00886E723F536"
-					title: "去木卫三"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "38A54F21FDC5603F"
-					item: { Count: 64, id: "kubejs:ganymedestone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "3FE00886E723F536"
+				title: "去木卫三"
+				type: "checkmark"
+			}]
 			x: 10.5d
 			y: 6.0d
 		}
@@ -1875,19 +1818,11 @@
 				id: "66072C4B76BF5F96"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "3BACCC11A97FD667"
-					title: "去冥王星"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "2B2EC379C1CC0C27"
-					item: { Count: 64, id: "kubejs:plutostone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "3BACCC11A97FD667"
+				title: "去冥王星"
+				type: "checkmark"
+			}]
 			x: 20.0d
 			y: 6.0d
 		}
@@ -1902,19 +1837,11 @@
 				id: "06FD20BA0DFAD74B"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "40D2A94D63372038"
-					title: "去土卫二"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "24C9CE6BA536FCCE"
-					item: { Count: 64, id: "kubejs:enceladusstone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "40D2A94D63372038"
+				title: "去土卫二"
+				type: "checkmark"
+			}]
 			x: 21.0d
 			y: 6.0d
 		}
@@ -1929,19 +1856,11 @@
 				id: "5B3F450A220D031D"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "026940E80D77F49F"
-					title: "去土卫六"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "52EC06F7E4E99FC3"
-					item: { Count: 64, id: "kubejs:titanstone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "026940E80D77F49F"
+				title: "去土卫六"
+				type: "checkmark"
+			}]
 			x: 22.0d
 			y: 6.0d
 		}
@@ -1956,19 +1875,11 @@
 				id: "088F8105E0E97885"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "4809719A86B423CA"
-					title: "去巴纳德C"
-					type: "checkmark"
-				}
-				{
-					count: 8L
-					id: "640CDE6670CBC97E"
-					item: { Count: 8, id: "kubejs:barnarda_leaves" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "4809719A86B423CA"
+				title: "去巴纳德C"
+				type: "checkmark"
+			}]
 			x: 35.0d
 			y: 6.0d
 		}
@@ -1983,19 +1894,11 @@
 				id: "23A2A64020DAD06D"
 				type: "command"
 			}]
-			tasks: [
-				{
-					id: "3358381CBFE3BCD9"
-					title: "去霜原星"
-					type: "checkmark"
-				}
-				{
-					count: 64L
-					id: "22E9BFE7A82D1764"
-					item: { Count: 64, id: "ad_astra:glacio_cobblestone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "3358381CBFE3BCD9"
+				title: "去霜原星"
+				type: "checkmark"
+			}]
 			x: 28.5d
 			y: 6.0d
 		}
