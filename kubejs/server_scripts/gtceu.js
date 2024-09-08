@@ -3960,15 +3960,15 @@ ServerEvents.recipes((event) => {
     gtr.fusion_reactor("gtceu:draconiumawakened_plasma")
         .inputFluids("gtceu:draconium 125", "gtceu:quantumchromodynamically_confined_matter 125")
         .outputFluids("gtceu:draconiumawakened_plasma 125")
-        .EUt(GTValues.VA[GTValues.UIV])
+        .EUt(GTValues.VA[GTValues.UEV])
         .duration(800)
         .fusionStartEU(2100000000)
 
     gtr.fusion_reactor("gtceu:infinity")
         .inputFluids("gtceu:crystalmatrix 2000", "gtceu:cosmicneutronium 1000")
         .outputFluids("gtceu:infinity 64")
-        .EUt(GTValues.VA[GTValues.UXV])
-        .duration(1200)
+        .EUt(GTValues.VA[GTValues.UEV])
+        .duration(2400)
         .fusionStartEU(2100000000)
 
     //peek
