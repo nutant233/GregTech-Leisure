@@ -980,11 +980,20 @@
 			dependencies: ["5CE50DDC960340D8"]
 			description: ["瞬间获得产物"]
 			id: "0662E205D1783D31"
-			rewards: [{
-				id: "5F43E51DF1115D43"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 2100
+					id: "739BBFD8B3216A13"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					count: 1200
+					id: "2898894E21E5801A"
+					item: "minecraft:bricks"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
@@ -997,12 +1006,28 @@
 		}
 		{
 			dependencies: ["1AB03D24332B722E"]
+			description: ["你基本不需要花费资源"]
 			id: "0532330B52D98469"
-			rewards: [{
-				id: "3FD98C3F4EFD71A6"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 160
+					id: "2AE2D4376CFFF72E"
+					item: "gtceu:steam_machine_casing"
+					type: "item"
+				}
+				{
+					count: 2100
+					id: "711389695E7537BD"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					count: 1200
+					id: "00C8C93CE4F3B059"
+					item: "minecraft:bricks"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
@@ -1033,7 +1058,7 @@
 		}
 		{
 			dependencies: ["10750DEB64B4BF89"]
-			description: ["它有256的并行，意思是它可以一次运行可以烧制256个原料，部分材料是一出二，甚至一出五，请保证有足够的输出空间"]
+			description: ["8并行，需要继续升级"]
 			id: "1AB03D24332B722E"
 			rewards: [{
 				id: "26F40D0C80FD0D34"
