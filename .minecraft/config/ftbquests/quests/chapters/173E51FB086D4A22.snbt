@@ -6,33 +6,39 @@
 	icon: "gtceu:mv_fluid_drilling_rig"
 	id: "173E51FB086D4A22"
 	order_index: 6
-	quest_links: [{
-		id: "79E9D1031C05E7F8"
-		linked_quest: "27A9D4E765101CB9"
-		x: 3.0d
-		y: 5.0d
-	}]
-	quests: [
+	quest_links: [
 		{
-			id: "088C594495CADBA1"
-			tasks: [{
-				id: "769CAD13CEAFBEB3"
-				title: "HV"
-				type: "checkmark"
-			}]
+			id: "79E9D1031C05E7F8"
+			linked_quest: "27A9D4E765101CB9"
+			x: 3.0d
+			y: 5.0d
+		}
+		{
+			id: "5561BE2E6FE0F5CC"
+			linked_quest: "51B9A72C19F84F0E"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "32C0AA419FA9BB3E"
+			linked_quest: "7296C57805F5DC96"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			id: "67A6FF592080CC62"
+			linked_quest: "1A48D2DB936FF632"
 			x: 16.0d
 			y: 0.0d
 		}
 		{
-			id: "7171B45BCD083364"
-			tasks: [{
-				id: "130194FAF884E3A1"
-				title: "IV"
-				type: "checkmark"
-			}]
+			id: "60809739BE227DDE"
+			linked_quest: "1E7344C133C99565"
 			x: 24.0d
 			y: 0.0d
 		}
+	]
+	quests: [
 		{
 			description: ["lv时期可选的获得石油的手段"]
 			hide_dependency_lines: true
@@ -174,7 +180,7 @@
 				item: "gtceu:mv_fluid_drilling_rig"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 8.0d
 		}
 		{
@@ -189,7 +195,7 @@
 				title: "乙烯"
 				type: "checkmark"
 			}]
-			x: 10.0d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -197,13 +203,14 @@
 				"05CD37217916D998"
 				"3C808016095484BF"
 			]
+			hide_dependent_lines: true
 			id: "44BE0FD4ABE696F1"
 			tasks: [{
 				id: "170E4A149A78AC0E"
 				item: "gtceu:ethylene_bucket"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 9.5d
 			y: -2.0d
 		}
 		{
@@ -214,7 +221,7 @@
 				item: "gtceu:sulfuric_acid_bucket"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 11.5d
 			y: -4.0d
 		}
 		{
@@ -225,7 +232,7 @@
 				item: "gtceu:ethanol_bucket"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 9.5d
 			y: -4.0d
 		}
 		{
@@ -255,7 +262,7 @@
 				}
 			]
 			title: "一些生物线的东西"
-			x: 10.0d
+			x: 9.5d
 			y: -6.0d
 		}
 		{
@@ -294,7 +301,7 @@
 				}
 			]
 			title: "现在你能在地下采到的"
-			x: 8.0d
+			x: 10.0d
 			y: 6.0d
 		}
 		{
@@ -305,7 +312,7 @@
 				item: "gtceu:polyvinyl_chloride_bucket"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 5.0d
 			y: -0.5d
 		}
 		{
@@ -316,7 +323,7 @@
 				item: "gtceu:polyethylene_bucket"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 5.0d
 			y: 0.5d
 		}
 		{
@@ -327,7 +334,7 @@
 				item: "gtceu:polyvinyl_chloride_plate"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 7.0d
 			y: -0.5d
 		}
 		{
@@ -338,7 +345,7 @@
 				item: "gtceu:polyethylene_plate"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 7.0d
 			y: 0.5d
 		}
 		{
@@ -489,7 +496,7 @@
 				}
 			]
 			title: "四桶油"
-			x: 10.0d
+			x: 12.0d
 			y: 4.0d
 		}
 		{
@@ -508,7 +515,7 @@
 				}
 			]
 			title: "电解盐水"
-			x: 10.0d
+			x: 12.0d
 			y: 6.0d
 		}
 		{
@@ -519,7 +526,7 @@
 				item: "gtceu:diesel_bucket"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.0d
 			y: 4.0d
 		}
 		{
@@ -594,17 +601,6 @@
 			}]
 			x: 18.0d
 			y: 4.0d
-		}
-		{
-			dependencies: ["51B9A72C19F84F0E"]
-			id: "3B20B1B9B1FCFE7C"
-			tasks: [{
-				id: "7784B36C98D8816A"
-				title: "低压"
-				type: "checkmark"
-			}]
-			x: 0.0d
-			y: 0.0d
 		}
 	]
 	title: "石化与生化"
