@@ -6,7 +6,12 @@
 	icon: "gtceu:mv_fluid_drilling_rig"
 	id: "173E51FB086D4A22"
 	order_index: 6
-	quest_links: [ ]
+	quest_links: [{
+		id: "79E9D1031C05E7F8"
+		linked_quest: "27A9D4E765101CB9"
+		x: 3.0d
+		y: 5.0d
+	}]
 	quests: [
 		{
 			id: "088C594495CADBA1"
@@ -85,6 +90,7 @@
 			dependencies: [
 				"63FEF796CFF5E8DF"
 				"045D76184BFBD4D6"
+				"27A9D4E765101CB9"
 			]
 			description: ["含硫石脑油加氢气"]
 			id: "071C1482A33D97FB"
@@ -97,7 +103,10 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["071C1482A33D97FB"]
+			dependencies: [
+				"071C1482A33D97FB"
+				"27A9D4E765101CB9"
+			]
 			description: ["化学反应釜加蒸汽三号电路"]
 			id: "70E703942B61C86C"
 			tasks: [{
@@ -585,6 +594,17 @@
 			}]
 			x: 18.0d
 			y: 4.0d
+		}
+		{
+			dependencies: ["51B9A72C19F84F0E"]
+			id: "3B20B1B9B1FCFE7C"
+			tasks: [{
+				id: "7784B36C98D8816A"
+				title: "低压"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
 		}
 	]
 	title: "石化与生化"

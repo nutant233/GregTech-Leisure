@@ -1,12 +1,18 @@
 //priority: 100
 const tiers = [["ulv", 0], ["lv", 1], ["mv", 2], ["hv", 3], ["ev", 4], ["iv", 5], ["luv", 6], ["zpm", 7], ["uv", 8], ["uhv", 9], ["uev", 10], ["uiv", 11], ["uxv", 12], ["opv", 13], ["max", 14]]
 ServerEvents.tags("item", event => {
-    //ae2
     const items = [
         "ae2:certus_quartz_crystal",
         "ae2:certus_quartz_dust",
         "ae2:ender_dust",
-        "appflux:redstone_crystal"
+        "appflux:redstone_crystal",
+        "ad_astra:iron_plate",
+        "ad_astra:iron_rod",
+        "ad_astra:steel_ingot",
+        "ad_astra:steel_nugget",
+        "ad_astra:steel_plate",
+        "ad_astra:steel_rod",
+        "ad_astra:steel_block"
     ]
     items.forEach((item) => {
         event.removeAllTagsFrom(item)
@@ -131,4 +137,10 @@ ServerEvents.blockLootTables(event => {
             })
         })
     })
+})
+
+ServerEvents.tags("fluid", event => {
+    event.remove("forge:oxygen", "ad_astra:oxygen")
+    event.remove("forge:hydrogen", "ad_astra:hydrogen")
+    event.remove("forge:oil", "ad_astra:oil")
 })

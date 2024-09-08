@@ -401,11 +401,41 @@
 			dependencies: ["00579BDA1FA1BEC6"]
 			description: ["远古世界有一些有用的矿"]
 			id: "335ED39019FC62E7"
-			rewards: [{
-				id: "0AB3A8A039EB840F"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "0AB3A8A039EB840F"
+					item: "gtceu:gold_credit"
+					type: "item"
+				}
+				{
+					id: "120C3F2CEC94168B"
+					item: {
+						Count: 1
+						id: "gtceu:nanomuscle_helmet"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "1436494559DCBE1B"
+					item: {
+						Count: 1
+						id: "gtceu:avanced_nanomuscle_chestplate"
+						tag: { }
+					}
+					type: "item"
+				}
+				{
+					id: "542A36C70B6D39A1"
+					item: "gtceu:nanomuscle_leggings"
+					type: "item"
+				}
+				{
+					id: "4A5E920CBD312AF2"
+					item: "gtceu:nanomuscle_boots"
+					type: "item"
+				}
+			]
 			tasks: [{
 				dimension: "kubejs:ancient_world"
 				id: "7B798A358D3DA56B"
@@ -950,11 +980,20 @@
 			dependencies: ["5CE50DDC960340D8"]
 			description: ["瞬间获得产物"]
 			id: "0662E205D1783D31"
-			rewards: [{
-				id: "5F43E51DF1115D43"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 2100
+					id: "739BBFD8B3216A13"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					count: 1200
+					id: "2898894E21E5801A"
+					item: "minecraft:bricks"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
@@ -967,12 +1006,28 @@
 		}
 		{
 			dependencies: ["1AB03D24332B722E"]
+			description: ["你基本不需要花费资源"]
 			id: "0532330B52D98469"
-			rewards: [{
-				id: "3FD98C3F4EFD71A6"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 160
+					id: "2AE2D4376CFFF72E"
+					item: "gtceu:steam_machine_casing"
+					type: "item"
+				}
+				{
+					count: 2100
+					id: "711389695E7537BD"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					count: 1200
+					id: "00C8C93CE4F3B059"
+					item: "minecraft:bricks"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
@@ -1003,7 +1058,7 @@
 		}
 		{
 			dependencies: ["10750DEB64B4BF89"]
-			description: ["它有256的并行，意思是它可以一次运行可以烧制256个原料，部分材料是一出二，甚至一出五，请保证有足够的输出空间"]
+			description: ["8并行，需要继续升级"]
 			id: "1AB03D24332B722E"
 			rewards: [{
 				id: "26F40D0C80FD0D34"
@@ -1052,11 +1107,33 @@
 			hide_dependent_lines: true
 			icon: "gtceu:steam_piston_hammer"
 			id: "05BB1E1E38478F26"
-			rewards: [{
-				id: "32EB5557227152BB"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "2D8751AF3B8B1D6A"
+					item: "gtceu:steam_input_bus"
+					type: "item"
+				}
+				{
+					id: "3BC641A02C9D4998"
+					item: "gtceu:steam_output_bus"
+					type: "item"
+				}
+				{
+					id: "38DB793439A26752"
+					item: "gtceu:steam_input_hatch"
+					type: "item"
+				}
+				{
+					id: "58C24B68D0260EBD"
+					item: "gtceu:lv_input_hatch"
+					type: "item"
+				}
+				{
+					id: "5C377797179ABF3E"
+					item: "gtceu:lv_output_hatch"
+					type: "item"
+				}
+			]
 			size: 1.0d
 			tasks: [{
 				id: "6ACDB1E4B636D7F0"
@@ -1097,11 +1174,19 @@
 		}
 		{
 			id: "664C46D5C12E7255"
-			rewards: [{
-				id: "3753CAA23389F755"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "3753CAA23389F755"
+					item: "gtceu:cupronickel_credit"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "4293BEFEC83DEFB3"
+					item: "ae2:speed_card"
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "46DB998969DFD278"
 				item: "ae2:inscriber"

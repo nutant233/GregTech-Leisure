@@ -134,7 +134,6 @@ ServerEvents.recipes((event) => {
 })
 
 const $GTCapabilityHelper = Java.loadClass("com.gregtechceu.gtceu.api.capability.GTCapabilityHelper")
-const $DamageTypes = Java.loadClass("net.minecraft.world.damagesource.DamageTypes")
 const $WirelessEnergyManager = Java.loadClass("com.hepdd.gtmthings.api.misc.WirelessEnergyManager")
 const $BigInteger = Java.loadClass("java.math.BigInteger")
 const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
@@ -314,50 +313,6 @@ ItemEvents.rightClicked("kubejs:command_wand", event => {
     if (event.player.isSteppingCarefully() && block == "minecraft:repeating_command_block") {
         block.set("minecraft:air")
         event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${pos.x} ${block.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:repeating_command_block",Count:1b}}`)
-    }
-})
-
-ItemEvents.firstRightClicked("avaritia:infinity_sword", event => {
-    let name = event.player.getName().getString()
-    let targetX = 0, targetZ = 0, targetY = 0, xr = 0, yr = 0, index = 0
-    function pos(index, xr, yr) {
-        targetX = Math.round(event.player.x - (Math.sin(yr) * index * Math.abs(Math.cos(xr))))
-        targetZ = Math.round(event.player.z + (Math.cos(yr) * index * Math.abs(Math.cos(xr))))
-        targetY = Math.round(event.player.y - Math.sin(xr) * index) + 1
-    }
-    function rotation() {
-        let rotation = event.player.getRotationVector()
-        xr = rotation.x * (3.1415926535897932 / 180)
-        yr = rotation.y * (3.1415926535897932 / 180)
-    }
-
-    if (event.player.isSteppingCarefully()) {
-        rotation()
-        pos(4, xr, yr)
-        let posarray = [targetX, targetY, targetZ]
-        event.getServer().runCommandSilent(`execute at ${name} run tp @e[distance=..100,type=item] ${targetX} ${targetY} ${targetZ}`)
-        for (index = 3; index < 100; index++) {
-            pos(index, xr, yr)
-            let entities = event.getLevel().getEntitiesWithin(AABB.of(targetX - 1, targetY - 1, targetZ - 1, targetX + 1, targetY + 1, targetZ + 1))
-            for (let entity of entities) {
-                if (entity.isLiving()) {
-                    entity.teleportTo(posarray[0], posarray[1], posarray[2])
-                }
-            }
-        }
-    }
-    if (!event.player.isSteppingCarefully()) {
-        rotation()
-        for (index = 3; index < 100; index++) {
-            pos(index, xr, yr)
-            event.getServer().runCommandSilent(`execute at ${name} run particle minecraft:end_rod ${targetX} ${targetY} ${targetZ} 0.001 0.001 0.001 0.1 10 force`)
-            let entities = event.getLevel().getEntitiesWithin(AABB.of(targetX - 1, targetY - 1, targetZ - 1, targetX + 1, targetY + 1, targetZ + 1))
-            for (let entity of entities) {
-                if (entity.isLiving()) {
-                    entity.attack(event.player.damageSources().source($DamageTypes.MAGIC, event.player), 10000)
-                }
-            }
-        }
     }
 })
 
