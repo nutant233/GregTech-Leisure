@@ -1,0 +1,13 @@
+filename = 'rhino-forge-2001.2.3-build.6.jar'
+name = 'Rhino'
+side = 'both'
+
+[download]
+hash = '5e9f06561b776c472848d0f44461ad4daef64b08db9734ced785fede6198748f785f7ca721f806cf118c995bc43b2807e138845962b43fa2d91d97d972237341'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/sk9knFPE/versions/maCpsT70/rhino-forge-2001.2.3-build.6.jar'
+
+[update.modrinth]
+mod-id = 'sk9knFPE'
+version = 'maCpsT70'

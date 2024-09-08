@@ -1,0 +1,13 @@
+filename = 'merequester-forge-1.20.1-1.1.5.jar'
+name = 'ME Requester'
+side = 'both'
+
+[download]
+hash = 'cc2ed5b2b947bf9327778c4bf4cd5324490060386169fe1a0b09fb78f4b4a46117c07a2355eaccd40abf834ce65c88b5e53a10ca3c374aa684d5ccb83457993f'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/E6BFl96N/versions/Gm7oyczu/merequester-forge-1.20.1-1.1.5.jar'
+
+[update.modrinth]
+mod-id = 'E6BFl96N'
+version = 'Gm7oyczu'

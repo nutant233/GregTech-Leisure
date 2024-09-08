@@ -1,0 +1,13 @@
+filename = 'ftb-library-forge-2001.2.4.jar'
+name = 'FTB Library (Forge)'
+side = 'both'
+
+[download]
+hash = '0f98f24493af3e18e6dbfbca93bac9a659094d35'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5567591
+project-id = 404465

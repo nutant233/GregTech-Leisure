@@ -1,0 +1,13 @@
+filename = 'ftb-teams-forge-2001.3.0.jar'
+name = 'FTB Teams (Forge)'
+side = 'both'
+
+[download]
+hash = 'bb5a1f3ac9d44c5e9b319768e7166e877879aaaa'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5267190
+project-id = 404468

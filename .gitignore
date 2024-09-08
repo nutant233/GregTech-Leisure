@@ -21,7 +21,7 @@
 .minecraft/*.json
 .minecraft/config/oculus.properties
 .minecraft/config/roughlyenoughitems/
-.minecraft/mods/.index
+.minecraft/mods/*.jar
 .minecraft/kubejs/jsconfig.json
 .minecraft/icon.png
 /config/
@@ -49,3 +49,9 @@
 /server.properties
 /user_jvm_args.txt
 .DS_Store
+instance.cfg
+mmc-pack.json
+!gtlcore-*.jar
+!gtceu-1.20.1-*.jar
+!gtmthings-*.jar
+!Infinity Cells-*.jar

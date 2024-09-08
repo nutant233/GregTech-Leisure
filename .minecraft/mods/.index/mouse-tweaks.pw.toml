@@ -1,0 +1,13 @@
+filename = 'MouseTweaks-forge-mc1.20.1-2.25.1.jar'
+name = 'Mouse Tweaks'
+side = 'client'
+
+[download]
+hash = 'a3bb0272c0a1a3be9250dfee030bb8f86217fa6a32bd534be8c940fdd8c466c800c2df85874877983ced36ecfc28c8ced6c0d42107c1ab621385b4be9a7c65eb'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/aC3cM3Vq/versions/7JVXOe3K/MouseTweaks-forge-mc1.20.1-2.25.1.jar'
+
+[update.modrinth]
+mod-id = 'aC3cM3Vq'
+version = '7JVXOe3K'

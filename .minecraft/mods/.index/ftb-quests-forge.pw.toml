@@ -1,0 +1,13 @@
+filename = 'ftb-quests-forge-2001.4.8.jar'
+name = 'FTB Quests (Forge)'
+side = 'both'
+
+[download]
+hash = 'dc8416b042866f5d8b0d852a7788d7dc138c41d2'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5543955
+project-id = 289412

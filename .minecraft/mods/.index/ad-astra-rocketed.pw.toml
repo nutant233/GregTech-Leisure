@@ -1,0 +1,13 @@
+filename = 'ad_astra_rocketed-forge-1.20.1-1.0.5.jar'
+name = 'Ad Astra: Rocketed'
+side = 'both'
+
+[download]
+hash = '98fc9803159d69612168211ed690683b4ce5e9fb'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5245376
+project-id = 996980
