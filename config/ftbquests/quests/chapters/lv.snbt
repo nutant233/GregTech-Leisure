@@ -194,7 +194,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -663,7 +663,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["51F0CE5F1BCC78D1"]
@@ -679,7 +679,7 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["524AC325E68AEB3A"]
@@ -695,7 +695,7 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["2D6BB32B642AE8BA"]
@@ -713,7 +713,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["5C12B96341807611"]
@@ -731,7 +731,7 @@
 				type: "checkmark"
 			}]
 			x: -4.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
@@ -750,7 +750,7 @@
 			}]
 			title: "LV超导"
 			x: -2.0d
-			y: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -771,7 +771,7 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: -4.0d
+			y: -2.0d
 		}
 		{
 			can_repeat: false
@@ -1074,7 +1074,7 @@
 				item: "gtceu:lv_item_magnet"
 				type: "item"
 			}]
-			x: -2.0d
+			x: 14.0d
 			y: 6.0d
 		}
 		{
@@ -1097,7 +1097,7 @@
 				type: "checkmark"
 			}]
 			x: -4.0d
-			y: -2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
@@ -1124,8 +1124,8 @@
 				title: "编程电路"
 				type: "checkmark"
 			}]
-			x: -4.0d
-			y: 6.0d
+			x: 14.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["4C591AA4F1D907C1"]
@@ -1135,8 +1135,50 @@
 				item: "gtceu:generator_array"
 				type: "item"
 			}]
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["51B9A72C19F84F0E"]
+			hide_dependency_lines: true
+			id: "62A978538C87ED8A"
+			rewards: [
+				{
+					id: "3EB43CAB76F633F2"
+					item: "gtceu:lv_dual_input_hatch"
+					type: "item"
+				}
+				{
+					id: "506F16048E7BF22A"
+					item: "gtceu:lv_dual_output_hatch"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "56F0995B11FD33AD"
+					item: "gtceu:lv_input_hatch"
+					type: "item"
+				}
+				{
+					id: "7B55CA973EEB87DD"
+					item: "gtceu:lv_output_hatch"
+					type: "item"
+				}
+				{
+					id: "12DB7C28A7759197"
+					item: "gtceu:lv_input_bus"
+					type: "item"
+				}
+				{
+					id: "38C67FC15CAE487E"
+					item: "gtceu:lv_output_bus"
+					type: "item"
+				}
+			]
+			title: "总成"
 			x: -2.0d
-			y: -5.5d
+			y: -2.0d
 		}
 	]
 	subtitle: ["Tier1-LV"]

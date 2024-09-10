@@ -1728,6 +1728,7 @@
 			optional: true
 			rewards: [{
 				command: "/execute in ad_astra:mars run tp 0 200 0"
+				elevate_perms: true
 				id: "515FE430072534D3"
 				type: "command"
 			}]
@@ -1746,6 +1747,7 @@
 			optional: true
 			rewards: [{
 				command: "/execute in ad_astra:venus run tp 0 200 0"
+				elevate_perms: true
 				id: "4947CE478EC8131D"
 				type: "command"
 			}]
@@ -1966,6 +1968,7 @@
 			optional: true
 			rewards: [{
 				command: "/execute in minecraft:the_nether run tp 0 100 0"
+				elevate_perms: true
 				id: "4CEB0A83900FB9A9"
 				type: "command"
 			}]
@@ -1982,6 +1985,7 @@
 			id: "1308E1F15E72F288"
 			rewards: [{
 				command: "/execute in minecraft:the_end run tp 0 200 0"
+				elevate_perms: true
 				id: "7FA690EB17C46096"
 				type: "command"
 			}]

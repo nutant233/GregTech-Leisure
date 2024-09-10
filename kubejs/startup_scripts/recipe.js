@@ -311,7 +311,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
 
     GTRecipeTypes.register("dimensional_focus_engraving_array", "multiblock")
         .setEUIO("in")
-        .setMaxTooltips(6)
+        .setMaxTooltips(4)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(2, 1, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
@@ -326,7 +326,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
             .EUt(recipeBuilder.EUt() * 4)
         let value = Math.log10(recipeBuilder.EUt()) / Math.log10(4)
         if (value > 10) {
-            recipe.CWUt(value / 4)["inputFluids(com.lowdragmc.lowdraglib.side.fluid.FluidStack)"](Fluid.of("gtceu:euv_photoresist", value / 2).getFluidStack())
+            recipe["inputFluids(com.lowdragmc.lowdraglib.side.fluid.FluidStack)"](Fluid.of("gtceu:euv_photoresist", value / 2).getFluidStack())
         } else {
             recipe["inputFluids(com.lowdragmc.lowdraglib.side.fluid.FluidStack)"](Fluid.of("gtceu:photoresist", value).getFluidStack())
         }
@@ -335,7 +335,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
 
     event.create("precision_laser_engraver")
         .setEUIO("in")
-        .setMaxTooltips(5)
+        .setMaxTooltips(4)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setMaxIOSize(9, 1, 1, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)

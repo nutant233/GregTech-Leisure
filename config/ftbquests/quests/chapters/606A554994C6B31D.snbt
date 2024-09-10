@@ -589,31 +589,21 @@
 					type: "item"
 				}
 				{
-					consume_items: true
-					id: "75A7EDCC81956650"
+					id: "3B6EE4EDAF32B5AD"
 					item: {
 						Count: 1
-						id: "gtceu:iv_diamond_drill"
+						id: "gtceu:red_steel_pickaxe"
 						tag: {
-							Charge: 2147483647L
 							DisallowContainerItem: 0b
-							GT.Behaviours: {
-								AoEColumn: 4
-								AoELayer: 8
-								AoERow: 4
-								MaxAoEColumn: 4
-								MaxAoELayer: 8
-								MaxAoERow: 4
-							}
+							GT.Behaviours: { }
 							GT.Tool: {
 								Damage: 0
-								Enchantability: 18
+								Enchantability: 21
 								HarvestLevel: 3
-								MaxDamage: 5375
-								ToolSpeed: 10.0f
+								MaxDamage: 2559
+								ToolSpeed: 11.0f
 							}
 							HideFlags: 2
-							MaxCharge: 2147483647L
 						}
 					}
 					type: "item"

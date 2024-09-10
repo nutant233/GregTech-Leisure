@@ -499,6 +499,7 @@
 		}
 		{
 			dependencies: ["0A8178183C888BE0"]
+			description: ["你得把切割机放在通用加工厂，然后装上超净维护仓"]
 			id: "676D1982102F4E79"
 			rewards: [{
 				id: "73D294571F48A5E9"
@@ -823,6 +824,7 @@
 				item: "gtceu:gold_credit"
 				type: "item"
 			}]
+			size: 2.0d
 			tasks: [
 				{
 					id: "2B9FEFA298FDF501"
