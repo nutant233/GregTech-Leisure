@@ -4,5 +4,9 @@ enablePrimitiveVoidOre: false
 
 oreMultiplier: 4
 
+cellType: 4
+
+spacetimePip: 2147483647
+
 durationMultiplier: 1.0
 

@@ -1,0 +1,13 @@
+filename = 'FastSuite-1.20.1-5.0.1.jar'
+name = 'FastSuite'
+side = 'both'
+
+[download]
+hash = 'c418caa1eea74e9f05b4a20862ebc665019250c8'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 4711435
+project-id = 475117

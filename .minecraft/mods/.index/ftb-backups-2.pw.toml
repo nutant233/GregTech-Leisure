@@ -1,0 +1,13 @@
+filename = 'ftbbackups2-forge-1.20-1.0.23.jar'
+name = 'FTB Backups 2'
+side = 'both'
+
+[download]
+hash = '4b100de40338247a3fbf4d1fd1846257c5338189'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 4834403
+project-id = 622737
