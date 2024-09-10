@@ -755,32 +755,20 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["3C91E284A9A03B1B"]
-			id: "6E3EB6345A1B84B3"
-			rewards: [{
-				id: "3643CF2687BC2C09"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
-			tasks: [{
-				count: 3L
-				id: "2092477382012C1A"
-				item: "gtceu:red_alloy_single_cable"
-				type: "item"
-			}]
-			title: "红色合金线缆"
-			x: 4.0d
-			y: 5.0d
-		}
-		{
 			dependencies: [
 				"5CD26DECB937FC71"
-				"6E3EB6345A1B84B3"
 				"740C2D1F3F420480"
 				"6D729450ED86BDAF"
+				"3C91E284A9A03B1B"
 			]
-			description: ["不需要做很多，做几个就行了"]
+			dependency_requirement: "one_completed"
+			description: [
+				"不需要做很多，做几个就行了"
+				""
+				"你其实可以用蒸汽大电装做的"
+			]
 			id: "5065BEDC95AE564E"
+			min_required_dependencies: 2
 			rewards: [{
 				id: "58F5C373D0AE0142"
 				item: "gtceu:silver_credit"

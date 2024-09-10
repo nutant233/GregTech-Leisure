@@ -158,7 +158,7 @@
 			y: 0.0d
 		}
 		{
-			description: ["用屠宰场，或者你也可以用聚爆压缩机"]
+			description: ["用聚爆压缩机，不过用屠宰场更方便"]
 			id: "6B416753B41DE9D3"
 			rewards: [{
 				id: "241C9174A4E2AE10"
@@ -190,7 +190,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["3FCF807491579B94"]
@@ -205,8 +205,8 @@
 				item: "gtceu:micro_processor_assembly"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 4.0d
+			x: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -244,7 +244,10 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["314E6600CD806FA0"]
+			dependencies: [
+				"314E6600CD806FA0"
+				"26FA6E064EF9FF5B"
+			]
 			id: "5E9EA7E22BE663AF"
 			rewards: [{
 				id: "3AAB5D8903AA730D"
@@ -256,8 +259,8 @@
 				item: "gtceu:cleaning_maintenance_hatch"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 6.0d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1A48D2DB936FF632"]
@@ -280,8 +283,8 @@
 				}
 			]
 			title: "维护两种高级仓"
-			x: 8.0d
-			y: 8.0d
+			x: 6.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["5EECD56BF0EC1539"]
@@ -296,7 +299,7 @@
 				item: "gtceu:plastic_printed_circuit_board"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 8.0d
 		}
 		{
@@ -362,7 +365,7 @@
 				item: "gtceu:plastic_circuit_board"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 10.0d
 			y: 8.0d
 		}
 		{
@@ -598,7 +601,7 @@
 				}
 			]
 			title: "贴片"
-			x: 2.0d
+			x: 4.0d
 			y: 8.0d
 		}
 		{
