@@ -25,7 +25,10 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["66DC60EABAAE0619"]
+			dependencies: [
+				"66DC60EABAAE0619"
+				"32960AFE43AFF989"
+			]
 			id: "242AFA510EC14878"
 			rewards: [{
 				id: "24E01572C2356B37"
@@ -681,7 +684,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["7296C57805F5DC96"]
@@ -699,7 +702,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["128671E4DC47EF55"]
@@ -717,7 +720,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 6.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["128671E4DC47EF55"]
@@ -736,7 +739,8 @@
 				item: "gtceu:gold_credit"
 				type: "item"
 			}]
-			size: 1.0d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [
 				{
 					id: "7390800A5A8E273A"
@@ -759,8 +763,8 @@
 					type: "item"
 				}
 			]
-			x: 12.0d
-			y: 8.0d
+			x: 14.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["17E9AB180BA36353"]
@@ -778,13 +782,15 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				id: "52264D6386C28A0A"
 				item: "gtceu:large_steam_input_hatch"
 				type: "item"
 			}]
 			x: 12.0d
-			y: 10.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["7296C57805F5DC96"]
@@ -840,8 +846,8 @@
 				item: "gtceu:phosphorus_boule"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 6.0d
+			x: 12.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["56EA21AD61D2ACB1"]

@@ -81,6 +81,7 @@
 			description: ["现在可以制作单方块机器的大型版本，能更好的升压超频，同时支持并行"]
 			icon: "gtceu:large_material_press"
 			id: "1FACFECB6C5962E3"
+			size: 2.0d
 			tasks: [
 				{
 					id: "2F1127262F7ACA6C"
@@ -330,8 +331,8 @@
 					type: "item"
 				}
 			]
-			x: 16.0d
-			y: 0.0d
+			x: 14.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -745,8 +746,8 @@
 		}
 		{
 			dependencies: [
-				"15F08D296DE33A44"
 				"27BA6EBA81622516"
+				"15F08D296DE33A44"
 			]
 			hide_dependency_lines: true
 			id: "382F3E7588A0AD5E"
@@ -766,8 +767,8 @@
 				item: "gtceu:iridium_ingot"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 2.0d
+			x: 16.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["2CE5738B7A8225A6"]

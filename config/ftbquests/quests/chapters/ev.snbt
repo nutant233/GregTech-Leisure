@@ -49,6 +49,7 @@
 			dependencies: [
 				"2712564DCCFD49B7"
 				"413B25F5BA2BA39D"
+				"47E43471E5E79714"
 			]
 			id: "56F6FC6F9E106A2F"
 			rewards: [{
@@ -118,6 +119,7 @@
 			y: 8.0d
 		}
 		{
+			description: ["你需要高压釜"]
 			id: "1D96227373B962A2"
 			rewards: [{
 				id: "5D54D4EA65D60C8F"
@@ -354,6 +356,7 @@
 			y: 8.0d
 		}
 		{
+			dependencies: ["506DFA831FEBD175"]
 			id: "7DE362B6EF9C3800"
 			rewards: [{
 				id: "73EA0D5311505816"
@@ -776,6 +779,7 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["11186961491B1773"]
 			id: "1CF3B9952010D033"
 			rewards: [{
 				id: "3F6EE2E900833F74"
@@ -1501,6 +1505,17 @@
 			}]
 			x: 7.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["1D96227373B962A2"]
+			id: "47E43471E5E79714"
+			tasks: [{
+				id: "54946020B9728E09"
+				item: "gtceu:nano_cpu_chip"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 7.0d
 		}
 	]
 	subtitle: ["Tier4-EV"]

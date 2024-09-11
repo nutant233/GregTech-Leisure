@@ -203,7 +203,7 @@
 				item: "minecraft:furnace"
 				type: "item"
 			}]
-			x: -2.5d
+			x: -3.2d
 			y: -1.0d
 		}
 		{
@@ -1185,7 +1185,7 @@
 		}
 		{
 			can_repeat: true
-			dependencies: ["050FD340224F7AB6"]
+			dependencies: ["2DC6C5D7DDA578F7"]
 			description: ["第一行就是最多连锁数量，设置时不建议太大"]
 			icon: {
 				Count: 1
@@ -1205,7 +1205,7 @@
 				title: "更快的挖矿"
 				type: "checkmark"
 			}]
-			x: -0.5d
+			x: -1.8d
 			y: -1.0d
 		}
 		{
@@ -1228,6 +1228,64 @@
 			}]
 			x: -8.5d
 			y: -0.5d
+		}
+		{
+			dependencies: ["4B6F43302E963F5E"]
+			description: [
+				"✓上线"
+				"✓在机器上跳来跳去"
+				"✓在机器上跳来跳去"
+				"✓在机器上跳来跳去"
+				"   下线"
+			]
+			icon: "usclb:clipboard"
+			id: "0FA161E6D70D211E"
+			rewards: [{
+				id: "4B16101838A6524C"
+				item: "usclb:clipboard"
+				type: "item"
+			}]
+			tasks: [{
+				id: "62B126388869ACC4"
+				type: "checkmark"
+			}]
+			title: "记笔记"
+			x: 7.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["133BC85B5D3EF1CB"]
+			description: ["你可能用得上"]
+			id: "12C3B40506921154"
+			tasks: [
+				{
+					id: "0C4AC2AD5A122362"
+					item: "akatzumaworldedit:wood_axe"
+					type: "item"
+				}
+				{
+					id: "27FC95069D576FA7"
+					item: "akatzumaworldedit:query_blockstate_item"
+					type: "item"
+				}
+				{
+					id: "2B887FCF065B1DF5"
+					item: "akatzumaworldedit:building_consumable"
+					type: "item"
+				}
+				{
+					id: "11B0A4ED52CD92A3"
+					item: "akatzumaworldedit:projector"
+					type: "item"
+				}
+				{
+					id: "5231C25D7B2F2EAD"
+					item: "akatzumaworldedit:bind_inventory"
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: -4.0d
 		}
 	]
 	title: "由此开始"
