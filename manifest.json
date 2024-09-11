@@ -37,6 +37,11 @@
             "required": true
         },
         {
+            "fileID": 5057220,
+            "projectID": 240630,
+            "required": true
+        },
+        {
             "fileID": 5207625,
             "projectID": 412525,
             "required": true
@@ -192,6 +197,11 @@
             "required": true
         },
         {
+            "fileID": 5713445,
+            "projectID": 890405,
+            "required": true
+        },
+        {
             "fileID": 5315928,
             "projectID": 976858,
             "required": true
@@ -202,7 +212,7 @@
             "required": true
         },
         {
-            "fileID": 5691218,
+            "fileID": 5705580,
             "projectID": 238222,
             "required": true
         },
@@ -247,7 +257,7 @@
             "required": true
         },
         {
-            "fileID": 5229844,
+            "fileID": 5706069,
             "projectID": 570017,
             "required": true
         },
@@ -295,5 +305,5 @@
     },
     "name": "GregTech Leisure",
     "overrides": ".minecraft",
-    "version": "1.4.0.6-pre"
+    "version": "1.4.1.0"
 }

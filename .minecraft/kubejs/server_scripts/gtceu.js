@@ -16710,4 +16710,10 @@ ServerEvents.recipes((event) => {
             .dataStack(Registries.getItemStack("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UEV])
             .CWUt(600))
+
+    gtr.compressor("gtceu:graphite_ingot")
+        .itemInputs("gtceu:graphite_dust")
+        .itemOutputs("gtceu:graphite_ingot")
+        .EUt(GTValues.VA[GTValues.LV])
+        .duration(300)
 })

@@ -1,0 +1,13 @@
+filename = 'gtceu-1.20.1-1.4.1+patch.2.jar'
+name = 'GregTechCEu Modern'
+side = 'both'
+
+[download]
+hash = 'cfd5f9e5262587fa0f7fb146465850d7cac7c621'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5713445
+project-id = 890405
