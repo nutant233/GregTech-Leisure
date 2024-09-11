@@ -506,4 +506,11 @@ ServerEvents.entityLootTables(event => {
             p.addItem("ad_astra:ice_shard").weight(9)
         })
     })
+    event.addEntity("minecraft:villager", l => {
+        l.addPool(p => {
+            p.addItem("minecraft:end_crystal").weight(1).killedByPlayer()
+            p.addItem("gtceu:ulv_primitive_magic_energy").weight(2).killedByPlayer()
+            p.addItem("usclb:inkandquill").weight(3)
+        })
+    })
 })

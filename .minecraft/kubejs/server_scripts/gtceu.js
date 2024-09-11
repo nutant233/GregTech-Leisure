@@ -845,6 +845,17 @@ ServerEvents.recipes((event) => {
         F: "gtceu:nichrome_double_cable"
     })
 
+    event.shaped("gtceu:gravity_hatch", [
+        "CBC",
+        "BAB",
+        "DBD"
+    ], {
+        A: "gtceu:uv_machine_hull",
+        B: "gtceu:gravi_star",
+        C: "gtceu:uv_robot_arm",
+        D: "gtceu:gravitation_engine_unit"
+    })
+
     event.smithing("kubejs:create_hpca_component", "kubejs:command_block_core", "gtlcore:super_computation_component", "kubejs:suprachronal_mainframe_complex")
     event.smithing("gtceu:create_computation", "kubejs:command_block_core", "gtceu:high_performance_computation_array", "kubejs:suprachronal_mainframe_complex")
     event.smithing("kubejs:space_fermium_helmet", "ad_astra:netherite_space_helmet", "kubejs:fermium_helmet", "ad_astra:oxygen_distributor")
@@ -8514,6 +8525,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:biomediumraw 1000")
         .EUt(1920)
         .duration(1200)
+        .addCondition(new GravityCondition(true))
 
     gtr.incubator("gtceu:biomediumraw1")
         .itemInputs("64x kubejs:biological_cells", "16x kubejs:tcetieseaweedextract", "gtceu:tritanium_dust")
@@ -8521,18 +8533,21 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:biomediumraw 10000")
         .EUt(1920)
         .duration(1200)
+        .addCondition(new GravityCondition(true))
 
     gtr.extractor("kubejs:tcetieseaweedextract")
         .itemInputs("64x kubejs:tcetiedandelions")
         .itemOutputs("kubejs:tcetieseaweedextract")
         .EUt(16)
         .duration(200)
+        .addCondition(new GravityCondition(false))
 
     gtr.centrifuge("kubejs:tcetiedandelions")
         .inputFluids("gtceu:seaweedbroth 1000")
         .itemOutputs("64x kubejs:tcetiedandelions")
         .EUt(120)
         .duration(200)
+        .addCondition(new GravityCondition(false))
 
     gtr.incubator("gtceu:seaweedbroth")
         .itemInputs("64x minecraft:kelp", "20x gtceu:alien_algae_dust", "8x gtceu:energium_dust", "gtceu:mithril_dust")
@@ -9223,6 +9238,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:unstable_star")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(480)
+        .addCondition(new GravityCondition(true))
 
     gtr.autoclave("kubejs:nuclear_star")
         .notConsumable("gtceu:cosmicneutronium_nanoswarm")
@@ -9231,6 +9247,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:nuclear_star")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(480)
+        .addCondition(new GravityCondition(true))
 
     gtr.suprachronal_assembly_line("gtlcore:max_electric_motor")
         .itemInputs("gtceu:long_magmatter_rod",
@@ -10485,6 +10502,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("9x gtceu:magneto_resonatic_dust")
         .EUt(30)
         .duration(80)
+        .addCondition(new GravityCondition(true))
 
     gtr.chemical_reactor("gtceu:dibismuthhydroborat_dust")
         .itemInputs("2x gtceu:bismuth_dust", "gtceu:boron_dust")
@@ -13169,6 +13187,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:bacterial_sludge 500")
         .EUt(30720)
         .duration(300)
+        .addCondition(new GravityCondition(true))
 
     gtr.incubator("kubejs:glacio_spirit")
         .chancedInput("4x kubejs:glacio_spirit", 1000, 100)
@@ -14481,14 +14500,14 @@ ServerEvents.recipes((event) => {
 
     gtr.assembler("gtceu:mega_steam_input_hatch")
         .circuit(1)
-        .itemInputs("gtceu:bronze_frame", "gtceu:hv_super_tank", "4x gtlcore:primitive_fluid_regulator", "8x gtceu:bronze_plate")
+        .itemInputs("gtceu:bronze_frame", "gtceu:lv_super_tank", "4x gtlcore:primitive_fluid_regulator", "8x gtceu:bronze_plate")
         .itemOutputs("gtceu:mega_steam_input_hatch")
         .EUt(120)
         .duration(200)
 
     gtr.assembler("gtceu:mega_steam_output_hatch")
         .circuit(2)
-        .itemInputs("gtceu:bronze_frame", "gtceu:hv_super_tank", "4x gtlcore:primitive_fluid_regulator", "8x gtceu:bronze_plate")
+        .itemInputs("gtceu:bronze_frame", "gtceu:lv_super_tank", "4x gtlcore:primitive_fluid_regulator", "8x gtceu:bronze_plate")
         .itemOutputs("gtceu:mega_steam_output_hatch")
         .EUt(120)
         .duration(200)

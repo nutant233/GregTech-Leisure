@@ -10,3 +10,6 @@ spacetimePip: 2147483647
 
 durationMultiplier: 1.0
 
+# 更大的数值会让界面显示有问题，推荐在样板管理终端管理
+exPatternProvider: 36
+

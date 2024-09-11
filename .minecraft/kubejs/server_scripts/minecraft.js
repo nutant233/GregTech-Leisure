@@ -56,13 +56,15 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:rocket_fuel 1000", "gtceu:nether_air 8000")
         .itemOutputs("gtceu:nether_star_dust")
         .duration(200)
-        .EUt(7680);
+        .EUt(7680)
+        .addCondition(new GravityCondition(true))
 
     gtr.assembler("minecraft:nether_star")
         .itemInputs("4x minecraft:soul_sand", "3x minecraft:wither_skeleton_skull")
         .itemOutputs("minecraft:nether_star")
         .duration(100)
         .EUt(120)
+        .addCondition(new GravityCondition(true))
 
     gtr.assembler("minecraft:reinforced_deepslate")
         .itemInputs("minecraft:deepslate", "gtceu:echo_block", "4x kubejs:echobone")
@@ -116,6 +118,7 @@ ServerEvents.recipes((event) => {
         .outputFluids("minecraft:lava 1000")
         .EUt(16)
         .duration(200)
+
     gtr.chemical_bath("minecraft:prismarine")
         .itemInputs("minecraft:cobblestone")
         .inputFluids("gtceu:salt_water 100")
