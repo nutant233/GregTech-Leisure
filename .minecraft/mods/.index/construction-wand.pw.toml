@@ -3,11 +3,11 @@ name = 'Construction Wand'
 side = 'both'
 
 [download]
-hash = 'a029f801dbcfacd230650fd018f7424535454fb2062d796cbe9cd622a9fe4ae80cb0d7883faa2775c27ed73a21dffbadb44ddc32ce1293ec098654393e7b1c95'
-hash-format = 'sha512'
-mode = 'url'
-url = 'https://cdn.modrinth.com/data/bV2crgLh/versions/XCgKj8gL/constructionwand-1.20.1-2.11.jar'
+hash = '80bd5223cd8984dc1038cb9f2d1cb6b97f31998a'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
 
-[update.modrinth]
-mod-id = 'bV2crgLh'
-version = 'XCgKj8gL'
+[update.curseforge]
+file-id = 4684054
+project-id = 399558
