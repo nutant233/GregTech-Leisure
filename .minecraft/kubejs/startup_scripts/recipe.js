@@ -5,7 +5,6 @@ const $ArrayList = Java.loadClass("java.util.ArrayList")
 const $ItemStack = Java.loadClass("net.minecraft.world.item.ItemStack")
 const $CycleItemStackHandler = Java.loadClass("com.lowdragmc.lowdraglib.utils.CycleItemStackHandler")
 const $I18n = LDLib.isClient() ? Java.loadClass("net.minecraft.client.resources.language.I18n") : null
-const GenerateDisassembly = Java.loadClass("org.gtlcore.gtlcore.data.recipe.GenerateDisassembly")
 const ResearchManager = Java.loadClass("com.gregtechceu.gtceu.utils.ResearchManager")
 GTCEuStartupEvents.registry("gtceu:recipe_type", event => {
     event.create("greenhouse")

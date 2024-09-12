@@ -23,6 +23,7 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "gtceu:shaped/maintenance_hatch_cleaning" })
     event.remove({ id: "gtceu:forming_press/credit_cupronickel" })
     event.remove({ id: "gtceu:electrolyzer/tungstic_acid_electrolysis" })
+    event.shapeless("gtceu:advanced_multi_smelter", "gtceu:multi_smelter")
     event.shapeless("gtceu:suprachronal_assembly_line_module", "gtceu:suprachronal_assembly_line")
     event.shapeless("gtceu:suprachronal_assembly_line", "gtceu:suprachronal_assembly_line_module")
     event.shapeless("gtceu:spacetime_small_fluid_pipe", ["gtceu:spacetime_tiny_fluid_pipe", "gtceu:spacetime_tiny_fluid_pipe"])
@@ -146,7 +147,7 @@ ServerEvents.recipes((event) => {
         "EBE"
     ], {
         A: "gtceu:naquadah_alloy_spring",
-        B: "gtceu:ruthenium_trinium_americium_neutronate_hex_wire",
+        B: "gtceu:enriched_naquadah_trinium_europium_duranide_hex_wire",
         C: "gtceu:zpm_field_generator",
         D: "gtceu:alloy_blast_smelter",
         E: "gtceu:dense_darmstadtium_plate",
@@ -12369,7 +12370,7 @@ ServerEvents.recipes((event) => {
     gtr.dyson_sphere("gtceu:dysonspherelaunch")
         .itemInputs("64x kubejs:dyson_swarm_module")
         .EUt(GTValues.V[GTValues.UIV])
-        .duration(200)
+        .duration(1)
         .CWUt(512)
 
     gtr.petrochemical_plant("gtceu:petrochemical_plant_1")
