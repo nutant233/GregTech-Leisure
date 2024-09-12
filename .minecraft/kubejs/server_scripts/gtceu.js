@@ -23,6 +23,7 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "gtceu:shaped/maintenance_hatch_cleaning" })
     event.remove({ id: "gtceu:forming_press/credit_cupronickel" })
     event.remove({ id: "gtceu:electrolyzer/tungstic_acid_electrolysis" })
+    event.shapeless("gtceu:advanced_multi_smelter", "gtceu:multi_smelter")
     event.shapeless("gtceu:suprachronal_assembly_line_module", "gtceu:suprachronal_assembly_line")
     event.shapeless("gtceu:suprachronal_assembly_line", "gtceu:suprachronal_assembly_line_module")
     event.shapeless("gtceu:spacetime_small_fluid_pipe", ["gtceu:spacetime_tiny_fluid_pipe", "gtceu:spacetime_tiny_fluid_pipe"])
@@ -146,7 +147,7 @@ ServerEvents.recipes((event) => {
         "EBE"
     ], {
         A: "gtceu:naquadah_alloy_spring",
-        B: "gtceu:ruthenium_trinium_americium_neutronate_hex_wire",
+        B: "gtceu:enriched_naquadah_trinium_europium_duranide_hex_wire",
         C: "gtceu:zpm_field_generator",
         D: "gtceu:alloy_blast_smelter",
         E: "gtceu:dense_darmstadtium_plate",
@@ -9207,29 +9208,46 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:supracausal_mainframe")
         .duration(400)
 
-    const tiers = [["ulv", 1], ["lv", 2], ["mv", 3], ["hv", 4], ["ev", 5], ["iv", 6], ["luv", 7], ["zpm", 8], ["uv", 9], ["uhv", 10], ["uev", 11], ["uiv", 12], ["uxv", 13], ["opv", 14], ["max", 15]]
     tiers.forEach((c) => {
         gtr.packer("kubejs:" + c[0] + "_universal_circuit")
             .itemInputs("#gtceu:circuits/" + c[0])
             .itemOutputs("kubejs:" + c[0] + "_universal_circuit")
             .EUt(7)
-            .duration(2 ** c[1])
+            .duration(2 ** (c[1] + 1))
     })
 
     tiers.forEach((c) => {
         gtr.suprachronal_assembly_line("kubejs:suprachronal_" + c[0])
             .notConsumable("kubejs:hyperdimensional_drone")
             .itemInputs("kubejs:timepiece")
-            .inputFluids("gtceu:spacetime " + c[1], "gtceu:raw_star_matter_plasma " + c[1] * 10, "gtceu:uu_matter " + c[1] * 100, "gtceu:molten_periodicium " + c[1] * 100)
+            .inputFluids("gtceu:spacetime " + (c[1] + 1), "gtceu:raw_star_matter_plasma " + (c[1] + 1) * 10, "gtceu:uu_matter " + (c[1] + 1) * 100, "gtceu:molten_periodicium " + (c[1] + 1) * 100)
             .itemOutputs("kubejs:suprachronal_" + c[0])
-            .duration(2 * c[1])
-            .circuit(c[1])
+            .duration(2 * (c[1] + 1))
+            .circuit((c[1] + 1))
             .EUt(GTValues.VA[GTValues.MAX])
-            .stationResearch(b => b.researchStack(Registries.getItemStack(c[1] == 1 ? "kubejs:supracausal_mainframe" : "kubejs:suprachronal_" + tiers[c[1] - 2][0]))
+            .stationResearch(b => b.researchStack(Registries.getItemStack((c[1] + 1) == 1 ? "kubejs:supracausal_mainframe" : "kubejs:suprachronal_" + tiers[(c[1] + 1) - 2][0]))
                 .dataStack(Registries.getItemStack("gtceu:data_module"))
                 .EUt(GTValues.VA[GTValues.MAX])
                 .CWUt(8192))
     })
+
+    for (let tier = 1; tier < GTValues.MAX; tier++) {
+        gtr.assembler(GTCEu.id("huge_input_hatch_" + GTValues.VN[tier].toLowerCase()))
+            .itemInputs(GTMachines.FLUID_IMPORT_HATCH[tier].asStack())
+            .itemInputs((tier > GTValues.EV ? GTMachines.QUANTUM_TANK[tier].asStack() : GTMachines.SUPER_TANK[tier].asStack()))
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs(GTLMachines.HUGE_FLUID_IMPORT_HATCH[tier].asStack())
+            .duration(200)
+            .EUt(GTValues.VA[tier])
+
+        gtr.assembler(GTCEu.id("huge_output_hatch_" + GTValues.VN[tier].toLowerCase()))
+            .itemInputs(GTMachines.FLUID_EXPORT_HATCH[tier].asStack())
+            .itemInputs((tier > GTValues.EV ? GTMachines.QUANTUM_TANK[tier].asStack() : GTMachines.SUPER_TANK[tier].asStack()))
+            .inputFluids("gtceu:soldering_alloy 144")
+            .itemOutputs(GTLMachines.HUGE_FLUID_EXPORT_HATCH[tier].asStack())
+            .duration(200)
+            .EUt(GTValues.VA[tier])
+    }
 
     gtr.autoclave("kubejs:unstable_star")
         .notConsumable("gtceu:orichalcum_nanoswarm")
@@ -12352,7 +12370,7 @@ ServerEvents.recipes((event) => {
     gtr.dyson_sphere("gtceu:dysonspherelaunch")
         .itemInputs("64x kubejs:dyson_swarm_module")
         .EUt(GTValues.V[GTValues.UIV])
-        .duration(200)
+        .duration(1)
         .CWUt(512)
 
     gtr.petrochemical_plant("gtceu:petrochemical_plant_1")
@@ -14108,7 +14126,7 @@ ServerEvents.recipes((event) => {
 
     tiers.forEach(i => {
         gtr.assembler("gtceu:" + i[0] + "_neutron_accelerator")
-            .itemInputs("gtceu:" + i[0] + "_machine_hull", "kubejs:inverter", i[1] == 1 ? "2x gtceu:lead_rotor" : "2x gtceu:" + i[0] + "_electric_motor", "gtceu:double_beryllium_plate", "2x gtceu:polyvinyl_chloride_plate")
+            .itemInputs("gtceu:" + i[0] + "_machine_hull", "kubejs:inverter", i[1] == 0 ? "2x gtceu:lead_rotor" : "2x gtceu:" + i[0] + "_electric_motor", "gtceu:double_beryllium_plate", "2x gtceu:polyvinyl_chloride_plate")
             .itemOutputs("gtceu:" + i[0] + "_neutron_accelerator")
             .inputFluids("gtceu:polonium 288")
             .EUt(30)
