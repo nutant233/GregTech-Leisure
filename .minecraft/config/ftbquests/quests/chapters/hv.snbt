@@ -501,7 +501,10 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["0A8178183C888BE0"]
+			dependencies: [
+				"0A8178183C888BE0"
+				"5E9EA7E22BE663AF"
+			]
 			description: ["你得把切割机放在通用加工厂，然后装上超净维护仓"]
 			id: "676D1982102F4E79"
 			rewards: [{

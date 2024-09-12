@@ -1997,6 +1997,38 @@
 			x: 26.0d
 			y: 6.0d
 		}
+		{
+			dependencies: ["18A773A6B710C658"]
+			description: ["这里有着无重力条件"]
+			id: "3A48F268FB265977"
+			tasks: [{
+				dimension: "ad_astra:moon_orbit"
+				id: "43A03BBB4763EE69"
+				title: "月球空间站"
+				type: "dimension"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["3A48F268FB265977"]
+			id: "57BCF2B955E86FD0"
+			optional: true
+			rewards: [{
+				command: "/execute in ad_astra:moon_orbit run tp 0 100 0"
+				elevate_perms: true
+				id: "628ADDAA3706986F"
+				type: "command"
+			}]
+			tasks: [{
+				id: "5E4E4C0BADB6CC44"
+				title: "去月球空间站"
+				type: "checkmark"
+			}]
+			x: 10.0d
+			y: -2.0d
+		}
 	]
 	title: "探索世界"
 }

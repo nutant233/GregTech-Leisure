@@ -1166,6 +1166,28 @@
 			x: 11.0d
 			y: 3.0d
 		}
+		{
+			dependencies: ["1E7344C133C99565"]
+			id: "36F2CA6E24DE74E1"
+			tasks: [{
+				id: "377042ABB6567FBD"
+				title: "想去地狱，先到EV"
+				type: "checkmark"
+			}]
+			x: 9.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4BFA114E12BCB163"]
+			id: "71DEF0909984EE63"
+			tasks: [{
+				id: "6F190A09C2230BC7"
+				title: "想去末地，先到LUV"
+				type: "checkmark"
+			}]
+			x: 9.0d
+			y: 3.0d
+		}
 	]
 	title: "矿石生成"
 }

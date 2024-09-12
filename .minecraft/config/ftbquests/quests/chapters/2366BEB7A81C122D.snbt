@@ -610,6 +610,17 @@
 			x: 8.0d
 			y: 0.0d
 		}
+		{
+			dependencies: ["035C470213E8B4DB"]
+			id: "07A5A5AD37710056"
+			tasks: [{
+				id: "7039AA556E4A462A"
+				item: "gtceu:gravity_hatch"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Tier8-UV"]
 	title: "极限压"
