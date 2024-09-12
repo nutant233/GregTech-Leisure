@@ -577,7 +577,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.hyper_reactor")))
         .generator(true)
-        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.fastParallel(machine, recipe, getHyperReactorMaxParallel(machine, recipe), false).getFirst(), GTRecipeModifiers.PERFECT_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.fastParallel(machine, recipe, getHyperReactorMaxParallel(machine, recipe), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
         .appearanceBlock(() => Block.getBlock("kubejs:enhance_hyper_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()

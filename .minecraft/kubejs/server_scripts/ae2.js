@@ -16,6 +16,7 @@ ServerEvents.recipes((event) => {
     event.replaceInput({ id: "expatternprovider:fishbig" }, "minecraft:pufferfish", "gtceu:cosmic_ingot")
     event.shapeless("infinitycells:infinity_cell", ["ae2:item_cell_housing", "kubejs:infinite_cell_component"])
     event.shapeless("infinitycells:infinity_fluid_cell", ["ae2:fluid_cell_housing", "kubejs:infinite_cell_component"])
+    event.shapeless("gtlcore:pattern_modifier", "expatternprovider:pattern_modifier")
 
     event.shaped("ae2:creative_energy_cell", [
         "AAA",
