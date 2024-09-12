@@ -67,7 +67,7 @@
 				item: "gtceu:naquadah_alloy_ingot"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 8.0d
 		}
 		{
@@ -79,11 +79,14 @@
 				item: "gtceu:indium_tin_barium_titanium_cuprate_ingot"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 6.0d
 		}
 		{
-			dependencies: ["2CEEFDACE7B13D5A"]
+			dependencies: [
+				"2CEEFDACE7B13D5A"
+				"2BEF03C52636E165"
+			]
 			id: "5B01312E34A3AD60"
 			tasks: [{
 				id: "7A45FAD14DF53B00"
@@ -159,7 +162,7 @@
 				item: "gtceu:crystal_processor"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.0d
 			y: 4.0d
 		}
 		{
@@ -171,7 +174,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["3DCB5E7F69CE5F7F"]
@@ -183,7 +186,7 @@
 				item: "gtceu:crystal_processor_computer"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.0d
 			y: 6.0d
 		}
 		{
@@ -197,7 +200,7 @@
 				item: "gtceu:crystal_processor_mainframe"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.0d
 			y: 8.0d
 		}
 		{
@@ -221,8 +224,8 @@
 				item: "gtceu:active_transformer"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 6.0d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1C10383050657004"]
@@ -282,8 +285,8 @@
 				item: "gtceu:trinium_coil_block"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 10.0d
+			x: 8.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["233CA36D529EC3FB"]
@@ -297,7 +300,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 8.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -331,17 +334,16 @@
 			y: 10.0d
 		}
 		{
-			dependencies: ["7F92A8EE58AD5BA2"]
+			dependencies: ["23B23867F311BF51"]
 			description: ["ZPM超导体"]
-			hide_dependency_lines: true
 			id: "0B89B3108EB4A01F"
 			tasks: [{
 				id: "7E7B15A8DCDA158C"
 				item: "gtceu:uranium_rhodium_dinaquadide_ingot"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 10.0d
+			x: 10.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["2CEEFDACE7B13D5A"]
@@ -351,8 +353,8 @@
 				item: "gtceu:luv_field_generator"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 8.0d
+			x: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -368,8 +370,8 @@
 				item: "gtceu:research_station"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 10.0d
+			x: 12.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -385,7 +387,7 @@
 				item: "gtceu:high_performance_computation_array"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: 8.0d
 		}
 		{
@@ -393,13 +395,14 @@
 				"53D0B2B73387C7CE"
 				"042A0E98DC1084B3"
 			]
+			description: [" 磁共振电路！启动！"]
 			id: "0DC5BFACB3D4BC95"
 			tasks: [{
 				id: "4A9623D2D33B88B9"
 				item: "gtceu:magneto_resonatic_dust"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.0d
 			y: 10.0d
 		}
 		{
@@ -418,21 +421,9 @@
 					type: "item"
 				}
 			]
+			title: "锆与碲"
 			x: 16.0d
 			y: 8.0d
-		}
-		{
-			dependencies: ["0DC5BFACB3D4BC95"]
-			description: ["更便宜的电路"]
-			id: "566AEB5D28AB34DA"
-			optional: true
-			tasks: [{
-				id: "18EC26D87A2536DC"
-				item: "kubejs:imprinted_resonatic_circuit_board"
-				type: "item"
-			}]
-			x: 16.0d
-			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -488,8 +479,8 @@
 				item: "gtceu:multilayer_fiber_reinforced_printed_circuit_board"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 6.0d
+			x: 16.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -527,7 +518,7 @@
 				item: "gtceu:trinium_ingot"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 8.0d
 		}
 		{
@@ -541,7 +532,7 @@
 				item: "gtceu:naquadria_ingot"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 10.0d
 			y: 10.0d
 		}
 		{
@@ -647,6 +638,45 @@
 				type: "checkmark"
 			}]
 			x: 2.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["4BFA114E12BCB163"]
+			description: [
+				"艾萨线，这是一条新的矿物处理线。"
+				""
+				"效率很高，你会喜欢的"
+			]
+			hide_dependency_lines: true
+			id: "5B73961795BE42EE"
+			tasks: [{
+				id: "4532FD760D4A8258"
+				item: "gtceu:isa_mill"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["5B73961795BE42EE"]
+			id: "2588A0EF7F27DE5B"
+			tasks: [{
+				id: "6372AD4866BBD6B6"
+				item: "gtceu:flotation_cell_regulator"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["2588A0EF7F27DE5B"]
+			id: "147A71CE5EEBC836"
+			tasks: [{
+				id: "09A3EC272A7B5FF8"
+				item: "gtceu:vacuum_drying_furnace"
+				type: "item"
+			}]
+			x: 8.0d
 			y: 10.0d
 		}
 	]
