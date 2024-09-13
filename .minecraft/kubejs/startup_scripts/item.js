@@ -381,6 +381,15 @@ StartupEvents.registry("item", event => {
     event.create("hui_circuit_5")
         .tooltip(Component.literal("§7佯谬"))
     event.create("special_ceramics")
+    event.create("fishbig_body")
+    event.create("fishbig_hade")
+    event.create("fishbig_hair")
+    event.create("fishbig_lhand")
+    event.create("fishbig_lleg")
+    event.create("fishbig_rhand")
+    event.create("fishbig_rleg")
+    event.create("fishbig_fabric")
+    event.create("fishbig_frame")
 })
 ItemEvents.modification(event => {
     event.modify("gtceu:raw_coal", modification => {

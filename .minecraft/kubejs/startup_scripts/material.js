@@ -460,7 +460,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .ingot()
         .color(0x2d3e5e)
         .iconSet(new GTMaterialIconSet("cosmic"))
-        .flags(GTMaterialFlags.GENERATE_FINE_WIRE)
+        .flags(GTMaterialFlags.GENERATE_FINE_WIRE, GTMaterialFlags.GENERATE_LONG_ROD)
 
     event.create("hypogen")
         .ingot()
