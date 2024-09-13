@@ -22,7 +22,7 @@ ServerEvents.recipes((event) => {
         "ABA"
     ], {
         A: "kubejs:echobone",
-        B: 'gtceu:echo_rod',
+        B: "gtceu:echo_rod",
         D: "minecraft:sculk_sensor"
     })
 
@@ -176,5 +176,11 @@ ServerEvents.recipes((event) => {
         .itemInputs("7x gtceu:diamond_dust", "minecraft:netherrack")
         .itemOutputs("minecraft:netherite_upgrade_smithing_template")
         .EUt(480)
+        .duration(200)
+
+    gtr.macerator("minecraft:wheat_seeds")
+        .itemInputs("minecraft:wheat")
+        .itemOutputs("64x minecraft:wheat_seeds")
+        .EUt(2)
         .duration(200)
 })
