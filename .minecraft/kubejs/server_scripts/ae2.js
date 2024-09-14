@@ -340,10 +340,80 @@ ServerEvents.recipes((event) => {
 
     gtr.assembler("kubejs:fishbig_frame")
         .circuit(6)
-        .itemInputs("64x gtceu:cosmic_plate","64x gtceu:eternity_nanoswarm", "64x gtceu:long_cosmic_rod", "64x gtceu:infinity_frame", "64x gtceu:long_transcendentmetal_rod",
+        .itemInputs("64x gtceu:cosmic_plate", "64x gtceu:eternity_nanoswarm", "64x gtceu:long_cosmic_rod", "64x gtceu:infinity_frame", "64x gtceu:long_transcendentmetal_rod",
             "64x gtceu:long_cosmicneutronium_rod", "64x gtceu:magnetohydrodynamicallyconstrainedstarmatter_frame", "64x gtceu:long_magmatter_rod",)
         .inputFluids("gtceu:shirabon 18432")
         .itemOutputs("kubejs:fishbig_frame")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MAX] * 65536)
+        .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
+
+    gtr.assembler("kubejs:fishbig_body")
+        .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x gtceu:create_aggregation", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric")
+        .inputFluids("gtceu:eternity 18432")
+        .itemOutputs("kubejs:fishbig_body")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MAX] * 65536)
+        .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
+
+    gtr.assembler("kubejs:fishbig_hade")
+        .itemInputs("64x gtceu:double_cosmic_plate", "64x gtceu:double_cosmic_plate", "64x gtceu:double_cosmic_plate",
+            "64x gtlcore:max_sensor", "64x gtceu:create_computation", "64x gtlcore:max_sensor",
+            "64x gtceu:double_cosmic_plate", "64x kubejs:fishbig_frame", "64x gtceu:double_cosmic_plate")
+        .inputFluids("gtceu:transcendentmetal 18432")
+        .itemOutputs("kubejs:fishbig_hade")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MAX] * 65536)
+        .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
+
+    gtr.assembler("kubejs:fishbig_hair")
+        .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x kubejs:infinity_glass", "64x kubejs:fishbig_fabric")
+        .inputFluids("gtceu:eternity 18432")
+        .itemOutputs("kubejs:fishbig_hair")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MAX] * 65536)
+        .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
+
+    gtr.assembler("kubejs:fishbig_rleg")
+        .itemInputs("64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x gtceu:max_buffer", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+        .inputFluids("gtceu:eternity 18432")
+        .itemOutputs("kubejs:fishbig_rleg")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MAX] * 65536)
+        .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
+
+    gtr.assembler("kubejs:fishbig_lleg")
+        .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame",
+            "64x kubejs:fishbig_fabric", "64x gtceu:max_buffer", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+        .inputFluids("gtceu:eternity 18432")
+        .itemOutputs("kubejs:fishbig_lleg")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MAX] * 65536)
+        .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
+
+    gtr.assembler("kubejs:fishbig_rhand")
+        .itemInputs("64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x gtlcore:component_assembly_line_casing_max", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+        .inputFluids("gtceu:eternity 18432")
+        .itemOutputs("kubejs:fishbig_rhand")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MAX] * 65536)
+        .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
+
+    gtr.assembler("kubejs:fishbig_lhand")
+        .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame",
+            "64x kubejs:fishbig_fabric", "64x gtlcore:component_assembly_line_casing_max", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+        .inputFluids("gtceu:eternity 18432")
+        .itemOutputs("kubejs:fishbig_lhand")
         .duration(200)
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
