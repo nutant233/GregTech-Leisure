@@ -819,6 +819,7 @@
   "gtceu.machine.parallel_hatch_mk13.tooltip": "允许同时处理至多262144个配方。",
   "gtceu.machine.parallel_hatch_mk14.tooltip": "允许同时处理至多1048576个配方。",
   "gtceu.machine.parallel_hatch_mk15.tooltip": "允许同时处理至多4194304个配方。",
+  "gtceu.machine.parallel_hatch_mk16.tooltip": "允许同时处理至多16777216个配方。",
   "gtceu.machine.parallel_hatch_mk9.tooltip": "允许同时处理至多1024个配方。",
   "gtceu.machine.pcb_factory.tooltip.0": "放入纳米蜂群可获得减免",
   "gtceu.machine.pcb_factory.tooltip.1": "时间倍数/每个：金：0.5%，振金：1%",
