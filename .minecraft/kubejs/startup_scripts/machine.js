@@ -372,7 +372,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.annihilate_generator")))
         .generator(true)
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK))
+        .recipeModifier((machine, recipe) => GTLRecipeModifiers.standardOverclocking(machine, recipe))
         .appearanceBlock(GTBlocks.HIGH_POWER_CASING)
         .pattern(definition =>
             FactoryBlockPattern.start("left", "back", "down")
@@ -508,7 +508,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.advanced_hyper_reactor")))
         .generator(true)
-        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.fastParallel(machine, recipe, getAdvancedHyperReactorMaxParallel(machine), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.fastParallel(machine, recipe, getAdvancedHyperReactorMaxParallel(machine), false).getFirst(), (machine, recipe) => GTLRecipeModifiers.standardOverclocking(machine, recipe)])
         .appearanceBlock(() => Block.getBlock("kubejs:enhance_hyper_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -575,7 +575,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.hyper_reactor")))
         .generator(true)
-        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.fastParallel(machine, recipe, getHyperReactorMaxParallel(machine, recipe), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK)])
+        .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.fastParallel(machine, recipe, getHyperReactorMaxParallel(machine, recipe), false).getFirst(), (machine, recipe) => GTLRecipeModifiers.standardOverclocking(machine, recipe)])
         .appearanceBlock(() => Block.getBlock("kubejs:enhance_hyper_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -604,7 +604,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_naquadah_reactor")))
         .generator(true)
-        .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK))
+        .recipeModifier((machine, recipe) => GTLRecipeModifiers.standardOverclocking(machine, recipe))
         .appearanceBlock(() => Block.getBlock("kubejs:hyper_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()

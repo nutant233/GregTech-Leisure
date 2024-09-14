@@ -18,7 +18,7 @@
 	#The strength for two-pass gaussian convolution blur effect.
 	#samples/pixel = ((radius * 2) + 1) * 2, sigma = radius / 2.
 	#Range: 2 ~ 18
-	blurRadius = 7
+	blurRadius = 2
 	#A list of GUI screen superclasses that won't activate blur effect when opened.
 	blurBlacklist = ["net.minecraft.client.gui.screens.ChatScreen"]
 	#(Beta) Pause the game when inventory (also includes creative mode) opened.

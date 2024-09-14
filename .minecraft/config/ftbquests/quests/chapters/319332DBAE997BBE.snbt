@@ -611,7 +611,7 @@
 		}
 		{
 			dependencies: ["52DF531AFB3A07CE"]
-			description: ["比样板供应器加输入仓好使，注意流体无法隔离"]
+			description: ["bug很多，可以去催GTM修复"]
 			id: "4E6DCE7CDC74FC93"
 			tasks: [
 				{

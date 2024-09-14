@@ -911,12 +911,6 @@
 				"0037D6BA6A4ABB72"
 			]
 			id: "033DE57F0D91698C"
-			rewards: [{
-				count: 64
-				id: "62C0AB238ADE6A12"
-				item: "ae2:blank_pattern"
-				type: "item"
-			}]
 			tasks: [{
 				id: "139820782C4C2E96"
 				item: "ae2:blank_pattern"
@@ -1021,6 +1015,7 @@
 		}
 		{
 			dependencies: ["1715EF3BF00D33B7"]
+			description: ["可能出现未知bug，非必要不用使用，可以使用合成卡代替"]
 			id: "07758FA2615B7559"
 			tasks: [{
 				id: "5BAF8D0B28FC21AE"
@@ -1146,6 +1141,7 @@
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
+			description: ["注意没有流体隔离，如果需要，你可以去找GTM实现"]
 			hide_dependency_lines: true
 			id: "62A978538C87ED8A"
 			rewards: [

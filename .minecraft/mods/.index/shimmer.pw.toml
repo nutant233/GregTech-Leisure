@@ -1,0 +1,13 @@
+filename = 'Shimmer-forge-1.20.1-0.2.4.jar'
+name = 'Shimmer'
+side = 'both'
+
+[download]
+hash = '6e51070337e954de2843e44fc8810e22325c2e55'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5685940
+project-id = 627824
