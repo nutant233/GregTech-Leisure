@@ -274,6 +274,17 @@ ServerEvents.recipes((event) => {
         E: "gtceu:opv_emitter"
     })
 
+    event.shaped("gtceu:max_parallel_hatch", [
+        "DCE",
+        "CAC",
+        "BCB"
+    ], {
+        A: "gtceu:max_machine_hull",
+        B: "gtceu:cosmicneutronium_double_cable",
+        C: "kubejs:suprachronal_max",
+        D: "gtlcore:max_sensor",
+        E: "gtlcore:max_emitter"
+    })
 
     event.shaped("gtceu:sterile_cleaning_maintenance_hatch", [
         "DED",
@@ -14515,20 +14526,6 @@ ServerEvents.recipes((event) => {
         .EUt(7)
         .duration(36000)
         .addData("FRheat", 8)
-
-    gtr.assembler("gtceu:mega_steam_input_hatch")
-        .circuit(1)
-        .itemInputs("gtceu:bronze_frame", "gtceu:lv_super_tank", "4x gtlcore:primitive_fluid_regulator", "8x gtceu:bronze_plate")
-        .itemOutputs("gtceu:mega_steam_input_hatch")
-        .EUt(120)
-        .duration(200)
-
-    gtr.assembler("gtceu:mega_steam_output_hatch")
-        .circuit(2)
-        .itemInputs("gtceu:bronze_frame", "gtceu:lv_super_tank", "4x gtlcore:primitive_fluid_regulator", "8x gtceu:bronze_plate")
-        .itemOutputs("gtceu:mega_steam_output_hatch")
-        .EUt(120)
-        .duration(200)
 
     gtr.assembler("gtmthings:ulv_huge_item_import_bus")
         .inputFluids("gtceu:soldering_alloy 144")
