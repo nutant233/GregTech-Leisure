@@ -194,7 +194,10 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["2CAC63F25BAF50B3"]
+			dependencies: [
+				"2CAC63F25BAF50B3"
+				"7DD918C8416C6C63"
+			]
 			id: "4DDFAAF4A8E0622A"
 			rewards: [{
 				id: "3155DA55DF30A8F6"
@@ -232,7 +235,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["23C2F99FC949AF0A"]
@@ -247,7 +250,7 @@
 				item: "gtceu:plutonium_ingot"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 4.0d
 		}
 		{
@@ -1516,6 +1519,17 @@
 			}]
 			x: 12.0d
 			y: 7.0d
+		}
+		{
+			description: ["从现在开始你的部分东西需要无重力条件，你需要前往太空站进行制作"]
+			id: "7DD918C8416C6C63"
+			tasks: [{
+				id: "58D4A11DCEC97B63"
+				title: "无重力条件"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: 6.0d
 		}
 	]
 	subtitle: ["Tier4-EV"]

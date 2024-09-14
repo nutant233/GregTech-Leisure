@@ -13,9 +13,10 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "ae2:materials/advancedcard" })
     event.remove({ id: "ae2:materials/basiccard" })
     event.remove({ id: "ae2:network/crafting/cpu_crafting_unit" })
-    event.replaceInput({ id: "expatternprovider:fishbig" }, "minecraft:pufferfish", "gtceu:cosmic_ingot")
+    event.remove({ id: "expatternprovider:fishbig" })
     event.shapeless("infinitycells:infinity_cell", ["ae2:item_cell_housing", "kubejs:infinite_cell_component"])
     event.shapeless("infinitycells:infinity_fluid_cell", ["ae2:fluid_cell_housing", "kubejs:infinite_cell_component"])
+    event.shapeless("gtlcore:pattern_modifier", "expatternprovider:pattern_modifier")
 
     event.shaped("ae2:creative_energy_cell", [
         "AAA",
@@ -311,7 +312,7 @@ ServerEvents.recipes((event) => {
 
     gtr.assembly_line("kubejs:infinite_cell_component")
         .itemInputs("16x gtlcore:max_storage", "gtceu:data_bank", "16x gtceu:data_module", "64x ae2:creative_energy_cell", "64x #gtceu:circuits/uev", "64x gtceu:ruthenium_trinium_americium_neutronate_hex_wire", "4x gtceu:double_neutronium_plate")
-        .inputFluids("gtceu:mutated_living_solder 20000","gtceu:tairitsu 20000", "gtceu:pcb_coolant 100000")
+        .inputFluids("gtceu:mutated_living_solder 20000", "gtceu:tairitsu 20000", "gtceu:pcb_coolant 100000")
         .itemOutputs("kubejs:infinite_cell_component")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(2400)
@@ -329,4 +330,22 @@ ServerEvents.recipes((event) => {
             D: "ae2:cell_component_16k"
         })
     }
+
+    gtr.forming_press("kubejs:fishbig_fabric")
+        .itemInputs("64x gtceu:magnetohydrodynamicallyconstrainedstarmatter_foil", "64x gtceu:shirabon_foil", "64x kubejs:two_way_foil", "64x gtceu:cosmic_foil", "64x gtceu:cosmicneutronium_foil", "64x gtceu:eternity_foil")
+        .itemOutputs("kubejs:fishbig_fabric")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MAX] * 65536)
+        .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
+
+    gtr.assembler("kubejs:fishbig_frame")
+        .circuit(6)
+        .itemInputs("64x gtceu:cosmic_plate","64x gtceu:eternity_nanoswarm", "64x gtceu:long_cosmic_rod", "64x gtceu:infinity_frame", "64x gtceu:long_transcendentmetal_rod",
+            "64x gtceu:long_cosmicneutronium_rod", "64x gtceu:magnetohydrodynamicallyconstrainedstarmatter_frame", "64x gtceu:long_magmatter_rod",)
+        .inputFluids("gtceu:shirabon 18432")
+        .itemOutputs("kubejs:fishbig_frame")
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MAX] * 65536)
+        .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
+
 })

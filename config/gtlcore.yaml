@@ -1,4 +1,4 @@
-disableDrift: false
+disableDrift: true
 
 enablePrimitiveVoidOre: false
 

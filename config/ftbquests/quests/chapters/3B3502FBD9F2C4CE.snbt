@@ -702,7 +702,7 @@
 		}
 		{
 			dependencies: ["27BA6EBA81622516"]
-			description: ["比库存输入好使"]
+			description: ["同步AE库存"]
 			id: "5608182772E855EC"
 			tasks: [
 				{
