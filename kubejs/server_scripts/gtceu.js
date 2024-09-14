@@ -9366,9 +9366,9 @@ ServerEvents.recipes((event) => {
             "4x kubejs:nuclear_star",
             "2x #gtceu:circuits/max",
             "64x gtceu:white_dwarf_mtter_foil",
-            "64x gtceu:white_dwarf_mtter_foil",
             "64x gtceu:black_dwarf_mtter_foil",
-            "64x gtceu:black_dwarf_mtter_foil",
+            "64x gtceu:shirabon_foil",
+            "64x gtceu:cosmic_foil",
             "32x gtceu:cosmicneutronium_single_cable")
         .inputFluids("gtceu:super_mutated_living_solder " + 1152 * 32, "gtceu:soldering_alloy " + 2304 * 32, "gtceu:infinity 576")
         .itemOutputs("gtlcore:max_emitter")
@@ -9405,10 +9405,10 @@ ServerEvents.recipes((event) => {
             "4x kubejs:nuclear_star",
             "2x gtlcore:max_emitter",
             "2x #gtceu:circuits/max",
-            "64x gtceu:white_dwarf_mtter_foil",
-            "64x gtceu:black_dwarf_mtter_foil",
-            "64x gtceu:shirabon_foil",
-            "64x gtceu:cosmic_foil",
+            "64x gtceu:fine_white_dwarf_mtter_wire",
+            "64x gtceu:fine_black_dwarf_mtter_wire",
+            "64x gtceu:fine_shirabon_wire",
+            "64x gtceu:fine_cosmic_wire",
             "32x gtceu:cosmicneutronium_single_cable")
         .inputFluids("gtceu:super_mutated_living_solder " + 1152 * 32, "gtceu:soldering_alloy " + 2304 * 32, "gtceu:infinity 576")
         .itemOutputs("gtlcore:max_field_generator")
@@ -16087,6 +16087,77 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(1200)
         .addData("CATier", 13)
+
+    gtr.component_assembly_line("gtlcore:max_electric_motor")
+        .circuit(1)
+        .itemInputs("48x gtceu:long_magmatter_rod", "48x gtceu:cosmicneutronium_hex_cable")
+        .inputFluids("gtceu:super_mutated_living_solder 768000", "gtceu:soldering_alloy 1536000", "gtceu:lubricant 3072000", "gtceu:black_dwarf_mtter 110592", "gtceu:white_dwarf_mtter 110592", "gtceu:infinity 27648", "gtceu:transcendentmetal 81408")
+        .itemOutputs("64x gtlcore:max_electric_motor")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(1200)
+        .addData("CATier", 14)
+
+    gtr.component_assembly_line("gtlcore:max_electric_pump")
+        .circuit(3)
+        .itemInputs("96x gtceu:double_transcendentmetal_plate", "48x gtlcore:max_electric_motor", "48x gtceu:cosmicneutronium_hex_cable")
+        .inputFluids("gtceu:super_mutated_living_solder 884736", "gtceu:soldering_alloy 1769472", "gtceu:lubricant 3072000", "gtceu:styrene_butadiene_rubber 110592", "gtceu:transcendentmetal 33792", "gtceu:black_dwarf_mtter 110592", "gtceu:white_dwarf_mtter 110592", "gtceu:infinity 41472", "gtceu:neutronium 442368")
+        .itemOutputs("64x gtlcore:max_electric_pump")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(1200)
+        .addData("CATier", 14)
+
+    gtr.component_assembly_line("gtlcore:max_conveyor_module")
+        .circuit(5)
+        .itemInputs("96x gtlcore:max_electric_motor", "96x gtceu:double_transcendentmetal_plate", "48x gtceu:cosmicneutronium_hex_cable")
+        .inputFluids("gtceu:super_mutated_living_solder 884736", "gtceu:lubricant 3072000", "gtceu:styrene_butadiene_rubber 1050624", "gtceu:transcendentmetal 44544", "gtceu:black_dwarf_mtter 110592", "gtceu:white_dwarf_mtter 110592", "gtceu:infinity 27648")
+        .itemOutputs("64x gtlcore:max_conveyor_module")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(1200)
+        .addData("CATier", 14)
+
+    gtr.component_assembly_line("gtlcore:max_electric_piston")
+        .circuit(2)
+        .itemInputs("48x gtlcore:max_electric_motor", "192x gtceu:double_transcendentmetal_plate", "48x gtceu:cosmicneutronium_hex_cable")
+        .inputFluids("gtceu:super_mutated_living_solder 884736", "gtceu:soldering_alloy 1769472", "gtceu:lubricant 3072000", "gtceu:transcendentmetal 148992", "gtceu:infinity 27648")
+        .itemOutputs("64x gtlcore:max_electric_piston")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(1200)
+        .addData("CATier", 14)
+
+    gtr.component_assembly_line("gtlcore:max_robot_arm")
+        .circuit(4)
+        .itemInputs("192x #gtceu:circuits/uxv", "96x #gtceu:circuits/opv", "192x gtlcore:max_electric_motor", "48x gtlcore:max_electric_piston", "48x #gtceu:circuits/amx", "96x gtceu:cosmicneutronium_hex_cable")
+        .inputFluids("gtceu:super_mutated_living_solder 884736", "gtceu:soldering_alloy 1769472", "gtceu:lubricant 3072000", "gtceu:transcendentmetal 152064", "gtceu:infinity 27648")
+        .itemOutputs("64x gtlcore:max_robot_arm")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(1200)
+        .addData("CATier", 14)
+
+    gtr.component_assembly_line("gtlcore:max_field_generator")
+        .itemInputs("288x gtceu:double_chaos_plate", "96x #gtceu:circuits/max", "96x gtlcore:max_emitter", "192x kubejs:nuclear_star", "48x gtceu:infinity_frame", "3072x gtceu:fine_cosmic_wire", "96x gtceu:cosmicneutronium_hex_cable")
+        .inputFluids("gtceu:super_mutated_living_solder 1769472", "gtceu:soldering_alloy 3538944", "gtceu:black_dwarf_mtter 110592", "gtceu:white_dwarf_mtter 110592", "gtceu:shirabon 110592", "gtceu:infinity 27648")
+        .itemOutputs("64x gtlcore:max_field_generator")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(1200)
+        .addData("CATier", 14)
+
+    gtr.component_assembly_line("gtlcore:max_emitter")
+        .circuit(6)
+        .itemInputs("96x #gtceu:circuits/max", "48x gtlcore:max_electric_motor", "192x kubejs:nuclear_star", "48x gtceu:infinity_frame", "3072x gtceu:cosmic_foil", "96x gtceu:cosmicneutronium_hex_cable")
+        .inputFluids("gtceu:super_mutated_living_solder 1769472", "gtceu:soldering_alloy 3538944", "gtceu:transcendentmetal 55296", "gtceu:black_dwarf_mtter 110592", "gtceu:white_dwarf_mtter 110592", "gtceu:shirabon 110592", "gtceu:infinity 27648")
+        .itemOutputs("64x gtlcore:max_emitter")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(1200)
+        .addData("CATier", 14)
+
+    gtr.component_assembly_line("gtlcore:max_sensor")
+        .circuit(7)
+        .itemInputs("96x #gtceu:circuits/max", "192x gtceu:transcendentmetal_plate", "48x gtlcore:max_electric_motor", "192x kubejs:nuclear_star", "48x gtceu:infinity_frame", "96x gtceu:cosmicneutronium_hex_cable")
+        .inputFluids("gtceu:super_mutated_living_solder 1769472", "gtceu:soldering_alloy 3538944", "gtceu:black_dwarf_mtter 110592", "gtceu:white_dwarf_mtter 110592", "gtceu:shirabon 110592", "gtceu:infinity 27648")
+        .itemOutputs("64x gtlcore:max_sensor")
+        .EUt(GTValues.VA[GTValues.MAX])
+        .duration(1200)
+        .addData("CATier", 14)
 
     //Isa Milled
     const isa_mill_ores = [
