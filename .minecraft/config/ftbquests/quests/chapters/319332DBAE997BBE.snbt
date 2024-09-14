@@ -25,7 +25,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["09F132EE8A88C872"]
@@ -49,14 +49,11 @@
 				item: "gtceu:enriched_naquadah_ingot"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"13BBF0FF3267BFDB"
-				"2BEF03C52636E165"
-			]
+			dependencies: ["2BEF03C52636E165"]
 			description: ["ZPM阶段主要材料"]
 			hide_dependent_lines: true
 			id: "0485D45408234C99"
@@ -68,7 +65,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 8.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["13BBF0FF3267BFDB"]
@@ -93,8 +90,8 @@
 				item: "gtceu:superconducting_coil"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 4.0d
+			x: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -104,6 +101,7 @@
 				"5B01312E34A3AD60"
 				"4381BC8012E94E0A"
 				"4BFA114E12BCB163"
+				"14396D30F281CE72"
 			]
 			description: ["聚变是将两种较轻的元素转化为较重的元素的过程。"]
 			id: "118FDF6D9F868002"
@@ -114,8 +112,8 @@
 				item: "gtceu:luv_fusion_reactor"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 2.0d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["118FDF6D9F868002"]
@@ -125,7 +123,7 @@
 				item: "gtceu:europium_ingot"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.0d
 			y: 2.0d
 		}
 		{
@@ -136,7 +134,7 @@
 				item: "gtceu:raw_crystal_chip"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.0d
 			y: 2.0d
 		}
 		{
@@ -162,8 +160,8 @@
 				item: "gtceu:crystal_processor"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 4.0d
+			x: 16.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["5BB55AABB91EEF9D"]
@@ -186,7 +184,7 @@
 				item: "gtceu:crystal_processor_computer"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 12.0d
 			y: 6.0d
 		}
 		{
@@ -200,7 +198,7 @@
 				item: "gtceu:crystal_processor_mainframe"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 12.0d
 			y: 8.0d
 		}
 		{
@@ -212,10 +210,11 @@
 				type: "item"
 			}]
 			x: 16.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["5B01312E34A3AD60"]
+			description: [""]
 			id: "72D3B5BC37024815"
 			shape: "rsquare"
 			size: 1.0d
@@ -224,18 +223,19 @@
 				item: "gtceu:active_transformer"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 4.0d
+			x: 10.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["1C10383050657004"]
+			dependencies: ["09F132EE8A88C872"]
+			hide_dependency_lines: true
 			id: "4381BC8012E94E0A"
 			tasks: [{
 				id: "74011E6BE9AA8BDE"
 				item: "gtceu:uhpic_chip"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 12.0d
 			y: 2.0d
 		}
 		{
@@ -249,7 +249,7 @@
 				item: "gtceu:fusion_casing"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 4.0d
 		}
 		{
@@ -260,7 +260,7 @@
 				item: "gtceu:neutron_reflector"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 4.0d
 		}
 		{
@@ -275,7 +275,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["2BEF03C52636E165"]
@@ -285,7 +285,7 @@
 				item: "gtceu:trinium_coil_block"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 8.0d
 		}
 		{
@@ -299,7 +299,7 @@
 				item: "gtceu:large_void_miner"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 12.0d
 			y: 10.0d
 		}
 		{
@@ -311,11 +311,19 @@
 			id: "52980D117AB477B2"
 			shape: "rsquare"
 			size: 1.0d
-			tasks: [{
-				id: "2E8C86DE512279CC"
-				item: "gtceu:void_fluid_drilling_rig"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2E8C86DE512279CC"
+					item: "gtceu:void_fluid_drilling_rig"
+					type: "item"
+				}
+				{
+					id: "70D6B4883DF437A5"
+					item: "gtceu:large_void_miner"
+					type: "item"
+				}
+			]
+			title: "来自虚空"
 			x: 14.0d
 			y: 0.0d
 		}
@@ -330,8 +338,8 @@
 				item: "gtceu:precision_assembler"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 10.0d
+			x: 14.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["23B23867F311BF51"]
@@ -342,8 +350,8 @@
 				item: "gtceu:uranium_rhodium_dinaquadide_ingot"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 8.0d
+			x: 8.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["2CEEFDACE7B13D5A"]
@@ -353,8 +361,8 @@
 				item: "gtceu:luv_field_generator"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 6.0d
+			x: 8.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -370,8 +378,8 @@
 				item: "gtceu:research_station"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 6.0d
+			x: 10.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -387,8 +395,8 @@
 				item: "gtceu:high_performance_computation_array"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 8.0d
+			x: 10.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -422,8 +430,8 @@
 				}
 			]
 			title: "锆与碲"
-			x: 16.0d
-			y: 8.0d
+			x: 14.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -439,7 +447,7 @@
 				item: "gtceu:luv_assembler"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 0.0d
 		}
 		{
@@ -450,7 +458,7 @@
 				item: "gtceu:polyphenylene_sulfide_foil"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
@@ -480,7 +488,7 @@
 				type: "item"
 			}]
 			x: 16.0d
-			y: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -494,10 +502,15 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["09F132EE8A88C872"]
+			description: [
+				"有硅岩就可以做这个了，可以提高效率，"
+				"这是非必须的"
+			]
+			hide_dependency_lines: true
 			id: "1C10383050657004"
 			tasks: [{
 				id: "78A1A23B153BDD1E"
@@ -505,7 +518,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -518,7 +531,7 @@
 				item: "gtceu:trinium_ingot"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 8.0d
 		}
 		{
@@ -532,7 +545,7 @@
 				item: "gtceu:naquadria_ingot"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 6.0d
 			y: 10.0d
 		}
 		{
@@ -544,10 +557,11 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["66AE53E13E3C3C19"]
+			description: ["你应该已经开始采流体矿脉了，一定是吧"]
 			id: "67784DEB22D18308"
 			rewards: [{
 				id: "6798C71A84FECE4E"
@@ -578,7 +592,7 @@
 				}
 			]
 			x: 2.0d
-			y: 8.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["7F92A8EE58AD5BA2"]
@@ -607,7 +621,7 @@
 				}
 			]
 			x: 4.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["52DF531AFB3A07CE"]
@@ -629,22 +643,10 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["67784DEB22D18308"]
-			description: ["外星的流体矿脉有非常多好东西，你一定早就开始采了吧"]
-			id: "451E712259302733"
-			tasks: [{
-				id: "3E0CCF2468010A1C"
-				title: "外星流体矿脉"
-				type: "checkmark"
-			}]
-			x: 2.0d
-			y: 10.0d
-		}
-		{
 			dependencies: ["4BFA114E12BCB163"]
 			description: [
 				"艾萨线，这是一条新的矿物处理线。"
-				""
+				"产出铂处，稀土，硅岩等一些稀有的粉"
 				"效率很高，你会喜欢的"
 			]
 			hide_dependency_lines: true
@@ -654,8 +656,8 @@
 				item: "gtceu:isa_mill"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 10.0d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["5B73961795BE42EE"]
@@ -665,8 +667,8 @@
 				item: "gtceu:flotation_cell_regulator"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 10.0d
+			x: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["2588A0EF7F27DE5B"]
@@ -676,8 +678,31 @@
 				item: "gtceu:vacuum_drying_furnace"
 				type: "item"
 			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4172820CE8E15F90"]
+			description: ["比外壳便宜一点，可以用来填充结构"]
+			id: "14396D30F281CE72"
+			tasks: [{
+				id: "277BB227A11F67EC"
+				item: "gtceu:fusion_glass"
+				type: "item"
+			}]
 			x: 8.0d
-			y: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["118FDF6D9F868002"]
+			id: "6A59FA11D10C648A"
+			tasks: [{
+				id: "4C1F30305CB157EA"
+				item: "gtceu:duranium_ingot"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 4.0d
 		}
 	]
 	subtitle: ["Tier6-LuV"]
