@@ -178,6 +178,7 @@
 				"0243CEA5EE705EB0"
 				"157A951DA379C259"
 			]
+			dependency_requirement: "one_started"
 			id: "3FCF807491579B94"
 			rewards: [{
 				id: "62693CFE4D386654"
@@ -213,7 +214,9 @@
 				"18CA398800CC2E1B"
 				"5E9EA7E22BE663AF"
 			]
+			dependency_requirement: "one_completed"
 			id: "1C320B245EAC8D14"
+			min_required_dependencies: 1
 			rewards: [{
 				id: "6B1C840CF7158D92"
 				item: "gtceu:platinum_credit"
@@ -505,8 +508,10 @@
 				"0A8178183C888BE0"
 				"5E9EA7E22BE663AF"
 			]
+			dependency_requirement: "one_completed"
 			description: ["你得把切割机放在通用加工厂，然后装上超净维护仓"]
 			id: "676D1982102F4E79"
+			min_required_dependencies: 1
 			rewards: [{
 				id: "73D294571F48A5E9"
 				item: "gtceu:gold_credit"
@@ -846,6 +851,24 @@
 			title: "无线传电"
 			x: -2.0d
 			y: 8.0d
+		}
+		{
+			dependencies: ["1A48D2DB936FF632"]
+			description: ["有的人死了，可他又活了"]
+			id: "46C791B2130A833B"
+			rewards: [{
+				count: 64
+				id: "7D16EBA9FE10BE1A"
+				item: "gtceu:plascrete"
+				type: "item"
+			}]
+			tasks: [{
+				id: "58D9C40EEF22D487"
+				item: "gtceu:cleanroom"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
 		}
 	]
 	subtitle: ["Tier3-HV"]

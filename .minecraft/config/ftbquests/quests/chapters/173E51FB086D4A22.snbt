@@ -53,7 +53,7 @@
 				item: "gtceu:lv_pump"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 1.0d
 			y: 8.0d
 		}
 		{
@@ -64,7 +64,7 @@
 				item: "gtceu:oil_medium_bucket"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 1.0d
 			y: 6.0d
 		}
 		{
@@ -81,9 +81,12 @@
 			dependencies: [
 				"2451D79084562C67"
 				"0B00D881C861FEB2"
+				"5CECDCDB3DFFDF6B"
 			]
+			dependency_requirement: "one_completed"
 			description: ["蒸馏室三号电路"]
 			id: "63FEF796CFF5E8DF"
+			min_required_dependencies: 1
 			tasks: [{
 				id: "014038349888FC2A"
 				item: "gtceu:sulfuric_naphtha_bucket"
@@ -601,6 +604,28 @@
 			}]
 			x: 18.0d
 			y: 4.0d
+		}
+		{
+			dependencies: ["3940A3FA8CD3C04D"]
+			id: "5CECDCDB3DFFDF6B"
+			tasks: [{
+				id: "7F52AE8148CC8670"
+				item: "gtceu:oil_heavy_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			id: "3940A3FA8CD3C04D"
+			tasks: [{
+				id: "2DC831E01D85A452"
+				item: "gtceu:raw_oilsands"
+				type: "item"
+			}]
+			title: "这是油矿"
+			x: 0.0d
+			y: 8.0d
 		}
 	]
 	title: "石化与生化"
