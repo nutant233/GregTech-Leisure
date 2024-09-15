@@ -12,26 +12,6 @@ ServerEvents.recipes((event) => {
         D: "minecraft:ender_pearl"
     })
 
-    event.shaped("travelanchors:travel_staff", [
-        "  A",
-        " B ",
-        "B  "
-    ], {
-        A: "kubejs:warped_ender_pearl",
-        B: "gtceu:long_vanadium_steel_rod"
-    })
-
-    event.shaped("travelanchors:travel_anchor", [
-        "CAC",
-        "DBD",
-        "CAC"
-    ], {
-        A: "gtceu:double_iron_plate",
-        B: "kubejs:warped_ender_pearl",
-        C: "gtceu:wrought_iron_foil",
-        D: "gtceu:vanadium_steel_screw"
-    })
-
     event.shaped("kubejs:command_wand", [
         "  A",
         " B ",

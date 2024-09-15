@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "gtceu:item/material_sets/infinity/ingot",
+    "layer0":"avaritia:item/resource/infinity_ingot",
     "layer1": "gtceu:item/material_sets/dull/ingot_hot_overlay",
     "halo": "avaritia:misc/halo"
   },
