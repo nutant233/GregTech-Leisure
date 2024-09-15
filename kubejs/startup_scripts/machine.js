@@ -54,6 +54,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.greenhouse.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.greenhouse")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(GTBlocks.MACHINE_CASING_ULV)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK))
         .pattern((definition) =>
@@ -101,6 +102,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.plasma_condenser")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(() => Block.getBlock("kubejs:antifreeze_heatproof_machine_casing"))
         .pattern(definition => FactoryBlockPattern.start()
@@ -128,6 +130,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.rare_earth_centrifugal")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.CASING_HSSE_STURDY)
         .pattern((definition) =>
@@ -156,6 +159,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.magic_manufacturer")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(GTBlocks.MACHINE_CASING_UIV)
         .pattern((definition) =>
@@ -191,6 +195,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.sps_crafting")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(GTBlocks.FUSION_CASING_MK2)
         .pattern((definition) =>
@@ -224,6 +229,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.sps_crafting")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.FUSION_CASING_MK2)
         .pattern((definition) =>
@@ -265,6 +271,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.matter_fabricator")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.HIGH_POWER_CASING)
         .pattern((definition) =>
@@ -292,6 +299,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("void_fluid_drilling_rig")
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.void_fluid_drilling_rig")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(GTBlocks.CASING_HSSE_STURDY)
         .pattern((definition) =>
@@ -315,6 +323,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("void_miner")
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.void_miner")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
         .pattern((definition) =>
@@ -341,6 +350,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.large_void_miner.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.large_void_miner"), Component.translatable("gtceu.random_ore")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern((definition) =>
@@ -371,6 +381,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.annihilate_generator")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .generator(true)
         .recipeModifier((machine, recipe) => GTLRecipeModifiers.standardOverclocking(machine, recipe))
         .appearanceBlock(GTBlocks.HIGH_POWER_CASING)
@@ -460,6 +471,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_chemical_reactor")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTLRecipeModifiers.chemicalPlantOverclock(machine, recipe, params, result)])
         .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
         .pattern((definition) =>
@@ -507,6 +519,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.advanced_hyper_reactor")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .generator(true)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.fastParallel(machine, recipe, getAdvancedHyperReactorMaxParallel(machine), false).getFirst(), (machine, recipe) => GTLRecipeModifiers.standardOverclocking(machine, recipe)])
         .appearanceBlock(() => Block.getBlock("kubejs:enhance_hyper_mechanical_casing"))
@@ -574,6 +587,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.hyper_reactor")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .generator(true)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.fastParallel(machine, recipe, getHyperReactorMaxParallel(machine, recipe), false).getFirst(), (machine, recipe) => GTLRecipeModifiers.standardOverclocking(machine, recipe)])
         .appearanceBlock(() => Block.getBlock("kubejs:enhance_hyper_mechanical_casing"))
@@ -603,6 +617,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_naquadah_reactor")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .generator(true)
         .recipeModifier((machine, recipe) => GTLRecipeModifiers.standardOverclocking(machine, recipe))
         .appearanceBlock(() => Block.getBlock("kubejs:hyper_mechanical_casing"))
@@ -656,6 +671,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.sphere_of_harmony.tooltip.6"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.cosmos_simulation")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(() => Block.getBlock("kubejs:dimensionally_transcendent_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start()
@@ -755,6 +771,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.space_probe_surface_reception")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(GCyMBlocks.CASING_ATOMIC)
         .pattern(definition =>
@@ -817,6 +834,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.dimensionally_transcendent_plasma_forge"), Component.translatable("gtceu.stellar_forge")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:dimensionally_transcendent_casing"))
         .pattern(definition =>
@@ -865,6 +883,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.decay_hastener")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:hyper_mechanical_casing"))
         .pattern((definition) =>
@@ -891,6 +910,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.large_recycler.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_recycler")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 ** (machine.self().getTier() - 4), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.STEEL_HULL)
         .pattern((definition) =>
@@ -919,6 +939,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.mass_fabricator")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.MACHINE_CASING_UHV)
         .pattern((definition) =>
@@ -956,6 +977,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.mass_fabricator")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.8, 0.5), GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.MACHINE_CASING_UXV)
         .pattern((definition) =>
@@ -995,6 +1017,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.circuit_assembly_line.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.circuit_assembly_line")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => {
             let item = machine.getMachineStorageItem()
             let isParallel = false
@@ -1049,6 +1072,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.precision_assembler"), Component.translatable("gtceu.assembler")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:oxidation_resistant_hastelloy_n_mechanical_casing"))
         .pattern(definition =>
@@ -1106,6 +1130,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.resource_collection.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.assembler_module")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => {
             let tier = getSpaceElevatorModule(machine)
             if (tier[0] < 0) {
@@ -1159,6 +1184,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.resource_collection.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.miner_module"), Component.translatable("gtceu.drilling_module")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => {
             let tier = getSpaceElevatorModule(machine)
             if (tier[0] < 0) {
@@ -1216,6 +1242,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.fishing_ground")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:aluminium_bronze_casing"))
         .pattern(definition =>
@@ -1249,6 +1276,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.block_conversion_room.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.block_conversion")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 4, false)))
         .appearanceBlock(() => Block.getBlock("kubejs:aluminium_bronze_casing"))
         .pattern(definition =>
@@ -1305,6 +1333,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("incubator")
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.incubator")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(GTBlocks.PLASTCRETE)
         .pattern((definition) =>
@@ -1332,6 +1361,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.incubator")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.PLASTCRETE)
         .pattern((definition) =>
@@ -1383,6 +1413,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.pcb_factory")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, machine.getMachineStorageItem().getId() == "gtceu:vibranium_nanoswarm" ? 0.25 : 1, getPCBReduction(machine)), GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GCyMBlocks.CASING_WATERTIGHT)
         .pattern((definition) =>
@@ -1434,6 +1465,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("lava_furnace")
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.lava_furnace")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("CCC", "DDD", "DDD")
             .aisle("CCC", "D D", "DMD")
@@ -1455,6 +1487,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.large_gas_collector.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_gas_collector")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 100000, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern(definition => FactoryBlockPattern.start()
@@ -1481,6 +1514,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.aggregation_device")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 2 ** (machine.self().getTier() - GTValues.UEV), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.FUSION_CASING)
         .pattern((definition) =>
@@ -1517,6 +1551,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.super_particle_collider")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:lafium_mechanical_casing"))
         .pattern((definition) =>
@@ -1593,6 +1628,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.precision_laser_engraver"), Component.translatable("gtceu.laser_engraver")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => {
             if (machine.getRecipeType() == GTRecipeTypes.LASER_ENGRAVER_RECIPES) {
                 return GTRecipeModifiers.hatchParallel(machine, recipe, false).getFirst()
@@ -1642,6 +1678,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.alloy_blast_smelter")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("   eeeee   ", "   cbbbc   ", "   cbbbc   ", "   cbbbc   ", "   eeeee   ", "   bbbbb   ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ", "           ")
             .aisle("  ebbbbbe  ", "  c     c  ", "  c     c  ", "  c     c  ", "  efffffe  ", "  bbbbbbb  ", "   bbbbb   ", "   ccccc   ", "   ccccc   ", "   ccccc   ", "   ccccc   ", "   ccccc   ", "   ccccc   ", "   ccccc   ", "   ccccc   ", "   ccccc   ", "   bbbbb   ", "           ")
@@ -1687,6 +1724,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.dimensionally_transcendent_mixer"), Component.translatable("gtceu.mixer")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => {
             if (machine.getRecipeType() == GTRecipeTypes.MIXER_RECIPES) {
                 return GTLRecipeModifiers.reduction(machine, recipe, 1, 0.2)
@@ -1728,6 +1766,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.qft")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:manipulator"))
         .pattern(definition =>
@@ -1777,6 +1816,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.electric_blast_furnace"), Component.translatable("gtceu.alloy_blast_smelter")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("aaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaa", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ")
             .aisle("accccccccccccccccccccca", "aaaaaaaaaaaaaaaaaaaaaaa", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ", "                       ")
@@ -1846,6 +1886,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.large_chemical_reactor")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTLRecipeModifiers.chemicalPlantOverclock(machine, recipe, params, result)])
         .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
         .pattern((definition) =>
@@ -1898,6 +1939,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.integrated_ore_processor")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -1930,6 +1972,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.dragon_egg_copier")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:dragon_strength_tritanium_casing"))
         .pattern((definition) =>
@@ -1960,6 +2003,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.electric_blast_furnace.tooltip.2"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.electric_blast_furnace")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 1, 0.5), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 64, false).getFirst(), (machine, recipe, params, result) => GTRecipeModifiers.ebfOverclock(machine, recipe, params, result)])
         .appearanceBlock(() => Block.getBlock("kubejs:blaze_blast_furnace_casing"))
         .pattern(definition => FactoryBlockPattern.start()
@@ -2007,6 +2051,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.blaze_blast_furnace.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.vacuum_freezer")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 1, 0.5), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 64, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:cold_ice_casing"))
         .pattern(definition => FactoryBlockPattern.start()
@@ -2051,6 +2096,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("door_of_create")
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.door_of_create")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1, false)))
         .appearanceBlock(() => Block.getBlock("kubejs:dimension_connection_casing"))
         .pattern(definition =>
@@ -2116,6 +2162,10 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                         entity.getServer().runCommandSilent(`summon minecraft:item ${entity.x} ${entity.y} ${entity.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:command_block",Count:${parseInt(entity.getItem().getCount())}b}}`)
                         entity.kill()
                     }
+                    if (entity.type == "minecraft:item" && entity.getItem().getId().toString() == "gtceu:magmatter_ingot" && entity.getItem().getCount() >= 64) {
+                        entity.getServer().runCommandSilent(`summon minecraft:item ${entity.x} ${entity.y} ${entity.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"gtceu:magmatter_block",Count:${parseInt(entity.getItem().getCount() / 64)}b}}`)
+                        entity.kill()
+                    }
                 }
             }
             return true
@@ -2128,6 +2178,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.cracker")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTRecipeModifiers.crackerOverclock(machine, recipe, params, result)])
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
         .pattern((definition) =>
@@ -2171,6 +2222,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_3.tooltip",
             Component.translatable("gtceu.assembler"), Component.translatable("gtceu.precision_assembler"), Component.translatable("gtceu.circuit_assembler")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:iridium_casing"))
         .pattern((definition) =>
@@ -2233,6 +2285,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.greenhouse")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .pattern((definition) =>
@@ -2270,6 +2323,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.bedrock_drilling_rig.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.bedrock_drilling_rig")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(() => Block.getBlock("kubejs:echo_casing"))
         .pattern(definition => FactoryBlockPattern.start()
@@ -2320,6 +2374,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.vacuum_freezer"), Component.translatable("gtceu.plasma_condenser")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.CASING_ALUMINIUM_FROSTPROOF)
         .pattern(definition => FactoryBlockPattern.start()
@@ -2380,6 +2435,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_3.tooltip",
             Component.translatable("gtceu.polarizer"), Component.translatable("gtceu.electromagnetic_separator"), Component.translatable("gtceu.electrolyzer")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:lafium_mechanical_casing"))
         .pattern(definition => FactoryBlockPattern.start()
@@ -2422,6 +2478,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("create_aggregation")
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.create_aggregation")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1, false)))
         .appearanceBlock(() => Block.getBlock("kubejs:dimension_connection_casing"))
         .pattern(definition => FactoryBlockPattern.start()
@@ -2475,6 +2532,9 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 if (MachineIO.inputItem(machine, Registries.getItemStack("kubejs:repeating_command_block_core")) && block == "kubejs:chain_command_block_broken") {
                     level.setBlockAndUpdate(pos, Block.getBlock("minecraft:repeating_command_block").defaultBlockState())
                 }
+                if (MachineIO.inputItem(machine, Item.of("avaritia:singularity", `{Id:"avaritia:spacetime"}`)) && block == "gtceu:magmatter_block") {
+                    level.getServer().runCommandSilent(`summon minecraft:item ${pos.x} ${pos.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"avaritia:singularity",Count:1b}}`)
+                }
             }
             return true
         })
@@ -2487,7 +2547,8 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
-            Component.translatable("gtceu.gravitation_shockburst"), Component.translatable("gtceu.gravitelectric_implosion_compressoration_shockburst")))
+            Component.translatable("gtceu.gravitation_shockburst"), Component.translatable("gtceu.electric_implosion_compressor")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(() => Block.getBlock("kubejs:create_casing"))
         .pattern(definition => FactoryBlockPattern.start()
@@ -2506,7 +2567,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .or(Predicates.abilities(PartAbility.OPTICAL_DATA_RECEPTION).setExactLimit(1))
                 .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1)))
             .where("b", Predicates.blocks("kubejs:infinity_glass"))
-            .where("c", Predicates.blocks("gtceu:infinity_block"))
+            .where("c", Predicates.blocks("avaritia:infinity_block"))
             .where("~", Predicates.controller(Predicates.blocks(definition.get())))
             .where(" ", Predicates.any())
             .build()
@@ -2543,6 +2604,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_3.tooltip",
             Component.translatable("gtceu.suprachronal_assembly_line"), Component.translatable("gtceu.assembly_line"), Component.translatable("gtceu.circuit_assembly_line")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 1, 0.4), GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern(definition =>
@@ -2644,6 +2706,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.assembly_line"), Component.translatable("gtceu.circuit_assembly_line")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 1, 0.4), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, GTLRecipeModifiers.getHatchParallel(getSuprachronalAssemblyLine(machine)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern(definition => FactoryBlockPattern.start()
@@ -2695,6 +2758,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.autoclave"), Component.translatable("gtceu.chemical_bath")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:extreme_strength_tritanium_casing"))
         .pattern((definition) =>
@@ -2781,6 +2845,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             Component.translatable("gtceu.polarizer"),
             Component.translatable("gtceu.laser_engraver"),
             Component.translatable("gtceu.fluid_solidifier")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.6), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -2856,6 +2921,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.processing_plant.tooltip.1"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.assembler"), Component.translatable("gtceu.circuit_assembler")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.6), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -2915,6 +2981,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             Component.translatable("gtceu.macerator"),
             Component.translatable("gtceu.extractor"),
             Component.translatable("gtceu.dehydrator")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.6), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -2983,6 +3050,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
             Component.translatable("gtceu.mixer"),
             Component.translatable("gtceu.chemical_bath"),
             Component.translatable("gtceu.ore_washer")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTLRecipeModifiers.reduction(machine, recipe, 0.9, 0.6), (machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 4 * (machine.self().getTier() - 1), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:multi_functional_casing"))
         .pattern((definition) =>
@@ -3036,6 +3104,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.ultimate_material_forge")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, 1000, false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern((definition) =>
@@ -3125,6 +3194,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.FORGE_HAMMER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.forge_hammer")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 1))
         .addOutputLimit($ItemRecipeCapability.CAP, 1)
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
@@ -3164,6 +3234,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.COMPRESSOR_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.compressor")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 1))
         .addOutputLimit($ItemRecipeCapability.CAP, 1)
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
@@ -3187,6 +3258,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.ALLOY_SMELTER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.alloy_smelter")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 1))
         .addOutputLimit($ItemRecipeCapability.CAP, 1)
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
@@ -3210,6 +3282,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.MACERATOR_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.macerator")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .addOutputLimit($ItemRecipeCapability.CAP, 1)
@@ -3241,6 +3314,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.CIRCUIT_ASSEMBLER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.circuit_assembler")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3274,6 +3348,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.MIXER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.mixer")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3307,6 +3382,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.MIXER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.mixer")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.8))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3340,6 +3416,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.CENTRIFUGE_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.centrifuge")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3376,6 +3453,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.THERMAL_CENTRIFUGE_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.thermal_centrifuge")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3406,6 +3484,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.CHEMICAL_BATH_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.chemical_bath")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3439,6 +3518,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.CHEMICAL_BATH_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.chemical_bath")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.8))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3469,6 +3549,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.ORE_WASHER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.ore_washer")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.5))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3501,6 +3582,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType(GTRecipeTypes.ORE_WASHER_RECIPES)
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.ore_washer")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => LargeSteamParallelMultiblockMachine.recipeModifier(machine, recipe, 0.8))
         .appearanceBlock(GTBlocks.CASING_BRONZE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3531,6 +3613,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.dimensionally_transcendent_dirt_forge.tooltip.0"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.primitive_blast_furnace")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => {
             let recipe1 = recipe.copy()
             recipe1.duration = 0
@@ -3567,6 +3650,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_4.tooltip",
             Component.translatable("gtceu.cutter"), Component.translatable("gtceu.lathe"), Component.translatable("gtceu.macerator"), Component.translatable("gtceu.centrifuge")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(() => Block.getBlock("kubejs:iridium_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start()
@@ -3615,6 +3699,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.dyson_sphere.tooltip.6"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.dyson_sphere")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => $DysonSphere.recipeModifier(machine, recipe))
         .appearanceBlock(() => Block.getBlock("kubejs:multi_functional_casing"))
         .pattern((definition) =>
@@ -3689,6 +3774,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.petrochemical_plant")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTRecipeModifiers.crackerOverclock(machine, recipe, params, result)])
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
         .pattern((definition) =>
@@ -3736,6 +3822,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.weather_control.tooltip.2"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.weather_control")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic(1, 1, false)))
         .appearanceBlock(GTBlocks.STEEL_HULL)
         .pattern(definition => FactoryBlockPattern.start()
@@ -3782,6 +3869,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.pyrolyse_oven")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, (machine, recipe, params, result) => GTRecipeModifiers.pyrolyseOvenOverclock(machine, recipe, params, result)])
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
         .pattern((definition) =>
@@ -3820,6 +3908,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.rock_breaker")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTLRecipeModifiers.GCYM_REDUCTION, GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GCyMBlocks.CASING_SECURE_MACERATION)
         .pattern((definition) =>
@@ -3852,6 +3941,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.extruder"), Component.translatable("gtceu.compressor")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(() => Block.getBlock("kubejs:iridium_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -3945,6 +4035,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.nano_forge")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount(), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
@@ -3996,6 +4087,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.nano_forge")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (2 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe, params, result) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (3 - recipe.data.getInt("nano_forge_tier")), 4, false), recipe, machine.getOverclockVoltage(), params, result)])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
@@ -4052,6 +4144,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.nano_forge")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, machine.getMachineStorageItem().getCount() * (2 ** (3 - recipe.data.getInt("nano_forge_tier"))), false).getFirst(), (machine, recipe, params, result) => $RecipeHelper.applyOverclock(OverclockingLogic(2 ** (4 - recipe.data.getInt("nano_forge_tier")), 4, false), recipe, machine.getOverclockVoltage(), params, result)])
         .appearanceBlock(() => Block.getBlock("kubejs:naquadah_alloy_casing"))
         .pattern((definition) =>
@@ -4106,6 +4199,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.laser.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.distort")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.max(1, (machine.getCoilType().getCoilTemperature() - recipe.data.getInt("ebf_temp")) / 100 * 4), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GTBlocks.CASING_PTFE_INERT)
         .pattern((definition) =>
@@ -4157,6 +4251,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.dimensional_focus_engraving_array")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([(machine, recipe, params, result) => GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(GCyMBlocks.CASING_LASER_SAFE_ENGRAVING)
         .pattern((definition) =>
@@ -4284,6 +4379,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.multiple_recipes.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.wiremill")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(() => Block.getBlock("kubejs:oxidation_resistant_hastelloy_n_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4348,6 +4444,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.multiple_recipes.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_3.tooltip",
             Component.translatable("gtceu.bender"), Component.translatable("gtceu.forge_hammer"), Component.translatable("gtceu.forming_press")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4407,6 +4504,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.multiple_recipes.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.extractor"), Component.translatable("gtceu.fluid_solidifier")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(() => Block.getBlock("kubejs:hyper_mechanical_casing"))
         .pattern((definition) =>
             FactoryBlockPattern.start()
@@ -4452,6 +4550,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.canner")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(() => Block.getBlock("kubejs:lafium_mechanical_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start()
@@ -4489,6 +4588,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .recipeType("disassembly")
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.disassembly")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier(GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK))
         .appearanceBlock(() => Block.getBlock("kubejs:process_machine_casing"))
         .pattern((definition) =>
@@ -4514,6 +4614,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.element_copying")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:molecular_casing"))
         .pattern((definition) =>
@@ -4559,6 +4660,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.atomic_energy_excitation"), Component.translatable("gtceu.fuel_refining")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:dimensionally_transcendent_casing"))
         .pattern((definition) =>
@@ -4621,6 +4723,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.perfect_oc"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.isa_mill")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => {
             let item = machine.getMachineStorageItem()
             if (getGrindball(item.getId()) >= recipe.data.getInt("grindball")) {
@@ -4666,6 +4769,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.parallelizable.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.flotating_beneficiation")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.ELECTRIC_OVERCLOCK.apply(OverclockingLogic.PERFECT_OVERCLOCK_SUBTICK)])
         .appearanceBlock(() => Block.getBlock("kubejs:hastelloy_n_75_casing"))
         .pattern((definition) =>
@@ -4709,6 +4813,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.multiblock.coil_parallel"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_2.tooltip",
             Component.translatable("gtceu.vacuum_drying"), Component.translatable("gtceu.dehydrator")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .recipeModifier((machine, recipe, params, result) => {
             if (machine.self().getRecipeType() == GTRecipeTypes.get("dehydrator")) {
                 return $RecipeHelper.applyOverclock(OverclockingLogic.NON_PERFECT_OVERCLOCK_SUBTICK, GTRecipeModifiers.accurateParallel(machine, recipe, Math.min(2147483647, 2 ** (machine.getCoilType().getCoilTemperature() / 900)), false).getFirst(), machine.getOverclockVoltage(), params, result)
@@ -4753,6 +4858,7 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .tooltips(Component.translatable("gtceu.machine.multiple_recipes.tooltip"))
         .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip",
             Component.translatable("gtceu.fluid_heater")))
+        .tooltipBuilder(GTLMachines.GTL_ADD)
         .appearanceBlock(() => Block.getBlock("kubejs:iridium_casing"))
         .pattern(definition =>
             FactoryBlockPattern.start()

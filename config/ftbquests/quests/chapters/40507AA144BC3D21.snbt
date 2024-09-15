@@ -358,17 +358,6 @@
 			x: 3.0d
 			y: -1.0d
 		}
-		{
-			dependencies: ["51D5E14423F35E6F"]
-			id: "157CE930096F5DCA"
-			tasks: [{
-				id: "344462E7CE13EB75"
-				item: "expatternprovider:fishbig"
-				type: "item"
-			}]
-			x: 5.0d
-			y: -1.0d
-		}
 	]
 	subtitle: ["Tier13-OpV"]
 	title: "过载压"

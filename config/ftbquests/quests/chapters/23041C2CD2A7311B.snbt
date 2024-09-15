@@ -552,7 +552,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "4551291536D7C6FC"
-				item: "gtceu:infinity_ingot"
+				item: "avaritia:infinity_ingot"
 				type: "item"
 			}]
 			x: 14.0d

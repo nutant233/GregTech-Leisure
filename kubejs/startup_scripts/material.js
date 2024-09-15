@@ -11,7 +11,6 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
     event.create("vibranium", 550, 550, -1, null, "Vi", false)
     event.create("draconium", 8000, 8000, -1, null, "Dc", false)
     event.create("chaos", 20000, 20000, -1, null, "§8§kchaos", false)
-    event.create("infinity", 100000, 100000, -1, null, "∞", false)
     event.create("mithril", 330, 330, -1, null, "Mi", false)
     event.create("infuscolium", 600, 600, -1, null, "If", true)
     event.create("taranium", 440, 440, -1, null, "Tn", false)
@@ -446,15 +445,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet(GTMaterialIconSet.DULL)
         .color(0x000000)
         .flags(GTMaterialFlags.GENERATE_FOIL)
-
-    event.create("infinity")
-        .ingot()
-    [FluidStorageKey](GTFluidStorageKeys.LIQUID, new GTFluidBuilder().temperature(1000000).customStill().translation("fluid.kubejs.infinity"))
-        .blastTemp(32000, "highest")
-        .element(GTElements.get("infinity"))
-        .iconSet(new GTMaterialIconSet("infinity"))
-        .flags(GTMaterialFlags.GENERATE_FRAME)
-        .cableProperties(GTValues.V[GTValues.MAX], 8192, 0, true)
 
     event.create("cosmic")
         .ingot()

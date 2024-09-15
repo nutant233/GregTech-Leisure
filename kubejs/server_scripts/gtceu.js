@@ -8212,7 +8212,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 3)
 
-    gtr.stellar_forge("gtceu:infinity_ingot")
+    gtr.stellar_forge("avaritia:infinity_ingot")
         .inputFluids("gtceu:crystalmatrix 2000", "gtceu:cosmicneutronium 1000")
         .itemInputs("kubejs:quantum_chromodynamic_charge")
         .itemOutputs("gtceu:hot_infinity_ingot")
@@ -14029,7 +14029,7 @@ ServerEvents.recipes((event) => {
     gtr.qft("gtceu:cosmic_ingot")
         .notConsumable("gtceu:cosmicneutronium_nanoswarm")
         .chancedInput("kubejs:cosmic_singularity", 1000, 0)
-        .itemInputs("kubejs:hypercube", "gtceu:infinity_ingot")
+        .itemInputs("kubejs:hypercube", "avaritia:infinity_ingot")
         .inputFluids("gtceu:white_dwarf_mtter 576", "gtceu:black_dwarf_mtter 576", "gtceu:primordialmatter 500")
         .itemOutputs("gtceu:cosmic_ingot")
         .EUt(64 * GTValues.VA[GTValues.MAX])

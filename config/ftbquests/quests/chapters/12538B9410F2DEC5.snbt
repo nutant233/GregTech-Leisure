@@ -25,7 +25,7 @@
 			id: "46BFC6BCC3440819"
 			linked_quest: "4A058FA1859A00D1"
 			x: 0.0d
-			y: 2.0d
+			y: 4.0d
 		}
 	]
 	quests: [
@@ -61,6 +61,7 @@
 				"4A058FA1859A00D1"
 				"0485D45408234C99"
 				"52DF531AFB3A07CE"
+				"5D980DBF92017008"
 			]
 			description: ["更进一步"]
 			id: "77759D1FE48F958B"
@@ -150,7 +151,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["425D7CD010B9C90E"]
@@ -160,7 +161,7 @@
 				item: "gtceu:wetware_processor_assembly"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: 6.0d
 		}
 		{
@@ -173,7 +174,7 @@
 				item: "gtceu:wetware_processor_computer"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 6.0d
 		}
 		{
@@ -184,8 +185,8 @@
 				item: "gtceu:darmstadtium_ingot"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 8.0d
+			x: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["77759D1FE48F958B"]
@@ -196,7 +197,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["38D23D186C444492"]
@@ -222,8 +223,8 @@
 				item: "gtceu:enriched_naquadah_trinium_europium_duranide_ingot"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 8.0d
+			x: 6.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -248,8 +249,8 @@
 				item: "gtceu:decay_hastener"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 10.0d
+			x: 2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -265,7 +266,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["0A2D46609F5C3CAB"]
@@ -291,7 +292,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 10.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -310,7 +311,7 @@
 				item: "gtceu:network_switch"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 6.0d
 		}
 		{
@@ -327,8 +328,8 @@
 				item: "gtceu:super_particle_collider"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 10.0d
+			x: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -360,17 +361,6 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["118FDF6D9F868002"]
-			id: "6A59FA11D10C648A"
-			tasks: [{
-				id: "4C1F30305CB157EA"
-				item: "gtceu:duranium_ingot"
-				type: "item"
-			}]
-			x: 2.0d
-			y: 6.0d
-		}
-		{
 			dependencies: ["0A2D46609F5C3CAB"]
 			description: ["OP"]
 			id: "35C61EF7C0FBD32F"
@@ -381,8 +371,8 @@
 				item: "gtceu:integrated_ore_processor"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 10.0d
+			x: 5.5d
+			y: 8.0d
 		}
 		{
 			dependencies: ["0A2D46609F5C3CAB"]
@@ -395,8 +385,8 @@
 				item: "gtceu:petrochemical_plant"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 10.0d
+			x: 6.5d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -520,8 +510,8 @@
 				item: "gtceu:superconducting_electromagnetism"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 10.0d
+			x: 11.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["0485D45408234C99"]
@@ -531,8 +521,8 @@
 				item: "gtceu:zpm_energy_input_hatch"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 0.0d
+			x: 0.0d
+			y: 2.0d
 		}
 	]
 	subtitle: ["Tier7-ZPM"]

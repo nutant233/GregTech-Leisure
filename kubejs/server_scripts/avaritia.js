@@ -14,7 +14,7 @@ ServerEvents.recipes((event) => {
         "type": "avaritia:shaped_extreme_craft",
         "category": "misc",
         "pattern": [
-            "   ACA   ",
+            "J  ACA  J",
             "   ADA   ",
             "  ABABA  ",
             " ABBBBBA ",
@@ -22,7 +22,7 @@ ServerEvents.recipes((event) => {
             " ABBBBBA ",
             "  ABABA  ",
             " AHA AIA ",
-            "  A   A  "
+            "J A   A J"
         ],
         "key": {
             "A": {
@@ -51,6 +51,9 @@ ServerEvents.recipes((event) => {
             },
             "I": {
                 "item": "kubejs:fishbig_rleg"
+            },
+            "J": {
+                "item": "avaritia:singularity"
             }
         },
         "result": {

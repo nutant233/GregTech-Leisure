@@ -18,7 +18,7 @@
 			linked_quest: "7C23CC6ADDC33EA0"
 			shape: "rsquare"
 			size: 2.0d
-			x: 2.0d
+			x: 0.0d
 			y: 0.0d
 		}
 	]
@@ -28,9 +28,9 @@
 				"0A2D46609F5C3CAB"
 				"7C4C11E7C931C01B"
 				"73C70C42B7EF5D4F"
-				"7C23CC6ADDC33EA0"
+				"2719D88ECD353F24"
 			]
-			description: ["最后一种了"]
+			description: [""]
 			id: "6C4F1C87F08F38AC"
 			shape: "rsquare"
 			size: 2.0d
@@ -56,7 +56,7 @@
 				item: "gtceu:neutronium_ingot"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 2.0d
 		}
 		{
@@ -68,7 +68,7 @@
 				item: "gtceu:neutronium_boule"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 4.0d
 		}
 		{
@@ -80,7 +80,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["24B011E770B7DF3F"]
@@ -113,7 +113,7 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
+			x: 8.0d
 			y: 10.0d
 		}
 		{
@@ -128,8 +128,8 @@
 				item: "kubejs:bioware_processor"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 4.0d
+			x: 10.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -144,7 +144,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 6.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["76C32ADCD71DE8B8"]
@@ -156,8 +156,8 @@
 				item: "kubejs:bioware_computer"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 6.0d
+			x: 12.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -171,8 +171,8 @@
 				item: "kubejs:bioware_mainframe"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 4.0d
+			x: 12.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
@@ -183,7 +183,7 @@
 				item: "gtceu:ruthenium_trinium_americium_neutronate_ingot"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 10.0d
 			y: 2.0d
 		}
 		{
@@ -195,7 +195,7 @@
 				title: "聚酰亚胺"
 				type: "checkmark"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 10.0d
 		}
 		{
@@ -208,7 +208,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["1FA9E56114BFABF5"]
@@ -220,8 +220,8 @@
 				item: "gtceu:circuit_assembly_line"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 8.0d
+			x: 14.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["7204F1B6BCC74F1C"]
@@ -234,8 +234,8 @@
 				item: "gtceu:plasma_condenser"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 4.0d
+			x: 14.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -249,7 +249,7 @@
 				item: "kubejs:bioware_processing_core"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 8.0d
 			y: 8.0d
 		}
 		{
@@ -266,7 +266,7 @@
 				item: "kubejs:bioware_boule"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 8.0d
 			y: 6.0d
 		}
 		{
@@ -278,7 +278,7 @@
 				item: "gtceu:assembler_module"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 6.0d
 		}
 		{
@@ -290,7 +290,7 @@
 				item: "gtceu:resource_collection"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 8.0d
 		}
 		{
@@ -301,7 +301,7 @@
 				item: "kubejs:space_drone_mk1"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 6.0d
 		}
 		{
@@ -314,7 +314,7 @@
 				item: "gtceu:abyssalalloy_ingot"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: 10.0d
 		}
 		{
@@ -325,7 +325,7 @@
 				item: "kubejs:abyssalalloy_coil_block"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 10.0d
 		}
 		{
@@ -339,7 +339,7 @@
 				item: "gtceu:highurabilityompoundteel_ingot"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 10.0d
 		}
 		{
@@ -362,7 +362,7 @@
 				}
 			]
 			title: "山铜与秘银"
-			x: 0.0d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
@@ -377,7 +377,7 @@
 				item: "kubejs:tcetieseaweedextract"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 8.0d
 		}
 		{
@@ -416,7 +416,7 @@
 				item: "gtceu:space_elevator"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: 6.0d
 		}
 		{
@@ -431,7 +431,7 @@
 				item: "kubejs:bioware_printed_circuit_board"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 8.0d
 		}
 		{
@@ -442,8 +442,8 @@
 				item: "gtceu:neutronium_wafer"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 4.0d
+			x: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -457,7 +457,7 @@
 				item: "kubejs:rutherfordium_neutronium_boule"
 				type: "item"
 			}]
-			x: 4.5d
+			x: 6.5d
 			y: 4.0d
 		}
 		{
@@ -469,7 +469,7 @@
 				item: "gtceu:rutherfordium_dust"
 				type: "item"
 			}]
-			x: 3.0d
+			x: 5.0d
 			y: 4.0d
 		}
 		{
@@ -484,11 +484,11 @@
 				item: "gtceu:actinium_dust"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 3.5d
 			y: 4.0d
 		}
 		{
-			description: ["从铀矿中获取"]
+			description: ["从铀矿中获取（硫酸铀废液）"]
 			id: "056569C44B1B5E25"
 			tasks: [
 				{
@@ -502,7 +502,7 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
+			x: 2.0d
 			y: 4.0d
 		}
 		{
@@ -513,8 +513,8 @@
 				item: "gtceu:mega_blast_furnace"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 0.0d
+			x: 12.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["1DFC7DC123A3D830"]
@@ -544,7 +544,7 @@
 				item: "gtceu:super_blast_smelter"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 14.0d
 			y: 2.0d
 		}
 		{
@@ -555,8 +555,8 @@
 				item: "gtceu:mega_alloy_blast_smelter"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 2.0d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["6D83BAAC7DB34D51"]
@@ -571,7 +571,7 @@
 				title: "不明液体"
 				type: "checkmark"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 6.0d
 		}
 		{
@@ -582,7 +582,7 @@
 				item: "gtceu:uv_energy_input_hatch"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -620,6 +620,17 @@
 			}]
 			x: 6.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["035C470213E8B4DB"]
+			id: "7597D3F42E7E8515"
+			tasks: [{
+				id: "798CD0CCB2B791EF"
+				item: "gtceu:zpm_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.0d
 		}
 	]
 	subtitle: ["Tier8-UV"]
