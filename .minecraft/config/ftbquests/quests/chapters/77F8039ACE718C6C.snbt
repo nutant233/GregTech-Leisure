@@ -846,28 +846,8 @@
 		}
 		{
 			dependencies: ["1AB03D24332B722E"]
-			description: ["你基本不需要花费资源"]
+			description: ["强力熔炉，蒸汽消耗也少"]
 			id: "0532330B52D98469"
-			rewards: [
-				{
-					count: 160
-					id: "2AE2D4376CFFF72E"
-					item: "gtceu:steam_machine_casing"
-					type: "item"
-				}
-				{
-					count: 2100
-					id: "711389695E7537BD"
-					item: "minecraft:stone_bricks"
-					type: "item"
-				}
-				{
-					count: 1200
-					id: "00C8C93CE4F3B059"
-					item: "minecraft:bricks"
-					type: "item"
-				}
-			]
 			shape: "gear"
 			size: 2.0d
 			tasks: [{
