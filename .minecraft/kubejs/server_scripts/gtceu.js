@@ -1207,7 +1207,7 @@ ServerEvents.recipes((event) => {
             .CWUt(128))
 
     gtr.assembly_line("gtceu:assembler_module")
-        .itemInputs("4x kubejs:advanced_assembly_line_unit",
+        .itemInputs("4x gtlcore:advanced_assembly_line_unit",
             "4x gtceu:uv_emitter",
             "4x gtceu:uv_sensor",
             "4x gtceu:uv_robot_arm",
@@ -3005,10 +3005,10 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(200)
 
-    gtr.assembler("kubejs:space_elevator_support")
+    gtr.assembler("gtlcore:space_elevator_support")
         .itemInputs("gtceu:naquadah_frame", "4x gtceu:red_steel_rod", "6x gtceu:black_steel_plate")
         .inputFluids("gtceu:concrete 1152")
-        .itemOutputs("2x kubejs:space_elevator_support")
+        .itemOutputs("2x gtlcore:space_elevator_support")
         .EUt(480)
         .duration(400)
 
@@ -3075,7 +3075,7 @@ ServerEvents.recipes((event) => {
         F: "#forge:tools/wrench"
     })
 
-    event.shaped("kubejs:advanced_assembly_line_unit", [
+    event.shaped("gtlcore:advanced_assembly_line_unit", [
         "CEC",
         "BAB",
         "CEC"
@@ -12023,7 +12023,7 @@ ServerEvents.recipes((event) => {
 
     gtr.assembly_line("kubejs:spacetime_assembly_line_unit")
         .itemInputs("gtceu:adamantium_frame",
-            "kubejs:advanced_assembly_line_unit",
+            "gtlcore:advanced_assembly_line_unit",
             "kubejs:machine_casing_circuit_assembly_line",
             "kubejs:precision_circuit_assembly_robot_mk2",
             "gtceu:osmium_nanoswarm",
@@ -12037,7 +12037,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:spacetime_assembly_line_unit")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(400)
-        .stationResearch(b => b.researchStack(Registries.getItemStack("kubejs:advanced_assembly_line_unit"))
+        .stationResearch(b => b.researchStack(Registries.getItemStack("gtlcore:advanced_assembly_line_unit"))
             .dataStack(Registries.getItemStack("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UHV])
             .CWUt(256))
@@ -15040,7 +15040,7 @@ ServerEvents.recipes((event) => {
     gtr.assembly_line("gtceu:component_assembly_line")
         .itemInputs("16x gtceu:advanced_assembly_line",
             "16x gtceu:assembly_line_casing",
-            "32x kubejs:advanced_assembly_line_unit",
+            "32x gtlcore:advanced_assembly_line_unit",
             "16x gtceu:uv_robot_arm",
             "32x gtceu:uv_conveyor_module",
             "32x gtceu:uhv_electric_motor",
