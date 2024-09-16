@@ -2745,10 +2745,10 @@
 			id: "376F6857ABEF60BF"
 			tasks: [{
 				icon: "gtceu:portable_debug_scanner"
-				id: "654C1D74F045820D"
+				id: "3B3273B44D2FEC29"
 				type: "custom"
 			}]
-			title: "这里有198个多方块"
+			title: "这里有199个多方块"
 			x: -12.0d
 			y: -2.0d
 		}
@@ -2950,6 +2950,17 @@
 				type: "item"
 			}]
 			x: 24.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5930E12A8BCAF996"]
+			id: "5549BBB07626B52C"
+			tasks: [{
+				id: "10C327278A3B27AC"
+				item: "gtceu:advanced_multi_smelter"
+				type: "item"
+			}]
+			x: -4.0d
 			y: 2.0d
 		}
 	]

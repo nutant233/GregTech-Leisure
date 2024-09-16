@@ -848,6 +848,11 @@
 			dependencies: ["1AB03D24332B722E"]
 			description: ["强力熔炉，蒸汽消耗也少"]
 			id: "0532330B52D98469"
+			rewards: [{
+				id: "142C72A3F57D1D8C"
+				item: "gtceu:ancient_gold_coin"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 2.0d
 			tasks: [{

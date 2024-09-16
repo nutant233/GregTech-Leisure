@@ -43,6 +43,8 @@
 				"13BBF0FF3267BFDB"
 				"766D051A40AB5324"
 			]
+			dependency_requirement: "one_completed"
+			description: ["看一看电磁选矿有惊喜"]
 			id: "0507FDF7BECE29AF"
 			tasks: [{
 				id: "39855610E9E80307"
@@ -55,7 +57,6 @@
 		{
 			dependencies: ["2BEF03C52636E165"]
 			description: ["ZPM阶段主要材料"]
-			hide_dependent_lines: true
 			id: "0485D45408234C99"
 			shape: "rsquare"
 			size: 2.0d
@@ -560,7 +561,10 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["66AE53E13E3C3C19"]
+			dependencies: [
+				"66AE53E13E3C3C19"
+				"0485D45408234C99"
+			]
 			description: ["你应该已经开始采流体矿脉了，一定是吧"]
 			id: "67784DEB22D18308"
 			rewards: [{
