@@ -2999,7 +2999,7 @@ ServerEvents.recipes((event) => {
         .circuit(6)
 
     gtr.chemical_bath("kubejs:high_strength_concrete")
-        .itemInputs("#forge:concrete")
+        .itemInputs("#forge:concretes")
         .inputFluids("gtceu:concrete 1152")
         .itemOutputs("kubejs:high_strength_concrete")
         .EUt(480)
@@ -16307,7 +16307,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.HV])
         .duration(40)
 
-    gtr.chemical_reactor("gtceu:potassium_ethylate_dust")
+    gtr.large_chemical_reactor("gtceu:potassium_ethylate_dust")
         .circuit(2)
         .itemInputs("3x gtceu:potash_dust", "5x gtceu:quicklime_dust")
         .inputFluids("gtceu:carbon_dioxide 1000", "minecraft:water 5000")
