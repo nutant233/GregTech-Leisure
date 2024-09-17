@@ -13,7 +13,7 @@
 			shape: "rsquare"
 			size: 2.0d
 			x: 0.0d
-			y: 4.0d
+			y: -6.0d
 		}
 		{
 			id: "7ED0015FCA833C34"
@@ -21,7 +21,7 @@
 			shape: "rsquare"
 			size: 2.0d
 			x: 0.0d
-			y: -6.0d
+			y: -8.0d
 		}
 	]
 	quests: [
@@ -36,7 +36,7 @@
 				item: "kubejs:contained_high_density_protonic_matter"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 4.0d
 		}
 		{
@@ -47,7 +47,7 @@
 				item: "gtceu:crystalmatrix_ingot"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 2.0d
 		}
 		{
@@ -62,7 +62,7 @@
 				item: "gtceu:starmetal_ingot"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: 2.0d
 		}
 		{
@@ -76,7 +76,7 @@
 				item: "kubejs:starmetal_coil_block"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -245,7 +245,7 @@
 				item: "kubejs:neutronium_sphere"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 4.0d
 			y: -8.0d
 		}
 		{
@@ -257,7 +257,7 @@
 				title: "自由质子"
 				type: "checkmark"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: 4.0d
 		}
 		{
@@ -269,7 +269,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 2.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["41B4A5048EBCE287"]
@@ -281,7 +281,7 @@
 				type: "checkmark"
 			}]
 			x: 0.0d
-			y: 0.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["6FF53B92BA6D2370"]
@@ -291,7 +291,7 @@
 				item: "kubejs:resonating_gem"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -650,8 +650,8 @@
 				item: "gtceu:nano_forge_3"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -2.0d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["26607B94D873E07A"]
@@ -661,8 +661,8 @@
 				item: "gtceu:uxv_energy_input_hatch"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -4.0d
+			x: 2.0d
+			y: -8.0d
 		}
 	]
 	subtitle: ["Tier12-UXV"]

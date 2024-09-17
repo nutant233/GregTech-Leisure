@@ -1207,7 +1207,7 @@ ServerEvents.recipes((event) => {
             .CWUt(128))
 
     gtr.assembly_line("gtceu:assembler_module")
-        .itemInputs("4x kubejs:advanced_assembly_line_unit",
+        .itemInputs("4x gtlcore:advanced_assembly_line_unit",
             "4x gtceu:uv_emitter",
             "4x gtceu:uv_sensor",
             "4x gtceu:uv_robot_arm",
@@ -2999,16 +2999,16 @@ ServerEvents.recipes((event) => {
         .circuit(6)
 
     gtr.chemical_bath("kubejs:high_strength_concrete")
-        .itemInputs("#forge:concrete")
+        .itemInputs("#forge:concretes")
         .inputFluids("gtceu:concrete 1152")
         .itemOutputs("kubejs:high_strength_concrete")
         .EUt(480)
         .duration(200)
 
-    gtr.assembler("kubejs:space_elevator_support")
+    gtr.assembler("gtlcore:space_elevator_support")
         .itemInputs("gtceu:naquadah_frame", "4x gtceu:red_steel_rod", "6x gtceu:black_steel_plate")
         .inputFluids("gtceu:concrete 1152")
-        .itemOutputs("2x kubejs:space_elevator_support")
+        .itemOutputs("2x gtlcore:space_elevator_support")
         .EUt(480)
         .duration(400)
 
@@ -3075,7 +3075,7 @@ ServerEvents.recipes((event) => {
         F: "#forge:tools/wrench"
     })
 
-    event.shaped("kubejs:advanced_assembly_line_unit", [
+    event.shaped("gtlcore:advanced_assembly_line_unit", [
         "CEC",
         "BAB",
         "CEC"
@@ -12023,7 +12023,7 @@ ServerEvents.recipes((event) => {
 
     gtr.assembly_line("kubejs:spacetime_assembly_line_unit")
         .itemInputs("gtceu:adamantium_frame",
-            "kubejs:advanced_assembly_line_unit",
+            "gtlcore:advanced_assembly_line_unit",
             "kubejs:machine_casing_circuit_assembly_line",
             "kubejs:precision_circuit_assembly_robot_mk2",
             "gtceu:osmium_nanoswarm",
@@ -12037,7 +12037,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:spacetime_assembly_line_unit")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(400)
-        .stationResearch(b => b.researchStack(Registries.getItemStack("kubejs:advanced_assembly_line_unit"))
+        .stationResearch(b => b.researchStack(Registries.getItemStack("gtlcore:advanced_assembly_line_unit"))
             .dataStack(Registries.getItemStack("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UHV])
             .CWUt(256))
@@ -14447,63 +14447,63 @@ ServerEvents.recipes((event) => {
         .itemInputs("kubejs:reactor_thorium_simple")
         .itemOutputs("kubejs:depleted_reactor_thorium_simple")
         .EUt(6)
-        .duration(1200)
+        .duration(13440)
         .addData("FRheat", 1)
 
     gtr.fission_reactor("kubejs:reactor_thorium_dual")
         .itemInputs("kubejs:reactor_thorium_dual")
         .itemOutputs("kubejs:depleted_reactor_thorium_dual")
         .EUt(8)
-        .duration(1800)
+        .duration(17280)
         .addData("FRheat", 2)
 
     gtr.fission_reactor("kubejs:reactor_thorium_quad")
         .itemInputs("kubejs:reactor_thorium_quad")
         .itemOutputs("kubejs:depleted_reactor_thorium_quad")
         .EUt(10)
-        .duration(2700)
+        .duration(21600)
         .addData("FRheat", 3)
 
     gtr.fission_reactor("kubejs:reactor_uranium_simple")
         .itemInputs("kubejs:reactor_uranium_simple")
         .itemOutputs("kubejs:depleted_reactor_uranium_simple")
         .EUt(3)
-        .duration(2000)
+        .duration(11200)
         .addData("FRheat", 4)
 
     gtr.fission_reactor("kubejs:reactor_uranium_dual")
         .itemInputs("kubejs:reactor_uranium_dual")
         .itemOutputs("kubejs:depleted_reactor_uranium_dual")
         .EUt(4)
-        .duration(3000)
+        .duration(14400)
         .addData("FRheat", 5)
 
     gtr.fission_reactor("kubejs:reactor_uranium_quad")
         .itemInputs("kubejs:reactor_uranium_quad")
         .itemOutputs("kubejs:depleted_reactor_uranium_quad")
         .EUt(5)
-        .duration(4500)
+        .duration(18000)
         .addData("FRheat", 6)
 
     gtr.fission_reactor("kubejs:reactor_mox_simple")
         .itemInputs("kubejs:reactor_mox_simple")
         .itemOutputs("kubejs:depleted_reactor_mox_simple")
         .EUt(1)
-        .duration(1400)
+        .duration(7840)
         .addData("FRheat", 6)
 
     gtr.fission_reactor("kubejs:reactor_mox_dual")
         .itemInputs("kubejs:reactor_mox_dual")
         .itemOutputs("kubejs:depleted_reactor_mox_dual")
         .EUt(2)
-        .duration(2100)
+        .duration(10080)
         .addData("FRheat", 7)
 
     gtr.fission_reactor("kubejs:reactor_mox_quad")
         .itemInputs("kubejs:reactor_mox_quad")
         .itemOutputs("kubejs:depleted_reactor_mox_quad")
         .EUt(3)
-        .duration(3200)
+        .duration(12800)
         .addData("FRheat", 8)
 
     gtr.fission_reactor("kubejs:reactor_naquadah_simple")
@@ -14511,21 +14511,21 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:depleted_reactor_naquadah_simple")
         .EUt(3)
         .duration(16000)
-        .addData("FRheat", 6)
+        .addData("FRheat", 7)
 
     gtr.fission_reactor("kubejs:reactor_naquadah_dual")
         .itemInputs("kubejs:reactor_naquadah_dual")
         .itemOutputs("kubejs:depleted_reactor_naquadah_dual")
         .EUt(5)
         .duration(24000)
-        .addData("FRheat", 7)
+        .addData("FRheat", 8)
 
     gtr.fission_reactor("kubejs:reactor_naquadah_quad")
         .itemInputs("kubejs:reactor_naquadah_quad")
         .itemOutputs("kubejs:depleted_reactor_naquadah_quad")
         .EUt(7)
         .duration(36000)
-        .addData("FRheat", 8)
+        .addData("FRheat", 9)
 
     gtr.assembler("gtmthings:ulv_huge_item_import_bus")
         .inputFluids("gtceu:soldering_alloy 144")
@@ -15040,7 +15040,7 @@ ServerEvents.recipes((event) => {
     gtr.assembly_line("gtceu:component_assembly_line")
         .itemInputs("16x gtceu:advanced_assembly_line",
             "16x gtceu:assembly_line_casing",
-            "32x kubejs:advanced_assembly_line_unit",
+            "32x gtlcore:advanced_assembly_line_unit",
             "16x gtceu:uv_robot_arm",
             "32x gtceu:uv_conveyor_module",
             "32x gtceu:uhv_electric_motor",
@@ -16307,7 +16307,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.HV])
         .duration(40)
 
-    gtr.chemical_reactor("gtceu:potassium_ethylate_dust")
+    gtr.large_chemical_reactor("gtceu:potassium_ethylate_dust")
         .circuit(2)
         .itemInputs("3x gtceu:potash_dust", "5x gtceu:quicklime_dust")
         .inputFluids("gtceu:carbon_dioxide 1000", "minecraft:water 5000")
@@ -16802,4 +16802,11 @@ ServerEvents.recipes((event) => {
         .itemOutputs("gtceu:graphite_ingot")
         .EUt(GTValues.VA[GTValues.LV])
         .duration(300)
+
+    gtr.laser_engraver("avaritia:singularity")
+        .itemInputs("16x gtceu:magmatter_block")
+        .itemInputs(Item.of("avaritia:singularity", `{Id:"avaritia:spacetime"}`).weakNBT())
+        .itemOutputs("avaritia:singularity")
+        .EUt(GTValues.VA[GTValues.MAX] * 262144)
+        .duration(1600)
 })

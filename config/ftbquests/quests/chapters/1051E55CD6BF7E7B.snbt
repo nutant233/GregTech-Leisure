@@ -328,12 +328,14 @@
 		}
 		{
 			dependencies: ["1416EAE88C9030C8"]
+			description: ["你看着它好像看到了好多个银河年前泛银河格雷科技销售部货架上的那个大胡子玩偶"]
 			id: "516498830339A0A9"
 			tasks: [{
 				id: "74404EE9AEC393D4"
 				item: "expatternprovider:fishbig"
 				type: "item"
 			}]
+			title: "我会永远陪着你的"
 			x: 7.0d
 			y: -1.0d
 		}

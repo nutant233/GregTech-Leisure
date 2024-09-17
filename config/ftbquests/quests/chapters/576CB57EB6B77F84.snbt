@@ -580,6 +580,262 @@
 			x: 0.5d
 			y: 5.5d
 		}
+		{
+			description: [
+				"此间蒸汽大道显化"
+				"世人皆可借此成仙"
+			]
+			id: "410D898F86927828"
+			tasks: [{
+				id: "56F7A145321FEBD7"
+				item: "gtceu:steam_bucket"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -3.5d
+		}
+		{
+			id: "156A6119EF3FC8EC"
+			tasks: [{
+				id: "1E363439BE539298"
+				item: "gtceu:light_fuel_bucket"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -3.5d
+		}
+		{
+			id: "6D50B18D9A0BC34C"
+			tasks: [{
+				id: "09BEF0BEDE808368"
+				item: "gtceu:creosote_bucket"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -3.5d
+		}
+		{
+			id: "760B73534368A83F"
+			tasks: [{
+				id: "5FA9888C67929589"
+				item: "gtceu:diesel_bucket"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -2.0d
+		}
+		{
+			id: "65AEB28E1E96F432"
+			tasks: [{
+				id: "33CE35F13E820052"
+				item: "gtceu:cetane_boosted_diesel_bucket"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			id: "0E36BD3F8C539335"
+			tasks: [{
+				id: "554E549A7BD4661E"
+				item: "gtceu:high_octane_gasoline_bucket"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 2.5d
+		}
+		{
+			description: [
+				"特大超临界涡轮，ZPM支架，中子素涡轮转子"
+				"20A-UEV发电，消耗量约284KB/s"
+				"（理论值请以实测为准）（9-16实测4A-UEV）"
+			]
+			id: "19B859F1C3DBECC7"
+			tasks: [{
+				id: "2FC2DAC3F005A348"
+				item: "gtceu:supercritical_steam_bucket"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 4.0d
+		}
+		{
+			id: "3C210DB34841CFB8"
+			tasks: [{
+				id: "312A1A1C47D1F12E"
+				item: "gtceu:benzene_bucket"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -0.5d
+		}
+		{
+			id: "2C12B488156583DD"
+			tasks: [{
+				id: "3F0170C18F4F7688"
+				item: "gtceu:nitrobenzene_bucket"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 1.0d
+		}
+		{
+			id: "10FC17CA92F03449"
+			tasks: [{
+				id: "494ED57AD7C250C0"
+				item: "gtceu:rocket_fuel_bucket"
+				type: "item"
+			}]
+			x: -11.0d
+			y: -0.5d
+		}
+		{
+			id: "0E05F0BA3F52580A"
+			tasks: [{
+				id: "6C126B5EB720870F"
+				item: "gtceu:rocket_fuel_rp_1_bucket"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 0.5d
+		}
+		{
+			id: "61A73C512B97D72C"
+			tasks: [{
+				id: "0F9D2AB20E9900C5"
+				item: "gtceu:dense_hydrazine_fuel_mixture_bucket"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 1.5d
+		}
+		{
+			id: "28442752729F3994"
+			tasks: [{
+				id: "782AAD532CF15E5D"
+				item: "gtceu:rocket_fuel_cn3h7o3_bucket"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 2.5d
+		}
+		{
+			id: "7F74D4ED0C9354C2"
+			tasks: [{
+				id: "35616BDE7144320C"
+				item: "gtceu:rocket_fuel_h8n4c2o4_bucket"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 3.5d
+		}
+		{
+			id: "289178D99E660919"
+			tasks: [{
+				id: "752E958041DE96D7"
+				item: "gtceu:stellar_energy_rocket_fuel_bucket"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 5.5d
+		}
+		{
+			id: "5EDB2873242F0712"
+			tasks: [{
+				id: "0828996A89029AEC"
+				item: "ad_astra:cryo_fuel_bucket"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 4.5d
+		}
+		{
+			id: "39C2B44EAE240C42"
+			tasks: [{
+				id: "7983F795CA030A71"
+				item: "gtceu:naquadah_fuel_bucket"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 2.5d
+		}
+		{
+			id: "75C002EA5F45EB2B"
+			tasks: [{
+				id: "36B5B049C7D1DAA0"
+				item: "gtceu:enriched_naquadah_fuel_bucket"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 4.0d
+		}
+		{
+			id: "2B19FC33D419D5F3"
+			tasks: [{
+				id: "0BD570C9462116B0"
+				item: "gtceu:nitrogen_plasma_bucket"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 5.5d
+		}
+		{
+			id: "329233F1C42FF850"
+			tasks: [{
+				id: "0E72A57937FEE43B"
+				item: "gtceu:oxygen_plasma_bucket"
+				type: "item"
+			}]
+			x: -8.0d
+			y: 4.0d
+		}
+		{
+			id: "4C7F01C6BDC4C668"
+			tasks: [{
+				id: "06F85A701518B6F5"
+				item: "gtceu:hyper_fuel_1_bucket"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 8.5d
+		}
+		{
+			id: "703B4E87BFB463A3"
+			tasks: [{
+				id: "5F10F9EBFF422F19"
+				item: "gtceu:concentration_mixing_hyper_fuel_1_bucket"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 10.0d
+		}
+		{
+			id: "0371ECA23AB14C7F"
+			tasks: [{
+				id: "6ED166264A82E96F"
+				item: "kubejs:neutronium_antimatter_fuel_rod"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 11.5d
+		}
+		{
+			id: "5E0E64D2C0CA912A"
+			tasks: [
+				{
+					id: "34B2083FD039EFE4"
+					item: "kubejs:dyson_swarm_module"
+					type: "item"
+				}
+				{
+					id: "6D898C0C4CAC1D20"
+					item: "kubejs:gelid_cryotheum_bucket"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: 10.0d
+		}
 	]
 	title: "如何发电"
 }

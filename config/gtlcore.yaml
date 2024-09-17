@@ -15,3 +15,41 @@ travelStaffCD: 2
 # 更大的数值会让界面显示有问题，推荐在样板管理终端管理
 exPatternProvider: 36
 
+mobList1:
+  - chicken
+  - rabbit
+  - sheep
+  - cow
+  - horse
+  - pig
+  - donkey
+  - skeleton_horse
+  - iron_golem
+  - wolf
+  - goat
+  - parrot
+  - camel
+  - cat
+  - fox
+  - llama
+  - panda
+  - polar_bear
+
+mobList2:
+  - ghast
+  - zombie
+  - pillager
+  - zombie_villager
+  - skeleton
+  - drowned
+  - witch
+  - spider
+  - creeper
+  - husk
+  - wither_skeleton
+  - blaze
+  - zombified_piglin
+  - slime
+  - vindicator
+  - enderman
+

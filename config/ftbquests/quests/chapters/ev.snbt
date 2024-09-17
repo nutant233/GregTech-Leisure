@@ -1531,6 +1531,17 @@
 			x: 6.0d
 			y: 6.0d
 		}
+		{
+			dependencies: ["4DDFAAF4A8E0622A"]
+			id: "423E927A2EE3A956"
+			tasks: [{
+				id: "419403958F14AB71"
+				item: "ae2:creative_energy_cell"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 5.0d
+		}
 	]
 	subtitle: ["Tier4-EV"]
 	title: "超高压"
