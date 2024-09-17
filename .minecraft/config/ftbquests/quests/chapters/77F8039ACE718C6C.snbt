@@ -488,11 +488,27 @@
 		{
 			dependencies: ["335ED39019FC62E7"]
 			id: "12FE2B59FA86381C"
-			rewards: [{
-				id: "0D834802BFD2366F"
-				item: "avaritia:crystal_pickaxe"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "0D834802BFD2366F"
+					item: "avaritia:crystal_pickaxe"
+					type: "item"
+				}
+				{
+					id: "7571051ECDEA4229"
+					item: {
+						Count: 1
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [{
+								id: "minecraft:silk_touch"
+								lvl: 1s
+							}]
+						}
+					}
+					type: "item"
+				}
+			]
 			tasks: [
 				{
 					id: "456D397A52A6D291"
