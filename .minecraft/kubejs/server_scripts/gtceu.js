@@ -12455,7 +12455,7 @@ ServerEvents.recipes((event) => {
     gtr.chemical_bath("gtceu:naquadria_sulfate_dust")
         .itemInputs("6x gtceu:sodium_dust")
         .inputFluids("gtceu:acidic_naquadria_caesiumfluoride 3000")
-        .itemOutputs("6x gtceu:naquadria_sulfate_dust", "8x gtceu:sodium_fluoride_dust", "14x gtceu:sodium_sulfate_dust")
+        .itemOutputs("6x gtceu:naquadria_sulfate_dust", "2x gtceu:trinium_sulfide_dust", "8x gtceu:sodium_fluoride_dust", "7x gtceu:sodium_sulfate_dust")
         .chancedOutput("gtceu:caesium_dust", 8000, 500)
         .EUt(120)
         .duration(200)
