@@ -16,7 +16,6 @@ ItemEvents.tooltip(event => {
     event.add("minecraft:bone_block", "将钙块放置在转换室获得")
     event.add("minecraft:moss_block", "将草方块放置在转换室获得")
     event.add("minecraft:sculk", "将苔藓块放置在转换室获得")
-    event.add(Item.of("avaritia:singularity").weakNBT(), "将奇点-时空与磁物质块聚合获得")
     event.add("gtceu:magmatter_block", "将一组及以上的磁物质锭丢入创造之门获得")
     event.add("minecraft:command_block", "将磁流体约束恒星物质块丢入创造之门获得")
     event.add("minecraft:chain_command_block", "将连锁命令方块核心与即将破坏的命令方块聚合获得")

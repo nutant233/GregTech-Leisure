@@ -16802,4 +16802,11 @@ ServerEvents.recipes((event) => {
         .itemOutputs("gtceu:graphite_ingot")
         .EUt(GTValues.VA[GTValues.LV])
         .duration(300)
+
+    gtr.laser_engraver("avaritia:singularity")
+        .itemInputs("16x gtceu:magmatter_block")
+        .itemInputs(Item.of("avaritia:singularity", `{Id:"avaritia:spacetime"}`).weakNBT())
+        .itemOutputs("avaritia:singularity")
+        .EUt(GTValues.VA[GTValues.MAX] * 262144)
+        .duration(1600)
 })
