@@ -2921,12 +2921,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .components("18x carbon", "13x hydrogen", "1x iodine")
         .iconSet(GTMaterialIconSet.DULL)
 
-    event.create("trimethylchlorosilane")
-        .fluid()
-        .color(0x34173b)
-        .components("3x carbon", "9x hydrogen", "1x chlorine", "1x silicon")
-        .iconSet(GTMaterialIconSet.DULL)
-
     event.create("acetylating_reagent")
         .fluid()
         .color(0x724c50)
