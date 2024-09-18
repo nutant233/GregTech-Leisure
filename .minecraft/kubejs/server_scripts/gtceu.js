@@ -3990,8 +3990,8 @@ ServerEvents.recipes((event) => {
     gtr.fusion_reactor("gtceu:infinity")
         .inputFluids("gtceu:crystalmatrix 2000", "gtceu:cosmicneutronium 1000")
         .outputFluids("gtceu:infinity 64")
-        .EUt(GTValues.VA[GTValues.UEV])
-        .duration(2400)
+        .EUt(GTValues.VA[GTValues.UXV])
+        .duration(1200)
         .fusionStartEU(2100000000)
 
     //peek
@@ -16689,7 +16689,7 @@ ServerEvents.recipes((event) => {
 
     gtr.precision_assembler("gtlcore:compressed_fusion_coil_mk2_prototype")
         .itemInputs("gtlcore:advanced_fusion_coil", "gtceu:gravi_star", "kubejs:hui_circuit_4")
-        .inputFluids("gtceu:dalisenite 1152", "gtceu:taranium 144")
+        .inputFluids("gtceu:dalisenite 1152", "gtceu:bohrium 144")
         .itemOutputs("gtlcore:compressed_fusion_coil_mk2_prototype")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(200)
@@ -16697,7 +16697,7 @@ ServerEvents.recipes((event) => {
 
     gtr.precision_assembler("gtlcore:compressed_fusion_coil_mk2")
         .itemInputs("gtlcore:fusion_coil_mk2", "kubejs:unstable_star", "kubejs:hui_circuit_5")
-        .inputFluids("gtceu:cinobite 1152", "gtceu:taranium 144")
+        .inputFluids("gtceu:cinobite 1152", "gtceu:vibranium 144")
         .itemOutputs("gtlcore:compressed_fusion_coil_mk2")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(200)
