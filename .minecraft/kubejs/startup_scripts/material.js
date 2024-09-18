@@ -149,10 +149,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     GTMaterials.Radium.setProperty(PropertyKey.DUST, new $DustProperty())
     GTMaterials.Radium.setProperty(PropertyKey.FLUID, new $FluidProperty(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()))
     GTMaterials.Tellurium.setProperty(PropertyKey.DUST, new $DustProperty())
-    GTMaterials.Actinium.setProperty(PropertyKey.DUST, new $DustProperty())
-    GTMaterials.Actinium.setProperty(PropertyKey.FLUID, new $FluidProperty(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()))
     GTMaterials.Rutherfordium.setProperty(PropertyKey.DUST, new $DustProperty())
-    GTMaterials.Selenium.setProperty(PropertyKey.DUST, new $DustProperty())
     GTMaterials.Astatine.setProperty(PropertyKey.INGOT, new $IngotProperty())
     GTMaterials.Astatine.setProperty(PropertyKey.FLUID, new $FluidProperty(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()))
     GTMaterials.Bohrium.setProperty(PropertyKey.INGOT, new $IngotProperty())
@@ -2839,18 +2836,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .components("8x carbon", "4x hydrogen", "3x oxygen")
         .iconSet(GTMaterialIconSet.DULL)
 
-    event.create("sodium_perchlorate")
-        .dust()
-        .color(0xf0f0f0)
-        .components("1x sodium", "1x chlorine", "4x oxygen")
-        .iconSet(GTMaterialIconSet.DULL)
-
-    event.create("sodium_chlorate")
-        .dust()
-        .color(0xa5a5a5)
-        .components("1x sodium", "1x chlorine", "3x oxygen")
-        .iconSet(GTMaterialIconSet.DULL)
-
     event.create("sodium_hypochlorite")
         .dust()
         .color(0x66f14c)
@@ -3285,12 +3270,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .dust()
         .color(0xf3ffdb)
         .iconSet(GTMaterialIconSet.BRIGHT)
-
-    event.create("fuming_nitric_acid")
-        .fluid()
-        .color(0xa83735)
-        .components("1x hydrogen", "1x nitrogen", "3x oxygen")
-        .iconSet(GTMaterialIconSet.DULL)
 
     event.create("desh")
         .dust()
