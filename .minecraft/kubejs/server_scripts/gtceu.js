@@ -12374,6 +12374,7 @@ ServerEvents.recipes((event) => {
 
     gtr.dyson_sphere("gtceu:dysonsphere")
         .inputFluids("kubejs:gelid_cryotheum 1")
+        .circuit(1)
         .EUt(-GTValues.V[GTValues.MAX])
         .duration(20)
         .CWUt(1)
@@ -12381,7 +12382,7 @@ ServerEvents.recipes((event) => {
     gtr.dyson_sphere("gtceu:dysonspherelaunch")
         .itemInputs("64x kubejs:dyson_swarm_module")
         .EUt(GTValues.V[GTValues.UIV])
-        .duration(1)
+        .duration(200)
         .CWUt(512)
 
     gtr.petrochemical_plant("gtceu:petrochemical_plant_1")
