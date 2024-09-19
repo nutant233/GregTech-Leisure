@@ -312,18 +312,11 @@
 			id: "52980D117AB477B2"
 			shape: "rsquare"
 			size: 1.0d
-			tasks: [
-				{
-					id: "2E8C86DE512279CC"
-					item: "gtceu:void_fluid_drilling_rig"
-					type: "item"
-				}
-				{
-					id: "70D6B4883DF437A5"
-					item: "gtceu:large_void_miner"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "2E8C86DE512279CC"
+				item: "gtceu:void_fluid_drilling_rig"
+				type: "item"
+			}]
 			title: "来自虚空"
 			x: 14.0d
 			y: 0.0d

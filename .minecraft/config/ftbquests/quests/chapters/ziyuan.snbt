@@ -1,0 +1,1263 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ziyuan"
+	group: "24F4987B35ABEE82"
+	icon: "gtceu:raw_trinium"
+	id: "0EF94FA5D02096D9"
+	order_index: 6
+	progression_mode: "flexible"
+	quest_links: [
+		{
+			id: "7B48C8E3436ACBE9"
+			linked_quest: "51A1A2397AF521D9"
+			x: 5.5d
+			y: 10.0d
+		}
+		{
+			id: "3F5C30DFF3D0FDF4"
+			linked_quest: "7AE52BAD2043947A"
+			x: 7.0d
+			y: 10.0d
+		}
+		{
+			id: "780EC89D7470726F"
+			linked_quest: "4D7B7F0FA6962066"
+			x: 7.0d
+			y: 13.0d
+		}
+		{
+			id: "393D39E1CE9624F2"
+			linked_quest: "7FF9045E4B4B2459"
+			x: 5.5d
+			y: 11.5d
+		}
+		{
+			id: "3782B3E83339975F"
+			linked_quest: "63EC74F3B67B9E2E"
+			x: 5.5d
+			y: 13.0d
+		}
+		{
+			id: "349EE447BB398ADF"
+			linked_quest: "4877DB6020D6BFBC"
+			x: 7.0d
+			y: 11.5d
+		}
+		{
+			id: "158D158B959F5A38"
+			linked_quest: "40F426C73BC0D0B1"
+			x: 9.0d
+			y: 10.0d
+		}
+		{
+			id: "1D7DAC59712C5DE3"
+			linked_quest: "4C3AEBDFC6EABF1C"
+			x: 10.5d
+			y: 10.0d
+		}
+		{
+			id: "2064495B4809E3BA"
+			linked_quest: "575ED5E8BFF4C4DA"
+			x: 12.0d
+			y: 10.0d
+		}
+		{
+			id: "11881F1AA42D90EF"
+			linked_quest: "733F780D21B24299"
+			x: 9.0d
+			y: 11.5d
+		}
+		{
+			id: "273BE6C71D85D971"
+			linked_quest: "2B84B8AF004A3E30"
+			x: 10.5d
+			y: 11.5d
+		}
+		{
+			id: "5B8A3ECA17A9B5D5"
+			linked_quest: "61631D86D47D54F6"
+			x: 14.0d
+			y: 10.0d
+		}
+		{
+			id: "698481D49A25390A"
+			linked_quest: "2E4A5A581F9FCAF9"
+			x: 14.0d
+			y: 11.5d
+		}
+		{
+			id: "73CD0D48F1F8DCAA"
+			linked_quest: "4868C061C42E207D"
+			x: 9.0d
+			y: 13.0d
+		}
+		{
+			id: "4A808EFED3BB5B82"
+			linked_quest: "768F3D85ABCE3640"
+			x: 10.5d
+			y: 13.0d
+		}
+		{
+			id: "0F4D1C95709673ED"
+			linked_quest: "4FB562E42CFEE64D"
+			x: 12.0d
+			y: 13.0d
+		}
+		{
+			id: "350C498929DFCEF4"
+			linked_quest: "68231575D1C914D3"
+			x: 12.0d
+			y: 11.5d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["075D368E91231337"]
+			id: "0BFF08842D22B72C"
+			tasks: [{
+				id: "327415F83D02B65E"
+				title: "打好根基才能健步如飞"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0BFF08842D22B72C"]
+			id: "68765386EA084EC0"
+			tasks: [{
+				id: "3F8107D325CEA1B4"
+				title: "一开始你只能手挖"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"68765386EA084EC0"
+				"40C39645B1DE2488"
+			]
+			id: "6693A00751424E19"
+			tasks: [
+				{
+					id: "53911D9F862BE840"
+					item: "gtmthings:lv_digital_miner"
+					type: "item"
+				}
+				{
+					id: "036F86F0546C44A7"
+					item: "gtmthings:mv_digital_miner"
+					type: "item"
+				}
+				{
+					id: "2E1CFA9882F8A1BB"
+					item: "gtmthings:hv_digital_miner"
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"6693A00751424E19"
+				"4DDFAAF4A8E0622A"
+			]
+			id: "1999B90B73BAB11F"
+			tasks: [{
+				id: "5F6FCED2FDC49E27"
+				item: "gtceu:void_miner"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"68765386EA084EC0"
+				"51B9A72C19F84F0E"
+			]
+			description: ["这并不好用"]
+			id: "1E1E0437E8E241AB"
+			tasks: [{
+				id: "214FE4A5B7B84B76"
+				item: "gtceu:lv_pump"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"68765386EA084EC0"
+				"7296C57805F5DC96"
+			]
+			id: "1809019DAC0E3C2A"
+			tasks: [
+				{
+					id: "33205F2D84E92227"
+					item: "gtceu:mv_fluid_drilling_rig"
+					type: "item"
+				}
+				{
+					id: "7491A7DA4ABA41FE"
+					item: "gtceu:hv_fluid_drilling_rig"
+					type: "item"
+				}
+				{
+					id: "4C0CB78A0EBDC2E8"
+					item: "gtceu:ev_fluid_drilling_rig"
+					type: "item"
+				}
+			]
+			title: "流体钻机"
+			x: 4.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"1809019DAC0E3C2A"
+				"52DF531AFB3A07CE"
+			]
+			id: "7FC5F639F89C2C22"
+			tasks: [{
+				id: "0E5FFAD6CB1DEA66"
+				item: "gtceu:void_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: 9.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"1809019DAC0E3C2A"
+				"035C470213E8B4DB"
+			]
+			id: "1D4903B520E37BFE"
+			tasks: [{
+				id: "1BECEBDF82F70D8D"
+				item: "gtceu:zpm_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"68765386EA084EC0"
+				"1E7344C133C99565"
+			]
+			id: "74D0577CA2F540F1"
+			tasks: [
+				{
+					id: "5D6C802756A68BD2"
+					item: "gtceu:ev_large_miner"
+					type: "item"
+				}
+				{
+					id: "2978751D830B806E"
+					item: "gtceu:iv_large_miner"
+					type: "item"
+				}
+				{
+					id: "267BC8D6F759B7A6"
+					item: "gtceu:luv_large_miner"
+					type: "item"
+				}
+			]
+			title: "大型采矿机"
+			x: 7.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"74D0577CA2F540F1"
+				"233CA36D529EC3FB"
+			]
+			id: "214B86B97ED9C962"
+			tasks: [{
+				id: "3D891933F417EA28"
+				item: "gtceu:large_void_miner"
+				type: "item"
+			}]
+			x: 9.0d
+			y: -1.0d
+		}
+		{
+			can_repeat: false
+			dependencies: [
+				"68765386EA084EC0"
+				"7296C57805F5DC96"
+			]
+			id: "17C967508DDCBB87"
+			tasks: [{
+				id: "1CD178D1B843DEAE"
+				item: "gtceu:greenhouse"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"68765386EA084EC0"
+				"1A48D2DB936FF632"
+			]
+			id: "04A1D335D69E9779"
+			tasks: [{
+				id: "0678FE1D3BE5D1DA"
+				item: "gtceu:fishing_ground"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"68765386EA084EC0"
+				"51B9A72C19F84F0E"
+			]
+			id: "57886739347D6809"
+			tasks: [{
+				id: "6EDFCC68188C1227"
+				item: "gtceu:slaughterhouse"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"0375D068023B13D7"
+				"68765386EA084EC0"
+			]
+			id: "6E9E740AAEB580E0"
+			tasks: [{
+				id: "65C060C8B2F3400A"
+				item: "gtceu:large_gas_collector"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7E436D979AF67921"]
+			id: "7979C5ACF9A0C8D2"
+			tasks: [{
+				id: "54A100B30D3F4C53"
+				title: "怎么处理呢"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7979C5ACF9A0C8D2"]
+			description: ["开挖"]
+			id: "7DB63DF889DDDEF4"
+			subtitle: "forge:raw"
+			tasks: [
+				{
+					id: "12386DFE17521548"
+					title: "粗矿"
+					type: "checkmark"
+				}
+				{
+					id: "243CAA04566A300A"
+					item: "minecraft:raw_iron"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7979C5ACF9A0C8D2"]
+			description: ["如果你有精准采集"]
+			id: "703EEB941F0C745C"
+			subtitle: "forge:raw"
+			tasks: [
+				{
+					id: "0CE5AC66DD215BE1"
+					title: "矿石"
+					type: "checkmark"
+				}
+				{
+					id: "05C8B4EE289ED2C9"
+					item: "gtceu:iron_ore"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"7DB63DF889DDDEF4"
+				"703EEB941F0C745C"
+			]
+			dependency_requirement: "one_completed"
+			description: ["把原矿和矿石塞进粉碎机狠狠粉碎"]
+			id: "6596611DD4CB5A60"
+			min_required_dependencies: 1
+			subtitle: "forge:crashed_ores"
+			tasks: [
+				{
+					id: "45B29F9F7327A305"
+					title: "粉碎矿石"
+					type: "checkmark"
+				}
+				{
+					id: "7C9FD22CF1F9381E"
+					item: "gtceu:crushed_iron_ore"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 7.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["6596611DD4CB5A60"]
+			description: ["粉碎矿石——锻造/研磨"]
+			id: "05046054F7D65653"
+			subtitle: "forge:impure_dusts"
+			tasks: [
+				{
+					id: "0624FA85DAAB27B4"
+					title: "含杂粉"
+					type: "checkmark"
+				}
+				{
+					id: "5DD7786DB05A68EA"
+					item: "gtceu:impure_iron_dust"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 8.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6596611DD4CB5A60"]
+			description: ["粉碎矿石——洗矿/浸洗"]
+			id: "14EE67044597E62A"
+			subtitle: "forge:purified"
+			tasks: [
+				{
+					id: "512D19B265445F64"
+					title: "纯净矿石"
+					type: "checkmark"
+				}
+				{
+					id: "4C31A8B183EF4730"
+					item: "gtceu:purified_iron_ore"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 8.5d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"6596611DD4CB5A60"
+				"14EE67044597E62A"
+			]
+			description: ["纯净矿石/粉碎矿石——热离"]
+			id: "56C020B4F1F7D8D1"
+			subtitle: "forge:refined_ores"
+			tasks: [
+				{
+					id: "5822D0C2DAE09A76"
+					title: "精炼矿石"
+					type: "checkmark"
+				}
+				{
+					id: "4A118334D2377798"
+					item: "gtceu:refined_iron_ore"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"05046054F7D65653"
+				"56C020B4F1F7D8D1"
+				"79B98F942F1D8EDC"
+				"0FAFE44EBD813FBA"
+			]
+			description: [
+				"含杂粉/洁净粉——离心/洗矿"
+				"精炼矿石——粉碎"
+				""
+				"部分洁净粉——磁选"
+			]
+			id: "5AEE74DD9B0D511C"
+			subtitle: "forge:dusts"
+			tasks: [
+				{
+					id: "7D58F9B03FA71A1D"
+					title: "粉"
+					type: "checkmark"
+				}
+				{
+					id: "6E1058A98ED43D59"
+					item: "gtceu:iron_dust"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 11.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["14EE67044597E62A"]
+			description: ["纯净矿石——锻造/研磨"]
+			id: "79B98F942F1D8EDC"
+			subtitle: "forge:pure_dusts"
+			tasks: [
+				{
+					id: "0ACEBC9DEDFB3044"
+					title: "纯净粉"
+					type: "checkmark"
+				}
+				{
+					id: "62E542B061FAF07B"
+					item: "gtceu:pure_iron_dust"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "洁净粉"
+			x: 10.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"7DB63DF889DDDEF4"
+				"703EEB941F0C745C"
+			]
+			description: ["艾萨线的东西"]
+			id: "3C2B4B80E425A9AD"
+			subtitle: "forge:milled"
+			tasks: [
+				{
+					id: "3DF923CA2FF25E4D"
+					title: "碾磨"
+					type: "checkmark"
+				}
+				{
+					id: "42F3CB4519478BEB"
+					item: "gtceu:milled_pyrope"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 8.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["3C2B4B80E425A9AD"]
+			id: "0FAFE44EBD813FBA"
+			subtitle: "gtceu:*_front"
+			tasks: [
+				{
+					id: "4C799DC47F6C6B79"
+					title: "矿物泡沫"
+					type: "checkmark"
+				}
+				{
+					id: "79442F59F7045706"
+					item: "gtceu:pyrope_front_bucket"
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"68765386EA084EC0"
+				"1FA9E56114BFABF5"
+			]
+			id: "7DA6DA0780F3DDA3"
+			tasks: [{
+				id: "4A80029952946E9F"
+				item: "gtceu:space_elevator"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["14EE67044597E62A"]
+			id: "621C664A94B042C0"
+			subtitle: "forge:gems"
+			tasks: [
+				{
+					id: "7059009E6175E5EC"
+					title: "宝石"
+					type: "checkmark"
+				}
+				{
+					id: "692659EE758CDEEC"
+					item: "gtceu:flawless_emerald_gem"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["7979C5ACF9A0C8D2"]
+			id: "2C1986BE10F10708"
+			tasks: [{
+				id: "58C28BBB64C73B88"
+				title: "需要的机器"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["2C1986BE10F10708"]
+			id: "45D1E65DFC2DEF6F"
+			tasks: [{
+				id: "3B3DCF9C88A9F45F"
+				title: "流程选择"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["45D1E65DFC2DEF6F"]
+			description: ["绝大多数的特色副产都会出现在热离中"]
+			id: "184CE47D10A10C84"
+			tasks: [{
+				id: "27CDD5B1DB6728DF"
+				title: "绝大多数矿"
+				type: "checkmark"
+			}]
+			title: "绝大多数矿都是：研磨-研磨-洗矿/研磨-热离-研磨"
+			x: 5.5d
+			y: 15.0d
+		}
+		{
+			dependencies: ["68765386EA084EC0"]
+			id: "41B15E107F6501C9"
+			tasks: [{
+				id: "5B924FE02BA17DB0"
+				title: "处理流程"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["41B15E107F6501C9"]
+			id: "7E436D979AF67921"
+			tasks: [{
+				id: "417B3C624E888811"
+				title: "这是矿物"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["41B15E107F6501C9"]
+			id: "282F333573FB2F2F"
+			tasks: [{
+				id: "283499DAF3FBA2DC"
+				title: "这是化工"
+				type: "checkmark"
+			}]
+			x: 18.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5AEE74DD9B0D511C"]
+			description: [
+				"电解/离心"
+				""
+				"部分矿物有着更加深入复杂的处理流程，"
+				"比如钛，钨，铀，铂系，稀土，硅岩....."
+			]
+			id: "192A144ADAC186BA"
+			tasks: [{
+				id: "389CC682DEEC0AE7"
+				title: "接着处理"
+				type: "checkmark"
+			}]
+			x: 13.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["3C808016095484BF"]
+			hide_dependent_lines: true
+			id: "44BE0FD4ABE696F1"
+			tasks: [{
+				id: "170E4A149A78AC0E"
+				item: "gtceu:ethylene_bucket"
+				type: "item"
+			}]
+			x: 38.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["126010F57E9BD7A5"]
+			id: "3C808016095484BF"
+			tasks: [{
+				id: "60A93A7ACB07843C"
+				item: "gtceu:ethanol_bucket"
+				type: "item"
+			}]
+			x: 36.5d
+			y: 4.0d
+		}
+		{
+			id: "126010F57E9BD7A5"
+			tasks: [
+				{
+					id: "24D29CBC5A3065A0"
+					item: "gtceu:biomass_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7F57C4F635287E0B"
+					item: "gtceu:fermented_biomass_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1023D863BF2A4BA0"
+					type: "checkmark"
+				}
+			]
+			title: "生物质与发酵生物质"
+			x: 35.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["41B15E107F6501C9"]
+			id: "6D3408C3D044987E"
+			tasks: [{
+				id: "7EF4F338142CA8DE"
+				title: "其他东西"
+				type: "checkmark"
+			}]
+			x: 33.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7BC592264A9788F7"]
+			id: "1EBBA5A10A8A48DB"
+			tasks: [
+				{
+					id: "4902C15F4020348D"
+					item: "gtceu:biomass_bucket"
+					type: "item"
+				}
+				{
+					id: "0DDD4FEF0A92C5BD"
+					item: "gtceu:fermented_biomass_bucket"
+					type: "item"
+				}
+				{
+					id: "615692B475A3F760"
+					item: "gtceu:charcoal_byproducts_bucket"
+					type: "item"
+				}
+				{
+					id: "0392DF1F714A7B13"
+					item: "gtceu:wood_gas_bucket"
+					type: "item"
+				}
+				{
+					id: "41513D2F7BE22436"
+					item: "gtceu:wood_vinegar_bucket"
+					type: "item"
+				}
+				{
+					id: "34DB3997C2DB6C20"
+					item: "gtceu:wood_tar_bucket"
+					type: "item"
+				}
+				{
+					id: "63B36588D80E8240"
+					item: "gtceu:coal_tar_bucket"
+					type: "item"
+				}
+				{
+					id: "578EA3ED0A7075F6"
+					item: "gtceu:coal_gas_bucket"
+					type: "item"
+				}
+			]
+			title: "从热解炉流出来的东西"
+			x: 36.5d
+			y: 5.5d
+		}
+		{
+			id: "7BC592264A9788F7"
+			tasks: [{
+				id: "33BFAD022D518BEC"
+				item: "gtceu:pyrolyse_oven"
+				type: "item"
+			}]
+			x: 35.0d
+			y: 5.5d
+		}
+		{
+			id: "48F93DF69CC7F8ED"
+			tasks: [{
+				id: "4F6E879F80E0E7D7"
+				item: "gtceu:fishing_ground"
+				type: "item"
+			}]
+			x: 35.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["48F93DF69CC7F8ED"]
+			id: "1B326CA2576D9A14"
+			tasks: [{
+				id: "3A9B19492CD9D472"
+				item: "gtceu:fish_oil_bucket"
+				type: "item"
+			}]
+			x: 36.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["1B326CA2576D9A14"]
+			id: "2EDDFD731AAE8741"
+			tasks: [{
+				id: "38B653ADADF5877E"
+				item: "gtceu:glycerol_bucket"
+				type: "item"
+			}]
+			x: 38.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1B326CA2576D9A14"]
+			id: "0E700196E963B732"
+			tasks: [{
+				id: "0628D35AAD31AE7A"
+				item: "gtceu:bio_diesel_bucket"
+				type: "item"
+			}]
+			x: 38.0d
+			y: 7.0d
+		}
+		{
+			description: ["lv时期可选的获得石油的手段"]
+			hide_dependency_lines: true
+			id: "6DEAA19092FBCF99"
+			rewards: [{
+				id: "61884E75889139DF"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "42E23ED61B2417CC"
+				item: "gtceu:lv_pump"
+				type: "item"
+			}]
+			x: 19.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6DEAA19092FBCF99"]
+			id: "2451D79084562C67"
+			tasks: [{
+				id: "2410E462E07D486C"
+				item: "gtceu:oil_medium_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 4.5d
+		}
+		{
+			dependency_requirement: "one_completed"
+			description: ["蒸馏室三号电路"]
+			id: "63FEF796CFF5E8DF"
+			min_required_dependencies: 1
+			tasks: [{
+				id: "014038349888FC2A"
+				item: "gtceu:sulfuric_naphtha_bucket"
+				type: "item"
+			}]
+			x: 19.5d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"63FEF796CFF5E8DF"
+				"045D76184BFBD4D6"
+				"27A9D4E765101CB9"
+			]
+			description: ["含硫石脑油加氢气"]
+			id: "071C1482A33D97FB"
+			tasks: [{
+				id: "5487A28C3E9B45E0"
+				item: "gtceu:naphtha_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"071C1482A33D97FB"
+				"27A9D4E765101CB9"
+			]
+			description: ["化学反应釜加蒸汽三号电路"]
+			id: "70E703942B61C86C"
+			tasks: [{
+				id: "43A2C8C1FC309DE4"
+				item: "gtceu:severely_steam_cracked_naphtha_bucket"
+				type: "item"
+			}]
+			x: 22.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["70E703942B61C86C"]
+			description: ["蒸馏室十号电路"]
+			id: "0C5B23E443F1A5D5"
+			tasks: [{
+				id: "4AE736F84D6F23E1"
+				item: "gtceu:ethylene_bucket"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["63FEF796CFF5E8DF"]
+			description: ["将硫化氢电解以进行氢的循环"]
+			icon: "gtceu:hydrogen_sulfide_bucket"
+			id: "751BF4CAEE613BBA"
+			tasks: [{
+				id: "58FAC5989D41DC20"
+				title: "硫化氢"
+				type: "checkmark"
+			}]
+			x: 19.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["751BF4CAEE613BBA"]
+			description: ["你最开始的氢来自于电解水"]
+			id: "045D76184BFBD4D6"
+			tasks: [{
+				id: "33CEFF88B7CF0789"
+				item: "gtceu:hydrogen_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 6.5d
+		}
+		{
+			description: [
+				"虚空获取油"
+				"只能安装一个能源仓，2个机器会停机"
+			]
+			hide_dependency_lines: true
+			id: "481B6E85DA1906B8"
+			rewards: [{
+				id: "7328C7E17857D82B"
+				item: "gtceu:gold_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "12DB235FA5E46543"
+				item: "gtceu:mv_fluid_drilling_rig"
+				type: "item"
+			}]
+			x: 19.5d
+			y: 10.5d
+		}
+		{
+			dependencies: [
+				"0C5B23E443F1A5D5"
+				"44BE0FD4ABE696F1"
+			]
+			dependency_requirement: "one_completed"
+			id: "1B27E863E90AB90E"
+			tasks: [{
+				id: "47E3DB83C132B814"
+				title: "乙烯"
+				type: "checkmark"
+			}]
+			x: 25.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["481B6E85DA1906B8"]
+			id: "445FA314F08B0F0C"
+			tasks: [
+				{
+					id: "07EF26FD4ED24C9A"
+					item: "gtceu:oil_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "028146424BDA896C"
+					item: "gtceu:oil_medium_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "12FECA2985000CC4"
+					item: "gtceu:oil_heavy_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "41E4608897A131B8"
+					item: "gtceu:oil_light_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7F8CFEF35E38D08B"
+					item: "gtceu:salt_water_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0DC74A24840F6434"
+					item: "gtceu:natural_gas_bucket"
+					type: "item"
+				}
+			]
+			title: "T0可以采到的"
+			x: 20.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["1B27E863E90AB90E"]
+			id: "17DDE8CC39438A32"
+			tasks: [{
+				id: "7F162CF0218BE9DC"
+				item: "gtceu:polyvinyl_chloride_bucket"
+				type: "item"
+			}]
+			x: 27.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["1B27E863E90AB90E"]
+			id: "2A312C620F9B58F9"
+			tasks: [{
+				id: "01038AFF1ECC31FA"
+				item: "gtceu:polyethylene_bucket"
+				type: "item"
+			}]
+			x: 27.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["17DDE8CC39438A32"]
+			id: "3BF89185AEB4D1D5"
+			tasks: [{
+				id: "4CC37056BBF4E13E"
+				item: "gtceu:polyvinyl_chloride_plate"
+				type: "item"
+			}]
+			x: 28.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["2A312C620F9B58F9"]
+			id: "426D0530EE68DF73"
+			tasks: [{
+				id: "06E00F6C4DE2B487"
+				item: "gtceu:polyethylene_plate"
+				type: "item"
+			}]
+			x: 28.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["445FA314F08B0F0C"]
+			id: "54E25887B23DDCA9"
+			tasks: [
+				{
+					id: "493BA5D42FED824B"
+					item: "gtceu:light_fuel_bucket"
+					type: "item"
+				}
+				{
+					id: "1D431E087EFD0C04"
+					item: "gtceu:heavy_fuel_bucket"
+					type: "item"
+				}
+				{
+					id: "70EA44AEC29590D1"
+					item: "gtceu:naphtha_bucket"
+					type: "item"
+				}
+				{
+					id: "4D26D6BBF69DE128"
+					item: "gtceu:refinery_gas_bucket"
+					type: "item"
+				}
+			]
+			title: "四桶油"
+			x: 22.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["445FA314F08B0F0C"]
+			id: "49B8A676093DFC98"
+			tasks: [
+				{
+					id: "12B08FA8803B1924"
+					item: "gtceu:chlorine_bucket"
+					type: "item"
+				}
+				{
+					id: "1E937E3577D014B8"
+					item: "gtceu:sodium_hydroxide_dust"
+					type: "item"
+				}
+			]
+			title: "电解盐水"
+			x: 22.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["54E25887B23DDCA9"]
+			id: "37FF6008CC5760AD"
+			tasks: [{
+				id: "0B47C13CEF784833"
+				item: "gtceu:diesel_bucket"
+				type: "item"
+			}]
+			x: 23.5d
+			y: 10.0d
+		}
+		{
+			dependencies: [
+				"549FA505130C82D4"
+				"37FF6008CC5760AD"
+			]
+			dependency_requirement: "one_completed"
+			id: "0F2EBD31E1C4FDF6"
+			tasks: [{
+				id: "7B4B41A131A3E7D3"
+				item: "gtceu:cetane_boosted_diesel_bucket"
+				type: "item"
+			}]
+			x: 25.0d
+			y: 10.0d
+		}
+		{
+			id: "549FA505130C82D4"
+			tasks: [{
+				id: "22E34E3DC71014EB"
+				item: "gtceu:tetranitromethane_bucket"
+				type: "item"
+			}]
+			x: 23.5d
+			y: 11.0d
+		}
+		{
+			dependencies: ["66CFEE6DC6A4CF34"]
+			id: "3BDEA7EB4CF81918"
+			tasks: [{
+				id: "6ED048751FB6C1EB"
+				item: "gtceu:polytetrafluoroethylene_ingot"
+				type: "item"
+			}]
+			x: 22.5d
+			y: 12.5d
+		}
+		{
+			dependencies: [
+				"45EE0AC3D5680B1F"
+				"6277F42774893AA3"
+			]
+			id: "66CFEE6DC6A4CF34"
+			tasks: [{
+				id: "5F3B5D69F11A578D"
+				item: "gtceu:tetrafluoroethylene_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 12.5d
+		}
+		{
+			description: ["氟来源于电解黄玉或蓝黄玉，氢来源于离心黄铁或者离心针叶铁或者电解水"]
+			id: "45EE0AC3D5680B1F"
+			tasks: [{
+				id: "6CE9955A904D1993"
+				item: "gtceu:hydrofluoric_acid_bucket"
+				type: "item"
+			}]
+			x: 19.5d
+			y: 13.0d
+		}
+		{
+			description: ["气态甲烷前期可来源于离心橡胶原木，氯可以来源于电解盐或岩盐或盐水"]
+			id: "6277F42774893AA3"
+			tasks: [{
+				id: "11C400810AEC9330"
+				item: "gtceu:chloroform_bucket"
+				type: "item"
+			}]
+			x: 19.5d
+			y: 12.0d
+		}
+		{
+			dependencies: ["3940A3FA8CD3C04D"]
+			id: "5CECDCDB3DFFDF6B"
+			tasks: [{
+				id: "7F52AE8148CC8670"
+				item: "gtceu:oil_heavy_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 3.5d
+		}
+		{
+			id: "3940A3FA8CD3C04D"
+			tasks: [{
+				id: "2DC831E01D85A452"
+				item: "gtceu:raw_oilsands"
+				type: "item"
+			}]
+			title: "这是油矿"
+			x: 19.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["70E703942B61C86C"]
+			id: "0AD5EE4A003844C3"
+			tasks: [{
+				id: "0C05F0BAB4530626"
+				item: "gtceu:propene_bucket"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 8.5d
+		}
+	]
+	title: "资源获取"
+}
