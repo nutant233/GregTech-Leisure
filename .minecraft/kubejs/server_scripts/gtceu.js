@@ -10732,13 +10732,6 @@ ServerEvents.recipes((event) => {
         .duration(210)
         .blastFurnaceTemp(4500)
 
-    gtr.electric_blast_furnace("gtceu:selenium_dust")
-        .itemInputs("gtceu:refined_chalcopyrite_ore")
-        .itemOutputs("gtceu:chalcopyrite_dust", "gtceu:small_selenium_dust")
-        .EUt(480)
-        .duration(500)
-        .blastFurnaceTemp(4300)
-
     gtr.mixer("gtceu:gamma_rays_photoresist")
         .itemInputs("29x gtceu:borocarbide_dust", "4x gtceu:lanthanum_embedded_fullerene_dust")
         .inputFluids("gtceu:euv_photoresist 1000", "gtceu:trichloroflerane")
@@ -16999,14 +16992,6 @@ ServerEvents.recipes((event) => {
         .itemOutputs("2x gtceu:sodium_hydride_dust")
         .EUt(GTValues.VA[GTValues.LV])
         .duration(140)
-
-    gtr.chemical_reactor("gtceu:silver_nitrate_dust_elemental_substance")
-        .itemInputs("1x gtceu:silver_dust")
-        .inputFluids("gtceu:nitric_acid 2000")
-        .itemOutputs("5x gtceu:silver_nitrate_dust")
-        .outputFluids("gtceu:nitrogen_dioxide 1000", "minecraft:water 1000")
-        .EUt(125)
-        .duration(150)
 
     gtr.chemical_reactor("gtceu:silver_nitrate_dust_chemical_compound")
         .itemInputs("3x gtceu:silver_oxide_dust")

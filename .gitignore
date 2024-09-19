@@ -21,7 +21,7 @@
 .minecraft/*.json
 .minecraft/config/oculus.properties
 .minecraft/config/roughlyenoughitems/
-.minecraft/mods/*.jar
+.minecraft/mods/*
 .minecraft/kubejs/jsconfig.json
 .minecraft/icon.png
 /config/
@@ -54,6 +54,4 @@ mmc-pack.json
 !Re-Avaritia-forged-*.jar
 !gtceu-*.jar
 !gtlcore-*.jar
-!gtmthings-*.jar
 !Infinity Cells-*.jar
-!akatzumaworldedit-*.jar

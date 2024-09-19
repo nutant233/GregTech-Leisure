@@ -8,6 +8,7 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "minecraft:neutron_ingot_from_neutron_block" })
     event.remove({ id: "minecraft:neutron_nugget" })
     event.remove({ id: "minecraft:neutron" })
+    event.remove({ id: "avaritia:diamond_lattice" })
     event.remove({ id: "avaritia:extreme_crafting_table" })
 
     event.custom({
