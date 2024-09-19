@@ -1693,7 +1693,7 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.UXV])
             .CWUt(512))
 
-    gtr.assembly_line("gtceu:sphere_of_harmony")
+    gtr.assembly_line("gtceu:eye_of_harmony")
         .itemInputs("16x kubejs:dimension_injection_casing",
             "16x kubejs:spacetime_compression_field_generator",
             "16x kubejs:dimensional_stability_casing",
@@ -1711,7 +1711,7 @@ ServerEvents.recipes((event) => {
             "4x gtlcore:insanely_max_battery",
             "32x gtceu:double_chaos_plate")
         .inputFluids("gtceu:super_mutated_living_solder 480000", "gtceu:liquid_degenerate_rhenium 100000", "gtceu:neutronium 57600", "gtceu:infinity 16000")
-        .itemOutputs("gtceu:sphere_of_harmony")
+        .itemOutputs("gtceu:eye_of_harmony")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(2400)
         .stationResearch(b => b.researchStack(Registries.getItemStack("kubejs:recursively_folded_negative_space"))
@@ -6675,7 +6675,7 @@ ServerEvents.recipes((event) => {
 
         [["180x gtceu:endstone_naquadah_ore",
             "60x gtceu:endstone_plutonium_ore",
-            "20x gtceu:endstone_trinium_ore"], "kubejs:naquadah_vein_essence"]]
+            "120x gtceu:endstone_trinium_compound_ore"], "kubejs:naquadah_vein_essence"]]
 
     const all_ores = overworld_ores.concat(nether_ores, end_ores)
 
@@ -6864,7 +6864,7 @@ ServerEvents.recipes((event) => {
             "120x gtceu:chromite_ore",
             "60x gtceu:plutonium_ore",
             "30x gtceu:enriched_naquadah_ore",
-            "30x gtceu:trinium_ore",
+            "90x gtceu:trinium_compound_ore",
             "30x gtceu:indium_ore"], "24"]
         ]
 
@@ -11711,7 +11711,7 @@ ServerEvents.recipes((event) => {
 
     gtr.assembly_line("gtceu:door_of_create")
         .itemInputs("16x gtceu:infinity_frame",
-            "16x gtceu:sphere_of_harmony",
+            "16x gtceu:eye_of_harmony",
             "16x kubejs:dimension_creation_casing",
             "16x kubejs:dimension_connection_casing",
             "8x kubejs:suprachronal_mainframe_complex",
@@ -16861,9 +16861,9 @@ ServerEvents.recipes((event) => {
         .notConsumable("1x gtceu:trifluoroacetic_phosphate_ester_dust")
         .inputFluids("gtceu:actinium_radium_nitrate_solution 13000")
         .itemOutputs("26x gtceu:actinium_nitrate_dust", "27x gtceu:radium_nitrate_dust")
+        .chancedOutput("4x gtceu:francium_dust", 2500, 0)
         .chancedOutput("1x gtceu:thorium_dust", 2500, 0)
         .chancedOutput("2x gtceu:protactinium_dust", 2500, 0)
-        .chancedOutput("1x gtceu:francium_dust", 2500, 0)
         .chancedOutput("1x gtceu:radium_dust", 2500, 0)
         .outputFluids("minecraft:water 13000")
         .EUt(GTValues.VA[GTValues.HV])
