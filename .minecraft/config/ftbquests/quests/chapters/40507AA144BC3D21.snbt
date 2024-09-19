@@ -24,7 +24,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "75AE43EB6B5AC68F"
-				item: "gtceu:sphere_of_harmony"
+				item: "gtceu:eye_of_harmony"
 				type: "item"
 			}]
 			x: -9.0d
