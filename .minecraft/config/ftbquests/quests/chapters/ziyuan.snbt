@@ -110,6 +110,24 @@
 			x: 12.0d
 			y: 11.5d
 		}
+		{
+			id: "1D273AA9A708D1F1"
+			linked_quest: "1D247D35BFB55469"
+			x: 4.5d
+			y: 19.5d
+		}
+		{
+			id: "1AAA41B4E666E4F8"
+			linked_quest: "365298DB6520227A"
+			x: 6.0d
+			y: 32.0d
+		}
+		{
+			id: "7A88320065F3B0AF"
+			linked_quest: "766D051A40AB5324"
+			x: 4.5d
+			y: 47.0d
+		}
 	]
 	quests: [
 		{
@@ -468,6 +486,7 @@
 				"6596611DD4CB5A60"
 				"14EE67044597E62A"
 			]
+			dependency_requirement: "one_completed"
 			description: ["纯净矿石/粉碎矿石——热离"]
 			id: "56C020B4F1F7D8D1"
 			subtitle: "forge:refined_ores"
@@ -494,6 +513,7 @@
 				"79B98F942F1D8EDC"
 				"0FAFE44EBD813FBA"
 			]
+			dependency_requirement: "one_completed"
 			description: [
 				"含杂粉/洁净粉——离心/洗矿"
 				"精炼矿石——粉碎"
@@ -577,6 +597,7 @@
 				{
 					id: "79442F59F7045706"
 					item: "gtceu:pyrope_front_bucket"
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -599,6 +620,7 @@
 		}
 		{
 			dependencies: ["14EE67044597E62A"]
+			description: ["纯净矿石——筛选"]
 			id: "621C664A94B042C0"
 			subtitle: "forge:gems"
 			tasks: [
@@ -1257,6 +1279,1379 @@
 			}]
 			x: 24.0d
 			y: 8.5d
+		}
+		{
+			dependencies: ["184CE47D10A10C84"]
+			description: [
+				"比如铂处的谢尔顿，土法制铟的方铅和闪锌等等"
+				""
+				"可以在需要的时候再做，矿就别屯着了"
+			]
+			id: "0A24F26D2EFE2822"
+			tasks: [{
+				id: "3FDED6E55897AD8D"
+				title: "部分矿处理为纯净矿后会到化反进行其他的处理流程"
+				type: "checkmark"
+			}]
+			x: 8.0d
+			y: 15.0d
+		}
+		{
+			dependencies: ["0A24F26D2EFE2822"]
+			description: ["比如精炼黄铜矿进高炉出硒"]
+			id: "726A61CD2C9D9495"
+			tasks: [{
+				id: "3767ADB65635488D"
+				title: "还有极小部分矿有着更特殊的处理流程"
+				type: "checkmark"
+			}]
+			x: 10.5d
+			y: 15.0d
+		}
+		{
+			dependencies: [
+				"7979C5ACF9A0C8D2"
+				"5CE474BD971D9A4B"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"铂处理的流程线性清晰非常好做。"
+				"你可以做全被动，也可以全靠下单。"
+				""
+				"我推荐再机器不足时选择被动+下单。"
+				"（铂系矿泥下单，"
+				"　离心矿泥到处理钌酸钠这一列四个被动，"
+				"　后面的线性流程下单）"
+			]
+			id: "3CB16B36A5AA2A10"
+			subtitle: "这是你接触的第一个大型矿物处理流程"
+			tasks: [{
+				id: "61B56D54AB271C8A"
+				title: "铂系金属处理"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 19.5d
+		}
+		{
+			dependencies: [
+				"056D5A2274001900"
+				"1D247D35BFB55469"
+			]
+			description: ["铂系金属包括铂、钯、铑、钌、铱和锇。这些金属都具有良好的耐腐蚀性、高的熔点和优良的催化性能。"]
+			hide_dependent_lines: true
+			id: "01A1A06A3963D3BE"
+			tasks: [{
+				id: "69BA892CBCBEBB1B"
+				item: "gtceu:platinum_group_sludge_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 19.5d
+		}
+		{
+			dependencies: [
+				"01A1A06A3963D3BE"
+				"668BDF2093A9291B"
+			]
+			id: "1AEB6A36DD3F8408"
+			tasks: [{
+				id: "2AE0A2D76BE61F24"
+				item: "gtceu:platinum_slag_dust"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 21.0d
+		}
+		{
+			dependencies: [
+				"01A1A06A3963D3BE"
+				"668BDF2093A9291B"
+			]
+			id: "2732380C1E0033D8"
+			tasks: [{
+				id: "18E99A28034CE615"
+				item: "gtceu:platinum_raw_dust"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 24.5d
+		}
+		{
+			dependencies: [
+				"01A1A06A3963D3BE"
+				"668BDF2093A9291B"
+			]
+			id: "41A9E381A0326997"
+			tasks: [{
+				id: "2F7946196BA328BF"
+				item: "gtceu:palladium_raw_dust"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 23.5d
+		}
+		{
+			dependencies: [
+				"01A1A06A3963D3BE"
+				"668BDF2093A9291B"
+			]
+			id: "4BD741311E61665C"
+			tasks: [{
+				id: "17772738EAECA5DD"
+				item: "gtceu:platinum_sludge_residue_dust"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 22.5d
+		}
+		{
+			dependencies: [
+				"01A1A06A3963D3BE"
+				"668BDF2093A9291B"
+			]
+			id: "46435121E3AE44EF"
+			tasks: [{
+				id: "077A2ADE5E3735A3"
+				item: "gtceu:inert_metal_mixture_dust"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 21.5d
+		}
+		{
+			dependencies: [
+				"01A1A06A3963D3BE"
+				"668BDF2093A9291B"
+				"5572651D3F510E1E"
+			]
+			dependency_requirement: "one_completed"
+			id: "56105EBA9D073902"
+			min_required_dependencies: 2
+			tasks: [{
+				id: "4727481B8F45C4E1"
+				item: "gtceu:rarest_metal_mixture_dust"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 23.5d
+		}
+		{
+			dependencies: [
+				"1AEB6A36DD3F8408"
+				"46435121E3AE44EF"
+			]
+			dependency_requirement: "one_completed"
+			id: "447948ACBDAF1D5A"
+			tasks: [
+				{
+					id: "3184F386275ACCAD"
+					item: "gtceu:rhodium_sulfate_bucket"
+					type: "item"
+				}
+				{
+					id: "15EEBC46E4611D55"
+					item: "gtceu:rhodium_sulfate_gas_bucket"
+					type: "item"
+				}
+			]
+			x: 9.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["1AEB6A36DD3F8408"]
+			id: "5572651D3F510E1E"
+			tasks: [{
+				id: "6F52D25C0DFC4B08"
+				item: "gtceu:leach_residue_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 22.5d
+		}
+		{
+			dependencies: [
+				"5572651D3F510E1E"
+				"46435121E3AE44EF"
+			]
+			dependency_requirement: "one_completed"
+			id: "515CC449D60C6B6F"
+			tasks: [{
+				id: "08775C688318E02F"
+				item: "gtceu:sodium_rutheniate_dust"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["56105EBA9D073902"]
+			id: "6555B785CDEA2B0D"
+			tasks: [{
+				id: "16CC0DB1A157BB61"
+				item: "gtceu:iridium_metal_residue_dust"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 23.0d
+		}
+		{
+			dependencies: ["56105EBA9D073902"]
+			id: "1E69FCB460019502"
+			tasks: [{
+				id: "32C3A9A2137ECCE8"
+				item: "gtceu:acidic_osmium_solution_bucket"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 24.0d
+		}
+		{
+			dependencies: ["6555B785CDEA2B0D"]
+			id: "544D94653B07DABF"
+			tasks: [
+				{
+					id: "4FBB1CDD11226171"
+					item: "gtceu:iridium_dioxide_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "56B2A608CE9CD004"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
+			x: 10.0d
+			y: 23.0d
+		}
+		{
+			dependencies: ["6BA527FE4D528D54"]
+			id: "17365ABC639496E6"
+			tasks: [{
+				id: "4CCC488DCA086040"
+				item: "gtceu:iridium_dust"
+				type: "item"
+			}]
+			x: 13.0d
+			y: 23.0d
+		}
+		{
+			dependencies: ["1E69FCB460019502"]
+			id: "7B57E5FA2FD62C15"
+			tasks: [
+				{
+					id: "630A0AD9877F9200"
+					item: "gtceu:osmium_tetroxide_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "452AE3303E0EEBAD"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
+			x: 10.0d
+			y: 24.0d
+		}
+		{
+			dependencies: ["7B57E5FA2FD62C15"]
+			id: "25FDE220C552A0D7"
+			tasks: [{
+				id: "160FE1F2BCD8F27F"
+				item: "gtceu:osmium_dust"
+				type: "item"
+			}]
+			x: 11.0d
+			y: 24.0d
+		}
+		{
+			dependencies: ["447948ACBDAF1D5A"]
+			id: "3A816A08848067B0"
+			tasks: [
+				{
+					id: "33EAC6FF223BFEC9"
+					item: "gtceu:roughly_rhodium_metal_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "558E68DA7C3103ED"
+					type: "checkmark"
+				}
+			]
+			x: 10.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["3A816A08848067B0"]
+			id: "3E439E4735E85BE5"
+			tasks: [
+				{
+					id: "19419BA850D12934"
+					item: "gtceu:rhodium_salt_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "4883DCDBB6868D36"
+					type: "checkmark"
+				}
+			]
+			x: 11.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["3E439E4735E85BE5"]
+			id: "737542A27F32418F"
+			tasks: [
+				{
+					id: "1DF06FAB724C577E"
+					item: "gtceu:rhodium_salt_solution_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "2652754592AFD2CC"
+					type: "checkmark"
+				}
+			]
+			x: 12.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["737542A27F32418F"]
+			id: "1745E379DAEA5EE0"
+			tasks: [
+				{
+					id: "16D5062BB781CD95"
+					item: "gtceu:rhodium_nitrate_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "21DB0D927149AE17"
+					type: "checkmark"
+				}
+			]
+			x: 13.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["1745E379DAEA5EE0"]
+			id: "712E7D1F539B51A8"
+			tasks: [
+				{
+					id: "459E521C65860513"
+					item: "gtceu:rhodium_filter_cake_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "00B99609CDA405C6"
+					type: "checkmark"
+				}
+			]
+			x: 14.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["712E7D1F539B51A8"]
+			id: "73399771638FD112"
+			tasks: [
+				{
+					id: "04C94B060214C917"
+					item: "gtceu:rhodium_filter_cake_solution_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "394D4E69C251078D"
+					type: "checkmark"
+				}
+			]
+			x: 15.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["73399771638FD112"]
+			id: "18FB4DDA55B7D430"
+			optional: true
+			tasks: [
+				{
+					id: "17292F329ACCF7A7"
+					item: "gtceu:reprecipitated_rhodium_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "20DCA52F1DFFA94B"
+					type: "checkmark"
+				}
+			]
+			x: 16.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["18FB4DDA55B7D430"]
+			id: "51AA4887F2DC9747"
+			tasks: [{
+				id: "1530C7BBA1C03A74"
+				item: "gtceu:rhodium_dust"
+				type: "item"
+			}]
+			x: 17.0d
+			y: 21.0d
+		}
+		{
+			dependencies: [
+				"41A9E381A0326997"
+				"2732380C1E0033D8"
+			]
+			description: ["这里主要是为了回收原料"]
+			id: "2CD7D8B5F38A50F5"
+			tasks: [
+				{
+					id: "734594D8EE4E807E"
+					item: "gtceu:platinum_dust"
+					type: "item"
+				}
+				{
+					id: "55675C54FA52DF87"
+					item: "gtceu:palladium_dust"
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: 24.0d
+		}
+		{
+			dependencies: ["515CC449D60C6B6F"]
+			id: "5C12F24D7C0DB328"
+			optional: true
+			tasks: [
+				{
+					id: "18ED9710724B22C6"
+					item: "gtceu:ruthenium_tetroxide_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0942DD5664B498DA"
+					type: "checkmark"
+				}
+			]
+			x: 10.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["5C12F24D7C0DB328"]
+			id: "277E11D01F736C89"
+			tasks: [
+				{
+					id: "3F47C69329E4940B"
+					item: "gtceu:ruthenium_tetroxide_hot_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7458D756C52CA570"
+					type: "checkmark"
+				}
+			]
+			x: 11.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["277E11D01F736C89"]
+			id: "1378ED1EC657A5D8"
+			tasks: [
+				{
+					id: "3524EF5F33337353"
+					item: "gtceu:ruthenium_tetroxide_lq_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "789796FD0D9D48BE"
+					type: "checkmark"
+				}
+			]
+			x: 12.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["1378ED1EC657A5D8"]
+			id: "6458E7BCD8D06C86"
+			tasks: [
+				{
+					id: "66D25854C8643D8D"
+					item: "gtceu:ruthenium_tetroxide_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7CC80098F63F28EB"
+					type: "checkmark"
+				}
+			]
+			x: 13.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["6458E7BCD8D06C86"]
+			id: "20D5748D17E2C06D"
+			tasks: [{
+				id: "18994A92E76B04F4"
+				item: "gtceu:ruthenium_dust"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 22.0d
+		}
+		{
+			dependencies: ["544D94653B07DABF"]
+			id: "353CE5B960B508FE"
+			tasks: [
+				{
+					id: "5B5A86C461B6CA47"
+					item: "gtceu:acidic_iridium_bucket"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "7D697FF2C350AF5A"
+					optional_task: true
+					type: "checkmark"
+				}
+			]
+			x: 11.0d
+			y: 23.0d
+		}
+		{
+			dependencies: ["353CE5B960B508FE"]
+			id: "6BA527FE4D528D54"
+			tasks: [
+				{
+					id: "2DE0156492FEFC8E"
+					item: "gtceu:iridium_chloride_dust"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "00117A13240F6FCB"
+					type: "checkmark"
+				}
+			]
+			x: 12.0d
+			y: 23.0d
+		}
+		{
+			dependencies: [
+				"1E4CFA4ED7E43E80"
+				"7FE75D42E8DDA53D"
+			]
+			dependency_requirement: "one_completed"
+			id: "5268CBA4AB789BDA"
+			rewards: [{
+				id: "5989230D2BD649C0"
+				item: "gtceu:platinum_credit"
+				type: "item"
+			}]
+			subtitle: "从EV开始用"
+			tasks: [{
+				id: "1F2EDCFFB9BEB463"
+				item: "gtceu:uranium_dust"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 29.0d
+		}
+		{
+			dependencies: ["33D3301F5F0F855A"]
+			id: "7405AF5F9FFA0C50"
+			rewards: [{
+				id: "2F229EB738C861A1"
+				item: "gtceu:platinum_credit"
+				type: "item"
+			}]
+			subtitle: "UIV会用到"
+			tasks: [{
+				id: "54393C32AFFEA91A"
+				item: "gtceu:uranium_235_dust"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 27.0d
+		}
+		{
+			dependencies: ["4288A0EFF13D1F93"]
+			id: "1E4CFA4ED7E43E80"
+			rewards: [{
+				id: "7068EF65018434C2"
+				item: "gtceu:platinum_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "17C26E9FCDE366AD"
+				item: "gtceu:depleted_uranium_hexafluoride_bucket"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 29.0d
+		}
+		{
+			dependencies: ["4288A0EFF13D1F93"]
+			id: "33D3301F5F0F855A"
+			rewards: [{
+				id: "55C9D507FB95BA4B"
+				item: "gtceu:platinum_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "79FDFE49860DE4C5"
+				item: "gtceu:enriched_uranium_hexafluoride_bucket"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 27.0d
+		}
+		{
+			dependencies: ["3526A3770E9CCB1E"]
+			id: "4288A0EFF13D1F93"
+			rewards: [{
+				id: "6F1EE6682BB13572"
+				item: "gtceu:platinum_credit"
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "0E17CB781FA05F55"
+					item: "gtceu:uranium_hexafluoride_bucket"
+					type: "item"
+				}
+				{
+					amount: 1000L
+					fluid: "gtceu:uranium_hexafluoride"
+					id: "51E945C85D95ED96"
+					optional_task: true
+					type: "fluid"
+				}
+			]
+			x: 6.0d
+			y: 28.0d
+		}
+		{
+			dependencies: ["23C2F99FC949AF0A"]
+			id: "3526A3770E9CCB1E"
+			rewards: [{
+				id: "2170189BB6102EEB"
+				item: "gtceu:platinum_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "607557054EA9B26D"
+				item: "gtceu:uraninite_dust"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 28.0d
+		}
+		{
+			dependencies: ["7405AF5F9FFA0C50"]
+			id: "45A543C859C4C376"
+			tasks: [{
+				id: "207F9613DB0254C8"
+				item: "gtceu:fissioned_uranium_235_dust"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 27.0d
+		}
+		{
+			dependencies: ["45A543C859C4C376"]
+			id: "3F5618A925DFA300"
+			subtitle: "UV才会用到"
+			tasks: [{
+				id: "5F7B3AED2B6CAEC6"
+				item: "gtceu:technetium_dust"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 27.0d
+		}
+		{
+			dependencies: [
+				"2A3874F7C50BAF1A"
+				"365298DB6520227A"
+			]
+			id: "7FE75D42E8DDA53D"
+			tasks: [{
+				id: "240191F0E6C9D53E"
+				item: "kubejs:reactor_thorium_simple"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 30.5d
+		}
+		{
+			dependencies: [
+				"5268CBA4AB789BDA"
+				"6B8E242FD397D8B4"
+				"365298DB6520227A"
+			]
+			id: "7E4BA4C2DA91D286"
+			tasks: [{
+				id: "7358C2F04FE1FB0E"
+				item: "kubejs:reactor_mox_simple"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 30.5d
+		}
+		{
+			dependencies: ["0931ECBAAD9252C7"]
+			id: "2A3874F7C50BAF1A"
+			subtitle: "便宜的好东西"
+			tasks: [{
+				id: "5F50B16A87609772"
+				item: "gtceu:thorium_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 30.5d
+		}
+		{
+			dependencies: ["0931ECBAAD9252C7"]
+			id: "6B8E242FD397D8B4"
+			tasks: [{
+				id: "2FAE33BFA7591208"
+				item: "gtceu:plutonium_dust"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 30.5d
+		}
+		{
+			dependencies: [
+				"7FE75D42E8DDA53D"
+				"7E4BA4C2DA91D286"
+			]
+			id: "6D650AE5A76585B3"
+			tasks: [{
+				id: "4EB30593E5D86DB8"
+				item: "kubejs:nuclear_waste"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 32.0d
+		}
+		{
+			dependencies: ["6D650AE5A76585B3"]
+			id: "35897D7A428FCED0"
+			tasks: [{
+				id: "704C02EA24462B26"
+				item: "gtceu:protactinium_dust"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 32.0d
+		}
+		{
+			dependencies: ["6D650AE5A76585B3"]
+			id: "37B172AA6C7DD6BB"
+			tasks: [{
+				id: "7C4FBD756DAE51CC"
+				item: "gtceu:neptunium_dust"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 31.0d
+		}
+		{
+			dependencies: ["6D650AE5A76585B3"]
+			id: "7B412E455E2C321B"
+			tasks: [{
+				id: "146DB1101ED83C52"
+				item: "gtceu:polonium_dust"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 33.0d
+		}
+		{
+			dependencies: [
+				"150F3113E9012C2F"
+				"1534BC8521461BC8"
+			]
+			dependency_requirement: "one_completed"
+			description: [
+				"使用铟富集溶液获取"
+				"需要大量硫酸"
+			]
+			id: "3EAC914AA2073B05"
+			tasks: [{
+				id: "3EAEF8CE76B2B015"
+				item: "gtceu:indium_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 38.5d
+		}
+		{
+			icon: "gtceu:indium_concentrate_bucket"
+			id: "150F3113E9012C2F"
+			subtitle: "土法制铟"
+			tasks: [{
+				id: "66A5321988EAF6B3"
+				title: "铟富集溶液"
+				type: "checkmark"
+			}]
+			x: 4.5d
+			y: 38.5d
+		}
+		{
+			description: ["你可以从钕矿石，独居石，氟碳镧铈甚至红石中获取它。"]
+			id: "6B71EE1A869ABCD5"
+			tasks: [{
+				id: "3473829E14B4727F"
+				item: "gtceu:rare_earth_dust"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 35.0d
+		}
+		{
+			dependencies: ["7979C5ACF9A0C8D2"]
+			id: "37C5E7628A4B826C"
+			tasks: [{
+				id: "0416DFD37DE6C2A4"
+				title: "放射性物质"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 27.0d
+		}
+		{
+			dependencies: ["6B71EE1A869ABCD5"]
+			id: "4CF6C5A8940B4DDF"
+			tasks: [{
+				id: "4262044D90BED20E"
+				item: "gtceu:rare_earth_hydroxides_bucket"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 35.0d
+		}
+		{
+			dependencies: ["4CF6C5A8940B4DDF"]
+			id: "5465659AD5EEE7E3"
+			tasks: [{
+				id: "657D69E5C9CC9BDA"
+				item: "gtceu:rare_earth_chlorides_bucket"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 35.0d
+		}
+		{
+			dependencies: ["5465659AD5EEE7E3"]
+			description: [""]
+			id: "0E6B85A8E9CE4CA6"
+			tasks: [
+				{
+					id: "340AC08B99F9BDDB"
+					item: "gtceu:hv_item_magnet"
+					type: "item"
+				}
+				{
+					id: "7DBD78FAB3C68D38"
+					item: "gtceu:la_nd_oxides_solution_bucket"
+					type: "item"
+				}
+				{
+					id: "333B62B74C4F2172"
+					item: "gtceu:sm_gd_oxides_solution_bucket"
+					type: "item"
+				}
+				{
+					id: "0977A10E394BC3C2"
+					item: "gtceu:tb_ho_oxides_solution_bucket"
+					type: "item"
+				}
+			]
+			title: "磁力离心"
+			x: 9.0d
+			y: 35.0d
+		}
+		{
+			dependencies: ["0E6B85A8E9CE4CA6"]
+			description: [
+				"BⅢ族的21号钪 39号钇 "
+				"                镧系除了61号钷的十四种元素"
+				""
+				"总共16种"
+			]
+			id: "4A86402C581ABB27"
+			subtitle: "有十六种"
+			tasks: [{
+				id: "4310644E4AA3ADBB"
+				item: "gtceu:samarium_oxide_dust"
+				type: "item"
+			}]
+			title: "氧化*粉"
+			x: 10.5d
+			y: 35.0d
+		}
+		{
+			dependencies: [
+				"5465659AD5EEE7E3"
+				"049C0B2BA5525962"
+			]
+			id: "275854E3F1E59652"
+			tasks: [{
+				id: "21C9B648FF9B1B17"
+				item: "gtceu:rare_earth_oxide_dust"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 36.5d
+		}
+		{
+			dependencies: ["275854E3F1E59652"]
+			id: "7570243EDE6F35B1"
+			subtitle: "有了电梯还能挖"
+			tasks: [{
+				id: "6BCA75161304244F"
+				item: "gtceu:rare_earth_metal_dust"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 36.5d
+		}
+		{
+			dependencies: ["7570243EDE6F35B1"]
+			id: "5E03D3F795BD0F55"
+			subtitle: "用来炖成UXV的基础材料之一"
+			tasks: [{
+				id: "5107DC687C7A012F"
+				item: "gtceu:promethium_dust"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 36.5d
+		}
+		{
+			dependencies: ["776563C5BA327495"]
+			id: "049C0B2BA5525962"
+			tasks: [{
+				id: "637DF364B95DF7B1"
+				item: "gtceu:rare_earth_centrifugal"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 36.5d
+		}
+		{
+			dependencies: ["7979C5ACF9A0C8D2"]
+			id: "1223D839C224777B"
+			tasks: [{
+				id: "00F08CD4279B1525"
+				title: "ⅢB族（不含锕系）"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 35.0d
+		}
+		{
+			dependencies: ["01A1A06A3963D3BE"]
+			id: "46031C6722259C54"
+			subtitle: "硫酸钾，氯化钙，稀盐酸......"
+			tasks: [{
+				id: "2EBFC43E7D201657"
+				title: "回收"
+				type: "checkmark"
+			}]
+			title: "回收那些无用的副产物"
+			x: 7.5d
+			y: 19.5d
+		}
+		{
+			dependencies: ["7979C5ACF9A0C8D2"]
+			id: "38091E7431B96FF6"
+			tasks: [{
+				id: "73C4EE18E31D6F42"
+				title: "硅岩处理"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: 42.5d
+		}
+		{
+			id: "5D1037E8365CC910"
+			subtitle: "开挖"
+			tasks: [{
+				id: "11D65D25476CBE44"
+				item: "gtceu:raw_naquadah"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 45.0d
+		}
+		{
+			dependencies: ["5D1037E8365CC910"]
+			id: "09EBEB8F3415BB6E"
+			tasks: [{
+				id: "5B07A2D41693C6E0"
+				item: "gtceu:naquadah_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 45.0d
+		}
+		{
+			dependencies: ["5D1037E8365CC910"]
+			id: "36E8964CD1BE7569"
+			subtitle: "洁净硅岩粉电磁选矿"
+			tasks: [{
+				id: "57336BFC9D32EFF4"
+				item: "gtceu:enriched_naquadah_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 48.0d
+		}
+		{
+			id: "0255D733668E3BF7"
+			tasks: [{
+				id: "21B669A650122204"
+				item: "gtceu:raw_enriched_naquadah"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 51.0d
+		}
+		{
+			id: "67ECDD5601DBBB5B"
+			tasks: [{
+				id: "1DB0385AC5D4B2A6"
+				item: "gtceu:raw_trinium_compound"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 52.5d
+		}
+		{
+			dependencies: ["09EBEB8F3415BB6E"]
+			id: "3703156457BD35FD"
+			tasks: [{
+				id: "540567C813999894"
+				item: "gtceu:impure_enriched_naquadah_solution_bucket"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 45.0d
+		}
+		{
+			dependencies: ["3703156457BD35FD"]
+			id: "59B5170E8A1265E4"
+			tasks: [{
+				id: "09D8310F47324DBF"
+				item: "gtceu:hexafluoride_enriched_naquadah_solution_bucket"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 45.0d
+		}
+		{
+			dependencies: ["59B5170E8A1265E4"]
+			id: "57DBBE2F51BB822E"
+			tasks: [{
+				id: "44F1D02CEFA7226E"
+				item: "gtceu:xenon_hexafluoro_enriched_naquadate_bucket"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 45.0d
+		}
+		{
+			dependencies: ["57DBBE2F51BB822E"]
+			dependency_requirement: "one_completed"
+			id: "76A2D869A0D5C41E"
+			tasks: [{
+				id: "5DF2D04D86807663"
+				item: "gtceu:enriched_naquadah_solution_bucket"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 45.0d
+		}
+		{
+			dependencies: ["76A2D869A0D5C41E"]
+			id: "36FB56BD8B6415D7"
+			tasks: [{
+				id: "7ADC1AEDE66CEBB2"
+				item: "gtceu:acidic_enriched_naquadah_solution_bucket"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 45.0d
+		}
+		{
+			dependencies: ["36FB56BD8B6415D7"]
+			id: "1CD2A15A1C5B1395"
+			tasks: [{
+				id: "4838581B78418606"
+				item: "gtceu:enriched_naquadah_sulfate_dust"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 45.0d
+		}
+		{
+			dependencies: ["36FB56BD8B6415D7"]
+			id: "3868B8E8021CC035"
+			tasks: [{
+				id: "5062B0E2FE1808C7"
+				item: "gtceu:enriched_naquadah_waste_bucket"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 46.0d
+		}
+		{
+			dependencies: ["36E8964CD1BE7569"]
+			id: "2F4E165431B56059"
+			tasks: [{
+				id: "36ADC52B2F4EB070"
+				item: "gtceu:impure_naquadria_solution_bucket"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 48.0d
+		}
+		{
+			dependencies: ["2F4E165431B56059"]
+			id: "147D445B1E2E2BDB"
+			tasks: [{
+				id: "10DE0C7406D7B55D"
+				item: "gtceu:hexafluoride_naquadria_solution_bucket"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 48.0d
+		}
+		{
+			dependencies: ["147D445B1E2E2BDB"]
+			id: "2C6EF38A0BE22028"
+			tasks: [{
+				id: "2C3E0982A668A0A2"
+				item: "gtceu:radon_naquadria_octafluoride_bucket"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 48.0d
+		}
+		{
+			dependencies: ["2C6EF38A0BE22028"]
+			id: "7DC037BA0E0A18DA"
+			tasks: [{
+				id: "40B06BBBE27665E9"
+				item: "gtceu:naquadria_caesium_xenonnonfluoride_bucket"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 48.0d
+		}
+		{
+			dependencies: ["7DC037BA0E0A18DA"]
+			id: "2405FED0FD07E879"
+			tasks: [{
+				id: "302D5DEB070303B7"
+				item: "gtceu:naquadria_caesiumfluoride_bucket"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 48.0d
+		}
+		{
+			dependencies: ["2405FED0FD07E879"]
+			id: "4EDDD95D554B8643"
+			tasks: [{
+				id: "633E135C6838F62A"
+				item: "gtceu:acidic_naquadria_caesiumfluoride_bucket"
+				type: "item"
+			}]
+			x: 16.5d
+			y: 50.0d
+		}
+		{
+			dependencies: ["2405FED0FD07E879"]
+			id: "14C55CE8EA930227"
+			tasks: [{
+				id: "2BF33E3351168D61"
+				item: "gtceu:naquadria_solution_bucket"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 48.0d
+		}
+		{
+			dependencies: ["14C55CE8EA930227"]
+			id: "3F165F658B061FB8"
+			tasks: [{
+				id: "113061A83BBB5DDF"
+				item: "gtceu:acidic_naquadria_solution_bucket"
+				type: "item"
+			}]
+			x: 16.5d
+			y: 48.0d
+		}
+		{
+			dependencies: [
+				"3F165F658B061FB8"
+				"4EDDD95D554B8643"
+			]
+			dependency_requirement: "one_completed"
+			id: "30D6A973D89212B9"
+			tasks: [{
+				id: "4199544AE7A66761"
+				item: "gtceu:naquadria_sulfate_dust"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 48.0d
+		}
+		{
+			dependencies: ["3F165F658B061FB8"]
+			id: "6E2187ECE4FD9684"
+			tasks: [{
+				id: "0BA49C7857B6C915"
+				item: "gtceu:naquadria_waste_bucket"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 49.0d
+		}
+		{
+			dependencies: [
+				"6E2187ECE4FD9684"
+				"4EDDD95D554B8643"
+			]
+			dependency_requirement: "one_completed"
+			id: "7C45390524D47942"
+			tasks: [{
+				id: "30DEB628EC345633"
+				item: "gtceu:trinium_sulfide_dust"
+				type: "item"
+			}]
+			x: 19.5d
+			y: 49.0d
+		}
+		{
+			dependencies: ["76A2D869A0D5C41E"]
+			id: "40823ABFBBE43496"
+			tasks: [{
+				id: "3985EEFFFEEAF1BC"
+				item: "gtceu:radon_cracked_enriched_aquadah_bucket"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 42.5d
+		}
+		{
+			dependencies: ["40823ABFBBE43496"]
+			id: "7248EC9288C91A33"
+			tasks: [{
+				id: "5747AD76A31CD66B"
+				item: "gtceu:enriched_naquadah_fuel_bucket"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 42.5d
+		}
+		{
+			dependencies: ["09EBEB8F3415BB6E"]
+			id: "1EE19E725DC91553"
+			tasks: [{
+				id: "0D62EAD7D2D8025B"
+				item: "gtceu:naquadah_solution_bucket"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 42.5d
+		}
+		{
+			dependencies: ["1EE19E725DC91553"]
+			id: "7D1E1EB10A6FFE98"
+			tasks: [{
+				id: "144F9B3C76BDFECA"
+				item: "gtceu:fluorine_cracked_aquadah_bucket"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 42.5d
+		}
+		{
+			dependencies: ["7D1E1EB10A6FFE98"]
+			id: "75D953244E729FEC"
+			tasks: [{
+				id: "5EE6707C631C948A"
+				item: "gtceu:naquadah_fuel_bucket"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 42.5d
+		}
+		{
+			dependencies: [
+				"75D953244E729FEC"
+				"7248EC9288C91A33"
+				"14C55CE8EA930227"
+			]
+			id: "0D53712AA7F733A8"
+			tasks: [{
+				id: "041A075952C819BA"
+				item: "gtceu:hyper_fuel_1_bucket"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 45.0d
+		}
+		{
+			dependencies: ["0255D733668E3BF7"]
+			id: "4E3BD7980CD652A5"
+			tasks: [{
+				id: "59AAD833ADDB0087"
+				item: "gtceu:milled_enriched_naquadah"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 51.0d
+		}
+		{
+			dependencies: ["4E3BD7980CD652A5"]
+			id: "6A5AB82C3E14D091"
+			tasks: [{
+				id: "4666200C2877EED6"
+				item: "gtceu:enriched_naquadah_front_bucket"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 51.0d
+		}
+		{
+			dependencies: ["36E8964CD1BE7569"]
+			hide_dependency_lines: true
+			id: "1534BC8521461BC8"
+			tasks: [{
+				id: "7FEE777235FA0998"
+				item: "gtceu:indium_phosphide_dust"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 39.5d
 		}
 	]
 	title: "资源获取"

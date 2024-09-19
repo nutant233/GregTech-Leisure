@@ -592,12 +592,13 @@
 			y: 10.0d
 		}
 		{
-			dependencies: ["7F92A8EE58AD5BA2"]
+			dependencies: ["7B412E455E2C321B"]
 			description: [
 				"离心核废料得到小搓钋"
 				""
 				"其产物处理线路复杂请仔细查看"
 			]
+			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "766D051A40AB5324"
 			tasks: [

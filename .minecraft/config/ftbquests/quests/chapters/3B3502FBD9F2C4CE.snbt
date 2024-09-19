@@ -6,7 +6,12 @@
 	icon: "gtceu:iv_electric_motor"
 	id: "3B3502FBD9F2C4CE"
 	order_index: 5
-	quest_links: [ ]
+	quest_links: [{
+		id: "0DE52ED40E51ADE2"
+		linked_quest: "3EAC914AA2073B05"
+		x: 12.0d
+		y: 0.0d
+	}]
 	quests: [
 		{
 			dependencies: ["148A5C927A0DCED1"]
@@ -115,21 +120,6 @@
 			}]
 			x: 0.0d
 			y: 4.0d
-		}
-		{
-			dependencies: ["150F3113E9012C2F"]
-			description: [
-				"使用铟富集溶液获取"
-				"需要大量硫酸"
-			]
-			id: "3EAC914AA2073B05"
-			tasks: [{
-				id: "3EAEF8CE76B2B015"
-				item: "gtceu:indium_dust"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 0.0d
 		}
 		{
 			description: ["可以用磷化铟，也可以用量子之眼"]
@@ -383,17 +373,6 @@
 			y: 2.0d
 		}
 		{
-			icon: "gtceu:indium_concentrate_bucket"
-			id: "150F3113E9012C2F"
-			tasks: [{
-				id: "66A5321988EAF6B3"
-				title: "铟富集溶液"
-				type: "checkmark"
-			}]
-			x: 10.0d
-			y: 0.0d
-		}
-		{
 			dependencies: [
 				"3EAC914AA2073B05"
 				"3B79A329196883EF"
@@ -427,7 +406,6 @@
 			dependencies: [
 				"7DCA0B7C9F3C3ACF"
 				"0526B4AC0CAF99A5"
-				"6B71EE1A869ABCD5"
 			]
 			description: ["IV超导体"]
 			id: "02D426BE0947F123"
@@ -494,20 +472,6 @@
 			y: 8.0d
 		}
 		{
-			description: [
-				"你可以从钕矿石，独居石或从不同的矿石中获取它作为副产品。"
-				"现在你需要做稀土处理了，你现在需要做成稀土氯化物然后加磁铁离心"
-			]
-			id: "6B71EE1A869ABCD5"
-			tasks: [{
-				id: "3473829E14B4727F"
-				item: "gtceu:rare_earth_dust"
-				type: "item"
-			}]
-			x: 2.0d
-			y: 2.0d
-		}
-		{
 			dependencies: ["148A5C927A0DCED1"]
 			description: ["可以是最后一种切割机"]
 			id: "3B79A329196883EF"
@@ -517,7 +481,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["38480A52A13DA157"]
