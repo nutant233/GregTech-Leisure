@@ -1550,7 +1550,7 @@
 		}
 		{
 			dependencies: ["61140578961B01A9"]
-			description: ["副手持数据即可将末影眼安装在框架上"]
+			description: ["左手手持末地数据，右手末地之眼，各消耗一个点亮一次"]
 			id: "2AE3DE0BC3CD1D5B"
 			tasks: [{
 				id: "0F4C07DD6A1BB112"

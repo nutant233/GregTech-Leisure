@@ -312,18 +312,11 @@
 			id: "52980D117AB477B2"
 			shape: "rsquare"
 			size: 1.0d
-			tasks: [
-				{
-					id: "2E8C86DE512279CC"
-					item: "gtceu:void_fluid_drilling_rig"
-					type: "item"
-				}
-				{
-					id: "70D6B4883DF437A5"
-					item: "gtceu:large_void_miner"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "2E8C86DE512279CC"
+				item: "gtceu:void_fluid_drilling_rig"
+				type: "item"
+			}]
 			title: "来自虚空"
 			x: 14.0d
 			y: 0.0d
@@ -599,12 +592,13 @@
 			y: 10.0d
 		}
 		{
-			dependencies: ["7F92A8EE58AD5BA2"]
+			dependencies: ["7B412E455E2C321B"]
 			description: [
 				"离心核废料得到小搓钋"
 				""
 				"其产物处理线路复杂请仔细查看"
 			]
+			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "766D051A40AB5324"
 			tasks: [

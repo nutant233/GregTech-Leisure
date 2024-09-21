@@ -237,8 +237,9 @@
 			description: ["利用合金炉混合金属"]
 			id: "30F031CD02425ED7"
 			rewards: [{
-				id: "65B24D713DC14094"
-				item: "gtceu:cupronickel_credit"
+				count: 64
+				id: "4FB6BBE01DEAFC93"
+				item: "minecraft:gunpowder"
 				type: "item"
 			}]
 			tasks: [{
@@ -325,19 +326,11 @@
 				"当你在EV完成三阶火箭后你需要用它前往地狱"
 			]
 			id: "00579BDA1FA1BEC6"
-			rewards: [
-				{
-					id: "51AF08C499E8329A"
-					item: "gtceu:silver_credit"
-					type: "item"
-				}
-				{
-					count: 64
-					id: "4C8F3AF8A7308048"
-					item: "minecraft:gunpowder"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "51AF08C499E8329A"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
 			tasks: [
 				{
 					id: "3C71CBD9FE0DC224"

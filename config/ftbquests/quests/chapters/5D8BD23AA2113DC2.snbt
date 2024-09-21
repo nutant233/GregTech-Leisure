@@ -698,8 +698,8 @@
 				item: "gtceu:lanthanum_dust"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 6.5d
+			x: -2.0d
+			y: 7.0d
 		}
 		{
 			id: "6012A721DE562E33"
@@ -708,8 +708,8 @@
 				item: "gtceu:cerium_dust"
 				type: "item"
 			}]
-			x: -3.5d
-			y: 6.5d
+			x: -0.5d
+			y: 7.0d
 		}
 		{
 			id: "7FA5B4B37DBD17E1"
@@ -718,8 +718,8 @@
 				item: "gtceu:praseodymium_dust"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 6.5d
+			x: 1.0d
+			y: 7.0d
 		}
 		{
 			id: "7B2AE1A057BDAF61"
@@ -728,8 +728,8 @@
 				item: "gtceu:neodymium_dust"
 				type: "item"
 			}]
-			x: -0.5d
-			y: 6.5d
+			x: 2.5d
+			y: 7.0d
 		}
 		{
 			id: "7A9C60EEDED45CBA"
@@ -738,8 +738,8 @@
 				item: "gtceu:promethium_dust"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 6.5d
+			x: 4.0d
+			y: 7.0d
 		}
 		{
 			id: "08590C23037082C7"
@@ -748,8 +748,8 @@
 				item: "gtceu:samarium_dust"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 6.5d
+			x: 5.5d
+			y: 7.0d
 		}
 		{
 			id: "7C987499F3053EAF"
@@ -758,8 +758,8 @@
 				item: "gtceu:europium_dust"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 6.5d
+			x: 7.0d
+			y: 7.0d
 		}
 		{
 			id: "10BF78266769747C"
@@ -768,8 +768,8 @@
 				item: "gtceu:gadolinium_dust"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 6.5d
+			x: 8.5d
+			y: 7.0d
 		}
 		{
 			id: "019291D84838C9A3"
@@ -778,8 +778,8 @@
 				item: "gtceu:terbium_dust"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 6.5d
+			x: 10.0d
+			y: 7.0d
 		}
 		{
 			id: "3B39D2A095E1BA5E"
@@ -788,8 +788,8 @@
 				item: "gtceu:dysprosium_dust"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 6.5d
+			x: 11.5d
+			y: 7.0d
 		}
 		{
 			id: "48CD478DD3970936"
@@ -798,8 +798,8 @@
 				item: "gtceu:holmium_dust"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 6.5d
+			x: 13.0d
+			y: 7.0d
 		}
 		{
 			id: "3317F83B1732E4AC"
@@ -808,8 +808,8 @@
 				item: "gtceu:erbium_dust"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 6.5d
+			x: 14.5d
+			y: 7.0d
 		}
 		{
 			id: "5F1359C22F22B279"
@@ -818,8 +818,8 @@
 				item: "gtceu:thulium_dust"
 				type: "item"
 			}]
-			x: 13.0d
-			y: 6.5d
+			x: 16.0d
+			y: 7.0d
 		}
 		{
 			id: "3F158342137E0E14"
@@ -828,8 +828,8 @@
 				item: "gtceu:ytterbium_dust"
 				type: "item"
 			}]
-			x: 14.5d
-			y: 6.5d
+			x: 17.5d
+			y: 7.0d
 		}
 		{
 			id: "7EE8C65B66A0B8BF"
@@ -838,8 +838,8 @@
 				item: "gtceu:lutetium_dust"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 6.5d
+			x: 19.0d
+			y: 7.0d
 		}
 		{
 			id: "39C323C33A2766A0"
@@ -848,8 +848,8 @@
 				item: "gtceu:thorium_dust"
 				type: "item"
 			}]
-			x: -3.5d
-			y: 8.0d
+			x: -0.5d
+			y: 8.5d
 		}
 		{
 			id: "48844BC45AF9F2E4"
@@ -858,8 +858,8 @@
 				item: "gtceu:praseodymium_dust"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 8.0d
+			x: 1.0d
+			y: 8.5d
 		}
 		{
 			id: "3F2C1E6F17D633C4"
@@ -868,8 +868,8 @@
 				item: "gtceu:uranium_dust"
 				type: "item"
 			}]
-			x: -0.5d
-			y: 8.0d
+			x: 2.5d
+			y: 8.5d
 		}
 		{
 			id: "486F7548A4E5AEA5"
@@ -878,8 +878,8 @@
 				item: "gtceu:neptunium_dust"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 8.0d
+			x: 4.0d
+			y: 8.5d
 		}
 		{
 			id: "4D4C2D9868463365"
@@ -888,8 +888,8 @@
 				item: "gtceu:plutonium_dust"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 8.0d
+			x: 5.5d
+			y: 8.5d
 		}
 		{
 			id: "2B5B7F87CF0FC74D"
@@ -898,8 +898,8 @@
 				item: "gtceu:americium_dust"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 8.0d
+			x: 7.0d
+			y: 8.5d
 		}
 		{
 			id: "7A9573B334AFF1F6"
@@ -908,8 +908,8 @@
 				item: "gtceu:curium_dust"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 8.0d
+			x: 8.5d
+			y: 8.5d
 		}
 		{
 			id: "3930E1A669B84732"
@@ -918,8 +918,8 @@
 				item: "gtceu:berkelium_dust"
 				type: "item"
 			}]
-			x: 7.0d
-			y: 8.0d
+			x: 10.0d
+			y: 8.5d
 		}
 		{
 			id: "55E8C6477C3437BF"
@@ -928,8 +928,8 @@
 				item: "gtceu:californium_dust"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 8.0d
+			x: 11.5d
+			y: 8.5d
 		}
 		{
 			id: "0FF3D867B37F343B"
@@ -938,8 +938,8 @@
 				item: "gtceu:einsteinium_dust"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 8.0d
+			x: 13.0d
+			y: 8.5d
 		}
 		{
 			id: "7D8BF33BF634A3C1"
@@ -948,8 +948,8 @@
 				item: "gtceu:fermium_dust"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 8.0d
+			x: 14.5d
+			y: 8.5d
 		}
 		{
 			id: "1B14EBE61D69F7A6"
@@ -958,8 +958,8 @@
 				item: "gtceu:mendelevium_dust"
 				type: "item"
 			}]
-			x: 13.0d
-			y: 8.0d
+			x: 16.0d
+			y: 8.5d
 		}
 		{
 			id: "40F3F08084CA76B3"
@@ -1169,8 +1169,8 @@
 				item: "gtceu:actinium_dust"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 8.0d
+			x: -2.0d
+			y: 8.5d
 		}
 		{
 			id: "052DDE864EDC3DDF"
@@ -1200,8 +1200,8 @@
 				item: "gtceu:nobelium_dust"
 				type: "item"
 			}]
-			x: 14.5d
-			y: 8.0d
+			x: 17.5d
+			y: 8.5d
 		}
 		{
 			id: "5F64B231DCBB09B0"
@@ -1210,8 +1210,8 @@
 				item: "gtceu:lawrencium_dust"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 8.0d
+			x: 19.0d
+			y: 8.5d
 		}
 	]
 	title: "各种元素"

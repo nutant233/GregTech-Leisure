@@ -133,7 +133,9 @@ const blocks = ["gtlcore:uev_hermetic_casing",
     "gtlcore:component_assembly_line_casing_uiv",
     "gtlcore:component_assembly_line_casing_uxv",
     "gtlcore:component_assembly_line_casing_opv",
-    "gtlcore:component_assembly_line_casing_max"]
+    "gtlcore:component_assembly_line_casing_max",
+    "gtlcore:space_elevator_support",
+    "gtlcore:advanced_assembly_line_unit"]
 
 ServerEvents.tags("block", event => {
     blocks.forEach((block) => {

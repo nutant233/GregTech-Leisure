@@ -1254,38 +1254,22 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["133BC85B5D3EF1CB"]
-			description: ["你可能用得上"]
-			id: "12C3B40506921154"
-			tasks: [
-				{
-					id: "0C4AC2AD5A122362"
-					item: "akatzumaworldedit:wood_axe"
-					type: "item"
-				}
-				{
-					id: "27FC95069D576FA7"
-					item: "akatzumaworldedit:query_blockstate_item"
-					type: "item"
-				}
-				{
-					id: "2B887FCF065B1DF5"
-					item: "akatzumaworldedit:building_consumable"
-					type: "item"
-				}
-				{
-					id: "11B0A4ED52CD92A3"
-					item: "akatzumaworldedit:projector"
-					type: "item"
-				}
-				{
-					id: "5231C25D7B2F2EAD"
-					item: "akatzumaworldedit:bind_inventory"
-					type: "item"
-				}
+			dependencies: ["2C6F506ADD78F277"]
+			description: [
+				"1 每t都在运作"
+				"2 一对多传输会超级卡"
+				"3 分配规则改成轮询调度会超级卡"
+				"4 大量过滤会超级卡"
+				"5 流体管道会很卡"
 			]
-			x: 5.5d
-			y: -4.0d
+			id: "206F4C123EC2550F"
+			tasks: [{
+				id: "78133B00994EC9AC"
+				item: "pipez:wrench"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.0d
 		}
 	]
 	title: "由此开始"

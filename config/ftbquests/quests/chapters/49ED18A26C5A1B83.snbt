@@ -1789,7 +1789,7 @@
 				item: "gtceu:super_particle_collider"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.0d
 			y: 18.0d
 		}
 		{
@@ -2181,7 +2181,7 @@
 			id: "4D9128784D248CDD"
 			tasks: [{
 				id: "1FDCF7F74127B2C8"
-				item: "gtceu:sphere_of_harmony"
+				item: "gtceu:eye_of_harmony"
 				type: "item"
 			}]
 			x: 16.0d
@@ -2353,7 +2353,7 @@
 				item: "gtceu:rare_earth_centrifugal"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 18.0d
 			y: 18.0d
 		}
 		{
@@ -2742,11 +2742,16 @@
 			y: 16.0d
 		}
 		{
+			icon: "gtceu:portable_debug_scanner"
 			id: "376F6857ABEF60BF"
+			rewards: [{
+				id: "650A2F50E2D24196"
+				item: "gtceu:portable_debug_scanner"
+				type: "item"
+			}]
 			tasks: [{
-				icon: "gtceu:portable_debug_scanner"
-				id: "3B3273B44D2FEC29"
-				type: "custom"
+				id: "35D84DB9E78E62B4"
+				type: "checkmark"
 			}]
 			title: "这里有199个多方块"
 			x: -12.0d
@@ -2962,6 +2967,20 @@
 			}]
 			x: -4.0d
 			y: 2.0d
+		}
+		{
+			dependencies: [
+				"5672B9E868EDBE4D"
+				"39CC012A1CE7D847"
+			]
+			id: "45B0D6248A72501C"
+			tasks: [{
+				id: "6BEC59412BB8B982"
+				item: "gtceu:large_block_conversion_room"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 18.0d
 		}
 	]
 	title: "多方块结构"
