@@ -58,6 +58,9 @@
     "extreme": true,
     "compressor": true
   },
+  "pipez": {
+    "pipe": true
+  },
   "gtceu": {
     "auto_output_info": true,
     "primitive_pump": true,

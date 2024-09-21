@@ -11,7 +11,7 @@ ServerEvents.recipes((event) => {
         "ABA"
     ], {
         A: "minecraft:echo_shard",
-        B: "gtceu:echo_dust",
+        B: "gtceu:echo_shard_dust",
         C: "minecraft:note_block",
         D: "minecraft:comparator"
     })
@@ -22,7 +22,7 @@ ServerEvents.recipes((event) => {
         "ABA"
     ], {
         A: "kubejs:echobone",
-        B: "gtceu:echo_rod",
+        B: "gtceu:echo_shard_rod",
         D: "minecraft:sculk_sensor"
     })
 
@@ -67,15 +67,15 @@ ServerEvents.recipes((event) => {
         .addCondition(new GravityCondition(true))
 
     gtr.assembler("minecraft:reinforced_deepslate")
-        .itemInputs("minecraft:deepslate", "gtceu:echo_block", "4x kubejs:echobone")
-        .inputFluids("gtceu:echo 1440")
+        .itemInputs("minecraft:deepslate", "gtceu:echo_shard_block", "4x kubejs:echobone")
+        .inputFluids("gtceu:echo_shard 1440")
         .itemOutputs("minecraft:reinforced_deepslate")
         .duration(200)
         .EUt(480)
 
     gtr.chemical_bath("kubejs:echobone")
         .itemInputs("minecraft:bone")
-        .inputFluids("gtceu:echo 144")
+        .inputFluids("gtceu:echo_shard 144")
         .itemOutputs("kubejs:echobone")
         .EUt(480)
         .duration(400)
@@ -89,7 +89,7 @@ ServerEvents.recipes((event) => {
 
     gtr.sps_crafting("minecraft:sculk_catalyst")
         .itemInputs("minecraft:terracotta")
-        .inputFluids("gtceu:mana 1000", "gtceu:echo 100")
+        .inputFluids("gtceu:mana 1000", "gtceu:echo_shard 100")
         .itemOutputs("minecraft:sculk_catalyst")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(20)

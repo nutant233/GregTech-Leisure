@@ -51,7 +51,6 @@
 .DS_Store
 instance.cfg
 mmc-pack.json
-!Re-Avaritia-forged-*.jar
 !gtceu-*.jar
 !gtlcore-*.jar
 !Infinity Cells-*.jar

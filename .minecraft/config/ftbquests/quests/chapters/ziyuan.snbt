@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "ziyuan"
 	group: "24F4987B35ABEE82"
-	icon: "gtceu:raw_trinium"
+	icon: "gtceu:raw_trinium_compound"
 	id: "0EF94FA5D02096D9"
 	order_index: 6
 	progression_mode: "flexible"
