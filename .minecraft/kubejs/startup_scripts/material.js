@@ -3609,12 +3609,12 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .components("4x carbon", "5x hydrogen", "3x fluorine", "2x oxygen")
         .color(0x93a658).iconSet(GTLMaterialIconSet.LIMPID)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-    
+
     event.create("acetyl_chloride")
         .fluid()
         .components("2x carbon", "3x hydrogen", "1x oxygen", "1x chlorine")
         .color(0xd1b117).iconSet(GTLMaterialIconSet.LIMPID)
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION) 
+        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
 
     event.create("radium_nitrate")
         .dust()
@@ -3760,6 +3760,24 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .components("3x sodium", "1x aluminium", "6x fluorine")
         .color(0xa47732).iconSet(GTLMaterialIconSet.LIMPID)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+
+    event.create("hydroiodic_acid")
+        .fluid()
+        .components("1x hydrogen", "1x iodine")
+        .color(0x0382e2)
+        .iconSet(GTLMaterialIconSet.LIMPID)
+
+    event.create("acrylonitrile")
+        .fluid()
+        .components("3x carbon", "3x hydrogen", "1x nitrogen")
+        .color(0xa4a4e1)
+        .iconSet(GTLMaterialIconSet.LIMPID)
+
+    event.create("lithium_iodide")
+        .dust()
+        .components("1x lithium", "1x iodine")
+        .color(0xc10014)
+        .iconSet(GTMaterialIconSet.DULL)
 })
 GTCEuStartupEvents.materialModification(() => {
     GTMaterials.get("zirconium_hafnium_chloride").setFormula("ZrHfCl₄")
