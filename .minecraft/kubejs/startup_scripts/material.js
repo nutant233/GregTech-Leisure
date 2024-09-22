@@ -149,16 +149,18 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .cableProperties(32, 1, 0, true)
 
     event.create("energetic_alloy")
-        .ingot().fluid()
+        .ingot()
+        .fluid()
         .color(0xffb545).iconSet("shiny")
-        .blastTemp(1650, "low")
+        .blastTemp(1650, "low", GTValues.VA[GTValues.MV], 700)
         .components("2x gold", "redstone", "glowstone")
         .cableProperties(128, 1, 0, true)
 
     event.create("vibrant_alloy")
-        .ingot().fluid()
+        .ingot()
+        .fluid()
         .color(0xa4ff70).iconSet("shiny")
-        .blastTemp(2375, "low")
+        .blastTemp(2375, "low", GTValues.VA[GTValues.HV], 1300)
         .components("energetic_alloy", "ender_pearl")
         .cableProperties(512, 1, 0, true)
 
