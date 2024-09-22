@@ -6679,8 +6679,9 @@ ServerEvents.recipes((event) => {
             "30x gtceu:endstone_tungsten_ore"], "kubejs:pitchblende_vein_end_essence"],
 
         [["180x gtceu:endstone_naquadah_ore",
+            "80x gtceu:endstone_enriched_naquadah_ore",
             "60x gtceu:endstone_plutonium_ore",
-            "120x gtceu:endstone_trinium_compound_ore"], "kubejs:naquadah_vein_essence"]]
+            "40x gtceu:endstone_trinium_compound_ore"], "kubejs:naquadah_vein_essence"]]
 
     const all_ores = overworld_ores.concat(nether_ores, end_ores)
 
@@ -16788,6 +16789,28 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.UEV])
             .CWUt(600))
 
+    gtr.assembly_line("gtceu:mega_distillery")
+        .itemInputs("16x gtceu:distillation_tower", "16x gtceu:evaporation_plant", "8x gtceu:tungsten_steel_huge_fluid_pipe", "16x gtceu:uhv_electric_pump", "4x gtceu:uev_sensor", "4x #gtceu:circuits/uiv", "32x gtceu:annealed_copper_hex_wire", "32x gtceu:watertight_steel_plate")
+        .inputFluids("gtceu:soldering_alloy 1152", "gtceu:indalloy_140 1152", "gtceu:stainless_steel 2304", "gtceu:polyvinyl_chloride 2880")
+        .itemOutputs("gtceu:mega_distillery")
+        .EUt(GTValues.VA[GTValues.UHV])
+        .duration(800)
+        .stationResearch(b => b.researchStack(Registries.getItemStack("gtceu:large_distillery"))
+            .dataStack(Registries.getItemStack("gtceu:data_module"))
+            .EUt(GTValues.VA[GTValues.UHV])
+            .CWUt(600))
+
+    gtr.assembly_line("gtceu:nano_core")
+        .itemInputs("16x gtceu:opv_buffer", "16x gtceu:cosmicneutronium_nanoswarm", "16x gtceu:suprachronal_assembly_line", "8x gtlcore:component_assembly_line_casing_opv", "32x #gtceu:circuits/opv", '16x gtceu:cosmicneutronium_plate')
+        .inputFluids("gtceu:super_mutated_living_solder 4608", "gtceu:indalloy_140 4608", "gtceu:naquadria 4608", "gtceu:hastelloyk_243 4608")
+        .itemOutputs("gtceu:nano_core")
+        .EUt(GTValues.VA[GTValues.UXV])
+        .duration(800)
+        .stationResearch(b => b.researchStack(Registries.getItemStack("gtceu:nano_forge_3"))
+            .dataStack(Registries.getItemStack("gtceu:data_module"))
+            .EUt(GTValues.VA[GTValues.OpV])
+            .CWUt(1200))
+
     gtr.compressor("gtceu:graphite_ingot")
         .itemInputs("gtceu:graphite_dust")
         .itemOutputs("gtceu:graphite_ingot")
@@ -17186,6 +17209,6 @@ ServerEvents.recipes((event) => {
     gtr.electrolyzer("gtceu:trinium_compound_dust")
         .itemInputs("14x gtceu:trinium_compound_dust")
         .itemOutputs("3x gtceu:trinium_dust", "3x gtceu:actinium_dust", "4x gtceu:selenium_dust", "4x gtceu:astatine_dust")
-        .EUt(GTValues.VA[GTValues.UXV])
+        .EUt(GTValues.VA[GTValues.UIV])
         .duration(560)
 })

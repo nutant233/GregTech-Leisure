@@ -1271,6 +1271,17 @@
 			x: 0.0d
 			y: -1.0d
 		}
+		{
+			dependencies: ["4AB25C15F0B05AA0"]
+			id: "1A124E85453923DF"
+			tasks: [{
+				id: "10AA38DEE8B23298"
+				item: "gtmthings:advanced_terminal"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.5d
+		}
 	]
 	title: "由此开始"
 }
