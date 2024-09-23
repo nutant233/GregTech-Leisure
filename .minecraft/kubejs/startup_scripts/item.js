@@ -402,7 +402,7 @@ ItemEvents.modification(event => {
         modification.setBurnTime(12800000)
     })
     event.modify("kubejs:diamond_Compressed_block", modification => {
-        modification.setBurnTime(160000000)
+        modification.setBurnTime(120000000)
     })
 
 })

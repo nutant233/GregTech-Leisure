@@ -1398,20 +1398,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet(GTMaterialIconSet.DULL)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
 
-    event.create("inert_residues")
-        .dust()
-        .color(0x188f4f)
-        .components("1x concrete")
-        .iconSet(GTMaterialIconSet.DULL)
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-
-    event.create("clean_inert_residues")
-        .dust()
-        .color(0x187f4d)
-        .components("1x concrete")
-        .iconSet(GTMaterialIconSet.DULL)
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-
     event.create("palladium_fullerene_matrix")
         .dust()
         .color(0x96b4b4)
@@ -3547,11 +3533,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .components("1x enriched_naquadah")
         .color(0x58d00f)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-        .iconSet(GTMaterialIconSet.FLUID)
-
-    event.create("red_mud")
-        .fluid()
-        .color(0xff3030)
         .iconSet(GTMaterialIconSet.FLUID)
 
     event.create("carbon_disulfide")
