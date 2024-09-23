@@ -17210,9 +17210,9 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(560)
 
-    gtr.compressor("kubejs:diamond_Compressed_block")
+    gtr.compressor("kubejs:diamond_compressed_block")
         .itemInputs("8x minecraft:diamond_block")
-        .itemOutputs("kubejs:diamond_Compressed_block")
+        .itemOutputs("kubejs:diamond_compressed_block")
         .EUt(GTValues.VA[GTValues.HV])
         .duration(300)
 

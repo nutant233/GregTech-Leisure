@@ -401,7 +401,7 @@ ItemEvents.modification(event => {
     event.modify("minecraft:diamond_block", modification => {
         modification.setBurnTime(12800000)
     })
-    event.modify("kubejs:diamond_Compressed_block", modification => {
+    event.modify("kubejs:diamond_compressed_block", modification => {
         modification.setBurnTime(120000000)
     })
 

@@ -859,7 +859,7 @@ StartupEvents.registry("block", event => {
         .requiresTool(true)
         .defaultTranslucent()
     
-    event.create("diamond_Compressed_block", "basic")
+    event.create("diamond_compressed_block", "basic")
         .noValidSpawns(true)
         .soundType("stone")
         .mapColor("stone")

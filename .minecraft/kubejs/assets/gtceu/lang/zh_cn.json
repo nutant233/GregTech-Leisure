@@ -16,7 +16,7 @@
   "block.gtceu.advanced_multi_smelter": "进阶熔炉",
   "block.gtceu.advanced_sps_crafting": "进阶超临界合成机",
   "block.gtceu.aggregation_device": "聚合装置",
-  "block.gtceu.annihilate_generator": "湮灭发电机",
+  "block.gtceu.annihilate_generator": "人造恒星",
   "block.gtceu.assemble_plant": "通用组装厂",
   "block.gtceu.assembler_module": "太空电梯组装模块",
   "block.gtceu.atomic_energy_excitation_plant": "原子能激发工厂",
@@ -1381,6 +1381,6 @@
   "tagprefix.plutostone": "冥王星%s矿石",
   "tagprefix.titanstone": "土卫六%s矿石",
   "tagprefix.venus_stone": "金星石%s矿石",
-  "block.kubejs.diamond_Compressed_block":"压缩钻石块"
+  "block.kubejs.diamond_compressed_block":"压缩钻石块"
 
 }
