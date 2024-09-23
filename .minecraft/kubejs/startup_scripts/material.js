@@ -1786,13 +1786,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet(GTMaterialIconSet.DULL)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
 
-    event.create("rare_earth_chlorides")
-        .fluid()
-        .color(0xbdb76b)
-        .components("1x concrete", "1x chlorine")
-        .iconSet(GTMaterialIconSet.DULL)
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-
     event.create("quantum_dots")
         .fluid()
         .color(0xda0000)
@@ -1860,13 +1853,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .fluid()
         .color(0xfa8072)
         .components("1x vibranium")
-        .iconSet(GTMaterialIconSet.DULL)
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-
-    event.create("dusty_liquid_helium_3")
-        .fluid()
-        .color(0x774060)
-        .components("1x concrete", "1x helium_3")
         .iconSet(GTMaterialIconSet.DULL)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
 
@@ -2689,12 +2675,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .components("1x sodium", "1x chlorine", "1x oxygen")
         .iconSet(GTMaterialIconSet.DULL)
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-
-    event.create("hydrogen_peroxide")
-        .fluid()
-        .color(0xc8ffff)
-        .components("2x hydrogen", "2x oxygen")
-        .iconSet(GTMaterialIconSet.DULL)
 
     event.create("ethylanthraquinone")
         .fluid()
