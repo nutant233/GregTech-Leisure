@@ -1990,5 +1990,7 @@
   "tagprefix.nanoswarm": "%s纳米蜂群",
   "tagprefix.plutostone": "冥王星%s矿石",
   "tagprefix.titanstone": "土卫六%s矿石",
-  "tagprefix.venus_stone": "金星石%s矿石"
+  "tagprefix.venus_stone": "金星石%s矿石",
+  "block.kubejs.diamond_Compressed_block":"压缩钻石块"
+
 }

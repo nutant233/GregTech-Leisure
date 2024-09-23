@@ -17227,4 +17227,11 @@ ServerEvents.recipes((event) => {
         .itemOutputs("3x gtceu:trinium_dust", "3x gtceu:actinium_dust", "4x gtceu:selenium_dust", "4x gtceu:astatine_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(560)
+
+    gtr.compressor("kubejs:diamond_Compressed_block")
+        .itemInputs("8x minecraft:diamond_block")
+        .itemOutputs("kubejs:diamond_Compressed_block")
+        .EUt(GTValues.VA[GTValues.HV])
+        .duration(300)
+
 })
