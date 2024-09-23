@@ -4762,13 +4762,6 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(400)
 
-    gtr.large_chemical_reactor("gtceu:dusty_liquid_helium_iii")
-        .inputFluids("gtceu:helium_3 1000", "gtceu:liquid_oxygen 2000", "gtceu:liquid_hydrogen 2000")
-        .itemInputs("gtceu:clean_inert_residues_dust")
-        .outputFluids("gtceu:dusty_liquid_helium_iii 1000")
-        .EUt(GTValues.VA[GTValues.UIV])
-        .duration(160)
-
     gtr.centrifuge("gtceu:taranium_enriched_liquid_helium_3")
         .notConsumable("gtlcore:separation_electromagnet")
         .inputFluids("gtceu:dusty_liquid_helium_iii 1000")
