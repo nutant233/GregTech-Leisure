@@ -6,12 +6,20 @@
 	icon: "gtceu:iv_electric_motor"
 	id: "3B3502FBD9F2C4CE"
 	order_index: 5
-	quest_links: [{
-		id: "0DE52ED40E51ADE2"
-		linked_quest: "3EAC914AA2073B05"
-		x: 12.0d
-		y: 0.0d
-	}]
+	quest_links: [
+		{
+			id: "0DE52ED40E51ADE2"
+			linked_quest: "3EAC914AA2073B05"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			id: "5D6473A58EAD0FE2"
+			linked_quest: "1223D839C224777B"
+			x: 0.0d
+			y: 2.0d
+		}
+	]
 	quests: [
 		{
 			dependencies: ["148A5C927A0DCED1"]
@@ -22,7 +30,7 @@
 				item: "gtceu:iv_mixer"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 2.0d
 			y: 2.0d
 		}
 		{

@@ -320,7 +320,7 @@
 			id: "335A02C9498DCBB0"
 			tasks: [{
 				id: "4F89800700465811"
-				item: "kubejs:microfocus_x_ray_tube"
+				item: "gtlcore:microfocus_x_ray_tube"
 				type: "item"
 			}]
 			x: 2.0d

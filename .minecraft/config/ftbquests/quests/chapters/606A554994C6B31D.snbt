@@ -1235,9 +1235,9 @@
 			icon: "ae2:cell_component_256k"
 			id: "30787B18066763DB"
 			rewards: [{
-				count: 10
+				count: 2
 				id: "0641B4398B707B90"
-				item: "ae2:cell_component_256k"
+				item: "gtlcore:cell_component_256m"
 				type: "item"
 			}]
 			tasks: [{
@@ -1246,7 +1246,7 @@
 				item: "gtceu:naquadah_credit"
 				type: "item"
 			}]
-			title: "256K"
+			title: "256M"
 			x: -3.0d
 			y: 2.0d
 		}
@@ -1271,6 +1271,26 @@
 			title: "玻璃线缆"
 			x: -1.5d
 			y: 2.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["6967496308DD29AE"]
+			id: "7B72A96FC0A31033"
+			optional: true
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5C68B938EAB084D8"
+				table_id: 3370214622901424373L
+				type: "choice"
+			}]
+			tasks: [{
+				id: "52079BD0F841DEA6"
+				item: "gtceu:silver_credit"
+				type: "item"
+			}]
+			title: "多彩世界"
+			x: 4.5d
+			y: -4.0d
 		}
 	]
 	title: "小市场"
