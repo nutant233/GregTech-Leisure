@@ -120,7 +120,6 @@ StartupEvents.registry("item", event => {
         .unstackable()
     event.create("plasma_containment_cell")
     event.create("rhenium_plasma_containment_cell")
-    event.create("separation_electromagnet")
     event.create("actinium_superhydride_plasma_containment_cell")
     event.create("overworld_data")
         .texture("gtceu:item/data_stick")
