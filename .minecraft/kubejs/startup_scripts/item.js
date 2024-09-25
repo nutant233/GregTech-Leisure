@@ -166,7 +166,6 @@ StartupEvents.registry("item", event => {
     event.create("exotic_wafer")
     event.create("exotic_chip")
     event.create("x_ray_waveguide")
-    event.create("microfocus_x_ray_tube")
     event.create("x_ray_mirror_plate")
     event.create("cosmic_processing_unit_core")
     event.create("ultrashort_pulse_laser")
