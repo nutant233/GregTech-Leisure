@@ -858,6 +858,14 @@ StartupEvents.registry("block", event => {
         .tagBlock("forge:mineable/wrench")
         .requiresTool(true)
         .defaultTranslucent()
+    
+    event.create("diamond_compressed_block", "basic")
+        .noValidSpawns(true)
+        .soundType("stone")
+        .mapColor("stone")
+        .tagBlock("mineable/pickaxe")
+        .textureAll("minecraft:block/diamond_block")
+
 })
 StartupEvents.registry("fluid", event => {
     event.create("gelid_cryotheum")

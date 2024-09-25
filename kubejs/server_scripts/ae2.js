@@ -3,6 +3,7 @@ ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
 
     event.remove({ id: "ae2:misc/deconstruction_certus_quartz_block" })
+    event.remove({ id: "ae2:misc/fluixpearl" })
     event.remove({ id: "ae2:network/blocks/controller" })
     event.remove({ id: "ae2:network/crafting/patterns_blank" })
     event.remove({ id: "ae2:network/parts/export_bus" })
@@ -418,4 +419,22 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
+    gtr.lightning_processor("ae2:charged_certus_quartz_crystal")
+        .itemInputs("gtceu:certus_quartz_gem")
+        .itemOutputs("ae2:charged_certus_quartz_crystal")
+        .EUt(30)
+        .duration(60)
+
+    gtr.lightning_processor("ae2:fluix_crystal")
+        .itemInputs("minecraft:redstone", "minecraft:quartz", "gtceu:certus_quartz_gem")
+        .inputFluids("minecraft:water 1000")
+        .itemOutputs("2x ae2:fluix_crystal")
+        .EUt(30)
+        .duration(80)
+
+    gtr.lightning_processor("ae2:fluix_pearl")
+        .itemInputs("minecraft:ender_pearl", "8x ae2:fluix_crystal")
+        .itemOutputs("ae2:fluix_pearl")
+        .EUt(30)
+        .duration(160)
 })

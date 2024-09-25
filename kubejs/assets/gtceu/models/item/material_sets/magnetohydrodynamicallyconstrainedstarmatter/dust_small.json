@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "gtceu:item/material_sets/magnetohydrodynamicallyconstrainedstarmatter/dust_small",
-    "layer1": "gtceu:item/material_sets/magnetohydrodynamicallyconstrainedstarmatter/dust_small_overlay"
-  }
-}

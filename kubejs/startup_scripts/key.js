@@ -1,3 +1,4 @@
+const LDLib = Java.loadClass("com.lowdragmc.lowdraglib.LDLib")
 StartupEvents.init(() => {
   if (!LDLib.isClient()) return
   const $KeyMapping = Java.loadClass("net.minecraft.client.KeyMapping")

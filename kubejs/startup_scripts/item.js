@@ -120,7 +120,6 @@ StartupEvents.registry("item", event => {
         .unstackable()
     event.create("plasma_containment_cell")
     event.create("rhenium_plasma_containment_cell")
-    event.create("separation_electromagnet")
     event.create("actinium_superhydride_plasma_containment_cell")
     event.create("overworld_data")
         .texture("gtceu:item/data_stick")
@@ -167,7 +166,6 @@ StartupEvents.registry("item", event => {
     event.create("exotic_wafer")
     event.create("exotic_chip")
     event.create("x_ray_waveguide")
-    event.create("microfocus_x_ray_tube")
     event.create("x_ray_mirror_plate")
     event.create("cosmic_processing_unit_core")
     event.create("ultrashort_pulse_laser")
@@ -401,4 +399,8 @@ ItemEvents.modification(event => {
     event.modify("minecraft:diamond_block", modification => {
         modification.setBurnTime(12800000)
     })
+    event.modify("kubejs:diamond_compressed_block", modification => {
+        modification.setBurnTime(120000000)
+    })
+
 })
