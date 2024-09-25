@@ -5392,7 +5392,7 @@ ServerEvents.recipes((event) => {
 
     //optical
     gtr.forming_press("kubejs:optical_soc_containment_housing")
-        .itemInputs("gtceu:multilayer_fiber_reinforced_printed_circuit_board", "gtceu:iridium_foil", "gtceu:yttrium_barium_cuprate_foil", "gtceu:nickel_zinc_ferrite_foil", "gtceu:uranium_rhodium_dinaquadide_foil", "4x gtceu:darmstadtium_bolt")
+        .itemInputs("gtceu:multilayer_fiber_reinforced_printed_circuit_board", "gtceu:titanium_foil", "gtceu:yttrium_barium_cuprate_foil", "gtceu:nickel_zinc_ferrite_foil", "gtceu:uranium_rhodium_dinaquadide_foil", "4x gtceu:darmstadtium_bolt")
         .itemOutputs("kubejs:optical_soc_containment_housing")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(290)
@@ -5542,7 +5542,7 @@ ServerEvents.recipes((event) => {
         .cleanroom(CleanroomType.CLEANROOM)
 
     gtr.assembler("kubejs:electron_source")
-        .itemInputs("gtceu:radium_dust", "6x gtceu:polyetheretherketone_plate", "4x gtceu:polybenzimidazole_plate", "4x gtceu:steel_plate")
+        .itemInputs("gtceu:mendelevium_plate", "gtceu:radium_dust", "6x gtceu:polyetheretherketone_plate", "4x gtceu:polybenzimidazole_plate", "4x gtceu:steel_plate")
         .inputFluids("gtceu:soldering_alloy 144")
         .itemOutputs("kubejs:electron_source")
         .EUt(750000)
@@ -5680,7 +5680,7 @@ ServerEvents.recipes((event) => {
         .cleanroom(CleanroomType.CLEANROOM)
 
     gtr.assembler("kubejs:cryogenic_interface")
-        .itemInputs("gtceu:double_graphene_plate", "8x gtceu:graphene_foil", "gtceu:fine_trinium_titanium_wire", "2x gtceu:zirconium_carbide_plate")
+        .itemInputs("gtceu:double_graphene_plate", "8x gtceu:graphene_foil", "gtceu:fine_trinium_titanium_wire", "8x gtceu:mendelevium_foil", "2x gtceu:zirconium_carbide_plate")
         .inputFluids("gtceu:zylon 72")
         .itemOutputs("kubejs:cryogenic_interface")
         .EUt(8000)
@@ -8483,7 +8483,7 @@ ServerEvents.recipes((event) => {
 
     //bioware
     gtr.circuit_assembler("kubejs:bioware_circuit_board")
-        .itemInputs("32x gtceu:wetware_circuit_board", "8x gtceu:petri_dish", "gtceu:uv_electric_pump", "2x gtceu:luv_sensor", "#gtceu:circuits/luv", "32x gtceu:vanadium_gallium_foil")
+        .itemInputs("32x gtceu:wetware_circuit_board", "8x gtlcore:electricaly_wired_petri_dish", "gtceu:uv_electric_pump", "2x gtceu:luv_sensor", "#gtceu:circuits/luv", "32x gtceu:vanadium_gallium_foil")
         .itemOutputs("32x kubejs:bioware_circuit_board")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(2400)
@@ -11440,7 +11440,7 @@ ServerEvents.recipes((event) => {
         .duration(240)
 
     gtr.chemical_reactor("gtceu:sodium_azanide_dust")
-        .circuit(1)
+        .itemInputs("gtceu:sodium_dust")
         .inputFluids("gtceu:ammonia 1000")
         .outputFluids("gtceu:hydrogen 1000")
         .itemOutputs("4x gtceu:sodium_azanide_dust")
@@ -13027,14 +13027,14 @@ ServerEvents.recipes((event) => {
 
     gtr.lightning_processor("gtceu:nether_air")
         .itemInputs("64x minecraft:gunpowder")
-        .inputFluids("gtceu:blaze 1000", "gtceu:hydrogen_sulfide 10000", "gtceu:sulfur_dioxide 10000", "gtceu:carbon_monoxide 10000", "gtceu:coal_gas 1000")
+        .inputFluids("gtceu:blaze 1000", "gtceu:hydrogen_sulfide 10000", "gtceu:sulfur_dioxide 10000", "gtceu:carbon_monoxide 10000", "gtceu:coal_gas 1000","gtceu:helium 1000")
         .outputFluids("gtceu:nether_air 1000")
         .EUt(120)
         .duration(400)
 
     gtr.lightning_processor("gtceu:ender_air")
         .itemInputs("64x gtceu:ender_pearl_dust")
-        .inputFluids("gtceu:fuming_nitric_acid 1000", "gtceu:nitrogen_dioxide 10000", "gtceu:helium 10000", "gtceu:radon 1000", "gtceu:deuterium 1000")
+        .inputFluids("gtceu:fuming_nitric_acid 1000", "gtceu:nitrogen_dioxide 10000", "gtceu:helium 10000", "gtceu:radon 1000", "gtceu:deuterium 1000", "gtceu:xenon 1000")
         .outputFluids("gtceu:ender_air 1000")
         .EUt(480)
         .duration(800)
@@ -14016,7 +14016,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:cosmic_singularity", "64x gtceu:shirabon_dust")
         .outputFluids("gtceu:helium_plasma 1000")
         .EUt(GTValues.VA[GTValues.MAX])
-        .duration(20)
+        .duration(200)
 
     gtr.qft("gtceu:cosmic_ingot")
         .notConsumable("gtceu:cosmicneutronium_nanoswarm")
