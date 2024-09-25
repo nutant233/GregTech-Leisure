@@ -51,6 +51,5 @@
 .DS_Store
 instance.cfg
 mmc-pack.json
-!gtceu-*.jar
 !gtlcore-*.jar
 !Infinity Cells-*.jar
