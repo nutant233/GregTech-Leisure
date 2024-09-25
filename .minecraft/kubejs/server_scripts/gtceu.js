@@ -5827,7 +5827,7 @@ ServerEvents.recipes((event) => {
     gtr.chemical_reactor("gtceu:sodium_toluenesulfonate")
         .itemInputs("2x gtceu:salt_dust")
         .inputFluids("gtceu:sulfuric_acid 1000", "gtceu:toluene 1000")
-        .outputFluids("gtceu:sodium_chloride 1000", "gtceu:diluted_hydrochloric_acid 1000")
+        .outputFluids("gtceu:sodium_toluenesulfonate 1000", "gtceu:diluted_hydrochloric_acid 1000")
         .EUt(950)
         .duration(220)
 
