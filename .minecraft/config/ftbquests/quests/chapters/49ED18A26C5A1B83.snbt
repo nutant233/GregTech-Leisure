@@ -1749,7 +1749,7 @@
 				item: "gtceu:luv_fusion_reactor"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 14.0d
 		}
 		{
@@ -1763,7 +1763,7 @@
 				item: "gtceu:zpm_fusion_reactor"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 14.0d
 		}
 		{
@@ -1777,7 +1777,7 @@
 				item: "gtceu:uv_fusion_reactor"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 14.0d
 		}
 		{
@@ -1789,8 +1789,8 @@
 				item: "gtceu:super_particle_collider"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 18.0d
+			x: 4.0d
+			y: 16.0d
 		}
 		{
 			dependencies: ["5672B9E868EDBE4D"]
@@ -1822,7 +1822,7 @@
 				item: "gtceu:stellar_forge"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 16.0d
 			y: 16.0d
 		}
 		{
@@ -1836,7 +1836,7 @@
 				item: "gtceu:star_ultimate_material_forge_factory"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 18.0d
 			y: 16.0d
 		}
 		{
@@ -2293,8 +2293,8 @@
 				item: "gtceu:decay_hastener"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 16.0d
+			x: 4.0d
+			y: 14.0d
 		}
 		{
 			dependencies: [
@@ -2353,7 +2353,7 @@
 				item: "gtceu:rare_earth_centrifugal"
 				type: "item"
 			}]
-			x: 18.0d
+			x: 16.0d
 			y: 18.0d
 		}
 		{
@@ -2738,7 +2738,7 @@
 				item: "gtceu:element_copying"
 				type: "item"
 			}]
-			x: 18.0d
+			x: 20.0d
 			y: 16.0d
 		}
 		{
@@ -2753,7 +2753,7 @@
 				id: "35D84DB9E78E62B4"
 				type: "checkmark"
 			}]
-			title: "这里有199个多方块"
+			title: "这里有201个多方块"
 			x: -12.0d
 			y: -2.0d
 		}
@@ -2837,7 +2837,7 @@
 				item: "gtceu:uhv_fusion_reactor"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: 14.0d
 		}
 		{
@@ -2851,7 +2851,7 @@
 				item: "gtceu:uev_fusion_reactor"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.0d
 			y: 14.0d
 		}
 		{
@@ -2865,7 +2865,7 @@
 				item: "gtceu:luv_compressed_fusion_reactor"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 16.0d
 		}
 		{
@@ -2879,7 +2879,7 @@
 				item: "gtceu:zpm_compressed_fusion_reactor"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 16.0d
 		}
 		{
@@ -2893,7 +2893,7 @@
 				item: "gtceu:uv_compressed_fusion_reactor"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 16.0d
 		}
 		{
@@ -2907,7 +2907,7 @@
 				item: "gtceu:uhv_compressed_fusion_reactor"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: 16.0d
 		}
 		{
@@ -2921,7 +2921,7 @@
 				item: "gtceu:uev_compressed_fusion_reactor"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.0d
 			y: 16.0d
 		}
 		{
@@ -2981,6 +2981,31 @@
 			}]
 			x: 14.0d
 			y: 18.0d
+		}
+		{
+			dependencies: ["6A590699685D1D8A"]
+			id: "376F87497E524AF6"
+			tasks: [{
+				id: "7D14208F57BE7493"
+				item: "gtceu:mega_distillery"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"5019F5F1A660DB40"
+				"5A8CD11A645D1704"
+			]
+			id: "2BA31B9AD20E6352"
+			tasks: [{
+				id: "56C5EFF878F5B99D"
+				item: "gtceu:nano_core"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 16.0d
 		}
 	]
 	title: "多方块结构"
