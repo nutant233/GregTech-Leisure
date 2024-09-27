@@ -1137,7 +1137,7 @@
 		{
 			can_repeat: true
 			dependencies: ["4B6F43302E963F5E"]
-			icon: "kubejs:infinite_cell_component"
+			icon: "gtlcore:infinite_cell_component"
 			id: "7198356C944E053A"
 			rewards: [
 				{
