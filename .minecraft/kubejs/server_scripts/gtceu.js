@@ -359,7 +359,7 @@ ServerEvents.recipes((event) => {
     ], {
         A: "minecraft:dragon_egg",
         C: "gtceu:uxv_robot_arm",
-        D: "kubejs:dragon_strength_tritanium_casing",
+        D: "gtlcore:dragon_strength_tritanium_casing",
         E: "gtceu:uxv_field_generator"
     })
 
@@ -370,7 +370,7 @@ ServerEvents.recipes((event) => {
     ], {
         A: "gtceu:electric_blast_furnace",
         C: "gtceu:iv_field_generator",
-        D: "kubejs:blaze_blast_furnace_casing"
+        D: "gtlcore:blaze_blast_furnace_casing"
     })
 
     event.shaped("gtceu:large_cracker", [
@@ -412,7 +412,7 @@ ServerEvents.recipes((event) => {
         "BCB"
     ], {
         A: "gtceu:vacuum_freezer",
-        B: "kubejs:cold_ice_casing",
+        B: "gtlcore:cold_ice_casing",
         C: "gtceu:iv_emitter"
     })
 
@@ -422,7 +422,7 @@ ServerEvents.recipes((event) => {
         "BCB"
     ], {
         A: "kubejs:create_ultimate_battery",
-        B: "kubejs:create_casing",
+        B: "gtlcore:create_casing",
         C: "kubejs:suprachronal_mainframe_complex"
     })
 
@@ -436,7 +436,7 @@ ServerEvents.recipes((event) => {
         C: "minecraft:repeating_command_block"
     })
 
-    event.shaped(Registries.getItemStack("kubejs:multi_functional_casing", 2), [
+    event.shaped(Registries.getItemStack("gtlcore:multi_functional_casing", 2), [
         "BCB",
         "DAD",
         "BCB"
@@ -452,7 +452,7 @@ ServerEvents.recipes((event) => {
         "DAD",
         "BEB"
     ], {
-        A: "kubejs:multi_functional_casing",
+        A: "gtlcore:multi_functional_casing",
         B: "gtceu:aluminium_foil",
         C: "gtceu:mv_conveyor_module",
         D: "gtceu:mv_robot_arm",
@@ -499,7 +499,7 @@ ServerEvents.recipes((event) => {
         "DAF",
         "BEB"
     ], {
-        A: "kubejs:multi_functional_casing",
+        A: "gtlcore:multi_functional_casing",
         B: "gtceu:aluminium_foil",
         C: "gtceu:mv_conveyor_module",
         D: "gtceu:mv_sensor",
@@ -512,7 +512,7 @@ ServerEvents.recipes((event) => {
         "DAF",
         "BEB"
     ], {
-        A: "kubejs:multi_functional_casing",
+        A: "gtlcore:multi_functional_casing",
         B: "gtceu:aluminium_foil",
         C: "gtceu:mv_conveyor_module",
         D: "gtceu:mv_electric_motor",
@@ -525,7 +525,7 @@ ServerEvents.recipes((event) => {
         "DAF",
         "BEB"
     ], {
-        A: "kubejs:multi_functional_casing",
+        A: "gtlcore:multi_functional_casing",
         B: "gtceu:aluminium_foil",
         C: "gtceu:mv_conveyor_module",
         D: "gtceu:mv_electric_piston",
@@ -1389,7 +1389,7 @@ ServerEvents.recipes((event) => {
             .CWUt(64))
 
     gtr.assembly_line("gtceu:annihilate_generator")
-        .itemInputs("kubejs:graviton_field_constraint_casing",
+        .itemInputs("gtlcore:graviton_field_constraint_casing",
             "4x gtceu:uxv_emitter",
             "4x gtceu:uxv_sensor",
             "4x #gtceu:circuits/opv",
@@ -1479,7 +1479,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.IV])
         .duration(2400))
 
-    gtr.assembly_line("kubejs:iridium_casing")
+    gtr.assembly_line("gtlcore:iridium_casing")
         .itemInputs("2x gtceu:iridium_frame",
             "gtceu:titanium_turbine_casing",
             "gtceu:stainless_steel_turbine_casing",
@@ -1489,7 +1489,7 @@ ServerEvents.recipes((event) => {
             "gtceu:double_iridium_plate",
             "gtceu:double_osmiridium_plate")
         .inputFluids("gtceu:soldering_alloy 1440", "gtceu:iridium 576")
-        .itemOutputs("2x kubejs:iridium_casing")
+        .itemOutputs("2x gtlcore:iridium_casing")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(200)
     ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Registries.getItemStack("gtceu:large_scale_assembler_casing"))
@@ -1695,7 +1695,7 @@ ServerEvents.recipes((event) => {
             .CWUt(512))
 
     gtr.assembly_line("gtceu:eye_of_harmony")
-        .itemInputs("16x kubejs:dimension_injection_casing",
+        .itemInputs("16x gtlcore:dimension_injection_casing",
             "16x kubejs:spacetime_compression_field_generator",
             "16x kubejs:dimensional_stability_casing",
             "64x gtceu:uv_world_accelerator",
@@ -1837,10 +1837,10 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.UXV])
             .CWUt(128))
 
-    gtr.assembly_line("kubejs:dimension_injection_casing")
+    gtr.assembly_line("gtlcore:dimension_injection_casing")
         .itemInputs("6x gtceu:osmiridium_plate", "4x gtceu:lead_plate", "12x gtceu:adamantium_bolt", "2x #gtceu:circuits/iv", "2x gtceu:enderite_single_wire", "gtceu:ev_super_tank", "gtceu:ev_super_chest")
         .inputFluids("gtceu:liquid_degenerate_rhenium 200", "gtceu:vibrant_alloy 288", "gtceu:astral_silver 288", "gtceu:enriched_naquadah 288")
-        .itemOutputs("2x kubejs:dimension_injection_casing")
+        .itemOutputs("2x gtlcore:dimension_injection_casing")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(400)
         .stationResearch(b => b.researchStack(Registries.getItemStack("kubejs:spacetime_assembly_line_casing"))
@@ -1849,7 +1849,7 @@ ServerEvents.recipes((event) => {
             .CWUt(512))
 
     gtr.assembly_line("kubejs:spacetime_compression_field_generator")
-        .itemInputs("kubejs:dimensionally_transcendent_casing", "kubejs:containment_field_generator", "4x kubejs:dyson_deployment_casing", "gtceu:opv_field_generator", "kubejs:microwormhole_generator", "4x gtceu:orichalcum_nanoswarm", "2x gtceu:infinity_rod", "gtceu:double_starmetal_plate", "gtceu:double_quantumchromodynamically_confined_matter_plate", "4x gtceu:double_titan_precision_steel_plate")
+        .itemInputs("gtlcore:dimensionally_transcendent_casing", "kubejs:containment_field_generator", "4x kubejs:dyson_deployment_casing", "gtceu:opv_field_generator", "kubejs:microwormhole_generator", "4x gtceu:orichalcum_nanoswarm", "2x gtceu:infinity_rod", "gtceu:double_starmetal_plate", "gtceu:double_quantumchromodynamically_confined_matter_plate", "4x gtceu:double_titan_precision_steel_plate")
         .inputFluids("gtceu:super_mutated_living_solder 576", "gtceu:cosmicneutronium 288", "gtceu:crystalmatrix 576", "gtceu:heavy_quark_degenerate_matter 576")
         .itemOutputs("kubejs:spacetime_compression_field_generator")
         .EUt(GTValues.VA[GTValues.OpV])
@@ -1860,12 +1860,12 @@ ServerEvents.recipes((event) => {
             .CWUt(1024))
 
     gtr.assembly_line("kubejs:dimensional_bridge_casing")
-        .itemInputs("kubejs:dimensionally_transcendent_casing", "gtceu:uv_quantum_chest", "gtceu:uv_quantum_tank", "2x gtceu:enderite_single_wire", "2x #gtceu:circuits/uv", "gtceu:uhv_field_generator")
+        .itemInputs("gtlcore:dimensionally_transcendent_casing", "gtceu:uv_quantum_chest", "gtceu:uv_quantum_tank", "2x gtceu:enderite_single_wire", "2x #gtceu:circuits/uv", "gtceu:uhv_field_generator")
         .itemOutputs("kubejs:dimensional_bridge_casing")
         .inputFluids("gtceu:mutated_living_solder 576", "gtceu:liquid_degenerate_rhenium 200", "gtceu:duranium 288", "gtceu:enriched_naquadah 288")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(400)
-        .stationResearch(b => b.researchStack(Registries.getItemStack("kubejs:dimension_injection_casing"))
+        .stationResearch(b => b.researchStack(Registries.getItemStack("gtlcore:dimension_injection_casing"))
             .dataStack(Registries.getItemStack("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UIV])
             .CWUt(1024))
@@ -2079,7 +2079,7 @@ ServerEvents.recipes((event) => {
             .CWUt(512))
 
     gtr.assembly_line("gtlcore:spacetimecontinuumripper")
-        .itemInputs("kubejs:manipulator",
+        .itemInputs("gtlcore:manipulator",
             "4x gtceu:uiv_emitter",
             "gtceu:uiv_field_generator",
             "gtceu:uxv_emitter",
@@ -2091,13 +2091,13 @@ ServerEvents.recipes((event) => {
         .itemOutputs("gtlcore:spacetimecontinuumripper")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(800)
-        .stationResearch(b => b.researchStack(Registries.getItemStack("kubejs:manipulator"))
+        .stationResearch(b => b.researchStack(Registries.getItemStack("gtlcore:manipulator"))
             .dataStack(Registries.getItemStack("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UXV])
             .CWUt(512))
 
     gtr.assembly_line("gtlcore:spacetimebendingcore")
-        .itemInputs("kubejs:manipulator",
+        .itemInputs("gtlcore:manipulator",
             "4x gtceu:uiv_field_generator",
             "4x gtceu:uxv_robot_arm",
             "gtceu:uxv_fluid_regulator",
@@ -2992,9 +2992,9 @@ ServerEvents.recipes((event) => {
         .EUt(12)
         .duration(200)
 
-    gtr.assembler("kubejs:space_elevator_mechanical_casing")
+    gtr.assembler("gtlcore:space_elevator_mechanical_casing")
         .itemInputs("gtceu:hssg_frame", "6x gtceu:inconel_792_plate", "6x gtceu:double_pikyonium_plate")
-        .itemOutputs("2x kubejs:space_elevator_mechanical_casing")
+        .itemOutputs("2x gtlcore:space_elevator_mechanical_casing")
         .EUt(16)
         .duration(50)
         .circuit(6)
@@ -3646,10 +3646,10 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.assembler("kubejs:graviton_field_constraint_casing")
+    gtr.assembler("gtlcore:graviton_field_constraint_casing")
         .itemInputs("gtceu:draconium_frame", "kubejs:annihilation_constrainer", "gtceu:neutronium_nanoswarm", "gtceu:celestialtungsten_gear", "4x gtceu:double_adamantium_plate")
         .inputFluids("gtceu:neutronium 288")
-        .itemOutputs("2x kubejs:graviton_field_constraint_casing")
+        .itemOutputs("2x gtlcore:graviton_field_constraint_casing")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(100)
 
@@ -3724,38 +3724,38 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(400)
 
-    gtr.assembler("kubejs:extreme_strength_tritanium_casing")
+    gtr.assembler("gtlcore:extreme_strength_tritanium_casing")
         .itemInputs("gtceu:tritanium_frame", "6x gtceu:tritanium_plate")
-        .itemOutputs("2x kubejs:extreme_strength_tritanium_casing")
+        .itemOutputs("2x gtlcore:extreme_strength_tritanium_casing")
         .circuit(6)
         .EUt(16)
         .duration(50)
 
-    gtr.assembler("kubejs:aluminium_bronze_casing")
+    gtr.assembler("gtlcore:aluminium_bronze_casing")
         .itemInputs("gtceu:aluminium_bronze_frame", "6x gtceu:aluminium_bronze_plate")
-        .itemOutputs("2x kubejs:aluminium_bronze_casing")
+        .itemOutputs("2x gtlcore:aluminium_bronze_casing")
         .circuit(6)
         .EUt(16)
         .duration(50)
 
-    gtr.assembler("kubejs:hyper_mechanical_casing")
+    gtr.assembler("gtlcore:hyper_mechanical_casing")
         .itemInputs("gtceu:naquadah_alloy_frame", "6x gtceu:naquadria_plate")
-        .itemOutputs("2x kubejs:hyper_mechanical_casing")
+        .itemOutputs("2x gtlcore:hyper_mechanical_casing")
         .circuit(6)
         .EUt(16)
         .duration(50)
 
-    gtr.assembler("kubejs:enhance_hyper_mechanical_casing")
+    gtr.assembler("gtlcore:enhance_hyper_mechanical_casing")
         .itemInputs("gtceu:naquadria_frame", "2x gtceu:double_naquadah_alloy_plate", "2x gtceu:double_naquadah_plate", "2x gtceu:double_enriched_naquadah_plate")
-        .itemOutputs("2x kubejs:enhance_hyper_mechanical_casing")
+        .itemOutputs("2x gtlcore:enhance_hyper_mechanical_casing")
         .inputFluids("gtceu:naquadria 576")
         .circuit(6)
         .EUt(16)
         .duration(50)
 
-    gtr.assembler("kubejs:dimensionally_transcendent_casing")
-        .itemInputs("gtceu:mithril_frame", "2x kubejs:dimension_injection_casing", "2x kubejs:molecular_casing", "gtceu:iv_quantum_chest", "gtceu:iv_quantum_tank", "12x gtceu:adamantium_bolt", "gtceu:enderite_single_wire", "6x gtceu:palladium_plate", "6x gtceu:osmiridium_plate")
-        .itemOutputs("2x kubejs:dimensionally_transcendent_casing")
+    gtr.assembler("gtlcore:dimensionally_transcendent_casing")
+        .itemInputs("gtceu:mithril_frame", "2x gtlcore:dimension_injection_casing", "2x gtlcore:molecular_casing", "gtceu:iv_quantum_chest", "gtceu:iv_quantum_tank", "12x gtceu:adamantium_bolt", "gtceu:enderite_single_wire", "6x gtceu:palladium_plate", "6x gtceu:osmiridium_plate")
+        .itemOutputs("2x gtlcore:dimensionally_transcendent_casing")
         .inputFluids("gtceu:liquid_degenerate_rhenium 200")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
@@ -3881,8 +3881,8 @@ ServerEvents.recipes((event) => {
     gtr.fusion_reactor("gtceu:infinity")
         .inputFluids("gtceu:crystalmatrix 2000", "gtceu:cosmicneutronium 1000")
         .outputFluids("gtceu:infinity 64")
-        .EUt(GTValues.VA[GTValues.UXV])
-        .duration(1200)
+        .EUt(GTValues.VA[GTValues.UEV])
+        .duration(4800)
         .fusionStartEU(2100000000)
 
     //peek
@@ -8018,23 +8018,23 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(600)
 
-    gtr.assembler("kubejs:antifreeze_heatproof_machine_casing")
+    gtr.assembler("gtlcore:antifreeze_heatproof_machine_casing")
         .itemInputs("gtceu:inconel_792_frame", "2x gtceu:double_hsse_plate", "4x gtceu:double_rhodium_plated_palladium_plate")
-        .itemOutputs("2x kubejs:antifreeze_heatproof_machine_casing")
+        .itemOutputs("2x gtlcore:antifreeze_heatproof_machine_casing")
         .EUt(16)
         .duration(50)
         .circuit(6)
 
-    gtr.assembler("kubejs:pikyonium_machine_casing")
+    gtr.assembler("gtlcore:pikyonium_machine_casing")
         .itemInputs("gtceu:hastelloy_x_frame", "6x gtceu:pikyonium_plate")
-        .itemOutputs("2x kubejs:pikyonium_machine_casing")
+        .itemOutputs("2x gtlcore:pikyonium_machine_casing")
         .EUt(16)
         .duration(50)
         .circuit(6)
 
-    gtr.assembler("kubejs:oxidation_resistant_hastelloy_n_mechanical_casing")
+    gtr.assembler("gtlcore:oxidation_resistant_hastelloy_n_mechanical_casing")
         .itemInputs("gtceu:hastelloy_n_frame", "6x gtceu:hastelloy_n_plate")
-        .itemOutputs("2x kubejs:oxidation_resistant_hastelloy_n_mechanical_casing")
+        .itemOutputs("2x gtlcore:oxidation_resistant_hastelloy_n_mechanical_casing")
         .EUt(16)
         .duration(50)
         .circuit(6)
@@ -10445,9 +10445,9 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.IV])
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.assembler("kubejs:lafium_mechanical_casing")
+    gtr.assembler("gtlcore:lafium_mechanical_casing")
         .itemInputs("gtceu:enriched_naquadah_frame", "6x gtceu:lafium_plate")
-        .itemOutputs("2x kubejs:lafium_mechanical_casing")
+        .itemOutputs("2x gtlcore:lafium_mechanical_casing")
         .circuit(6)
         .EUt(16)
         .duration(50)
@@ -11319,10 +11319,10 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.assembler("kubejs:manipulator")
+    gtr.assembler("gtlcore:manipulator")
         .itemInputs("2x gtceu:neutron_reflector", "4x #gtceu:circuits/uhv", "gtceu:uev_robot_arm", "32x gtceu:inconel_792_bolt", "16x gtceu:diamond_screw", "4x gtceu:double_iridium_plate", "8x gtceu:double_zeron_100_plate")
         .inputFluids("gtceu:mutated_living_solder 576")
-        .itemOutputs("kubejs:manipulator")
+        .itemOutputs("gtlcore:manipulator")
         .EUt(30720)
         .duration(400)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -11658,16 +11658,16 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(1000)
 
-    gtr.alloy_smelter("kubejs:dragon_strength_tritanium_casing")
-        .itemInputs("16x kubejs:extreme_strength_tritanium_casing", "16x kubejs:draconium_block_charged")
-        .itemOutputs("kubejs:dragon_strength_tritanium_casing")
+    gtr.alloy_smelter("gtlcore:dragon_strength_tritanium_casing")
+        .itemInputs("16x gtlcore:extreme_strength_tritanium_casing", "16x kubejs:draconium_block_charged")
+        .itemOutputs("gtlcore:dragon_strength_tritanium_casing")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(2000)
 
-    gtr.chemical_reactor("kubejs:blaze_blast_furnace_casing")
+    gtr.chemical_reactor("gtlcore:blaze_blast_furnace_casing")
         .itemInputs("gtceu:high_temperature_smelting_casing", "32x gtceu:tin_foil")
         .inputFluids("gtceu:blaze 1440", "gtceu:gallium_arsenide 576", "gtceu:vanadium_gallium 288")
-        .itemOutputs("kubejs:blaze_blast_furnace_casing")
+        .itemOutputs("gtlcore:blaze_blast_furnace_casing")
         .EUt(1920)
         .duration(900)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -11700,7 +11700,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("kubejs:dimension_creation_casing")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(1200)
-        .stationResearch(b => b.researchStack(Registries.getItemStack("kubejs:dimension_connection_casing"))
+        .stationResearch(b => b.researchStack(Registries.getItemStack("gtlcore:dimension_connection_casing"))
             .dataStack(Registries.getItemStack("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.MAX])
             .CWUt(8192))
@@ -11709,7 +11709,7 @@ ServerEvents.recipes((event) => {
         .itemInputs("16x gtceu:infinity_frame",
             "16x gtceu:eye_of_harmony",
             "16x kubejs:dimension_creation_casing",
-            "16x kubejs:dimension_connection_casing",
+            "16x gtlcore:dimension_connection_casing",
             "8x kubejs:suprachronal_mainframe_complex",
             "8x kubejs:cosmic_singularity",
             "8x kubejs:chaotic_core",
@@ -11727,9 +11727,9 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.MAX])
             .CWUt(16384))
 
-    gtr.assembler("kubejs:dimension_connection_casing")
+    gtr.assembler("gtlcore:dimension_connection_casing")
         .itemInputs("gtceu:draconium_frame", "kubejs:dimensional_bridge_casing", "gtceu:periodicium_block", "8x gtceu:double_mithril_plate", "4x gtceu:cosmic_plate", "2x gtceu:double_shirabon_plate")
-        .itemOutputs("kubejs:dimension_connection_casing")
+        .itemOutputs("gtlcore:dimension_connection_casing")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(400)
 
@@ -11787,9 +11787,9 @@ ServerEvents.recipes((event) => {
         .EUt(7680)
         .duration(150)
 
-    gtr.assembler("kubejs:echo_casing")
+    gtr.assembler("gtlcore:echo_casing")
         .itemInputs("gtceu:europium_frame", "kubejs:reinforced_echo_shard", "6x gtceu:double_hsse_plate")
-        .itemOutputs("2x kubejs:echo_casing")
+        .itemOutputs("2x gtlcore:echo_casing")
         .circuit(6)
         .EUt(30)
         .duration(200)
@@ -11876,10 +11876,10 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(100)
 
-    gtr.vacuum_freezer("kubejs:cold_ice_casing")
+    gtr.vacuum_freezer("gtlcore:cold_ice_casing")
         .itemInputs("gtceu:frostproof_machine_casing")
         .inputFluids("gtceu:ice 10000", "gtceu:vanadium_gallium 576")
-        .itemOutputs("kubejs:cold_ice_casing")
+        .itemOutputs("gtlcore:cold_ice_casing")
         .EUt(GTValues.VA[GTValues.EV])
         .duration(200)
 
@@ -11926,18 +11926,18 @@ ServerEvents.recipes((event) => {
         .EUt(4 * GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.dimensionally_transcendent_plasma_forge("kubejs:infinity_glass")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:infinity_glass")
         .itemInputs("kubejs:black_body_naquadria_supersolid", "2x gtceu:infinity_dust")
         .inputFluids("gtceu:dimensionallytranscendentexoticcatalyst 1000", "gtceu:woods_glass 9216")
-        .itemOutputs("kubejs:infinity_glass")
+        .itemOutputs("gtlcore:infinity_glass")
         .EUt(4096 * GTValues.VA[GTValues.MAX])
         .duration(1600)
         .blastFurnaceTemp(88000)
 
-    gtr.dimensionally_transcendent_plasma_forge("kubejs:create_casing")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:create_casing")
         .itemInputs("gtceu:eternity_frame", "kubejs:command_block_core")
         .inputFluids("gtceu:exciteddtsc 1000", "gtceu:primordialmatter 1000")
-        .itemOutputs("kubejs:create_casing")
+        .itemOutputs("gtlcore:create_casing")
         .EUt(16384 * GTValues.VA[GTValues.MAX])
         .duration(3200)
         .blastFurnaceTemp(96000)
@@ -11993,7 +11993,7 @@ ServerEvents.recipes((event) => {
             .CWUt(16384))
 
     gtr.assembly_line("kubejs:hollow_casing")
-        .itemInputs("kubejs:molecular_casing",
+        .itemInputs("gtlcore:molecular_casing",
             "16x gtceu:magnalium_screw",
             "4x gtceu:europium_plate",
             "4x gtceu:apatite_rod",
@@ -12004,7 +12004,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("2x kubejs:hollow_casing")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(200)
-        .stationResearch(b => b.researchStack(Registries.getItemStack("kubejs:molecular_casing"))
+        .stationResearch(b => b.researchStack(Registries.getItemStack("gtlcore:molecular_casing"))
             .dataStack(Registries.getItemStack("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UV])
             .CWUt(128))
@@ -12105,7 +12105,7 @@ ServerEvents.recipes((event) => {
             .CWUt(1024))
 
     gtr.assembly_line("gtceu:suprachronal_assembly_line")
-        .itemInputs("kubejs:infinite_cell_component",
+        .itemInputs("gtlcore:infinite_cell_component",
             "16x gtceu:advanced_assembly_line",
             "16x gtceu:circuit_assembly_line",
             "4x kubejs:spacetime_assembly_line_casing",
@@ -12134,10 +12134,10 @@ ServerEvents.recipes((event) => {
         .duration(400)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.assembler("kubejs:molecular_casing")
+    gtr.assembler("gtlcore:molecular_casing")
         .itemInputs("gtceu:high_power_casing", "4x gtceu:double_battery_alloy_plate", "gtceu:iv_emitter", "24x gtceu:darmstadtium_ring", "12x gtceu:tungsten_foil", "12x gtceu:ruridit_foil", "24x gtceu:tungsten_steel_foil", "6x gtceu:rhodium_plate", "4x gtceu:double_ruthenium_plate")
         .inputFluids("gtceu:niobium_nitride 864")
-        .itemOutputs("kubejs:molecular_casing")
+        .itemOutputs("gtlcore:molecular_casing")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(400)
         .cleanroom(CleanroomType.CLEANROOM)
@@ -12200,16 +12200,16 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.IV])
         .duration(1200)
 
-    gtr.assembler("kubejs:degenerate_rhenium_constrained_casing")
+    gtr.assembler("gtlcore:degenerate_rhenium_constrained_casing")
         .circuit(6)
         .itemInputs("gtceu:quantanium_frame", "6x gtceu:degenerate_rhenium_plate")
-        .itemOutputs("2x kubejs:degenerate_rhenium_constrained_casing")
+        .itemOutputs("2x gtlcore:degenerate_rhenium_constrained_casing")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(1200)
 
-    gtr.assembler("kubejs:rhenium_reinforced_energy_glass")
+    gtr.assembler("gtlcore:rhenium_reinforced_energy_glass")
         .itemInputs("4x gtceu:fusion_glass", "6x gtceu:degenerate_rhenium_plate")
-        .itemOutputs("2x kubejs:rhenium_reinforced_energy_glass")
+        .itemOutputs("2x gtlcore:rhenium_reinforced_energy_glass")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(1200)
 
@@ -12894,10 +12894,10 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(600)
 
-    gtr.assembler("kubejs:sps_casing")
+    gtr.assembler("gtlcore:sps_casing")
         .itemInputs("gtceu:zylon_block", "kubejs:restraint_device", "4x #gtceu:circuits/uev", "4x gtceu:small_quantanium_gear", "gtceu:neutronium_hex_cable", "32x gtceu:polyetheretherketone_foil")
         .inputFluids("gtceu:mutated_living_solder 576")
-        .itemOutputs("kubejs:sps_casing")
+        .itemOutputs("gtlcore:sps_casing")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(800)
 
@@ -13287,10 +13287,10 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.UEV])
             .CWUt(256))
 
-    gtr.assembler("kubejs:naquadah_alloy_casing")
+    gtr.assembler("gtlcore:naquadah_alloy_casing")
         .itemInputs("gtceu:naquadah_alloy_frame", "6x gtceu:naquadah_alloy_plate")
         .circuit(6)
-        .itemOutputs("kubejs:naquadah_alloy_casing")
+        .itemOutputs("gtlcore:naquadah_alloy_casing")
         .EUt(16)
         .duration(50)
 
@@ -14157,10 +14157,10 @@ ServerEvents.recipes((event) => {
         .EUt(1920)
         .duration(200)
 
-    gtr.assembler("kubejs:process_machine_casing")
+    gtr.assembler("gtlcore:process_machine_casing")
         .itemInputs("gtceu:solid_machine_casing", "2x #gtceu:circuits/iv", "2x gtceu:double_stainless_steel_plate", "4x gtceu:double_mar_m_200_steel_plate")
         .inputFluids("gtceu:fall_king 576")
-        .itemOutputs("kubejs:process_machine_casing")
+        .itemOutputs("gtlcore:process_machine_casing")
         .EUt(7680)
         .duration(200)
 
@@ -14307,14 +14307,14 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("eu", 12800)
 
-    gtr.assembler("kubejs:fission_reactor_casing")
+    gtr.assembler("gtlcore:fission_reactor_casing")
         .itemInputs("gtceu:vanadium_steel_frame", "6x gtceu:lead_plate", "6x gtceu:reactor_steel_plate")
-        .itemOutputs("2x kubejs:fission_reactor_casing")
+        .itemOutputs("2x gtlcore:fission_reactor_casing")
         .EUt(30)
         .duration(50)
 
     gtr.assembler("gtlcore:cooler")
-        .itemInputs("kubejs:fission_reactor_casing", "2x gtceu:annealed_copper_hex_wire", "8x gtceu:vanadium_steel_tiny_fluid_pipe", "4x gtceu:stainless_steel_plate")
+        .itemInputs("gtlcore:fission_reactor_casing", "2x gtceu:annealed_copper_hex_wire", "8x gtceu:vanadium_steel_tiny_fluid_pipe", "4x gtceu:stainless_steel_plate")
         .inputFluids("gtceu:soldering_alloy 288")
         .itemOutputs("gtlcore:cooler")
         .EUt(120)
@@ -15023,9 +15023,9 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.MAX])
             .CWUt(16384))
 
-    gtr.assembler("kubejs:hsss_reinforced_borosilicate_glass")
+    gtr.assembler("gtlcore:hsss_reinforced_borosilicate_glass")
         .itemInputs("4x gtceu:laminated_glass", "4x gtceu:double_hsss_plate", "32x gtceu:fine_borosilicate_glass_wire")
-        .itemOutputs("2x kubejs:hsss_reinforced_borosilicate_glass")
+        .itemOutputs("2x gtlcore:hsss_reinforced_borosilicate_glass")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(600)
 

@@ -152,7 +152,7 @@
 			id: "338F629A694C7556"
 			tasks: [{
 				id: "16C8AA0E8A7E6784"
-				item: "kubejs:create_casing"
+				item: "gtlcore:create_casing"
 				type: "item"
 			}]
 			x: 5.0d
