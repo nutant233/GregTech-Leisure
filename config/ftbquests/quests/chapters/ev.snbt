@@ -6,7 +6,20 @@
 	icon: "gtceu:ev_electric_motor"
 	id: "68D3F02D34DEAF83"
 	order_index: 4
-	quest_links: [ ]
+	quest_links: [
+		{
+			id: "263559F3CAFF312A"
+			linked_quest: "3CB16B36A5AA2A10"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			id: "273B5005EE3685F3"
+			linked_quest: "37C5E7628A4B826C"
+			x: 0.0d
+			y: 8.0d
+		}
+	]
 	quests: [
 		{
 			dependencies: [

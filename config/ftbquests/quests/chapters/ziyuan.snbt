@@ -1270,15 +1270,14 @@
 			y: 3.5d
 		}
 		{
-			dependencies: ["70E703942B61C86C"]
 			id: "0AD5EE4A003844C3"
 			tasks: [{
 				id: "0C05F0BAB4530626"
 				item: "gtceu:propene_bucket"
 				type: "item"
 			}]
-			x: 24.0d
-			y: 8.5d
+			x: 19.5d
+			y: 15.0d
 		}
 		{
 			dependencies: ["184CE47D10A10C84"]
@@ -2127,7 +2126,7 @@
 			id: "37C5E7628A4B826C"
 			tasks: [{
 				id: "0416DFD37DE6C2A4"
-				title: "放射性物质"
+				title: "放射性物质处理"
 				type: "checkmark"
 			}]
 			x: 3.0d
@@ -2258,7 +2257,7 @@
 			id: "1223D839C224777B"
 			tasks: [{
 				id: "00F08CD4279B1525"
-				title: "ⅢB族（不含锕系）"
+				title: "ⅢB族（不含锕系）处理"
 				type: "checkmark"
 			}]
 			x: 3.0d
@@ -2652,6 +2651,346 @@
 			}]
 			x: 4.5d
 			y: 39.5d
+		}
+		{
+			dependencies: ["7D19A74F09F44223"]
+			id: "759824A6A24F9391"
+			tasks: [{
+				id: "2105F3044230694A"
+				item: "gtceu:epoxy_plate"
+				type: "item"
+			}]
+			x: 24.5d
+			y: 16.0d
+		}
+		{
+			dependencies: ["7D19A74F09F44223"]
+			id: "54A96B7FC3BCD185"
+			tasks: [{
+				id: "66B4792661202AC9"
+				item: "gtceu:reinforced_epoxy_resin_plate"
+				type: "item"
+			}]
+			x: 26.0d
+			y: 15.0d
+		}
+		{
+			dependencies: [
+				"64738DFD97250F17"
+				"71F30E4D75B64953"
+			]
+			id: "7D19A74F09F44223"
+			tasks: [{
+				id: "33285654A89E7E64"
+				item: "gtceu:epoxy_bucket"
+				type: "item"
+			}]
+			x: 23.0d
+			y: 15.5d
+		}
+		{
+			dependencies: [
+				"0AD5EE4A003844C3"
+				"5D9B209D891690FD"
+			]
+			dependency_requirement: "one_completed"
+			id: "64738DFD97250F17"
+			tasks: [{
+				id: "44D32E889163EA5C"
+				item: "gtceu:epichlorohydrin_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 15.5d
+		}
+		{
+			id: "71F30E4D75B64953"
+			tasks: [{
+				id: "03A92192B0D81DDC"
+				item: "gtceu:bisphenol_a_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 17.0d
+		}
+		{
+			id: "5D9B209D891690FD"
+			tasks: [{
+				id: "76531D8DF3CCD89B"
+				item: "gtceu:glycerol_bucket"
+				type: "item"
+			}]
+			x: 19.5d
+			y: 16.0d
+		}
+		{
+			dependencies: ["70E703942B61C86C"]
+			id: "3AE2C22B1C52CC15"
+			tasks: [{
+				id: "1326AD59AD3FCBBE"
+				item: "gtceu:propene_bucket"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["46797764E081856A"]
+			id: "500007BA3E0A9A1F"
+			tasks: [{
+				id: "6D8A9B33C18B9379"
+				item: "gtceu:silicone_rubber_ingot"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 19.0d
+		}
+		{
+			id: "46797764E081856A"
+			tasks: [{
+				id: "5F92FEB582AA769A"
+				item: "gtceu:polydimethylsiloxane_dust"
+				type: "item"
+			}]
+			x: 19.5d
+			y: 19.0d
+		}
+		{
+			dependencies: ["6BAC2A8A96690442"]
+			id: "7938BA1C0CB57D03"
+			tasks: [{
+				id: "3329A91E65A9B347"
+				item: "gtceu:styrene_butadiene_rubber_ingot"
+				type: "item"
+			}]
+			x: 28.5d
+			y: 19.0d
+		}
+		{
+			dependencies: [
+				"6E68F9920B8DE90B"
+				"20E57648D7692834"
+			]
+			id: "6BAC2A8A96690442"
+			tasks: [{
+				id: "7143FB067D05D6D2"
+				item: "gtceu:raw_styrene_butadiene_rubber_dust"
+				type: "item"
+			}]
+			x: 27.0d
+			y: 19.0d
+		}
+		{
+			id: "6E68F9920B8DE90B"
+			tasks: [{
+				id: "07D75F06BE16ECCE"
+				item: "gtceu:butadiene_bucket"
+				type: "item"
+			}]
+			x: 25.5d
+			y: 18.5d
+		}
+		{
+			id: "20E57648D7692834"
+			tasks: [{
+				id: "447B9652FAD04815"
+				item: "gtceu:styrene_bucket"
+				type: "item"
+			}]
+			x: 25.5d
+			y: 19.5d
+		}
+		{
+			dependencies: ["68FB8A7DC0CE1544"]
+			id: "2C6D1ED1B5DF1A59"
+			tasks: [{
+				id: "78533B9232E92D51"
+				item: "gtceu:laminated_glass"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 21.5d
+		}
+		{
+			dependencies: [
+				"0C199AF8612BC6B8"
+				"092CC48DCEE3C012"
+			]
+			id: "68FB8A7DC0CE1544"
+			tasks: [{
+				id: "7529114E3E7423B3"
+				item: "gtceu:polyvinyl_butyral_plate"
+				type: "item"
+			}]
+			x: 22.5d
+			y: 21.5d
+		}
+		{
+			id: "0C199AF8612BC6B8"
+			tasks: [{
+				id: "72C6ADC5974E1413"
+				item: "gtceu:butyraldehyde_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 21.0d
+		}
+		{
+			dependencies: ["7E8537FADF9E76CE"]
+			id: "092CC48DCEE3C012"
+			tasks: [{
+				id: "0051FADFDB8CD327"
+				item: "gtceu:polyvinyl_acetate_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 22.0d
+		}
+		{
+			id: "7E8537FADF9E76CE"
+			tasks: [{
+				id: "65F8EB4634F5FC05"
+				item: "gtceu:vinyl_acetate_bucket"
+				type: "item"
+			}]
+			x: 19.5d
+			y: 22.0d
+		}
+		{
+			dependencies: [
+				"4F2DFF7391377BAE"
+				"23C7020C07C7E2E9"
+			]
+			id: "477D384E9CA341EF"
+			tasks: [{
+				id: "57133854959FB25A"
+				item: "gtceu:polybenzimidazole_plate"
+				type: "item"
+			}]
+			x: 25.5d
+			y: 25.0d
+		}
+		{
+			dependencies: ["6873048BEB5C2652"]
+			id: "4F2DFF7391377BAE"
+			tasks: [{
+				id: "1CC26DD4337DC438"
+				item: "gtceu:diaminobenzidine_bucket"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 24.0d
+		}
+		{
+			dependencies: ["1A8712D336215C23"]
+			id: "23C7020C07C7E2E9"
+			tasks: [{
+				id: "5CABCA60C972369D"
+				item: "gtceu:diphenyl_isophthalate_bucket"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 26.0d
+		}
+		{
+			id: "21C233810F7423C7"
+			tasks: [{
+				id: "46E309956B5FD9C5"
+				item: "gtceu:chlorobenzene_bucket"
+				type: "item"
+			}]
+			x: 19.5d
+			y: 24.0d
+		}
+		{
+			dependencies: ["21C233810F7423C7"]
+			id: "7F22C88335CD5843"
+			tasks: [{
+				id: "0640981C76F73C92"
+				item: "gtceu:nitrochlorobenzene_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 24.0d
+		}
+		{
+			dependencies: ["7F22C88335CD5843"]
+			id: "6873048BEB5C2652"
+			tasks: [{
+				id: "3A45FFDFEF5FCE2D"
+				item: "gtceu:dichlorobenzidine_bucket"
+				type: "item"
+			}]
+			x: 22.5d
+			y: 24.0d
+		}
+		{
+			dependencies: [
+				"0562FFC391118D18"
+				"27A7F19C69EB2D70"
+			]
+			id: "1A8712D336215C23"
+			tasks: [{
+				id: "68A396C0AC2E2FE3"
+				item: "gtceu:phthalic_acid_bucket"
+				type: "item"
+			}]
+			x: 22.5d
+			y: 26.0d
+		}
+		{
+			id: "0562FFC391118D18"
+			tasks: [{
+				id: "39AB139E606BB1E7"
+				item: "gtceu:dimethylbenzene_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 25.5d
+		}
+		{
+			id: "27A7F19C69EB2D70"
+			tasks: [{
+				id: "7A89971236613F2C"
+				item: "gtceu:naphthalene_bucket"
+				type: "item"
+			}]
+			x: 21.0d
+			y: 27.0d
+		}
+		{
+			dependencies: [
+				"5FEBFB078C4575DC"
+				"25FFF408FC4FE14F"
+			]
+			id: "1D235570F7FF1BF1"
+			tasks: [{
+				id: "6C5EBD40B693B972"
+				item: "gtceu:polyphenylene_sulfide_plate"
+				type: "item"
+			}]
+			x: 28.5d
+			y: 21.5d
+		}
+		{
+			id: "5FEBFB078C4575DC"
+			tasks: [{
+				id: "00AD0B2CD7DC7E52"
+				item: "gtceu:sodium_sulfide_dust"
+				type: "item"
+			}]
+			x: 27.0d
+			y: 21.0d
+		}
+		{
+			id: "25FFF408FC4FE14F"
+			tasks: [{
+				id: "4B081AED048CEA2C"
+				item: "gtceu:dichlorobenzene_bucket"
+				type: "item"
+			}]
+			x: 27.0d
+			y: 22.0d
 		}
 	]
 	title: "资源获取"

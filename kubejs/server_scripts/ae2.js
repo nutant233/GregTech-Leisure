@@ -15,8 +15,8 @@ ServerEvents.recipes((event) => {
     event.remove({ id: "ae2:materials/basiccard" })
     event.remove({ id: "ae2:network/crafting/cpu_crafting_unit" })
     event.remove({ id: "expatternprovider:fishbig" })
-    event.shapeless("infinitycells:infinity_cell", ["ae2:item_cell_housing", "kubejs:infinite_cell_component"])
-    event.shapeless("infinitycells:infinity_fluid_cell", ["ae2:fluid_cell_housing", "kubejs:infinite_cell_component"])
+    event.shapeless("gtlcore:item_infinity_cell", ["ae2:item_cell_housing", "gtlcore:infinite_cell_component"])
+    event.shapeless("gtlcore:fluid_infinity_cell", ["ae2:fluid_cell_housing", "gtlcore:infinite_cell_component"])
     event.shapeless("gtlcore:pattern_modifier", "expatternprovider:pattern_modifier")
 
     event.shaped("ae2:creative_energy_cell", [
@@ -311,10 +311,10 @@ ServerEvents.recipes((event) => {
         .duration(400)
     ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Registries.getItemStack("gtlcore:256m_storage")).dataStack(Registries.getItemStack("gtceu:data_stick")).EUt(GTValues.VA[GTValues.LuV]).duration(1200))
 
-    gtr.assembly_line("kubejs:infinite_cell_component")
+    gtr.assembly_line("gtlcore:infinite_cell_component")
         .itemInputs("16x gtlcore:max_storage", "gtceu:data_bank", "16x gtceu:data_module", "64x ae2:creative_energy_cell", "64x #gtceu:circuits/uev", "64x gtceu:ruthenium_trinium_americium_neutronate_hex_wire", "4x gtceu:double_neutronium_plate")
         .inputFluids("gtceu:mutated_living_solder 20000", "gtceu:tairitsu 20000", "gtceu:pcb_coolant 100000")
-        .itemOutputs("kubejs:infinite_cell_component")
+        .itemOutputs("gtlcore:infinite_cell_component")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(2400)
     ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Registries.getItemStack("gtlcore:cell_component_256m")).dataStack(Registries.getItemStack("gtceu:data_orb")).EUt(GTValues.VA[GTValues.UV]).duration(2400))
@@ -372,7 +372,7 @@ ServerEvents.recipes((event) => {
     gtr.assembler("kubejs:fishbig_hair")
         .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
             "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:infinity_glass", "64x kubejs:fishbig_fabric")
+            "64x kubejs:fishbig_fabric", "64x gtlcore:infinity_glass", "64x kubejs:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
         .itemOutputs("kubejs:fishbig_hair")
         .duration(200)

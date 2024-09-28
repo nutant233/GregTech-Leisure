@@ -335,7 +335,6 @@ StartupEvents.registry("item", event => {
     event.create("amorphous_matter")
     event.create("pellet_antimatter")
     event.create("dyson_swarm_module")
-    event.create("infinite_cell_component")
     event.create("glacio_spirit")
     event.create("timepiece")
     event.create("entangled_singularity")
