@@ -1,6 +1,7 @@
 {
-    "parent": "minecraft:block/cube_all",
+    "parent": "gtceu:block/cube_2_layer/all",
     "textures": {
-        "all": "kubejs:block/infinity_coil_block_bloom"
+        "bot_all": "kubejs:block/infinity_coil_block",
+        "top_all": "kubejs:block/infinity_coil_block_bloom"
     }
 }

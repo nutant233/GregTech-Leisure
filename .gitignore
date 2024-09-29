@@ -48,6 +48,7 @@
 /run.sh
 /server.properties
 /user_jvm_args.txt
+/.idea/
 .DS_Store
 instance.cfg
 mmc-pack.json

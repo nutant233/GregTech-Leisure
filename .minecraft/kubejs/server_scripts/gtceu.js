@@ -869,6 +869,17 @@ ServerEvents.recipes((event) => {
         D: "gtceu:gravitation_engine_unit"
     })
 
+    event.shaped("gtceu:desulfurizer", [
+        "AEA",
+        "CDC",
+        "AEA",
+    ], {
+        E: "gtceu:hv_electric_motor",
+        C: "#gtceu:circuits/ev",
+        D: "gtceu:hv_machine_hull",
+        A: "gtceu:hv_electric_pump",
+    })
+
     event.smithing("kubejs:create_hpca_component", "kubejs:command_block_core", "gtlcore:super_computation_component", "kubejs:suprachronal_mainframe_complex")
     event.smithing("gtceu:create_computation", "kubejs:command_block_core", "gtceu:high_performance_computation_array", "kubejs:suprachronal_mainframe_complex")
     event.smithing("kubejs:space_fermium_helmet", "ad_astra:netherite_space_helmet", "kubejs:fermium_helmet", "ad_astra:oxygen_distributor")
@@ -5461,7 +5472,7 @@ ServerEvents.recipes((event) => {
         .duration(290)
 
     gtr.assembler("kubejs:laser_diode")
-        .itemInputs("2x gtceu:fine_gold_wire", "kubejs:smd_diode_bioware", "gtceu:purple_glass_lens", "gtceu:double_nichrome_plate")
+        .itemInputs("2x gtceu:fine_gold_wire", "kubejs:smd_diode_bioware", "gtceu:amethyst_lens", "gtceu:double_nichrome_plate")
         .itemOutputs("kubejs:laser_diode")
         .inputFluids("gtceu:soldering_alloy 288")
         .EUt(980000)
@@ -14122,7 +14133,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs("gtceu:mega_canner")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(800)
-        .stationResearch(b => b.researchStack(Registries.getItemStack("gtceu:uiv_canner"))
+        .stationResearch(b => b.researchStack(Registries.getItemStack("gtceu:uev_canner"))
             .dataStack(Registries.getItemStack("gtceu:data_module"))
             .EUt(GTValues.VA[GTValues.UEV])
             .CWUt(256))
@@ -17252,4 +17263,32 @@ ServerEvents.recipes((event) => {
         .itemOutputs("gtceu:dissolving_tank")
         .EUt(120)
         .duration(400)
+
+    gtr.desulfurizer("gtceu:light_fuel")
+        .inputFluids("gtceu:sulfuric_light_fuel 12000")
+        .outputFluids("gtceu:light_fuel 12000")
+        .itemOutputs("1x gtceu:sulfur_dust")
+        .duration(120)
+        .EUt(30)
+
+    gtr.desulfurizer("gtceu:heavy_fuel")
+        .inputFluids("gtceu:sulfuric_heavy_fuel 12000")
+        .outputFluids("gtceu:heavy_fuel 12000")
+        .itemOutputs("1x gtceu:sulfur_dust")
+        .duration(120)
+        .EUt(30)
+
+    gtr.desulfurizer("gtceu:naphtha")
+        .inputFluids("gtceu:sulfuric_naphtha 12000")
+        .outputFluids("gtceu:naphtha 12000")
+        .itemOutputs("1x gtceu:sulfur_dust")
+        .duration(120)
+        .EUt(30)
+
+    gtr.desulfurizer("gtceu:gas")
+        .inputFluids("gtceu:sulfuric_gas 12000")
+        .outputFluids("gtceu:refinery_gas 12000")
+        .itemOutputs("1x gtceu:sulfur_dust")
+        .duration(120)
+        .EUt(30)
 })

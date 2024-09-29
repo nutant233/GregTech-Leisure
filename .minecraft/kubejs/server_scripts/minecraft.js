@@ -35,7 +35,8 @@ ServerEvents.recipes((event) => {
         .duration(400)
         .EUt(30)
 
-    gtr.lightning_processor("gtceu:skeleton_skull")
+    gtr.lightning_processor("minecraft:skeleton_skull")
+        .circuit(1)
         .itemInputs("9x minecraft:bone")
         .itemOutputs("skeleton_skull")
         .duration(100)
@@ -58,7 +59,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:rocket_fuel 1000", "gtceu:nether_air 8000")
         .itemOutputs("gtceu:nether_star_dust")
         .duration(200)
-        .EUt(7680)
+        .EUt(480)
         .addCondition(new GravityCondition(true))
 
     gtr.lightning_processor("minecraft:nether_star")
