@@ -17,4 +17,5 @@
 .DS_Store
 /instance.cfg
 /mmc-pack.json
+/.idea/
 mods/.index
