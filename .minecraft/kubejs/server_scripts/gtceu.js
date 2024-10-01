@@ -2727,8 +2727,7 @@ ServerEvents.recipes((event) => {
         [1, "uev", "quantanium", "mithril", "kubejs:nm_chip", "8x kubejs:smd_inductor_optical"],
         [2, "uiv", "adamantium", "neutronium", "kubejs:pm_chip", "8x kubejs:smd_inductor_exotic"],
         [3, "uxv", "vibranium", "taranium", "kubejs:pm_chip", "8x kubejs:smd_inductor_cosmic"],
-        [4, "opv", "draconium", "crystalmatrix", "kubejs:fm_chip", "8x kubejs:smd_inductor_supracausal"],
-        [5, "max", "chaos", "cosmicneutronium", "kubejs:fm_chip", "8x gtceu:shirabon_foil"]
+        [4, "opv", "draconium", "crystalmatrix", "kubejs:fm_chip", "8x kubejs:smd_inductor_supracausal"]
     ]
     wireless_tiers.forEach((tier) => {
         let soldering = tier[0] < 3 ? "gtceu:mutated_living_solder 144" : "gtceu:super_mutated_living_solder 144"
@@ -2757,6 +2756,33 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[tier[0] + 9])
             .duration(200)
     })
+
+    gtr.assembler("gtmthings:max_wireless_energy_receive_cover")
+        .itemInputs("gtlcore:max_sensor",
+            "gtlcore:max_emitter",
+            "4x gtceu:ender_pearl_plate",
+            "2x #gtceu:circuits/max",
+            "kubejs:max_voltage_coil",
+            "kubejs:fm_chip",
+            "2x gtceu:cosmicneutronium_single_cable",
+            "2x gtceu:red_alloy_single_cable",
+            "4x gtceu:chaos_plate")
+        .inputFluids("gtceu:super_mutated_living_solder 144")
+        .itemOutputs("gtmthings:max_wireless_energy_receive_cover")
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+    gtr.assembler("gtmthings:max_4a_wireless_energy_receive_cover")
+        .itemInputs("2x gtmthings:max_wireless_energy_receive_cover",
+            "8x gtceu:shirabon_foil",
+            "4x gtceu:niobium_titanium_quadruple_cable",
+            "2x kubejs:max_voltage_coil",
+            "2x gtceu:double_battery_alloy_plate")
+        .inputFluids("gtceu:super_mutated_living_solder 144")
+        .itemOutputs("gtmthings:max_4a_wireless_energy_receive_cover")
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
     for (let index = 5; index < 15; index++) {
         let tierName = GTValues.VN[index].toLowerCase()
         gtr.assembler(`gtmthings:${tierName}_16384a_wireless_laser_target_hatch`)
@@ -4981,14 +5007,15 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(100)
 
-    gtr.electric_blast_furnace("gtceu:fullerene_dust")
+    gtr.laser_engraver("gtceu:fullerene_dust")
         .itemInputs("gtceu:unfolded_fullerene_dust")
+        .notConsumable("gtceu:ruby_lens")
         .inputFluids("gtceu:nitrogen 10000")
         .itemOutputs("gtceu:fullerene_dust")
         .outputFluids("gtceu:ammonia 10000")
         .EUt(2000000)
         .duration(400)
-        .blastFurnaceTemp(5000)
+        .addDataBool("special", true)
 
     gtr.large_chemical_reactor("gtceu:phenylpentanoic_acid")
         .notConsumableFluid("gtceu:trimethyltin_chloride 1000")
@@ -10788,14 +10815,15 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.electric_blast_furnace("gtceu:lanthanum_embedded_fullerene_dust")
+    gtr.laser_engraver("gtceu:lanthanum_embedded_fullerene_dust")
         .itemInputs("2x gtceu:lanthanum_fullerene_mix_dust")
+        .notConsumable("gtceu:sapphire_lens")
         .inputFluids("gtceu:nitrogen 10000")
         .itemOutputs("2x gtceu:lanthanum_embedded_fullerene_dust")
         .outputFluids("gtceu:ammonia 10000")
         .EUt(1966080)
         .duration(320)
-        .blastFurnaceTemp(7000)
+        .addDataBool("special", true)
 
     gtr.large_chemical_reactor("gtceu:fullerene_doped_nanotubes")
         .itemInputs("gtceu:fullerene_dust")
