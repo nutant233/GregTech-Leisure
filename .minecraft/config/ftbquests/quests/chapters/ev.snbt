@@ -997,6 +997,34 @@
 			x: 10.0d
 			y: 1.5d
 		}
+		{
+			dependencies: ["7AEC0D308494C0F8"]
+			id: "79AEF94C9E242133"
+			tasks: [
+				{
+					id: "0FA53A1B35BE795A"
+					item: "kubejs:space_fermium_helmet"
+					type: "item"
+				}
+				{
+					id: "624AF2D64295669D"
+					item: "kubejs:space_fermium_chestplate"
+					type: "item"
+				}
+				{
+					id: "7AD3CF5080452352"
+					item: "kubejs:space_fermium_leggings"
+					type: "item"
+				}
+				{
+					id: "09329A74A89BE20F"
+					item: "kubejs:space_fermium_boots"
+					type: "item"
+				}
+			]
+			x: 18.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Tier4-EV"]
 	title: "超高压"

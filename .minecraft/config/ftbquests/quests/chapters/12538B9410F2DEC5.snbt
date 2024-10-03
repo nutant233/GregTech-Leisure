@@ -97,7 +97,7 @@
 				item: "gtceu:wetware_circuit_board"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 7.5d
 			y: 4.0d
 		}
 		{
@@ -129,7 +129,7 @@
 		{
 			dependencies: [
 				"64EAB77978C87CE9"
-				"051792ED136C96D0"
+				"7EFC2C7FF6FFF1F7"
 			]
 			id: "46855799A4471E34"
 			tasks: [{
@@ -318,7 +318,7 @@
 				"5D4131C48F9BAE46"
 				"7C4C11E7C931C01B"
 			]
-			description: ["可以高速处理mk3前的聚变配方，有轻微损耗。"]
+			description: [""]
 			id: "2802E34A99CE1D79"
 			shape: "rsquare"
 			size: 1.0d
@@ -451,7 +451,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["02F523E003E1C93D"]
@@ -495,8 +495,8 @@
 				item: "gtceu:chemical_distort"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 2.0d
+			x: 11.5d
+			y: -1.5d
 		}
 		{
 			dependencies: ["0A2D46609F5C3CAB"]
@@ -522,6 +522,97 @@
 			}]
 			x: 0.0d
 			y: 2.0d
+		}
+		{
+			can_repeat: false
+			dependencies: ["051792ED136C96D0"]
+			id: "7EFC2C7FF6FFF1F7"
+			tasks: [{
+				id: "1BB25071E7E00C66"
+				item: "gtceu:wetware_printed_circuit_board"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7EFC2C7FF6FFF1F7"]
+			id: "5C4B11CEA53D5B78"
+			tasks: [{
+				id: "4B5ADAE9ED77C366"
+				item: {
+					Count: 1
+					id: "gtceu:data_module"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5C4B11CEA53D5B78"]
+			description: ["含有无法挖掘的矿物"]
+			id: "6DDE77C23FC5D067"
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "0F730F8E535FA432"
+				item: "gtceu:large_void_miner"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5C4B11CEA53D5B78"]
+			description: ["效率更高"]
+			id: "52980D117AB477B2"
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "2E8C86DE512279CC"
+				item: "gtceu:void_fluid_drilling_rig"
+				type: "item"
+			}]
+			title: "来自虚空"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"53D0B2B73387C7CE"
+				"042A0E98DC1084B3"
+			]
+			description: [" 磁共振电路！启动！"]
+			id: "0DC5BFACB3D4BC95"
+			tasks: [{
+				id: "4A9623D2D33B88B9"
+				item: "gtceu:magneto_resonatic_dust"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6DDE77C23FC5D067"]
+			description: ["锆在木卫三，另一个只能虚空采矿了"]
+			id: "042A0E98DC1084B3"
+			tasks: [
+				{
+					id: "0B436E19F0479E87"
+					item: "gtceu:zirconium_dust"
+					type: "item"
+				}
+				{
+					id: "3EE902C024F94F0D"
+					item: "gtceu:tellurium_dust"
+					type: "item"
+				}
+			]
+			title: "锆与碲"
+			x: 13.5d
+			y: 1.5d
 		}
 	]
 	subtitle: ["Tier7-ZPM"]
