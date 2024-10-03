@@ -198,7 +198,6 @@
 				{
 					id: "203510BB9519CB94"
 					item: "gtceu:ev_sensor"
-					optional_task: true
 					type: "item"
 				}
 			]
@@ -810,13 +809,11 @@
 				{
 					id: "2516A6D15A1040C4"
 					item: "gtceu:raw_cooperite"
-					optional_task: true
 					type: "item"
 				}
 				{
 					id: "4AC20884A08A352C"
 					item: "gtceu:raw_bornite"
-					optional_task: true
 					type: "item"
 				}
 			]
@@ -865,6 +862,7 @@
 			y: 7.0d
 		}
 		{
+			dependencies: ["0931ECBAAD9252C7"]
 			description: [
 				"从现在开始你的部分东西需要无重力条件，你需要前往太空站进行制作。"
 				"地球空间站是一个好选择"

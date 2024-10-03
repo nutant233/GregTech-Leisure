@@ -342,7 +342,6 @@
 				}
 				{
 					id: "290ECF45289E9905"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -361,7 +360,6 @@
 				}
 				{
 					id: "0010D9422789330C"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -380,7 +378,6 @@
 				}
 				{
 					id: "0C2E89B247E0E85E"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -405,7 +402,6 @@
 				}
 				{
 					id: "412EC917430435D6"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -425,7 +421,6 @@
 				}
 				{
 					id: "55034866BAB8E55C"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -534,7 +529,6 @@
 				}
 				{
 					id: "408E65A78F512D05"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -556,7 +550,6 @@
 				}
 				{
 					id: "5971D89094BE2377"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -575,7 +568,6 @@
 				}
 				{
 					id: "1477EA302B7D2C87"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -594,7 +586,6 @@
 				}
 				{
 					id: "40B7B5E346EE96BE"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -614,7 +605,6 @@
 				}
 				{
 					id: "08D8871D66256B70"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -633,7 +623,6 @@
 				}
 				{
 					id: "58879157D53270F7"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -656,7 +645,6 @@
 				}
 				{
 					id: "5ED7461DEB480E59"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -675,7 +663,6 @@
 				}
 				{
 					id: "5B062BEDA570EC35"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -694,7 +681,6 @@
 				}
 				{
 					id: "62D498D596792A96"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -828,7 +814,6 @@
 				}
 				{
 					id: "141E95011AA0739D"
-					optional_task: true
 					type: "checkmark"
 				}
 			]

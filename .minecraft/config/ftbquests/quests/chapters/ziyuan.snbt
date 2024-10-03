@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "ziyuan"
 	group: "24F4987B35ABEE82"
-	icon: "gtceu:raw_trinium_compound"
+	icon: "gtceu:raw_cooperite"
 	id: "0EF94FA5D02096D9"
 	order_index: 6
 	progression_mode: "flexible"
@@ -77,13 +77,13 @@
 		{
 			id: "5B8A3ECA17A9B5D5"
 			linked_quest: "61631D86D47D54F6"
-			x: 14.0d
+			x: 14.5d
 			y: 10.0d
 		}
 		{
 			id: "698481D49A25390A"
 			linked_quest: "2E4A5A581F9FCAF9"
-			x: 14.0d
+			x: 14.5d
 			y: 11.5d
 		}
 		{
@@ -122,12 +122,6 @@
 			x: 6.0d
 			y: 32.0d
 		}
-		{
-			id: "7A88320065F3B0AF"
-			linked_quest: "766D051A40AB5324"
-			x: 4.5d
-			y: 57.0d
-		}
 	]
 	quests: [
 		{
@@ -146,7 +140,7 @@
 			id: "68765386EA084EC0"
 			tasks: [{
 				id: "3F8107D325CEA1B4"
-				title: "一开始你只能手挖"
+				title: "一开始你只能手挖，之后有很多机器"
 				type: "checkmark"
 			}]
 			x: 1.5d
@@ -390,7 +384,7 @@
 				}
 			]
 			x: 5.5d
-			y: 4.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["7979C5ACF9A0C8D2"]
@@ -411,7 +405,7 @@
 				}
 			]
 			x: 5.5d
-			y: 5.5d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -436,7 +430,7 @@
 					type: "item"
 				}
 			]
-			x: 7.0d
+			x: 7.5d
 			y: 5.0d
 		}
 		{
@@ -457,7 +451,7 @@
 					type: "item"
 				}
 			]
-			x: 8.5d
+			x: 9.5d
 			y: 6.0d
 		}
 		{
@@ -478,7 +472,7 @@
 					type: "item"
 				}
 			]
-			x: 8.5d
+			x: 9.5d
 			y: 4.0d
 		}
 		{
@@ -503,7 +497,7 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
+			x: 11.5d
 			y: 5.0d
 		}
 		{
@@ -535,7 +529,7 @@
 					type: "item"
 				}
 			]
-			x: 11.5d
+			x: 13.5d
 			y: 5.0d
 		}
 		{
@@ -557,7 +551,7 @@
 				}
 			]
 			title: "洁净粉"
-			x: 10.0d
+			x: 11.5d
 			y: 4.0d
 		}
 		{
@@ -581,8 +575,8 @@
 					type: "item"
 				}
 			]
-			x: 8.5d
-			y: 8.0d
+			x: 9.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["3C2B4B80E425A9AD"]
@@ -601,8 +595,8 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
-			y: 8.0d
+			x: 11.5d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -636,7 +630,7 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
+			x: 11.5d
 			y: 3.0d
 		}
 		{
@@ -697,7 +691,10 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["41B15E107F6501C9"]
+			dependencies: [
+				"41B15E107F6501C9"
+				"2EAAF5A6510D0EFE"
+			]
 			id: "282F333573FB2F2F"
 			tasks: [{
 				id: "283499DAF3FBA2DC"
@@ -721,55 +718,8 @@
 				title: "接着处理"
 				type: "checkmark"
 			}]
-			x: 13.0d
+			x: 15.5d
 			y: 5.0d
-		}
-		{
-			dependencies: ["3C808016095484BF"]
-			hide_dependent_lines: true
-			id: "44BE0FD4ABE696F1"
-			tasks: [{
-				id: "170E4A149A78AC0E"
-				item: "gtceu:ethylene_bucket"
-				type: "item"
-			}]
-			x: 38.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["126010F57E9BD7A5"]
-			id: "3C808016095484BF"
-			tasks: [{
-				id: "60A93A7ACB07843C"
-				item: "gtceu:ethanol_bucket"
-				type: "item"
-			}]
-			x: 36.5d
-			y: 4.0d
-		}
-		{
-			id: "126010F57E9BD7A5"
-			tasks: [
-				{
-					id: "24D29CBC5A3065A0"
-					item: "gtceu:biomass_bucket"
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "7F57C4F635287E0B"
-					item: "gtceu:fermented_biomass_bucket"
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "1023D863BF2A4BA0"
-					type: "checkmark"
-				}
-			]
-			title: "生物质与发酵生物质"
-			x: 35.0d
-			y: 4.0d
 		}
 		{
 			dependencies: ["41B15E107F6501C9"]
@@ -779,7 +729,7 @@
 				title: "其他东西"
 				type: "checkmark"
 			}]
-			x: 33.0d
+			x: 29.0d
 			y: 2.0d
 		}
 		{
@@ -828,8 +778,8 @@
 				}
 			]
 			title: "从热解炉流出来的东西"
-			x: 36.5d
-			y: 5.5d
+			x: 30.5d
+			y: 3.5d
 		}
 		{
 			id: "7BC592264A9788F7"
@@ -838,51 +788,8 @@
 				item: "gtceu:pyrolyse_oven"
 				type: "item"
 			}]
-			x: 35.0d
-			y: 5.5d
-		}
-		{
-			id: "48F93DF69CC7F8ED"
-			tasks: [{
-				id: "4F6E879F80E0E7D7"
-				item: "gtceu:fishing_ground"
-				type: "item"
-			}]
-			x: 35.0d
-			y: 7.0d
-		}
-		{
-			dependencies: ["48F93DF69CC7F8ED"]
-			id: "1B326CA2576D9A14"
-			tasks: [{
-				id: "3A9B19492CD9D472"
-				item: "gtceu:fish_oil_bucket"
-				type: "item"
-			}]
-			x: 36.5d
-			y: 7.0d
-		}
-		{
-			dependencies: ["1B326CA2576D9A14"]
-			id: "2EDDFD731AAE8741"
-			tasks: [{
-				id: "38B653ADADF5877E"
-				item: "gtceu:glycerol_bucket"
-				type: "item"
-			}]
-			x: 38.0d
-			y: 8.0d
-		}
-		{
-			dependencies: ["1B326CA2576D9A14"]
-			id: "0E700196E963B732"
-			tasks: [{
-				id: "0628D35AAD31AE7A"
-				item: "gtceu:bio_diesel_bucket"
-				type: "item"
-			}]
-			x: 38.0d
-			y: 7.0d
+			x: 29.0d
+			y: 3.5d
 		}
 		{
 			description: ["lv时期可选的获得石油的手段"]
@@ -1010,14 +917,11 @@
 				item: "gtceu:mv_fluid_drilling_rig"
 				type: "item"
 			}]
-			x: 19.5d
-			y: 10.5d
+			x: 23.0d
+			y: 3.5d
 		}
 		{
-			dependencies: [
-				"0C5B23E443F1A5D5"
-				"44BE0FD4ABE696F1"
-			]
+			dependencies: ["0C5B23E443F1A5D5"]
 			dependency_requirement: "one_completed"
 			id: "1B27E863E90AB90E"
 			tasks: [{
@@ -1069,8 +973,8 @@
 				}
 			]
 			title: "T0可以采到的"
-			x: 20.5d
-			y: 10.5d
+			x: 24.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1B27E863E90AB90E"]
@@ -1117,54 +1021,6 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["445FA314F08B0F0C"]
-			id: "54E25887B23DDCA9"
-			tasks: [
-				{
-					id: "493BA5D42FED824B"
-					item: "gtceu:light_fuel_bucket"
-					type: "item"
-				}
-				{
-					id: "1D431E087EFD0C04"
-					item: "gtceu:heavy_fuel_bucket"
-					type: "item"
-				}
-				{
-					id: "70EA44AEC29590D1"
-					item: "gtceu:naphtha_bucket"
-					type: "item"
-				}
-				{
-					id: "4D26D6BBF69DE128"
-					item: "gtceu:refinery_gas_bucket"
-					type: "item"
-				}
-			]
-			title: "四桶油"
-			x: 22.0d
-			y: 10.0d
-		}
-		{
-			dependencies: ["445FA314F08B0F0C"]
-			id: "49B8A676093DFC98"
-			tasks: [
-				{
-					id: "12B08FA8803B1924"
-					item: "gtceu:chlorine_bucket"
-					type: "item"
-				}
-				{
-					id: "1E937E3577D014B8"
-					item: "gtceu:sodium_hydroxide_dust"
-					type: "item"
-				}
-			]
-			title: "电解盐水"
-			x: 22.0d
-			y: 11.0d
-		}
-		{
 			dependencies: ["66CFEE6DC6A4CF34"]
 			id: "3BDEA7EB4CF81918"
 			tasks: [{
@@ -1173,7 +1029,7 @@
 				type: "item"
 			}]
 			x: 22.5d
-			y: 12.5d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -1187,7 +1043,7 @@
 				type: "item"
 			}]
 			x: 21.0d
-			y: 12.5d
+			y: 10.0d
 		}
 		{
 			description: ["氟来源于电解黄玉或蓝黄玉，氢来源于离心黄铁或者离心针叶铁或者电解水"]
@@ -1198,7 +1054,7 @@
 				type: "item"
 			}]
 			x: 19.5d
-			y: 13.0d
+			y: 10.5d
 		}
 		{
 			description: ["气态甲烷前期可来源于离心橡胶原木，氯可以来源于电解盐或岩盐或盐水"]
@@ -1209,7 +1065,7 @@
 				type: "item"
 			}]
 			x: 19.5d
-			y: 12.0d
+			y: 9.5d
 		}
 		{
 			dependencies: ["3940A3FA8CD3C04D"]
@@ -1241,7 +1097,7 @@
 				type: "item"
 			}]
 			x: 19.5d
-			y: 15.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["184CE47D10A10C84"]
@@ -1481,7 +1337,6 @@
 				}
 				{
 					id: "56B2A608CE9CD004"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -1511,7 +1366,6 @@
 				}
 				{
 					id: "452AE3303E0EEBAD"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -1785,7 +1639,6 @@
 				}
 				{
 					id: "7D697FF2C350AF5A"
-					optional_task: true
 					type: "checkmark"
 				}
 			]
@@ -2038,6 +1891,7 @@
 		}
 		{
 			dependencies: ["6D650AE5A76585B3"]
+			hide_dependent_lines: true
 			id: "7B412E455E2C321B"
 			tasks: [{
 				id: "146DB1101ED83C52"
@@ -2253,370 +2107,6 @@
 			y: 19.5d
 		}
 		{
-			dependencies: ["7979C5ACF9A0C8D2"]
-			id: "38091E7431B96FF6"
-			tasks: [{
-				id: "73C4EE18E31D6F42"
-				title: "硅岩处理"
-				type: "checkmark"
-			}]
-			x: 3.0d
-			y: 52.5d
-		}
-		{
-			id: "5D1037E8365CC910"
-			subtitle: "开挖"
-			tasks: [{
-				id: "11D65D25476CBE44"
-				item: "gtceu:raw_naquadah"
-				type: "item"
-			}]
-			x: 4.5d
-			y: 55.0d
-		}
-		{
-			dependencies: ["5D1037E8365CC910"]
-			id: "09EBEB8F3415BB6E"
-			tasks: [{
-				id: "5B07A2D41693C6E0"
-				item: "gtceu:naquadah_dust"
-				type: "item"
-			}]
-			x: 6.0d
-			y: 55.0d
-		}
-		{
-			dependencies: ["5D1037E8365CC910"]
-			id: "36E8964CD1BE7569"
-			subtitle: "洁净硅岩粉电磁选矿"
-			tasks: [{
-				id: "57336BFC9D32EFF4"
-				item: "gtceu:enriched_naquadah_dust"
-				type: "item"
-			}]
-			x: 6.0d
-			y: 58.0d
-		}
-		{
-			id: "0255D733668E3BF7"
-			tasks: [{
-				id: "21B669A650122204"
-				item: "gtceu:raw_enriched_naquadah"
-				type: "item"
-			}]
-			x: 4.5d
-			y: 61.0d
-		}
-		{
-			id: "67ECDD5601DBBB5B"
-			tasks: [{
-				id: "1DB0385AC5D4B2A6"
-				item: "gtceu:raw_trinium_compound"
-				type: "item"
-			}]
-			x: 4.5d
-			y: 63.0d
-		}
-		{
-			dependencies: ["09EBEB8F3415BB6E"]
-			id: "3703156457BD35FD"
-			tasks: [{
-				id: "540567C813999894"
-				item: "gtceu:impure_enriched_naquadah_solution_bucket"
-				type: "item"
-			}]
-			x: 7.5d
-			y: 55.0d
-		}
-		{
-			dependencies: ["3703156457BD35FD"]
-			id: "59B5170E8A1265E4"
-			tasks: [{
-				id: "09D8310F47324DBF"
-				item: "gtceu:hexafluoride_enriched_naquadah_solution_bucket"
-				type: "item"
-			}]
-			x: 9.0d
-			y: 55.0d
-		}
-		{
-			dependencies: ["59B5170E8A1265E4"]
-			id: "57DBBE2F51BB822E"
-			tasks: [{
-				id: "44F1D02CEFA7226E"
-				item: "gtceu:xenon_hexafluoro_enriched_naquadate_bucket"
-				type: "item"
-			}]
-			x: 10.5d
-			y: 55.0d
-		}
-		{
-			dependencies: ["57DBBE2F51BB822E"]
-			dependency_requirement: "one_completed"
-			id: "76A2D869A0D5C41E"
-			tasks: [{
-				id: "5DF2D04D86807663"
-				item: "gtceu:enriched_naquadah_solution_bucket"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 55.0d
-		}
-		{
-			dependencies: ["76A2D869A0D5C41E"]
-			id: "36FB56BD8B6415D7"
-			tasks: [{
-				id: "7ADC1AEDE66CEBB2"
-				item: "gtceu:acidic_enriched_naquadah_solution_bucket"
-				type: "item"
-			}]
-			x: 13.5d
-			y: 55.0d
-		}
-		{
-			dependencies: ["36FB56BD8B6415D7"]
-			id: "1CD2A15A1C5B1395"
-			tasks: [{
-				id: "4838581B78418606"
-				item: "gtceu:enriched_naquadah_sulfate_dust"
-				type: "item"
-			}]
-			x: 15.0d
-			y: 55.0d
-		}
-		{
-			dependencies: ["36FB56BD8B6415D7"]
-			id: "3868B8E8021CC035"
-			tasks: [{
-				id: "5062B0E2FE1808C7"
-				item: "gtceu:enriched_naquadah_waste_bucket"
-				type: "item"
-			}]
-			x: 15.0d
-			y: 56.0d
-		}
-		{
-			dependencies: ["36E8964CD1BE7569"]
-			id: "2F4E165431B56059"
-			tasks: [{
-				id: "36ADC52B2F4EB070"
-				item: "gtceu:impure_naquadria_solution_bucket"
-				type: "item"
-			}]
-			x: 7.5d
-			y: 58.0d
-		}
-		{
-			dependencies: ["2F4E165431B56059"]
-			id: "147D445B1E2E2BDB"
-			tasks: [{
-				id: "10DE0C7406D7B55D"
-				item: "gtceu:hexafluoride_naquadria_solution_bucket"
-				type: "item"
-			}]
-			x: 9.0d
-			y: 58.0d
-		}
-		{
-			dependencies: ["147D445B1E2E2BDB"]
-			id: "2C6EF38A0BE22028"
-			tasks: [{
-				id: "2C3E0982A668A0A2"
-				item: "gtceu:radon_naquadria_octafluoride_bucket"
-				type: "item"
-			}]
-			x: 10.5d
-			y: 58.0d
-		}
-		{
-			dependencies: ["2C6EF38A0BE22028"]
-			id: "7DC037BA0E0A18DA"
-			tasks: [{
-				id: "40B06BBBE27665E9"
-				item: "gtceu:naquadria_caesium_xenonnonfluoride_bucket"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 58.0d
-		}
-		{
-			dependencies: ["7DC037BA0E0A18DA"]
-			id: "2405FED0FD07E879"
-			tasks: [{
-				id: "302D5DEB070303B7"
-				item: "gtceu:naquadria_caesiumfluoride_bucket"
-				type: "item"
-			}]
-			x: 13.5d
-			y: 58.0d
-		}
-		{
-			dependencies: ["2405FED0FD07E879"]
-			id: "4EDDD95D554B8643"
-			tasks: [{
-				id: "633E135C6838F62A"
-				item: "gtceu:acidic_naquadria_caesiumfluoride_bucket"
-				type: "item"
-			}]
-			x: 16.5d
-			y: 60.0d
-		}
-		{
-			dependencies: ["2405FED0FD07E879"]
-			id: "14C55CE8EA930227"
-			tasks: [{
-				id: "2BF33E3351168D61"
-				item: "gtceu:naquadria_solution_bucket"
-				type: "item"
-			}]
-			x: 15.0d
-			y: 58.0d
-		}
-		{
-			dependencies: ["14C55CE8EA930227"]
-			id: "3F165F658B061FB8"
-			tasks: [{
-				id: "113061A83BBB5DDF"
-				item: "gtceu:acidic_naquadria_solution_bucket"
-				type: "item"
-			}]
-			x: 16.5d
-			y: 58.0d
-		}
-		{
-			dependencies: [
-				"3F165F658B061FB8"
-				"4EDDD95D554B8643"
-			]
-			dependency_requirement: "one_completed"
-			id: "30D6A973D89212B9"
-			tasks: [{
-				id: "4199544AE7A66761"
-				item: "gtceu:naquadria_sulfate_dust"
-				type: "item"
-			}]
-			x: 18.0d
-			y: 58.0d
-		}
-		{
-			dependencies: ["3F165F658B061FB8"]
-			id: "6E2187ECE4FD9684"
-			tasks: [{
-				id: "0BA49C7857B6C915"
-				item: "gtceu:naquadria_waste_bucket"
-				type: "item"
-			}]
-			x: 18.0d
-			y: 59.0d
-		}
-		{
-			dependencies: [
-				"6E2187ECE4FD9684"
-				"4EDDD95D554B8643"
-			]
-			dependency_requirement: "one_completed"
-			id: "7C45390524D47942"
-			tasks: [{
-				id: "30DEB628EC345633"
-				item: "gtceu:trinium_sulfide_dust"
-				type: "item"
-			}]
-			x: 19.5d
-			y: 59.0d
-		}
-		{
-			dependencies: ["76A2D869A0D5C41E"]
-			id: "40823ABFBBE43496"
-			tasks: [{
-				id: "3985EEFFFEEAF1BC"
-				item: "gtceu:radon_cracked_enriched_aquadah_bucket"
-				type: "item"
-			}]
-			x: 13.5d
-			y: 52.5d
-		}
-		{
-			dependencies: ["40823ABFBBE43496"]
-			id: "7248EC9288C91A33"
-			tasks: [{
-				id: "5747AD76A31CD66B"
-				item: "gtceu:enriched_naquadah_fuel_bucket"
-				type: "item"
-			}]
-			x: 15.0d
-			y: 52.5d
-		}
-		{
-			dependencies: ["09EBEB8F3415BB6E"]
-			id: "1EE19E725DC91553"
-			tasks: [{
-				id: "0D62EAD7D2D8025B"
-				item: "gtceu:naquadah_solution_bucket"
-				type: "item"
-			}]
-			x: 7.5d
-			y: 52.5d
-		}
-		{
-			dependencies: ["1EE19E725DC91553"]
-			id: "7D1E1EB10A6FFE98"
-			tasks: [{
-				id: "144F9B3C76BDFECA"
-				item: "gtceu:fluorine_cracked_aquadah_bucket"
-				type: "item"
-			}]
-			x: 9.0d
-			y: 52.5d
-		}
-		{
-			dependencies: ["7D1E1EB10A6FFE98"]
-			id: "75D953244E729FEC"
-			tasks: [{
-				id: "5EE6707C631C948A"
-				item: "gtceu:naquadah_fuel_bucket"
-				type: "item"
-			}]
-			x: 10.5d
-			y: 52.5d
-		}
-		{
-			dependencies: [
-				"75D953244E729FEC"
-				"7248EC9288C91A33"
-				"14C55CE8EA930227"
-			]
-			id: "0D53712AA7F733A8"
-			tasks: [{
-				id: "041A075952C819BA"
-				item: "gtceu:hyper_fuel_1_bucket"
-				type: "item"
-			}]
-			x: 18.0d
-			y: 55.0d
-		}
-		{
-			dependencies: ["0255D733668E3BF7"]
-			id: "4E3BD7980CD652A5"
-			tasks: [{
-				id: "59AAD833ADDB0087"
-				item: "gtceu:milled_enriched_naquadah"
-				type: "item"
-			}]
-			x: 6.5d
-			y: 61.0d
-		}
-		{
-			dependencies: ["4E3BD7980CD652A5"]
-			id: "6A5AB82C3E14D091"
-			tasks: [{
-				id: "4666200C2877EED6"
-				item: "gtceu:enriched_naquadah_front_bucket"
-				type: "item"
-			}]
-			x: 8.5d
-			y: 61.0d
-		}
-		{
 			dependencies: ["36E8964CD1BE7569"]
 			hide_dependency_lines: true
 			id: "1534BC8521461BC8"
@@ -2637,7 +2127,7 @@
 				type: "item"
 			}]
 			x: 24.5d
-			y: 16.0d
+			y: 13.0d
 		}
 		{
 			dependencies: ["7D19A74F09F44223"]
@@ -2648,7 +2138,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 15.0d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -2662,7 +2152,7 @@
 				type: "item"
 			}]
 			x: 23.0d
-			y: 15.5d
+			y: 12.5d
 		}
 		{
 			dependencies: [
@@ -2677,7 +2167,7 @@
 				type: "item"
 			}]
 			x: 21.0d
-			y: 15.5d
+			y: 12.5d
 		}
 		{
 			id: "71F30E4D75B64953"
@@ -2687,7 +2177,7 @@
 				type: "item"
 			}]
 			x: 21.0d
-			y: 17.0d
+			y: 14.0d
 		}
 		{
 			id: "5D9B209D891690FD"
@@ -2697,7 +2187,7 @@
 				type: "item"
 			}]
 			x: 19.5d
-			y: 16.0d
+			y: 13.0d
 		}
 		{
 			dependencies: ["70E703942B61C86C"]
@@ -2718,8 +2208,8 @@
 				item: "gtceu:silicone_rubber_ingot"
 				type: "item"
 			}]
-			x: 21.0d
-			y: 19.0d
+			x: 22.5d
+			y: 16.0d
 		}
 		{
 			id: "46797764E081856A"
@@ -2728,8 +2218,8 @@
 				item: "gtceu:polydimethylsiloxane_dust"
 				type: "item"
 			}]
-			x: 19.5d
-			y: 19.0d
+			x: 21.0d
+			y: 16.0d
 		}
 		{
 			dependencies: ["6BAC2A8A96690442"]
@@ -2739,8 +2229,8 @@
 				item: "gtceu:styrene_butadiene_rubber_ingot"
 				type: "item"
 			}]
-			x: 28.5d
-			y: 19.0d
+			x: 22.5d
+			y: 17.5d
 		}
 		{
 			dependencies: [
@@ -2753,8 +2243,8 @@
 				item: "gtceu:raw_styrene_butadiene_rubber_dust"
 				type: "item"
 			}]
-			x: 27.0d
-			y: 19.0d
+			x: 21.0d
+			y: 17.5d
 		}
 		{
 			id: "6E68F9920B8DE90B"
@@ -2763,8 +2253,8 @@
 				item: "gtceu:butadiene_bucket"
 				type: "item"
 			}]
-			x: 25.5d
-			y: 18.5d
+			x: 19.5d
+			y: 17.0d
 		}
 		{
 			id: "20E57648D7692834"
@@ -2773,8 +2263,8 @@
 				item: "gtceu:styrene_bucket"
 				type: "item"
 			}]
-			x: 25.5d
-			y: 19.5d
+			x: 19.5d
+			y: 18.0d
 		}
 		{
 			dependencies: ["68FB8A7DC0CE1544"]
@@ -2784,8 +2274,8 @@
 				item: "gtceu:laminated_glass"
 				type: "item"
 			}]
-			x: 24.0d
-			y: 21.5d
+			x: 28.5d
+			y: 17.0d
 		}
 		{
 			dependencies: [
@@ -2798,8 +2288,8 @@
 				item: "gtceu:polyvinyl_butyral_plate"
 				type: "item"
 			}]
-			x: 22.5d
-			y: 21.5d
+			x: 27.0d
+			y: 17.0d
 		}
 		{
 			id: "0C199AF8612BC6B8"
@@ -2808,8 +2298,8 @@
 				item: "gtceu:butyraldehyde_bucket"
 				type: "item"
 			}]
-			x: 21.0d
-			y: 21.0d
+			x: 25.5d
+			y: 16.5d
 		}
 		{
 			dependencies: ["7E8537FADF9E76CE"]
@@ -2819,8 +2309,8 @@
 				item: "gtceu:polyvinyl_acetate_bucket"
 				type: "item"
 			}]
-			x: 21.0d
-			y: 22.0d
+			x: 25.5d
+			y: 17.5d
 		}
 		{
 			id: "7E8537FADF9E76CE"
@@ -2829,8 +2319,8 @@
 				item: "gtceu:vinyl_acetate_bucket"
 				type: "item"
 			}]
-			x: 19.5d
-			y: 22.0d
+			x: 24.0d
+			y: 17.5d
 		}
 		{
 			dependencies: [
@@ -2844,7 +2334,7 @@
 				type: "item"
 			}]
 			x: 25.5d
-			y: 25.0d
+			y: 20.0d
 		}
 		{
 			dependencies: ["6873048BEB5C2652"]
@@ -2855,7 +2345,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 24.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["1A8712D336215C23"]
@@ -2866,7 +2356,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 26.0d
+			y: 20.5d
 		}
 		{
 			id: "21C233810F7423C7"
@@ -2876,7 +2366,7 @@
 				type: "item"
 			}]
 			x: 19.5d
-			y: 24.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["21C233810F7423C7"]
@@ -2887,7 +2377,7 @@
 				type: "item"
 			}]
 			x: 21.0d
-			y: 24.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["7F22C88335CD5843"]
@@ -2898,7 +2388,7 @@
 				type: "item"
 			}]
 			x: 22.5d
-			y: 24.0d
+			y: 19.5d
 		}
 		{
 			dependencies: [
@@ -2912,7 +2402,7 @@
 				type: "item"
 			}]
 			x: 22.5d
-			y: 26.0d
+			y: 20.5d
 		}
 		{
 			id: "0562FFC391118D18"
@@ -2922,7 +2412,7 @@
 				type: "item"
 			}]
 			x: 21.0d
-			y: 25.5d
+			y: 20.5d
 		}
 		{
 			id: "27A7F19C69EB2D70"
@@ -2932,7 +2422,7 @@
 				type: "item"
 			}]
 			x: 21.0d
-			y: 27.0d
+			y: 21.5d
 		}
 		{
 			dependencies: [
@@ -2946,7 +2436,7 @@
 				type: "item"
 			}]
 			x: 28.5d
-			y: 21.5d
+			y: 20.0d
 		}
 		{
 			id: "5FEBFB078C4575DC"
@@ -2956,7 +2446,7 @@
 				type: "item"
 			}]
 			x: 27.0d
-			y: 21.0d
+			y: 19.5d
 		}
 		{
 			id: "25FFF408FC4FE14F"
@@ -2966,7 +2456,7 @@
 				type: "item"
 			}]
 			x: 27.0d
-			y: 22.0d
+			y: 20.5d
 		}
 		{
 			id: "2ED005FB3DC2EAB2"
@@ -3797,6 +3287,51 @@
 			x: 18.5d
 			y: 46.0d
 		}
+		{
+			description: [
+				"甲烷，乙烷，丙烷，丁烷，辛烷"
+				"乙烯，丙烯，丁烯，丁二烯"
+				"苯，甲苯"
+				"氦"
+			]
+			id: "7DB48A5766BD91E6"
+			tasks: [{
+				id: "5DE3CE19B98A1D05"
+				title: "石化的产出有这些"
+				type: "checkmark"
+			}]
+			x: 26.5d
+			y: 3.5d
+		}
+		{
+			description: [
+				"生物质与发酵生物质："
+				"甲醇，乙醇，乙酸，氨，"
+				"二氧化碳，甲烷，木浆，肥料"
+				""
+				"煤气和煤焦油："
+				"氨，乙苯，二氧化碳，焦煤粉，"
+				"萘，硫化氢，苯酚，杂酚油"
+				""
+				"木炭副产："
+				"木炭粉，杂酚油，"
+				"苯，甲苯，苯酚，二甲苯，"
+				"甲醇，乙醇，乙酸，甲酸甲酯，"
+				"丙酮，二氧化碳，一氧化碳，甲烷，乙烯"
+				""
+				"其他的东西："
+				"鱼油，种子油"
+			]
+			id: "2FA83022CC8A0928"
+			tasks: [{
+				id: "6E95953C40968751"
+				title: "生物质的产出"
+				type: "checkmark"
+			}]
+			title: "生化线的产出"
+			x: 32.0d
+			y: 3.5d
+		}
 	]
-	title: "资源获取（一即全）"
+	title: "资源获取（一）"
 }

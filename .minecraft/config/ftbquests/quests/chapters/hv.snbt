@@ -6,7 +6,12 @@
 	icon: "gtceu:hv_electric_motor"
 	id: "3FFA6F604319D492"
 	order_index: 3
-	quest_links: [ ]
+	quest_links: [{
+		id: "7F3B103F26A80599"
+		linked_quest: "282F333573FB2F2F"
+		x: 14.0d
+		y: 0.0d
+	}]
 	quests: [
 		{
 			dependencies: [
@@ -174,10 +179,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"0243CEA5EE705EB0"
-				"157A951DA379C259"
-			]
+			dependencies: ["0243CEA5EE705EB0"]
 			dependency_requirement: "one_started"
 			id: "3FCF807491579B94"
 			rewards: [{
@@ -190,7 +192,7 @@
 				item: "gtceu:micro_processor"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 8.0d
 		}
 		{
@@ -302,7 +304,7 @@
 				item: "gtceu:plastic_printed_circuit_board"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 8.0d
 		}
 		{
@@ -368,7 +370,7 @@
 				item: "gtceu:plastic_circuit_board"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 4.0d
 			y: 8.0d
 		}
 		{
@@ -609,7 +611,7 @@
 				}
 			]
 			title: "贴片"
-			x: 4.0d
+			x: 2.0d
 			y: 8.0d
 		}
 		{
@@ -862,8 +864,8 @@
 				item: "gtceu:desulfurizer"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 0.0d
+			x: 10.0d
+			y: 8.0d
 		}
 	]
 	subtitle: ["Tier3-HV"]

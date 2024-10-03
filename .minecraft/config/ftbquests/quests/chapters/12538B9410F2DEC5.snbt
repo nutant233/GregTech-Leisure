@@ -236,11 +236,12 @@
 				item: "gtceu:wetware_processor_mainframe"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 8.0d
 		}
 		{
 			dependencies: ["7C23CC6ADDC33EA0"]
+			description: ["在下个阶段需要很多"]
 			id: "5D4131C48F9BAE46"
 			shape: "rsquare"
 			tasks: [{
@@ -282,18 +283,6 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["0A2D46609F5C3CAB"]
-			description: ["后面的电路装配线要使用"]
-			id: "1385E89DD3FD663B"
-			tasks: [{
-				id: "68A5969FB9056BA3"
-				item: "kubejs:precision_circuit_assembly_robot_mk1"
-				type: "item"
-			}]
-			x: 10.0d
-			y: 8.0d
-		}
-		{
 			dependencies: [
 				"38D23D186C444492"
 				"62D2B830A98424BB"
@@ -318,7 +307,7 @@
 				"5D4131C48F9BAE46"
 				"7C4C11E7C931C01B"
 			]
-			description: [""]
+			description: ["以后需要"]
 			id: "2802E34A99CE1D79"
 			shape: "rsquare"
 			size: 1.0d
@@ -370,7 +359,7 @@
 				item: "gtceu:integrated_ore_processor"
 				type: "item"
 			}]
-			x: 5.5d
+			x: 6.0d
 			y: 8.0d
 		}
 		{
@@ -384,7 +373,7 @@
 				item: "gtceu:petrochemical_plant"
 				type: "item"
 			}]
-			x: 6.5d
+			x: 8.0d
 			y: 8.0d
 		}
 		{
@@ -484,35 +473,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"02F523E003E1C93D"
-				"035C470213E8B4DB"
-			]
-			description: ["优化你的产线"]
-			id: "16C93F76F74CB8DB"
-			tasks: [{
-				id: "42B8B94BB1B32E83"
-				item: "gtceu:chemical_distort"
-				type: "item"
-			}]
-			x: 11.5d
-			y: -1.5d
-		}
-		{
-			dependencies: ["0A2D46609F5C3CAB"]
-			description: ["电解机、电磁选矿机和两极磁化机的激光版本"]
-			id: "3565D2D5E0A2CEDF"
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "30D756E7388280AB"
-				item: "gtceu:superconducting_electromagnetism"
-				type: "item"
-			}]
-			x: 11.0d
-			y: 8.0d
-		}
-		{
 			dependencies: ["0485D45408234C99"]
 			id: "5D980DBF92017008"
 			tasks: [{
@@ -577,7 +537,7 @@
 			}]
 			title: "来自虚空"
 			x: 12.0d
-			y: 3.0d
+			y: 2.5d
 		}
 		{
 			dependencies: [
@@ -591,8 +551,8 @@
 				item: "gtceu:magneto_resonatic_dust"
 				type: "item"
 			}]
-			x: 15.0d
-			y: 1.5d
+			x: 14.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["6DDE77C23FC5D067"]
@@ -611,8 +571,44 @@
 				}
 			]
 			title: "锆与碲"
-			x: 13.5d
+			x: 14.0d
 			y: 1.5d
+		}
+		{
+			dependencies: ["0485D45408234C99"]
+			description: ["这个时候你也可以做大型的"]
+			hide_dependency_lines: true
+			id: "41201C74CC5F7B90"
+			tasks: [{
+				id: "569902AC45012A06"
+				item: "gtceu:block_conversion_room"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["41201C74CC5F7B90"]
+			id: "35D158AD5036923D"
+			tasks: [{
+				id: "7A39828F0956F250"
+				item: "kubejs:essence"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["35D158AD5036923D"]
+			description: ["各种矿脉精华用于大型虚空采矿场的精准模式"]
+			id: "68D3E6670941A3F5"
+			tasks: [{
+				id: "158FBB1423A51456"
+				title: "各种的矿脉精华"
+				type: "checkmark"
+			}]
+			x: 14.0d
+			y: 8.0d
 		}
 	]
 	subtitle: ["Tier7-ZPM"]

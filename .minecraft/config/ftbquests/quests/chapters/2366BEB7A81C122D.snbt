@@ -11,7 +11,7 @@
 			id: "23C44004B0D7572C"
 			linked_quest: "73C70C42B7EF5D4F"
 			x: 0.0d
-			y: 2.0d
+			y: 6.0d
 		}
 		{
 			id: "3F71D8E597D26019"
@@ -19,7 +19,7 @@
 			shape: "rsquare"
 			size: 2.0d
 			x: 0.0d
-			y: 0.0d
+			y: 2.0d
 		}
 	]
 	quests: [
@@ -40,7 +40,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["6C4F1C87F08F38AC"]
@@ -56,8 +56,8 @@
 				item: "gtceu:neutronium_ingot"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 2.0d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
@@ -69,7 +69,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1223F5F9BF7FF37F"]
@@ -79,8 +79,8 @@
 				item: "gtceu:highly_advanced_soc"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 8.0d
+			x: 8.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["24B011E770B7DF3F"]
@@ -113,13 +113,14 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
-			y: 10.0d
+			x: 6.0d
+			y: 11.0d
 		}
 		{
 			dependencies: [
 				"4D8E0C0295DB26EF"
 				"43A7282802A06626"
+				"4F87B7DA47087F97"
 			]
 			description: ["它使用微型生态系统模拟计算，并将结果转化为综合解决方案。是高速、高吞吐量的计算设备。"]
 			id: "5E7F20C5F8530E1E"
@@ -128,8 +129,8 @@
 				item: "kubejs:bioware_processor"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 10.0d
+			x: 8.0d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -143,7 +144,7 @@
 				item: "kubejs:bioware_assembly"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 10.0d
 			y: 10.0d
 		}
 		{
@@ -156,7 +157,7 @@
 				item: "kubejs:bioware_computer"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 10.0d
 			y: 8.0d
 		}
 		{
@@ -172,7 +173,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
@@ -183,8 +184,8 @@
 				item: "gtceu:ruthenium_trinium_americium_neutronate_ingot"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 2.0d
+			x: 8.0d
+			y: 4.0d
 		}
 		{
 			description: ["聚酰亚胺是一种特种工程材料，广泛应用在航空、航天、微电子、纳米、液晶、分离膜、激光等领域"]
@@ -195,8 +196,8 @@
 				title: "聚酰亚胺"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 10.0d
+			x: 4.0d
+			y: 11.0d
 		}
 		{
 			dependencies: ["59CA7B4A4A417B53"]
@@ -207,8 +208,8 @@
 				item: "gtceu:pikyonium_ingot"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 8.0d
+			x: 2.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["1FA9E56114BFABF5"]
@@ -220,8 +221,8 @@
 				item: "gtceu:circuit_assembly_line"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 10.0d
+			x: 12.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["7204F1B6BCC74F1C"]
@@ -234,8 +235,8 @@
 				item: "gtceu:plasma_condenser"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 8.0d
+			x: 12.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -249,8 +250,8 @@
 				item: "kubejs:bioware_processing_core"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 8.0d
+			x: 7.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -266,8 +267,8 @@
 				item: "kubejs:bioware_boule"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 6.0d
+			x: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["7A7C73D046390488"]
@@ -325,8 +326,8 @@
 				item: "kubejs:abyssalalloy_coil_block"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 10.0d
+			x: 0.0d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -339,8 +340,8 @@
 				item: "gtceu:highurabilityompoundteel_ingot"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 10.0d
+			x: 2.0d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -363,7 +364,7 @@
 			]
 			title: "山铜与秘银"
 			x: 4.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -417,7 +418,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -431,8 +432,8 @@
 				item: "kubejs:bioware_printed_circuit_board"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 8.0d
+			x: 4.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["264EA49453E188C4"]
@@ -442,68 +443,8 @@
 				item: "gtceu:neutronium_wafer"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"264EA49453E188C4"
-				"7AE40ADC74AAA54B"
-			]
-			description: ["新的单晶硅，目前不需要"]
-			id: "01433D78C43AD215"
-			tasks: [{
-				id: "4F8AB9CCDC8174BC"
-				item: "kubejs:rutherfordium_neutronium_boule"
-				type: "item"
-			}]
-			x: 6.5d
-			y: 4.0d
-		}
-		{
-			dependencies: ["53DEE1A65051E06F"]
-			description: ["衰变锕"]
-			id: "7AE40ADC74AAA54B"
-			tasks: [{
-				id: "0EB322451B4A8795"
-				item: "gtceu:rutherfordium_dust"
-				type: "item"
-			}]
-			x: 5.0d
-			y: 4.0d
-		}
-		{
-			dependencies: [
-				"056569C44B1B5E25"
-				"5D4131C48F9BAE46"
-			]
-			description: ["不要去找矿石，衰变镭获取"]
-			id: "53DEE1A65051E06F"
-			tasks: [{
-				id: "7A9EEB0C236E8FE7"
-				item: "gtceu:actinium_dust"
-				type: "item"
-			}]
-			x: 3.5d
-			y: 4.0d
-		}
-		{
-			description: ["从铀矿中获取（硫酸铀废液）"]
-			id: "056569C44B1B5E25"
-			tasks: [
-				{
-					id: "549B46CC775A28DF"
-					item: "gtceu:radium_dust"
-					type: "item"
-				}
-				{
-					id: "08E004FFFF2D9262"
-					item: "gtceu:tiny_radium_dust"
-					type: "item"
-				}
-			]
-			x: 2.0d
-			y: 4.0d
+			x: 8.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["1DFC7DC123A3D830"]
@@ -513,8 +454,8 @@
 				item: "gtceu:mega_blast_furnace"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 2.0d
+			x: 10.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1DFC7DC123A3D830"]
@@ -526,8 +467,8 @@
 				item: "gtceu:mega_vacuum_freezer"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 0.0d
+			x: 10.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -544,8 +485,8 @@
 				item: "gtceu:super_blast_smelter"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 2.0d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1DFC7DC123A3D830"]
@@ -555,8 +496,8 @@
 				item: "gtceu:mega_alloy_blast_smelter"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 4.0d
+			x: 10.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["6D83BAAC7DB34D51"]
@@ -582,13 +523,13 @@
 				item: "gtceu:uv_energy_input_hatch"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 0.0d
+			x: 0.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
 				"2802E34A99CE1D79"
-				"07234E44D2E88932"
+				"035C470213E8B4DB"
 			]
 			id: "24585C3114095227"
 			tasks: [{
@@ -596,19 +537,8 @@
 				item: "kubejs:pellet_antimatter"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["035C470213E8B4DB"]
-			id: "07234E44D2E88932"
-			tasks: [{
-				id: "38B62996832E4704"
-				item: "gtceu:uv_field_generator"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 0.0d
+			x: 7.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
@@ -619,7 +549,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
@@ -629,8 +559,74 @@
 				item: "gtceu:zpm_fluid_drilling_rig"
 				type: "item"
 			}]
+			x: 9.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"02F523E003E1C93D"
+				"035C470213E8B4DB"
+			]
+			description: ["优化你的产线"]
+			id: "16C93F76F74CB8DB"
+			tasks: [{
+				id: "42B8B94BB1B32E83"
+				item: "gtceu:chemical_distort"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"0A2D46609F5C3CAB"
+				"4F87B7DA47087F97"
+			]
+			description: ["电解机、电磁选矿机和两极磁化机的激光版本"]
+			id: "3565D2D5E0A2CEDF"
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [{
+				id: "30D756E7388280AB"
+				item: "gtceu:superconducting_electromagnetism"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["0A2D46609F5C3CAB"]
+			description: ["后面的电路装配线要使用"]
+			id: "1385E89DD3FD663B"
+			tasks: [{
+				id: "68A5969FB9056BA3"
+				item: "kubejs:precision_circuit_assembly_robot_mk1"
+				type: "item"
+			}]
 			x: 10.0d
-			y: 4.0d
+			y: 12.0d
+		}
+		{
+			id: "4F87B7DA47087F97"
+			tasks: [{
+				id: "5AD3E4D68E41CC30"
+				item: "gtceu:mutated_living_solder_bucket"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["7C23CC6ADDC33EA0"]
+			description: ["大硅岩~~狠狠发电~~"]
+			id: "09E013C97E05C052"
+			tasks: [{
+				id: "6D5ADEFDD6695856"
+				item: "gtceu:large_naquadah_reactor"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
 		}
 	]
 	subtitle: ["Tier8-UV"]
