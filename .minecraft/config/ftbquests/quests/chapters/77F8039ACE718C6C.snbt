@@ -392,7 +392,10 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["79E81CC078F246C0"]
+			dependencies: [
+				"79E81CC078F246C0"
+				"0C0B675E44AAB734"
+			]
 			id: "43DE0784E5D32B46"
 			rewards: [{
 				id: "61C758028D9C9DB9"
@@ -620,7 +623,7 @@
 				"5CD26DECB937FC71"
 				"740C2D1F3F420480"
 				"6D729450ED86BDAF"
-				"3C91E284A9A03B1B"
+				"168D45599EC92F20"
 			]
 			dependency_requirement: "one_completed"
 			description: [
@@ -663,11 +666,18 @@
 			dependencies: ["77A1011F608079C9"]
 			description: ["电阻有很多配方，都是一样的"]
 			id: "6D729450ED86BDAF"
-			rewards: [{
-				id: "108CAF7D675F876A"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "4D503BB0AABEF8D4"
+					item: "gtceu:ulv_primitive_magic_energy"
+					type: "item"
+				}
+				{
+					id: "0D1E84926EC43785"
+					item: "minecraft:end_crystal"
+					type: "item"
+				}
+			]
 			tasks: [{
 				id: "72F7066EE104AACE"
 				item: "gtceu:resistor"
@@ -1209,6 +1219,35 @@
 			title: "这是垃圾桶"
 			x: 14.0d
 			y: 4.0d
+		}
+		{
+			dependencies: [
+				"6D729450ED86BDAF"
+				"5CD26DECB937FC71"
+			]
+			hide_dependent_lines: true
+			id: "0C0B675E44AAB734"
+			tasks: [{
+				id: "4A1CC61F3161828C"
+				item: "gtceu:ulv_packer"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"0C0B675E44AAB734"
+				"3C91E284A9A03B1B"
+			]
+			id: "168D45599EC92F20"
+			tasks: [{
+				id: "45D2758CADA084A2"
+				item: "gtceu:red_alloy_single_cable"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 5.5d
 		}
 	]
 	subtitle: ["Tier0-ULV"]

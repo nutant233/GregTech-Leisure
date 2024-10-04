@@ -129,11 +129,18 @@
 				item: "gtceu:silver_credit"
 				type: "item"
 			}]
-			tasks: [{
-				id: "588BCA87500214EF"
-				item: "gtceu:lv_wiremill"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "588BCA87500214EF"
+					item: "gtceu:lv_wiremill"
+					type: "item"
+				}
+				{
+					id: "7429EA91D17E9FC1"
+					item: "gtceu:lv_loom"
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: -4.0d
 		}
@@ -150,11 +157,23 @@
 				item: "gtceu:silver_credit"
 				type: "item"
 			}]
-			tasks: [{
-				id: "137AFD6CB3927548"
-				item: "gtceu:lv_bender"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "137AFD6CB3927548"
+					item: "gtceu:lv_bender"
+					type: "item"
+				}
+				{
+					id: "31C55FE62E5DBBFF"
+					item: "gtceu:lv_cluster"
+					type: "item"
+				}
+				{
+					id: "230BED5CBC44E455"
+					item: "gtceu:lv_rolling"
+					type: "item"
+				}
+			]
 			x: 3.0d
 			y: -4.0d
 		}
@@ -796,7 +815,10 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["35F31D71CC8B67CF"]
+			dependencies: [
+				"35F31D71CC8B67CF"
+				"6C5150B61C92FADE"
+			]
 			id: "49ABB341017BAE85"
 			rewards: [{
 				id: "3694138B038CCF53"
@@ -1181,6 +1203,21 @@
 			title: "总成"
 			x: -2.0d
 			y: -2.0d
+		}
+		{
+			dependencies: [
+				"3DDFE62FF48A9135"
+				"2D6BB32B642AE8BA"
+			]
+			hide_dependent_lines: true
+			id: "6C5150B61C92FADE"
+			tasks: [{
+				id: "72370D90BB8ACB58"
+				item: "gtceu:lv_laminator"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -1.0d
 		}
 	]
 	subtitle: ["Tier1-LV"]
