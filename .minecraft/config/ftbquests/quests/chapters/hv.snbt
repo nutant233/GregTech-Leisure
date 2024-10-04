@@ -6,7 +6,12 @@
 	icon: "gtceu:hv_electric_motor"
 	id: "3FFA6F604319D492"
 	order_index: 3
-	quest_links: [ ]
+	quest_links: [{
+		id: "7F3B103F26A80599"
+		linked_quest: "282F333573FB2F2F"
+		x: 14.0d
+		y: 0.0d
+	}]
 	quests: [
 		{
 			dependencies: [
@@ -174,10 +179,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"0243CEA5EE705EB0"
-				"157A951DA379C259"
-			]
+			dependencies: ["0243CEA5EE705EB0"]
 			dependency_requirement: "one_started"
 			id: "3FCF807491579B94"
 			rewards: [{
@@ -190,7 +192,7 @@
 				item: "gtceu:micro_processor"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 8.0d
 		}
 		{
@@ -302,7 +304,7 @@
 				item: "gtceu:plastic_printed_circuit_board"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 6.0d
 			y: 8.0d
 		}
 		{
@@ -368,7 +370,7 @@
 				item: "gtceu:plastic_circuit_board"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 4.0d
 			y: 8.0d
 		}
 		{
@@ -389,7 +391,7 @@
 		}
 		{
 			dependencies: ["7940CFD732610594"]
-			description: [""]
+			description: ["在EV的时候你就需要大量的奇奇怪怪的化工原料，现在不把石化生化联合产线搭好，后面EV会非常坐牢"]
 			id: "2EAAF5A6510D0EFE"
 			rewards: [{
 				id: "5BAC2973956359FC"
@@ -609,7 +611,7 @@
 				}
 			]
 			title: "贴片"
-			x: 4.0d
+			x: 2.0d
 			y: 8.0d
 		}
 		{
@@ -742,23 +744,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["2EAAF5A6510D0EFE"]
-			description: ["在EV的时候你就需要大量的奇奇怪怪的化工原料，现在不把石化生化联合产线搭好，后面EV会非常坐牢"]
-			id: "57A4521AB4244810"
-			rewards: [{
-				id: "751F0D369F8AECEC"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
-			tasks: [{
-				id: "45688891118E1797"
-				title: "石化生化产线特别有必要"
-				type: "checkmark"
-			}]
-			x: 14.0d
-			y: 0.0d
-		}
-		{
 			dependencies: ["1A48D2DB936FF632"]
 			description: ["终于可以获得研磨的副产物了"]
 			id: "24A12D2F592DC50D"
@@ -869,6 +854,18 @@
 			}]
 			x: 0.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["1A48D2DB936FF632"]
+			description: ["玩具"]
+			id: "0752A7F2C67CDF76"
+			tasks: [{
+				id: "44035FCFBB02978D"
+				item: "gtceu:desulfurizer"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 8.0d
 		}
 	]
 	subtitle: ["Tier3-HV"]

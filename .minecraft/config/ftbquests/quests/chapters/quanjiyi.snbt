@@ -1,0 +1,522 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "quanjiyi"
+	group: "24F4987B35ABEE82"
+	icon: "gtceu:stem_cells"
+	id: "74BC6A15AFFE10CF"
+	order_index: 7
+	quest_links: [{
+		id: "7A88320065F3B0AF"
+		linked_quest: "766D051A40AB5324"
+		x: 1.5d
+		y: 4.5d
+	}]
+	quests: [
+		{
+			dependencies: ["7979C5ACF9A0C8D2"]
+			id: "38091E7431B96FF6"
+			tasks: [{
+				id: "73C4EE18E31D6F42"
+				title: "硅岩处理"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "5D1037E8365CC910"
+			subtitle: "开挖"
+			tasks: [{
+				id: "11D65D25476CBE44"
+				item: "gtceu:raw_naquadah"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5D1037E8365CC910"]
+			id: "09EBEB8F3415BB6E"
+			tasks: [{
+				id: "5B07A2D41693C6E0"
+				item: "gtceu:naquadah_dust"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5D1037E8365CC910"]
+			id: "36E8964CD1BE7569"
+			subtitle: "洁净硅岩粉电磁选矿"
+			tasks: [{
+				id: "57336BFC9D32EFF4"
+				item: "gtceu:enriched_naquadah_dust"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 5.5d
+		}
+		{
+			id: "0255D733668E3BF7"
+			tasks: [{
+				id: "21B669A650122204"
+				item: "gtceu:raw_enriched_naquadah"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 8.5d
+		}
+		{
+			id: "67ECDD5601DBBB5B"
+			tasks: [{
+				id: "1DB0385AC5D4B2A6"
+				item: "gtceu:raw_trinium_compound"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 10.5d
+		}
+		{
+			dependencies: ["09EBEB8F3415BB6E"]
+			id: "3703156457BD35FD"
+			tasks: [{
+				id: "540567C813999894"
+				item: "gtceu:impure_enriched_naquadah_solution_bucket"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["3703156457BD35FD"]
+			id: "59B5170E8A1265E4"
+			tasks: [{
+				id: "09D8310F47324DBF"
+				item: "gtceu:hexafluoride_enriched_naquadah_solution_bucket"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["59B5170E8A1265E4"]
+			id: "57DBBE2F51BB822E"
+			tasks: [{
+				id: "44F1D02CEFA7226E"
+				item: "gtceu:xenon_hexafluoro_enriched_naquadate_bucket"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["57DBBE2F51BB822E"]
+			dependency_requirement: "one_completed"
+			id: "76A2D869A0D5C41E"
+			tasks: [{
+				id: "5DF2D04D86807663"
+				item: "gtceu:enriched_naquadah_solution_bucket"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["76A2D869A0D5C41E"]
+			id: "36FB56BD8B6415D7"
+			tasks: [{
+				id: "7ADC1AEDE66CEBB2"
+				item: "gtceu:acidic_enriched_naquadah_solution_bucket"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["36FB56BD8B6415D7"]
+			id: "1CD2A15A1C5B1395"
+			tasks: [{
+				id: "4838581B78418606"
+				item: "gtceu:enriched_naquadah_sulfate_dust"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["36FB56BD8B6415D7"]
+			id: "3868B8E8021CC035"
+			tasks: [{
+				id: "5062B0E2FE1808C7"
+				item: "gtceu:enriched_naquadah_waste_bucket"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["36E8964CD1BE7569"]
+			id: "2F4E165431B56059"
+			tasks: [{
+				id: "36ADC52B2F4EB070"
+				item: "gtceu:impure_naquadria_solution_bucket"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["2F4E165431B56059"]
+			id: "147D445B1E2E2BDB"
+			tasks: [{
+				id: "10DE0C7406D7B55D"
+				item: "gtceu:hexafluoride_naquadria_solution_bucket"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["147D445B1E2E2BDB"]
+			id: "2C6EF38A0BE22028"
+			tasks: [{
+				id: "2C3E0982A668A0A2"
+				item: "gtceu:radon_naquadria_octafluoride_bucket"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["2C6EF38A0BE22028"]
+			id: "7DC037BA0E0A18DA"
+			tasks: [{
+				id: "40B06BBBE27665E9"
+				item: "gtceu:naquadria_caesium_xenonnonfluoride_bucket"
+				type: "item"
+			}]
+			x: 9.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["7DC037BA0E0A18DA"]
+			id: "2405FED0FD07E879"
+			tasks: [{
+				id: "302D5DEB070303B7"
+				item: "gtceu:naquadria_caesiumfluoride_bucket"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["2405FED0FD07E879"]
+			id: "4EDDD95D554B8643"
+			tasks: [{
+				id: "633E135C6838F62A"
+				item: "gtceu:acidic_naquadria_caesiumfluoride_bucket"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["2405FED0FD07E879"]
+			id: "14C55CE8EA930227"
+			tasks: [{
+				id: "2BF33E3351168D61"
+				item: "gtceu:naquadria_solution_bucket"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["14C55CE8EA930227"]
+			id: "3F165F658B061FB8"
+			tasks: [{
+				id: "113061A83BBB5DDF"
+				item: "gtceu:acidic_naquadria_solution_bucket"
+				type: "item"
+			}]
+			x: 13.5d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"3F165F658B061FB8"
+				"4EDDD95D554B8643"
+			]
+			dependency_requirement: "one_completed"
+			id: "30D6A973D89212B9"
+			tasks: [{
+				id: "4199544AE7A66761"
+				item: "gtceu:naquadria_sulfate_dust"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["3F165F658B061FB8"]
+			id: "6E2187ECE4FD9684"
+			tasks: [{
+				id: "0BA49C7857B6C915"
+				item: "gtceu:naquadria_waste_bucket"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"6E2187ECE4FD9684"
+				"4EDDD95D554B8643"
+			]
+			dependency_requirement: "one_completed"
+			id: "7C45390524D47942"
+			tasks: [{
+				id: "30DEB628EC345633"
+				item: "gtceu:trinium_sulfide_dust"
+				type: "item"
+			}]
+			x: 16.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["76A2D869A0D5C41E"]
+			id: "40823ABFBBE43496"
+			tasks: [{
+				id: "3985EEFFFEEAF1BC"
+				item: "gtceu:radon_cracked_enriched_aquadah_bucket"
+				type: "item"
+			}]
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["40823ABFBBE43496"]
+			id: "7248EC9288C91A33"
+			tasks: [{
+				id: "5747AD76A31CD66B"
+				item: "gtceu:enriched_naquadah_fuel_bucket"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["09EBEB8F3415BB6E"]
+			id: "1EE19E725DC91553"
+			tasks: [{
+				id: "0D62EAD7D2D8025B"
+				item: "gtceu:naquadah_solution_bucket"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1EE19E725DC91553"]
+			id: "7D1E1EB10A6FFE98"
+			tasks: [{
+				id: "144F9B3C76BDFECA"
+				item: "gtceu:fluorine_cracked_aquadah_bucket"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7D1E1EB10A6FFE98"]
+			id: "75D953244E729FEC"
+			tasks: [{
+				id: "5EE6707C631C948A"
+				item: "gtceu:naquadah_fuel_bucket"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"75D953244E729FEC"
+				"7248EC9288C91A33"
+				"14C55CE8EA930227"
+			]
+			id: "0D53712AA7F733A8"
+			tasks: [{
+				id: "041A075952C819BA"
+				item: "gtceu:hyper_fuel_1_bucket"
+				type: "item"
+			}]
+			x: 15.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0255D733668E3BF7"]
+			id: "4E3BD7980CD652A5"
+			tasks: [{
+				id: "59AAD833ADDB0087"
+				item: "gtceu:milled_enriched_naquadah"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["4E3BD7980CD652A5"]
+			id: "6A5AB82C3E14D091"
+			tasks: [{
+				id: "4666200C2877EED6"
+				item: "gtceu:enriched_naquadah_front_bucket"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 8.5d
+		}
+		{
+			id: "17587F644F107F5A"
+			tasks: [{
+				id: "62414FB846FC080E"
+				title: "这是细菌产线"
+				type: "checkmark"
+			}]
+			x: 20.0d
+			y: 0.0d
+		}
+		{
+			id: "7E303544BBD9CE33"
+			tasks: [{
+				id: "68C1BA0EC8AAA7FF"
+				item: "gtceu:bacteria_bucket"
+				type: "item"
+			}]
+			x: 21.5d
+			y: 1.0d
+		}
+		{
+			id: "4802DB9BC8D0D21A"
+			tasks: [{
+				id: "561CF26C3A94C2D0"
+				item: "gtceu:bacterial_sludge_bucket"
+				type: "item"
+			}]
+			x: 23.0d
+			y: 1.0d
+		}
+		{
+			id: "0B40DCF62A262691"
+			tasks: [{
+				id: "1B99B0C58124C4C4"
+				item: "gtceu:enriched_bacterial_sludge_bucket"
+				type: "item"
+			}]
+			x: 24.5d
+			y: 1.0d
+		}
+		{
+			id: "2A60E344D90D8C9C"
+			tasks: [{
+				id: "774C9EC5E8963B8F"
+				item: "gtceu:mutagen_bucket"
+				type: "item"
+			}]
+			x: 26.0d
+			y: 1.0d
+		}
+		{
+			id: "611B71A73B739A74"
+			tasks: [{
+				id: "207880EB67E127A0"
+				item: "gtceu:collagen_dust"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 3.0d
+		}
+		{
+			id: "1CBBE2C49C63ADCE"
+			tasks: [{
+				id: "76858BBD7F6126A8"
+				item: "gtceu:gelatin_mixture_bucket"
+				type: "item"
+			}]
+			x: 23.0d
+			y: 3.0d
+		}
+		{
+			id: "40CD3CA827777631"
+			tasks: [{
+				id: "4CFB8B9D04B54C57"
+				item: "gtceu:gelatin_dust"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 3.0d
+		}
+		{
+			id: "604FEBBCB875DB4D"
+			tasks: [{
+				id: "10EA7BBAE66E5D3D"
+				item: "gtceu:water_agar_mix_bucket"
+				type: "item"
+			}]
+			x: 25.0d
+			y: 3.0d
+		}
+		{
+			id: "77E2E85598DA3C95"
+			tasks: [{
+				id: "2C69ABF17F23BA7D"
+				item: "gtceu:agar_dust"
+				type: "item"
+			}]
+			x: 26.0d
+			y: 3.0d
+		}
+		{
+			id: "630AFAD7AC9F27B2"
+			tasks: [{
+				id: "654AEAC9BD6DB656"
+				item: "gtceu:raw_growth_medium_bucket"
+				type: "item"
+			}]
+			x: 27.5d
+			y: 2.0d
+		}
+		{
+			id: "7738459E5B31F49F"
+			tasks: [{
+				id: "40A1543C56826949"
+				item: "gtceu:sterilized_growth_medium_bucket"
+				type: "item"
+			}]
+			x: 29.0d
+			y: 2.0d
+		}
+		{
+			id: "6F655B72ABC882FE"
+			tasks: [{
+				id: "52765346726A02DE"
+				item: "gtceu:stem_cells"
+				type: "item"
+			}]
+			x: 30.5d
+			y: 2.0d
+		}
+		{
+			id: "70A3E21448780E5C"
+			tasks: [{
+				id: "3BE75A7C30BA5A84"
+				item: "kubejs:glacio_spirit"
+				type: "item"
+			}]
+			x: 29.0d
+			y: 0.5d
+		}
+	]
+	title: "资源获取（二）"
+}

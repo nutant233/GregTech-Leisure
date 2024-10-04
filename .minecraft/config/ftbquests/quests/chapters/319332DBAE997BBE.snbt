@@ -6,14 +6,22 @@
 	icon: "gtceu:luv_electric_motor"
 	id: "319332DBAE997BBE"
 	order_index: 6
-	quest_links: [{
-		id: "2D863FE0CCAA0BFC"
-		linked_quest: "4BFA114E12BCB163"
-		shape: "rsquare"
-		size: 2.0d
-		x: 2.0d
-		y: 0.0d
-	}]
+	quest_links: [
+		{
+			id: "2D863FE0CCAA0BFC"
+			linked_quest: "4BFA114E12BCB163"
+			shape: "rsquare"
+			size: 2.0d
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "0CAFD876C525D8C6"
+			linked_quest: "38091E7431B96FF6"
+			x: 2.0d
+			y: 2.0d
+		}
+	]
 	quests: [
 		{
 			dependencies: ["73613E3EBEFFB326"]
@@ -24,7 +32,7 @@
 				item: "gtceu:naquadah_dust"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: 4.0d
 		}
 		{
@@ -35,7 +43,7 @@
 				item: "gtceu:naquadah_coil_block"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 6.0d
 		}
 		{
@@ -51,8 +59,8 @@
 				item: "gtceu:enriched_naquadah_ingot"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 4.0d
+			x: 5.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["2BEF03C52636E165"]
@@ -65,7 +73,7 @@
 				item: "gtceu:naquadah_alloy_ingot"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 10.0d
 		}
 		{
@@ -77,7 +85,7 @@
 				item: "gtceu:indium_tin_barium_titanium_cuprate_ingot"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 6.0d
 		}
 		{
@@ -91,7 +99,7 @@
 				item: "gtceu:superconducting_coil"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 6.0d
 		}
 		{
@@ -185,8 +193,8 @@
 				item: "gtceu:crystal_processor_computer"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 6.0d
+			x: 14.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -199,8 +207,8 @@
 				item: "gtceu:crystal_processor_mainframe"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 8.0d
+			x: 14.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["4068B8F601B041D9"]
@@ -214,20 +222,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["5B01312E34A3AD60"]
-			description: [""]
-			id: "72D3B5BC37024815"
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "6A7178D43D22A237"
-				item: "gtceu:active_transformer"
-				type: "item"
-			}]
-			x: 10.0d
-			y: 6.0d
-		}
-		{
 			dependencies: ["09F132EE8A88C872"]
 			hide_dependency_lines: true
 			id: "4381BC8012E94E0A"
@@ -236,7 +230,7 @@
 				item: "gtceu:uhpic_chip"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 10.0d
 			y: 2.0d
 		}
 		{
@@ -275,7 +269,7 @@
 				item: "gtceu:luv_energy_input_hatch"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: 2.0d
 		}
 		{
@@ -286,40 +280,8 @@
 				item: "gtceu:trinium_coil_block"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 8.0d
-		}
-		{
-			dependencies: ["233CA36D529EC3FB"]
-			description: ["含有无法挖掘的矿物"]
-			id: "6DDE77C23FC5D067"
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "0F730F8E535FA432"
-				item: "gtceu:large_void_miner"
-				type: "item"
-			}]
-			x: 12.0d
-			y: 10.0d
-		}
-		{
-			dependencies: [
-				"52DF531AFB3A07CE"
-				"2A81EA75E3DD41A3"
-			]
-			description: ["效率更高"]
-			id: "52980D117AB477B2"
-			shape: "rsquare"
-			size: 1.0d
-			tasks: [{
-				id: "2E8C86DE512279CC"
-				item: "gtceu:void_fluid_drilling_rig"
-				type: "item"
-			}]
-			title: "来自虚空"
-			x: 14.0d
-			y: 0.0d
 		}
 		{
 			dependencies: ["233CA36D529EC3FB"]
@@ -332,8 +294,8 @@
 				item: "gtceu:precision_assembler"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 8.0d
+			x: 16.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["23B23867F311BF51"]
@@ -344,7 +306,7 @@
 				item: "gtceu:uranium_rhodium_dinaquadide_ingot"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 10.0d
 		}
 		{
@@ -355,7 +317,7 @@
 				item: "gtceu:luv_field_generator"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 8.0d
 		}
 		{
@@ -372,7 +334,7 @@
 				item: "gtceu:research_station"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: 8.0d
 		}
 		{
@@ -389,42 +351,7 @@
 				item: "gtceu:high_performance_computation_array"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 10.0d
-		}
-		{
-			dependencies: [
-				"53D0B2B73387C7CE"
-				"042A0E98DC1084B3"
-			]
-			description: [" 磁共振电路！启动！"]
-			id: "0DC5BFACB3D4BC95"
-			tasks: [{
-				id: "4A9623D2D33B88B9"
-				item: "gtceu:magneto_resonatic_dust"
-				type: "item"
-			}]
-			x: 16.0d
-			y: 10.0d
-		}
-		{
-			dependencies: ["6DDE77C23FC5D067"]
-			description: ["锆在木卫三，另一个只能虚空采矿了"]
-			id: "042A0E98DC1084B3"
-			tasks: [
-				{
-					id: "0B436E19F0479E87"
-					item: "gtceu:zirconium_dust"
-					type: "item"
-				}
-				{
-					id: "3EE902C024F94F0D"
-					item: "gtceu:tellurium_dust"
-					type: "item"
-				}
-			]
-			title: "锆与碲"
-			x: 14.0d
+			x: 12.0d
 			y: 10.0d
 		}
 		{
@@ -441,18 +368,7 @@
 				item: "gtceu:luv_assembler"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 0.0d
-		}
-		{
-			description: ["新的材料"]
-			id: "076BD82842C349A3"
-			tasks: [{
-				id: "464C4FCFEC9CD809"
-				item: "gtceu:polyphenylene_sulfide_foil"
-				type: "item"
-			}]
-			x: 8.0d
+			x: 12.0d
 			y: 0.0d
 		}
 		{
@@ -495,7 +411,7 @@
 				item: "gtceu:naquadah_ingot"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: 6.0d
 		}
 		{
@@ -511,7 +427,7 @@
 				item: "gtceu:naquadah_boule"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 10.0d
 			y: 0.0d
 		}
 		{
@@ -525,7 +441,7 @@
 				item: "gtceu:trinium_ingot"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 8.0d
 		}
 		{
@@ -539,7 +455,7 @@
 				item: "gtceu:naquadria_ingot"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 10.0d
 		}
 		{
@@ -550,15 +466,19 @@
 				item: "ad_astra:calorite_ingot"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: 8.0d
 		}
 		{
 			dependencies: [
 				"66AE53E13E3C3C19"
 				"0485D45408234C99"
+				"0507FDF7BECE29AF"
 			]
-			description: ["你应该已经开始采流体矿脉了，一定是吧"]
+			description: [
+				"你应该已经开始采流体矿脉了，一定是吧"
+				"然后你就可以去地狱了"
+			]
 			id: "67784DEB22D18308"
 			rewards: [{
 				id: "6798C71A84FECE4E"
@@ -588,17 +508,19 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
+			x: 4.0d
 			y: 10.0d
 		}
 		{
-			dependencies: ["7B412E455E2C321B"]
+			dependencies: [
+				"7B412E455E2C321B"
+				"2AA63D77B0E86D2E"
+			]
 			description: [
 				"离心核废料得到小搓钋"
 				""
 				"其产物处理线路复杂请仔细查看"
 			]
-			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "766D051A40AB5324"
 			tasks: [
@@ -618,8 +540,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: 4.0d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["52DF531AFB3A07CE"]
@@ -637,7 +559,7 @@
 					type: "item"
 				}
 			]
-			x: 12.0d
+			x: 14.0d
 			y: 0.0d
 		}
 		{
@@ -655,7 +577,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["5B73961795BE42EE"]
@@ -665,8 +587,8 @@
 				item: "gtceu:flotation_cell_regulator"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 2.0d
+			x: 2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["2588A0EF7F27DE5B"]
@@ -676,8 +598,8 @@
 				item: "gtceu:vacuum_drying_furnace"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 2.0d
+			x: 2.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["4172820CE8E15F90"]
@@ -701,6 +623,58 @@
 			}]
 			x: 14.0d
 			y: 4.0d
+		}
+		{
+			dependencies: ["298369255C8130F7"]
+			id: "0723418AF58675E7"
+			optional: true
+			tasks: [{
+				id: "619E79A8D61563CA"
+				item: "gtceu:advanced_data_access_hatch"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["1F0956C3BD4745A1"]
+			id: "2AA63D77B0E86D2E"
+			rewards: [{
+				id: "74F83E0CD43D15C7"
+				item: "avaritia:infinity_hoe"
+				type: "item"
+			}]
+			tasks: [{
+				id: "07D2F38F2B6D6996"
+				item: "gtceu:fall_king_ingot"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4BFA114E12BCB163"]
+			description: ["奇妙科技"]
+			id: "12F9033C4C2B29EB"
+			tasks: [{
+				id: "3BC83ABCD0AD2F48"
+				item: "gtceu:wood_distillation"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4BFA114E12BCB163"]
+			description: ["有并行的化学反应釜"]
+			id: "4CDCF542F45205EB"
+			tasks: [{
+				id: "29BFCB27C5CDC79E"
+				item: "gtceu:chemical_plant"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Tier6-LuV"]

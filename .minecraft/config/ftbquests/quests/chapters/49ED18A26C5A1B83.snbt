@@ -1146,7 +1146,7 @@
 				"2CCAD0B9D81993B8"
 				"7655EE3D83EBB13E"
 				"473D7D8B36DB5430"
-				"6D3BE9E3D76C71F9"
+				"5672B9E868EDBE4D"
 			]
 			id: "56F2156559F2ADF9"
 			tasks: [{
@@ -1195,7 +1195,7 @@
 				"4BE89B8ACA67B40E"
 				"2C5487A0EC202859"
 				"64FDE4E65171925B"
-				"6D3BE9E3D76C71F9"
+				"5672B9E868EDBE4D"
 			]
 			dependency_requirement: "all_started"
 			id: "6D6A8592BA1B4A3B"
@@ -1822,8 +1822,8 @@
 				item: "gtceu:stellar_forge"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 16.0d
+			x: 18.0d
+			y: 18.0d
 		}
 		{
 			dependencies: [
@@ -1836,8 +1836,8 @@
 				item: "gtceu:star_ultimate_material_forge_factory"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 16.0d
+			x: 20.0d
+			y: 18.0d
 		}
 		{
 			dependencies: ["5672B9E868EDBE4D"]
@@ -1893,17 +1893,14 @@
 			y: 6.0d
 		}
 		{
-			dependencies: [
-				"4CE943B11817839B"
-				"65C4F7EDC0E9D99D"
-			]
+			dependencies: ["65C4F7EDC0E9D99D"]
 			id: "475112AC44A31C2B"
 			tasks: [{
 				id: "25EDEEE4055E596B"
 				item: "gtceu:crystalline_infinity"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 18.0d
 			y: 8.0d
 		}
 		{
@@ -1935,18 +1932,15 @@
 			y: 4.0d
 		}
 		{
-			dependencies: [
-				"6A590699685D1D8A"
-				"6877D6C1A85A3966"
-			]
+			dependencies: ["6A590699685D1D8A"]
 			id: "2DE15692C9088542"
 			tasks: [{
 				id: "64A7E441A9E82D28"
 				item: "gtceu:engraving_laser_plant"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 8.0d
+			x: 20.0d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -1959,14 +1953,11 @@
 				item: "gtceu:dimensional_focus_engraving_array"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 10.0d
+			x: 22.0d
+			y: 12.0d
 		}
 		{
-			dependencies: [
-				"61FC724C91DD34AA"
-				"6A590699685D1D8A"
-			]
+			dependencies: ["6A590699685D1D8A"]
 			id: "4B0E809714EECE13"
 			tasks: [{
 				id: "1E7267EB0741FC05"
@@ -1974,13 +1965,10 @@
 				type: "item"
 			}]
 			x: 20.0d
-			y: 8.0d
+			y: 10.0d
 		}
 		{
-			dependencies: [
-				"4DB8234007297D23"
-				"6A590699685D1D8A"
-			]
+			dependencies: ["6A590699685D1D8A"]
 			id: "2ECC71B099B547DB"
 			tasks: [{
 				id: "5511CF11E64D1A1F"
@@ -1991,17 +1979,15 @@
 			y: 8.0d
 		}
 		{
-			dependencies: [
-				"6646B75F928E5E24"
-				"6A590699685D1D8A"
-			]
+			can_repeat: false
+			dependencies: ["6A590699685D1D8A"]
 			id: "3A5837FABF4B6EB6"
 			tasks: [{
 				id: "2DC64B7250EDB186"
 				item: "gtceu:field_extruder_factory"
 				type: "item"
 			}]
-			x: 16.0d
+			x: 18.0d
 			y: 10.0d
 		}
 		{
@@ -2127,17 +2113,14 @@
 			y: 20.0d
 		}
 		{
-			dependencies: [
-				"23DC6EEC1BCEF845"
-				"1028F818343D7E98"
-			]
+			dependencies: ["23DC6EEC1BCEF845"]
 			id: "3AA303E79FBD0FAC"
 			tasks: [{
 				id: "0D236CC90E4E2797"
 				item: "gtceu:dimensionally_transcendent_mixer"
 				type: "item"
 			}]
-			x: 22.0d
+			x: 14.0d
 			y: 10.0d
 		}
 		{
@@ -2243,47 +2226,38 @@
 			y: 20.0d
 		}
 		{
-			dependencies: [
-				"6A590699685D1D8A"
-				"7B27C60DCA2E3E3B"
-			]
+			dependencies: ["6A590699685D1D8A"]
 			id: "2780147FF749D647"
 			tasks: [{
 				id: "65A659D61B14BBEA"
 				item: "gtceu:mega_extractor"
 				type: "item"
 			}]
-			x: 20.0d
+			x: 22.0d
 			y: 10.0d
 		}
 		{
-			dependencies: [
-				"6A590699685D1D8A"
-				"222812461331CD79"
-			]
+			dependencies: ["6A590699685D1D8A"]
 			id: "59EBDD98D68B56ED"
 			tasks: [{
 				id: "5CF174A68D99AFFD"
 				item: "gtceu:holy_separator"
 				type: "item"
 			}]
-			x: 16.0d
-			y: 8.0d
+			x: 18.0d
+			y: 12.0d
 		}
 		{
-			dependencies: [
-				"253337A8CECFB499"
-				"567F4961F73AF444"
-				"733F780D21B24299"
-			]
+			can_repeat: false
+			dependencies: ["253337A8CECFB499"]
 			id: "3F4B3257D5F782F9"
 			tasks: [{
 				id: "11A938BB2F8591C6"
 				item: "gtceu:superconducting_electromagnetism"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 10.0d
+			x: 20.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["5672B9E868EDBE4D"]
@@ -2420,7 +2394,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 0.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -2434,7 +2408,7 @@
 				type: "item"
 			}]
 			x: 28.0d
-			y: 0.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["45096D94AE6F7864"]
@@ -2445,7 +2419,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -2459,7 +2433,7 @@
 				type: "item"
 			}]
 			x: 28.0d
-			y: 2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["45096D94AE6F7864"]
@@ -2470,7 +2444,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 4.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -2484,7 +2458,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 4.0d
+			y: 10.0d
 		}
 		{
 			dependencies: [
@@ -2498,7 +2472,7 @@
 				type: "item"
 			}]
 			x: 28.0d
-			y: 4.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["45096D94AE6F7864"]
@@ -2509,7 +2483,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 6.0d
+			y: 12.0d
 		}
 		{
 			dependencies: [
@@ -2523,7 +2497,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 6.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["6D3BE9E3D76C71F9"]
@@ -2534,7 +2508,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 8.0d
+			y: 14.0d
 		}
 		{
 			dependencies: [
@@ -2548,7 +2522,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 8.0d
+			y: 14.0d
 		}
 		{
 			dependencies: ["253337A8CECFB499"]
@@ -2559,7 +2533,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 12.0d
+			y: 18.0d
 		}
 		{
 			dependencies: [
@@ -2573,7 +2547,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 12.0d
+			y: 18.0d
 		}
 		{
 			dependencies: [
@@ -2587,7 +2561,7 @@
 				type: "item"
 			}]
 			x: 28.0d
-			y: 12.0d
+			y: 18.0d
 		}
 		{
 			dependencies: ["19C7474792787EE9"]
@@ -2598,7 +2572,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 14.0d
+			y: 20.0d
 		}
 		{
 			dependencies: ["234661B47841AA2B"]
@@ -2609,7 +2583,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 14.0d
+			y: 20.0d
 		}
 		{
 			dependencies: ["5930E12A8BCAF996"]
@@ -2645,7 +2619,7 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["1443E064A0AB0B8B"]
+			dependencies: ["6D3BE9E3D76C71F9"]
 			id: "520122FB3A4F5CFF"
 			tasks: [{
 				id: "5019B21A70F75608"
@@ -2667,7 +2641,7 @@
 			y: 14.0d
 		}
 		{
-			dependencies: ["6D3BE9E3D76C71F9"]
+			dependencies: ["38480A52A13DA157"]
 			id: "21B4AC077D650888"
 			tasks: [{
 				id: "050AE8EA53DC5484"
@@ -2675,7 +2649,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 10.0d
+			y: 16.0d
 		}
 		{
 			dependencies: [
@@ -2689,7 +2663,7 @@
 				type: "item"
 			}]
 			x: 26.0d
-			y: 10.0d
+			y: 16.0d
 		}
 		{
 			dependencies: [
@@ -2703,7 +2677,7 @@
 				type: "item"
 			}]
 			x: 28.0d
-			y: 10.0d
+			y: 16.0d
 		}
 		{
 			dependencies: ["65C4F7EDC0E9D99D"]
@@ -2713,8 +2687,8 @@
 				item: "gtceu:mega_canner"
 				type: "item"
 			}]
-			x: 22.0d
-			y: 12.0d
+			x: 16.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["1443E064A0AB0B8B"]
@@ -2724,8 +2698,8 @@
 				item: "gtceu:fission_reactor"
 				type: "item"
 			}]
-			x: 28.0d
-			y: 6.0d
+			x: 18.0d
+			y: 14.0d
 		}
 		{
 			dependencies: [
@@ -2738,8 +2712,8 @@
 				item: "gtceu:element_copying"
 				type: "item"
 			}]
-			x: 20.0d
-			y: 16.0d
+			x: 22.0d
+			y: 18.0d
 		}
 		{
 			icon: "gtceu:portable_debug_scanner"
@@ -2753,7 +2727,7 @@
 				id: "35D84DB9E78E62B4"
 				type: "checkmark"
 			}]
-			title: "这里有201个多方块"
+			title: "这里有205个多方块"
 			x: -12.0d
 			y: -2.0d
 		}
@@ -2798,8 +2772,8 @@
 				item: "gtceu:atomic_energy_excitation_plant"
 				type: "item"
 			}]
-			x: 22.0d
-			y: 14.0d
+			x: 16.0d
+			y: 16.0d
 		}
 		{
 			dependencies: [
@@ -2932,8 +2906,8 @@
 				item: "gtceu:mega_fluid_heater"
 				type: "item"
 			}]
-			x: 20.0d
-			y: 12.0d
+			x: 16.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["5930E12A8BCAF996"]
@@ -2944,7 +2918,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 0.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["45096D94AE6F7864"]
@@ -2955,7 +2929,7 @@
 				type: "item"
 			}]
 			x: 24.0d
-			y: 2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["5930E12A8BCAF996"]
@@ -2990,8 +2964,8 @@
 				item: "gtceu:mega_distillery"
 				type: "item"
 			}]
-			x: 18.0d
-			y: 12.0d
+			x: 14.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -3006,6 +2980,61 @@
 			}]
 			x: 2.0d
 			y: 16.0d
+		}
+		{
+			dependencies: ["45096D94AE6F7864"]
+			id: "5C12FB74BE35FBFE"
+			tasks: [{
+				id: "76822A4B0E31CFB8"
+				item: "gtceu:digestion_tank"
+				type: "item"
+			}]
+			x: 18.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["45096D94AE6F7864"]
+			id: "58CCDA50B0673DB3"
+			tasks: [{
+				id: "71AC311A1EFBC821"
+				item: "gtceu:dissolving_tank"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 16.0d
+		}
+		{
+			dependencies: ["6D3BE9E3D76C71F9"]
+			id: "0D6B4C0507AC864D"
+			tasks: [{
+				id: "60FF973CF9933299"
+				item: "gtceu:wood_distillation"
+				type: "item"
+			}]
+			x: 16.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["32BD532132423050"]
+			id: "6D66C6C1499330AE"
+			tasks: [{
+				id: "0E5AE870B90C7F33"
+				item: "gtceu:desulfurizer"
+				type: "item"
+			}]
+			x: 20.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["45096D94AE6F7864"]
+			id: "4C4D21DAF791BD04"
+			tasks: [{
+				id: "43D01387B6E43D98"
+				item: "gtceu:large_packer"
+				type: "item"
+			}]
+			x: 22.0d
+			y: 14.0d
 		}
 	]
 	title: "多方块结构"

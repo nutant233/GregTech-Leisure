@@ -12,14 +12,8 @@
 			linked_quest: "776563C5BA327495"
 			shape: "rsquare"
 			size: 2.0d
-			x: 4.0d
-			y: 2.0d
-		}
-		{
-			id: "70FB0919B2F4EE20"
-			linked_quest: "01433D78C43AD215"
-			x: 0.0d
-			y: 6.0d
+			x: 2.0d
+			y: -2.0d
 		}
 		{
 			id: "7F9C7923EEED3AD7"
@@ -27,7 +21,7 @@
 			shape: "rsquare"
 			size: 2.0d
 			x: 0.0d
-			y: 0.0d
+			y: 6.0d
 		}
 	]
 	quests: [
@@ -35,7 +29,6 @@
 			dependencies: [
 				"035C470213E8B4DB"
 				"7204F1B6BCC74F1C"
-				"776563C5BA327495"
 				"3008FED65F71C459"
 			]
 			description: [
@@ -51,7 +44,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["3063F232F801D089"]
@@ -176,8 +169,8 @@
 				item: "gtceu:hexanitrohexaaxaisowurtzitane_dust"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 4.0d
+			x: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -191,7 +184,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["2DD8E128C6E3E41D"]
@@ -201,8 +194,8 @@
 				item: "gtceu:enderium_ingot"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 6.0d
+			x: 6.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -217,8 +210,8 @@
 				item: "gtceu:enderite_ingot"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 8.0d
+			x: 8.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -231,8 +224,8 @@
 				item: "gtceu:adamantium_ingot"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 6.0d
+			x: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["76BAF48FA9D845C6"]
@@ -259,15 +252,14 @@
 		}
 		{
 			dependencies: ["2DD8E128C6E3E41D"]
-			hide_dependent_lines: true
 			id: "2E05225ADF4D7D31"
 			tasks: [{
 				id: "02C39E225C1D5ECD"
 				item: "gtceu:degenerate_rhenium_plate"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 8.0d
+			x: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -284,22 +276,18 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: -2.0d
+			y: 8.0d
 		}
 		{
-			dependencies: [
-				"2FBCD8BCE586ADB8"
-				"09210B5E086F6E1A"
-			]
-			hide_dependent_lines: true
+			dependencies: ["09210B5E086F6E1A"]
 			id: "32A49A2CBFC934C8"
 			tasks: [{
 				id: "0B1D64CEDCD5AB9B"
 				item: "kubejs:titansteel_coil_block"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -2.0d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["7370721CB75472C1"]
@@ -311,7 +299,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: -2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["384CC871242ECF6E"]
@@ -347,7 +335,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["32A49A2CBFC934C8"]
@@ -357,7 +345,7 @@
 				item: "kubejs:space_drone_mk3"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 8.0d
 			y: 8.0d
 		}
 		{
@@ -405,12 +393,12 @@
 				"776563C5BA327495"
 				"1FA9E56114BFABF5"
 				"7204F1B6BCC74F1C"
+				"7EAED8E6D66C24D2"
 			]
 			description: ["需要光刻胶和算力来进行精密联合激光蚀刻"]
-			hide_dependent_lines: true
 			id: "42081F59690E6469"
 			shape: "rsquare"
-			size: 1.0d
+			size: 2.0d
 			tasks: [{
 				id: "6B6EF476B6430A90"
 				item: "gtceu:engraving_laser_plant"
@@ -421,6 +409,7 @@
 		}
 		{
 			dependencies: ["42081F59690E6469"]
+			hide_dependency_lines: true
 			id: "5BFA4802D228358C"
 			tasks: [{
 				id: "7D3290423A198D18"
@@ -441,8 +430,8 @@
 				item: "kubejs:nm_chip"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 4.0d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["7C23CC6ADDC33EA0"]
@@ -631,7 +620,7 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: 2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["776563C5BA327495"]
@@ -644,8 +633,78 @@
 				item: "gtceu:quantanium_ingot"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 4.0d
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7AE40ADC74AAA54B"]
+			description: ["新的单晶硅，目前不需要"]
+			id: "01433D78C43AD215"
+			tasks: [{
+				id: "4F8AB9CCDC8174BC"
+				item: "kubejs:rutherfordium_neutronium_boule"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["53DEE1A65051E06F"]
+			description: ["衰变锕"]
+			id: "7AE40ADC74AAA54B"
+			tasks: [{
+				id: "0EB322451B4A8795"
+				item: "gtceu:rutherfordium_dust"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"056569C44B1B5E25"
+				"5D4131C48F9BAE46"
+			]
+			description: ["不要去找矿石，衰变镭获取"]
+			id: "53DEE1A65051E06F"
+			tasks: [{
+				id: "7A9EEB0C236E8FE7"
+				item: "gtceu:actinium_dust"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			description: [
+				"从铀矿中获取（硫酸铀废液）"
+				"或者凯金化合物处理"
+			]
+			id: "056569C44B1B5E25"
+			tasks: [
+				{
+					id: "549B46CC775A28DF"
+					item: "gtceu:radium_dust"
+					type: "item"
+				}
+				{
+					id: "08E004FFFF2D9262"
+					item: "gtceu:tiny_radium_dust"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "7EAED8E6D66C24D2"
+			tasks: [{
+				id: "502C400FF6B77FF5"
+				item: "gtceu:photoresist_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
 		}
 	]
 	subtitle: ["Tier9-UHV"]

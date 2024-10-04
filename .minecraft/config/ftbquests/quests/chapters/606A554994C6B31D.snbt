@@ -1275,6 +1275,7 @@
 		{
 			can_repeat: true
 			dependencies: ["6967496308DD29AE"]
+			icon: "minecraft:yellow_dye"
 			id: "7B72A96FC0A31033"
 			optional: true
 			rewards: [{
@@ -1284,6 +1285,7 @@
 				type: "choice"
 			}]
 			tasks: [{
+				consume_items: true
 				id: "52079BD0F841DEA6"
 				item: "gtceu:silver_credit"
 				type: "item"
