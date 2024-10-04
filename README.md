@@ -35,7 +35,9 @@
 
 ## 其他信息
 
-服务端可在本仓库的服务端分支中下载
+最新客户端：[下载](https://github.com/nutant233/GregTech-Leisure/archive/refs/heads/main.zip)
+
+服务端：[下载](https://github.com/nutant233/GregTech-Leisure/archive/refs/heads/Server.zip)
 
 如果遇到bug，对该整合包有任何意见，可在issue区域或者QQ群反馈。
 
