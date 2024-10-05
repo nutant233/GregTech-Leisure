@@ -28,8 +28,8 @@
 			description: ["推荐制作一个大型锅炉来生产用不完的蒸汽"]
 			id: "4C591AA4F1D907C1"
 			rewards: [{
-				id: "3772A7250CCE92B7"
-				item: "gtceu:lv_primitive_magic_energy"
+				id: "61F21508E4EB18DC"
+				item: "gtceu:cupronickel_credit"
 				type: "item"
 			}]
 			tasks: [{

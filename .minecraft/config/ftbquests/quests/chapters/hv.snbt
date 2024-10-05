@@ -14,10 +14,7 @@
 	}]
 	quests: [
 		{
-			dependencies: [
-				"2C75EB0628CB491A"
-				"242AFA510EC14878"
-			]
+			dependencies: ["2C75EB0628CB491A"]
 			hide_dependent_lines: true
 			id: "1A48D2DB936FF632"
 			shape: "rsquare"
@@ -48,24 +45,6 @@
 			}]
 			x: 14.0d
 			y: 8.0d
-		}
-		{
-			dependencies: ["4DDF10E2B541BCBF"]
-			id: "7940CFD732610594"
-			rewards: [{
-				id: "1DFFD2F64A2F76AD"
-				item: "gtceu:platinum_credit"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 2.0d
-			tasks: [{
-				id: "6DF561795A593EDB"
-				item: "kubejs:ultima_control_circuit"
-				type: "item"
-			}]
-			x: 10.0d
-			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -181,6 +160,7 @@
 		{
 			dependencies: ["0243CEA5EE705EB0"]
 			dependency_requirement: "one_started"
+			description: ["该淘汰旧系列电路了，推荐铭刻这一系列电路，ULV,LV使用芯片电路"]
 			id: "3FCF807491579B94"
 			rewards: [{
 				id: "62693CFE4D386654"
@@ -217,6 +197,7 @@
 				"5E9EA7E22BE663AF"
 			]
 			dependency_requirement: "one_completed"
+			description: ["EV电路组装前的唯一EV级电路"]
 			id: "1C320B245EAC8D14"
 			min_required_dependencies: 1
 			rewards: [{
@@ -233,7 +214,7 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["1C320B245EAC8D14"]
+			dependencies: ["4DDF10E2B541BCBF"]
 			id: "3461BF0D74E5E8DF"
 			rewards: [{
 				id: "4785F0739BD9FEF4"
@@ -246,7 +227,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -308,7 +289,6 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["7940CFD732610594"]
 			description: ["前往探索宇宙章节了解更多"]
 			id: "0931ECBAAD9252C7"
 			rewards: [
@@ -390,7 +370,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["7940CFD732610594"]
 			description: ["在EV的时候你就需要大量的奇奇怪怪的化工原料，现在不把石化生化联合产线搭好，后面EV会非常坐牢"]
 			id: "2EAAF5A6510D0EFE"
 			rewards: [{
@@ -420,7 +399,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["7940CFD732610594"]
 			id: "027197A71E630966"
 			rewards: [{
 				id: "32C398A7D50E0057"

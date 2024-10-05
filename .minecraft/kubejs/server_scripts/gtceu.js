@@ -915,44 +915,6 @@ ServerEvents.recipes((event) => {
         .duration(140)
         .EUt(30)
 
-    gtr.circuit_assembler("kubejs:basic_control_circuit")
-        .notConsumable("gtceu:vacuum_tube")
-        .itemInputs("gtceu:steel_plate", "minecraft:redstone")
-        .itemOutputs("2x kubejs:basic_control_circuit")
-        .inputFluids("gtceu:glue 20")
-        .duration(40)
-        .EUt(7)
-
-    gtr.circuit_assembler("kubejs:advanced_control_circuit")
-        .notConsumable("gtceu:basic_electronic_circuit")
-        .itemInputs("kubejs:basic_control_circuit", "gtceu:iron_plate", "gtceu:red_alloy_dust")
-        .itemOutputs("2x kubejs:advanced_control_circuit")
-        .inputFluids("gtceu:glue 20")
-        .duration(80)
-        .EUt(16)
-
-    gtr.circuit_assembler("kubejs:elite_control_circuit")
-        .notConsumable("gtceu:good_electronic_circuit")
-        .itemInputs("minecraft:paper", "2x kubejs:advanced_control_circuit", "gtceu:wrought_iron_plate", "gtceu:small_diamond_dust")
-        .itemOutputs("2x kubejs:elite_control_circuit")
-        .inputFluids("gtceu:glue 20")
-        .duration(160)
-        .EUt(30)
-
-    gtr.circuit_assembler("kubejs:ultimate_control_circuit")
-        .notConsumable("gtceu:advanced_integrated_circuit")
-        .itemInputs("gtceu:resin_printed_circuit_board", "kubejs:elite_control_circuit", "gtceu:steel_plate", "gtceu:small_obsidian_dust", "2x gtceu:red_alloy_screw")
-        .itemOutputs("kubejs:ultimate_control_circuit")
-        .inputFluids("gtceu:glue 20")
-        .duration(80)
-        .EUt(120)
-
-    gtr.circuit_assembler("kubejs:ultima_control_circuit")
-        .itemInputs("gtceu:phenolic_printed_circuit_board", "4x kubejs:ultimate_control_circuit", "8x gtceu:red_alloy_foil")
-        .itemOutputs("4x kubejs:ultima_control_circuit")
-        .EUt(480)
-        .duration(200)
-
     const machine_materialas = [
         ["uhv", "europium", "1966080", "uv", "128", "kubejs:nm_chip"],
         ["uev", "mithril", "7864320", "uhv", "256", "kubejs:nm_chip"],
@@ -8065,6 +8027,7 @@ ServerEvents.recipes((event) => {
     gtr.circuit_assembler("kubejs:bioware_circuit_board")
         .itemInputs("32x gtceu:wetware_circuit_board", "8x gtlcore:electricaly_wired_petri_dish", "gtceu:uv_electric_pump", "2x gtceu:luv_sensor", "#gtceu:circuits/luv", "32x gtceu:vanadium_gallium_foil")
         .itemOutputs("32x kubejs:bioware_circuit_board")
+        .inputFluids("gtceu:biohmediumsterilized 1000")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(2400)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
@@ -16887,4 +16850,11 @@ ServerEvents.recipes((event) => {
         .itemOutputs("1x gtceu:sulfur_dust")
         .duration(120)
         .EUt(30)
+
+    gtr.large_boiler("gtceu:tin_bucket")
+        .itemInputs("1x gtceu:tin_ingot")
+        .inputFluids("minecraft:lava 100")
+        .outputFluids("gtceu:tin 144")
+        .duration(5)
+
 })

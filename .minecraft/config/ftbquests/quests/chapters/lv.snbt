@@ -104,10 +104,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"7CB85061F0822830"
-				"553B2D61416792DC"
-			]
+			dependencies: ["7CB85061F0822830"]
 			id: "51B9A72C19F84F0E"
 			shape: "rsquare"
 			size: 2.0d
@@ -514,7 +511,9 @@
 			dependencies: [
 				"0877362A9EE36FB3"
 				"006BBE4D312A2E2E"
+				"5065BEDC95AE564E"
 			]
+			description: ["你可以建造第二台蒸汽电路组装了"]
 			id: "7D399E31506924A0"
 			rewards: [{
 				id: "005FED5AFFB39EE8"
@@ -527,24 +526,6 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: -2.0d
-		}
-		{
-			dependencies: ["7D399E31506924A0"]
-			id: "40C39645B1DE2488"
-			rewards: [{
-				id: "1AD5EB109E14A85F"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 2.0d
-			tasks: [{
-				id: "348825C79AD479CA"
-				item: "kubejs:elite_control_circuit"
-				type: "item"
-			}]
-			x: 12.0d
 			y: -2.0d
 		}
 		{
@@ -928,10 +909,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"40C39645B1DE2488"
-				"0037D6BA6A4ABB72"
-			]
+			dependencies: ["0037D6BA6A4ABB72"]
 			id: "033DE57F0D91698C"
 			tasks: [{
 				id: "139820782C4C2E96"
@@ -942,7 +920,6 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["40C39645B1DE2488"]
 			id: "45321051E19D5C25"
 			rewards: [{
 				id: "377A2142C44ADB94"
@@ -958,10 +935,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"40C39645B1DE2488"
-				"54034055F57DDAA5"
-			]
+			dependencies: ["54034055F57DDAA5"]
 			id: "0D3122E318CB119D"
 			rewards: [{
 				id: "7D96687C8585EE02"
@@ -1152,7 +1126,13 @@
 		}
 		{
 			dependencies: ["4C591AA4F1D907C1"]
+			description: ["可以去小市场兑换一个末地水晶"]
 			id: "1486FC9F82B2E56E"
+			rewards: [{
+				id: "71CF6F2874AB4862"
+				item: "gtceu:lv_primitive_magic_energy"
+				type: "item"
+			}]
 			tasks: [{
 				id: "5EE2778F62F08653"
 				item: "gtceu:generator_array"
@@ -1218,6 +1198,18 @@
 			}]
 			x: 5.0d
 			y: -1.0d
+		}
+		{
+			dependencies: ["7D399E31506924A0"]
+			description: ["用于后续电路制作"]
+			id: "5A7EC4A481B2C343"
+			tasks: [{
+				id: "01370540370FFE76"
+				item: "gtceu:lv_circuit_assembler"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -2.0d
 		}
 	]
 	subtitle: ["Tier1-LV"]

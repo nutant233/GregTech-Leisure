@@ -303,8 +303,9 @@
 			description: ["ULV的超导材料但是你用它做反应堆"]
 			id: "3D65D9712DFB63D9"
 			rewards: [{
-				id: "7FAA57A862B018AE"
-				item: "gtceu:cupronickel_credit"
+				count: 4
+				id: "3E0CDFAF866CD83A"
+				item: "gtceu:pulsating_alloy_quadruple_wire"
 				type: "item"
 			}]
 			tasks: [{
@@ -450,7 +451,9 @@
 		{
 			dependencies: ["30F031CD02425ED7"]
 			description: ["这个你不能像青铜一样手动混合，你只能借助机器的力量合成"]
+			hide_dependent_lines: true
 			id: "3C91E284A9A03B1B"
+			ignore_reward_blocking: true
 			rewards: [{
 				id: "08462119775B14A3"
 				item: "gtceu:cupronickel_credit"
@@ -544,8 +547,14 @@
 			dependencies: [
 				"3C071C0542CF935D"
 				"5CD26DECB937FC71"
+				"0700E34D1AD8B3AD"
 			]
-			description: ["原始人也要组装电路"]
+			description: [
+				"原始人也要组装电路"
+				"要运行首先你得提前有这个电路，然后将电路放入输入总线，打开GUI铭刻电路"
+				"使用它可以将电路产出无条件翻16倍，且使耗能降低一个电压等级，及最多支持到HV电路组装，对应到IV级电路，最大支持8并行"
+				"一台机器只能铭刻一个电路，继续铭刻会覆盖之前的，建议第一个铭刻基础电子电路"
+			]
 			id: "34FCFA114E75D770"
 			rewards: [{
 				id: "0C0731B2ACDDCE0D"
@@ -626,11 +635,7 @@
 				"168D45599EC92F20"
 			]
 			dependency_requirement: "one_completed"
-			description: [
-				"不需要做很多，做几个就行了"
-				""
-				"你其实可以用蒸汽大电装做的"
-			]
+			description: ["需要手搓一部分"]
 			id: "5065BEDC95AE564E"
 			min_required_dependencies: 2
 			rewards: [{
@@ -719,7 +724,7 @@
 		}
 		{
 			dependencies: ["2585418910B6798A"]
-			description: ["离心粘性树脂"]
+			description: ["离心粘性树脂获取，提供更高效的配方"]
 			id: "06285BE2396AB639"
 			rewards: [{
 				id: "2AEAC8B8E1C1EBB2"
@@ -733,48 +738,6 @@
 			}]
 			x: 10.0d
 			y: 6.0d
-		}
-		{
-			dependencies: [
-				"34FCFA114E75D770"
-				"06285BE2396AB639"
-			]
-			description: ["更加便宜的电路，这个系列一直到EV"]
-			id: "08B7D8F835DFE214"
-			rewards: [{
-				id: "79AC4D19DF1054D1"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
-			tasks: [{
-				id: "344BB3250C20E4FB"
-				item: "kubejs:basic_control_circuit"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 6.0d
-		}
-		{
-			dependencies: [
-				"08B7D8F835DFE214"
-				"5065BEDC95AE564E"
-			]
-			description: ["这个是便宜的LV电路"]
-			id: "553B2D61416792DC"
-			rewards: [{
-				id: "5FCCD0A40F20BB43"
-				item: "gtceu:silver_credit"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 2.0d
-			tasks: [{
-				id: "41CA550B62F920A6"
-				item: "kubejs:advanced_control_circuit"
-				type: "item"
-			}]
-			x: 8.0d
-			y: 8.0d
 		}
 		{
 			dependencies: ["12FE2B59FA86381C"]
@@ -795,24 +758,6 @@
 			}]
 			x: 12.0d
 			y: 3.0d
-		}
-		{
-			dependencies: ["553B2D61416792DC"]
-			description: ["青铜蒸汽锅炉经过了史诗级加强，你可以不需要思考用蒸汽发电到HV（HV需要多堆几台）"]
-			id: "328D5CF265FCCCA3"
-			rewards: [{
-				id: "02EE5681EA132E6A"
-				item: "avaritia:star_fuel"
-				type: "item"
-			}]
-			shape: "gear"
-			tasks: [{
-				id: "31B3E7B10BBA0EDD"
-				item: "gtceu:bronze_large_boiler"
-				type: "item"
-			}]
-			x: 10.0d
-			y: 8.0d
 		}
 		{
 			dependencies: ["5F5F348E3A34827E"]
@@ -1232,7 +1177,7 @@
 				item: "gtceu:ulv_packer"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 8.0d
 			y: 5.5d
 		}
 		{
@@ -1246,8 +1191,46 @@
 				item: "gtceu:red_alloy_single_cable"
 				type: "item"
 			}]
-			x: 5.5d
+			x: 8.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"3C91E284A9A03B1B"
+				"5CD26DECB937FC71"
+			]
+			id: "0DF59D1036DC207A"
+			tasks: [{
+				id: "640F5C58A70B897A"
+				item: "gtceu:ulv_thermal_generator"
+				type: "item"
+			}]
+			x: 4.0d
 			y: 5.5d
+		}
+		{
+			dependencies: ["5065BEDC95AE564E"]
+			description: ["用于产出大量蒸汽，也可用于快速制造液态锡"]
+			id: "07079FF646C870C9"
+			tasks: [{
+				id: "28FCE3702113AD63"
+				item: "gtceu:bronze_large_boiler"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["07079FF646C870C9"]
+			description: ["你也可以等到有了基础提取机再做"]
+			id: "0700E34D1AD8B3AD"
+			tasks: [{
+				id: "3D3741B25DD9A208"
+				item: "gtceu:tin_bucket"
+				type: "item"
+			}]
+			x: 8.0d
+			y: 8.0d
 		}
 	]
 	subtitle: ["Tier0-ULV"]
