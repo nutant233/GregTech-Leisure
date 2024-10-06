@@ -323,7 +323,7 @@
 				item: "gtlcore:microfocus_x_ray_tube"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: 8.0d
 		}
 		{
@@ -501,7 +501,7 @@
 				title: "环戊二烯锎"
 				type: "checkmark"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 8.0d
 		}
 		{

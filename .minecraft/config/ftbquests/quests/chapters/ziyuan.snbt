@@ -113,14 +113,14 @@
 		{
 			id: "1D273AA9A708D1F1"
 			linked_quest: "1D247D35BFB55469"
-			x: 4.5d
-			y: 19.5d
+			x: 20.0d
+			y: 2.0d
 		}
 		{
 			id: "1AAA41B4E666E4F8"
 			linked_quest: "365298DB6520227A"
 			x: 6.0d
-			y: 32.0d
+			y: 22.5d
 		}
 	]
 	quests: [
@@ -701,7 +701,7 @@
 				title: "这是化工"
 				type: "checkmark"
 			}]
-			x: 18.0d
+			x: 40.0d
 			y: 2.0d
 		}
 		{
@@ -729,7 +729,7 @@
 				title: "其他东西"
 				type: "checkmark"
 			}]
-			x: 29.0d
+			x: 51.0d
 			y: 2.0d
 		}
 		{
@@ -778,7 +778,7 @@
 				}
 			]
 			title: "从热解炉流出来的东西"
-			x: 30.5d
+			x: 52.5d
 			y: 3.5d
 		}
 		{
@@ -788,7 +788,7 @@
 				item: "gtceu:pyrolyse_oven"
 				type: "item"
 			}]
-			x: 29.0d
+			x: 51.0d
 			y: 3.5d
 		}
 		{
@@ -805,7 +805,7 @@
 				item: "gtceu:lv_pump"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 41.5d
 			y: 4.5d
 		}
 		{
@@ -816,7 +816,7 @@
 				item: "gtceu:oil_medium_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 4.5d
 		}
 		{
@@ -829,7 +829,7 @@
 				item: "gtceu:sulfuric_naphtha_bucket"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 41.5d
 			y: 8.0d
 		}
 		{
@@ -845,7 +845,7 @@
 				item: "gtceu:naphtha_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 8.0d
 		}
 		{
@@ -860,7 +860,7 @@
 				item: "gtceu:severely_steam_cracked_naphtha_bucket"
 				type: "item"
 			}]
-			x: 22.5d
+			x: 44.5d
 			y: 8.0d
 		}
 		{
@@ -872,7 +872,7 @@
 				item: "gtceu:ethylene_bucket"
 				type: "item"
 			}]
-			x: 24.0d
+			x: 46.0d
 			y: 7.5d
 		}
 		{
@@ -885,7 +885,7 @@
 				title: "硫化氢"
 				type: "checkmark"
 			}]
-			x: 19.5d
+			x: 41.5d
 			y: 6.5d
 		}
 		{
@@ -897,7 +897,7 @@
 				item: "gtceu:hydrogen_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 6.5d
 		}
 		{
@@ -917,7 +917,7 @@
 				item: "gtceu:mv_fluid_drilling_rig"
 				type: "item"
 			}]
-			x: 23.0d
+			x: 45.0d
 			y: 3.5d
 		}
 		{
@@ -929,7 +929,7 @@
 				title: "乙烯"
 				type: "checkmark"
 			}]
-			x: 25.5d
+			x: 47.5d
 			y: 7.5d
 		}
 		{
@@ -973,7 +973,7 @@
 				}
 			]
 			title: "T0可以采到的"
-			x: 24.5d
+			x: 46.5d
 			y: 3.5d
 		}
 		{
@@ -984,7 +984,7 @@
 				item: "gtceu:polyvinyl_chloride_bucket"
 				type: "item"
 			}]
-			x: 27.0d
+			x: 49.0d
 			y: 7.0d
 		}
 		{
@@ -995,7 +995,7 @@
 				item: "gtceu:polyethylene_bucket"
 				type: "item"
 			}]
-			x: 27.0d
+			x: 49.0d
 			y: 8.0d
 		}
 		{
@@ -1006,7 +1006,7 @@
 				item: "gtceu:polyvinyl_chloride_plate"
 				type: "item"
 			}]
-			x: 28.5d
+			x: 50.5d
 			y: 7.0d
 		}
 		{
@@ -1017,7 +1017,7 @@
 				item: "gtceu:polyethylene_plate"
 				type: "item"
 			}]
-			x: 28.5d
+			x: 50.5d
 			y: 8.0d
 		}
 		{
@@ -1028,7 +1028,7 @@
 				item: "gtceu:polytetrafluoroethylene_ingot"
 				type: "item"
 			}]
-			x: 22.5d
+			x: 44.5d
 			y: 10.0d
 		}
 		{
@@ -1042,7 +1042,7 @@
 				item: "gtceu:tetrafluoroethylene_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 10.0d
 		}
 		{
@@ -1053,7 +1053,7 @@
 				item: "gtceu:hydrofluoric_acid_bucket"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 41.5d
 			y: 10.5d
 		}
 		{
@@ -1064,7 +1064,7 @@
 				item: "gtceu:chloroform_bucket"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 41.5d
 			y: 9.5d
 		}
 		{
@@ -1075,7 +1075,7 @@
 				item: "gtceu:oil_heavy_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 3.5d
 		}
 		{
@@ -1086,7 +1086,7 @@
 				type: "item"
 			}]
 			title: "这是油矿"
-			x: 19.5d
+			x: 41.5d
 			y: 3.5d
 		}
 		{
@@ -1096,7 +1096,7 @@
 				item: "gtceu:propene_bucket"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 41.5d
 			y: 12.0d
 		}
 		{
@@ -1142,6 +1142,7 @@
 				"　离心矿泥到处理钌酸钠这一列四个被动，"
 				"　后面的线性流程下单）"
 			]
+			hide_dependency_lines: true
 			id: "3CB16B36A5AA2A10"
 			subtitle: "这是你接触的第一个大型矿物处理流程"
 			tasks: [{
@@ -1149,8 +1150,8 @@
 				title: "铂系金属处理"
 				type: "checkmark"
 			}]
-			x: 3.0d
-			y: 19.5d
+			x: 18.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -1165,8 +1166,8 @@
 				item: "gtceu:platinum_group_sludge_dust"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 19.5d
+			x: 21.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -1179,8 +1180,8 @@
 				item: "gtceu:platinum_slag_dust"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 21.0d
+			x: 20.0d
+			y: 3.5d
 		}
 		{
 			dependencies: [
@@ -1193,8 +1194,8 @@
 				item: "gtceu:platinum_raw_dust"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 24.5d
+			x: 20.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -1207,8 +1208,8 @@
 				item: "gtceu:palladium_raw_dust"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 23.5d
+			x: 20.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -1221,8 +1222,8 @@
 				item: "gtceu:platinum_sludge_residue_dust"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 22.5d
+			x: 20.0d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -1235,8 +1236,8 @@
 				item: "gtceu:inert_metal_mixture_dust"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 21.5d
+			x: 23.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -1252,8 +1253,8 @@
 				item: "gtceu:rarest_metal_mixture_dust"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 23.5d
+			x: 23.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -1274,8 +1275,8 @@
 					type: "item"
 				}
 			]
-			x: 9.0d
-			y: 21.0d
+			x: 24.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1AEB6A36DD3F8408"]
@@ -1285,8 +1286,8 @@
 				item: "gtceu:leach_residue_dust"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 22.5d
+			x: 21.5d
+			y: 5.0d
 		}
 		{
 			dependencies: [
@@ -1300,8 +1301,8 @@
 				item: "gtceu:sodium_rutheniate_dust"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 22.0d
+			x: 24.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["56105EBA9D073902"]
@@ -1311,8 +1312,8 @@
 				item: "gtceu:iridium_metal_residue_dust"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 23.0d
+			x: 24.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["56105EBA9D073902"]
@@ -1322,8 +1323,8 @@
 				item: "gtceu:acidic_osmium_solution_bucket"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 24.0d
+			x: 24.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["6555B785CDEA2B0D"]
@@ -1340,8 +1341,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.0d
-			y: 23.0d
+			x: 25.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["6BA527FE4D528D54"]
@@ -1351,8 +1352,8 @@
 				item: "gtceu:iridium_dust"
 				type: "item"
 			}]
-			x: 13.0d
-			y: 23.0d
+			x: 28.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["1E69FCB460019502"]
@@ -1369,8 +1370,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.0d
-			y: 24.0d
+			x: 25.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["7B57E5FA2FD62C15"]
@@ -1380,8 +1381,8 @@
 				item: "gtceu:osmium_dust"
 				type: "item"
 			}]
-			x: 11.0d
-			y: 24.0d
+			x: 26.5d
+			y: 6.5d
 		}
 		{
 			dependencies: ["447948ACBDAF1D5A"]
@@ -1398,8 +1399,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.0d
-			y: 21.0d
+			x: 25.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["3A816A08848067B0"]
@@ -1416,8 +1417,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 11.0d
-			y: 21.0d
+			x: 26.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["3E439E4735E85BE5"]
@@ -1434,8 +1435,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 21.0d
+			x: 27.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["737542A27F32418F"]
@@ -1452,8 +1453,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 13.0d
-			y: 21.0d
+			x: 28.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1745E379DAEA5EE0"]
@@ -1470,8 +1471,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 14.0d
-			y: 21.0d
+			x: 29.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["712E7D1F539B51A8"]
@@ -1488,8 +1489,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 15.0d
-			y: 21.0d
+			x: 30.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["73399771638FD112"]
@@ -1507,8 +1508,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 16.0d
-			y: 21.0d
+			x: 31.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["18FB4DDA55B7D430"]
@@ -1518,8 +1519,8 @@
 				item: "gtceu:rhodium_dust"
 				type: "item"
 			}]
-			x: 17.0d
-			y: 21.0d
+			x: 32.5d
+			y: 3.5d
 		}
 		{
 			dependencies: [
@@ -1540,8 +1541,8 @@
 					type: "item"
 				}
 			]
-			x: 5.5d
-			y: 24.0d
+			x: 21.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["515CC449D60C6B6F"]
@@ -1559,8 +1560,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.0d
-			y: 22.0d
+			x: 25.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["5C12F24D7C0DB328"]
@@ -1577,8 +1578,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 11.0d
-			y: 22.0d
+			x: 26.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["277E11D01F736C89"]
@@ -1595,8 +1596,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 22.0d
+			x: 27.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["1378ED1EC657A5D8"]
@@ -1613,8 +1614,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 13.0d
-			y: 22.0d
+			x: 28.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["6458E7BCD8D06C86"]
@@ -1624,8 +1625,8 @@
 				item: "gtceu:ruthenium_dust"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 22.0d
+			x: 29.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["544D94653B07DABF"]
@@ -1642,8 +1643,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 11.0d
-			y: 23.0d
+			x: 26.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["353CE5B960B508FE"]
@@ -1660,8 +1661,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 12.0d
-			y: 23.0d
+			x: 27.5d
+			y: 5.5d
 		}
 		{
 			dependencies: [
@@ -1682,7 +1683,7 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: 29.0d
+			y: 19.5d
 		}
 		{
 			dependencies: [
@@ -1703,7 +1704,7 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: 27.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["4288A0EFF13D1F93"]
@@ -1719,7 +1720,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: 29.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["4288A0EFF13D1F93"]
@@ -1735,7 +1736,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: 27.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["3526A3770E9CCB1E"]
@@ -1760,7 +1761,7 @@
 				}
 			]
 			x: 6.0d
-			y: 28.0d
+			y: 18.5d
 		}
 		{
 			dependencies: ["23C2F99FC949AF0A"]
@@ -1776,7 +1777,7 @@
 				type: "item"
 			}]
 			x: 4.5d
-			y: 28.0d
+			y: 18.5d
 		}
 		{
 			dependencies: ["7405AF5F9FFA0C50"]
@@ -1787,7 +1788,7 @@
 				type: "item"
 			}]
 			x: 10.5d
-			y: 27.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["45A543C859C4C376"]
@@ -1799,7 +1800,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 27.0d
+			y: 17.5d
 		}
 		{
 			dependencies: [
@@ -1813,7 +1814,7 @@
 				type: "item"
 			}]
 			x: 7.5d
-			y: 30.5d
+			y: 21.0d
 		}
 		{
 			dependencies: [
@@ -1828,7 +1829,7 @@
 				type: "item"
 			}]
 			x: 10.5d
-			y: 30.5d
+			y: 21.0d
 		}
 		{
 			dependencies: ["0931ECBAAD9252C7"]
@@ -1840,7 +1841,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 30.5d
+			y: 21.0d
 		}
 		{
 			dependencies: ["0931ECBAAD9252C7"]
@@ -1851,7 +1852,7 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: 30.5d
+			y: 21.0d
 		}
 		{
 			dependencies: [
@@ -1865,7 +1866,7 @@
 				type: "item"
 			}]
 			x: 9.0d
-			y: 32.0d
+			y: 22.5d
 		}
 		{
 			dependencies: ["6D650AE5A76585B3"]
@@ -1876,7 +1877,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 32.0d
+			y: 22.5d
 		}
 		{
 			dependencies: ["6D650AE5A76585B3"]
@@ -1887,7 +1888,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 31.0d
+			y: 21.5d
 		}
 		{
 			dependencies: ["6D650AE5A76585B3"]
@@ -1899,7 +1900,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 33.0d
+			y: 23.5d
 		}
 		{
 			dependencies: [
@@ -1917,8 +1918,8 @@
 				item: "gtceu:indium_dust"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 50.0d
+			x: 21.5d
+			y: 23.0d
 		}
 		{
 			icon: "gtceu:indium_concentrate_bucket"
@@ -1929,8 +1930,8 @@
 				title: "铟富集溶液"
 				type: "checkmark"
 			}]
-			x: 4.5d
-			y: 50.0d
+			x: 20.0d
+			y: 23.0d
 		}
 		{
 			dependencies: [
@@ -1947,11 +1948,12 @@
 				item: "gtceu:rare_earth_dust"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 46.0d
+			x: 20.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["7979C5ACF9A0C8D2"]
+			hide_dependency_lines: true
 			id: "37C5E7628A4B826C"
 			tasks: [{
 				id: "0416DFD37DE6C2A4"
@@ -1959,7 +1961,7 @@
 				type: "checkmark"
 			}]
 			x: 3.0d
-			y: 27.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["6B71EE1A869ABCD5"]
@@ -1969,8 +1971,8 @@
 				item: "gtceu:rare_earth_hydroxides_bucket"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 46.0d
+			x: 21.5d
+			y: 19.5d
 		}
 		{
 			dependencies: ["4CF6C5A8940B4DDF"]
@@ -1980,8 +1982,8 @@
 				item: "gtceu:rare_earth_chlorides_bucket"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 46.0d
+			x: 23.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["5465659AD5EEE7E3"]
@@ -2010,8 +2012,8 @@
 				}
 			]
 			title: "磁力离心"
-			x: 9.0d
-			y: 46.0d
+			x: 24.5d
+			y: 19.5d
 		}
 		{
 			dependencies: ["0E6B85A8E9CE4CA6"]
@@ -2029,8 +2031,8 @@
 				type: "item"
 			}]
 			title: "氧化*粉"
-			x: 10.5d
-			y: 46.0d
+			x: 26.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["5465659AD5EEE7E3"]
@@ -2040,8 +2042,8 @@
 				item: "gtceu:rare_earth_oxide_dust"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 47.0d
+			x: 23.0d
+			y: 20.5d
 		}
 		{
 			dependencies: [
@@ -2055,8 +2057,8 @@
 				item: "gtceu:rare_earth_metal_dust"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 48.0d
+			x: 23.0d
+			y: 21.5d
 		}
 		{
 			dependencies: ["7570243EDE6F35B1"]
@@ -2067,8 +2069,8 @@
 				item: "gtceu:promethium_dust"
 				type: "item"
 			}]
-			x: 9.0d
-			y: 48.0d
+			x: 24.5d
+			y: 21.5d
 		}
 		{
 			dependencies: ["776563C5BA327495"]
@@ -2078,20 +2080,22 @@
 				item: "gtceu:rare_earth_centrifugal"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 48.0d
+			x: 21.5d
+			y: 21.5d
 		}
 		{
 			dependencies: ["7979C5ACF9A0C8D2"]
 			description: ["超大份镧系处理"]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
 			id: "1223D839C224777B"
 			tasks: [{
 				id: "00F08CD4279B1525"
 				title: "ⅢB族（不含锕系）处理"
 				type: "checkmark"
 			}]
-			x: 3.0d
-			y: 35.0d
+			x: 18.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["01A1A06A3963D3BE"]
@@ -2103,8 +2107,8 @@
 				type: "checkmark"
 			}]
 			title: "回收那些无用的副产物"
-			x: 7.5d
-			y: 19.5d
+			x: 23.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["36E8964CD1BE7569"]
@@ -2115,8 +2119,8 @@
 				item: "gtceu:indium_phosphide_dust"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 51.0d
+			x: 20.0d
+			y: 24.0d
 		}
 		{
 			dependencies: ["7D19A74F09F44223"]
@@ -2126,7 +2130,7 @@
 				item: "gtceu:epoxy_plate"
 				type: "item"
 			}]
-			x: 24.5d
+			x: 46.5d
 			y: 13.0d
 		}
 		{
@@ -2137,7 +2141,7 @@
 				item: "gtceu:reinforced_epoxy_resin_plate"
 				type: "item"
 			}]
-			x: 26.0d
+			x: 48.0d
 			y: 12.0d
 		}
 		{
@@ -2151,7 +2155,7 @@
 				item: "gtceu:epoxy_bucket"
 				type: "item"
 			}]
-			x: 23.0d
+			x: 45.0d
 			y: 12.5d
 		}
 		{
@@ -2166,7 +2170,7 @@
 				item: "gtceu:epichlorohydrin_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 12.5d
 		}
 		{
@@ -2176,7 +2180,7 @@
 				item: "gtceu:bisphenol_a_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 14.0d
 		}
 		{
@@ -2186,7 +2190,7 @@
 				item: "gtceu:glycerol_bucket"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 41.5d
 			y: 13.0d
 		}
 		{
@@ -2197,7 +2201,7 @@
 				item: "gtceu:propene_bucket"
 				type: "item"
 			}]
-			x: 24.0d
+			x: 46.0d
 			y: 8.5d
 		}
 		{
@@ -2208,7 +2212,7 @@
 				item: "gtceu:silicone_rubber_ingot"
 				type: "item"
 			}]
-			x: 22.5d
+			x: 44.5d
 			y: 16.0d
 		}
 		{
@@ -2218,7 +2222,7 @@
 				item: "gtceu:polydimethylsiloxane_dust"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 16.0d
 		}
 		{
@@ -2229,7 +2233,7 @@
 				item: "gtceu:styrene_butadiene_rubber_ingot"
 				type: "item"
 			}]
-			x: 22.5d
+			x: 44.5d
 			y: 17.5d
 		}
 		{
@@ -2243,7 +2247,7 @@
 				item: "gtceu:raw_styrene_butadiene_rubber_dust"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 17.5d
 		}
 		{
@@ -2253,7 +2257,7 @@
 				item: "gtceu:butadiene_bucket"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 41.5d
 			y: 17.0d
 		}
 		{
@@ -2263,7 +2267,7 @@
 				item: "gtceu:styrene_bucket"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 41.5d
 			y: 18.0d
 		}
 		{
@@ -2274,7 +2278,7 @@
 				item: "gtceu:laminated_glass"
 				type: "item"
 			}]
-			x: 28.5d
+			x: 50.5d
 			y: 17.0d
 		}
 		{
@@ -2288,7 +2292,7 @@
 				item: "gtceu:polyvinyl_butyral_plate"
 				type: "item"
 			}]
-			x: 27.0d
+			x: 49.0d
 			y: 17.0d
 		}
 		{
@@ -2298,7 +2302,7 @@
 				item: "gtceu:butyraldehyde_bucket"
 				type: "item"
 			}]
-			x: 25.5d
+			x: 47.5d
 			y: 16.5d
 		}
 		{
@@ -2309,7 +2313,7 @@
 				item: "gtceu:polyvinyl_acetate_bucket"
 				type: "item"
 			}]
-			x: 25.5d
+			x: 47.5d
 			y: 17.5d
 		}
 		{
@@ -2319,7 +2323,7 @@
 				item: "gtceu:vinyl_acetate_bucket"
 				type: "item"
 			}]
-			x: 24.0d
+			x: 46.0d
 			y: 17.5d
 		}
 		{
@@ -2333,7 +2337,7 @@
 				item: "gtceu:polybenzimidazole_plate"
 				type: "item"
 			}]
-			x: 25.5d
+			x: 47.5d
 			y: 20.0d
 		}
 		{
@@ -2344,7 +2348,7 @@
 				item: "gtceu:diaminobenzidine_bucket"
 				type: "item"
 			}]
-			x: 24.0d
+			x: 46.0d
 			y: 19.5d
 		}
 		{
@@ -2355,7 +2359,7 @@
 				item: "gtceu:diphenyl_isophthalate_bucket"
 				type: "item"
 			}]
-			x: 24.0d
+			x: 46.0d
 			y: 20.5d
 		}
 		{
@@ -2365,7 +2369,7 @@
 				item: "gtceu:chlorobenzene_bucket"
 				type: "item"
 			}]
-			x: 19.5d
+			x: 41.5d
 			y: 19.5d
 		}
 		{
@@ -2376,7 +2380,7 @@
 				item: "gtceu:nitrochlorobenzene_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 19.5d
 		}
 		{
@@ -2387,7 +2391,7 @@
 				item: "gtceu:dichlorobenzidine_bucket"
 				type: "item"
 			}]
-			x: 22.5d
+			x: 44.5d
 			y: 19.5d
 		}
 		{
@@ -2401,7 +2405,7 @@
 				item: "gtceu:phthalic_acid_bucket"
 				type: "item"
 			}]
-			x: 22.5d
+			x: 44.5d
 			y: 20.5d
 		}
 		{
@@ -2411,7 +2415,7 @@
 				item: "gtceu:dimethylbenzene_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 20.5d
 		}
 		{
@@ -2421,7 +2425,7 @@
 				item: "gtceu:naphthalene_bucket"
 				type: "item"
 			}]
-			x: 21.0d
+			x: 43.0d
 			y: 21.5d
 		}
 		{
@@ -2435,7 +2439,7 @@
 				item: "gtceu:polyphenylene_sulfide_plate"
 				type: "item"
 			}]
-			x: 28.5d
+			x: 50.5d
 			y: 20.0d
 		}
 		{
@@ -2445,7 +2449,7 @@
 				item: "gtceu:sodium_sulfide_dust"
 				type: "item"
 			}]
-			x: 27.0d
+			x: 49.0d
 			y: 19.5d
 		}
 		{
@@ -2455,38 +2459,41 @@
 				item: "gtceu:dichlorobenzene_bucket"
 				type: "item"
 			}]
-			x: 27.0d
+			x: 49.0d
 			y: 20.5d
 		}
 		{
+			dependencies: ["1223D839C224777B"]
 			id: "2ED005FB3DC2EAB2"
 			tasks: [{
 				id: "772489A2AC0DA9B6"
 				item: "gtceu:samarium_refined_powder_dust"
 				type: "item"
 			}]
-			x: 12.5d
-			y: 40.0d
+			x: 28.0d
+			y: 13.5d
 		}
 		{
+			dependencies: ["1223D839C224777B"]
 			id: "71C977A601F879AE"
 			tasks: [{
 				id: "222E9D1D4F6F71F9"
 				item: "gtceu:monazite_dust"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 37.0d
+			x: 20.0d
+			y: 10.5d
 		}
 		{
+			dependencies: ["1223D839C224777B"]
 			id: "4F220FB82AB77225"
 			tasks: [{
 				id: "4DECA124A915D0BB"
 				item: "gtceu:bastnasite_dust"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 44.0d
+			x: 20.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["71C977A601F879AE"]
@@ -2496,8 +2503,8 @@
 				item: "gtceu:monazite_rare_earth_turbid_liquid_bucket"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 37.0d
+			x: 21.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["218DF03160595A6F"]
@@ -2507,8 +2514,8 @@
 				item: "gtceu:diluted_monazite_slurry_bucket"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 37.0d
+			x: 22.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["75FF3EA9CF248DA8"]
@@ -2518,8 +2525,8 @@
 				item: "gtceu:monazite_sulfate_powder_dust"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 37.0d
+			x: 23.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["66B8CE1489E1332F"]
@@ -2529,8 +2536,8 @@
 				item: "gtceu:diluted_monazite_sulfate_solution_bucket"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 37.0d
+			x: 24.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["66B8CE1489E1332F"]
@@ -2540,8 +2547,8 @@
 				item: "gtceu:acidic_monazite_powder_dust"
 				type: "item"
 			}]
-			x: 9.5d
-			y: 37.0d
+			x: 25.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["37462EF914F322CF"]
@@ -2551,8 +2558,8 @@
 				item: "gtceu:monazite_rare_earth_filter_residue_powder_dust"
 				type: "item"
 			}]
-			x: 10.5d
-			y: 37.0d
+			x: 26.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["37462EF914F322CF"]
@@ -2562,8 +2569,8 @@
 				item: "gtceu:thorium_phosphate_filter_cake_powder_dust"
 				type: "item"
 			}]
-			x: 10.5d
-			y: 38.0d
+			x: 26.0d
+			y: 11.5d
 		}
 		{
 			can_repeat: false
@@ -2575,8 +2582,8 @@
 				item: "gtceu:thorium_phosphate_refined_powder_dust"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 38.0d
+			x: 27.0d
+			y: 11.5d
 		}
 		{
 			dependencies: ["7878B1E4C001D370"]
@@ -2586,8 +2593,8 @@
 				item: "gtceu:neutralized_monazite_rare_earth_filter_residue_powder_dust"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 37.0d
+			x: 27.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["598FA5C3B7B70FB4"]
@@ -2597,8 +2604,8 @@
 				item: "gtceu:uranium_filter_residue_powder_dust"
 				type: "item"
 			}]
-			x: 12.5d
-			y: 36.0d
+			x: 28.0d
+			y: 9.5d
 		}
 		{
 			dependencies: ["464EEB44F0B7A22D"]
@@ -2609,8 +2616,8 @@
 				item: "gtceu:neutralized_uranium_filter_residue_powder_dust"
 				type: "item"
 			}]
-			x: 13.5d
-			y: 36.0d
+			x: 29.0d
+			y: 9.5d
 		}
 		{
 			dependencies: ["598FA5C3B7B70FB4"]
@@ -2620,8 +2627,8 @@
 				item: "gtceu:concentrated_monazite_rare_earth_hydroxide_powder_dust"
 				type: "item"
 			}]
-			x: 12.5d
-			y: 37.0d
+			x: 28.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["3703CE6AC3C7DF99"]
@@ -2631,8 +2638,8 @@
 				item: "gtceu:dried_concentrated_nitric_monazite_rare_earth_powder_dust"
 				type: "item"
 			}]
-			x: 13.5d
-			y: 37.0d
+			x: 29.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["526199E216862B1C"]
@@ -2642,8 +2649,8 @@
 				item: "gtceu:concentrated_nitride_monazite_rare_earth_solution_bucket"
 				type: "item"
 			}]
-			x: 14.5d
-			y: 37.0d
+			x: 30.0d
+			y: 10.5d
 		}
 		{
 			dependencies: [
@@ -2656,8 +2663,8 @@
 				item: "gtceu:nitric_leachate_from_monazite_bucket"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 37.0d
+			x: 31.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["4F220FB82AB77225"]
@@ -2667,8 +2674,8 @@
 				item: "gtceu:cerium_rich_mixture_powder_dust"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 41.0d
+			x: 23.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["2FD681A788D189E9"]
@@ -2678,8 +2685,8 @@
 				item: "gtceu:cerium_chloride_powder_dust"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 41.0d
+			x: 24.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["2FD681A788D189E9"]
@@ -2690,8 +2697,8 @@
 				item: "gtceu:concentrated_cerium_chloride_solution_bucket"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 42.0d
+			x: 24.0d
+			y: 15.5d
 		}
 		{
 			dependencies: ["08BE4F17331AA62A"]
@@ -2701,8 +2708,8 @@
 				item: "gtceu:concentrated_nitric_leachate_from_monazite_bucket"
 				type: "item"
 			}]
-			x: 16.5d
-			y: 37.0d
+			x: 32.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["2276C8A9F2CDA798"]
@@ -2712,8 +2719,8 @@
 				item: "gtceu:cooling_concentrated_nitric_monazite_rare_earth_powder_dust"
 				type: "item"
 			}]
-			x: 17.5d
-			y: 37.0d
+			x: 33.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["2B503CB642C4D94D"]
@@ -2723,8 +2730,8 @@
 				item: "gtceu:monazite_rare_earth_precipitate_powder_dust"
 				type: "item"
 			}]
-			x: 18.5d
-			y: 37.0d
+			x: 34.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["2B503CB642C4D94D"]
@@ -2734,8 +2741,8 @@
 				item: "gtceu:europium_oxide_dust"
 				type: "item"
 			}]
-			x: 18.5d
-			y: 36.0d
+			x: 34.0d
+			y: 9.5d
 		}
 		{
 			dependencies: ["01967C002078825B"]
@@ -2745,8 +2752,8 @@
 				item: "gtceu:heterogeneous_halide_monazite_rare_earth_mixture_powder_dust"
 				type: "item"
 			}]
-			x: 19.5d
-			y: 37.0d
+			x: 35.0d
+			y: 10.5d
 		}
 		{
 			dependencies: [
@@ -2759,8 +2766,8 @@
 				item: "gtceu:saturated_monazite_rare_earth_powder_dust"
 				type: "item"
 			}]
-			x: 20.5d
-			y: 37.0d
+			x: 36.0d
+			y: 10.5d
 		}
 		{
 			dependencies: [
@@ -2773,8 +2780,8 @@
 				item: "gtceu:samarium_precipitate_powder_dust"
 				type: "item"
 			}]
-			x: 21.5d
-			y: 37.0d
+			x: 37.0d
+			y: 10.5d
 		}
 		{
 			dependencies: [
@@ -2788,8 +2795,8 @@
 				item: "gtceu:samarium_dust"
 				type: "item"
 			}]
-			x: 22.5d
-			y: 38.0d
+			x: 38.0d
+			y: 11.5d
 		}
 		{
 			dependencies: ["3D0269117FB85C9E"]
@@ -2799,8 +2806,8 @@
 				item: "gtceu:gadolinium_dust"
 				type: "item"
 			}]
-			x: 22.5d
-			y: 37.0d
+			x: 38.0d
+			y: 10.5d
 		}
 		{
 			dependencies: ["2ED005FB3DC2EAB2"]
@@ -2811,8 +2818,8 @@
 				item: "gtceu:samarium_chloride_concentrate_solution_bucket"
 				type: "item"
 			}]
-			x: 13.5d
-			y: 41.0d
+			x: 29.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["2ED005FB3DC2EAB2"]
@@ -2822,8 +2829,8 @@
 				item: "gtceu:samarium_rrare_eearth_turbid_liquid_bucket"
 				type: "item"
 			}]
-			x: 13.5d
-			y: 40.0d
+			x: 29.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["2BB0DDC08A816CD8"]
@@ -2833,8 +2840,8 @@
 				item: "gtceu:cerium_oxide_dust"
 				type: "item"
 			}]
-			x: 14.5d
-			y: 41.0d
+			x: 30.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["2BB0DDC08A816CD8"]
@@ -2844,8 +2851,8 @@
 				item: "gtceu:samarium_rare_earth_slurry_bucket"
 				type: "item"
 			}]
-			x: 14.5d
-			y: 40.0d
+			x: 30.0d
+			y: 13.5d
 		}
 		{
 			dependencies: [
@@ -2858,8 +2865,8 @@
 				item: "gtceu:neodymium_rare_earth_concentrate_powder_dust"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 41.0d
+			x: 31.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["1F4B0A4BF43EAC50"]
@@ -2869,8 +2876,8 @@
 				item: "gtceu:samarium_rare_earth_diluted_solution_bucket"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 40.0d
+			x: 31.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["6C8E955523139E76"]
@@ -2880,8 +2887,8 @@
 				item: "gtceu:lanthanum_chloride_dust"
 				type: "item"
 			}]
-			x: 16.5d
-			y: 41.0d
+			x: 32.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["6C8E955523139E76"]
@@ -2891,8 +2898,8 @@
 				item: "gtceu:neodymium_oxide_dust"
 				type: "item"
 			}]
-			x: 16.5d
-			y: 42.0d
+			x: 32.0d
+			y: 15.5d
 		}
 		{
 			dependencies: ["14E622727B18979E"]
@@ -2902,8 +2909,8 @@
 				item: "gtceu:samarium_oxalate_with_impurities_dust"
 				type: "item"
 			}]
-			x: 16.5d
-			y: 40.0d
+			x: 32.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["14E622727B18979E"]
@@ -2913,8 +2920,8 @@
 				item: "gtceu:phosphorus_free_samarium_concentrate_powder_dust"
 				type: "item"
 			}]
-			x: 16.5d
-			y: 39.0d
+			x: 32.0d
+			y: 12.5d
 		}
 		{
 			dependencies: ["5FD14B43657801F6"]
@@ -2924,8 +2931,8 @@
 				item: "gtceu:samarium_chloride_with_impurities_dust"
 				type: "item"
 			}]
-			x: 17.5d
-			y: 40.0d
+			x: 33.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["02ACE93CA2E66099"]
@@ -2935,8 +2942,8 @@
 				item: "gtceu:samarium_chloride_sodium_chloride_mixture_powder_dust"
 				type: "item"
 			}]
-			x: 18.5d
-			y: 40.0d
+			x: 34.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["02ACE93CA2E66099"]
@@ -2946,8 +2953,8 @@
 				item: "gtceu:samarium_chloride_with_impurities_bucket"
 				type: "item"
 			}]
-			x: 18.5d
-			y: 41.0d
+			x: 34.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["00E4396DF297B6A3"]
@@ -2957,8 +2964,8 @@
 				item: "gtceu:samarium_bucket"
 				type: "item"
 			}]
-			x: 19.5d
-			y: 42.0d
+			x: 35.0d
+			y: 15.5d
 		}
 		{
 			dependencies: ["00E4396DF297B6A3"]
@@ -2968,8 +2975,8 @@
 				item: "gtceu:lanthanum_chloride_with_impurities_dust"
 				type: "item"
 			}]
-			x: 19.5d
-			y: 41.0d
+			x: 35.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["14986844B71C83AC"]
@@ -2979,8 +2986,8 @@
 				item: "gtceu:lanthanum_chloride_dust"
 				type: "item"
 			}]
-			x: 20.5d
-			y: 41.0d
+			x: 36.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["4F220FB82AB77225"]
@@ -2990,8 +2997,8 @@
 				item: "gtceu:fluoro_carbon_lanthanide_cerium_solution_bucket"
 				type: "item"
 			}]
-			x: 5.5d
-			y: 44.0d
+			x: 21.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["355FF18BC5AECBBF"]
@@ -3001,8 +3008,8 @@
 				item: "gtceu:steam_cracked_fluoro_carbon_lanthanide_slurry_bucket"
 				type: "item"
 			}]
-			x: 6.5d
-			y: 44.0d
+			x: 22.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["3967DE6E4384B756"]
@@ -3012,8 +3019,8 @@
 				item: "gtceu:modulated_fluoro_carbon_lanthanide_slurry_bucket"
 				type: "item"
 			}]
-			x: 7.5d
-			y: 44.0d
+			x: 23.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["7FD4EA18599A4C80"]
@@ -3023,8 +3030,8 @@
 				item: "gtceu:diluted_fluoro_carbon_lanthanide_slurry_bucket"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 44.0d
+			x: 24.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["68012C0C6C072430"]
@@ -3034,8 +3041,8 @@
 				item: "gtceu:filtered_fluoro_carbon_lanthanide_slurry_bucket"
 				type: "item"
 			}]
-			x: 9.5d
-			y: 44.0d
+			x: 25.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["16F2DAB7D5DDCF72"]
@@ -3045,8 +3052,8 @@
 				item: "gtceu:fluoro_carbon_lanthanide_cerium_oxide_powder_dust"
 				type: "item"
 			}]
-			x: 10.5d
-			y: 44.0d
+			x: 26.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["3678A2BA0642E20A"]
@@ -3056,8 +3063,8 @@
 				item: "gtceu:acid_leached_fluoro_carbon_lanthanide_cerium_oxide_powder_dust"
 				type: "item"
 			}]
-			x: 11.5d
-			y: 44.0d
+			x: 27.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["5E6604859810EBE0"]
@@ -3067,8 +3074,8 @@
 				item: "gtceu:calcined_rare_earth_oxide_powder_dust"
 				type: "item"
 			}]
-			x: 12.5d
-			y: 44.0d
+			x: 28.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["5DB26712A2A0CE8E"]
@@ -3078,8 +3085,8 @@
 				item: "gtceu:wet_rare_earth_oxide_powder_dust"
 				type: "item"
 			}]
-			x: 13.5d
-			y: 44.0d
+			x: 29.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["6D9E44E04D29DA0A"]
@@ -3089,8 +3096,8 @@
 				item: "gtceu:cerium_oxide_rare_earth_oxide_powder_dust"
 				type: "item"
 			}]
-			x: 14.5d
-			y: 44.0d
+			x: 30.0d
+			y: 17.5d
 		}
 		{
 			dependencies: [
@@ -3106,8 +3113,8 @@
 				item: "gtceu:cerium_oxide_dust"
 				type: "item"
 			}]
-			x: 10.5d
-			y: 41.0d
+			x: 26.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["57DEA0CDF85D69B1"]
@@ -3117,8 +3124,8 @@
 				item: "gtceu:fluoro_carbon_lanthanide_cerium_rare_earth_oxide_powder_dust"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 44.0d
+			x: 31.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["08E7A6B4ED806D15"]
@@ -3128,8 +3135,8 @@
 				item: "gtceu:nitrided_fluoro_carbon_lanthanide_cerium_rare_earth_oxide_solution_bucket"
 				type: "item"
 			}]
-			x: 16.5d
-			y: 44.0d
+			x: 32.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["53C9C8F22787FFA2"]
@@ -3139,8 +3146,8 @@
 				item: "gtceu:fluoro_carbon_lanthanide_cerium_rare_earth_suspension_bucket"
 				type: "item"
 			}]
-			x: 17.5d
-			y: 44.0d
+			x: 33.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["15A2F5EFFBB91EDA"]
@@ -3150,8 +3157,8 @@
 				item: "gtceu:samarium_rare_earth_concentrate_powder_dust"
 				type: "item"
 			}]
-			x: 18.5d
-			y: 44.0d
+			x: 34.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["0611E972C84FDC4B"]
@@ -3161,8 +3168,8 @@
 				item: "gtceu:fluorinated_samarium_concentrate_powder_dust"
 				type: "item"
 			}]
-			x: 19.5d
-			y: 44.0d
+			x: 35.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["28A615DDEAC65561"]
@@ -3172,8 +3179,8 @@
 				item: "gtceu:holmium_dust"
 				type: "item"
 			}]
-			x: 20.5d
-			y: 45.0d
+			x: 36.0d
+			y: 18.5d
 		}
 		{
 			dependencies: ["28A615DDEAC65561"]
@@ -3183,8 +3190,8 @@
 				item: "gtceu:samarium_terbium_mixture_powder_dust"
 				type: "item"
 			}]
-			x: 20.5d
-			y: 44.0d
+			x: 36.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["0B6DC857BE87B7FC"]
@@ -3194,8 +3201,8 @@
 				item: "gtceu:nitrided_samarium_terbium_mixture_powder_dust"
 				type: "item"
 			}]
-			x: 21.5d
-			y: 44.0d
+			x: 37.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["40DFCE8427D1A982"]
@@ -3205,8 +3212,8 @@
 				item: "gtceu:terbium_nitrate_powder_dust"
 				type: "item"
 			}]
-			x: 22.5d
-			y: 44.0d
+			x: 38.0d
+			y: 17.5d
 		}
 		{
 			dependencies: ["00F19A725DCE5F96"]
@@ -3216,8 +3223,8 @@
 				item: "gtceu:cerium_oxalate_powder_dust"
 				type: "item"
 			}]
-			x: 9.5d
-			y: 41.0d
+			x: 25.0d
+			y: 14.5d
 		}
 		{
 			dependencies: [
@@ -3230,8 +3237,8 @@
 				item: "gtceu:concentrated_rare_earth_chloride_solution_bucket"
 				type: "item"
 			}]
-			x: 15.5d
-			y: 46.0d
+			x: 31.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["67111A7C89E5BAA7"]
@@ -3241,8 +3248,8 @@
 				item: "gtceu:enriched_rare_earth_chloride_solution_bucket"
 				type: "item"
 			}]
-			x: 16.5d
-			y: 46.0d
+			x: 32.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["3EB2D0CA54B2DE40"]
@@ -3252,8 +3259,8 @@
 				item: "gtceu:diluted_rare_earth_chloride_solution_bucket"
 				type: "item"
 			}]
-			x: 17.5d
-			y: 46.0d
+			x: 33.0d
+			y: 19.5d
 		}
 		{
 			id: "72DFAC3212692136"
@@ -3262,8 +3269,8 @@
 				item: "gtceu:p507_bucket"
 				type: "item"
 			}]
-			x: 13.5d
-			y: 46.0d
+			x: 29.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["72DFAC3212692136"]
@@ -3273,8 +3280,8 @@
 				title: "17个纳米萃取树脂"
 				type: "checkmark"
 			}]
-			x: 14.5d
-			y: 46.0d
+			x: 30.0d
+			y: 19.5d
 		}
 		{
 			dependencies: ["45B6AB3615FF2228"]
@@ -3284,8 +3291,8 @@
 				title: "17个溢满的纳米萃取树脂"
 				type: "checkmark"
 			}]
-			x: 18.5d
-			y: 46.0d
+			x: 34.0d
+			y: 19.5d
 		}
 		{
 			description: [
@@ -3300,7 +3307,7 @@
 				title: "石化的产出有这些"
 				type: "checkmark"
 			}]
-			x: 26.5d
+			x: 48.5d
 			y: 3.5d
 		}
 		{
@@ -3329,8 +3336,18 @@
 				type: "checkmark"
 			}]
 			title: "生化线的产出"
-			x: 32.0d
+			x: 54.0d
 			y: 3.5d
+		}
+		{
+			id: "1D0398821D9B612A"
+			tasks: [{
+				id: "04D2473A11BC77CD"
+				item: "gtceu:large_gas_collector"
+				type: "item"
+			}]
+			x: 51.0d
+			y: 4.5d
 		}
 	]
 	title: "资源获取（一）"

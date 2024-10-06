@@ -602,11 +602,18 @@
 			dependencies: ["35D158AD5036923D"]
 			description: ["各种矿脉精华用于大型虚空采矿场的精准模式"]
 			id: "68D3E6670941A3F5"
-			tasks: [{
-				id: "158FBB1423A51456"
-				title: "各种的矿脉精华"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "158FBB1423A51456"
+					title: "各种的矿脉精华"
+					type: "checkmark"
+				}
+				{
+					id: "24997BB0438ED606"
+					item: "gtceu:incubator"
+					type: "item"
+				}
+			]
 			x: 14.0d
 			y: 8.0d
 		}

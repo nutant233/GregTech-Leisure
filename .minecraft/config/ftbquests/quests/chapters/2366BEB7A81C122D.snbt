@@ -172,8 +172,8 @@
 				item: "kubejs:bioware_mainframe"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 8.0d
+			x: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["035C470213E8B4DB"]
@@ -236,7 +236,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 10.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -308,7 +308,6 @@
 		{
 			dependencies: ["7A7C73D046390488"]
 			description: ["去巴纳德C用集气室搜集"]
-			hide_dependency_lines: true
 			id: "12F8275FC06FCFEE"
 			tasks: [{
 				id: "3B3096FCBB8D2FE6"
@@ -349,6 +348,7 @@
 				"2802E34A99CE1D79"
 			]
 			description: ["新的魔幻金属"]
+			hide_dependent_lines: true
 			id: "776563C5BA327495"
 			tasks: [
 				{
@@ -627,6 +627,17 @@
 			}]
 			x: 2.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["7204F1B6BCC74F1C"]
+			id: "08AE0A1611F218F7"
+			tasks: [{
+				id: "2A4502A0937E88F4"
+				item: "gtceu:component_assembly_line"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 6.0d
 		}
 	]
 	subtitle: ["Tier8-UV"]
