@@ -747,7 +747,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "05372C97F5667E15"
-				item: "gtceu:void_miner"
+				item: "gtlcore:void_miner"
 				type: "item"
 			}]
 			x: 2.0d
@@ -793,7 +793,7 @@
 			id: "650980AB3D2A6AF6"
 			tasks: [{
 				id: "7D1205F365E0C204"
-				item: "gtceu:large_gas_collector"
+				item: "gtlcore:large_gas_collector"
 				type: "item"
 			}]
 			x: 18.0d
@@ -930,7 +930,7 @@
 			id: "2E910F4C45003592"
 			tasks: [{
 				id: "00BCFB175F3BC87F"
-				item: "gtceu:hv_dehydrator"
+				item: "gtlcore:hv_dehydrator"
 				type: "item"
 			}]
 			x: 6.0d

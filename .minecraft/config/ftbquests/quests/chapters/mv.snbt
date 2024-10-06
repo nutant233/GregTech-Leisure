@@ -660,7 +660,7 @@
 			}]
 			tasks: [{
 				id: "653A8C3A0132C035"
-				item: "gtceu:greenhouse"
+				item: "gtlcore:greenhouse"
 				type: "item"
 			}]
 			x: 12.0d
@@ -724,22 +724,22 @@
 			tasks: [
 				{
 					id: "7390800A5A8E273A"
-					item: "gtceu:processing_plant"
+					item: "gtlcore:processing_plant"
 					type: "item"
 				}
 				{
 					id: "43983ED4F272721B"
-					item: "gtceu:assemble_plant"
+					item: "gtlcore:assemble_plant"
 					type: "item"
 				}
 				{
 					id: "5C5AAA938D438A20"
-					item: "gtceu:separated_plant"
+					item: "gtlcore:separated_plant"
 					type: "item"
 				}
 				{
 					id: "426C0E4355D6241D"
-					item: "gtceu:mixed_plant"
+					item: "gtlcore:mixed_plant"
 					type: "item"
 				}
 			]
@@ -766,7 +766,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "52264D6386C28A0A"
-				item: "gtceu:large_steam_input_hatch"
+				item: "gtlcore:large_steam_input_hatch"
 				type: "item"
 			}]
 			x: 12.0d
@@ -844,7 +844,7 @@
 			}]
 			tasks: [{
 				id: "71B4A10905B2A6BA"
-				item: "gtceu:mv_energy_input_hatch_4a"
+				item: "gtlcore:mv_energy_input_hatch_4a"
 				type: "item"
 			}]
 			x: 14.0d
@@ -861,7 +861,7 @@
 			}]
 			tasks: [{
 				id: "1478049EA53577F1"
-				item: "gtceu:mv_energy_input_hatch_16a"
+				item: "gtlcore:mv_energy_input_hatch_16a"
 				type: "item"
 			}]
 			x: 14.0d

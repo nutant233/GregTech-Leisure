@@ -36,7 +36,7 @@
 			size: 1.2d
 			tasks: [{
 				id: "2C5036E0D2E99E39"
-				item: "gtceu:mass_fabricator"
+				item: "gtlcore:mass_fabricator"
 				type: "item"
 			}]
 			x: 2.0d
@@ -195,7 +195,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "2C8FACD2B8237591"
-				item: "gtceu:space_probe_surface_reception"
+				item: "gtlcore:space_probe_surface_reception"
 				type: "item"
 			}]
 			x: 0.0d
@@ -216,14 +216,14 @@
 		{
 			dependencies: ["1DAE3D00F91134F0"]
 			description: ["可以代替恒星锻炉"]
-			icon: "gtceu:dimensionally_transcendent_plasma_forge"
+			icon: "gtlcore:dimensionally_transcendent_plasma_forge"
 			id: "2880531AF7540B24"
 			shape: "gear"
 			size: 1.2d
 			tasks: [
 				{
 					id: "2CA90B99536E4896"
-					item: "gtceu:dimensionally_transcendent_plasma_forge"
+					item: "gtlcore:dimensionally_transcendent_plasma_forge"
 					type: "item"
 				}
 				{
@@ -341,7 +341,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "698C262A1833E468"
-				item: "gtceu:dimensionally_transcendent_mixer"
+				item: "gtlcore:dimensionally_transcendent_mixer"
 				type: "item"
 			}]
 			x: 10.0d

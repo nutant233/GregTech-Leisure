@@ -107,16 +107,16 @@ const $ClipContext = Java.loadClass("net.minecraft.world.level.ClipContext")
 BlockEvents.rightClicked("minecraft:crying_obsidian", event => {
     if (event.player.getHeldItem("main_hand") == null && event.player.getHeldItem("off_hand") == null) {
         let name = event.player.getName().getString()
-        let dim = event.getLevel().getDimension()
-        if (dim != "kubejs:flat") {
-            let value = dim == "kubejs:void" ? 1 : 10
+        let dim = event.getLevel().getDimension().toString()
+        if (dim !== "kubejs:flat") {
+            let value = dim === "kubejs:void" ? 1 : 10
             event.player.persistentData.putDouble("y_f", event.player.y + 1)
             event.player.persistentData.putString("dim_f", dim)
             event.getServer().runCommandSilent(`execute in kubejs:flat as ${name} run tp ${event.block.x * value} 64 ${event.block.z * value}`)
             event.getServer().runCommandSilent(`execute in kubejs:flat run fill ${event.block.x * value} 63 ${event.block.z * value} ${event.block.x * value} 63 ${event.block.z * value} minecraft:crying_obsidian`)
         } else {
             let dima = event.player.persistentData.getString("dim_f")
-            let value = dima == "kubejs:void" ? 1 : 10
+            let value = dima === "kubejs:void" ? 1 : 10
             event.getServer().runCommandSilent(`execute in ${dima} as ${name} run tp ${event.block.x / value} ${event.player.persistentData.getDouble("y_f")} ${event.block.z / value}`)
         }
     }
@@ -125,9 +125,9 @@ BlockEvents.rightClicked("minecraft:crying_obsidian", event => {
 BlockEvents.rightClicked("minecraft:obsidian", event => {
     if (event.player.getHeldItem("main_hand") == null && event.player.getHeldItem("off_hand") == null) {
         let name = event.player.getName().getString()
-        let dim = event.getLevel().getDimension()
-        if (dim != "kubejs:void") {
-            let value = dim == "kubejs:flat" ? 1 : 10
+        let dim = event.getLevel().getDimension().toString()
+        if (dim !== "kubejs:void") {
+            let value = dim === "kubejs:flat" ? 1 : 10
             event.player.persistentData.putDouble("y_v", event.player.y + 1)
             event.player.persistentData.putString("dim_v", dim)
             event.getServer().runCommandSilent(`execute in kubejs:void as ${name} run tp ${event.block.x * value} 64 ${event.block.z * value}`)
@@ -135,29 +135,29 @@ BlockEvents.rightClicked("minecraft:obsidian", event => {
         }
         else {
             let dima = event.player.persistentData.getString("dim_v")
-            let value = dima == "kubejs:flat" ? 1 : 10
+            let value = dima === "kubejs:flat" ? 1 : 10
             event.getServer().runCommandSilent(`execute in ${dima} as ${name} run tp ${event.block.x / value} ${event.player.persistentData.getDouble("y_v")} ${event.block.z / value}`)
         }
     }
 })
 
 BlockEvents.rightClicked("kubejs:reactor_core", event => {
-    if ((event.player.getHeldItem("main_hand") == null && event.player.getHeldItem("off_hand") == null) || event.player.getHeldItem("main_hand") == "kubejs:nether_data") {
+    if ((event.player.getHeldItem("main_hand") == null && event.player.getHeldItem("off_hand") == null) || event.player.getHeldItem("main_hand").getId() === "kubejs:nether_data") {
         let pos = event.block.getPos()
-        let dim = event.getLevel().getDimension()
-        if (dim == "kubejs:ancient_world" || dim == "minecraft:the_nether") {
-            let dimdata = dim == "kubejs:ancient_world" ? "aw" : "ne"
+        let dim = event.getLevel().getDimension().toString()
+        if (dim === "kubejs:ancient_world" || dim === "minecraft:the_nether") {
+            let dimdata = dim === "kubejs:ancient_world" ? "aw" : "ne"
             event.server.runCommandSilent(`execute in ${event.player.persistentData.getString(`dim_${dimdata}`)} as ${event.player.getName().getString()} run tp ${event.player.persistentData.getDouble(`pos_${dimdata}_x`)} ${event.player.persistentData.getDouble(`pos_${dimdata}_y`)} ${event.player.persistentData.getDouble(`pos_${dimdata}_z`)}`)
         } else {
-            if (event.level.getBlockState(pos.offset(1, 0, 0)).getBlock().getId() == "gtceu:steel_block" && event.level.getBlockState(pos.offset(-1, 0, 0)).getBlock().getId() == "gtceu:steel_block" && event.level.getBlockState(pos.offset(0, 0, 1)).getBlock().getId() == "gtceu:steel_block" && event.level.getBlockState(pos.offset(0, 0, -1)).getBlock().getId() == "gtceu:steel_block" && event.level.getBlockState(pos.offset(1, 0, 1)).getBlock().getId() == "minecraft:diamond_block" && event.level.getBlockState(pos.offset(1, 0, -1)).getBlock().getId() == "minecraft:diamond_block" && event.level.getBlockState(pos.offset(-1, 0, 1)).getBlock().getId() == "minecraft:diamond_block" && event.level.getBlockState(pos.offset(-1, 0, -1)).getBlock().getId() == "minecraft:diamond_block") {
+            if (event.level.getBlockState(pos.offset(1, 0, 0)).getBlock().getId() === "gtceu:steel_block" && event.level.getBlockState(pos.offset(-1, 0, 0)).getBlock().getId() === "gtceu:steel_block" && event.level.getBlockState(pos.offset(0, 0, 1)).getBlock().getId() === "gtceu:steel_block" && event.level.getBlockState(pos.offset(0, 0, -1)).getBlock().getId() === "gtceu:steel_block" && event.level.getBlockState(pos.offset(1, 0, 1)).getBlock().getId() === "minecraft:diamond_block" && event.level.getBlockState(pos.offset(1, 0, -1)).getBlock().getId() === "minecraft:diamond_block" && event.level.getBlockState(pos.offset(-1, 0, 1)).getBlock().getId() === "minecraft:diamond_block" && event.level.getBlockState(pos.offset(-1, 0, -1)).getBlock().getId() === "minecraft:diamond_block") {
                 event.player.persistentData.putDouble("pos_aw_x", event.player.x)
                 event.player.persistentData.putDouble("pos_aw_y", event.player.y)
                 event.player.persistentData.putDouble("pos_aw_z", event.player.z)
                 event.player.persistentData.putString("dim_aw", dim)
                 event.server.runCommandSilent(`execute in kubejs:ancient_world as ${event.player.getName().getString()} run tp ${0} ${128} ${0}`)
                 event.server.runCommandSilent(`execute in kubejs:ancient_world run fill ${0} ${127} ${0} ${0} ${127} ${0} kubejs:reactor_core`)
-            } else if (event.level.getBlockState(pos.offset(1, 0, 0)).getBlock().getId() == "minecraft:gold_block" && event.level.getBlockState(pos.offset(-1, 0, 0)).getBlock().getId() == "minecraft:gold_block" && event.level.getBlockState(pos.offset(0, 0, 1)).getBlock().getId() == "minecraft:gold_block" && event.level.getBlockState(pos.offset(0, 0, -1)).getBlock().getId() == "minecraft:gold_block" && event.level.getBlockState(pos.offset(1, 0, 1)).getBlock().getId() == "minecraft:emerald_block" && event.level.getBlockState(pos.offset(1, 0, -1)).getBlock().getId() == "minecraft:emerald_block" && event.level.getBlockState(pos.offset(-1, 0, 1)).getBlock().getId() == "minecraft:emerald_block" && event.level.getBlockState(pos.offset(-1, 0, -1)).getBlock().getId() == "minecraft:emerald_block") {
-                if (event.player.getHeldItem("main_hand") == "kubejs:nether_data") {
+            } else if (event.level.getBlockState(pos.offset(1, 0, 0)).getBlock().getId() === "minecraft:gold_block" && event.level.getBlockState(pos.offset(-1, 0, 0)).getBlock().getId() === "minecraft:gold_block" && event.level.getBlockState(pos.offset(0, 0, 1)).getBlock().getId() === "minecraft:gold_block" && event.level.getBlockState(pos.offset(0, 0, -1)).getBlock().getId() === "minecraft:gold_block" && event.level.getBlockState(pos.offset(1, 0, 1)).getBlock().getId() === "minecraft:emerald_block" && event.level.getBlockState(pos.offset(1, 0, -1)).getBlock().getId() === "minecraft:emerald_block" && event.level.getBlockState(pos.offset(-1, 0, 1)).getBlock().getId() === "minecraft:emerald_block" && event.level.getBlockState(pos.offset(-1, 0, -1)).getBlock().getId() === "minecraft:emerald_block") {
+                if (event.player.getHeldItem("main_hand").getId() === "kubejs:nether_data") {
                     event.player.persistentData.putDouble("pos_ne_x", event.player.x)
                     event.player.persistentData.putDouble("pos_ne_y", event.player.y)
                     event.player.persistentData.putDouble("pos_ne_z", event.player.z)
@@ -175,8 +175,8 @@ BlockEvents.rightClicked("kubejs:reactor_core", event => {
 })
 
 BlockEvents.broken("kubejs:create_aggregatione_core", event => {
-    let command_block = event.getLevel().getBlock(event.block.x, event.block.y + 1, event.block.z)
-    if (command_block == "minecraft:command_block" || command_block == "minecraft:chain_command_block" || command_block == "minecraft:repeating_command_block") {
+    let command_block = event.getLevel().getBlock(event.block.x, event.block.y + 1, event.block.z).getId()
+    if (command_block === "minecraft:command_block" || command_block === "minecraft:chain_command_block" || command_block === "minecraft:repeating_command_block") {
         event.getServer().runCommandSilent(`execute at ${event.player.getName().getString()} run fill ${event.block.x} ${event.block.y + 1} ${event.block.z} ${event.block.x} ${event.block.y + 1} ${event.block.z} minecraft:air`)
     }
 })
@@ -188,30 +188,30 @@ function getEyePositionPos(level, player) {
 ItemEvents.rightClicked("kubejs:command_wand", event => {
     let name = event.player.getName().getString()
     let pos = getEyePositionPos(event.level, event.player)
-    let block = event.level.getBlock(pos.x, pos.y, pos.z)
-    if (block == "kubejs:create_aggregatione_core" && event.level.getBlock(pos.x, pos.y + 1, pos.z) == "minecraft:air") {
-        if (event.player.getHeldItem("off_hand") == "minecraft:command_block") {
+    let block = event.level.getBlock(pos.x, pos.y, pos.z).getId()
+    if (block === "kubejs:create_aggregatione_core" && event.level.getBlock(pos.x, pos.y + 1, pos.z) === "minecraft:air") {
+        if (event.player.getHeldItem("off_hand").getId() === "minecraft:command_block") {
             event.player.offHandItem.count--
             event.getServer().runCommandSilent(`execute at ${name} run fill ${pos.x} ${pos.y + 1} ${pos.z} ${pos.x} ${pos.y + 1} ${pos.z} minecraft:command_block`)
         }
-        if (event.player.getHeldItem("off_hand") == "minecraft:chain_command_block") {
+        if (event.player.getHeldItem("off_hand").getId() === "minecraft:chain_command_block") {
             event.player.offHandItem.count--
             event.getServer().runCommandSilent(`execute at ${name} run fill ${pos.x} ${pos.y + 1} ${pos.z} ${pos.x} ${pos.y + 1} ${pos.z} minecraft:chain_command_block`)
         }
-        if (event.player.getHeldItem("off_hand") == "minecraft:repeating_command_block") {
+        if (event.player.getHeldItem("off_hand").getId() === "minecraft:repeating_command_block") {
             event.player.offHandItem.count--
             event.getServer().runCommandSilent(`execute at ${name} run fill ${pos.x} ${pos.y + 1} ${pos.z} ${pos.x} ${pos.y + 1} ${pos.z} minecraft:repeating_command_block`)
         }
     }
-    if (event.player.isSteppingCarefully() && block == "minecraft:command_block") {
+    if (event.player.isSteppingCarefully() && block === "minecraft:command_block") {
         block.set("minecraft:air")
         event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${pos.x} ${block.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:command_block",Count:1b}}`)
     }
-    if (event.player.isSteppingCarefully() && block == "minecraft:chain_command_block") {
+    if (event.player.isSteppingCarefully() && block === "minecraft:chain_command_block") {
         block.set("minecraft:air")
         event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${pos.x} ${block.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:chain_command_block",Count:1b}}`)
     }
-    if (event.player.isSteppingCarefully() && block == "minecraft:repeating_command_block") {
+    if (event.player.isSteppingCarefully() && block === "minecraft:repeating_command_block") {
         block.set("minecraft:air")
         event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${pos.x} ${block.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:repeating_command_block",Count:1b}}`)
     }
@@ -224,7 +224,7 @@ ItemEvents.firstRightClicked("kubejs:warped_ender_pearl", event => {
         event.player.persistentData.putDouble("posx" + pearl, event.player.x)
         event.player.persistentData.putDouble("posy" + pearl, event.player.y)
         event.player.persistentData.putDouble("posz" + pearl, event.player.z)
-        event.player.persistentData.putString("dim_b" + pearl, event.getLevel().getDimension())
+        event.player.persistentData.putString("dim_b" + pearl, event.getLevel().getDimension().toString())
         event.getServer().runCommandSilent(`playsound minecraft:entity.enderman.ambient ambient ${name} ${event.player.x} ${event.player.y} ${event.player.z}`)
         event.player.setStatusMessage("坐标已保存至该槽位")
     }
@@ -237,13 +237,13 @@ ItemEvents.firstRightClicked("kubejs:warped_ender_pearl", event => {
 })
 
 PlayerEvents.tick(event => {
-    if (event.player.age % 20 == 0) {
+    if (event.player.age % 20 === 0) {
         event.player.onUpdateAbilities()
-        let hfa = event.player.getArmorSlots().toString() == "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]"
-        let fa = event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]"
-        let ma = event.player.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]"
+        let hfa = event.player.getArmorSlots().toString() === "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]"
+        let fa = event.player.getArmorSlots().toString() === "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]"
+        let ma = event.player.getArmorSlots().toString() === "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]"
         let name = event.player.getName().getString()
-        if (event.player.getLevel().getDimension() == "kubejs:create") {
+        if (event.player.getLevel().getDimension().toString() === "kubejs:create") {
             if (!ma) {
                 event.player.getServer().runCommandSilent(`execute in minecraft:overworld as ${name} run tp 0 100 0`)
                 event.player.kill()
@@ -261,7 +261,7 @@ PlayerEvents.tick(event => {
                 event.player.persistentData.putInt("fspeed", 1)
                 event.player.persistentData.putBoolean("nightVision", false)
             }
-        } else if (event.player.persistentData.getInt("fly") == 1) {
+        } else if (event.player.persistentData.getInt("fly") === 1) {
             event.player.abilities.mayfly = false
             event.player.persistentData.putInt("fly", 0)
             event.player.abilities.setFlyingSpeed(0.05)
@@ -289,22 +289,22 @@ function flyspeed(player, max) {
 }
 
 NetworkEvents.dataReceived("global.flyingspeedKey.consumeClick", (event) => {
-    if (event.player.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]") {
+    if (event.player.getArmorSlots().toString() === "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]") {
         flyspeed(event.player, 0.4)
     }
-    if (event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]") {
+    if (event.player.getArmorSlots().toString() === "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]") {
         flyspeed(event.player, 0.2)
     }
-    if (event.player.getArmorSlots().toString() == "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]") {
+    if (event.player.getArmorSlots().toString() === "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]") {
         flyspeed(event.player, 0.2)
     }
-    if (event.player.getArmorSlots().toString() == "[1 infinity_boots, 1 infinity_pants, 1 infinity_chestplate, 1 infinity_helmet]") {
+    if (event.player.getArmorSlots().toString() === "[1 infinity_boots, 1 infinity_pants, 1 infinity_chestplate, 1 infinity_helmet]") {
         flyspeed(event.player, 0.3)
     }
 })
 
 NetworkEvents.dataReceived("global.nightvisionKey.consumeClick", event => {
-    if (event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]" || event.player.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]" || event.player.getArmorSlots().toString() == "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]") {
+    if (event.player.getArmorSlots().toString() === "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]" || event.player.getArmorSlots().toString() === "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]" || event.player.getArmorSlots().toString() === "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]") {
         if (event.player.persistentData.getBoolean("nightVision")) {
             event.player.persistentData.putBoolean("nightVision", false)
             event.player.removeEffect("minecraft:night_vision")
@@ -317,10 +317,10 @@ NetworkEvents.dataReceived("global.nightvisionKey.consumeClick", event => {
 })
 
 NetworkEvents.dataReceived("global.pearlKey.consumeClick", event => {
-    if (event.player.getHeldItem("main_hand") == "kubejs:warped_ender_pearl") {
+    if (event.player.getHeldItem("main_hand").getId() === "kubejs:warped_ender_pearl") {
         let pearl = event.player.persistentData.getInt("pearl")
         if (event.player.isSteppingCarefully()) {
-            if (pearl == 0) {
+            if (pearl === 0) {
                 event.player.persistentData.putInt("pearl", 10)
                 event.player.setStatusMessage("坐标槽位：10")
             } else {
@@ -328,7 +328,7 @@ NetworkEvents.dataReceived("global.pearlKey.consumeClick", event => {
                 event.player.setStatusMessage("坐标槽位：" + (pearl - 1))
             }
         } else {
-            if (pearl == 10) {
+            if (pearl === 10) {
                 event.player.persistentData.putInt("pearl", 0)
                 event.player.setStatusMessage("坐标槽位：0")
             } else {
@@ -340,8 +340,8 @@ NetworkEvents.dataReceived("global.pearlKey.consumeClick", event => {
 })
 
 NetworkEvents.dataReceived("global.vajraKey.consumeClick", event => {
-    let item = event.player.getHeldItem("main_hand")
-    if (item == "gtceu:echoite_vajra") {
+    let item = event.player.getHeldItem("main_hand").getId()
+    if (item === "gtceu:echoite_vajra") {
         let value = event.player.isSteppingCarefully() ? 10 : 1
         let speed = item.getNbt().getCompound("GT.Tool").getFloat("ToolSpeed")
         if (speed < 100) {
@@ -359,21 +359,21 @@ NetworkEvents.dataReceived("global.vajraKey.consumeClick", event => {
 
 ItemEvents.firstLeftClicked("gtceu:echoite_vajra", event => {
     if (event.player.isSteppingCarefully() && !event.player.isMiningBlock()) {
-        event.item.getNbt().getCompound("GT.Behaviours").getByte("RelocateMinedBlocks") == 1 ? (event.item.getNbt().getCompound("GT.Behaviours").remove("RelocateMinedBlocks"), event.player.setStatusMessage("磁力吸引：关闭")) : (event.item.getNbt().getCompound("GT.Behaviours").putByte("RelocateMinedBlocks", 1), event.player.setStatusMessage("磁力吸引：打开"))
+        event.item.getNbt().getCompound("GT.Behaviours").getByte("RelocateMinedBlocks") === 1 ? (event.item.getNbt().getCompound("GT.Behaviours").remove("RelocateMinedBlocks"), event.player.setStatusMessage("磁力吸引：关闭")) : (event.item.getNbt().getCompound("GT.Behaviours").putByte("RelocateMinedBlocks", 1), event.player.setStatusMessage("磁力吸引：打开"))
     }
 })
 
 EntityEvents.hurt("player", event => {
-    if (event.entity.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]") {
+    if (event.entity.getArmorSlots().toString() === "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]") {
         event.cancel()
     }
-    if ((event.getSource().type().msgId() == "oxygen" || event.getSource().type().msgId() == "drown") && (event.entity.getArmorSlots().toString() == "[1 quarktech_boots, 1 quarktech_leggings, 1 advanced_quarktech_chestplate, 1 quarktech_helmet]" || event.entity.getArmorSlots().toString() == "[1 quarktech_boots, 1 quarktech_leggings, 1 quarktech_chestplate, 1 quarktech_helmet]" || event.player.getArmorSlots().toString() == "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]")) {
+    if ((event.getSource().type().msgId() === "oxygen" || event.getSource().type().msgId() === "drown") && (event.entity.getArmorSlots().toString() === "[1 quarktech_boots, 1 quarktech_leggings, 1 advanced_quarktech_chestplate, 1 quarktech_helmet]" || event.entity.getArmorSlots().toString() === "[1 quarktech_boots, 1 quarktech_leggings, 1 quarktech_chestplate, 1 quarktech_helmet]" || event.player.getArmorSlots().toString() === "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]")) {
         event.cancel()
     }
 })
 
 BlockEvents.leftClicked("minecraft:bedrock", (event) => {
-    if (event.player.getHeldItem("main_hand") == "kubejs:bedrock_destroyer") {
+    if (event.player.getHeldItem("main_hand").getId() === "kubejs:bedrock_destroyer") {
         event.block.set("minecraft:air")
     }
 })

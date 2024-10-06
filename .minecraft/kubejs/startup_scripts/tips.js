@@ -27,21 +27,21 @@ ForgeEvents.onEvent("net.minecraftforge.event.entity.player.ItemTooltipEvent", e
     }
     const tiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"]
     tiers.forEach((suprachronal) => {
-        if (event.getItemStack().getId() == "kubejs:suprachronal_" + suprachronal) {
+        if (event.getItemStack().getId() === "kubejs:suprachronal_" + suprachronal) {
             addtooltip("运行在已知时空之外")
             addwhite_bluetooltip(suprachronal.toUpperCase() + "级电路")
         }
     })
     tiers.slice(0, 12).forEach((magneto_resonatic) => {
-        if (event.getItemStack().getId() == "kubejs:circuit_resonatic_" + magneto_resonatic) {
+        if (event.getItemStack().getId() === "kubejs:circuit_resonatic_" + magneto_resonatic) {
             addtooltip("§d" + magneto_resonatic.toUpperCase() + "级电路")
         }
     })
     switch (event.getItemStack().getId()) {
-        case "gtceu:dimensionally_transcendent_dirt_forge":
+        case "gtlcore:dimensionally_transcendent_dirt_forge":
             addfull_colortooltip("原始人的第一个巨构")
             break
-        case "gtceu:door_of_create":
+        case "gtlcore:door_of_create":
             addwhite_bluetooltip("登神之路为你打开")
             break
         case "kubejs:create_ultimate_battery":

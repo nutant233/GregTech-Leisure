@@ -1253,7 +1253,7 @@
 			rewards: [
 				{
 					id: "29D25464BAE8D612"
-					item: "gtceu:ulv_primitive_magic_energy"
+					item: "gtlcore:ulv_primitive_magic_energy"
 					type: "item"
 				}
 				{
@@ -1272,7 +1272,7 @@
 				{
 					consume_items: true
 					id: "1449D8FEFB3FA891"
-					item: "gtceu:ulv_thermal_generator"
+					item: "gtlcore:ulv_thermal_generator"
 					type: "item"
 				}
 				{
@@ -1303,7 +1303,7 @@
 			optional: true
 			rewards: [{
 				id: "2DC3B970A4DC26CF"
-				item: "gtceu:lv_primitive_magic_energy"
+				item: "gtlcore:lv_primitive_magic_energy"
 				type: "item"
 			}]
 			tasks: [
@@ -1316,7 +1316,7 @@
 				{
 					consume_items: true
 					id: "039CA00B066F14C0"
-					item: "gtceu:ulv_primitive_magic_energy"
+					item: "gtlcore:ulv_primitive_magic_energy"
 					type: "item"
 				}
 				{

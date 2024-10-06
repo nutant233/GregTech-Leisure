@@ -215,7 +215,7 @@
 			id: "6196565B3DE59BF1"
 			tasks: [{
 				id: "625BBCED62255415"
-				item: "gtceu:steam_mega_turbine"
+				item: "gtlcore:steam_mega_turbine"
 				type: "item"
 			}]
 			x: 6.5d
@@ -237,7 +237,7 @@
 			id: "1FF27C8CE8BD4041"
 			tasks: [{
 				id: "7A3302436045F131"
-				item: "gtceu:gas_mega_turbine"
+				item: "gtlcore:gas_mega_turbine"
 				type: "item"
 			}]
 			x: 3.5d
@@ -248,7 +248,7 @@
 			id: "1BDB51F089ED52D3"
 			tasks: [{
 				id: "0D3FDB5461E50DF0"
-				item: "gtceu:ev_rocket_engine"
+				item: "gtlcore:ev_rocket_engine"
 				type: "item"
 			}]
 			x: -2.5d
@@ -259,7 +259,7 @@
 			id: "1A76E49604336B50"
 			tasks: [{
 				id: "3A071C147BA1B580"
-				item: "gtceu:iv_rocket_engine"
+				item: "gtlcore:iv_rocket_engine"
 				type: "item"
 			}]
 			x: -2.5d
@@ -280,7 +280,7 @@
 			id: "5960AA3D42E0F886"
 			tasks: [{
 				id: "68AC62415412A2A1"
-				item: "gtceu:luv_rocket_engine"
+				item: "gtlcore:luv_rocket_engine"
 				type: "item"
 			}]
 			x: -2.5d
@@ -291,7 +291,7 @@
 			id: "2CC7E0E80D23E7EF"
 			tasks: [{
 				id: "562C661F9252E3AF"
-				item: "gtceu:luv_naquadah_reactor"
+				item: "gtlcore:luv_naquadah_reactor"
 				type: "item"
 			}]
 			x: 0.5d
@@ -302,7 +302,7 @@
 			id: "48991235C17FB211"
 			tasks: [{
 				id: "5AF1CFBEC9280D1A"
-				item: "gtceu:iv_naquadah_reactor"
+				item: "gtlcore:iv_naquadah_reactor"
 				type: "item"
 			}]
 			x: 0.5d
@@ -313,7 +313,7 @@
 			id: "67A37C28F37F2C3D"
 			tasks: [{
 				id: "43FD10D740D6DCB4"
-				item: "gtceu:zpm_naquadah_reactor"
+				item: "gtlcore:zpm_naquadah_reactor"
 				type: "item"
 			}]
 			x: -2.5d
@@ -334,7 +334,7 @@
 			id: "666098A2D466C77A"
 			tasks: [{
 				id: "05ADF526AE790643"
-				item: "gtceu:chemical_energy_devourer"
+				item: "gtlcore:chemical_energy_devourer"
 				type: "item"
 			}]
 			x: 5.0d
@@ -345,7 +345,7 @@
 			id: "2CF58B9EF4F70090"
 			tasks: [{
 				id: "5ACF147740945167"
-				item: "gtceu:rocket_mega_turbine"
+				item: "gtlcore:rocket_mega_turbine"
 				type: "item"
 			}]
 			x: 5.0d
@@ -368,7 +368,7 @@
 			id: "48462EE64EA29340"
 			tasks: [{
 				id: "70FB2E5BE288D032"
-				item: "gtceu:plasma_mega_turbine"
+				item: "gtlcore:plasma_mega_turbine"
 				type: "item"
 			}]
 			x: -1.0d
@@ -389,7 +389,7 @@
 			id: "24BBFCFCAFE0ECD5"
 			tasks: [{
 				id: "16259075AA2E440D"
-				item: "gtceu:large_naquadah_reactor"
+				item: "gtlcore:large_naquadah_reactor"
 				type: "item"
 			}]
 			x: -2.5d
@@ -400,7 +400,7 @@
 			id: "408C3C831B65D6F1"
 			tasks: [{
 				id: "32BCA52A82F7C585"
-				item: "gtceu:rocket_large_turbine"
+				item: "gtlcore:rocket_large_turbine"
 				type: "item"
 			}]
 			x: 5.0d
@@ -421,7 +421,7 @@
 			id: "548E8FA4B1004534"
 			tasks: [{
 				id: "5079AC2040FDA3AA"
-				item: "gtceu:hyper_reactor"
+				item: "gtlcore:hyper_reactor"
 				type: "item"
 			}]
 			x: -2.5d
@@ -432,7 +432,7 @@
 			id: "082BB082BE18C820"
 			tasks: [{
 				id: "4DC11532BC403AB3"
-				item: "gtceu:dyson_sphere"
+				item: "gtlcore:dyson_sphere"
 				type: "item"
 			}]
 			x: -1.0d
@@ -453,7 +453,7 @@
 			id: "25F672CF48091CEC"
 			tasks: [{
 				id: "7F7D348C6E55EC07"
-				item: "gtceu:advanced_hyper_reactor"
+				item: "gtlcore:advanced_hyper_reactor"
 				type: "item"
 			}]
 			x: -2.5d
@@ -474,7 +474,7 @@
 			id: "1893C9D673253B79"
 			tasks: [{
 				id: "7E9DC235BCE8E7BF"
-				item: "gtceu:annihilate_generator"
+				item: "gtlcore:annihilate_generator"
 				type: "item"
 			}]
 			x: -2.5d
@@ -485,7 +485,7 @@
 			id: "6EF3C749D06C7262"
 			tasks: [{
 				id: "329F1BD301166219"
-				item: "gtceu:lv_semi_fluid"
+				item: "gtlcore:lv_semi_fluid"
 				type: "item"
 			}]
 			x: 2.0d
@@ -495,7 +495,7 @@
 			id: "28507EACD363F3D1"
 			tasks: [{
 				id: "1D47416F630379AB"
-				item: "gtceu:mv_semi_fluid"
+				item: "gtlcore:mv_semi_fluid"
 				type: "item"
 			}]
 			x: 2.0d
@@ -505,7 +505,7 @@
 			id: "236EB8B88EA504C9"
 			tasks: [{
 				id: "778BDD1B9F40E23F"
-				item: "gtceu:hv_semi_fluid"
+				item: "gtlcore:hv_semi_fluid"
 				type: "item"
 			}]
 			x: 2.0d
@@ -515,7 +515,7 @@
 			id: "4E8004D6D020E5E5"
 			tasks: [{
 				id: "37D6A5F6A1C6D304"
-				item: "gtceu:large_semi_fluid_generator"
+				item: "gtlcore:large_semi_fluid_generator"
 				type: "item"
 			}]
 			x: 2.0d
@@ -536,7 +536,7 @@
 			id: "61B0C3E3C0B7E6EE"
 			tasks: [{
 				id: "31A9D370C6B93F87"
-				item: "gtceu:iv_lightning_rod"
+				item: "gtlcore:iv_lightning_rod"
 				type: "item"
 			}]
 			x: -1.0d
@@ -546,7 +546,7 @@
 			id: "36ED28C6C3F2CDEC"
 			tasks: [{
 				id: "5BEE28B100FC5354"
-				item: "gtceu:luv_lightning_rod"
+				item: "gtlcore:luv_lightning_rod"
 				type: "item"
 			}]
 			x: -1.0d
@@ -557,7 +557,7 @@
 			id: "749FFDD88305518C"
 			tasks: [{
 				id: "7EE83AF0AE0CD89E"
-				item: "gtceu:supercritical_steam_turbine"
+				item: "gtlcore:supercritical_steam_turbine"
 				type: "item"
 			}]
 			x: 3.5d
@@ -567,7 +567,7 @@
 			id: "301FD6AEF56EDB77"
 			tasks: [{
 				id: "039203DBB3645A9D"
-				item: "gtceu:supercritical_mega_steam_turbine"
+				item: "gtlcore:supercritical_mega_steam_turbine"
 				type: "item"
 			}]
 			x: 0.5d

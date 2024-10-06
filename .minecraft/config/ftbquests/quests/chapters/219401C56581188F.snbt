@@ -40,7 +40,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "62BD5C7471D8A9DB"
-				item: "gtceu:magic_manufacturer"
+				item: "gtlcore:magic_manufacturer"
 				type: "item"
 			}]
 			x: 2.0d
@@ -59,7 +59,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "244F8871BA1B7E34"
-				item: "gtceu:sps_crafting"
+				item: "gtlcore:sps_crafting"
 				type: "item"
 			}]
 			x: 6.0d
@@ -355,7 +355,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "7AB2A11AD97054E2"
-				item: "gtceu:advanced_sps_crafting"
+				item: "gtlcore:advanced_sps_crafting"
 				type: "item"
 			}]
 			x: 14.0d
@@ -438,7 +438,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "185FF9B96D2E6DA0"
-				item: "gtceu:aggregation_device"
+				item: "gtlcore:aggregation_device"
 				type: "item"
 			}]
 			x: 12.0d
@@ -512,7 +512,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "5EBD9582ED477D88"
-				item: "gtceu:super_computation"
+				item: "gtlcore:super_computation"
 				type: "item"
 			}]
 			x: 10.0d
@@ -604,7 +604,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "0F05C8DA47EB7768"
-				item: "gtceu:bedrock_drilling_rig"
+				item: "gtlcore:bedrock_drilling_rig"
 				type: "item"
 			}]
 			x: 12.0d
@@ -615,7 +615,7 @@
 			id: "1C4D5D7786F64485"
 			tasks: [{
 				id: "2EA2C34D0708CF9A"
-				item: "gtceu:nano_forge_2"
+				item: "gtlcore:nano_forge_2"
 				type: "item"
 			}]
 			x: 14.0d
@@ -656,7 +656,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "3D1314CB02CBCEAC"
-				item: "gtceu:uev_fusion_reactor"
+				item: "gtlcore:uev_fusion_reactor"
 				type: "item"
 			}]
 			x: 12.0d

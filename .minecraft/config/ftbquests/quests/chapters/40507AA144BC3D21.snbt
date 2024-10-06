@@ -24,7 +24,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "75AE43EB6B5AC68F"
-				item: "gtceu:eye_of_harmony"
+				item: "gtlcore:eye_of_harmony"
 				type: "item"
 			}]
 			x: -9.0d
@@ -223,7 +223,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "50D76B27937DC429"
-				item: "gtceu:annihilate_generator"
+				item: "gtlcore:annihilate_generator"
 				type: "item"
 			}]
 			x: 3.0d
@@ -236,7 +236,7 @@
 			shape: "gear"
 			tasks: [{
 				id: "6DA1FC65BA6A379B"
-				item: "gtceu:max_neutron_compressor"
+				item: "gtlcore:max_neutron_compressor"
 				type: "item"
 			}]
 			x: -1.0d
@@ -254,7 +254,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "68BE29A496275699"
-				item: "gtceu:door_of_create"
+				item: "gtlcore:door_of_create"
 				type: "item"
 			}]
 			x: 5.0d
