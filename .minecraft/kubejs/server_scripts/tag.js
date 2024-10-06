@@ -17,11 +17,6 @@ ServerEvents.tags("item", event => {
     items.forEach((item) => {
         event.removeAllTagsFrom(item)
     })
-    event.add("gtceu:circuits/ulv", "kubejs:basic_control_circuit")
-    event.add("gtceu:circuits/lv", "kubejs:advanced_control_circuit")
-    event.add("gtceu:circuits/mv", "kubejs:elite_control_circuit")
-    event.add("gtceu:circuits/hv", "kubejs:ultimate_control_circuit")
-    event.add("gtceu:circuits/ev", "kubejs:ultima_control_circuit")
     //minecraft
     const ores = [
         "minecraft:coal_ore",

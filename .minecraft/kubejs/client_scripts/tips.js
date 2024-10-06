@@ -1,9 +1,4 @@
 ItemEvents.tooltip(event => {
-    event.add("kubejs:basic_control_circuit", "§aULV级电路")
-    event.add("kubejs:advanced_control_circuit", "§cLV级电路")
-    event.add("kubejs:elite_control_circuit", "§bMV级电路")
-    event.add("kubejs:ultimate_control_circuit", "§5HV级电路")
-    event.add("kubejs:ultima_control_circuit", "§4EV级电路")
     event.add("kubejs:warped_ender_pearl", "潜行右键可设置个人传送点，右键传送到传送点")
     event.add("kubejs:hyper_stable_self_healing_adhesive", "§7选择性完全粘合，即使在撕裂或损坏时也有效")
     event.add("kubejs:black_body_naquadria_supersolid", "§7如液体般流动，不反射任何电磁波，完美地将其吸收与传递")

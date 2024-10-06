@@ -354,38 +354,14 @@
 			can_repeat: true
 			dependencies: ["369BA1002418F097"]
 			description: [
-				"使用这个神奇的瓶子对着工作中的GT机器潜行右键可以加速机器工作"
-				"当然，使用如此强大的物品会消耗你的饥饿值，且加速能力随机器等级的提升而减弱"
-				"可合成为高炉专用型，可以用来加速电力高炉和合金冶炼炉"
-				"机制："
-				"每次使用消耗1使用次数，使用次数每秒回复1，最大10次"
-				"普通：从蒸汽机器到HV机器的机器等级为0-3级，大于HV级无效"
-				"机器配方运行时间大于20秒时时间减少(4-机器等级)x2秒"
-				"机器配方运行时间大于10秒时时间减少(4-机器等级)秒"
-				"机器配方运行时间大于2秒时时间减少(4-机器等级)x0.5秒"
-				"土高炉为固定减少5秒"
-				"高炉专用：可加速LuV及以下的机器"
-				"机器配方运行时间大于40秒时时间固定减少8秒"
-				"机器配方运行时间大于20秒时时间固定减少4秒"
-				"机器配方运行时间大于10秒时时间固定减少2秒"
+				"消耗无线电网的电力来加速，消耗量为机器超频功率x8x加速时间"
+				"每次加速时间为剩余时间的一半"
 			]
-			icon: {
-				Count: 1
-				id: "kubejs:time_twister"
-				tag: {
-					Damage: 0
-				}
-			}
+			icon: "gtlcore:time_twister"
 			id: "15A4420D900FEDE6"
 			rewards: [{
 				id: "7E56F698AF18B8AD"
-				item: {
-					Count: 1
-					id: "kubejs:time_twister"
-					tag: {
-						Damage: 0
-					}
-				}
+				item: "gtlcore:time_twister"
 				type: "item"
 			}]
 			tasks: [
@@ -409,12 +385,7 @@
 		{
 			can_repeat: true
 			dependencies: ["369BA1002418F097"]
-			description: [
-				"范围攻击"
-				"右键可以发射波束"
-				"潜行右键可以聚集100范围内的掉落物"
-				"聚集视角指定的生物"
-			]
+			description: ["杀戮好帮手"]
 			icon: "avaritia:infinity_sword"
 			id: "59E9131BD015B4F5"
 			rewards: [{
@@ -1275,24 +1246,93 @@
 		{
 			can_repeat: true
 			dependencies: ["6967496308DD29AE"]
-			icon: "minecraft:yellow_dye"
+			description: ["未知科技"]
+			icon: "minecraft:end_crystal"
 			id: "7B72A96FC0A31033"
 			optional: true
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "5C68B938EAB084D8"
-				table_id: 3370214622901424373L
-				type: "choice"
-			}]
-			tasks: [{
-				consume_items: true
-				id: "52079BD0F841DEA6"
-				item: "gtceu:silver_credit"
-				type: "item"
-			}]
-			title: "多彩世界"
+			rewards: [
+				{
+					id: "29D25464BAE8D612"
+					item: "gtceu:ulv_primitive_magic_energy"
+					type: "item"
+				}
+				{
+					id: "56ABBABE167B8B78"
+					item: "minecraft:end_crystal"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "52079BD0F841DEA6"
+					item: "gtceu:silver_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "1449D8FEFB3FA891"
+					item: "gtceu:ulv_thermal_generator"
+					type: "item"
+				}
+				{
+					id: "761961229E062136"
+					item: "gtceu:ulv_16a_energy_converter"
+					type: "item"
+				}
+				{
+					id: "6D1ADD564C5DF00A"
+					item: {
+						Count: 1
+						id: "ae2:dense_energy_cell"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "魔力发电"
 			x: 4.5d
 			y: -4.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["1994BAD293E85984"]
+			description: ["未知科技升级版"]
+			icon: "minecraft:end_crystal"
+			id: "44FE453E57FAD7C8"
+			optional: true
+			rewards: [{
+				id: "2DC3B970A4DC26CF"
+				item: "gtceu:lv_primitive_magic_energy"
+				type: "item"
+			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "702A8652D6C80412"
+					item: "gtceu:platinum_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "039CA00B066F14C0"
+					item: "gtceu:ulv_primitive_magic_energy"
+					type: "item"
+				}
+				{
+					id: "24D72B50BBF052FC"
+					item: "gtceu:ulv_transformer_16a"
+					type: "item"
+				}
+				{
+					id: "4777CAFE2432CF57"
+					item: "gtceu:lv_16a_energy_converter"
+					type: "item"
+				}
+			]
+			title: "进阶魔力发电"
+			x: 1.5d
+			y: -2.5d
 		}
 	]
 	title: "小市场"

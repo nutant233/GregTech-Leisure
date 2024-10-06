@@ -3,7 +3,6 @@ ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
 
     event.remove({ id: "minecraft:netherite_ingot" })
-    event.remove({ id: "minecraft:ender_eye" })
     event.remove({ id: "minecraft:netherite_scrap" })
     event.remove({ id: "minecraft:netherite_scrap_from_blasting" })
 
@@ -28,8 +27,21 @@ ServerEvents.recipes((event) => {
         D: "minecraft:sculk_sensor"
     })
 
+    gtr.compressor("minecraft:netherite_block")
+        .itemInputs("9x minecraft:netherite_ingot")
+        .itemOutputs("minecraft:netherite_block")
+        .duration(300)
+        .EUt(2)
+
+    gtr.alloy_smelter("minecraft:netherite_ingot")
+        .itemInputs("minecraft:netherite_block")
+        .notConsumable("gtceu:ingot_casting_mold")
+        .itemOutputs("9x minecraft:netherite_ingot")
+        .duration(1188)
+        .EUt(7)
+
     gtr.lightning_processor("gtceu:ghast_tear")
-        .itemInputs("#forge:tiny_dusts/potassium", "#forge:tiny_dusts/lithium")
+        .itemInputs("gtceu:tiny_lithium_dust", "gtceu:tiny_potassium_dust")
         .inputFluids("gtceu:salt_water 1000")
         .itemOutputs("minecraft:ghast_tear")
         .duration(400)

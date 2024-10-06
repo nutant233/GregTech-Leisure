@@ -21,17 +21,6 @@ ServerEvents.recipes((event) => {
         B: "gtceu:eternity_rod"
     })
 
-    event.shaped("kubejs:time_twister_wireless", [
-        "CDC",
-        "BAB",
-        "CDC"
-    ], {
-        A: "kubejs:time_twister",
-        D: "gtmthings:wireless_energy_monitor",
-        C: "gtmthings:lv_wireless_energy_receive_cover",
-        B: "minecraft:clock"
-    })
-
     event.shaped("avaritia:extreme_crafting_table", [
         "ABA",
         "BCB",
@@ -113,11 +102,6 @@ ServerEvents.recipes((event) => {
         .duration(200)
 })
 
-const $GTCapabilityHelper = Java.loadClass("com.gregtechceu.gtceu.api.capability.GTCapabilityHelper")
-const $WirelessEnergyManager = Java.loadClass("com.hepdd.gtmthings.api.misc.WirelessEnergyManager")
-const $BigInteger = Java.loadClass("java.math.BigInteger")
-const $RecipeHelper = Java.loadClass("com.gregtechceu.gtceu.api.recipe.RecipeHelper")
-const $FormattingUtil = Java.loadClass("com.gregtechceu.gtceu.utils.FormattingUtil")
 const $ClipContext = Java.loadClass("net.minecraft.world.level.ClipContext")
 
 BlockEvents.rightClicked("minecraft:crying_obsidian", event => {
@@ -201,62 +185,6 @@ function getEyePositionPos(level, player) {
     return level.clip(new $ClipContext(player.getEyePosition(1), player.getEyePosition(1).add(player.getViewVector(1).scale(5)), $ClipContext.Block.OUTLINE, $ClipContext.Fluid.NONE, player)).getBlockPos()
 }
 
-function getEyePositionRecipeLogic(level, player) {
-    return $GTCapabilityHelper.getRecipeLogic(level, getEyePositionPos(level, player), null)
-}
-
-ItemEvents.rightClicked("kubejs:time_twister_wireless", event => {
-    if (!event.player.isFake() && event.player.isSteppingCarefully()) {
-        var recipeLogic = getEyePositionRecipeLogic(event.level, event.player)
-        if (recipeLogic != null && recipeLogic.isWorking()) {
-            let reducedDuration = (recipeLogic.getDuration() - recipeLogic.getProgress()) * 0.5
-            let eu = 8 * reducedDuration * $RecipeHelper.getInputEUt(recipeLogic.getLastRecipe())
-            if (eu > 0 && $WirelessEnergyManager.addEUToGlobalEnergyMap(event.player.uuid, $BigInteger.valueOf(- eu), recipeLogic.getMachine())) {
-                recipeLogic.setProgress(recipeLogic.getProgress() + reducedDuration)
-                event.player.setStatusMessage("消耗了 " + $FormattingUtil.formatNumbers(eu) + " EU，使机器运行时间减少了 " + reducedDuration + " tick")
-            }
-        }
-    }
-})
-
-function consume(player, hand) {
-    player.damageHeldItem()
-    let tt = player.persistentData.getInt("tt")
-    player.persistentData.putInt("tt", tt - 1)
-    if (tt > 0) {
-        player.setStatusMessage("可使用次数：" + (tt - 1))
-    } else {
-        player.addItemCooldown(player.getHeldItem(hand), 20)
-    }
-}
-
-ItemEvents.rightClicked("kubejs:time_twister", event => {
-    if (!event.player.isFake() && event.player.isSteppingCarefully()) {
-        var recipeLogic = getEyePositionRecipeLogic(event.level, event.player)
-        if (recipeLogic != null && recipeLogic.isWorking()) {
-            if (event.player.isCreative()) {
-                recipeLogic.setProgress(recipeLogic.getDuration() - recipeLogic.getProgress() - 20)
-            } else {
-                if (recipeLogic.getMachine().self().getRecipeType() == GTRecipeTypes.PRIMITIVE_BLAST_FURNACE_RECIPES) {
-                    recipeLogic.setProgress(recipeLogic.getProgress() + 100)
-                    consume(event.player, event.hand)
-                } else if (recipeLogic.getMachine().self().getTier() < 4 && $RecipeHelper.getInputEUt(recipeLogic.getLastRecipe()) > 0) {
-                    if (recipeLogic.getDuration() > 400) {
-                        recipeLogic.setProgress(recipeLogic.getProgress() + (4 - recipeLogic.getMachine().self().getTier()) * 40)
-                        consume(event.player, event.hand)
-                    } else if (recipeLogic.getDuration() > 200) {
-                        recipeLogic.setProgress(recipeLogic.getProgress() + (4 - recipeLogic.getMachine().self().getTier()) * 20)
-                        consume(event.player, event.hand)
-                    } else if (recipeLogic.getDuration() > 40) {
-                        recipeLogic.setProgress(recipeLogic.getProgress() + (4 - recipeLogic.getMachine().self().getTier()) * 10)
-                        consume(event.player, event.hand)
-                    }
-                }
-            }
-        }
-    }
-})
-
 ItemEvents.rightClicked("kubejs:command_wand", event => {
     let name = event.player.getName().getString()
     let pos = getEyePositionPos(event.level, event.player)
@@ -324,32 +252,20 @@ PlayerEvents.tick(event => {
         }
         if (ma || fa || hfa) {
             event.player.potionEffects.add("minecraft:saturation", 200, 0, false, false)
-            if (event.player.persistentData.getBoolean("nv")) {
+            if (event.player.persistentData.getBoolean("nightVision")) {
                 event.player.potionEffects.add("minecraft:night_vision", 300, 0, false, false)
             }
             if (!event.player.abilities.mayfly) {
                 event.player.abilities.mayfly = true
                 event.player.persistentData.putInt("fly", 1)
                 event.player.persistentData.putInt("fspeed", 1)
-                event.player.persistentData.putBoolean("nv", false)
+                event.player.persistentData.putBoolean("nightVision", false)
             }
         } else if (event.player.persistentData.getInt("fly") == 1) {
             event.player.abilities.mayfly = false
             event.player.persistentData.putInt("fly", 0)
             event.player.abilities.setFlyingSpeed(0.05)
             event.player.persistentData.putInt("fspeed", 1)
-        }
-        let tt = event.player.persistentData.getInt("tt")
-        let tti = event.player.getHeldItem("main_hand") == "kubejs:time_twister"
-        if (tt > 20) {
-            if (tti) {
-                event.player.setStatusMessage("可使用次数：" + 20)
-            }
-        } else {
-            event.player.persistentData.putInt("tt", tt + 1)
-            if (tti) {
-                event.player.setStatusMessage("可使用次数：" + (tt + 1))
-            }
         }
     }
 })
@@ -389,12 +305,12 @@ NetworkEvents.dataReceived("global.flyingspeedKey.consumeClick", (event) => {
 
 NetworkEvents.dataReceived("global.nightvisionKey.consumeClick", event => {
     if (event.player.getArmorSlots().toString() == "[1 fermium_boots, 1 fermium_leggings, 1 fermium_chestplate, 1 fermium_helmet]" || event.player.getArmorSlots().toString() == "[1 magnetohydrodynamicallyconstrainedstarmatter_boots, 1 magnetohydrodynamicallyconstrainedstarmatter_leggings, 1 magnetohydrodynamicallyconstrainedstarmatter_chestplate, 1 magnetohydrodynamicallyconstrainedstarmatter_helmet]" || event.player.getArmorSlots().toString() == "[1 space_fermium_boots, 1 space_fermium_leggings, 1 space_fermium_chestplate, 1 space_fermium_helmet]") {
-        if (event.player.persistentData.getBoolean("nv")) {
-            event.player.persistentData.putBoolean("nv", false)
+        if (event.player.persistentData.getBoolean("nightVision")) {
+            event.player.persistentData.putBoolean("nightVision", false)
             event.player.removeEffect("minecraft:night_vision")
             event.player.setStatusMessage("夜视关闭")
         } else {
-            event.player.persistentData.putBoolean("nv", true)
+            event.player.persistentData.putBoolean("nightVision", true)
             event.player.setStatusMessage("夜视开启")
         }
     }
@@ -477,13 +393,6 @@ ServerEvents.entityLootTables(event => {
         l.addPool(p => {
             p.addItem("kubejs:glacio_spirit").weight(1)
             p.addItem("ad_astra:ice_shard").weight(9)
-        })
-    })
-    event.addEntity("minecraft:villager", l => {
-        l.addPool(p => {
-            p.addItem("minecraft:end_crystal").weight(1).killedByPlayer()
-            p.addItem("gtceu:ulv_primitive_magic_energy").weight(2).killedByPlayer()
-            p.addItem("usclb:inkandquill").weight(3)
         })
     })
 })

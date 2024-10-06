@@ -27,18 +27,11 @@
 			dependency_requirement: "one_completed"
 			description: ["推荐制作一个大型锅炉来生产用不完的蒸汽"]
 			id: "4C591AA4F1D907C1"
-			rewards: [
-				{
-					id: "6FBE47C05C4F3A66"
-					item: "gtceu:lv_primitive_magic_energy"
-					type: "item"
-				}
-				{
-					id: "3107B7FFED0C090D"
-					item: "minecraft:end_crystal"
-					type: "item"
-				}
-			]
+			rewards: [{
+				id: "61F21508E4EB18DC"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
 			tasks: [{
 				id: "243E535AEDB5D1A5"
 				item: "gtceu:lv_steam_turbine"

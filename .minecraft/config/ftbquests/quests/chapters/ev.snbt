@@ -22,10 +22,7 @@
 	]
 	quests: [
 		{
-			dependencies: [
-				"1EC6366E9611F2AD"
-				"7940CFD732610594"
-			]
+			dependencies: ["1EC6366E9611F2AD"]
 			hide_dependent_lines: true
 			id: "1E7344C133C99565"
 			shape: "rsquare"

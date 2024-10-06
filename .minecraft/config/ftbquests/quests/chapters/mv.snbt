@@ -9,10 +9,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: [
-				"40C39645B1DE2488"
-				"388E5C1034C54D19"
-			]
+			dependencies: ["388E5C1034C54D19"]
 			id: "7296C57805F5DC96"
 			shape: "rsquare"
 			size: 2.0d
@@ -22,27 +19,6 @@
 				type: "checkmark"
 			}]
 			x: 0.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"66DC60EABAAE0619"
-				"32960AFE43AFF989"
-			]
-			id: "242AFA510EC14878"
-			rewards: [{
-				id: "24E01572C2356B37"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 2.0d
-			tasks: [{
-				id: "12FCE0B44F0C1BC4"
-				item: "kubejs:ultimate_control_circuit"
-				type: "item"
-			}]
-			x: 12.0d
 			y: 0.0d
 		}
 		{
@@ -523,7 +499,7 @@
 				"554D9DF1365F857C"
 				"55AB003495D2CCE9"
 			]
-			description: ["继续更换更便宜的终极控制电路"]
+			description: ["第3台电路组装，继续铭刻"]
 			id: "66DC60EABAAE0619"
 			rewards: [{
 				id: "244FAF6A2D2B4398"
@@ -555,7 +531,11 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["124D7427DC8E501E"]
+			dependencies: [
+				"124D7427DC8E501E"
+				"5A7EC4A481B2C343"
+			]
+			dependency_requirement: "one_completed"
 			id: "4AEBF1743DC2C92C"
 			rewards: [{
 				id: "1EE37E574D37B9A1"
@@ -902,6 +882,37 @@
 			}]
 			title: "MV的便宜超导"
 			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["66DC60EABAAE0619"]
+			description: ["用于后续电路制作，并解锁更便宜电路"]
+			id: "3ED55B31EAE8EC1E"
+			tasks: [{
+				id: "3824D8A54883C5BD"
+				item: "gtceu:mv_circuit_assembler"
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3ED55B31EAE8EC1E"]
+			description: ["更加便宜的基础电路"]
+			id: "224989EB21C4663A"
+			tasks: [
+				{
+					id: "5D032517366434AF"
+					item: "gtceu:nand_chip"
+					type: "item"
+				}
+				{
+					id: "23F88BCC009EEF22"
+					item: "gtceu:microchip_processor"
+					type: "item"
+				}
+			]
+			x: 14.0d
 			y: 0.0d
 		}
 	]
