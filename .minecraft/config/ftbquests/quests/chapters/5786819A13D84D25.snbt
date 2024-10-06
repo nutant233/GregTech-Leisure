@@ -40,7 +40,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "02412DC87B9DA266"
-				item: "gtceu:stellar_forge"
+				item: "gtlcore:stellar_forge"
 				type: "item"
 			}]
 			x: 2.0d
@@ -79,7 +79,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "6A331B95C454D30D"
-				item: "gtceu:uhv_fusion_reactor"
+				item: "gtlcore:uhv_fusion_reactor"
 				type: "item"
 			}]
 			x: 2.0d
@@ -199,7 +199,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "1E707BD4FE3FEA6B"
-				item: "gtceu:matter_fabricator"
+				item: "gtlcore:matter_fabricator"
 				type: "item"
 			}]
 			x: 2.0d
@@ -253,7 +253,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "65BF39050B7B60AD"
-				item: "gtceu:pcb_factory"
+				item: "gtlcore:pcb_factory"
 				type: "item"
 			}]
 			x: 12.0d
@@ -285,7 +285,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "6B6EF476B6430A90"
-				item: "gtceu:engraving_laser_plant"
+				item: "gtlcore:engraving_laser_plant"
 				type: "item"
 			}]
 			x: -2.0d
@@ -375,11 +375,35 @@
 			size: 1.0d
 			tasks: [{
 				id: "12A231EAC2E4FD44"
-				item: "gtceu:cooling_tower"
+				item: "gtlcore:cooling_tower"
 				type: "item"
 			}]
 			x: 12.0d
 			y: 7.0d
+		}
+		{
+			dependencies: [
+				"783379F3A7557CEE"
+				"2E05225ADF4D7D31"
+			]
+			description: [
+				"如果你很富有，可以制作一个，这台机器只有OpV以后阶段才有专用配方"
+				"可以直接使用大输入总线来输入物品了"
+				"注意无论是否需要研究都必须连接数据库"
+				"拓展模块主机安装在超时空主机的左右2侧间距2格的地方"
+				"即拓展模块尾部的方块正好与超时空结构方块重合"
+				"{image:ftbquests:textures/picture/001.png width:192 height108 align:center}"
+			]
+			id: "72B80ADFE77198DD"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "2489A12E61345011"
+				item: "gtlcore:suprachronal_assembly_line"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["783379F3A7557CEE"]
@@ -395,7 +419,7 @@
 			subtitle: "注意无论是否需要研究都必须连接数据库"
 			tasks: [{
 				id: "43EBC608B5383709"
-				item: "gtceu:dimensional_focus_engraving_array"
+				item: "gtlcore:dimensional_focus_engraving_array"
 				type: "item"
 			}]
 			x: 12.0d
@@ -409,7 +433,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "5C5CC922CD9EF716"
-				item: "gtceu:field_extruder_factory"
+				item: "gtlcore:field_extruder_factory"
 				type: "item"
 			}]
 			x: 14.0d
@@ -423,7 +447,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "6FAEEFBEBAEAE58F"
-				item: "gtceu:mega_wiremill"
+				item: "gtlcore:mega_wiremill"
 				type: "item"
 			}]
 			x: 13.0d
@@ -437,7 +461,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "76AB32A27420A608"
-				item: "gtceu:mega_presser"
+				item: "gtlcore:mega_presser"
 				type: "item"
 			}]
 			x: 14.0d
@@ -451,7 +475,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "38F98C857B04D47D"
-				item: "gtceu:mega_extractor"
+				item: "gtlcore:mega_extractor"
 				type: "item"
 			}]
 			x: 14.0d
@@ -465,7 +489,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "5266F8533351D5E1"
-				item: "gtceu:mega_canner"
+				item: "gtlcore:mega_canner"
 				type: "item"
 			}]
 			x: 13.0d

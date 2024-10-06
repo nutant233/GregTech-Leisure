@@ -524,7 +524,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2C69C2E860BDFB1B"
-				item: "gtceu:blaze_blast_furnace"
+				item: "gtlcore:blaze_blast_furnace"
 				type: "item"
 			}]
 			x: 4.0d
@@ -539,7 +539,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "7D98A152EE340D0E"
-				item: "gtceu:dimensionally_transcendent_steam_boiler"
+				item: "gtlcore:dimensionally_transcendent_steam_boiler"
 				type: "item"
 			}]
 			x: 2.0d
@@ -605,7 +605,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2599970FD2D9C38B"
-				item: "gtceu:fission_reactor"
+				item: "gtlcore:fission_reactor"
 				type: "item"
 			}]
 			x: 8.0d
@@ -724,7 +724,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "7066CF4FFEA3FD14"
-				item: "gtceu:cold_ice_freezer"
+				item: "gtlcore:cold_ice_freezer"
 				type: "item"
 			}]
 			x: 14.0d
@@ -759,12 +759,12 @@
 			tasks: [
 				{
 					id: "756B1B977B98059B"
-					item: "gtceu:digestion_tank"
+					item: "gtlcore:digestion_tank"
 					type: "item"
 				}
 				{
 					id: "6B43A7F342845658"
-					item: "gtceu:dissolving_tank"
+					item: "gtlcore:dissolving_tank"
 					type: "item"
 				}
 			]
@@ -779,7 +779,7 @@
 			optional: true
 			tasks: [{
 				id: "4B207AC62685A5B5"
-				item: "gtceu:heat_exchanger"
+				item: "gtlcore:heat_exchanger"
 				type: "item"
 			}]
 			x: 8.0d

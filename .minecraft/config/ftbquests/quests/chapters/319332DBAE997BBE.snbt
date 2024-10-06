@@ -291,7 +291,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "17918BFA4E414A13"
-				item: "gtceu:precision_assembler"
+				item: "gtlcore:precision_assembler"
 				type: "item"
 			}]
 			x: 16.0d
@@ -526,17 +526,17 @@
 			tasks: [
 				{
 					id: "2033E704723D1C29"
-					item: "gtceu:neutron_activator"
+					item: "gtlcore:neutron_activator"
 					type: "item"
 				}
 				{
 					id: "52D36F7181BD1B42"
-					item: "gtceu:neutron_sensor"
+					item: "gtlcore:neutron_sensor"
 					type: "item"
 				}
 				{
 					id: "7E710037106A0AA7"
-					item: "gtceu:iv_neutron_accelerator"
+					item: "gtlcore:iv_neutron_accelerator"
 					type: "item"
 				}
 			]
@@ -573,7 +573,7 @@
 			id: "5B73961795BE42EE"
 			tasks: [{
 				id: "4532FD760D4A8258"
-				item: "gtceu:isa_mill"
+				item: "gtlcore:isa_mill"
 				type: "item"
 			}]
 			x: 2.0d
@@ -584,7 +584,7 @@
 			id: "2588A0EF7F27DE5B"
 			tasks: [{
 				id: "6372AD4866BBD6B6"
-				item: "gtceu:flotation_cell_regulator"
+				item: "gtlcore:flotation_cell_regulator"
 				type: "item"
 			}]
 			x: 4.0d
@@ -595,7 +595,7 @@
 			id: "147A71CE5EEBC836"
 			tasks: [{
 				id: "09A3EC272A7B5FF8"
-				item: "gtceu:vacuum_drying_furnace"
+				item: "gtlcore:vacuum_drying_furnace"
 				type: "item"
 			}]
 			x: 6.0d
@@ -658,7 +658,7 @@
 			id: "12F9033C4C2B29EB"
 			tasks: [{
 				id: "3BC83ABCD0AD2F48"
-				item: "gtceu:wood_distillation"
+				item: "gtlcore:wood_distillation"
 				type: "item"
 			}]
 			x: 6.0d
@@ -670,7 +670,7 @@
 			id: "4CDCF542F45205EB"
 			tasks: [{
 				id: "29BFCB27C5CDC79E"
-				item: "gtceu:chemical_plant"
+				item: "gtlcore:chemical_plant"
 				type: "item"
 			}]
 			x: 8.0d

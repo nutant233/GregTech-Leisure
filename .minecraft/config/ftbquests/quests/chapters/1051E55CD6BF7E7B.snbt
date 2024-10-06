@@ -163,7 +163,7 @@
 			id: "7C4AD33299386B47"
 			tasks: [{
 				id: "29CE180A8857179D"
-				item: "gtceu:gravitation_shockburst"
+				item: "gtlcore:gravitation_shockburst"
 				type: "item"
 			}]
 			x: 7.0d
@@ -185,7 +185,7 @@
 			id: "30907D7231913ACB"
 			tasks: [{
 				id: "46A19A3E3D3CF4A9"
-				item: "gtceu:create_computation"
+				item: "gtlcore:create_computation"
 				type: "item"
 			}]
 			x: 5.0d
@@ -214,7 +214,7 @@
 			id: "2F9392EF05DB11EF"
 			tasks: [{
 				id: "7AB830407E68C7F1"
-				item: "gtceu:create_aggregation"
+				item: "gtlcore:create_aggregation"
 				type: "item"
 			}]
 			x: 8.0d

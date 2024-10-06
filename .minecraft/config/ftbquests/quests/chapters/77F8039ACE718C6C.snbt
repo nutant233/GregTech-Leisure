@@ -577,7 +577,7 @@
 			}]
 			tasks: [{
 				id: "6255EA9A7B4B58EC"
-				item: "gtceu:large_steam_circuit_assembler"
+				item: "gtlcore:large_steam_circuit_assembler"
 				type: "item"
 			}]
 			x: 14.0d
@@ -618,7 +618,7 @@
 			}]
 			tasks: [{
 				id: "5F47C1E28CF33F84"
-				item: "gtceu:large_steam_centrifuge"
+				item: "gtlcore:large_steam_centrifuge"
 				type: "item"
 			}]
 			x: 12.0d
@@ -687,7 +687,7 @@
 			rewards: [
 				{
 					id: "4D503BB0AABEF8D4"
-					item: "gtceu:ulv_primitive_magic_energy"
+					item: "gtlcore:ulv_primitive_magic_energy"
 					type: "item"
 				}
 				{
@@ -815,7 +815,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "2BE6A835D6EF790C"
-				item: "gtceu:dimensionally_transcendent_dirt_forge"
+				item: "gtlcore:dimensionally_transcendent_dirt_forge"
 				type: "item"
 			}]
 			x: 8.0d
@@ -834,7 +834,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "5AC94C8C8DEF4A0E"
-				item: "gtceu:dimensionally_transcendent_steam_oven"
+				item: "gtlcore:dimensionally_transcendent_steam_oven"
 				type: "item"
 			}]
 			x: -2.0d
@@ -907,7 +907,7 @@
 				"大型蒸汽多方块满并行工作时蒸汽消耗特别大，需要用时空管道或激光节点等高速流体传输手段来提供蒸汽，否则会跳蒸汽"
 			]
 			hide_dependent_lines: true
-			icon: "gtceu:steam_piston_hammer"
+			icon: "gtlcore:steam_piston_hammer"
 			id: "05BB1E1E38478F26"
 			rewards: [
 				{
@@ -1186,7 +1186,7 @@
 			id: "0C0B675E44AAB734"
 			tasks: [{
 				id: "4A1CC61F3161828C"
-				item: "gtceu:ulv_packer"
+				item: "gtlcore:ulv_packer"
 				type: "item"
 			}]
 			x: 6.0d
@@ -1215,7 +1215,7 @@
 			id: "0DF59D1036DC207A"
 			tasks: [{
 				id: "640F5C58A70B897A"
-				item: "gtceu:ulv_thermal_generator"
+				item: "gtlcore:ulv_thermal_generator"
 				type: "item"
 			}]
 			x: 8.0d

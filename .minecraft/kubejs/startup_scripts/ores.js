@@ -9,61 +9,61 @@ WorldgenEvents.remove(event => {
         "ad_astra:mercury_iron_ore", "ad_astra:glacio_deepslate_lapis_ore", "ad_astra:glacio_deepslate_iron_ore",
         "ad_astra:glacio_lapis_ore", "ad_astra:glacio_deepslate_copper_ore", "ad_astra:glacio_deepslate_coal_ore"])
 })
-GTCEuStartupEvents.registry("gtceu:tag_prefix", event => {
+GTCEuStartupEvents.registry("gtceu:tag_prefix", () => {
     TagPrefix.oreTagPrefix("moon_stone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("ad_astra:moon_stone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("ad_astra:moon_stone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "ad_astra:block/moon_stone")
+            new ResourceLocation("ad_astra:block/moon_stone"))
 
     TagPrefix.oreTagPrefix("mars_stone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("ad_astra:mars_stone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("ad_astra:mars_stone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "ad_astra:block/mars_stone")
+            new ResourceLocation("ad_astra:block/mars_stone"))
 
     TagPrefix.oreTagPrefix("venus_stone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("ad_astra:venus_stone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("ad_astra:venus_stone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "ad_astra:block/venus_stone")
+            new ResourceLocation("ad_astra:block/venus_stone"))
 
     TagPrefix.oreTagPrefix("mercury_stone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("ad_astra:mercury_stone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("ad_astra:mercury_stone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "ad_astra:block/mercury_stone")
+            new ResourceLocation("ad_astra:block/mercury_stone"))
 
     TagPrefix.oreTagPrefix("glacio_stone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("ad_astra:glacio_stone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("ad_astra:glacio_stone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "ad_astra:block/glacio_stone")
+            new ResourceLocation("ad_astra:block/glacio_stone"))
 
     TagPrefix.oreTagPrefix("titanstone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("kubejs:titanstone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:titanstone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "kubejs:block/titanstone")
+            new ResourceLocation("kubejs:block/titanstone"))
 
     TagPrefix.oreTagPrefix("plutostone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("kubejs:plutostone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:plutostone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "kubejs:block/plutostone")
+            new ResourceLocation("kubejs:block/plutostone"))
 
     TagPrefix.oreTagPrefix("iostone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("kubejs:iostone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:iostone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "kubejs:block/iostone")
+            new ResourceLocation("kubejs:block/iostone"))
 
     TagPrefix.oreTagPrefix("ganymedestone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("kubejs:ganymedestone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:ganymedestone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "kubejs:block/ganymedestone")
+            new ResourceLocation("kubejs:block/ganymedestone"))
 
     TagPrefix.oreTagPrefix("enceladusstone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("kubejs:enceladusstone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:enceladusstone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "kubejs:block/enceladusstone")
+            new ResourceLocation("kubejs:block/enceladusstone"))
 
     TagPrefix.oreTagPrefix("ceresstone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock("kubejs:ceresstone").defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:ceresstone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            "kubejs:block/ceresstone")
+            new ResourceLocation("kubejs:block/ceresstone"))
 })
 GTCEuStartupEvents.registry("gtceu:world_gen_layer", event => {
     event.create("all_layer")

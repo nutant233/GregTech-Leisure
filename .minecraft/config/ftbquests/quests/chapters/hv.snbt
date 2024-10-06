@@ -368,7 +368,7 @@
 			}]
 			tasks: [{
 				id: "0E4B176D3DF3D8F5"
-				item: "gtceu:fishing_ground"
+				item: "gtlcore:fishing_ground"
 				type: "item"
 			}]
 			x: 10.0d
@@ -845,7 +845,7 @@
 			id: "0752A7F2C67CDF76"
 			tasks: [{
 				id: "44035FCFBB02978D"
-				item: "gtceu:desulfurizer"
+				item: "gtlcore:desulfurizer"
 				type: "item"
 			}]
 			x: 10.0d

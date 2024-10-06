@@ -400,7 +400,7 @@
 			shape: "gear"
 			tasks: [{
 				id: "3E7381E30A07D91A"
-				item: "gtceu:dragon_egg_copier"
+				item: "gtlcore:dragon_egg_copier"
 				type: "item"
 			}]
 			x: 2.0d
@@ -427,7 +427,7 @@
 			size: 1.0d
 			tasks: [{
 				id: "08A25F44515BD5D7"
-				item: "gtceu:qft"
+				item: "gtlcore:qft"
 				type: "item"
 			}]
 			x: 6.0d
@@ -647,7 +647,7 @@
 			id: "6C1AB68CC57D8670"
 			tasks: [{
 				id: "37C6A37E62975D44"
-				item: "gtceu:nano_forge_3"
+				item: "gtlcore:nano_forge_3"
 				type: "item"
 			}]
 			x: 4.0d

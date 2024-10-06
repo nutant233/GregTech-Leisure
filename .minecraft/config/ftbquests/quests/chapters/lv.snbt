@@ -137,7 +137,7 @@
 				}
 				{
 					id: "7429EA91D17E9FC1"
-					item: "gtceu:lv_loom"
+					item: "gtlcore:lv_loom"
 					type: "item"
 				}
 			]
@@ -171,12 +171,12 @@
 				}
 				{
 					id: "31C55FE62E5DBBFF"
-					item: "gtceu:lv_cluster"
+					item: "gtlcore:lv_cluster"
 					type: "item"
 				}
 				{
 					id: "230BED5CBC44E455"
-					item: "gtceu:lv_rolling"
+					item: "gtlcore:lv_rolling"
 					type: "item"
 				}
 			]
@@ -985,7 +985,7 @@
 			id: "62B5D5669A535245"
 			tasks: [{
 				id: "41EE54C0336928F8"
-				item: "gtceu:slaughterhouse"
+				item: "gtlcore:slaughterhouse"
 				type: "item"
 			}]
 			x: 10.0d
@@ -1070,12 +1070,12 @@
 			id: "1486FC9F82B2E56E"
 			rewards: [{
 				id: "71CF6F2874AB4862"
-				item: "gtceu:lv_primitive_magic_energy"
+				item: "gtlcore:lv_primitive_magic_energy"
 				type: "item"
 			}]
 			tasks: [{
 				id: "5EE2778F62F08653"
-				item: "gtceu:generator_array"
+				item: "gtlcore:generator_array"
 				type: "item"
 			}]
 			x: -4.0d
@@ -1134,7 +1134,7 @@
 			id: "6C5150B61C92FADE"
 			tasks: [{
 				id: "72370D90BB8ACB58"
-				item: "gtceu:lv_laminator"
+				item: "gtlcore:lv_laminator"
 				type: "item"
 			}]
 			x: 2.0d

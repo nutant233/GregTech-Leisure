@@ -177,7 +177,7 @@
 			id: "1999B90B73BAB11F"
 			tasks: [{
 				id: "5F6FCED2FDC49E27"
-				item: "gtceu:void_miner"
+				item: "gtlcore:void_miner"
 				type: "item"
 			}]
 			x: 7.5d
@@ -233,7 +233,7 @@
 			id: "7FC5F639F89C2C22"
 			tasks: [{
 				id: "0E5FFAD6CB1DEA66"
-				item: "gtceu:void_fluid_drilling_rig"
+				item: "gtlcore:void_fluid_drilling_rig"
 				type: "item"
 			}]
 			x: 9.0d
@@ -247,7 +247,7 @@
 			id: "1D4903B520E37BFE"
 			tasks: [{
 				id: "1BECEBDF82F70D8D"
-				item: "gtceu:zpm_fluid_drilling_rig"
+				item: "gtlcore:zpm_fluid_drilling_rig"
 				type: "item"
 			}]
 			x: 12.0d
@@ -288,7 +288,7 @@
 			id: "214B86B97ED9C962"
 			tasks: [{
 				id: "3D891933F417EA28"
-				item: "gtceu:large_void_miner"
+				item: "gtlcore:large_void_miner"
 				type: "item"
 			}]
 			x: 9.0d
@@ -303,7 +303,7 @@
 			id: "17C967508DDCBB87"
 			tasks: [{
 				id: "1CD178D1B843DEAE"
-				item: "gtceu:greenhouse"
+				item: "gtlcore:greenhouse"
 				type: "item"
 			}]
 			x: 4.5d
@@ -317,7 +317,7 @@
 			id: "04A1D335D69E9779"
 			tasks: [{
 				id: "0678FE1D3BE5D1DA"
-				item: "gtceu:fishing_ground"
+				item: "gtlcore:fishing_ground"
 				type: "item"
 			}]
 			x: 6.0d
@@ -331,7 +331,7 @@
 			id: "57886739347D6809"
 			tasks: [{
 				id: "6EDFCC68188C1227"
-				item: "gtceu:slaughterhouse"
+				item: "gtlcore:slaughterhouse"
 				type: "item"
 			}]
 			x: 3.0d
@@ -345,7 +345,7 @@
 			id: "6E9E740AAEB580E0"
 			tasks: [{
 				id: "65C060C8B2F3400A"
-				item: "gtceu:large_gas_collector"
+				item: "gtlcore:large_gas_collector"
 				type: "item"
 			}]
 			x: 7.5d
@@ -603,7 +603,7 @@
 			id: "7DA6DA0780F3DDA3"
 			tasks: [{
 				id: "4A80029952946E9F"
-				item: "gtceu:space_elevator"
+				item: "gtlcore:space_elevator"
 				type: "item"
 			}]
 			x: 12.0d
@@ -2074,7 +2074,7 @@
 			id: "049C0B2BA5525962"
 			tasks: [{
 				id: "637DF364B95DF7B1"
-				item: "gtceu:rare_earth_centrifugal"
+				item: "gtlcore:rare_earth_centrifugal"
 				type: "item"
 			}]
 			x: 17.0d

@@ -351,7 +351,7 @@ ServerEvents.recipes((event) => {
 
     gtr.assembler("kubejs:fishbig_body")
         .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x gtceu:create_aggregation", "64x kubejs:fishbig_fabric",
+            "64x kubejs:fishbig_fabric", "64x gtlcore:create_aggregation", "64x kubejs:fishbig_fabric",
             "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
         .itemOutputs("kubejs:fishbig_body")
@@ -361,7 +361,7 @@ ServerEvents.recipes((event) => {
 
     gtr.assembler("kubejs:fishbig_hade")
         .itemInputs("64x gtceu:double_cosmic_plate", "64x gtceu:double_cosmic_plate", "64x gtceu:double_cosmic_plate",
-            "64x gtlcore:max_sensor", "64x gtceu:create_computation", "64x gtlcore:max_sensor",
+            "64x gtlcore:max_sensor", "64x gtlcore:create_computation", "64x gtlcore:max_sensor",
             "64x gtceu:double_cosmic_plate", "64x kubejs:fishbig_frame", "64x gtceu:double_cosmic_plate")
         .inputFluids("gtceu:transcendentmetal 18432")
         .itemOutputs("kubejs:fishbig_hade")
