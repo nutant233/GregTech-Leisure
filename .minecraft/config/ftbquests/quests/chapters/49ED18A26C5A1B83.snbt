@@ -1518,6 +1518,7 @@
 			y: 12.0d
 		}
 		{
+			dependencies: ["5F5F348E3A34827E"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "40405034AE9D9945"
@@ -2727,7 +2728,7 @@
 				id: "35D84DB9E78E62B4"
 				type: "checkmark"
 			}]
-			title: "这里有205个多方块"
+			title: "这里有206个多方块"
 			x: -12.0d
 			y: -2.0d
 		}
@@ -3035,6 +3036,17 @@
 			}]
 			x: 22.0d
 			y: 14.0d
+		}
+		{
+			dependencies: ["70B58231B2150488"]
+			id: "62B1EB30BA23C25F"
+			tasks: [{
+				id: "514C9E641B57459E"
+				item: "gtceu:large_bender_and_forming"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 0.0d
 		}
 	]
 	title: "多方块结构"

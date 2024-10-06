@@ -118,7 +118,10 @@
 		}
 		{
 			dependencies: ["0223A643A5066452"]
-			description: ["让你更加高效的获得导线和细导线"]
+			description: [
+				"线材闸机闸得导线和细导线"
+				"织布机用来编织更粗的导线"
+			]
 			hide_dependent_lines: true
 			id: "0CF19CAFB3355075"
 			rewards: [{
@@ -138,7 +141,7 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
+			x: 4.0d
 			y: -4.0d
 		}
 		{
@@ -146,7 +149,13 @@
 				"0223A643A5066452"
 				"29A8EC2EB3240278"
 			]
-			description: ["让你更高效的获得板和箔，一锭出一板，一锭出四箔"]
+			description: [
+				"让你更高效的获得板和箔，一锭出一板，一锭出四箔"
+				""
+				"卷板机用来卷弹簧和环"
+				"辊压机用来压板和多层板"
+				"多辊式扎压机用来压箔"
+			]
 			hide_dependent_lines: true
 			id: "3DC0B933936357B3"
 			rewards: [{
@@ -179,7 +188,7 @@
 				"0223A643A5066452"
 				"29A8EC2EB3240278"
 			]
-			description: ["让你更高效的获得杆和螺丝，一锭出两杆，一螺栓出一螺丝"]
+			description: ["让你更高效的获得杆 螺丝 滚珠 透镜，一锭出两杆，一螺栓出一螺丝"]
 			id: "048455FFC9BDC82A"
 			rewards: [{
 				id: "4B27D0AEB350794A"
@@ -191,7 +200,7 @@
 				item: "gtceu:lv_lathe"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 5.0d
 			y: -4.0d
 		}
 		{
@@ -525,11 +534,14 @@
 				item: "gtceu:good_electronic_circuit"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["3E50EE376968519F"]
+			dependencies: [
+				"3E50EE376968519F"
+				"06285BE2396AB639"
+			]
 			id: "3A97E85643D2F8AC"
 			rewards: [{
 				id: "1C7F382616F0B1B4"
@@ -560,7 +572,7 @@
 				item: "gtceu:phenolic_printed_circuit_board"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: -2.0d
 		}
 		{
@@ -576,7 +588,7 @@
 				item: "gtceu:silver_single_wire"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: -2.0d
 		}
 		{
@@ -592,7 +604,7 @@
 				item: "gtceu:diode"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: -4.0d
 		}
 		{
@@ -611,7 +623,7 @@
 				item: "gtceu:gallium_arsenide_dust"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: -4.0d
 		}
 		{
@@ -627,7 +639,7 @@
 				item: "gtceu:arsenic_dust"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: -4.0d
 		}
 		{
@@ -644,7 +656,7 @@
 				item: "gtceu:gallium_dust"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: -3.0d
 		}
 		{
@@ -909,17 +921,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: ["0037D6BA6A4ABB72"]
-			id: "033DE57F0D91698C"
-			tasks: [{
-				id: "139820782C4C2E96"
-				item: "ae2:blank_pattern"
-				type: "item"
-			}]
-			x: 14.0d
-			y: -4.0d
-		}
-		{
+			dependencies: ["7D399E31506924A0"]
 			id: "45321051E19D5C25"
 			rewards: [{
 				id: "377A2142C44ADB94"
@@ -932,7 +934,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: -2.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["54034055F57DDAA5"]
@@ -1022,40 +1024,6 @@
 			y: 2.0d
 		}
 		{
-			id: "0037D6BA6A4ABB72"
-			tasks: [{
-				id: "41803FDFF0B25EBC"
-				item: "gtceu:polyethylene_bucket"
-				type: "item"
-			}]
-			x: 12.0d
-			y: -4.0d
-		}
-		{
-			dependencies: ["033DE57F0D91698C"]
-			description: ["有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的锁定合成直到主产物返回。"]
-			id: "471C9A591D5CF776"
-			tasks: [{
-				id: "6E1C628F99BD3D93"
-				item: {
-					Count: 1
-					id: "expatternprovider:infinity_cell"
-					tag: {
-						record: {
-							"#c": "ae2:i"
-							id: "gtceu:programmed_circuit"
-							tag: {
-								Configuration: 1
-							}
-						}
-					}
-				}
-				type: "item"
-			}]
-			x: 14.0d
-			y: -3.0d
-		}
-		{
 			dependencies: ["51B9A72C19F84F0E"]
 			description: ["如其名"]
 			hide_dependency_lines: true
@@ -1072,7 +1040,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["51B9A72C19F84F0E"]
@@ -1095,34 +1063,6 @@
 			}]
 			x: -4.0d
 			y: 0.0d
-		}
-		{
-			dependencies: ["51B9A72C19F84F0E"]
-			description: [
-				"可以理解为一个不消耗的物品，但不需要真正的物品，只需要在机器里设置。"
-				"如果从外部输入编程电路物品，则会覆盖当前的电路设置，实现编程电路的自由变换。"
-			]
-			hide_dependency_lines: true
-			icon: {
-				Count: 1
-				id: "gtceu:programmed_circuit"
-				tag: {
-					Configuration: 0
-				}
-			}
-			id: "51A6B6CDC90D7E76"
-			rewards: [{
-				id: "7AFF24BD5E9724BE"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
-			tasks: [{
-				id: "7A6B0453CD49843F"
-				title: "编程电路"
-				type: "checkmark"
-			}]
-			x: 14.0d
-			y: 4.0d
 		}
 		{
 			dependencies: ["4C591AA4F1D907C1"]
@@ -1189,6 +1129,7 @@
 				"3DDFE62FF48A9135"
 				"2D6BB32B642AE8BA"
 			]
+			description: ["用来将导线包为线缆"]
 			hide_dependent_lines: true
 			id: "6C5150B61C92FADE"
 			tasks: [{
@@ -1196,8 +1137,8 @@
 				item: "gtceu:lv_laminator"
 				type: "item"
 			}]
-			x: 5.0d
-			y: -1.0d
+			x: 2.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["7D399E31506924A0"]
@@ -1208,7 +1149,7 @@
 				item: "gtceu:lv_circuit_assembler"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.0d
 			y: -2.0d
 		}
 	]

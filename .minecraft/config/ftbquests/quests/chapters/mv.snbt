@@ -6,7 +6,12 @@
 	icon: "gtceu:mv_electric_motor"
 	id: "6AE49AAF3BDC94C1"
 	order_index: 2
-	quest_links: [ ]
+	quest_links: [{
+		id: "624770A5C7C9E1F4"
+		linked_quest: "1B27E863E90AB90E"
+		x: 0.0d
+		y: 12.0d
+	}]
 	quests: [
 		{
 			dependencies: ["388E5C1034C54D19"]
@@ -18,8 +23,8 @@
 				title: "中压MV"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: -2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -43,7 +48,8 @@
 			y: 8.0d
 		}
 		{
-			description: ["前往石化与生化章节查看详细内容"]
+			dependencies: ["0037D6BA6A4ABB72"]
+			description: [""]
 			id: "6CB3D4A09CC0FC63"
 			rewards: [{
 				id: "45B5000FEE2FE807"
@@ -197,8 +203,8 @@
 				}
 			]
 			title: "MV不得不做的五样东西"
-			x: 0.0d
-			y: 2.0d
+			x: -2.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -511,8 +517,8 @@
 				item: "gtceu:advanced_integrated_circuit"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 0.0d
+			x: 12.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["4AEBF1743DC2C92C"]
@@ -527,8 +533,8 @@
 				item: "gtceu:good_integrated_circuit"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 2.0d
+			x: 12.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -563,8 +569,8 @@
 				item: "gtceu:transistor"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 0.0d
+			x: 10.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["58B03CD99B6C3A8B"]
@@ -580,8 +586,8 @@
 				item: "gtceu:mv_chemical_bath"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 0.0d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["06B0D98F33A4AEB1"]
@@ -596,7 +602,7 @@
 				item: "gtceu:kanthal_dust"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: 2.0d
 		}
 		{
@@ -612,8 +618,8 @@
 				item: "gtceu:kanthal_ingot"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 0.0d
+			x: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["3E2F61B1A26AD378"]
@@ -663,8 +669,8 @@
 				item: "gtceu:greenhouse"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 6.0d
+			x: -2.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["7296C57805F5DC96"]
@@ -681,8 +687,8 @@
 				item: "gtceu:pyrolyse_oven"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 6.0d
+			x: -2.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["128671E4DC47EF55"]
@@ -743,8 +749,8 @@
 					type: "item"
 				}
 			]
-			x: 14.0d
-			y: 2.0d
+			x: 12.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["17E9AB180BA36353"]
@@ -770,11 +776,14 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["7296C57805F5DC96"]
-			description: ["必备"]
+			description: [
+				"必备"
+				"搭配通用厂使用（请打开总线隔离）"
+			]
 			hide_dependency_lines: true
 			id: "6B09F1B78A5FCF7D"
 			rewards: [{
@@ -787,8 +796,8 @@
 				item: "gtceu:mv_extruder"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 4.0d
+			x: 14.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["79382D841C3CEB78"]
@@ -805,8 +814,8 @@
 				item: "travelanchors:travel_staff"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 4.0d
+			x: -2.0d
+			y: 8.0d
 		}
 		{
 			dependencies: [
@@ -826,7 +835,7 @@
 				item: "gtceu:phosphorus_boule"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 14.0d
 			y: 8.0d
 		}
 		{
@@ -847,8 +856,8 @@
 				item: "gtceu:mv_energy_input_hatch_4a"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 8.0d
+			x: 10.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["58723DA3E76316E6"]
@@ -864,8 +873,8 @@
 				item: "gtceu:mv_energy_input_hatch_16a"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 10.0d
+			x: 12.0d
+			y: 12.0d
 		}
 		{
 			dependencies: ["7296C57805F5DC96"]
@@ -881,8 +890,8 @@
 				type: "item"
 			}]
 			title: "MV的便宜超导"
-			x: 2.0d
-			y: 0.0d
+			x: -2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["66DC60EABAAE0619"]
@@ -893,8 +902,8 @@
 				item: "gtceu:mv_circuit_assembler"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 0.0d
+			x: 14.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["3ED55B31EAE8EC1E"]
@@ -913,7 +922,84 @@
 				}
 			]
 			x: 14.0d
-			y: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0037D6BA6A4ABB72"
+				"128671E4DC47EF55"
+			]
+			id: "033DE57F0D91698C"
+			tasks: [{
+				id: "139820782C4C2E96"
+				item: "ae2:blank_pattern"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["1B27E863E90AB90E"]
+			id: "0037D6BA6A4ABB72"
+			tasks: [{
+				id: "41803FDFF0B25EBC"
+				item: "gtceu:polyethylene_bucket"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["033DE57F0D91698C"]
+			description: ["有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的锁定合成直到主产物返回。"]
+			id: "471C9A591D5CF776"
+			tasks: [{
+				id: "6E1C628F99BD3D93"
+				item: {
+					Count: 1
+					id: "expatternprovider:infinity_cell"
+					tag: {
+						record: {
+							"#c": "ae2:i"
+							id: "gtceu:programmed_circuit"
+							tag: {
+								Configuration: 1
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 6.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["51B9A72C19F84F0E"]
+			description: [
+				"可以理解为一个不消耗的物品，但不需要真正的物品，只需要在机器里设置。"
+				"如果从外部输入编程电路物品，则会覆盖当前的电路设置，实现编程电路的自由变换。"
+			]
+			hide_dependency_lines: true
+			icon: {
+				Count: 1
+				id: "gtceu:programmed_circuit"
+				tag: {
+					Configuration: 0
+				}
+			}
+			id: "51A6B6CDC90D7E76"
+			rewards: [{
+				id: "7AFF24BD5E9724BE"
+				item: "gtceu:cupronickel_credit"
+				type: "item"
+			}]
+			tasks: [{
+				id: "7A6B0453CD49843F"
+				title: "编程电路"
+				type: "checkmark"
+			}]
+			x: 8.0d
+			y: 12.0d
 		}
 	]
 	subtitle: ["Tier2-MV"]
