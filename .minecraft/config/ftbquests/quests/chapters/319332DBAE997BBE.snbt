@@ -32,8 +32,8 @@
 				item: "gtceu:naquadah_dust"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 4.0d
+			x: 2.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["09F132EE8A88C872"]
@@ -566,7 +566,7 @@
 			dependencies: ["4BFA114E12BCB163"]
 			description: [
 				"艾萨线，这是一条新的矿物处理线。"
-				"产出铂处（没有钌），稀土，硅岩等一些稀有的粉"
+				"产出铂处，稀土，硅岩等一些稀有的粉"
 				"效率很高，你会喜欢的"
 			]
 			hide_dependency_lines: true
@@ -577,7 +577,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["5B73961795BE42EE"]
@@ -587,8 +587,8 @@
 				item: "gtlcore:flotation_cell_regulator"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 8.0d
+			x: 4.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["2588A0EF7F27DE5B"]
@@ -598,8 +598,8 @@
 				item: "gtlcore:vacuum_drying_furnace"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 10.0d
+			x: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["4172820CE8E15F90"]
@@ -654,7 +654,7 @@
 		}
 		{
 			dependencies: ["4BFA114E12BCB163"]
-			description: ["奇妙科技"]
+			description: ["妙妙科技"]
 			id: "12F9033C4C2B29EB"
 			tasks: [{
 				id: "3BC83ABCD0AD2F48"
@@ -666,7 +666,7 @@
 		}
 		{
 			dependencies: ["4BFA114E12BCB163"]
-			description: ["有并行的化学反应釜"]
+			description: ["有并行和线圈加速的化学反应釜"]
 			id: "4CDCF542F45205EB"
 			tasks: [{
 				id: "29BFCB27C5CDC79E"

@@ -1389,10 +1389,10 @@
 		}
 		{
 			dependencies: [
-				"6A590699685D1D8A"
 				"24F5D1338F48A57E"
 				"592B6311A21418F2"
 				"05801CE2E3390E3F"
+				"65C4F7EDC0E9D99D"
 			]
 			id: "46ACC4672A4FBF67"
 			tasks: [{
@@ -1405,8 +1405,8 @@
 		}
 		{
 			dependencies: [
-				"6A590699685D1D8A"
 				"46ACC4672A4FBF67"
+				"65C4F7EDC0E9D99D"
 			]
 			id: "3B7D2907D1B6A0D1"
 			tasks: [{
@@ -1518,6 +1518,7 @@
 			y: 12.0d
 		}
 		{
+			dependencies: ["5F5F348E3A34827E"]
 			hide_dependency_lines: true
 			hide_dependent_lines: true
 			id: "40405034AE9D9945"
@@ -1815,7 +1816,7 @@
 			y: 12.0d
 		}
 		{
-			dependencies: ["6A590699685D1D8A"]
+			dependencies: ["65C4F7EDC0E9D99D"]
 			id: "0C18789B508763DF"
 			tasks: [{
 				id: "144461299F6741F6"
@@ -2727,7 +2728,7 @@
 				id: "35D84DB9E78E62B4"
 				type: "checkmark"
 			}]
-			title: "这里有205个多方块"
+			title: "这里有206个多方块"
 			x: -12.0d
 			y: -2.0d
 		}
@@ -3035,6 +3036,17 @@
 			}]
 			x: 22.0d
 			y: 14.0d
+		}
+		{
+			dependencies: ["70B58231B2150488"]
+			id: "62B1EB30BA23C25F"
+			tasks: [{
+				id: "514C9E641B57459E"
+				item: "gtceu:large_bender_and_forming"
+				type: "item"
+			}]
+			x: 24.0d
+			y: 0.0d
 		}
 	]
 	title: "多方块结构"

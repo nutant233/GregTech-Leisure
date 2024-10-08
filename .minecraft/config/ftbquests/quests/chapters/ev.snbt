@@ -10,8 +10,8 @@
 		{
 			id: "263559F3CAFF312A"
 			linked_quest: "3CB16B36A5AA2A10"
-			x: 6.0d
-			y: 0.0d
+			x: 4.0d
+			y: 2.0d
 		}
 		{
 			id: "273B5005EE3685F3"
@@ -897,7 +897,7 @@
 		{
 			dependencies: [
 				"056D5A2274001900"
-				"2FB55033636102A9"
+				"4D14C432E11EC9AB"
 			]
 			hide_dependent_lines: true
 			id: "668BDF2093A9291B"
@@ -912,7 +912,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 0.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["17365ABC639496E6"]
@@ -981,7 +981,7 @@
 		{
 			dependencies: [
 				"056D5A2274001900"
-				"4D14C432E11EC9AB"
+				"2FB55033636102A9"
 			]
 			id: "7711157A43DC1394"
 			tasks: [{
@@ -990,7 +990,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 1.5d
+			y: 0.5d
 		}
 		{
 			dependencies: ["7AEC0D308494C0F8"]

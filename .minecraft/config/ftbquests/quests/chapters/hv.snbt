@@ -51,6 +51,7 @@
 				"26FA6E064EF9FF5B"
 				"1C320B245EAC8D14"
 			]
+			description: ["制作下个阶段的电路"]
 			id: "4DDF10E2B541BCBF"
 			rewards: [{
 				id: "3815B8B981E6F460"
@@ -173,7 +174,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["3FCF807491579B94"]
@@ -188,8 +189,8 @@
 				item: "gtceu:micro_processor_assembly"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 6.0d
+			x: 10.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -205,13 +206,15 @@
 				item: "gtceu:platinum_credit"
 				type: "item"
 			}]
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "759C0F5C1FCC6D04"
 				item: "gtceu:micro_processor_computer"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 4.0d
+			x: 10.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["4DDF10E2B541BCBF"]
@@ -226,14 +229,15 @@
 				item: "gtceu:micro_processor_mainframe"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 2.0d
+			x: 8.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
 				"314E6600CD806FA0"
 				"26FA6E064EF9FF5B"
 			]
+			hide_dependent_lines: true
 			id: "5E9EA7E22BE663AF"
 			rewards: [{
 				id: "3AAB5D8903AA730D"
@@ -285,10 +289,11 @@
 				item: "gtceu:plastic_printed_circuit_board"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 8.0d
 		}
 		{
+			dependencies: ["1C320B245EAC8D14"]
 			description: ["前往探索宇宙章节了解更多"]
 			id: "0931ECBAAD9252C7"
 			rewards: [
@@ -350,7 +355,7 @@
 				item: "gtceu:plastic_circuit_board"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 6.0d
 			y: 8.0d
 		}
 		{
@@ -370,6 +375,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["1C320B245EAC8D14"]
 			description: ["在EV的时候你就需要大量的奇奇怪怪的化工原料，现在不把石化生化联合产线搭好，后面EV会非常坐牢"]
 			id: "2EAAF5A6510D0EFE"
 			rewards: [{
@@ -444,7 +450,7 @@
 				item: "gtceu:hv_assembler"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 2.0d
 			y: 8.0d
 		}
 		{
@@ -589,7 +595,7 @@
 				}
 			]
 			title: "贴片"
-			x: 2.0d
+			x: 4.0d
 			y: 8.0d
 		}
 		{
@@ -843,6 +849,18 @@
 				type: "item"
 			}]
 			x: 10.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["75DAAFAD21F1451C"]
+			description: ["无线电"]
+			id: "5ED5057E6BE19AC1"
+			tasks: [{
+				id: "4C0D340D9569E671"
+				item: "gtmthings:hv_2a_wireless_energy_input_hatch"
+				type: "item"
+			}]
+			x: 0.0d
 			y: 8.0d
 		}
 	]

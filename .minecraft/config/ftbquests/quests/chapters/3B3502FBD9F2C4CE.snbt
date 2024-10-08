@@ -10,13 +10,13 @@
 		{
 			id: "0DE52ED40E51ADE2"
 			linked_quest: "3EAC914AA2073B05"
-			x: 12.0d
+			x: 10.0d
 			y: 0.0d
 		}
 		{
 			id: "5D6473A58EAD0FE2"
 			linked_quest: "1223D839C224777B"
-			x: 6.0d
+			x: 4.0d
 			y: 0.0d
 		}
 	]
@@ -31,8 +31,8 @@
 				item: "gtceu:iv_mixer"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 2.0d
+			x: 6.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["0526B4AC0CAF99A5"]
@@ -239,7 +239,7 @@
 				item: "gtceu:iv_assembler"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 0.0d
 			y: 2.0d
 		}
 		{
@@ -347,9 +347,13 @@
 				"2CE5738B7A8225A6"
 			]
 			description: [
-				"很贵，但IV之后必备。"
+				"小贵，但IV之后必备。"
 				"需要装配线数据来运行。"
-				"物品和流体无需有序输入"
+				"物品和流体无需有序输入，"
+				"只能使用ULV总线"
+				""
+				"你最短需要十格长的，"
+				"但我还是建议十七格长一步到位"
 			]
 			id: "7F8C2ECC7CE2BF20"
 			shape: "rsquare"
@@ -359,7 +363,7 @@
 				item: "gtceu:assembly_line"
 				type: "item"
 			}]
-			x: 14.0d
+			x: 12.0d
 			y: 6.0d
 		}
 		{
@@ -399,7 +403,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -414,7 +418,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 4.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -473,7 +477,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 8.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["148A5C927A0DCED1"]
@@ -485,7 +489,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 0.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["38480A52A13DA157"]
@@ -498,8 +502,8 @@
 				type: "item"
 			}]
 			title: "新的玻璃"
-			x: 10.0d
-			y: 2.0d
+			x: 8.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["38480A52A13DA157"]
@@ -538,7 +542,7 @@
 				item: "gtlcore:dimensionally_transcendent_steam_boiler"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -634,7 +638,7 @@
 				item: "gtceu:assembly_line_unit"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 10.0d
 			y: 6.0d
 		}
 		{
@@ -646,7 +650,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 6.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -660,12 +664,12 @@
 				item: "gtceu:assembly_line_casing"
 				type: "item"
 			}]
-			x: 10.0d
+			x: 12.0d
 			y: 4.0d
 		}
 		{
 			dependencies: ["2CE5738B7A8225A6"]
-			description: ["装配线的部分配方需要扫描过的闪存"]
+			description: ["装配线的配方需要扫描过的闪存"]
 			id: "7A4A5E773AC5C003"
 			tasks: [{
 				id: "04B8AC9FE06215AC"
@@ -692,8 +696,8 @@
 				}
 			]
 			title: "新的橡胶"
-			x: 8.0d
-			y: 0.0d
+			x: 6.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -765,7 +769,7 @@
 				}
 			]
 			title: "镧系两件套"
-			x: 6.0d
+			x: 2.0d
 			y: 2.0d
 		}
 		{
@@ -779,6 +783,21 @@
 				type: "item"
 			}]
 			x: 8.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["7F8C2ECC7CE2BF20"]
+			description: [
+				"让机器五倍速运行"
+				"超净也有对应版本"
+			]
+			id: "6AC86ADD1841074B"
+			tasks: [{
+				id: "14578196EB7A925D"
+				item: "gtceu:auto_configuration_maintenance_hatch"
+				type: "item"
+			}]
+			x: 14.0d
 			y: 8.0d
 		}
 	]

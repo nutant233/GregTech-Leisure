@@ -126,7 +126,7 @@
 				"009E71EC51F5B0EF"
 				"6911B25AA0545E24"
 			]
-			description: ["你需要64桶才能起飞"]
+			description: ["你需要16桶才能起飞"]
 			id: "347CD713F71D41D0"
 			tasks: [{
 				id: "1C2CBCEB171603A4"

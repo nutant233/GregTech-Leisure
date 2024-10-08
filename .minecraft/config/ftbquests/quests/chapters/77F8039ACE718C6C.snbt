@@ -6,7 +6,21 @@
 	icon: "gtlcore:primitive_robot_arm"
 	id: "77F8039ACE718C6C"
 	order_index: 0
-	quest_links: [ ]
+	quest_links: [
+		{
+			id: "54D7AEE2AB60A7B7"
+			linked_quest: "40405034AE9D9945"
+			title: "看看有那些蒸多方块"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			id: "7A24D4EC0562ED93"
+			linked_quest: "7E436D979AF67921"
+			x: 0.0d
+			y: 6.0d
+		}
+	]
 	quests: [
 		{
 			description: [
@@ -229,8 +243,8 @@
 				item: "gtceu:lv_machine_hull"
 				type: "item"
 			}]
-			x: 12.0d
-			y: 0.0d
+			x: 4.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["2B9D62FB6BF39201"]
@@ -378,6 +392,7 @@
 				"388BD32463FA905D"
 			]
 			description: ["前期钢产的很慢，要以尽可能高效的利用"]
+			hide_dependent_lines: true
 			id: "02375F5D54E5F347"
 			rewards: [{
 				id: "1A0B2145C6BEAD5B"
@@ -409,8 +424,8 @@
 				type: "item"
 			}]
 			title: "锡线缆"
-			x: 12.0d
-			y: -2.0d
+			x: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["30F031CD02425ED7"]
@@ -465,7 +480,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 5.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["5C936EF307594737"]
@@ -540,13 +555,12 @@
 				item: "ae2:molecular_assembler"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 4.0d
+			x: 12.0d
+			y: 2.0d
 		}
 		{
 			dependencies: [
 				"3C071C0542CF935D"
-				"5CD26DECB937FC71"
 				"0700E34D1AD8B3AD"
 			]
 			description: [
@@ -566,7 +580,7 @@
 				item: "gtlcore:large_steam_circuit_assembler"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 14.0d
 			y: 4.0d
 		}
 		{
@@ -608,7 +622,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["7CB85061F0822830"]
@@ -624,17 +638,16 @@
 				item: "gtceu:lv_muffler_hatch"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 0.0d
+			x: 2.0d
+			y: 8.0d
 		}
 		{
+			can_repeat: false
 			dependencies: [
 				"5CD26DECB937FC71"
 				"740C2D1F3F420480"
-				"6D729450ED86BDAF"
 				"168D45599EC92F20"
 			]
-			dependency_requirement: "one_completed"
 			description: ["需要手搓一部分"]
 			id: "5065BEDC95AE564E"
 			min_required_dependencies: 2
@@ -649,8 +662,8 @@
 				type: "item"
 			}]
 			title: "你的第一块电路"
-			x: 6.0d
-			y: 6.5d
+			x: 10.0d
+			y: 6.0d
 		}
 		{
 			id: "77A1011F608079C9"
@@ -665,7 +678,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 6.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["77A1011F608079C9"]
@@ -689,7 +702,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 6.5d
+			y: 6.0d
 		}
 		{
 			id: "051710FFC9907807"
@@ -703,7 +716,7 @@
 				item: "gtceu:resin_circuit_board"
 				type: "item"
 			}]
-			x: 2.0d
+			x: 8.0d
 			y: 8.0d
 		}
 		{
@@ -719,7 +732,7 @@
 				item: "gtceu:resin_printed_circuit_board"
 				type: "item"
 			}]
-			x: 4.0d
+			x: 10.0d
 			y: 8.0d
 		}
 		{
@@ -736,8 +749,8 @@
 				item: "gtceu:glue_bucket"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 6.0d
+			x: 14.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["12FE2B59FA86381C"]
@@ -757,7 +770,7 @@
 				type: "checkmark"
 			}]
 			x: 12.0d
-			y: 3.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["5F5F348E3A34827E"]
@@ -824,7 +837,7 @@
 				item: "gtlcore:dimensionally_transcendent_steam_oven"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: 8.0d
 		}
 		{
@@ -842,7 +855,7 @@
 				item: "gtceu:lp_steam_furnace"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: 4.0d
 		}
 		{
@@ -859,7 +872,7 @@
 				item: "gtceu:steam_oven"
 				type: "item"
 			}]
-			x: 0.0d
+			x: -2.0d
 			y: 6.0d
 		}
 		{
@@ -959,7 +972,7 @@
 				}
 			]
 			x: 12.0d
-			y: 2.0d
+			y: -2.0d
 		}
 		{
 			id: "664C46D5C12E7255"
@@ -981,7 +994,7 @@
 				item: "ae2:inscriber"
 				type: "item"
 			}]
-			x: 12.0d
+			x: 10.0d
 			y: 4.0d
 		}
 		{
@@ -1050,7 +1063,7 @@
 			}]
 			title: "划算的买卖"
 			x: 14.0d
-			y: 2.0d
+			y: -1.0d
 		}
 		{
 			can_repeat: true
@@ -1074,7 +1087,7 @@
 			}]
 			title: "嫌麻烦可以买一点1"
 			x: 13.75d
-			y: 2.75d
+			y: -0.25d
 		}
 		{
 			can_repeat: true
@@ -1098,7 +1111,7 @@
 			}]
 			title: "嫌麻烦可以买一点2"
 			x: 14.25d
-			y: 2.75d
+			y: -0.25d
 		}
 		{
 			can_repeat: true
@@ -1122,7 +1135,7 @@
 			}]
 			title: "嫌麻烦可以买一点3"
 			x: 13.75d
-			y: 3.25d
+			y: 0.25d
 		}
 		{
 			can_repeat: true
@@ -1146,7 +1159,7 @@
 			}]
 			title: "嫌麻烦可以买一点4"
 			x: 14.25d
-			y: 3.25d
+			y: 0.25d
 		}
 		{
 			dependencies: ["6E69F45AEA66D5ED"]
@@ -1163,27 +1176,27 @@
 			}]
 			title: "这是垃圾桶"
 			x: 14.0d
-			y: 4.0d
+			y: 1.0d
 		}
 		{
 			dependencies: [
 				"6D729450ED86BDAF"
 				"5CD26DECB937FC71"
 			]
-			hide_dependent_lines: true
 			id: "0C0B675E44AAB734"
 			tasks: [{
 				id: "4A1CC61F3161828C"
 				item: "gtlcore:ulv_packer"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 5.5d
+			x: 6.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
 				"0C0B675E44AAB734"
 				"3C91E284A9A03B1B"
+				"79E81CC078F246C0"
 			]
 			id: "168D45599EC92F20"
 			tasks: [{
@@ -1192,7 +1205,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 6.5d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -1205,8 +1218,8 @@
 				item: "gtlcore:ulv_thermal_generator"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 5.5d
+			x: 8.0d
+			y: 4.0d
 		}
 		{
 			dependencies: ["5065BEDC95AE564E"]
@@ -1217,8 +1230,8 @@
 				item: "gtceu:bronze_large_boiler"
 				type: "item"
 			}]
-			x: 6.0d
-			y: 8.0d
+			x: 12.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["07079FF646C870C9"]
@@ -1229,8 +1242,8 @@
 				item: "gtceu:tin_bucket"
 				type: "item"
 			}]
-			x: 8.0d
-			y: 8.0d
+			x: 14.0d
+			y: 6.0d
 		}
 	]
 	subtitle: ["Tier0-ULV"]
