@@ -382,30 +382,6 @@
 			y: 7.0d
 		}
 		{
-			dependencies: [
-				"783379F3A7557CEE"
-				"2E05225ADF4D7D31"
-			]
-			description: [
-				"如果你很富有，可以制作一个，这台机器只有OpV以后阶段才有专用配方"
-				"可以直接使用大输入总线来输入物品了"
-				"注意无论是否需要研究都必须连接数据库"
-				"拓展模块主机安装在超时空主机的左右2侧间距2格的地方"
-				"即拓展模块尾部的方块正好与超时空结构方块重合"
-				"{image:ftbquests:textures/picture/001.png width:192 height108 align:center}"
-			]
-			id: "72B80ADFE77198DD"
-			shape: "rsquare"
-			size: 2.0d
-			tasks: [{
-				id: "2489A12E61345011"
-				item: "gtlcore:suprachronal_assembly_line"
-				type: "item"
-			}]
-			x: 10.0d
-			y: 6.0d
-		}
-		{
 			dependencies: ["783379F3A7557CEE"]
 			description: [
 				"&c&l注意无论是否需要研究都必须连接数据库"
@@ -693,8 +669,8 @@
 			hide_dependency_lines: true
 			id: "5A1D557267CF4329"
 			tasks: [{
-				id: "3C574C26ADCFB4B9"
-				item: "gtceu:rare_earth_centrifugal"
+				id: "56B353D318EB790D"
+				item: "gtlcore:rare_earth_centrifugal"
 				type: "item"
 			}]
 			x: -4.0d
@@ -813,12 +789,12 @@
 				"即拓展模块尾部的方块正好与超时空结构方块重合"
 				"{image:ftbquests:textures/picture/001.png width:192 height108 align:center}"
 			]
-			id: "72B80ADFE77198DD"
+			id: "5AA8FC17E0C7EB15"
 			shape: "rsquare"
 			size: 2.0d
 			tasks: [{
-				id: "2489A12E61345011"
-				item: "gtceu:suprachronal_assembly_line"
+				id: "18C3CD1E9BD3A5ED"
+				item: "gtlcore:suprachronal_assembly_line"
 				type: "item"
 			}]
 			x: 10.0d

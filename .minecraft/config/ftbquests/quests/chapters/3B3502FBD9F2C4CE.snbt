@@ -793,8 +793,8 @@
 			]
 			id: "6AC86ADD1841074B"
 			tasks: [{
-				id: "14578196EB7A925D"
-				item: "gtceu:auto_configuration_maintenance_hatch"
+				id: "4473B8A88F7AF26E"
+				item: "gtlcore:auto_configuration_maintenance_hatch"
 				type: "item"
 			}]
 			x: 14.0d

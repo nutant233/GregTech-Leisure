@@ -3339,8 +3339,8 @@
 		{
 			id: "1D0398821D9B612A"
 			tasks: [{
-				id: "04D2473A11BC77CD"
-				item: "gtceu:large_gas_collector"
+				id: "3508055CAD094A1E"
+				item: "gtlcore:large_gas_collector"
 				type: "item"
 			}]
 			x: 44.5d

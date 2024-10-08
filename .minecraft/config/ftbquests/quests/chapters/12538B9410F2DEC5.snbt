@@ -609,11 +609,29 @@
 					type: "checkmark"
 				}
 				{
-					id: "24997BB0438ED606"
-					item: "gtceu:incubator"
+					id: "7F6335B6B66015CD"
+					item: "gtlcore:incubator"
 					type: "item"
 				}
 			]
+			x: 14.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0485D45408234C99"]
+			description: [
+				"保证机器总辐射量在配方需要量的+-5范围内"
+				"辐射量会随时间降低，最低为初始的一半，可以使用多个放射仓来获得恒定的辐射量"
+				"可以调节抑制量来降低辐射"
+			]
+			hide_dependency_lines: true
+			id: "70DD3C9831060B3A"
+			ignore_reward_blocking: true
+			tasks: [{
+				id: "2B7A9EAF5ACEC0E3"
+				item: "gtlcore:radiation_hatch"
+				type: "item"
+			}]
 			x: 14.0d
 			y: 8.0d
 		}

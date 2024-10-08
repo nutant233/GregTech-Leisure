@@ -14,6 +14,6 @@ ItemEvents.tooltip(event => {
     event.add("gtceu:magmatter_block", "将一组及以上的磁物质锭丢入创造之门获得")
     event.add("minecraft:command_block", "将磁流体约束恒星物质块丢入创造之门获得")
     event.add("minecraft:chain_command_block", "将连锁命令方块核心与即将破坏的命令方块聚合获得")
-    event.add("minecraft:repeating_command_block", "循环命令方块核心与即将破坏的脉冲命令方块聚合获得")
+    event.add("minecraft:repeating_command_block", "循环命令方块核心与即将破坏的连锁命令方块聚合获得")
     event.add("ad_astra:oxygen_loader", "§c仅合成，无法产出氧气")
 })

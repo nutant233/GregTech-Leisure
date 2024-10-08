@@ -632,8 +632,8 @@
 			dependencies: ["7204F1B6BCC74F1C"]
 			id: "08AE0A1611F218F7"
 			tasks: [{
-				id: "2A4502A0937E88F4"
-				item: "gtceu:component_assembly_line"
+				id: "0E400941044F8EC7"
+				item: "gtlcore:component_assembly_line"
 				type: "item"
 			}]
 			x: 12.0d

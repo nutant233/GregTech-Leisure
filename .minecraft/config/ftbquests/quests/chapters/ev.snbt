@@ -826,8 +826,8 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "149DD4976B28F863"
-				item: "gtmthings:ev_64a_wireless_energy_input_hatch"
+				id: "56FE7D6E7709860F"
+				item: "gtlcore:ev_64a_wireless_energy_input_hatch"
 				type: "item"
 			}]
 			x: 18.0d

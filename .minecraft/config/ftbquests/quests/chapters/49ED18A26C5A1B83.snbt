@@ -3041,8 +3041,8 @@
 			dependencies: ["70B58231B2150488"]
 			id: "62B1EB30BA23C25F"
 			tasks: [{
-				id: "514C9E641B57459E"
-				item: "gtceu:large_bender_and_forming"
+				id: "166189B92B1ABF96"
+				item: "gtlcore:large_bender_and_forming"
 				type: "item"
 			}]
 			x: 24.0d

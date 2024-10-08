@@ -571,11 +571,18 @@
 			]
 			hide_dependency_lines: true
 			id: "5B73961795BE42EE"
-			tasks: [{
-				id: "4532FD760D4A8258"
-				item: "gtlcore:isa_mill"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4532FD760D4A8258"
+					item: "gtlcore:isa_mill"
+					type: "item"
+				}
+				{
+					id: "260A8AB0542C85E3"
+					item: "gtlcore:grind_ball_hatch"
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 4.0d
 		}
