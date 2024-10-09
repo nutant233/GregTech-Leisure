@@ -420,6 +420,7 @@ ServerEvents.recipes((event) => {
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
     gtr.lightning_processor("ae2:charged_certus_quartz_crystal")
+        .circuit(1)
         .itemInputs("gtceu:certus_quartz_gem")
         .itemOutputs("ae2:charged_certus_quartz_crystal")
         .EUt(30)

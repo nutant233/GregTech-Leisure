@@ -188,8 +188,8 @@ function getEyePositionPos(level, player) {
 ItemEvents.rightClicked("kubejs:command_wand", event => {
     let name = event.player.getName().getString()
     let pos = getEyePositionPos(event.level, event.player)
-    let block = event.level.getBlock(pos.x, pos.y, pos.z).getId()
-    if (block === "kubejs:create_aggregatione_core" && event.level.getBlock(pos.x, pos.y + 1, pos.z) === "minecraft:air") {
+    let block = event.level.getBlock(pos.x, pos.y, pos.z)
+    if (block.getId() === "kubejs:create_aggregatione_core" && event.level.getBlock(pos.x, pos.y + 1, pos.z).getId() === "minecraft:air") {
         if (event.player.getHeldItem("off_hand").getId() === "minecraft:command_block") {
             event.player.offHandItem.count--
             event.getServer().runCommandSilent(`execute at ${name} run fill ${pos.x} ${pos.y + 1} ${pos.z} ${pos.x} ${pos.y + 1} ${pos.z} minecraft:command_block`)
@@ -203,15 +203,15 @@ ItemEvents.rightClicked("kubejs:command_wand", event => {
             event.getServer().runCommandSilent(`execute at ${name} run fill ${pos.x} ${pos.y + 1} ${pos.z} ${pos.x} ${pos.y + 1} ${pos.z} minecraft:repeating_command_block`)
         }
     }
-    if (event.player.isSteppingCarefully() && block === "minecraft:command_block") {
+    if (event.player.isSteppingCarefully() && block.getId() === "minecraft:command_block") {
         block.set("minecraft:air")
         event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${pos.x} ${block.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:command_block",Count:1b}}`)
     }
-    if (event.player.isSteppingCarefully() && block === "minecraft:chain_command_block") {
+    if (event.player.isSteppingCarefully() && block.getId() === "minecraft:chain_command_block") {
         block.set("minecraft:air")
         event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${pos.x} ${block.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:chain_command_block",Count:1b}}`)
     }
-    if (event.player.isSteppingCarefully() && block === "minecraft:repeating_command_block") {
+    if (event.player.isSteppingCarefully() && block.getId() === "minecraft:repeating_command_block") {
         block.set("minecraft:air")
         event.getServer().runCommandSilent(`execute at ${name} run summon minecraft:item ${pos.x} ${block.y} ${pos.z} {PickupDelay:10,Motion:[0.0,0.2,0.0],Item:{id:"minecraft:repeating_command_block",Count:1b}}`)
     }
@@ -340,8 +340,8 @@ NetworkEvents.dataReceived("global.pearlKey.consumeClick", event => {
 })
 
 NetworkEvents.dataReceived("global.vajraKey.consumeClick", event => {
-    let item = event.player.getHeldItem("main_hand").getId()
-    if (item === "gtceu:echoite_vajra") {
+    let item = event.player.getHeldItem("main_hand")
+    if (item.getId() === "gtceu:echoite_vajra") {
         let value = event.player.isSteppingCarefully() ? 10 : 1
         let speed = item.getNbt().getCompound("GT.Tool").getFloat("ToolSpeed")
         if (speed < 100) {

@@ -152,8 +152,7 @@
 			description: [
 				"让你更高效的获得板和箔，一锭出一板，一锭出四箔"
 				""
-				"卷板机用来卷弹簧和环"
-				"辊压机用来压板和多层板"
+				"卷板机用来卷板，弹簧和环"
 				"多辊式扎压机用来压箔"
 			]
 			hide_dependent_lines: true
@@ -172,11 +171,6 @@
 				{
 					id: "31C55FE62E5DBBFF"
 					item: "gtlcore:lv_cluster"
-					type: "item"
-				}
-				{
-					id: "230BED5CBC44E455"
-					item: "gtlcore:lv_rolling"
 					type: "item"
 				}
 			]

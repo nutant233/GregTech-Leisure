@@ -445,20 +445,8 @@ ServerEvents.recipes((event) => {
     ], {
         A: "gtceu:solid_machine_casing",
         B: "gtceu:double_aluminium_plate",
-        C: "gtceu:mv_electric_motor",
+        C: "gtceu:mv_robot_arm",
         D: "gtceu:mv_electric_piston"
-    })
-
-    event.shaped("gtlcore:processing_plant", [
-        "BCB",
-        "DAD",
-        "BEB"
-    ], {
-        A: "gtlcore:multi_functional_casing",
-        B: "gtceu:aluminium_foil",
-        C: "gtceu:mv_conveyor_module",
-        D: "gtceu:mv_robot_arm",
-        E: "gtceu:mv_fluid_regulator"
     })
 
     event.shaped("gtlcore:steam_piston_hammer", [
@@ -496,7 +484,7 @@ ServerEvents.recipes((event) => {
         D: "gtceu:long_tin_alloy_rod"
     })
 
-    event.shaped("gtlcore:assemble_plant", [
+    event.shaped("gtlcore:processing_plant", [
         "BCB",
         "DAF",
         "BEB"
@@ -507,32 +495,6 @@ ServerEvents.recipes((event) => {
         D: "gtceu:mv_sensor",
         E: "gtceu:mv_fluid_regulator",
         F: "gtceu:mv_emitter"
-    })
-
-    event.shaped("gtlcore:separated_plant", [
-        "BCB",
-        "DAF",
-        "BEB"
-    ], {
-        A: "gtlcore:multi_functional_casing",
-        B: "gtceu:aluminium_foil",
-        C: "gtceu:mv_conveyor_module",
-        D: "gtceu:mv_electric_motor",
-        E: "gtceu:mv_fluid_regulator",
-        F: "gtceu:mv_electric_pump"
-    })
-
-    event.shaped("gtlcore:mixed_plant", [
-        "BCB",
-        "DAF",
-        "BEB"
-    ], {
-        A: "gtlcore:multi_functional_casing",
-        B: "gtceu:aluminium_foil",
-        C: "gtceu:mv_conveyor_module",
-        D: "gtceu:mv_electric_piston",
-        E: "gtceu:mv_fluid_regulator",
-        F: "gtceu:mv_electric_motor"
     })
 
     event.shaped("gtlcore:ev_rocket_engine", [

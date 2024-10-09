@@ -711,12 +711,8 @@
 		{
 			dependencies: ["128671E4DC47EF55"]
 			description: [
-				"高效的生产机器，放入多个输入总线并开启隔离可以一台机器执行多个电路或者模具的配方"
-				"单方块机器需放入工厂GUI内，如果放入的机器等级和工厂等级不同，工厂就不会工作。"
-				"关于并行，可以去提示章节查看"
-				""
-				"这台机器可以双仓升压！！！"
-				"电压等级需要匹配放入机器等级！！！"
+				"高效的生产机器，放入小机器就可以运行对应配方"
+				"配方等级计算与其他多方块一样"
 			]
 			hide_dependency_lines: true
 			id: "2F5CB842110A5DB2"
@@ -727,28 +723,11 @@
 			}]
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [
-				{
-					id: "7390800A5A8E273A"
-					item: "gtlcore:processing_plant"
-					type: "item"
-				}
-				{
-					id: "43983ED4F272721B"
-					item: "gtlcore:assemble_plant"
-					type: "item"
-				}
-				{
-					id: "5C5AAA938D438A20"
-					item: "gtlcore:separated_plant"
-					type: "item"
-				}
-				{
-					id: "426C0E4355D6241D"
-					item: "gtlcore:mixed_plant"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "7390800A5A8E273A"
+				item: "gtlcore:processing_plant"
+				type: "item"
+			}]
 			x: 12.0d
 			y: 6.0d
 		}
@@ -836,7 +815,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 8.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["56EA21AD61D2ACB1"]
@@ -1000,6 +979,18 @@
 			}]
 			x: 8.0d
 			y: 12.0d
+		}
+		{
+			dependencies: ["28B1628F5D38BBE9"]
+			description: ["压多层板"]
+			id: "06184322361F2DB5"
+			tasks: [{
+				id: "4534701DAB15DC10"
+				item: "gtlcore:mv_rolling"
+				type: "item"
+			}]
+			x: 14.0d
+			y: 8.0d
 		}
 	]
 	subtitle: ["Tier2-MV"]

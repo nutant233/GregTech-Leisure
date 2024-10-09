@@ -7,7 +7,12 @@
 	id: "49ED18A26C5A1B83"
 	order_index: 4
 	progression_mode: "flexible"
-	quest_links: [ ]
+	quest_links: [{
+		id: "46CC1EDB72E93D47"
+		linked_quest: "2F5CB842110A5DB2"
+		x: 2.0d
+		y: 0.0d
+	}]
 	quests: [
 		{
 			description: [
@@ -2346,45 +2351,6 @@
 			}]
 			x: -6.0d
 			y: 10.0d
-		}
-		{
-			dependencies: ["36742169BE411C01"]
-			description: [
-				"高效的生产机器，放入多个输入总线并开启隔离可以一台机器执行多个电路或者模具的配方"
-				"单方块机器需放入工厂GUI内，如果放入的机器等级和工厂等级不同，工厂就不会工作。"
-				"关于并行，可以去提示章节查看"
-			]
-			id: "42B4263B2A138D15"
-			rewards: [{
-				id: "7D2B3C9B0C278AAB"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
-			size: 1.0d
-			tasks: [
-				{
-					id: "0A6C14B19EE2BE1B"
-					item: "gtlcore:processing_plant"
-					type: "item"
-				}
-				{
-					id: "3CD1A70006F00B71"
-					item: "gtlcore:assemble_plant"
-					type: "item"
-				}
-				{
-					id: "5CA6348EB057CDF6"
-					item: "gtlcore:separated_plant"
-					type: "item"
-				}
-				{
-					id: "091C8744A1CAC02A"
-					item: "gtlcore:mixed_plant"
-					type: "item"
-				}
-			]
-			x: 2.0d
-			y: 0.0d
 		}
 		{
 			dependencies: ["32BD532132423050"]
