@@ -36,34 +36,34 @@ GTCEuStartupEvents.registry("gtceu:tag_prefix", () => {
             new ResourceLocation("ad_astra:block/glacio_stone"))
 
     TagPrefix.oreTagPrefix("titanstone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:titanstone")).defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(GTLCore.id("titanstone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            new ResourceLocation("kubejs:block/titanstone"))
+            GTLCore.id("block/titanstone"))
 
     TagPrefix.oreTagPrefix("plutostone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:plutostone")).defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(GTLCore.id("plutostone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            new ResourceLocation("kubejs:block/plutostone"))
+            GTLCore.id("block/plutostone"))
 
     TagPrefix.oreTagPrefix("iostone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:iostone")).defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(GTLCore.id("iostone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            new ResourceLocation("kubejs:block/iostone"))
+            GTLCore.id("block/iostone"))
 
     TagPrefix.oreTagPrefix("ganymedestone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:ganymedestone")).defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(GTLCore.id("ganymedestone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            new ResourceLocation("kubejs:block/ganymedestone"))
+            GTLCore.id("block/ganymedestone"))
 
     TagPrefix.oreTagPrefix("enceladusstone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:enceladusstone")).defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(GTLCore.id("enceladusstone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            new ResourceLocation("kubejs:block/enceladusstone"))
+            GTLCore.id("block/enceladusstone"))
 
     TagPrefix.oreTagPrefix("ceresstone", BlockTags.MINEABLE_WITH_PICKAXE)
-        .registerOre(() => Block.getBlock(new ResourceLocation("kubejs:ceresstone")).defaultBlockState(), null,
+        .registerOre(() => Block.getBlock(GTLCore.id("ceresstone")).defaultBlockState(), null,
             BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(3.0, 3.0),
-            new ResourceLocation("kubejs:block/ceresstone"))
+            GTLCore.id("block/ceresstone"))
 })
 GTCEuStartupEvents.registry("gtceu:world_gen_layer", event => {
     event.create("all_layer")
@@ -75,26 +75,26 @@ GTCEuStartupEvents.registry("gtceu:world_gen_layer", event => {
             "ad_astra:venus_stone",
             "ad_astra:mercury_stone",
             "ad_astra:glacio_stone",
-            "kubejs:titanstone",
-            "kubejs:plutostone",
-            "kubejs:iostone",
-            "kubejs:ganymedestone",
-            "kubejs:enceladusstone",
-            "kubejs:ceresstone")
+            "gtlcore:titanstone",
+            "gtlcore:plutostone",
+            "gtlcore:iostone",
+            "gtlcore:ganymedestone",
+            "gtlcore:enceladusstone",
+            "gtlcore:ceresstone")
         .dimensions("minecraft:overworld",
             "minecraft:the_nether",
             "minecraft:the_end",
-            "kubejs:ancient_world",
+            "ancient_world",
             "ad_astra:moon",
             "ad_astra:mars",
             "ad_astra:venus",
             "ad_astra:mercury",
             "ad_astra:glacio",
-            "kubejs:titan",
-            "kubejs:pluto",
-            "kubejs:io",
-            "kubejs:ganymede",
-            "kubejs:enceladus",
-            "kubejs:ceres",
-            "kubejs:barnarda")
+            "titan",
+            "pluto",
+            "io",
+            "ganymede",
+            "enceladus",
+            "ceres",
+            "barnarda")
 })

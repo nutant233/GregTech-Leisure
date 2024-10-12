@@ -108,7 +108,7 @@
 			id: "2711E6516920E825"
 			tasks: [{
 				id: "6596739A0934A935"
-				item: "kubejs:optical_processing_core"
+				item: "gtlcore:optical_processing_core"
 				type: "item"
 			}]
 			x: 8.0d
@@ -120,7 +120,7 @@
 			id: "460277B62B964613"
 			tasks: [{
 				id: "361E652DBDE8C652"
-				item: "kubejs:optical_processor"
+				item: "gtlcore:optical_processor"
 				type: "item"
 			}]
 			x: 10.0d
@@ -131,7 +131,7 @@
 			id: "5B1757594AE08A2A"
 			tasks: [{
 				id: "635363238E37429D"
-				item: "kubejs:optical_assembly"
+				item: "gtlcore:optical_assembly"
 				type: "item"
 			}]
 			x: 12.0d
@@ -145,7 +145,7 @@
 			id: "362C5064150C4F26"
 			tasks: [{
 				id: "4656D43F66C740C6"
-				item: "kubejs:optical_computer"
+				item: "gtlcore:optical_computer"
 				type: "item"
 			}]
 			x: 12.0d
@@ -159,7 +159,7 @@
 			id: "783379F3A7557CEE"
 			tasks: [{
 				id: "30416700DDAFB1E4"
-				item: "kubejs:optical_mainframe"
+				item: "gtlcore:optical_mainframe"
 				type: "item"
 			}]
 			x: 12.0d
@@ -171,17 +171,17 @@
 			tasks: [
 				{
 					id: "6D049619508BA8B3"
-					item: "kubejs:low_frequency_laser"
+					item: "gtlcore:low_frequency_laser"
 					type: "item"
 				}
 				{
 					id: "5B5107A72FF57A66"
-					item: "kubejs:medium_frequency_laser"
+					item: "gtlcore:medium_frequency_laser"
 					type: "item"
 				}
 				{
 					id: "6F17764F565B9198"
-					item: "kubejs:high_frequency_laser"
+					item: "gtlcore:high_frequency_laser"
 					type: "item"
 				}
 			]
@@ -210,7 +210,7 @@
 			id: "164C87812A3A465C"
 			tasks: [{
 				id: "32508D6A4ABB9745"
-				item: "kubejs:optical_slice"
+				item: "gtlcore:optical_slice"
 				type: "item"
 			}]
 			x: 8.0d
@@ -224,7 +224,7 @@
 			id: "38CD9E5F805E3CF3"
 			tasks: [{
 				id: "4FF5602FE4DEBD74"
-				item: "kubejs:optical_soc"
+				item: "gtlcore:optical_soc"
 				type: "item"
 			}]
 			x: 8.0d
@@ -267,7 +267,7 @@
 			id: "10B0D1A4D9551754"
 			tasks: [{
 				id: "1B03550B8A3A4EAD"
-				item: "kubejs:optical_printed_circuit_board"
+				item: "gtlcore:optical_printed_circuit_board"
 				type: "item"
 			}]
 			x: 10.0d
@@ -296,8 +296,8 @@
 			hide_dependency_lines: true
 			id: "5BFA4802D228358C"
 			tasks: [{
-				id: "7D3290423A198D18"
-				item: "kubejs:photon_carrying_wafer"
+				id: "3FC8387C3D7D661C"
+				item: "gtlcore:raw_photon_carrying_wafer"
 				type: "item"
 			}]
 			x: 6.0d
@@ -311,7 +311,7 @@
 			id: "3008FED65F71C459"
 			tasks: [{
 				id: "7AC4A6AA9FC19537"
-				item: "kubejs:nm_chip"
+				item: "gtlcore:nm_chip"
 				type: "item"
 			}]
 			x: 0.0d
@@ -361,7 +361,7 @@
 			id: "384CC871242ECF6E"
 			tasks: [{
 				id: "16B3499EBAEFA108"
-				item: "kubejs:optical_wafer"
+				item: "gtlcore:optical_wafer"
 				type: "item"
 			}]
 			x: 6.0d
@@ -502,7 +502,7 @@
 			id: "01433D78C43AD215"
 			tasks: [{
 				id: "4F8AB9CCDC8174BC"
-				item: "kubejs:rutherfordium_neutronium_boule"
+				item: "gtlcore:rutherfordium_neutronium_boule"
 				type: "item"
 			}]
 			x: -2.0d
@@ -583,27 +583,27 @@
 			tasks: [
 				{
 					id: "4BB6C8C7F799BA54"
-					item: "kubejs:smd_capacitor_optical"
+					item: "gtlcore:smd_capacitor_optical"
 					type: "item"
 				}
 				{
 					id: "4C378FC825DD0489"
-					item: "kubejs:smd_diode_optical"
+					item: "gtlcore:smd_diode_optical"
 					type: "item"
 				}
 				{
 					id: "7EE67405A48BE7C4"
-					item: "kubejs:smd_resistor_optical"
+					item: "gtlcore:smd_resistor_optical"
 					type: "item"
 				}
 				{
 					id: "2BB911E50D820726"
-					item: "kubejs:smd_transistor_optical"
+					item: "gtlcore:smd_transistor_optical"
 					type: "item"
 				}
 				{
 					id: "7C5E8090CCD6058B"
-					item: "kubejs:smd_inductor_optical"
+					item: "gtlcore:smd_inductor_optical"
 					type: "item"
 				}
 			]
@@ -620,7 +620,7 @@
 			id: "32A49A2CBFC934C8"
 			tasks: [{
 				id: "0B1D64CEDCD5AB9B"
-				item: "kubejs:titansteel_coil_block"
+				item: "gtlcore:titansteel_coil_block"
 				type: "item"
 			}]
 			x: 4.0d
@@ -646,7 +646,7 @@
 			id: "7370721CB75472C1"
 			tasks: [{
 				id: "532AAB28A3CC8CD1"
-				item: "kubejs:space_drone_mk2"
+				item: "gtlcore:space_drone_mk2"
 				type: "item"
 			}]
 			x: 0.0d
@@ -657,7 +657,7 @@
 			id: "7334C4D477F91296"
 			tasks: [{
 				id: "4DE4F39A6FE6C589"
-				item: "kubejs:bose_einstein_cooling_container"
+				item: "gtlcore:bose_einstein_cooling_container"
 				type: "item"
 			}]
 			x: 12.0d
@@ -697,7 +697,7 @@
 			id: "2DD8E128C6E3E41D"
 			tasks: [{
 				id: "078D60E2A5552DED"
-				item: "kubejs:naquadria_charge"
+				item: "gtlcore:naquadria_charge"
 				type: "item"
 			}]
 			x: 2.0d
@@ -707,7 +707,7 @@
 			id: "5FDC7B6B4A2B24F9"
 			tasks: [{
 				id: "2F6C3B9BD6E9DA74"
-				item: "kubejs:optical_soc_containment_housing"
+				item: "gtlcore:optical_soc_containment_housing"
 				type: "item"
 			}]
 			x: 10.0d
@@ -759,7 +759,7 @@
 			id: "1FE5F8D737ADB1B8"
 			tasks: [{
 				id: "1D082DFC064E38EA"
-				item: "kubejs:space_drone_mk3"
+				item: "gtlcore:space_drone_mk3"
 				type: "item"
 			}]
 			x: 0.0d

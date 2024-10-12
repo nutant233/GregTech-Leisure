@@ -533,7 +533,7 @@
 			description: ["因游戏流程需要，没有掉落物的"]
 			icon: {
 				Count: 1
-				id: "kubejs:bedrock_destroyer"
+				id: "gtlcore:bedrock_destroyer"
 				tag: {
 					Damage: 0
 				}
@@ -543,7 +543,7 @@
 				id: "3B9623C406861996"
 				item: {
 					Count: 1
-					id: "kubejs:bedrock_destroyer"
+					id: "gtlcore:bedrock_destroyer"
 					tag: {
 						Damage: 0
 					}

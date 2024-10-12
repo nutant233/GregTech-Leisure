@@ -27,31 +27,31 @@ ServerEvents.recipes((event) => {
         ],
         "key": {
             "A": {
-                "item": "kubejs:fishbig_fabric"
+                "item": "gtlcore:fishbig_fabric"
             },
             "B": {
-                "item": "kubejs:fishbig_frame"
+                "item": "gtlcore:fishbig_frame"
             },
             "C": {
-                "item": "kubejs:fishbig_hair"
+                "item": "gtlcore:fishbig_hair"
             },
             "D": {
-                "item": "kubejs:fishbig_hade"
+                "item": "gtlcore:fishbig_hade"
             },
             "E": {
-                "item": "kubejs:fishbig_lhand"
+                "item": "gtlcore:fishbig_lhand"
             },
             "F": {
-                "item": "kubejs:fishbig_body"
+                "item": "gtlcore:fishbig_body"
             },
             "G": {
-                "item": "kubejs:fishbig_rhand"
+                "item": "gtlcore:fishbig_rhand"
             },
             "H": {
-                "item": "kubejs:fishbig_lleg"
+                "item": "gtlcore:fishbig_lleg"
             },
             "I": {
-                "item": "kubejs:fishbig_rleg"
+                "item": "gtlcore:fishbig_rleg"
             },
             "J": {
                 "item": "avaritia:singularity"

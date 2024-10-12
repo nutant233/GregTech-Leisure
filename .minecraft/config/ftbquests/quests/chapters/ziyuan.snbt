@@ -1807,7 +1807,7 @@
 			id: "7FE75D42E8DDA53D"
 			tasks: [{
 				id: "240191F0E6C9D53E"
-				item: "kubejs:reactor_thorium_simple"
+				item: "gtlcore:reactor_thorium_simple"
 				type: "item"
 			}]
 			x: 7.5d
@@ -1822,7 +1822,7 @@
 			id: "7E4BA4C2DA91D286"
 			tasks: [{
 				id: "7358C2F04FE1FB0E"
-				item: "kubejs:reactor_mox_simple"
+				item: "gtlcore:reactor_mox_simple"
 				type: "item"
 			}]
 			x: 10.5d
@@ -1859,7 +1859,7 @@
 			id: "6D650AE5A76585B3"
 			tasks: [{
 				id: "4EB30593E5D86DB8"
-				item: "kubejs:nuclear_waste"
+				item: "gtlcore:nuclear_waste"
 				type: "item"
 			}]
 			x: 9.0d

@@ -27,7 +27,7 @@
       "aquifers_enabled": true,
       "ore_veins_enabled": true,
       "default_block": {
-        "Name": "kubejs:iostone"
+        "Name": "gtlcore:iostone"
       },
       "default_fluid": {
         "Name": "minecraft:lava",
@@ -417,14 +417,14 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "kubejs:ioash"
+                              "Name": "gtlcore:ioash"
                             }
                           }
                         },
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "kubejs:iostone"
+                            "Name": "gtlcore:iostone"
                           }
                         }
                       ]
@@ -442,7 +442,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "kubejs:iostone"
+                        "Name": "gtlcore:iostone"
                       }
                     }
                   }

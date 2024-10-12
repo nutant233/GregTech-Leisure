@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld",
     "textures": {
-      "layer0": "kubejs:item/command_wand"
+      "layer0": "gtlcore:item/command_wand"
     }
   }

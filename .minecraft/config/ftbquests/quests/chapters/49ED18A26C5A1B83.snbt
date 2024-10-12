@@ -168,7 +168,7 @@
 			id: "00F50033D3AF8479"
 			tasks: [{
 				id: "5FCD131CFF643162"
-				item: { Count: 16, id: "kubejs:abyssalalloy_coil_block" }
+				item: { Count: 16, id: "gtlcore:abyssalalloy_coil_block" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -179,7 +179,7 @@
 			id: "0EE3316A709A45FE"
 			tasks: [{
 				id: "240F70B294FA73C1"
-				item: { Count: 16, id: "kubejs:titansteel_coil_block" }
+				item: { Count: 16, id: "gtlcore:titansteel_coil_block" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -190,7 +190,7 @@
 			id: "59FB03850785FF2F"
 			tasks: [{
 				id: "3B6E996C4F732910"
-				item: { Count: 16, id: "kubejs:adamantine_coil_block" }
+				item: { Count: 16, id: "gtlcore:adamantine_coil_block" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -201,7 +201,7 @@
 			id: "5AEC213D2281F8F0"
 			tasks: [{
 				id: "32B961C1335D9D0D"
-				item: { Count: 16, id: "kubejs:naquadriatictaranium_coil_block" }
+				item: { Count: 16, id: "gtlcore:naquadriatictaranium_coil_block" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -212,7 +212,7 @@
 			id: "4C54B6D5B8BB6626"
 			tasks: [{
 				id: "40B8CE0E81F493CA"
-				item: { Count: 16, id: "kubejs:starmetal_coil_block" }
+				item: { Count: 16, id: "gtlcore:starmetal_coil_block" }
 				type: "item"
 			}]
 			x: -4.0d
@@ -223,7 +223,7 @@
 			id: "66DA8A1B2CEEB9A1"
 			tasks: [{
 				id: "0999BA1473904A08"
-				item: { Count: 16, id: "kubejs:infinity_coil_block" }
+				item: { Count: 16, id: "gtlcore:infinity_coil_block" }
 				type: "item"
 			}]
 			x: -2.0d
@@ -234,7 +234,7 @@
 			id: "1795FC9ACAC4D042"
 			tasks: [{
 				id: "042FCC16A0D4A88D"
-				item: { Count: 16, id: "kubejs:hypogen_coil_block" }
+				item: { Count: 16, id: "gtlcore:hypogen_coil_block" }
 				type: "item"
 			}]
 			x: 0.0d
@@ -245,7 +245,7 @@
 			id: "7B8EC90F1EFDB7F2"
 			tasks: [{
 				id: "67129ADF4E0E8389"
-				item: { Count: 16, id: "kubejs:eternity_coil_block" }
+				item: { Count: 16, id: "gtlcore:eternity_coil_block" }
 				type: "item"
 			}]
 			x: 0.0d

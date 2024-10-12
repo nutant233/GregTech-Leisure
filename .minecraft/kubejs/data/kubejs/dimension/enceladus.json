@@ -27,7 +27,7 @@
       "aquifers_enabled": true,
       "ore_veins_enabled": true,
       "default_block": {
-        "Name": "kubejs:enceladusstone"
+        "Name": "gtlcore:enceladusstone"
       },
       "default_fluid": {
         "Name": "minecraft:blue_ice"
@@ -421,7 +421,7 @@
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "kubejs:enceladusstone"
+                            "Name": "gtlcore:enceladusstone"
                           }
                         }
                       ]
@@ -439,7 +439,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "kubejs:enceladusstone"
+                        "Name": "gtlcore:enceladusstone"
                       }
                     }
                   }

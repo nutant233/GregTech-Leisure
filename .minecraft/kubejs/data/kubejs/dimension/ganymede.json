@@ -27,7 +27,7 @@
       "aquifers_enabled": true,
       "ore_veins_enabled": true,
       "default_block": {
-        "Name": "kubejs:ganymedestone"
+        "Name": "gtlcore:ganymedestone"
       },
       "default_fluid": {
         "Name": "minecraft:frosted_ice",
@@ -417,14 +417,14 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "kubejs:ganymedegrunt"
+                              "Name": "gtlcore:ganymedegrunt"
                             }
                           }
                         },
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "kubejs:ganymedestone"
+                            "Name": "gtlcore:ganymedestone"
                           }
                         }
                       ]
@@ -442,7 +442,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "kubejs:ganymedestone"
+                        "Name": "gtlcore:ganymedestone"
                       }
                     }
                   }

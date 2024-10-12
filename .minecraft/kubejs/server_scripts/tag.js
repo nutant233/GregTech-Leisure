@@ -40,16 +40,6 @@ ServerEvents.tags("item", event => {
     ores.forEach((ore) => {
         event.removeAllTagsFrom(ore)
     })
-    //gtceu
-    event.remove("minecraft:planks", "gtceu:treated_wood_planks")
-    event.add("gtceu:circuits/zpm", "kubejs:bioware_processor")
-    event.add("gtceu:circuits/uv", ["kubejs:optical_processor", "kubejs:bioware_assembly"])
-    event.add("gtceu:circuits/uhv", ["kubejs:exotic_processor", "kubejs:optical_assembly", "kubejs:bioware_computer"])
-    event.add("gtceu:circuits/uev", ["kubejs:cosmic_processor", "kubejs:exotic_assembly", "kubejs:optical_computer", "kubejs:bioware_mainframe"])
-    event.add("gtceu:circuits/uiv", ["kubejs:supracausal_processor", "kubejs:cosmic_assembly", "kubejs:exotic_computer", "kubejs:optical_mainframe"])
-    event.add("gtceu:circuits/uxv", ["kubejs:supracausal_assembly", "kubejs:cosmi_computer", "kubejs:exotic_mainframe", "kubejs:cosmic_computer"])
-    event.add("gtceu:circuits/opv", ["kubejs:supracausal_computer", "kubejs:cosmic_mainframe"])
-    event.add("gtceu:circuits/max", "kubejs:supracausal_mainframe")
 
     //space_suit
     const space_suit_items = ["ad_astra:netherite_space_suit_items",

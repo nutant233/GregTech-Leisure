@@ -1,9 +1,0 @@
-{
-    "ldlib": {
-        "connection": "kubejs:block/titansteel_coil_block_bloom_ctm",
-        "emissive": true
-    },
-    "shimmer": {
-        "bloom": true
-    }
-}

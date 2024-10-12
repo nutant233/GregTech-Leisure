@@ -22,7 +22,7 @@ ServerEvents.recipes((event) => {
         "BDB",
         "ABA"
     ], {
-        A: "kubejs:echobone",
+        A: "gtlcore:echobone",
         B: "gtceu:echo_shard_rod",
         D: "minecraft:sculk_sensor"
     })
@@ -82,7 +82,7 @@ ServerEvents.recipes((event) => {
         .addCondition(new GravityCondition(true))
 
     gtr.lightning_processor("gtlcore:reinforced_deepslate")
-        .itemInputs("minecraft:deepslate", "gtceu:echo_shard_block", "4x kubejs:echobone")
+        .itemInputs("minecraft:deepslate", "gtceu:echo_shard_block", "4x gtlcore:echobone")
         .inputFluids("gtceu:echo_shard 1440")
         .itemOutputs("minecraft:reinforced_deepslate")
         .duration(200)
@@ -91,7 +91,7 @@ ServerEvents.recipes((event) => {
     gtr.lightning_processor("gtlcore:echobone")
         .itemInputs("minecraft:bone")
         .inputFluids("gtceu:echo_shard 144")
-        .itemOutputs("kubejs:echobone")
+        .itemOutputs("gtlcore:echobone")
         .EUt(480)
         .duration(400)
 
@@ -170,7 +170,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(6470)
 
     gtr.lightning_processor("gtlcore:dragon_egg")
-        .itemInputs("minecraft:egg", "64x kubejs:warped_ender_pearl")
+        .itemInputs("minecraft:egg", "64x gtlcore:warped_ender_pearl")
         .inputFluids("gtceu:antimatter 1000", "gtceu:ender_eye 10000", "gtceu:sterilized_growth_medium 10000")
         .chancedOutput("minecraft:dragon_egg", 9000, 0)
         .duration(2000)

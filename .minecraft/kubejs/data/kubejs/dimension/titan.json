@@ -27,7 +27,7 @@
       "aquifers_enabled": true,
       "ore_veins_enabled": true,
       "default_block": {
-        "Name": "kubejs:titanstone"
+        "Name": "gtlcore:titanstone"
       },
       "default_fluid": {
         "Name": "minecraft:ice"
@@ -414,14 +414,14 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "kubejs:titangrunt"
+                              "Name": "gtlcore:titangrunt"
                             }
                           }
                         },
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "kubejs:titanstone"
+                            "Name": "gtlcore:titanstone"
                           }
                         }
                       ]
@@ -439,7 +439,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "kubejs:titangrunt"
+                        "Name": "gtlcore:titangrunt"
                       }
                     }
                   }

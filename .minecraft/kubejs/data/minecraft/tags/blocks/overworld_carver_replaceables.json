@@ -3,17 +3,17 @@
   "values": [
     "minecraft:grass_block",
     "minecraft:diorite",
-    "kubejs:titanstone",
-    "kubejs:titangrunt",
-    "kubejs:iostone",
-    "kubejs:ioash",
-    "kubejs:ganymedestone",
-    "kubejs:ganymedegrunt",
-    "kubejs:enceladusstone",
+    "gtlcore:titanstone",
+    "gtlcore:titangrunt",
+    "gtlcore:iostone",
+    "gtlcore:ioash",
+    "gtlcore:ganymedestone",
+    "gtlcore:ganymedegrunt",
+    "gtlcore:enceladusstone",
     "minecraft:snow_block",
-    "kubejs:ceresstone",
-    "kubejs:ceresgrunt",
-    "kubejs:plutostone",
-    "kubejs:plutogrunt"
+    "gtlcore:ceresstone",
+    "gtlcore:ceresgrunt",
+    "gtlcore:plutostone",
+    "gtlcore:plutogrunt"
   ]
 }

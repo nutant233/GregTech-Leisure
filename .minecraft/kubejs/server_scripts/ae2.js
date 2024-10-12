@@ -332,89 +332,89 @@ ServerEvents.recipes((event) => {
         })
     }
 
-    gtr.forming_press("kubejs:fishbig_fabric")
-        .itemInputs("64x gtceu:magnetohydrodynamicallyconstrainedstarmatter_foil", "64x gtceu:shirabon_foil", "64x kubejs:two_way_foil", "64x gtceu:cosmic_foil", "64x gtceu:cosmicneutronium_foil", "64x gtceu:eternity_foil")
-        .itemOutputs("kubejs:fishbig_fabric")
+    gtr.forming_press("gtlcore:fishbig_fabric")
+        .itemInputs("64x gtceu:magnetohydrodynamicallyconstrainedstarmatter_foil", "64x gtceu:shirabon_foil", "64x gtlcore:two_way_foil", "64x gtceu:cosmic_foil", "64x gtceu:cosmicneutronium_foil", "64x gtceu:eternity_foil")
+        .itemOutputs("gtlcore:fishbig_fabric")
         .duration(200)
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.assembler("kubejs:fishbig_frame")
+    gtr.assembler("gtlcore:fishbig_frame")
         .circuit(6)
         .itemInputs("64x gtceu:cosmic_plate", "64x gtceu:eternity_nanoswarm", "64x gtceu:long_cosmic_rod", "64x gtceu:infinity_frame", "64x gtceu:long_transcendentmetal_rod",
             "64x gtceu:long_cosmicneutronium_rod", "64x gtceu:magnetohydrodynamicallyconstrainedstarmatter_frame", "64x gtceu:long_magmatter_rod",)
         .inputFluids("gtceu:shirabon 18432")
-        .itemOutputs("kubejs:fishbig_frame")
+        .itemOutputs("gtlcore:fishbig_frame")
         .duration(200)
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.assembler("kubejs:fishbig_body")
-        .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x gtlcore:create_aggregation", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric")
+    gtr.assembler("gtlcore:fishbig_body")
+        .itemInputs("64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_frame", "64x gtlcore:fishbig_fabric",
+            "64x gtlcore:fishbig_fabric", "64x gtlcore:create_aggregation", "64x gtlcore:fishbig_fabric",
+            "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_frame", "64x gtlcore:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
-        .itemOutputs("kubejs:fishbig_body")
+        .itemOutputs("gtlcore:fishbig_body")
         .duration(200)
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.assembler("kubejs:fishbig_hade")
+    gtr.assembler("gtlcore:fishbig_hade")
         .itemInputs("64x gtceu:double_cosmic_plate", "64x gtceu:double_cosmic_plate", "64x gtceu:double_cosmic_plate",
             "64x gtlcore:max_sensor", "64x gtlcore:create_computation", "64x gtlcore:max_sensor",
-            "64x gtceu:double_cosmic_plate", "64x kubejs:fishbig_frame", "64x gtceu:double_cosmic_plate")
+            "64x gtceu:double_cosmic_plate", "64x gtlcore:fishbig_frame", "64x gtceu:double_cosmic_plate")
         .inputFluids("gtceu:transcendentmetal 18432")
-        .itemOutputs("kubejs:fishbig_hade")
+        .itemOutputs("gtlcore:fishbig_hade")
         .duration(200)
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.assembler("kubejs:fishbig_hair")
-        .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x gtlcore:infinity_glass", "64x kubejs:fishbig_fabric")
+    gtr.assembler("gtlcore:fishbig_hair")
+        .itemInputs("64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric",
+            "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_frame", "64x gtlcore:fishbig_fabric",
+            "64x gtlcore:fishbig_fabric", "64x gtlcore:infinity_glass", "64x gtlcore:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
-        .itemOutputs("kubejs:fishbig_hair")
+        .itemOutputs("gtlcore:fishbig_hair")
         .duration(200)
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.assembler("kubejs:fishbig_rleg")
-        .itemInputs("64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x gtceu:max_buffer", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+    gtr.assembler("gtlcore:fishbig_rleg")
+        .itemInputs("64x gtlcore:fishbig_frame", "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric",
+            "64x gtlcore:fishbig_fabric", "64x gtceu:max_buffer", "64x gtlcore:fishbig_fabric",
+            "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
-        .itemOutputs("kubejs:fishbig_rleg")
+        .itemOutputs("gtlcore:fishbig_rleg")
         .duration(200)
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.assembler("kubejs:fishbig_lleg")
-        .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame",
-            "64x kubejs:fishbig_fabric", "64x gtceu:max_buffer", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+    gtr.assembler("gtlcore:fishbig_lleg")
+        .itemInputs("64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_frame",
+            "64x gtlcore:fishbig_fabric", "64x gtceu:max_buffer", "64x gtlcore:fishbig_fabric",
+            "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
-        .itemOutputs("kubejs:fishbig_lleg")
+        .itemOutputs("gtlcore:fishbig_lleg")
         .duration(200)
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.assembler("kubejs:fishbig_rhand")
-        .itemInputs("64x kubejs:fishbig_frame", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x gtlcore:component_assembly_line_casing_max", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+    gtr.assembler("gtlcore:fishbig_rhand")
+        .itemInputs("64x gtlcore:fishbig_frame", "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric",
+            "64x gtlcore:fishbig_fabric", "64x gtlcore:component_assembly_line_casing_max", "64x gtlcore:fishbig_fabric",
+            "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
-        .itemOutputs("kubejs:fishbig_rhand")
+        .itemOutputs("gtlcore:fishbig_rhand")
         .duration(200)
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.assembler("kubejs:fishbig_lhand")
-        .itemInputs("64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_frame",
-            "64x kubejs:fishbig_fabric", "64x gtlcore:component_assembly_line_casing_max", "64x kubejs:fishbig_fabric",
-            "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric", "64x kubejs:fishbig_fabric")
+    gtr.assembler("gtlcore:fishbig_lhand")
+        .itemInputs("64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_frame",
+            "64x gtlcore:fishbig_fabric", "64x gtlcore:component_assembly_line_casing_max", "64x gtlcore:fishbig_fabric",
+            "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric", "64x gtlcore:fishbig_fabric")
         .inputFluids("gtceu:eternity 18432")
-        .itemOutputs("kubejs:fishbig_lhand")
+        .itemOutputs("gtlcore:fishbig_lhand")
         .duration(200)
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)

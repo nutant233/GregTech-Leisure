@@ -2,7 +2,7 @@
 ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
 
-    event.shaped("kubejs:warped_ender_pearl", [
+    event.shaped("gtlcore:warped_ender_pearl", [
         "ABA",
         "BDB",
         "ABA"
@@ -17,7 +17,7 @@ ServerEvents.recipes((event) => {
         " B ",
         "B  "
     ], {
-        A: "kubejs:command_block_core",
+        A: "gtlcore:command_block_core",
         B: "gtceu:eternity_rod"
     })
 
@@ -80,18 +80,18 @@ ServerEvents.recipes((event) => {
         .CWUt(GTValues.VA[GTValues.MAX])
         .dimension("kubejs:create")
 
-    gtr.electric_blast_furnace("kubejs:shining_obsidian")
+    gtr.electric_blast_furnace("gtlcore:shining_obsidian")
         .itemInputs("minecraft:obsidian", "gtceu:vibrant_alloy_dust")
         .inputFluids("gtceu:glowstone 576")
-        .itemOutputs("kubejs:shining_obsidian")
+        .itemOutputs("gtlcore:shining_obsidian")
         .EUt(480)
         .duration(600)
         .blastFurnaceTemp(2600)
 
-    gtr.chemical_bath("kubejs:ender_obsidian")
-        .itemInputs("kubejs:shining_obsidian")
+    gtr.chemical_bath("gtlcore:ender_obsidian")
+        .itemInputs("gtlcore:shining_obsidian")
         .inputFluids("gtceu:ender_eye 1152")
-        .itemOutputs("kubejs:ender_obsidian")
+        .itemOutputs("gtlcore:ender_obsidian")
         .EUt(480)
         .duration(200)
 
@@ -141,7 +141,7 @@ BlockEvents.rightClicked("minecraft:obsidian", event => {
     }
 })
 
-BlockEvents.rightClicked("kubejs:reactor_core", event => {
+BlockEvents.rightClicked("gtlcore:reactor_core", event => {
     if ((event.player.getHeldItem("main_hand") == null && event.player.getHeldItem("off_hand") == null) || event.player.getHeldItem("main_hand").getId() === "kubejs:nether_data") {
         let pos = event.block.getPos()
         let dim = event.getLevel().getDimension().toString()
@@ -155,7 +155,7 @@ BlockEvents.rightClicked("kubejs:reactor_core", event => {
                 event.player.persistentData.putDouble("pos_aw_z", event.player.z)
                 event.player.persistentData.putString("dim_aw", dim)
                 event.server.runCommandSilent(`execute in kubejs:ancient_world as ${event.player.getName().getString()} run tp ${0} ${128} ${0}`)
-                event.server.runCommandSilent(`execute in kubejs:ancient_world run fill ${0} ${127} ${0} ${0} ${127} ${0} kubejs:reactor_core`)
+                event.server.runCommandSilent(`execute in kubejs:ancient_world run fill ${0} ${127} ${0} ${0} ${127} ${0} gtlcore:reactor_core`)
             } else if (event.level.getBlockState(pos.offset(1, 0, 0)).getBlock().getId() === "minecraft:gold_block" && event.level.getBlockState(pos.offset(-1, 0, 0)).getBlock().getId() === "minecraft:gold_block" && event.level.getBlockState(pos.offset(0, 0, 1)).getBlock().getId() === "minecraft:gold_block" && event.level.getBlockState(pos.offset(0, 0, -1)).getBlock().getId() === "minecraft:gold_block" && event.level.getBlockState(pos.offset(1, 0, 1)).getBlock().getId() === "minecraft:emerald_block" && event.level.getBlockState(pos.offset(1, 0, -1)).getBlock().getId() === "minecraft:emerald_block" && event.level.getBlockState(pos.offset(-1, 0, 1)).getBlock().getId() === "minecraft:emerald_block" && event.level.getBlockState(pos.offset(-1, 0, -1)).getBlock().getId() === "minecraft:emerald_block") {
                 if (event.player.getHeldItem("main_hand").getId() === "kubejs:nether_data") {
                     event.player.persistentData.putDouble("pos_ne_x", event.player.x)
@@ -163,7 +163,7 @@ BlockEvents.rightClicked("kubejs:reactor_core", event => {
                     event.player.persistentData.putDouble("pos_ne_z", event.player.z)
                     event.player.persistentData.putString("dim_ne", dim)
                     event.server.runCommandSilent(`execute in minecraft:the_nether as ${event.player.getName().getString()} run tp ${0} ${128} ${0}`)
-                    event.server.runCommandSilent(`execute in minecraft:the_nether run fill ${0} ${127} ${0} ${0} ${127} ${0} kubejs:reactor_core`)
+                    event.server.runCommandSilent(`execute in minecraft:the_nether run fill ${0} ${127} ${0} ${0} ${127} ${0} gtlcore:reactor_core`)
                 } else {
                     event.player.setStatusMessage("需要手持数据")
                 }
@@ -174,7 +174,7 @@ BlockEvents.rightClicked("kubejs:reactor_core", event => {
     }
 })
 
-BlockEvents.broken("kubejs:create_aggregatione_core", event => {
+BlockEvents.broken("gtlcore:create_aggregatione_core", event => {
     let command_block = event.getLevel().getBlock(event.block.x, event.block.y + 1, event.block.z).getId()
     if (command_block === "minecraft:command_block" || command_block === "minecraft:chain_command_block" || command_block === "minecraft:repeating_command_block") {
         event.getServer().runCommandSilent(`execute at ${event.player.getName().getString()} run fill ${event.block.x} ${event.block.y + 1} ${event.block.z} ${event.block.x} ${event.block.y + 1} ${event.block.z} minecraft:air`)
@@ -189,7 +189,7 @@ ItemEvents.rightClicked("kubejs:command_wand", event => {
     let name = event.player.getName().getString()
     let pos = getEyePositionPos(event.level, event.player)
     let block = event.level.getBlock(pos.x, pos.y, pos.z)
-    if (block.getId() === "kubejs:create_aggregatione_core" && event.level.getBlock(pos.x, pos.y + 1, pos.z).getId() === "minecraft:air") {
+    if (block.getId() === "gtlcore:create_aggregatione_core" && event.level.getBlock(pos.x, pos.y + 1, pos.z).getId() === "minecraft:air") {
         if (event.player.getHeldItem("off_hand").getId() === "minecraft:command_block") {
             event.player.offHandItem.count--
             event.getServer().runCommandSilent(`execute at ${name} run fill ${pos.x} ${pos.y + 1} ${pos.z} ${pos.x} ${pos.y + 1} ${pos.z} minecraft:command_block`)
@@ -217,7 +217,7 @@ ItemEvents.rightClicked("kubejs:command_wand", event => {
     }
 })
 
-ItemEvents.firstRightClicked("kubejs:warped_ender_pearl", event => {
+ItemEvents.firstRightClicked("gtlcore:warped_ender_pearl", event => {
     let name = event.player.getName().getString()
     let pearl = event.player.persistentData.getInt("pearl").toString()
     if (event.player.isSteppingCarefully()) {
@@ -317,7 +317,7 @@ NetworkEvents.dataReceived("global.nightvisionKey.consumeClick", event => {
 })
 
 NetworkEvents.dataReceived("global.pearlKey.consumeClick", event => {
-    if (event.player.getHeldItem("main_hand").getId() === "kubejs:warped_ender_pearl") {
+    if (event.player.getHeldItem("main_hand").getId() === "gtlcore:warped_ender_pearl") {
         let pearl = event.player.persistentData.getInt("pearl")
         if (event.player.isSteppingCarefully()) {
             if (pearl === 0) {
@@ -373,7 +373,7 @@ EntityEvents.hurt("player", event => {
 })
 
 BlockEvents.leftClicked("minecraft:bedrock", (event) => {
-    if (event.player.getHeldItem("main_hand").getId() === "kubejs:bedrock_destroyer") {
+    if (event.player.getHeldItem("main_hand").getId() === "gtlcore:bedrock_destroyer") {
         event.block.set("minecraft:air")
     }
 })
@@ -391,7 +391,7 @@ EntityEvents.spawned("minecraft:bat", event => {
 ServerEvents.entityLootTables(event => {
     event.addEntity("ad_astra:glacian_ram", l => {
         l.addPool(p => {
-            p.addItem("kubejs:glacio_spirit").weight(1)
+            p.addItem("gtlcore:glacio_spirit").weight(1)
             p.addItem("ad_astra:ice_shard").weight(9)
         })
     })
