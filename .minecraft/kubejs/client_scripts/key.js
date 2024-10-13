@@ -1,14 +1,14 @@
 ClientEvents.tick(event => {
-  if (global.flyingspeedKey.consumeClick()) {
+  if (KeyBind.flyingspeedKey.consumeClick()) {
     event.player.sendData("global.flyingspeedKey.consumeClick")
   }
-  if (global.nightvisionKey.consumeClick()) {
+  if (KeyBind.nightvisionKey.consumeClick()) {
     event.player.sendData("global.nightvisionKey.consumeClick")
   }
-  if (global.pearlKey.consumeClick()) {
+  if (KeyBind.pearlKey.consumeClick()) {
     event.player.sendData("global.pearlKey.consumeClick")
   }
-  if (global.vajraKey.consumeClick()) {
+  if (KeyBind.vajraKey.consumeClick()) {
     event.player.sendData("global.vajraKey.consumeClick")
   }
 })

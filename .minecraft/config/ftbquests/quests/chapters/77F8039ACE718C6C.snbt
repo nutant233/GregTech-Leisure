@@ -243,8 +243,8 @@
 				item: "gtceu:lv_machine_hull"
 				type: "item"
 			}]
-			x: 4.0d
-			y: 8.0d
+			x: 6.0d
+			y: 10.0d
 		}
 		{
 			dependencies: ["2B9D62FB6BF39201"]
@@ -441,12 +441,13 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 4.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
 				"707E5114B7979898"
 				"388BD32463FA905D"
+				"6DB45A96500CC2EB"
 			]
 			description: ["你的第一颗ULV电路，你需要用它帮忙做更便宜的，做几个就够了"]
 			id: "5CD26DECB937FC71"
@@ -480,7 +481,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 4.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["5C936EF307594737"]
@@ -626,7 +627,6 @@
 		}
 		{
 			dependencies: ["7CB85061F0822830"]
-			hide_dependent_lines: true
 			id: "38CC43F7A6A39BB4"
 			rewards: [{
 				id: "3354D072C3B1F387"
@@ -638,8 +638,8 @@
 				item: "gtceu:lv_muffler_hatch"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 8.0d
+			x: 8.0d
+			y: 10.0d
 		}
 		{
 			can_repeat: false
@@ -677,8 +677,8 @@
 				item: "minecraft:paper"
 				type: "item"
 			}]
-			x: 2.0d
-			y: 6.0d
+			x: 4.0d
+			y: 7.5d
 		}
 		{
 			dependencies: ["77A1011F608079C9"]
@@ -1244,6 +1244,18 @@
 			}]
 			x: 14.0d
 			y: 6.0d
+		}
+		{
+			dependencies: ["4B6F43302E963F5E"]
+			description: ["等待1分钟获得第一片真空，注意停止工作后真空会立即消失"]
+			id: "6DB45A96500CC2EB"
+			tasks: [{
+				id: "340938C89AA8C86B"
+				item: "gtlcore:lp_steam_vacuum_pump"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.5d
 		}
 	]
 	subtitle: ["Tier0-ULV"]
