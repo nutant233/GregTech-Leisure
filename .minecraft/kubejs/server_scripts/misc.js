@@ -95,7 +95,7 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(200)
 
-    gtr.compressor("avaritia:compressed_crafting_table")
+    gtr.compressor("gtlcore:compressed_crafting_table")
         .itemInputs("64x minecraft:crafting_table")
         .itemOutputs("avaritia:compressed_crafting_table")
         .EUt(480)

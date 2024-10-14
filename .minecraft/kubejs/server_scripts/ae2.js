@@ -105,7 +105,7 @@ ServerEvents.recipes((event) => {
         C: "ae2:fluix_glass_cable",
     })
 
-    gtr.forming_press("ae2:logic_processor")
+    gtr.forming_press("gtlcore:logic_processor")
         .notConsumable("ae2:silicon_press")
         .notConsumable("ae2:logic_processor_press")
         .itemInputs("#forge:plates/gold", "ae2:silicon", "#forge:plates/redstone")
@@ -113,7 +113,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .EUt(30)
 
-    gtr.forming_press("ae2:logic_processor1")
+    gtr.forming_press("gtlcore:logic_processor1")
         .notConsumable("ae2:silicon_press")
         .notConsumable("ae2:logic_processor_press")
         .itemInputs("gtceu:gold_dust", "gtceu:silicon_dust", "minecraft:redstone")
@@ -121,7 +121,7 @@ ServerEvents.recipes((event) => {
         .duration(20)
         .EUt(480)
 
-    gtr.forming_press("ae2:calculation_processor")
+    gtr.forming_press("gtlcore:calculation_processor")
         .notConsumable("ae2:silicon_press")
         .notConsumable("ae2:calculation_processor_press")
         .itemInputs("#forge:plates/certus_quartz", "ae2:silicon", "#forge:plates/redstone")
@@ -130,7 +130,7 @@ ServerEvents.recipes((event) => {
         .EUt(30)
 
 
-    gtr.forming_press("ae2:calculation_processor1")
+    gtr.forming_press("gtlcore:calculation_processor1")
         .notConsumable("ae2:silicon_press")
         .notConsumable("ae2:calculation_processor_press")
         .itemInputs("gtceu:certus_quartz_dust", "gtceu:silicon_dust", "minecraft:redstone")
@@ -138,7 +138,7 @@ ServerEvents.recipes((event) => {
         .duration(20)
         .EUt(480)
 
-    gtr.forming_press("ae2:engineering_processor1")
+    gtr.forming_press("gtlcore:engineering_processor1")
         .notConsumable("ae2:silicon_press")
         .notConsumable("ae2:engineering_processor_press")
         .itemInputs("#forge:plates/diamond", "ae2:silicon", "#forge:plates/redstone")
@@ -146,7 +146,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .EUt(30)
 
-    gtr.forming_press("ae2:engineering_processor")
+    gtr.forming_press("gtlcore:engineering_processor")
         .notConsumable("ae2:silicon_press")
         .notConsumable("ae2:engineering_processor_press")
         .itemInputs("gtceu:diamond_dust", "gtceu:silicon_dust", "minecraft:redstone")
@@ -154,60 +154,60 @@ ServerEvents.recipes((event) => {
         .duration(20)
         .EUt(480)
 
-    gtr.mixer("ae2:fluix_dust")
+    gtr.mixer("gtlcore:fluix_dust")
         .itemInputs("#forge:dusts/nether_quartz", "#forge:dusts/certus_quartz", "#forge:dusts/redstone")
         .itemOutputs("3x ae2:fluix_dust")
         .duration(200)
         .EUt(16)
 
-    gtr.autoclave("ae2:fluix_crystal_1")
+    gtr.autoclave("gtlcore:fluix_crystal_1")
         .itemInputs("#forge:dusts/fluix")
         .inputFluids("water 250")
         .itemOutputs("ae2:fluix_crystal")
         .duration(1200)
         .EUt(24)
 
-    gtr.autoclave("ae2:fluix_crystal_2")
+    gtr.autoclave("gtlcore:fluix_crystal_2")
         .itemInputs("#forge:dusts/fluix")
         .inputFluids("gtceu:distilled_water 50")
         .itemOutputs("ae2:fluix_crystal")
         .duration(600)
         .EUt(24)
 
-    gtr.macerator("gtceu:silicon_dust")
+    gtr.macerator("gtlcore:silicon_dust")
         .itemInputs("ae2:silicon")
         .itemOutputs("gtceu:silicon_dust")
         .EUt(16)
         .duration(200)
 
-    gtr.macerator("ae2:fluix_dust")
+    gtr.macerator("gtlcore:fluix_dust")
         .itemInputs("ae2:fluix_crystal")
         .itemOutputs("ae2:fluix_dust")
         .EUt(2)
         .duration(240)
 
-    gtr.assembler("ae2:fluix_covered_cable")
+    gtr.assembler("gtlcore:fluix_covered_cable")
         .itemInputs("ae2:fluix_glass_cable")
         .inputFluids("gtceu:rubber 4")
         .itemOutputs("ae2:fluix_covered_cable")
         .EUt(30)
         .duration(20)
 
-    gtr.assembler("ae2:fluix_covered_cable1")
+    gtr.assembler("gtlcore:fluix_covered_cable1")
         .itemInputs("ae2:fluix_glass_cable")
         .inputFluids("gtceu:silicone_rubber 2")
         .itemOutputs("ae2:fluix_covered_cable")
         .EUt(30)
         .duration(20)
 
-    gtr.assembler("ae2:fluix_covered_cable2")
+    gtr.assembler("gtlcore:fluix_covered_cable2")
         .itemInputs("ae2:fluix_glass_cable")
         .inputFluids("gtceu:styrene_butadiene_rubber 1")
         .itemOutputs("ae2:fluix_covered_cable")
         .EUt(30)
         .duration(20)
 
-    gtr.assembler("gtceu:blank_pattern")
+    gtr.assembler("gtlcore:blank_pattern")
         .itemInputs(
             "3x #forge:plates/steel",
             "2x #forge:plates/polyethylene",
@@ -218,7 +218,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .EUt(120)
 
-    gtr.assembler("gtceu:blank_pattern_good")
+    gtr.assembler("gtlcore:blank_pattern_good")
         .itemInputs(
             "3x #forge:plates/steel",
             "2x #forge:plates/polyvinyl_chloride",
@@ -229,7 +229,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .EUt(120)
 
-    gtr.assembler("gtceu:blank_pattern_better")
+    gtr.assembler("gtlcore:blank_pattern_better")
         .itemInputs(
             "3x #forge:plates/steel",
             "2x #forge:plates/polytetrafluoroethylene",
@@ -240,7 +240,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .EUt(480)
 
-    gtr.assembler("gtceu:blank_pattern_best")
+    gtr.assembler("gtlcore:blank_pattern_best")
         .itemInputs(
             "3x #forge:plates/steel",
             "2x #forge:plates/polybenzimidazole",
@@ -251,13 +251,13 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .EUt(480)
 
-    gtr.macerator("ae2:sky_dust")
+    gtr.macerator("gtlcore:sky_dust")
         .itemInputs("ae2:sky_stone_block")
         .itemOutputs("ae2:sky_dust")
         .EUt(2)
         .duration(200)
 
-    gtr.chemical_bath("ae2:flawless_budding_quartz")
+    gtr.chemical_bath("gtlcore:flawless_budding_quartz")
         .itemInputs("ae2:flawed_budding_quartz")
         .inputFluids("minecraft:water 1000")
         .itemOutputs("ae2:flawless_budding_quartz")
@@ -419,21 +419,22 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX] * 65536)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.lightning_processor("ae2:charged_certus_quartz_crystal")
+    gtr.lightning_processor("gtlcore:charged_certus_quartz_crystal")
         .circuit(1)
         .itemInputs("gtceu:certus_quartz_gem")
         .itemOutputs("ae2:charged_certus_quartz_crystal")
         .EUt(30)
         .duration(60)
 
-    gtr.lightning_processor("ae2:fluix_crystal")
+    gtr.lightning_processor("gtlcore:fluix_crystal")
+        .circuit(2)
         .itemInputs("minecraft:redstone", "minecraft:quartz", "gtceu:certus_quartz_gem")
         .inputFluids("minecraft:water 1000")
         .itemOutputs("2x ae2:fluix_crystal")
         .EUt(30)
         .duration(80)
 
-    gtr.lightning_processor("ae2:fluix_pearl")
+    gtr.lightning_processor("gtlcore:fluix_pearl")
         .itemInputs("minecraft:ender_pearl", "8x ae2:fluix_crystal")
         .itemOutputs("ae2:fluix_pearl")
         .EUt(30)

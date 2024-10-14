@@ -1,28 +1,5 @@
 //priority: 96
 ServerEvents.recipes((event) => {
-    event.remove({ id: "gtceu:chemical_reactor/styrene_from_ethylbenzene" })
-    event.remove({ id: "gtceu:large_chemical_reactor/styrene_from_ethylbenzene" })
-    event.remove({ id: "gtceu:chemical_reactor/vinyl_chloride_from_ethane" })
-    event.remove({ id: "gtceu:large_chemical_reactor/vinyl_chloride_from_ethane" })
-    event.remove({ id: "gtceu:chemical_reactor/dimethylchlorosilane_from_chloromethane" })
-    event.remove({ id: "gtceu:large_chemical_reactor/dimethylchlorosilane_from_chloromethane" })
-    event.remove({ id: "gtceu:chemical_reactor/formic_acid" })
-    event.remove({ id: "gtceu:large_chemical_reactor/formic_acid" })
-    event.remove({ id: "gtceu:chemical_reactor/ethylene_from_ethanol" })
-    event.remove({ id: "gtceu:large_chemical_reactor/ethylene_from_ethanol" })
-    event.remove({ id: "gtceu:chemical_reactor/stem_cells" })
-    event.remove({ id: "gtceu:large_chemical_reactor/stem_cells" })
-    event.remove({ id: "gtceu:chemical_reactor/calcite_from_quicklime" })
-    event.remove({ id: "gtceu:large_chemical_reactor/calcite_from_quicklime" })
-    event.remove({ id: "gtceu:chemical_reactor/calcium_hydroxide" })
-    event.remove({ id: "gtceu:large_chemical_reactor/calcium_hydroxide" })
-    event.remove({ id: "gtceu:electrolyzer/bone_meal_electrolysis" })
-    event.remove({ id: "gtceu:mixer/rocket_fuel_from_dinitrogen_tetroxide" })
-    event.remove({ id: "gtceu:centrifuge/rare_earth_separation" })
-    event.remove({ id: "gtceu:extruder/nan_certificate" })
-    event.remove({ id: "gtceu:shaped/maintenance_hatch_cleaning" })
-    event.remove({ id: "gtceu:forming_press/credit_cupronickel" })
-    event.remove({ id: "gtceu:electrolyzer/tungstic_acid_electrolysis" })
     event.shapeless(Registries.getItemStack("gtceu:small_flint_dust", 3), "gtceu:flint_dust")
     event.shapeless(Registries.getItemStack("gtceu:tiny_flint_dust", 2), "gtceu:small_flint_dust")
     event.shapeless("gtlcore:cfg_copy", "minecraft:writable_book")
@@ -956,6 +933,19 @@ ServerEvents.recipes((event) => {
         A: "gtceu:double_draconium_plate",
         B: "gtceu:long_cosmicneutronium_rod",
         D: "gtlcore:stabilizer_core"
+    })
+
+
+    event.shaped("gtlcore:greenhouse", [
+        "GGG",
+        "CHC",
+        "PUP"
+    ], {
+        G: "gtceu:tempered_glass",
+        C: "#gtceu:circuits/mv",
+        H: "gtceu:mv_machine_hull",
+        P: "gtceu:mv_electric_piston",
+        U: "gtceu:mv_electric_pump",
     })
 
     const world_data_scanner = [
@@ -2890,63 +2880,198 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[14])
         .duration(200)
 
-    for (let index = 5; index < 15; index++) {
+    gtr.assembler(`gtlcore:max_16384a_wireless_laser_target_hatch`)
+        .itemInputs(`gtlcore:max_16384a_laser_target_hatch`,
+            `16x gtlcore:max_4a_wireless_energy_receive_cover`,
+            "gtceu:active_transformer",
+            "gtceu:superconducting_coil",
+            "2x gtceu:high_power_casing",
+            "4x gtceu:normal_laser_pipe",
+            "gtceu:advanced_energy_detector_cover")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs(`gtmthings:max_16384a_wireless_laser_target_hatch`)
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+    gtr.assembler(`gtlcore:max_16384a_wireless_laser_source_hatch`)
+        .itemInputs(`gtlcore:max_16384a_laser_source_hatch`,
+            `16x gtlcore:max_4a_wireless_energy_receive_cover`,
+            "gtceu:active_transformer",
+            "gtceu:superconducting_coil",
+            "2x gtceu:high_power_casing",
+            "4x gtceu:normal_laser_pipe",
+            "gtceu:advanced_energy_detector_cover")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs(`gtmthings:max_16384a_wireless_laser_source_hatch`)
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+    gtr.assembler(`gtlcore:max_65536a_wireless_laser_target_hatch`)
+        .itemInputs(`gtlcore:max_65536a_laser_target_hatch`,
+            `16x gtlcore:max_4a_wireless_energy_receive_cover`,
+            "gtceu:active_transformer",
+            "2x gtceu:superconducting_coil",
+            "2x gtceu:high_power_casing",
+            "8x gtceu:normal_laser_pipe",
+            "gtceu:advanced_energy_detector_cover")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs(`gtmthings:max_65536a_wireless_laser_target_hatch`)
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+    gtr.assembler(`gtlcore:max_65536a_wireless_laser_source_hatch`)
+        .itemInputs(`gtlcore:max_65536a_laser_source_hatch`,
+            `16x gtlcore:max_4a_wireless_energy_receive_cover`,
+            "gtceu:active_transformer",
+            "2x gtceu:superconducting_coil",
+            "2x gtceu:high_power_casing",
+            "8x gtceu:normal_laser_pipe",
+            "gtceu:advanced_energy_detector_cover")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs(`gtmthings:max_65536a_wireless_laser_source_hatch`)
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+    gtr.assembler(`gtlcore:max_262144a_wireless_laser_target_hatch`)
+        .itemInputs(`gtlcore:max_262144a_laser_target_hatch`,
+            `16x gtlcore:max_4a_wireless_energy_receive_cover`,
+            "2x gtceu:active_transformer",
+            "2x gtceu:superconducting_coil",
+            "2x gtceu:high_power_casing",
+            "16x gtceu:normal_laser_pipe",
+            "gtceu:advanced_energy_detector_cover")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs(`gtlcore:max_262144a_wireless_laser_target_hatch`)
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+    gtr.assembler(`gtlcore:max_262144a_wireless_laser_source_hatch`)
+        .itemInputs(`gtlcore:max_262144a_laser_source_hatch`,
+            `16x gtlcore:max_4a_wireless_energy_receive_cover`,
+            "2x gtceu:active_transformer",
+            "2x gtceu:superconducting_coil",
+            "2x gtceu:high_power_casing",
+            "16x gtceu:normal_laser_pipe",
+            "gtceu:advanced_energy_detector_cover")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs(`gtlcore:max_262144a_wireless_laser_source_hatch`)
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+
+    gtr.assembler(`gtlcore:max_1048576a_wireless_laser_target_hatch`)
+        .itemInputs(`gtlcore:max_1048576a_laser_target_hatch`,
+            `16x gtlcore:max_4a_wireless_energy_receive_cover`,
+            "2x gtceu:active_transformer",
+            "4x gtceu:superconducting_coil",
+            "2x gtceu:high_power_casing",
+            "32x gtceu:normal_laser_pipe",
+            "4x gtlcore:molecular_coil",
+            "gtceu:advanced_energy_detector_cover")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs(`gtlcore:max_1048576a_wireless_laser_target_hatch`)
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+    gtr.assembler(`gtlcore:max_1048576a_wireless_laser_source_hatch`)
+        .itemInputs(`gtlcore:max_1048576a_laser_source_hatch`,
+            `16x gtlcore:max_4a_wireless_energy_receive_cover`,
+            "2x gtceu:active_transformer",
+            "4x gtceu:superconducting_coil",
+            "2x gtceu:high_power_casing",
+            "32x gtceu:normal_laser_pipe",
+            "4x gtlcore:molecular_coil",
+            "gtceu:advanced_energy_detector_cover")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs(`gtlcore:max_1048576a_wireless_laser_source_hatch`)
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+    gtr.assembler(`gtlcore:max_4194304a_wireless_laser_target_hatch`)
+        .itemInputs(`gtlcore:max_4194304a_laser_target_hatch`,
+            `16x gtlcore:max_4a_wireless_energy_receive_cover`,
+            "2x gtceu:active_transformer",
+            "8x gtceu:superconducting_coil",
+            "2x gtceu:high_power_casing",
+            "32x gtceu:normal_laser_pipe",
+            "8x gtlcore:molecular_coil",
+            "gtceu:advanced_energy_detector_cover")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs(`gtlcore:max_4194304a_wireless_laser_target_hatch`)
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+    gtr.assembler(`gtlcore:max_4194304a_wireless_laser_source_hatch`)
+        .itemInputs(`gtlcore:max_4194304a_laser_source_hatch`,
+            `16x gtlcore:max_4a_wireless_energy_receive_cover`,
+            "2x gtceu:active_transformer",
+            "8x gtceu:superconducting_coil",
+            "2x gtceu:high_power_casing",
+            "32x gtceu:normal_laser_pipe",
+            "8x gtlcore:molecular_coil",
+            "gtceu:advanced_energy_detector_cover")
+        .inputFluids("gtceu:soldering_alloy 144")
+        .itemOutputs(`gtlcore:max_4194304a_wireless_laser_source_hatch`)
+        .EUt(GTValues.VA[14])
+        .duration(200)
+
+    for (let index = 5; index < 14; index++) {
         let tierName = GTValues.VN[index].toLowerCase()
         gtr.assembler(`gtlcore:${tierName}_16384a_wireless_laser_target_hatch`)
             .itemInputs(`gtlcore:${tierName}_16384a_laser_target_hatch`,
-                `16x gtlcore:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "gtceu:active_transformer",
                 "gtceu:superconducting_coil",
                 "2x gtceu:high_power_casing",
                 "4x gtceu:normal_laser_pipe",
                 "gtceu:advanced_energy_detector_cover")
             .inputFluids("gtceu:soldering_alloy 144")
-            .itemOutputs(`gtlcore:${tierName}_16384a_wireless_laser_target_hatch`)
+            .itemOutputs(`gtmthings:${tierName}_16384a_wireless_laser_target_hatch`)
             .EUt(GTValues.VA[index])
             .duration(200)
 
         gtr.assembler(`gtlcore:${tierName}_16384a_wireless_laser_source_hatch`)
             .itemInputs(`gtlcore:${tierName}_16384a_laser_source_hatch`,
-                `16x gtlcore:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "gtceu:active_transformer",
                 "gtceu:superconducting_coil",
                 "2x gtceu:high_power_casing",
                 "4x gtceu:normal_laser_pipe",
                 "gtceu:advanced_energy_detector_cover")
             .inputFluids("gtceu:soldering_alloy 144")
-            .itemOutputs(`gtlcore:${tierName}_16384a_wireless_laser_source_hatch`)
+            .itemOutputs(`gtmthings:${tierName}_16384a_wireless_laser_source_hatch`)
             .EUt(GTValues.VA[index])
             .duration(200)
 
         gtr.assembler(`gtlcore:${tierName}_65536a_wireless_laser_target_hatch`)
             .itemInputs(`gtlcore:${tierName}_65536a_laser_target_hatch`,
-                `16x gtlcore:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "gtceu:active_transformer",
                 "2x gtceu:superconducting_coil",
                 "2x gtceu:high_power_casing",
                 "8x gtceu:normal_laser_pipe",
                 "gtceu:advanced_energy_detector_cover")
             .inputFluids("gtceu:soldering_alloy 144")
-            .itemOutputs(`gtlcore:${tierName}_65536a_wireless_laser_target_hatch`)
+            .itemOutputs(`gtmthings:${tierName}_65536a_wireless_laser_target_hatch`)
             .EUt(GTValues.VA[index])
             .duration(200)
 
         gtr.assembler(`gtlcore:${tierName}_65536a_wireless_laser_source_hatch`)
             .itemInputs(`gtlcore:${tierName}_65536a_laser_source_hatch`,
-                `16x gtlcore:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "gtceu:active_transformer",
                 "2x gtceu:superconducting_coil",
                 "2x gtceu:high_power_casing",
                 "8x gtceu:normal_laser_pipe",
                 "gtceu:advanced_energy_detector_cover")
             .inputFluids("gtceu:soldering_alloy 144")
-            .itemOutputs(`gtlcore:${tierName}_65536a_wireless_laser_source_hatch`)
+            .itemOutputs(`gtmthings:${tierName}_65536a_wireless_laser_source_hatch`)
             .EUt(GTValues.VA[index])
             .duration(200)
 
         gtr.assembler(`gtlcore:${tierName}_262144a_wireless_laser_target_hatch`)
             .itemInputs(`gtlcore:${tierName}_262144a_laser_target_hatch`,
-                `16x gtlcore:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "2x gtceu:active_transformer",
                 "2x gtceu:superconducting_coil",
                 "2x gtceu:high_power_casing",
@@ -2959,7 +3084,7 @@ ServerEvents.recipes((event) => {
 
         gtr.assembler(`gtlcore:${tierName}_262144a_wireless_laser_source_hatch`)
             .itemInputs(`gtlcore:${tierName}_262144a_laser_source_hatch`,
-                `16x gtlcore:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "2x gtceu:active_transformer",
                 "2x gtceu:superconducting_coil",
                 "2x gtceu:high_power_casing",
@@ -2973,7 +3098,7 @@ ServerEvents.recipes((event) => {
 
         gtr.assembler(`gtlcore:${tierName}_1048576a_wireless_laser_target_hatch`)
             .itemInputs(`gtlcore:${tierName}_1048576a_laser_target_hatch`,
-                `16x gtlcore:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "2x gtceu:active_transformer",
                 "4x gtceu:superconducting_coil",
                 "2x gtceu:high_power_casing",
@@ -2987,7 +3112,7 @@ ServerEvents.recipes((event) => {
 
         gtr.assembler(`gtlcore:${tierName}_1048576a_wireless_laser_source_hatch`)
             .itemInputs(`gtlcore:${tierName}_1048576a_laser_source_hatch`,
-                `16x gtlcore:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "2x gtceu:active_transformer",
                 "4x gtceu:superconducting_coil",
                 "2x gtceu:high_power_casing",
@@ -3001,7 +3126,7 @@ ServerEvents.recipes((event) => {
 
         gtr.assembler(`gtlcore:${tierName}_4194304a_wireless_laser_target_hatch`)
             .itemInputs(`gtlcore:${tierName}_4194304a_laser_target_hatch`,
-                `16x gtlcore:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "2x gtceu:active_transformer",
                 "8x gtceu:superconducting_coil",
                 "2x gtceu:high_power_casing",
@@ -3015,7 +3140,7 @@ ServerEvents.recipes((event) => {
 
         gtr.assembler(`gtlcore:${tierName}_4194304a_wireless_laser_source_hatch`)
             .itemInputs(`gtlcore:${tierName}_4194304a_laser_source_hatch`,
-                `16x gtlcore:${tierName}_4a_wireless_energy_receive_cover`,
+                `16x gtmthings:${tierName}_4a_wireless_energy_receive_cover`,
                 "2x gtceu:active_transformer",
                 "8x gtceu:superconducting_coil",
                 "2x gtceu:high_power_casing",
@@ -3131,7 +3256,7 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(400)
 
-    gtr.mass_fabricator("gtceu:uu_matter")
+    gtr.mass_fabricator("gtlcore:uu_matter")
         .itemInputs("ae2:matter_ball")
         .inputFluids("gtceu:uu_amplifier 10")
         .outputFluids("gtceu:uu_matter 10")
@@ -3308,112 +3433,112 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(1000)
 
-    gtr.magic_manufacturer("gtceu:mana_0")
+    gtr.magic_manufacturer("gtlcore:mana_0")
         .notConsumable("gtceu:uev_field_generator")
         .circuit(1)
         .outputFluids("gtceu:mana 100")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(20)
 
-    gtr.magic_manufacturer("gtceu:mana_1")
+    gtr.magic_manufacturer("gtlcore:mana_1")
         .notConsumable("gtceu:uiv_field_generator")
         .circuit(1)
         .outputFluids("gtceu:mana 1000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(20)
 
-    gtr.magic_manufacturer("gtceu:mana_2")
+    gtr.magic_manufacturer("gtlcore:mana_2")
         .notConsumable("gtceu:uxv_field_generator")
         .circuit(1)
         .outputFluids("gtceu:mana 10000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(20)
 
-    gtr.magic_manufacturer("gtceu:mana_3")
+    gtr.magic_manufacturer("gtlcore:mana_3")
         .notConsumable("gtceu:opv_field_generator")
         .circuit(1)
         .outputFluids("gtceu:mana 100000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(20)
 
-    gtr.magic_manufacturer("gtceu:mana_4")
+    gtr.magic_manufacturer("gtlcore:mana_4")
         .notConsumable("4x gtceu:uev_field_generator")
         .circuit(2)
         .outputFluids("gtceu:mana 400")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(40)
 
-    gtr.magic_manufacturer("gtceu:mana_5")
+    gtr.magic_manufacturer("gtlcore:mana_5")
         .notConsumable("4x gtceu:uiv_field_generator")
         .circuit(2)
         .outputFluids("gtceu:mana 4000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(40)
 
-    gtr.magic_manufacturer("gtceu:mana_6")
+    gtr.magic_manufacturer("gtlcore:mana_6")
         .notConsumable("4x gtceu:uxv_field_generator")
         .circuit(2)
         .outputFluids("gtceu:mana 40000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(40)
 
-    gtr.magic_manufacturer("gtceu:mana_7")
+    gtr.magic_manufacturer("gtlcore:mana_7")
         .notConsumable("4x gtceu:opv_field_generator")
         .circuit(2)
         .outputFluids("gtceu:mana 400000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(40)
 
-    gtr.magic_manufacturer("gtceu:mana_8")
+    gtr.magic_manufacturer("gtlcore:mana_8")
         .notConsumable("16x gtceu:uev_field_generator")
         .circuit(3)
         .outputFluids("gtceu:mana 1600")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(80)
 
-    gtr.magic_manufacturer("gtceu:mana_9")
+    gtr.magic_manufacturer("gtlcore:mana_9")
         .notConsumable("16x gtceu:uiv_field_generator")
         .circuit(3)
         .outputFluids("gtceu:mana 16000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(80)
 
-    gtr.magic_manufacturer("gtceu:mana_10")
+    gtr.magic_manufacturer("gtlcore:mana_10")
         .notConsumable("16x gtceu:uxv_field_generator")
         .circuit(3)
         .outputFluids("gtceu:mana 160000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(80)
 
-    gtr.magic_manufacturer("gtceu:mana_11")
+    gtr.magic_manufacturer("gtlcore:mana_11")
         .notConsumable("16x gtceu:opv_field_generator")
         .circuit(3)
         .outputFluids("gtceu:mana 1600000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(80)
 
-    gtr.magic_manufacturer("gtceu:mana_12")
+    gtr.magic_manufacturer("gtlcore:mana_12")
         .notConsumable("64x gtceu:uev_field_generator")
         .circuit(4)
         .outputFluids("gtceu:mana 6400")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(160)
 
-    gtr.magic_manufacturer("gtceu:mana_13")
+    gtr.magic_manufacturer("gtlcore:mana_13")
         .notConsumable("64x gtceu:uiv_field_generator")
         .circuit(4)
         .outputFluids("gtceu:mana 64000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(160)
 
-    gtr.magic_manufacturer("gtceu:mana_14")
+    gtr.magic_manufacturer("gtlcore:mana_14")
         .notConsumable("64x gtceu:uxv_field_generator")
         .circuit(4)
         .outputFluids("gtceu:mana 640000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(160)
 
-    gtr.magic_manufacturer("gtceu:mana_15")
+    gtr.magic_manufacturer("gtlcore:mana_15")
         .notConsumable("64x gtceu:opv_field_generator")
         .circuit(4)
         .outputFluids("gtceu:mana 6400000")
@@ -3469,7 +3594,7 @@ ServerEvents.recipes((event) => {
         .duration(20)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.sps_crafting("gtceu:echoite_plasma")
+    gtr.sps_crafting("gtlcore:echoite_plasma")
         .itemInputs("16x gtceu:exquisite_echo_shard_gem", "gtlcore:rhenium_plasma_containment_cell")
         .inputFluids("gtceu:mana 16000", "gtceu:enderium 1152", "gtceu:infuscolium 1152")
         .outputFluids("gtceu:echoite_plasma 2304")
@@ -3477,69 +3602,69 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(400)
 
-    gtr.sps_crafting("gtceu:bedrock_dust")
+    gtr.sps_crafting("gtlcore:bedrock_dust")
         .itemInputs("64x gtceu:compressed_stone_dust", "64x gtceu:compressed_stone_dust")
         .inputFluids("gtceu:mana 100000", "gtceu:thulium 9216", "gtceu:copernicium 9216")
         .itemOutputs("gtceu:bedrock_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1200)
 
-    gtr.bedrock_drilling_rig("gtceu:bedrock_dust_1")
+    gtr.bedrock_drilling_rig("gtlcore:bedrock_dust_1")
         .chancedInput("gtlcore:bedrock_drill", 10, 0)
         .itemOutputs("gtceu:bedrock_dust")
         .EUt(GTValues.VA[GTValues.UEV])
         .circuit(1)
         .duration(200)
 
-    gtr.bedrock_drilling_rig("gtceu:bedrock_dust_2")
+    gtr.bedrock_drilling_rig("gtlcore:bedrock_dust_2")
         .chancedInput("4x gtlcore:bedrock_drill", 10, 0)
         .itemOutputs("4x gtceu:bedrock_dust")
         .EUt(GTValues.VA[GTValues.UEV])
         .circuit(2)
         .duration(400)
 
-    gtr.bedrock_drilling_rig("gtceu:bedrock_dust_3")
+    gtr.bedrock_drilling_rig("gtlcore:bedrock_dust_3")
         .chancedInput("16x gtlcore:bedrock_drill", 10, 0)
         .itemOutputs("16x gtceu:bedrock_dust")
         .EUt(GTValues.VA[GTValues.UEV])
         .circuit(3)
         .duration(800)
 
-    gtr.bedrock_drilling_rig("gtceu:bedrock_dust_4")
+    gtr.bedrock_drilling_rig("gtlcore:bedrock_dust_4")
         .chancedInput("64x gtlcore:bedrock_drill", 10, 0)
         .itemOutputs("64x gtceu:bedrock_dust")
         .EUt(GTValues.VA[GTValues.UEV])
         .circuit(4)
         .duration(1600)
 
-    gtr.vacuum_freezer("gtceu:liquid_hydrogen")
+    gtr.vacuum_freezer("gtlcore:liquid_hydrogen")
         .inputFluids("gtceu:hydrogen 1000")
         .outputFluids("gtceu:liquid_hydrogen 1000")
         .EUt(7680)
         .duration(240)
 
-    gtr.matter_fabricator("gtceu:uu_amplifier")
+    gtr.matter_fabricator("gtlcore:uu_amplifier")
         .itemInputs("gtlcore:scrap")
         .circuit(1)
         .outputFluids("gtceu:uu_amplifier 1")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(200)
 
-    gtr.matter_fabricator("gtceu:uu_amplifier_a")
+    gtr.matter_fabricator("gtlcore:uu_amplifier_a")
         .itemInputs("gtlcore:scrap_box")
         .circuit(1)
         .outputFluids("gtceu:uu_amplifier 9")
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(200)
 
-    gtr.matter_fabricator("gtceu:uu_amplifier_1")
+    gtr.matter_fabricator("gtlcore:uu_amplifier_1")
         .itemInputs("gtlcore:scrap")
         .circuit(2)
         .itemOutputs("64x ae2:matter_ball")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(1)
 
-    gtr.matter_fabricator("gtceu:uu_amplifier_2")
+    gtr.matter_fabricator("gtlcore:uu_amplifier_2")
         .itemInputs("gtlcore:scrap_box")
         .circuit(2)
         .itemOutputs("576x ae2:matter_ball")
@@ -3561,14 +3686,14 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(100)
 
-    gtr.fluid_solidifier("gtceu:degenerate_rhenium_plate")
+    gtr.fluid_solidifier("gtlcore:degenerate_rhenium_plate")
         .notConsumable("gtceu:plate_casting_mold")
         .inputFluids("gtceu:liquid_degenerate_rhenium 144")
         .itemOutputs("gtceu:degenerate_rhenium_plate")
         .EUt(7)
         .duration(400)
 
-    gtr.macerator("gtceu:degenerate_rhenium_dust")
+    gtr.macerator("gtlcore:degenerate_rhenium_dust")
         .itemInputs("gtceu:degenerate_rhenium_plate")
         .itemOutputs("gtceu:degenerate_rhenium_dust")
         .EUt(GTValues.VA[GTValues.UIV])
@@ -3717,7 +3842,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
 
-    gtr.stellar_forge("gtceu:exciteddtec")
+    gtr.stellar_forge("gtlcore:exciteddtec")
         .itemInputs("gtlcore:quantum_chromodynamic_charge")
         .inputFluids("gtceu:dimensionallytranscendentexoticcatalyst 10000")
         .outputFluids("gtceu:exciteddtec 10000")
@@ -3822,7 +3947,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.V[GTValues.OpV])
         .duration(800)
 
-    gtr.compressor("gtceu:rubber_plate")
+    gtr.compressor("gtlcore:rubber_plate")
         .itemInputs("2x gtceu:sticky_resin")
         .itemOutputs("gtceu:rubber_plate")
         .EUt(2)
@@ -3997,7 +4122,7 @@ ServerEvents.recipes((event) => {
         .duration(130)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distillery("gtceu:fluoro_benzene")
+    gtr.distillery("gtlcore:fluoro_benzene")
         .inputFluids("gtceu:benzenediazonium_tetrafluoroborate 1000")
         .outputFluids("gtceu:fluoro_benzene 1000")
         .EUt(122880)
@@ -4069,7 +4194,7 @@ ServerEvents.recipes((event) => {
         .EUt(30)
         .duration(600)
 
-    gtr.distillery("gtceu:enriched_potassium_iodide_slurry")
+    gtr.distillery("gtlcore:enriched_potassium_iodide_slurry")
         .inputFluids("gtceu:kelp_slurry 1000")
         .outputFluids("gtceu:enriched_potassium_iodide_slurry 100")
         .EUt(30)
@@ -4088,7 +4213,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     //germanium
-    gtr.extractor("gtceu:tannic")
+    gtr.extractor("gtlcore:tannic")
         .itemInputs("minecraft:nether_wart_block")
         .outputFluids("gtceu:tannic 50")
         .EUt(30)
@@ -4107,7 +4232,7 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(200)
 
-    gtr.arc_furnace("gtceu:germanium_ash_dust")
+    gtr.arc_furnace("gtlcore:germanium_ash_dust")
         .itemInputs("2x gtceu:germanium_containing_precipitate_dust")
         .itemOutputs("gtceu:germanium_ash_dust")
         .EUt(30)
@@ -4120,7 +4245,7 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(200)
 
-    gtr.dehydrator("gtceu:germanium_dioxide_dust")
+    gtr.dehydrator("gtlcore:germanium_dioxide_dust")
         .inputFluids("gtceu:germanium_tetrachloride_solution 1000", "gtceu:hydrogen 4000")
         .itemOutputs("3x gtceu:germanium_dioxide_dust")
         .outputFluids("gtceu:hydrochloric_acid 4000")
@@ -4149,7 +4274,7 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(150)
 
-    gtr.dissolution_treatment("gtceu:rhenium_sulfuric_solution")
+    gtr.dissolution_treatment("gtlcore:rhenium_sulfuric_solution")
         .inputFluids("gtceu:molybdenum_flue 3000")
         .inputFluids("minecraft:water 250")
         .outputFluids("gtceu:rhenium_sulfuric_solution 3000")
@@ -4275,7 +4400,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.HV])
         .duration(200)
 
-    gtr.dehydrator("gtceu:boron_trioxide_dust")
+    gtr.dehydrator("gtlcore:boron_trioxide_dust")
         .inputFluids("gtceu:boric_acide 2000")
         .itemOutputs("5x gtceu:boron_trioxide_dust")
         .EUt(GTValues.VA[GTValues.HV])
@@ -4503,7 +4628,7 @@ ServerEvents.recipes((event) => {
         .duration(160)
 
     //rare_earth
-    gtr.dissolution_treatment("gtceu:rare_earth_hydroxides")
+    gtr.dissolution_treatment("gtlcore:rare_earth_hydroxides")
         .itemInputs("gtceu:rare_earth_dust", "3x gtceu:sodium_hydroxide_dust")
         .inputFluids("gtceu:phosphoric_acid 100")
         .inputFluids("minecraft:water 900")
@@ -4518,7 +4643,7 @@ ServerEvents.recipes((event) => {
         .EUt(30)
         .duration(120)
 
-    gtr.digestion_treatment("gtceu:rare_earth_oxide_dust")
+    gtr.digestion_treatment("gtlcore:rare_earth_oxide_dust")
         .inputFluids("gtceu:rare_earth_chlorides 1000")
         .itemInputs("3x gtceu:sodium_oxide_dust")
         .outputFluids("gtceu:salt_water 1000")
@@ -4527,7 +4652,7 @@ ServerEvents.recipes((event) => {
         .duration(800)
         .blastFurnaceTemp(2580)
 
-    gtr.digestion_treatment("gtceu:rare_earth_metal_dust")
+    gtr.digestion_treatment("gtlcore:rare_earth_metal_dust")
         .itemInputs("gtceu:rare_earth_oxide_dust")
         .inputFluids("gtceu:hydrogen 1000")
         .itemOutputs("gtceu:rare_earth_metal_dust")
@@ -4567,14 +4692,14 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(400)
 
-    gtr.rare_earth_centrifugal("gtceu:raw_adamantine")
+    gtr.rare_earth_centrifugal("gtlcore:raw_adamantine")
         .itemInputs("gtceu:naquadah_contain_rare_earth_dust")
         .chancedOutput("gtceu:raw_adamantine_compounds", 5000, 1000)
         .itemOutputs("6x gtceu:enriched_naquadah_sulfate_dust", "6x gtceu:naquadria_sulfate_dust")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(200)
 
-    gtr.lightning_processor("gtceu:naquadah_contain_rare_earth_fluoride_dust")
+    gtr.lightning_processor("gtlcore:naquadah_contain_rare_earth_fluoride_dust")
         .inputFluids("gtceu:rare_earth_chlorides 6000", "gtceu:acidic_enriched_naquadah_solution 3000", "gtceu:acidic_naquadria_solution 3000", "gtceu:hydrofluoric_acid 2000", "gtceu:enriched_naquadah_front 1000")
         .outputFluids("gtceu:hydrochloric_acid 6000")
         .itemInputs("gtceu:alunite_dust")
@@ -4582,7 +4707,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .duration(400)
 
-    gtr.digestion_treatment("gtceu:naquadah_contain_rare_earth_dust")
+    gtr.digestion_treatment("gtlcore:naquadah_contain_rare_earth_dust")
         .itemInputs("gtceu:naquadah_contain_rare_earth_fluoride_dust")
         .inputFluids("gtceu:hydrogen 2000")
         .outputFluids("gtceu:hydrofluoric_acid 2000")
@@ -4600,7 +4725,7 @@ ServerEvents.recipes((event) => {
         .duration(400)
         .blastFurnaceTemp(16200)
 
-    gtr.dissolution_treatment("gtceu:bedrock_soot_solution")
+    gtr.dissolution_treatment("gtlcore:bedrock_soot_solution")
         .inputFluids("gtceu:bedrock_smoke 1000")
         .inputFluids("gtceu:distilled_water 1000")
         .itemInputs("gtceu:naquadah_dust")
@@ -4692,7 +4817,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .duration(200)
 
-    gtr.ore_washer("gtceu:clean_inert_residues_dust")
+    gtr.ore_washer("gtlcore:clean_inert_residues_dust")
         .itemInputs("gtceu:inert_residues_dust")
         .inputFluids("gtceu:aqua_regia 1000")
         .itemOutputs("gtceu:clean_inert_residues_dust")
@@ -4706,7 +4831,7 @@ ServerEvents.recipes((event) => {
         .EUt(3000)
         .duration(400)
 
-    gtr.fermenter("gtceu:taranium_dust")
+    gtr.fermenter("gtlcore:taranium_dust")
         .inputFluids("gtceu:taranium_rich_liquid_helium_4 1000")
         .itemInputs("gtceu:activated_carbon_dust")
         .itemOutputs("gtceu:taranium_dust")
@@ -4732,7 +4857,7 @@ ServerEvents.recipes((event) => {
         .addData("filter_casing", 3)
         .addData("radioactivity", 440)
 
-    gtr.qft("gtceu:radox")
+    gtr.qft("gtlcore:radox")
         .inputFluids("gtceu:radox_gas 21600", "gtceu:oxygen_plasma 75000", "gtceu:titanium_50_tetrachloride 1000")
         .itemInputs("16x gtceu:molybdenum_trioxide_dust",
             "16x gtceu:chromium_trioxide_dust",
@@ -4756,14 +4881,14 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(8000)
 
-    gtr.distillation_tower("gtceu:radox_gas")
+    gtr.distillation_tower("gtlcore:radox_gas")
         .inputFluids("gtceu:crackedradox 1000")
         .outputFluids("gtceu:radox_gas 100", "gtceu:lightradox 200")
         .EUt(GTValues.VA[GTValues.UV])
         .itemOutputs("gtceu:ash_dust")
         .duration(600)
 
-    gtr.distillation_tower("gtceu:dilutedxenoxene")
+    gtr.distillation_tower("gtlcore:dilutedxenoxene")
         .inputFluids("gtceu:dilutedxenoxene 1000")
         .outputFluids("gtceu:xenoxene 250", "gtceu:lightradox 300")
         .itemOutputs("gtceu:ash_dust")
@@ -4791,7 +4916,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .duration(200)
 
-    gtr.distillation_tower("gtceu:rawradox")
+    gtr.distillation_tower("gtlcore:rawradox")
         .inputFluids("gtceu:rawradox 5000")
         .outputFluids("gtceu:oil_heavy 600", "gtceu:oil 300", "gtceu:creosote 1000", "minecraft:water 1400", "gtceu:bacteria 50", "gtceu:fermented_biomass 50", "gtceu:superheavyradox 100", "gtceu:heavyradox 100", "gtceu:dilutedxenoxene 100", "gtceu:lightradox 100", "gtceu:superlightradox 100")
         .itemOutputs("5x gtceu:ash_dust")
@@ -4806,14 +4931,14 @@ ServerEvents.recipes((event) => {
         .duration(800)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.fluid_solidifier("gtceu:xenoxene_crystal_dust")
+    gtr.fluid_solidifier("gtlcore:xenoxene_crystal_dust")
         .inputFluids("gtceu:xenoxene_mixture 1000")
         .itemInputs("3x gtceu:perlite_dust")
         .itemOutputs("3x gtceu:xenoxene_crystal_dust")
         .EUt(1920)
         .duration(200)
 
-    gtr.electrolyzer("gtceu:purified_xenoxene")
+    gtr.electrolyzer("gtlcore:purified_xenoxene")
         .itemInputs("4x gtceu:xenoxene_crystal_dust")
         .inputFluids("gtceu:oil 1000")
         .outputFluids("gtceu:purified_xenoxene 1000", "minecraft:water 1000")
@@ -4834,7 +4959,7 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(300)
 
-    gtr.pyrolyse_oven("gtceu:rawradox")
+    gtr.pyrolyse_oven("gtlcore:rawradox")
         .inputFluids("gtceu:xenoxene 1000")
         .itemInputs("16x kubejs:variation_wood")
         .outputFluids("gtceu:rawradox 1000")
@@ -4843,7 +4968,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .duration(900)
 
-    gtr.pyrolyse_oven("gtceu:rawradox1")
+    gtr.pyrolyse_oven("gtlcore:rawradox1")
         .inputFluids("gtceu:enriched_xenoxene 1000")
         .itemInputs("16x kubejs:variation_wood")
         .outputFluids("gtceu:rawradox 10000")
@@ -4852,7 +4977,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(600)
 
-    gtr.incubator("gtceu:xenoxene")
+    gtr.incubator("gtlcore:xenoxene")
         .itemInputs("16x gtceu:antimony_trioxide_dust", "16x gtceu:osmium_dust")
         .inputFluids("gtceu:oil 20000")
         .outputFluids("gtceu:xenoxene 20000")
@@ -4892,7 +5017,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(21600)
         .duration(200)
 
-    gtr.vacuum_freezer("gtceu:draconium_ingot")
+    gtr.vacuum_freezer("gtlcore:draconium_ingot")
         .itemInputs("gtceu:hot_draconium_ingot")
         .inputFluids("gtceu:liquid_helium 1000")
         .itemOutputs("gtceu:draconium_ingot")
@@ -4915,7 +5040,7 @@ ServerEvents.recipes((event) => {
         .duration(400)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.extractor("gtceu:dragon_breath")
+    gtr.extractor("gtlcore:dragon_breath")
         .itemInputs("gtlcore:infused_breath")
         .outputFluids("gtceu:dragon_breath 1000")
         .itemOutputs("minecraft:glass_bottle")
@@ -4923,7 +5048,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.distillery("gtceu:enriched_dragon_breath")
+    gtr.distillery("gtlcore:enriched_dragon_breath")
         .inputFluids("gtceu:dragon_breath 10")
         .outputFluids("gtceu:enriched_dragon_breath 5")
         .EUt(120)
@@ -5132,7 +5257,7 @@ ServerEvents.recipes((event) => {
         .duration(600)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distillation_tower("gtceu:diphenylmethane_diisocyanate_dust")
+    gtr.distillation_tower("gtlcore:diphenylmethane_diisocyanate_dust")
         .inputFluids("gtceu:diphenylmethanediisocyanatemixture 1000")
         .itemOutputs("29x gtceu:diphenylmethane_diisocyanate_dust")
         .outputFluids("gtceu:hydrochloric_acid 5000")
@@ -5193,7 +5318,7 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(60)
 
-    gtr.dehydrator("gtceu:zeolite_sieving_pellets_dust")
+    gtr.dehydrator("gtlcore:zeolite_sieving_pellets_dust")
         .itemInputs("gtceu:wet_zeolite_sieving_pellets_dust")
         .itemOutputs("gtceu:zeolite_sieving_pellets_dust")
         .EUt(120)
@@ -5259,7 +5384,7 @@ ServerEvents.recipes((event) => {
         .duration(100)
 
     //starmetal
-    gtr.sps_crafting("gtceu:liquid_starlight")
+    gtr.sps_crafting("gtlcore:liquid_starlight")
         .inputFluids("gtceu:mana 10000", "gtceu:starlight 10000")
         .itemInputs("64x minecraft:blue_ice", "64x minecraft:blue_ice")
         .outputFluids("gtceu:liquid_starlight 10000")
@@ -5292,14 +5417,14 @@ ServerEvents.recipes((event) => {
         .duration(350)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.stellar_forge("gtceu:cosmic_mesh_plasma")
+    gtr.stellar_forge("gtlcore:cosmic_mesh_plasma")
         .itemInputs("gtlcore:quantum_chromodynamic_charge", "gtlcore:highly_dense_polymer_plate")
         .outputFluids("gtceu:cosmic_mesh_plasma 1000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
         .addData("SCTier", 3)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:chaos_plasma")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:chaos_plasma")
         .itemInputs("gtlcore:chaos_shard")
         .inputFluids("gtceu:dimensionallytranscendentresplendentcatalyst 1000", "gtceu:cosmic_mesh_plasma 1000")
         .outputFluids("gtceu:chaos_plasma 1000", "gtceu:dimensionallytranscendentresidue 100")
@@ -5315,7 +5440,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(20)
 
-    gtr.plasma_condenser("gtceu:cosmic_mesh")
+    gtr.plasma_condenser("gtlcore:cosmic_mesh")
         .itemInputs("gtlcore:cosmic_mesh_containment_unit")
         .inputFluids("gtceu:liquid_helium 100000")
         .itemOutputs("gtlcore:time_dilation_containment_unit")
@@ -5359,13 +5484,13 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(160)
 
-    gtr.distillation_tower("gtceu:naquadah_fuel")
+    gtr.distillation_tower("gtlcore:naquadah_fuel")
         .inputFluids("gtceu:fluorine_cracked_aquadah 1000")
         .outputFluids("gtceu:naquadah_fuel 800", "gtceu:nitric_acid 200", "gtceu:enriched_naquadah_waste 100", "gtceu:ammonia 200", "gtceu:fluorine 200")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(600)
 
-    gtr.distillation_tower("gtceu:enriched_naquadah_fuel")
+    gtr.distillation_tower("gtlcore:enriched_naquadah_fuel")
         .inputFluids("gtceu:radon_cracked_enriched_aquadah 1000")
         .outputFluids("gtceu:enriched_naquadah_fuel 800", "gtceu:naquadria_waste 100", "gtceu:radon 200", "gtceu:fluorine 200")
         .EUt(GTValues.VA[GTValues.LuV])
@@ -5386,7 +5511,7 @@ ServerEvents.recipes((event) => {
         .duration(4800)
         .blastFurnaceTemp(32000)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:transcendentmetal")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:transcendentmetal")
         .notConsumable("gtlcore:spacetime_catalyst")
         .itemInputs("gtlcore:hypercube")
         .inputFluids("gtceu:spacetime 100", "gtceu:tennessine 144")
@@ -6491,7 +6616,7 @@ ServerEvents.recipes((event) => {
         .duration(1200)
         .addData("radioactivity", 180)
 
-    gtr.incubator("minecraft:cow_spawn_egg")
+    gtr.incubator("gtlcore:cow_spawn_egg")
         .itemInputs("4x minecraft:beef", "4x minecraft:bone", "4x minecraft:leather")
         .inputFluids("gtceu:milk 1000")
         .itemOutputs("minecraft:cow_spawn_egg")
@@ -6499,14 +6624,14 @@ ServerEvents.recipes((event) => {
         .duration(1200)
         .addData("radioactivity", 120)
 
-    gtr.extractor("gtceu:milk")
+    gtr.extractor("gtlcore:milk")
         .itemInputs("minecraft:milk_bucket")
         .itemOutputs("minecraft:bucket")
         .outputFluids("gtceu:milk 1000")
         .EUt(16)
         .duration(60)
 
-    gtr.extractor("gtceu:milk1")
+    gtr.extractor("gtlcore:milk1")
         .notConsumable("minecraft:cow_spawn_egg")
         .outputFluids("gtceu:milk 100")
         .EUt(30)
@@ -7198,14 +7323,6 @@ ServerEvents.recipes((event) => {
         })
     })
 
-    event.shaped("gtlcore:greenhouse", ["GGG", "CHC", "PUP"], {
-        G: "gtceu:tempered_glass",
-        C: "#gtceu:circuits/mv",
-        H: "gtceu:mv_machine_hull",
-        P: "gtceu:mv_electric_piston",
-        U: "gtceu:mv_electric_pump",
-    })
-
     const trees = [
         ["minecraft:oak_sapling", "minecraft:oak_log"],
         ["minecraft:spruce_sapling", "minecraft:spruce_log"],
@@ -7297,32 +7414,24 @@ ServerEvents.recipes((event) => {
             .EUt(60)
             .circuit(2)
     })
-    gtr.greenhouse("rubber_wood")
+    gtr.greenhouse("gtlcore:rubber_wood")
         .notConsumable("gtceu:rubber_sapling")
         .inputFluids("water 1000")
-        .itemOutputs(
-            "16x gtceu:rubber_log",
-            "3x gtceu:rubber_sapling",
-            "4x gtceu:sticky_resin"
-        )
+        .itemOutputs("16x gtceu:rubber_log", "3x gtceu:rubber_sapling", "4x gtceu:sticky_resin")
         .duration(1200)
         .EUt(480)
         .circuit(1)
 
-    gtr.greenhouse("rubber_wood_fertiliser")
+    gtr.greenhouse("gtlcore:rubber_wood_fertiliser")
         .notConsumable("gtceu:rubber_sapling")
         .itemInputs("4x gtceu:fertilizer")
         .inputFluids("water 1000")
-        .itemOutputs(
-            "32x gtceu:rubber_log",
-            "6x gtceu:rubber_sapling",
-            "8x gtceu:sticky_resin"
-        )
+        .itemOutputs("32x gtceu:rubber_log", "6x gtceu:rubber_sapling", "8x gtceu:sticky_resin")
         .duration(400)
         .EUt(960)
         .circuit(2)
 
-    gtr.greenhouse("barnarda_log")
+    gtr.greenhouse("gtlcore:barnarda_log")
         .notConsumable("64x kubejs:barnarda_leaves")
         .itemInputs("4x gtceu:fertilizer")
         .inputFluids("gtceu:unknowwater 1000")
@@ -7331,7 +7440,7 @@ ServerEvents.recipes((event) => {
         .EUt(30)
         .circuit(1)
 
-    gtr.greenhouse("barnarda_log_fertiliser")
+    gtr.greenhouse("gtlcore:barnarda_log_fertiliser")
         .notConsumable("64x kubejs:barnarda_leaves")
         .itemInputs("16x gtceu:fertilizer")
         .inputFluids("gtceu:unknowwater 1000")
@@ -7340,7 +7449,7 @@ ServerEvents.recipes((event) => {
         .EUt(60)
         .circuit(2)
 
-    gtr.incubator("minecraft:chorus_fruit")
+    gtr.incubator("gtlcore:chorus_fruit")
         .notConsumable("64x minecraft:chorus_flower")
         .itemOutputs("64x minecraft:chorus_fruit")
         .inputFluids("gtceu:unknowwater 1000", "gtceu:ender_pearl 100")
@@ -7348,7 +7457,7 @@ ServerEvents.recipes((event) => {
         .duration(1200)
         .addData("radioactivity", 230)
 
-    gtr.incubator("gtceu:echo")
+    gtr.incubator("gtlcore:echo")
         .notConsumable("64x minecraft:sculk_shrieker")
         .notConsumable("64x minecraft:sculk_sensor")
         .itemInputs("64x minecraft:dirt", "64x minecraft:sculk_vein")
@@ -7360,7 +7469,7 @@ ServerEvents.recipes((event) => {
         .addData("filter_casing", 3)
         .addData("radioactivity", 380)
 
-    gtr.canner("minecraft:sculk")
+    gtr.canner("gtlcore:sculk")
         .itemInputs("minecraft:dirt", "minecraft:sculk_vein")
         .inputFluids("gtceu:xpjuice 10")
         .itemOutputs("minecraft:sculk")
@@ -7377,7 +7486,7 @@ ServerEvents.recipes((event) => {
         .duration(800)
         .blastFurnaceTemp(28000)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:crystalmatrix_plasma")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:crystalmatrix_plasma")
         .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("avaritia:crystal_matrix")
         .inputFluids("gtceu:uu_matter 1000000", "gtceu:free_proton_gas 20000")
@@ -7386,7 +7495,7 @@ ServerEvents.recipes((event) => {
         .duration(800)
         .blastFurnaceTemp(28000)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:infinity")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:infinity")
         .notConsumable("gtlcore:spacetime_catalyst")
         .inputFluids("gtceu:crystalmatrix_plasma 10000", "gtceu:cosmicneutronium 5000")
         .outputFluids("gtceu:infinity 1000", "gtceu:dimensionallytranscendentresidue 100")
@@ -7394,7 +7503,7 @@ ServerEvents.recipes((event) => {
         .duration(1600)
         .blastFurnaceTemp(32000)
 
-    gtr.stellar_forge("gtceu:eternity_dust")
+    gtr.stellar_forge("gtlcore:eternity_dust")
         .itemInputs("4x gtlcore:quantum_chromodynamic_charge", "avaritia:eternal_singularity")
         .inputFluids("gtceu:primordialmatter 1000", "gtceu:dimensionallytranscendentresidue 1000")
         .itemOutputs("gtceu:eternity_dust")
@@ -7403,7 +7512,7 @@ ServerEvents.recipes((event) => {
         .duration(800)
         .addData("SCTier", 3)
 
-    gtr.stellar_forge("gtceu:temporalfluid")
+    gtr.stellar_forge("gtlcore:temporalfluid")
         .itemInputs("4x gtlcore:quantum_chromodynamic_charge", "gtlcore:hypercube")
         .inputFluids("gtceu:spacetime 1000", "gtceu:dimensionallytranscendentresidue 100")
         .outputFluids("gtceu:temporalfluid 500", "gtceu:spatialfluid 500")
@@ -7411,14 +7520,14 @@ ServerEvents.recipes((event) => {
         .duration(800)
         .addData("SCTier", 3)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:dimensionallytranscendentresidue")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:dimensionallytranscendentresidue")
         .inputFluids("gtceu:dimensionallytranscendentcrudecatalyst 100", "gtceu:raw_star_matter_plasma 100")
         .outputFluids("gtceu:dimensionallytranscendentresidue 100")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(400)
         .blastFurnaceTemp(36000)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:spacetime_ingot")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:spacetime_ingot")
         .notConsumable("64x kubejs:ingot_field_shape")
         .notConsumable("64x gtlcore:spacetimebendingcore")
         .inputFluids("gtceu:spacetime 1000", "gtceu:raw_star_matter_plasma 1000")
@@ -7428,7 +7537,7 @@ ServerEvents.recipes((event) => {
         .duration(6400)
         .blastFurnaceTemp(62000)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:spacetime")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:spacetime")
         .notConsumable("gtlcore:spacetime_catalyst")
         .inputFluids("gtceu:infinity 100", "gtceu:hypogen 100")
         .outputFluids("gtceu:spacetime 200", "gtceu:dimensionallytranscendentresidue 100")
@@ -7436,7 +7545,7 @@ ServerEvents.recipes((event) => {
         .duration(1600)
         .blastFurnaceTemp(36000)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:magnetohydrodynamicallyconstrainedstarmatter")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:magnetohydrodynamicallyconstrainedstarmatter")
         .notConsumable("gtlcore:eternity_catalyst")
         .itemInputs("gtceu:eternity_nanoswarm")
         .chancedOutput("gtceu:contaminable_eternity_nanoswarm", 5000, 0)
@@ -7446,7 +7555,7 @@ ServerEvents.recipes((event) => {
         .duration(6400)
         .blastFurnaceTemp(81000)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:dense_neutron_plasma")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:dense_neutron_plasma")
         .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("gtlcore:neutron_plasma_containment_cell")
         .inputFluids("gtceu:heavy_quark_degenerate_matter_plasma 10000", "gtceu:periodicium 1000")
@@ -7456,7 +7565,7 @@ ServerEvents.recipes((event) => {
         .duration(800)
         .blastFurnaceTemp(26000)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:eternity")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:eternity")
         .notConsumable("gtlcore:eternity_catalyst")
         .itemInputs("avaritia:eternal_singularity")
         .inputFluids("gtceu:primordialmatter 1000", "gtceu:raw_star_matter_plasma 9000")
@@ -7465,7 +7574,7 @@ ServerEvents.recipes((event) => {
         .duration(4800)
         .blastFurnaceTemp(56000)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:rhugnor")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:rhugnor")
         .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("64x gtceu:energy_crystal")
         .inputFluids("gtceu:infinity 10000", "gtceu:quantum 10000")
@@ -7474,7 +7583,7 @@ ServerEvents.recipes((event) => {
         .duration(3600)
         .blastFurnaceTemp(36000)
 
-    gtr.dimensionally_transcendent_plasma_forge("gtceu:hypogen")
+    gtr.dimensionally_transcendent_plasma_forge("gtlcore:hypogen")
         .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("gtceu:quantumchromodynamically_confined_matter_block")
         .inputFluids("gtceu:rhugnor 10000", "gtceu:dragon_blood 10000")
@@ -7483,19 +7592,19 @@ ServerEvents.recipes((event) => {
         .duration(1200)
         .blastFurnaceTemp(26000)
 
-    gtr.macerator("gtceu:spacetime_dust")
+    gtr.macerator("gtlcore:spacetime_dust")
         .itemInputs("gtceu:spacetime_ingot")
         .itemOutputs("gtceu:spacetime_dust")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(400)
 
-    gtr.compressor("gtceu:spacetime_block")
+    gtr.compressor("gtlcore:spacetime_block")
         .itemInputs("9x gtceu:spacetime_ingot")
         .itemOutputs("gtceu:spacetime_block")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(3000)
 
-    gtr.qft("gtceu:spacetime_single_wire")
+    gtr.qft("gtlcore:spacetime_single_wire")
         .notConsumable("gtceu:spacetime_nanoswarm")
         .notConsumable("gtceu:transcendentmetal_nanoswarm")
         .itemInputs("gtceu:infinity_single_wire")
@@ -7504,7 +7613,7 @@ ServerEvents.recipes((event) => {
         .EUt(16 * GTValues.VA[GTValues.MAX])
         .duration(400)
 
-    gtr.qft("gtceu:spacetime_double_wire")
+    gtr.qft("gtlcore:spacetime_double_wire")
         .notConsumable("4x gtceu:spacetime_nanoswarm")
         .notConsumable("4x gtceu:transcendentmetal_nanoswarm")
         .itemInputs("2x gtceu:spacetime_single_wire")
@@ -7513,7 +7622,7 @@ ServerEvents.recipes((event) => {
         .EUt(16 * GTValues.VA[GTValues.MAX])
         .duration(800)
 
-    gtr.qft("gtceu:spacetime_quadruple_wire")
+    gtr.qft("gtlcore:spacetime_quadruple_wire")
         .notConsumable("8x gtceu:spacetime_nanoswarm")
         .notConsumable("8x gtceu:transcendentmetal_nanoswarm")
         .itemInputs("2x gtceu:spacetime_double_wire")
@@ -7522,7 +7631,7 @@ ServerEvents.recipes((event) => {
         .EUt(16 * GTValues.VA[GTValues.MAX])
         .duration(1600)
 
-    gtr.qft("gtceu:spacetime_octal_wire")
+    gtr.qft("gtlcore:spacetime_octal_wire")
         .notConsumable("16x gtceu:spacetime_nanoswarm")
         .notConsumable("16x gtceu:transcendentmetal_nanoswarm")
         .itemInputs("2x gtceu:spacetime_quadruple_wire")
@@ -7531,7 +7640,7 @@ ServerEvents.recipes((event) => {
         .EUt(16 * GTValues.VA[GTValues.MAX])
         .duration(3200)
 
-    gtr.qft("gtceu:spacetime_hex_wire")
+    gtr.qft("gtlcore:spacetime_hex_wire")
         .notConsumable("32x gtceu:spacetime_nanoswarm")
         .notConsumable("32x gtceu:transcendentmetal_nanoswarm")
         .itemInputs("2x gtceu:spacetime_octal_wire")
@@ -7542,7 +7651,7 @@ ServerEvents.recipes((event) => {
 
     const mcsms = [["ingot", 144], ["dust", 144], ["nugget", 16], ["rod", 72], ["plate", 144], ["foil", 36], ["block", 1296], ["frame", 288]]
     mcsms.forEach((mcsm) => {
-        gtr.sps_crafting("gtceu:magnetohydrodynamicallyconstrainedstarmatter" + mcsm[0])
+        gtr.sps_crafting("gtlcore:magnetohydrodynamicallyconstrainedstarmatter" + mcsm[0])
             .itemInputs("gtceu:eternity_" + mcsm[0], "gtlcore:solar_light_splitter")
             .inputFluids("gtceu:mana 10000", "gtceu:magnetohydrodynamicallyconstrainedstarmatter " + mcsm[1], "gtceu:dimensionallytranscendentresidue 1000")
             .itemOutputs("gtceu:magnetohydrodynamicallyconstrainedstarmatter_" + mcsm[0])
@@ -7550,21 +7659,21 @@ ServerEvents.recipes((event) => {
             .duration(200)
     })
 
-    gtr.sps_crafting("gtceu:double_magnetohydrodynamicallyconstrainedstarmatter_plate")
+    gtr.sps_crafting("gtlcore:double_magnetohydrodynamicallyconstrainedstarmatter_plate")
         .itemInputs("gtceu:double_eternity_plate", "gtlcore:solar_light_splitter")
         .inputFluids("gtceu:mana 10000", "gtceu:magnetohydrodynamicallyconstrainedstarmatter 288", "gtceu:dimensionallytranscendentresidue 1000")
         .itemOutputs("gtceu:double_magnetohydrodynamicallyconstrainedstarmatter_plate")
         .EUt(4 * GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.sps_crafting("gtceu:tiny_magnetohydrodynamicallyconstrainedstarmatter_dust")
+    gtr.sps_crafting("gtlcore:tiny_magnetohydrodynamicallyconstrainedstarmatter_dust")
         .itemInputs("gtceu:tiny_eternity_dust", "gtlcore:solar_light_splitter")
         .inputFluids("gtceu:mana 10000", "gtceu:magnetohydrodynamicallyconstrainedstarmatter 16", "gtceu:dimensionallytranscendentresidue 1000")
         .itemOutputs("gtceu:tiny_magnetohydrodynamicallyconstrainedstarmatter_dust")
         .EUt(4 * GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.sps_crafting("gtceu:small_magnetohydrodynamicallyconstrainedstarmatter_dust")
+    gtr.sps_crafting("gtlcore:small_magnetohydrodynamicallyconstrainedstarmatter_dust")
         .itemInputs("gtceu:small_eternity_dust", "gtlcore:solar_light_splitter")
         .inputFluids("gtceu:mana 10000", "gtceu:magnetohydrodynamicallyconstrainedstarmatter 36", "gtceu:dimensionallytranscendentresidue 1000")
         .itemOutputs("gtceu:small_magnetohydrodynamicallyconstrainedstarmatter_dust")
@@ -7665,7 +7774,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 1)
 
-    gtr.stellar_forge("gtceu:free_proton_gas")
+    gtr.stellar_forge("gtlcore:free_proton_gas")
         .itemInputs("gtlcore:naquadria_charge", "gtlcore:contained_high_density_protonic_matter")
         .outputFluids("gtceu:free_proton_gas 10000")
         .itemOutputs("gtlcore:time_dilation_containment_unit")
@@ -7673,7 +7782,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 1)
 
-    gtr.stellar_forge("gtceu:enderium_plasma")
+    gtr.stellar_forge("gtlcore:enderium_plasma")
         .inputFluids("gtceu:ender_eye 2304", "gtceu:lead 2304", "gtceu:bismuth 2304", "gtceu:platinum 1152", "gtceu:liquid_ender_air 100000")
         .itemInputs("gtlcore:naquadria_charge", "gtlcore:warped_ender_pearl")
         .outputFluids("gtceu:enderium_plasma 2304")
@@ -7681,7 +7790,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 1)
 
-    gtr.stellar_forge("gtceu:adamantium_plasma")
+    gtr.stellar_forge("gtlcore:adamantium_plasma")
         .inputFluids("gtceu:orichalcum 576", "gtceu:tin 1024", "gtceu:antimony 864", "gtceu:iron 1152", "gtceu:mercury 1000")
         .itemInputs("gtlcore:naquadria_charge", "24x gtceu:bloodstone_dust")
         .outputFluids("gtceu:adamantium_plasma 2304")
@@ -7689,14 +7798,14 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 1)
 
-    gtr.stellar_forge("gtceu:degenerate_rhenium_plasma")
+    gtr.stellar_forge("gtlcore:degenerate_rhenium_plasma")
         .itemInputs("gtlcore:naquadria_charge", "5x gtceu:double_rhenium_plate")
         .outputFluids("gtceu:degenerate_rhenium_plasma 10000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(200)
         .addData("SCTier", 1)
 
-    gtr.stellar_forge("gtceu:infuscolium_plasma")
+    gtr.stellar_forge("gtlcore:infuscolium_plasma")
         .inputFluids("gtceu:adamantine 2304", "gtceu:mana 10000")
         .itemInputs("gtlcore:naquadria_charge", "16x minecraft:end_crystal", "16x minecraft:popped_chorus_fruit")
         .outputFluids("gtceu:infuscolium_plasma 2304")
@@ -7704,7 +7813,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 1)
 
-    gtr.stellar_forge("gtceu:legendarium_plasma")
+    gtr.stellar_forge("gtlcore:legendarium_plasma")
         .inputFluids("gtceu:naquadriatictaranium 576", "gtceu:trinium 288", "gtceu:duranium 288", "gtceu:tritanium 288", "gtceu:orichalcum 288", "gtceu:mithril 288", "gtceu:adamantium 288", "gtceu:adamantine 288", "gtceu:vibranium 288")
         .itemInputs("gtlcore:leptonic_charge", "gtlcore:neutron_plasma_containment_cell")
         .outputFluids("gtceu:legendarium_plasma 2304")
@@ -7713,14 +7822,14 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 2)
 
-    gtr.stellar_forge("gtceu:quark_gluon_plasma")
+    gtr.stellar_forge("gtlcore:quark_gluon_plasma")
         .itemInputs("gtlcore:leptonic_charge", "10x gtceu:degenerate_rhenium_dust")
         .outputFluids("gtceu:quark_gluon_plasma 10000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
         .addData("SCTier", 2)
 
-    gtr.stellar_forge("gtceu:heavy_quark_degenerate_matter_plasma")
+    gtr.stellar_forge("gtlcore:heavy_quark_degenerate_matter_plasma")
         .inputFluids("gtceu:heavy_quark_enriched_mixture 1152", "gtceu:flerovium 144", "gtceu:oganesson 144", "gtceu:hassium 144", "gtceu:deuterium 1000")
         .itemInputs("gtlcore:leptonic_charge")
         .outputFluids("gtceu:heavy_quark_degenerate_matter_plasma 1152")
@@ -7735,7 +7844,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 2)
 
-    gtr.stellar_forge("gtceu:crystalmatrix_plasma")
+    gtr.stellar_forge("gtlcore:crystalmatrix_plasma")
         .itemInputs("gtlcore:leptonic_charge", "avaritia:crystal_matrix", "16x gtlcore:corporeal_matter")
         .inputFluids("gtceu:free_proton_gas 20000")
         .outputFluids("gtceu:crystalmatrix_plasma 1000")
@@ -7743,7 +7852,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 2)
 
-    gtr.stellar_forge("gtceu:starmetal_plasma")
+    gtr.stellar_forge("gtlcore:starmetal_plasma")
         .itemInputs("gtlcore:leptonic_charge", "10x gtlcore:resonating_gem")
         .inputFluids("gtceu:free_proton_gas 1000", "gtceu:free_electron_gas 1000")
         .outputFluids("gtceu:starmetal_plasma 1000")
@@ -7751,21 +7860,21 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 2)
 
-    gtr.stellar_forge("gtceu:high_energy_quark_gluon_plasma")
+    gtr.stellar_forge("gtlcore:high_energy_quark_gluon_plasma")
         .itemInputs("gtlcore:quantum_chromodynamic_charge", "10x gtceu:double_heavy_quark_degenerate_matter_plate")
         .outputFluids("gtceu:high_energy_quark_gluon_plasma 2000")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(200)
         .addData("SCTier", 2)
 
-    gtr.stellar_forge("gtceu:quantumchromodynamically_confined_matter_plasma")
+    gtr.stellar_forge("gtlcore:quantumchromodynamically_confined_matter_plasma")
         .itemInputs("gtlcore:quantum_chromodynamic_charge", "20x gtlcore:quantumchromodynamic_protective_plating")
         .outputFluids("gtceu:quantumchromodynamically_confined_matter_plasma 2000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(200)
         .addData("SCTier", 3)
 
-    gtr.stellar_forge("gtceu:dense_neutron_plasma")
+    gtr.stellar_forge("gtlcore:dense_neutron_plasma")
         .inputFluids("gtceu:periodicium 2736", "gtceu:gluons 6000", "gtceu:heavy_lepton_mixture 6000")
         .itemInputs("gtlcore:quantum_chromodynamic_charge", "5x gtceu:neutronium_block", "5x gtceu:heavy_quark_degenerate_matter_block")
         .outputFluids("gtceu:dense_neutron_plasma 6000")
@@ -7780,7 +7889,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 3)
 
-    gtr.stellar_forge("avaritia:infinity_ingot")
+    gtr.stellar_forge("gtlcore:infinity_ingot")
         .inputFluids("gtceu:crystalmatrix 2000", "gtceu:cosmicneutronium 1000")
         .itemInputs("gtlcore:quantum_chromodynamic_charge")
         .itemOutputs("gtceu:hot_infinity_ingot")
@@ -7833,7 +7942,7 @@ ServerEvents.recipes((event) => {
 
     const fluids = ["argon", "helium", "nickel", "iron", "nitrogen", "oxygen", "mithril", "orichalcum", "enderium", "adamantium", "infuscolium", "echoite", "vibranium", "taranium_rich_liquid_helium_4", "legendarium", "heavy_quark_degenerate_matter", "starmetal", "quantumchromodynamically_confined_matter", "astraltitanium", "celestialtungsten"]
     fluids.forEach((fluid) => {
-        gtr.plasma_condenser("gtceu:" + fluid + "_condenser")
+        gtr.plasma_condenser("gtlcore:" + fluid + "_condenser")
             .inputFluids("gtceu:" + fluid + "_plasma 1000", "gtceu:liquid_helium 100000")
             .outputFluids("gtceu:" + fluid + " 1000", "gtceu:helium 100000")
             .circuit(1)
@@ -7849,7 +7958,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(50)
 
-    gtr.plasma_condenser("gtceu:nickel_ingot")
+    gtr.plasma_condenser("gtlcore:nickel_ingot")
         .notConsumable("kubejs:ingot_field_shape")
         .inputFluids("gtceu:nickel_plasma 144", "gtceu:liquid_helium 14400")
         .outputFluids("gtceu:helium 14400")
@@ -7859,7 +7968,7 @@ ServerEvents.recipes((event) => {
 
     const ingots = ["mithril", "orichalcum", "enderium", "adamantium", "infuscolium", "echoite", "vibranium", "legendarium", "heavy_quark_degenerate_matter", "starmetal", "quantumchromodynamically_confined_matter"]
     ingots.forEach((ingot) => {
-        gtr.plasma_condenser("gtceu:" + ingot + "_ingot_condenser")
+        gtr.plasma_condenser("gtlcore:" + ingot + "_ingot_condenser")
             .notConsumable("kubejs:ingot_field_shape")
             .inputFluids("gtceu:" + ingot + "_plasma 144", "gtceu:liquid_helium 14400")
             .outputFluids("gtceu:helium 14400")
@@ -7868,7 +7977,7 @@ ServerEvents.recipes((event) => {
             .duration(60)
     })
 
-    gtr.plasma_condenser("gtceu:degenerate_rhenium")
+    gtr.plasma_condenser("gtlcore:degenerate_rhenium")
         .itemInputs("gtlcore:rhenium_plasma_containment_cell")
         .inputFluids("gtceu:liquid_helium 100000")
         .outputFluids("gtceu:helium 100000", "gtceu:liquid_degenerate_rhenium 1000")
@@ -7876,7 +7985,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(1200)
 
-    gtr.plasma_condenser("gtceu:draconiumawakened")
+    gtr.plasma_condenser("gtlcore:draconiumawakened")
         .itemInputs("gtlcore:draconiumawakened_plasma_containment_cell")
         .inputFluids("gtceu:liquid_helium 100000")
         .outputFluids("gtceu:helium 100000", "gtceu:draconiumawakened 1000")
@@ -7902,7 +8011,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(300)
 
-    gtr.plasma_condenser("gtceu:cosmicneutronium")
+    gtr.plasma_condenser("gtlcore:cosmicneutronium")
         .itemInputs("gtlcore:cosmic_neutron_plasma_cell")
         .inputFluids("gtceu:liquid_helium 100000")
         .outputFluids("gtceu:helium 100000", "gtceu:cosmicneutronium 1000")
@@ -7910,7 +8019,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(1200)
 
-    gtr.plasma_condenser("gtceu:crystalmatrix")
+    gtr.plasma_condenser("gtlcore:crystalmatrix")
         .itemInputs("gtlcore:crystalmatrix_plasma_containment_cell")
         .inputFluids("gtceu:liquid_helium 100000")
         .outputFluids("gtceu:helium 100000", "gtceu:crystalmatrix 1000")
@@ -7918,7 +8027,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(1000)
 
-    gtr.plasma_condenser("gtceu:chaos")
+    gtr.plasma_condenser("gtlcore:chaos")
         .itemInputs("gtlcore:chaos_containment_unit")
         .inputFluids("gtceu:liquid_helium 100000")
         .outputFluids("gtceu:helium 100000", "gtceu:chaos 1000")
@@ -7926,7 +8035,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(1600)
 
-    gtr.plasma_condenser("gtceu:hassium")
+    gtr.plasma_condenser("gtlcore:hassium")
         .inputFluids("gtceu:metastable_hassium_plasma 1000", "gtceu:liquid_helium 100000")
         .outputFluids("gtceu:helium 100000", "gtceu:liquid_metastable_hassium 1000")
         .EUt(GTValues.VA[GTValues.UHV])
@@ -7941,7 +8050,7 @@ ServerEvents.recipes((event) => {
         .duration(20)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.extractor("gtceu:xpjuice")
+    gtr.extractor("gtlcore:xpjuice")
         .itemInputs("minecraft:sculk")
         .outputFluids("gtceu:xpjuice 100")
         .EUt(120)
@@ -7977,7 +8086,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(400)
 
-    gtr.electromagnetic_separator("gtceu:purified_tengam_dust")
+    gtr.electromagnetic_separator("gtlcore:purified_tengam_dust")
         .itemInputs("gtceu:clean_raw_tengam_dust")
         .itemOutputs("gtceu:purified_tengam_dust")
         .chancedOutput("gtceu:magnetic_neodymium_dust", 1000, 0)
@@ -7985,7 +8094,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(200)
 
-    gtr.electromagnetic_separator("gtceu:raw_tengam_dust")
+    gtr.electromagnetic_separator("gtlcore:raw_tengam_dust")
         .itemInputs("gtceu:pure_jasper_dust")
         .itemOutputs("gtceu:jasper_dust")
         .chancedOutput("gtceu:raw_tengam_dust", 1000, 0)
@@ -7993,19 +8102,19 @@ ServerEvents.recipes((event) => {
         .EUt(24)
         .duration(200)
 
-    gtr.polarizer("gtceu:attuned_tengam_dust")
+    gtr.polarizer("gtlcore:attuned_tengam_dust")
         .itemInputs("gtceu:purified_tengam_dust")
         .itemOutputs("gtceu:attuned_tengam_dust")
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(400)
 
-    gtr.polarizer("gtceu:small_attuned_tengam_dust")
+    gtr.polarizer("gtlcore:small_attuned_tengam_dust")
         .itemInputs("gtceu:small_purified_tengam_dust")
         .itemOutputs("gtceu:small_attuned_tengam_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(400)
 
-    gtr.sps_crafting("gtceu:attuned_tengam_ingot")
+    gtr.sps_crafting("gtlcore:attuned_tengam_ingot")
         .notConsumable("kubejs:ingot_field_shape")
         .itemInputs("gtceu:attuned_tengam_dust")
         .inputFluids("gtceu:mana 1000")
@@ -8013,7 +8122,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(400)
 
-    gtr.ore_washer("gtceu:clean_raw_tengam_dust")
+    gtr.ore_washer("gtlcore:clean_raw_tengam_dust")
         .itemInputs("gtceu:raw_tengam_dust")
         .inputFluids("gtceu:distilled_water 1000")
         .itemOutputs("gtceu:clean_raw_tengam_dust")
@@ -8059,7 +8168,7 @@ ServerEvents.recipes((event) => {
         .duration(400)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
 
-    gtr.incubator("gtceu:biomediumraw")
+    gtr.incubator("gtlcore:biomediumraw")
         .itemInputs("64x gtceu:stem_cells", "16x gtlcore:tcetieseaweedextract", "gtceu:tritanium_dust")
         .inputFluids("gtceu:raw_growth_medium 1000")
         .outputFluids("gtceu:biomediumraw 1000")
@@ -8069,7 +8178,7 @@ ServerEvents.recipes((event) => {
         .addData("radioactivity", 80)
         .addCondition(new GravityCondition(true))
 
-    gtr.incubator("gtceu:biomediumraw1")
+    gtr.incubator("gtlcore:biomediumraw1")
         .itemInputs("64x gtlcore:biological_cells", "16x gtlcore:tcetieseaweedextract", "gtceu:tritanium_dust")
         .inputFluids("gtceu:raw_growth_medium 10000")
         .outputFluids("gtceu:biomediumraw 10000")
@@ -8093,7 +8202,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addCondition(new GravityCondition(false))
 
-    gtr.incubator("gtceu:seaweedbroth")
+    gtr.incubator("gtlcore:seaweedbroth")
         .itemInputs("64x minecraft:kelp", "20x gtceu:alien_algae_dust", "8x gtceu:energium_dust", "gtceu:mithril_dust")
         .inputFluids("gtceu:unknownnutrientagar 50000", "gtceu:methane 50000")
         .outputFluids("gtceu:seaweedbroth 50000")
@@ -8248,7 +8357,7 @@ ServerEvents.recipes((event) => {
     })
 
     //optical
-    gtr.mass_fabricator("gtceu:quasifissioning_plasma")
+    gtr.mass_fabricator("gtlcore:quasifissioning_plasma")
         .inputFluids("gtceu:uranium 144")
         .itemInputs("gtceu:uranium_ingot")
         .outputFluids("gtceu:quasifissioning_plasma 144")
@@ -9428,49 +9537,49 @@ ServerEvents.recipes((event) => {
             .duration(400 * board[1])
     })
 
-    gtr.pcb_factory("gtceu:epoxy_printed_circuit_board")
+    gtr.pcb_factory("gtlcore:epoxy_printed_circuit_board")
         .itemInputs("8x gtceu:epoxy_plate", "128x gtceu:electrum_foil")
         .inputFluids("gtceu:sulfuric_acid 2000", "gtceu:iron_iii_chloride 1000")
         .itemOutputs("8x gtceu:epoxy_printed_circuit_board")
         .EUt(120)
         .duration(600)
 
-    gtr.pcb_factory("gtceu:epoxy_printed_circuit_board1")
+    gtr.pcb_factory("gtlcore:epoxy_printed_circuit_board1")
         .itemInputs("8x gtceu:epoxy_plate", "128x gtceu:electrum_foil")
         .inputFluids("gtceu:sulfuric_acid 2000", "gtceu:sodium_persulfate 2000")
         .itemOutputs("8x gtceu:epoxy_printed_circuit_board")
         .EUt(120)
         .duration(600)
 
-    gtr.pcb_factory("gtceu:fiber_reinforced_printed_circuit_board")
+    gtr.pcb_factory("gtlcore:fiber_reinforced_printed_circuit_board")
         .itemInputs("8x gtceu:reinforced_epoxy_resin_plate", "160x gtceu:annealed_copper_foil")
         .inputFluids("gtceu:sulfuric_acid 500", "gtceu:iron_iii_chloride 2000")
         .itemOutputs("8x gtceu:fiber_reinforced_printed_circuit_board")
         .EUt(120)
         .duration(800)
 
-    gtr.pcb_factory("gtceu:fiber_reinforced_printed_circuit_board1")
+    gtr.pcb_factory("gtlcore:fiber_reinforced_printed_circuit_board1")
         .itemInputs("8x gtceu:reinforced_epoxy_resin_plate", "160x gtceu:annealed_copper_foil")
         .inputFluids("gtceu:sulfuric_acid 500", "gtceu:sodium_persulfate 4000")
         .itemOutputs("8x gtceu:fiber_reinforced_printed_circuit_board")
         .EUt(120)
         .duration(800)
 
-    gtr.pcb_factory("gtceu:multilayer_fiber_reinforced_printed_circuit_board")
+    gtr.pcb_factory("gtlcore:multilayer_fiber_reinforced_printed_circuit_board")
         .itemInputs("16x gtceu:fiber_reinforced_circuit_board", "128x gtceu:platinum_foil")
         .inputFluids("gtceu:sulfuric_acid 2000", "gtceu:iron_iii_chloride 1000")
         .itemOutputs("8x gtceu:multilayer_fiber_reinforced_printed_circuit_board")
         .EUt(480)
         .duration(800)
 
-    gtr.pcb_factory("gtceu:multilayer_fiber_reinforced_printed_circuit_board1")
+    gtr.pcb_factory("gtlcore:multilayer_fiber_reinforced_printed_circuit_board1")
         .itemInputs("16x gtceu:fiber_reinforced_circuit_board", "128x gtceu:platinum_foil")
         .inputFluids("gtceu:sulfuric_acid 2000", "gtceu:sodium_persulfate 8000")
         .itemOutputs("8x gtceu:multilayer_fiber_reinforced_printed_circuit_board")
         .EUt(480)
         .duration(800)
 
-    gtr.pcb_factory("gtceu:wetware_printed_circuit_board")
+    gtr.pcb_factory("gtlcore:wetware_printed_circuit_board")
         .itemInputs("gtceu:wetware_circuit_board", "32x gtceu:niobium_titanium_foil")
         .inputFluids("gtceu:sodium_persulfate 1000", "gtceu:iron_iii_chloride 500")
         .itemOutputs("gtceu:wetware_printed_circuit_board")
@@ -10347,7 +10456,7 @@ ServerEvents.recipes((event) => {
         .duration(290)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distillery("gtceu:cyclopentadiene")
+    gtr.distillery("gtlcore:cyclopentadiene")
         .inputFluids("gtceu:severely_steam_cracked_naphtha 1000")
         .outputFluids("gtceu:cyclopentadiene 150")
         .circuit(12)
@@ -10403,69 +10512,69 @@ ServerEvents.recipes((event) => {
         .EUt(500)
         .duration(240)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:not_found")
+    gtr.dimensionally_transcendent_mixer("gtlcore:not_found")
         .itemInputs("1x gtceu:carbon_dust", "1x gtceu:phosphorus_dust", "1x gtceu:sulfur_dust", "1x gtceu:selenium_dust", "1x gtceu:iodine_dust")
         .inputFluids("gtceu:hydrogen 1000", "gtceu:nitrogen 1000", "gtceu:oxygen 1000", "gtceu:fluorine 1000", "gtceu:chlorine 1000", "gtceu:bromine 1000")
         .outputFluids("gtceu:not_found 11000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(2200)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:noble_gas")
+    gtr.dimensionally_transcendent_mixer("gtlcore:noble_gas")
         .inputFluids("gtceu:helium 1000", "gtceu:neon 1000", "gtceu:argon 1000", "gtceu:krypton 1000", "gtceu:xenon 1000", "gtceu:radon 1000")
         .outputFluids("gtceu:noble_gas 6000")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1200)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:metalloid_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:metalloid_dust")
         .itemInputs("1x gtceu:boron_dust", "1x gtceu:silicon_dust", "1x gtceu:germanium_dust", "1x gtceu:arsenic_dust", "1x gtceu:antimony_dust", "1x gtceu:tellurium_dust", "1x gtceu:astatine_dust")
         .itemOutputs("7x gtceu:metalloid_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1400)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:poor_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:poor_dust")
         .itemInputs("1x gtceu:aluminium_dust", "1x gtceu:gallium_dust", "1x gtceu:indium_dust", "1x gtceu:tin_dust", "1x gtceu:thallium_dust", "1x gtceu:lead_dust", "1x gtceu:bismuth_dust", "1x gtceu:polonium_dust")
         .itemOutputs("8x gtceu:poor_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1600)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:transition_1_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:transition_1_dust")
         .itemInputs("1x gtceu:titanium_dust", "1x gtceu:vanadium_dust", "1x gtceu:chromium_dust", "1x gtceu:manganese_dust", "1x gtceu:iron_dust", "1x gtceu:cobalt_dust", "1x gtceu:nickel_dust", "1x gtceu:copper_dust", "1x gtceu:zinc_dust")
         .itemOutputs("9x gtceu:transition_1_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1800)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:transition_2_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:transition_2_dust")
         .itemInputs("1x gtceu:zirconium_dust", "1x gtceu:niobium_dust", "1x gtceu:molybdenum_dust", "1x gtceu:technetium_dust", "1x gtceu:ruthenium_dust", "1x gtceu:rhodium_dust", "1x gtceu:palladium_dust", "1x gtceu:silver_dust", "1x gtceu:cadmium_dust")
         .itemOutputs("9x gtceu:transition_2_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1800)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:transition_3_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:transition_3_dust")
         .itemInputs("1x gtceu:hafnium_dust", "1x gtceu:tantalum_dust", "1x gtceu:tungsten_dust", "1x gtceu:rhenium_dust", "1x gtceu:osmium_dust", "1x gtceu:iridium_dust", "1x gtceu:platinum_dust", "1x gtceu:gold_dust")
         .inputFluids("gtceu:mercury 1000")
         .itemOutputs("9x gtceu:transition_3_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1800)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:alkaline_earth_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:alkaline_earth_dust")
         .itemInputs("1x gtceu:beryllium_dust", "1x gtceu:magnesium_dust", "1x gtceu:calcium_dust", "1x gtceu:strontium_dust", "1x gtceu:barium_dust", "1x gtceu:radium_dust")
         .itemOutputs("6x gtceu:alkaline_earth_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1200)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:alkaline_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:alkaline_dust")
         .itemInputs("1x gtceu:lithium_dust", "1x gtceu:sodium_dust", "1x gtceu:potassium_dust", "1x gtceu:rubidium_dust", "1x gtceu:caesium_dust", "1x gtceu:francium_dust")
         .itemOutputs("6x gtceu:alkaline_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1200)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:actinoids_1_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:actinoids_1_dust")
         .itemInputs("1x gtceu:actinium_dust", "1x gtceu:thorium_dust", "1x gtceu:protactinium_dust", "1x gtceu:uranium_dust", "1x gtceu:neptunium_dust", "1x gtceu:plutonium_dust", "1x gtceu:americium_dust", "1x gtceu:curium_dust")
         .itemOutputs("8x gtceu:actinoids_1_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1600)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:actinoids_2_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:actinoids_2_dust")
         .itemInputs("1x gtceu:berkelium_dust", "1x gtceu:californium_dust", "1x gtceu:einsteinium_dust", "1x gtceu:fermium_dust", "1x gtceu:mendelevium_dust", "1x gtceu:nobelium_dust", "1x gtceu:lawrencium_dust")
         .itemOutputs("7x gtceu:actinoids_2_dust")
         .EUt(GTValues.VA[GTValues.UIV])
@@ -10477,55 +10586,55 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(400)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:lanthanoids_1_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:lanthanoids_1_dust")
         .itemInputs("1x gtceu:lanthanum_dust", "1x gtceu:cerium_dust", "1x gtceu:praseodymium_dust", "1x gtceu:neodymium_dust", "1x gtceu:promethium_dust", "1x gtceu:samarium_dust", "1x gtceu:europium_dust", "1x gtceu:gadolinium_dust")
         .itemOutputs("8x gtceu:lanthanoids_1_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1600)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:lanthanoids_2_dust")
+    gtr.dimensionally_transcendent_mixer("gtlcore:lanthanoids_2_dust")
         .itemInputs("1x gtceu:terbium_dust", "1x gtceu:dysprosium_dust", "1x gtceu:holmium_dust", "1x gtceu:erbium_dust", "1x gtceu:thulium_dust", "1x gtceu:ytterbium_dust", "1x gtceu:lutetium_dust")
         .itemOutputs("7x gtceu:lanthanoids_2_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(1400)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:dimensionallytranscendentprosaiccatalyst")
+    gtr.dimensionally_transcendent_mixer("gtlcore:dimensionallytranscendentprosaiccatalyst")
         .inputFluids("gtceu:dimensionallytranscendentcrudecatalyst 1000", "gtceu:heavy_quark_enriched_mixture 1000", "gtceu:oxygen_plasma 1000", "gtceu:argon_plasma 1000", "gtceu:iron_plasma 1000", "gtceu:nickel_plasma 1000")
         .outputFluids("gtceu:dimensionallytranscendentprosaiccatalyst 1000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(400)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:dimensionallytranscendentresplendentcatalyst")
+    gtr.dimensionally_transcendent_mixer("gtlcore:dimensionallytranscendentresplendentcatalyst")
         .inputFluids("gtceu:dimensionallytranscendentprosaiccatalyst 1000", "gtceu:heavy_quark_enriched_mixture 1000", "gtceu:mithril_plasma 1000", "gtceu:orichalcum_plasma 1000", "gtceu:enderium_plasma 1000", "gtceu:infuscolium_plasma 1000")
         .outputFluids("gtceu:dimensionallytranscendentresplendentcatalyst 1000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(800)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:dimensionallytranscendentexoticcatalyst")
+    gtr.dimensionally_transcendent_mixer("gtlcore:dimensionallytranscendentexoticcatalyst")
         .inputFluids("gtceu:dimensionallytranscendentresplendentcatalyst 1000", "gtceu:heavy_quark_enriched_mixture 1000", "gtceu:echoite_plasma 1000", "gtceu:adamantium_plasma 1000", "gtceu:vibranium_plasma 1000", "gtceu:starmetal_plasma 1000")
         .outputFluids("gtceu:dimensionallytranscendentexoticcatalyst 1000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(1600)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:dimensionallytranscendentstellarcatalyst")
+    gtr.dimensionally_transcendent_mixer("gtlcore:dimensionallytranscendentstellarcatalyst")
         .inputFluids("gtceu:dimensionallytranscendentexoticcatalyst 1000", "gtceu:heavy_quark_enriched_mixture 1000", "gtceu:legendarium_plasma 1000", "gtceu:crystalmatrix_plasma 1000", "gtceu:draconiumawakened_plasma 1000", "gtceu:raw_star_matter_plasma 1000")
         .outputFluids("gtceu:dimensionallytranscendentstellarcatalyst 1000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(3200)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:exciteddtsc")
+    gtr.dimensionally_transcendent_mixer("gtlcore:exciteddtsc")
         .inputFluids("gtceu:dimensionallytranscendentstellarcatalyst 10000", "gtceu:concentration_mixing_hyper_fuel_2 1000", "gtceu:high_energy_quark_gluon_plasma 1000")
         .outputFluids("gtceu:exciteddtsc 10000")
         .EUt(GTValues.VA[GTValues.OpV])
         .duration(12000)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:primordialmatter")
+    gtr.dimensionally_transcendent_mixer("gtlcore:primordialmatter")
         .inputFluids("gtceu:raw_star_matter_plasma 1000", "gtceu:spacetime 1000", "gtceu:spatialfluid 1000", "gtceu:dimensionallytranscendentresidue 1000")
         .outputFluids("gtceu:primordialmatter 1000")
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(1200)
 
-    gtr.dimensionally_transcendent_mixer("gtceu:chaos_plasma")
+    gtr.dimensionally_transcendent_mixer("gtlcore:chaos_plasma")
         .itemInputs("gtlcore:chaos_shard")
         .inputFluids("gtceu:uu_matter 4000", "gtceu:cosmicneutronium 2000", "gtceu:cosmic_mesh_plasma 2000", "gtceu:raw_star_matter_plasma 1000", "gtceu:dimensionallytranscendentexoticcatalyst 1000")
         .outputFluids("gtceu:chaos_plasma 10000")
@@ -10697,7 +10806,7 @@ ServerEvents.recipes((event) => {
         .EUt(16 * GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.qft("gtceu:spatialfluid")
+    gtr.qft("gtlcore:spatialfluid")
         .notConsumable("gtlcore:hypercube")
         .notConsumable("gtlcore:quantum_anomaly")
         .itemInputs("16x gtceu:cosmicneutronium_plate")
@@ -10714,7 +10823,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(400)
 
-    gtr.qft("gtceu:radox_gas")
+    gtr.qft("gtlcore:radox_gas")
         .notConsumable("gtlcore:quantum_anomaly")
         .itemInputs("64x kubejs:variation_wood")
         .inputFluids("gtceu:xenoxene 10000", "gtceu:unknowwater 90000", "gtceu:temporalfluid 100")
@@ -10722,14 +10831,14 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(400)
 
-    gtr.qft("gtceu:grade_8_purified_water")
+    gtr.qft("gtlcore:grade_8_purified_water")
         .circuit(1)
         .inputFluids("minecraft:water 8000")
         .outputFluids("gtceu:grade_8_purified_water 1000")
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(20)
 
-    gtr.qft("gtceu:grade_16_purified_water")
+    gtr.qft("gtlcore:grade_16_purified_water")
         .circuit(2)
         .inputFluids("minecraft:water 16000")
         .outputFluids("gtceu:grade_16_purified_water 1000")
@@ -10754,13 +10863,13 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(80)
 
-    gtr.electrolyzer("gtceu:sodium_chlorate_dust")
+    gtr.electrolyzer("gtlcore:sodium_chlorate_dust")
         .itemInputs("9x gtceu:sodium_hypochlorite_dust")
         .itemOutputs("5x gtceu:sodium_chlorate_dust", "4x gtceu:salt_dust")
         .EUt(120)
         .duration(210)
 
-    gtr.dehydrator("gtceu:phthalic_anhydride_dust")
+    gtr.dehydrator("gtlcore:phthalic_anhydride_dust")
         .inputFluids("gtceu:phthalic_acid 1000")
         .itemOutputs("15x gtceu:phthalic_anhydride_dust")
         .EUt(480)
@@ -10786,7 +10895,7 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(600)
 
-    gtr.arc_furnace("gtceu:anthracene")
+    gtr.arc_furnace("gtlcore:anthracene")
         .itemInputs("gtceu:coke_gem")
         .outputFluids("gtceu:anthracene 100")
         .EUt(120)
@@ -10903,14 +11012,6 @@ ServerEvents.recipes((event) => {
         .outputFluids("gtceu:dimethylnaphthalene 1000", "minecraft:water 2000")
         .EUt(120)
         .duration(200)
-
-    gtr.chemical_reactor("gtlcore:dimethyldichlorosilane_a")
-        .circuit(1)
-        .itemInputs("gtceu:silicon_dust")
-        .inputFluids("gtceu:chloromethane 2000")
-        .outputFluids("gtceu:dimethyldichlorosilane 1000")
-        .EUt(96)
-        .duration(240)
 
     gtr.large_chemical_reactor("gtlcore:acetylating_reagent")
         .itemInputs("6x gtceu:magnesium_chloride_dust")
@@ -11145,7 +11246,7 @@ ServerEvents.recipes((event) => {
         .duration(400)
         .blastFurnaceTemp(10700)
 
-    gtr.stellar_forge("gtceu:actinium_superhydride_plasma")
+    gtr.stellar_forge("gtlcore:actinium_superhydride_plasma")
         .itemInputs("gtlcore:naquadria_charge", "36x gtceu:atinium_hydride_dust")
         .inputFluids("gtceu:hydrogen 81000")
         .outputFluids("gtceu:actinium_superhydride_plasma 36000")
@@ -11162,7 +11263,7 @@ ServerEvents.recipes((event) => {
         .duration(20)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.plasma_condenser("gtceu:actinium_superhydride_dust")
+    gtr.plasma_condenser("gtlcore:actinium_superhydride_dust")
         .itemInputs("gtlcore:actinium_superhydride_plasma_containment_cell")
         .inputFluids("gtceu:liquid_helium 24000")
         .itemOutputs("13x gtceu:actinium_superhydride_dust", "gtlcore:plasma_containment_cell")
@@ -11203,13 +11304,6 @@ ServerEvents.recipes((event) => {
         .duration(340)
         .blastFurnaceTemp(10900)
 
-    gtr.chemical_reactor("gtlcore:styrene_a")
-        .circuit(1)
-        .inputFluids("gtceu:ethylbenzene 1000")
-        .outputFluids("gtceu:styrene 1000", "gtceu:hydrogen 2000")
-        .EUt(30)
-        .duration(30)
-
     gtr.electric_blast_furnace("gtlcore:taranium_boulea")
         .itemInputs("64x gtceu:silicon_block", "8x gtceu:taranium_ingot", "4x gtceu:gallium_arsenide_dust")
         .inputFluids("gtceu:radon 16000")
@@ -11246,13 +11340,6 @@ ServerEvents.recipes((event) => {
         .EUt(1920)
         .duration(900)
         .cleanroom(CleanroomType.CLEANROOM)
-
-    gtr.chemical_reactor("gtlcore:vinyl_chloride_a")
-        .circuit(1)
-        .inputFluids("gtceu:chlorine 4000", "gtceu:ethane 1000")
-        .outputFluids("gtceu:vinyl_chloride 1000", "gtceu:hydrochloric_acid 3000")
-        .EUt(30)
-        .duration(160)
 
     gtr.assembly_line("gtlcore:dimension_creation_casing")
         .itemInputs("gtceu:infinity_frame",
@@ -11308,7 +11395,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(400)
 
-    gtr.lightning_processor("gtceu:adamantine_compounds_dust_a")
+    gtr.lightning_processor("gtlcore:adamantine_compounds_dust_a")
         .notConsumable("gtlcore:microwormhole_generator")
         .itemInputs("4x gtceu:adamantine_compounds_dust")
         .itemOutputs("gtceu:adamantine_dust")
@@ -11438,7 +11525,7 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(40)
 
-    gtr.electromagnetic_separator("gtceu:graphene_oxide_dust")
+    gtr.electromagnetic_separator("gtlcore:graphene_oxide_dust")
         .itemInputs("gtlcore:graphene_iron_plate")
         .itemOutputs("3x gtceu:graphene_oxide_dust", "gtceu:iron_dust")
         .EUt(30)
@@ -11860,13 +11947,6 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(20)
 
-    gtr.chemical_reactor("gtlcore:ethylene_f_ethanol")
-        .circuit(1)
-        .inputFluids("gtceu:sulfuric_acid 1000", "gtceu:ethanol 1000")
-        .outputFluids("gtceu:ethylene 1000", "gtceu:diluted_sulfuric_acid 1000")
-        .EUt(120)
-        .duration(1200)
-
     gtr.assembler("gtlcore:petrochemical_plant")
         .itemInputs("16x gtceu:watertight_steel_frame", "8x gtceu:large_distillery", "4x gtlcore:large_cracker", "gtlcore:chemical_plant", "4x #gtceu:circuits/uhv", "4x gtceu:zpm_emitter", "16x gtceu:zpm_fluid_regulator", "16x gtceu:stainless_steel_nonuple_fluid_pipe", "32x gtceu:double_stainless_steel_plate")
         .itemOutputs("gtlcore:petrochemical_plant")
@@ -11933,14 +12013,14 @@ ServerEvents.recipes((event) => {
             .duration(300 * (2 ** index))
     }
 
-    gtr.dyson_sphere("gtceu:dysonsphere")
+    gtr.dyson_sphere("gtlcore:dysonsphere")
         .inputFluids("kubejs:gelid_cryotheum 1")
         .circuit(1)
         .EUt(-GTValues.V[GTValues.MAX])
         .duration(20)
         .CWUt(1)
 
-    gtr.dyson_sphere("gtceu:dysonspherelaunch")
+    gtr.dyson_sphere("gtlcore:dysonspherelaunch")
         .itemInputs("64x gtlcore:dyson_swarm_module")
         .EUt(GTValues.V[GTValues.UIV])
         .duration(200)
@@ -12072,7 +12152,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(2400)
 
-    gtr.evaporation("gtceu:salt_water")
+    gtr.evaporation("gtlcore:salt_water")
         .inputFluids("minecraft:water 50000")
         .outputFluids("gtceu:salt_water 1000")
         .EUt(30)
@@ -12095,7 +12175,7 @@ ServerEvents.recipes((event) => {
         .EUt(7680)
         .duration(200)
 
-    gtr.distillation_tower("gtceu:grade_3_purified_water")
+    gtr.distillation_tower("gtlcore:grade_3_purified_water")
         .inputFluids("gtceu:grade_2_purified_water 1000")
         .outputFluids("gtceu:grade_3_purified_water 900")
         .outputFluids("gtceu:grade_2_purified_water 50")
@@ -12131,7 +12211,7 @@ ServerEvents.recipes((event) => {
         .duration(80)
         .blastFurnaceTemp(6740)
 
-    gtr.evaporation("gtceu:grade_7_purified_water")
+    gtr.evaporation("gtlcore:grade_7_purified_water")
         .inputFluids("gtceu:grade_6_purified_water 1000000")
         .outputFluids("gtceu:grade_7_purified_water 900000")
         .outputFluids("gtceu:grade_6_purified_water 50000")
@@ -12141,7 +12221,7 @@ ServerEvents.recipes((event) => {
         .EUt(524288)
         .duration(4000)
 
-    gtr.brewery("gtceu:grade_8_purified_water")
+    gtr.brewery("gtlcore:grade_8_purified_water")
         .inputFluids("gtceu:grade_7_purified_water 1000")
         .notConsumable("gtceu:neutronium_dust")
         .outputFluids("gtceu:grade_8_purified_water 1000")
@@ -12156,7 +12236,7 @@ ServerEvents.recipes((event) => {
         .EUt(524288)
         .duration(600)
 
-    gtr.distillery("gtceu:grade_10_purified_water")
+    gtr.distillery("gtlcore:grade_10_purified_water")
         .inputFluids("gtceu:grade_9_purified_water 1000")
         .itemInputs("minecraft:echo_shard")
         .outputFluids("gtceu:grade_10_purified_water 900")
@@ -12174,7 +12254,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(200)
 
-    gtr.evaporation("gtceu:grade_12_purified_water")
+    gtr.evaporation("gtlcore:grade_12_purified_water")
         .inputFluids("gtceu:grade_11_purified_water 10000000")
         .itemOutputs("gtceu:tiny_neutronium_dust")
         .outputFluids("gtceu:grade_12_purified_water 9999000")
@@ -12182,7 +12262,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(2000)
 
-    gtr.arc_furnace("gtceu:grade_13_purified_water")
+    gtr.arc_furnace("gtlcore:grade_13_purified_water")
         .inputFluids("gtceu:grade_12_purified_water 10000")
         .itemInputs("gtceu:degenerate_rhenium_dust")
         .itemOutputs("gtceu:degenerate_rhenium_plate")
@@ -12190,7 +12270,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(60)
 
-    gtr.plasma_condenser("gtceu:grade_14_purified_water")
+    gtr.plasma_condenser("gtlcore:grade_14_purified_water")
         .notConsumable("gtceu:uhv_fluid_regulator")
         .inputFluids("gtceu:grade_13_purified_water 10000", "gtceu:mithril_plasma 1000")
         .itemOutputs("60x gtceu:tiny_mithril_dust")
@@ -12198,7 +12278,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UHV])
         .duration(800)
 
-    gtr.plasma_condenser("gtceu:grade_15_purified_water")
+    gtr.plasma_condenser("gtlcore:grade_15_purified_water")
         .notConsumable("gtceu:uev_fluid_regulator")
         .inputFluids("gtceu:grade_14_purified_water 10000", "gtceu:enderium_plasma 1000")
         .itemOutputs("61x gtceu:tiny_enderium_dust")
@@ -12206,7 +12286,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(800)
 
-    gtr.plasma_condenser("gtceu:grade_16_purified_water")
+    gtr.plasma_condenser("gtlcore:grade_16_purified_water")
         .notConsumable("gtceu:uiv_fluid_regulator")
         .inputFluids("gtceu:grade_15_purified_water 10000", "gtceu:echoite_plasma 1000")
         .itemOutputs("62x gtceu:tiny_echoite_dust")
@@ -12507,7 +12587,7 @@ ServerEvents.recipes((event) => {
         .duration(400)
         .fusionStartEU(4800000000)
 
-    gtr.distillery("gtceu:kerosene")
+    gtr.distillery("gtlcore:kerosene")
         .itemInputs("gtceu:coke_dust")
         .inputFluids("gtceu:coal_tar 200")
         .outputFluids("gtceu:kerosene 100")
@@ -12515,7 +12595,7 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(30)
 
-    gtr.distillery("gtceu:rp_1")
+    gtr.distillery("gtlcore:rp_1")
         .circuit(1)
         .inputFluids("gtceu:kerosene 50")
         .outputFluids("gtceu:rp_1 25")
@@ -12552,7 +12632,7 @@ ServerEvents.recipes((event) => {
         .EUt(1920)
         .duration(200)
 
-    gtr.dehydrator("gtceu:monomethylhydrazine")
+    gtr.dehydrator("gtlcore:monomethylhydrazine")
         .inputFluids("gtceu:hydrazine 1000", "gtceu:hydrogen 2000")
         .itemInputs("gtceu:carbon_dust")
         .outputFluids("gtceu:monomethylhydrazine 1000")
@@ -12599,14 +12679,14 @@ ServerEvents.recipes((event) => {
         .EUt(120)
         .duration(200)
 
-    gtr.lightning_processor("gtceu:nether_air")
+    gtr.lightning_processor("gtlcore:nether_air")
         .itemInputs("64x minecraft:gunpowder")
         .inputFluids("gtceu:blaze 1000", "gtceu:hydrogen_sulfide 10000", "gtceu:sulfur_dioxide 10000", "gtceu:carbon_monoxide 10000", "gtceu:coal_gas 1000", "gtceu:helium 1000")
         .outputFluids("gtceu:nether_air 1000")
         .EUt(120)
         .duration(400)
 
-    gtr.lightning_processor("gtceu:ender_air")
+    gtr.lightning_processor("gtlcore:ender_air")
         .itemInputs("64x gtceu:ender_pearl_dust")
         .inputFluids("gtceu:fuming_nitric_acid 1000", "gtceu:nitrogen_dioxide 10000", "gtceu:helium 10000", "gtceu:radon 1000", "gtceu:deuterium 1000", "gtceu:xenon 1000")
         .outputFluids("gtceu:ender_air 1000")
@@ -12655,7 +12735,7 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(200)
 
-    gtr.dehydrator("gtceu:la_nd_oxides_solution")
+    gtr.dehydrator("gtlcore:la_nd_oxides_solution")
         .inputFluids("gtceu:la_nd_oxides_solution 4000")
         .chancedOutput("5x gtceu:lanthanum_oxide_dust", 4300, 275)
         .chancedOutput("5x gtceu:cerium_oxide_dust", 4300, 275)
@@ -12664,7 +12744,7 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(220)
 
-    gtr.dehydrator("gtceu:sm_gd_oxides_solution")
+    gtr.dehydrator("gtlcore:sm_gd_oxides_solution")
         .inputFluids("gtceu:sm_gd_oxides_solution 4000")
         .chancedOutput("5x gtceu:scandium_oxide_dust", 4300, 275)
         .chancedOutput("5x gtceu:samarium_oxide_dust", 4300, 275)
@@ -12673,7 +12753,7 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(220)
 
-    gtr.dehydrator("gtceu:tb_ho_oxides_solution")
+    gtr.dehydrator("gtlcore:tb_ho_oxides_solution")
         .inputFluids("gtceu:tb_ho_oxides_solution 4000")
         .chancedOutput("5x gtceu:yttrium_oxide_dust", 4300, 275)
         .chancedOutput("5x gtceu:terbium_oxide_dust", 4300, 275)
@@ -12682,7 +12762,7 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(220)
 
-    gtr.dehydrator("gtceu:er_lu_oxides_solution")
+    gtr.dehydrator("gtlcore:er_lu_oxides_solution")
         .inputFluids("gtceu:er_lu_oxides_solution 4000")
         .chancedOutput("5x gtceu:erbium_oxide_dust", 4300, 275)
         .chancedOutput("5x gtceu:thulium_oxide_dust", 4300, 275)
@@ -12755,7 +12835,7 @@ ServerEvents.recipes((event) => {
         .duration(300)
         .blastFurnaceTemp(3400)
 
-    gtr.incubator("gtceu:stem_cells")
+    gtr.incubator("gtlcore:stem_cells")
         .chancedInput("gtlcore:glacio_spirit", 6000, 500)
         .itemInputs("gtceu:osmiridium_dust")
         .inputFluids("gtceu:sterilized_growth_medium 500", "gtceu:bacteria 500")
@@ -12871,7 +12951,7 @@ ServerEvents.recipes((event) => {
         .EUt(16)
         .duration(50)
 
-    gtr.nano_forge("gtceu:carbon_nanoswarm")
+    gtr.nano_forge("gtlcore:carbon_nanoswarm")
         .notConsumable("gtceu:lime_glass_lens")
         .itemInputs("64x gtceu:carbon_block", "64x gtceu:soc")
         .itemOutputs("64x gtceu:carbon_nanoswarm")
@@ -12880,7 +12960,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:glowstone_nanoswarm")
+    gtr.nano_forge("gtlcore:glowstone_nanoswarm")
         .notConsumable("gtceu:orange_glass_lens")
         .itemInputs("64x minecraft:glowstone", "64x gtceu:advanced_soc")
         .itemOutputs("64x gtceu:glowstone_nanoswarm")
@@ -12889,7 +12969,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:copper_nanoswarm")
+    gtr.nano_forge("gtlcore:copper_nanoswarm")
         .notConsumable("gtceu:brown_glass_lens")
         .itemInputs("8x minecraft:copper_block", "8x gtceu:soc")
         .itemOutputs("gtceu:copper_nanoswarm")
@@ -12898,7 +12978,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:iron_nanoswarm")
+    gtr.nano_forge("gtlcore:iron_nanoswarm")
         .notConsumable("gtceu:gray_glass_lens")
         .itemInputs("8x minecraft:iron_block", "8x gtceu:soc")
         .itemOutputs("gtceu:iron_nanoswarm")
@@ -12907,7 +12987,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:gold_nanoswarm")
+    gtr.nano_forge("gtlcore:gold_nanoswarm")
         .notConsumable("gtceu:yellow_glass_lens")
         .itemInputs("8x minecraft:gold_block", "16x gtceu:soc")
         .itemOutputs("gtceu:gold_nanoswarm")
@@ -12916,7 +12996,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:silver_nanoswarm")
+    gtr.nano_forge("gtlcore:silver_nanoswarm")
         .notConsumable("gtceu:light_gray_glass_lens")
         .itemInputs("8x gtceu:silver_block", "16x gtceu:soc")
         .itemOutputs("gtceu:silver_nanoswarm")
@@ -12925,7 +13005,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:iridium_nanoswarm")
+    gtr.nano_forge("gtlcore:iridium_nanoswarm")
         .notConsumable("gtceu:glass_lens")
         .itemInputs("8x gtceu:iridium_block", "32x gtceu:soc")
         .itemOutputs("gtceu:iridium_nanoswarm")
@@ -12934,7 +13014,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:osmium_nanoswarm")
+    gtr.nano_forge("gtlcore:osmium_nanoswarm")
         .notConsumable("gtceu:diamond_lens")
         .itemInputs("8x gtceu:osmium_block", "32x gtceu:soc")
         .itemOutputs("gtceu:osmium_nanoswarm")
@@ -12943,7 +13023,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:rhenium_nanoswarm")
+    gtr.nano_forge("gtlcore:rhenium_nanoswarm")
         .notConsumable("gtceu:cyan_glass_lens")
         .itemInputs("8x gtceu:rhenium_block", "64x gtceu:soc")
         .itemOutputs("gtceu:rhenium_nanoswarm")
@@ -12952,7 +13032,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:naquadah_nanoswarm")
+    gtr.nano_forge("gtlcore:naquadah_nanoswarm")
         .notConsumable("gtceu:emerald_lens")
         .itemInputs("8x gtceu:naquadah_block", "16x gtceu:advanced_soc")
         .itemOutputs("gtceu:naquadah_nanoswarm")
@@ -12961,7 +13041,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:neutronium_nanoswarm")
+    gtr.nano_forge("gtlcore:neutronium_nanoswarm")
         .notConsumable("gtceu:nether_star_lens")
         .itemInputs("8x gtceu:neutronium_block", "64x gtceu:soc", "32x gtceu:advanced_soc")
         .itemOutputs("gtceu:neutronium_nanoswarm")
@@ -12970,7 +13050,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:orichalcum_nanoswarm")
+    gtr.nano_forge("gtlcore:orichalcum_nanoswarm")
         .notConsumable("gtceu:magenta_glass_lens")
         .itemInputs("8x gtceu:orichalcum_block", "64x gtceu:advanced_soc", "64x gtceu:advanced_soc")
         .itemOutputs("gtceu:orichalcum_nanoswarm")
@@ -12979,7 +13059,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UV])
         .addData("nano_forge_tier", 1)
 
-    gtr.nano_forge("gtceu:enderium_nanoswarm")
+    gtr.nano_forge("gtlcore:enderium_nanoswarm")
         .notConsumable("gtceu:green_glass_lens")
         .itemInputs("8x gtceu:enderium_block", "64x gtceu:advanced_soc", "64x gtceu:advanced_soc")
         .itemOutputs("gtceu:enderium_nanoswarm")
@@ -12988,7 +13068,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .addData("nano_forge_tier", 2)
 
-    gtr.nano_forge("gtceu:infuscolium_nanoswarm")
+    gtr.nano_forge("gtlcore:infuscolium_nanoswarm")
         .notConsumable("gtceu:pink_glass_lens")
         .itemInputs("8x gtceu:infuscolium_block", "64x gtceu:advanced_soc", "32x gtceu:highly_advanced_soc")
         .itemOutputs("gtceu:infuscolium_nanoswarm")
@@ -12997,7 +13077,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .addData("nano_forge_tier", 2)
 
-    gtr.nano_forge("gtceu:uruium_nanoswarm")
+    gtr.nano_forge("gtlcore:uruium_nanoswarm")
         .notConsumable("gtceu:light_blue_glass_lens")
         .itemInputs("8x gtceu:uruium_block", "64x gtceu:advanced_soc", "64x gtceu:highly_advanced_soc")
         .itemOutputs("gtceu:uruium_nanoswarm")
@@ -13006,7 +13086,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .addData("nano_forge_tier", 2)
 
-    gtr.nano_forge("gtceu:vibranium_nanoswarm")
+    gtr.nano_forge("gtlcore:vibranium_nanoswarm")
         .notConsumable("gtceu:light_blue_glass_lens")
         .itemInputs("8x gtceu:vibranium_block", "64x gtceu:highly_advanced_soc", "64x gtceu:highly_advanced_soc")
         .itemOutputs("gtceu:vibranium_nanoswarm")
@@ -13015,7 +13095,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .addData("nano_forge_tier", 2)
 
-    gtr.nano_forge("gtceu:starmetal_nanoswarm")
+    gtr.nano_forge("gtlcore:starmetal_nanoswarm")
         .notConsumable("gtceu:red_glass_lens")
         .itemInputs("8x gtceu:starmetal_block", "64x gtceu:highly_advanced_soc", "64x gtceu:highly_advanced_soc", "64x gtceu:exquisite_glass_gem", "64x gtceu:exquisite_amethyst_gem")
         .itemOutputs("gtceu:starmetal_nanoswarm")
@@ -13024,7 +13104,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .addData("nano_forge_tier", 2)
 
-    gtr.nano_forge("gtceu:draconium_nanoswarm")
+    gtr.nano_forge("gtlcore:draconium_nanoswarm")
         .notConsumable("gtceu:purple_glass_lens")
         .itemInputs("8x gtceu:draconium_block", "32x gtceu:highly_advanced_soc_wafer", "32x gtlcore:optical_ram_wafer", "32x gtlcore:optical_soc", "8x gtlcore:exotic_processing_core")
         .itemOutputs("gtceu:draconium_nanoswarm")
@@ -13033,7 +13113,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .addData("nano_forge_tier", 2)
 
-    gtr.nano_forge("gtceu:cosmicneutronium_nanoswarm")
+    gtr.nano_forge("gtlcore:cosmicneutronium_nanoswarm")
         .notConsumable("gtceu:black_glass_lens")
         .itemInputs("8x gtceu:cosmicneutronium_block", "32x gtlcore:optical_soc", "32x gtlcore:exotic_wafer", "16x gtlcore:cosmic_ram_wafer", "8x gtlcore:cosmic_processing_unit_core")
         .itemOutputs("gtceu:cosmicneutronium_nanoswarm")
@@ -13042,7 +13122,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UXV])
         .addData("nano_forge_tier", 3)
 
-    gtr.nano_forge("gtceu:white_dwarf_mtter_nanoswarm")
+    gtr.nano_forge("gtlcore:white_dwarf_mtter_nanoswarm")
         .notConsumable("gtceu:ruby_lens")
         .itemInputs("8x gtceu:white_dwarf_mtter_block", "8x gtlcore:cosmic_processing_unit_core")
         .itemOutputs("gtceu:white_dwarf_mtter_nanoswarm")
@@ -13051,7 +13131,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UXV])
         .addData("nano_forge_tier", 3)
 
-    gtr.nano_forge("gtceu:black_dwarf_mtter_nanoswarm")
+    gtr.nano_forge("gtlcore:black_dwarf_mtter_nanoswarm")
         .notConsumable("gtceu:ruby_lens")
         .itemInputs("8x gtceu:black_dwarf_mtter_block", "8x gtlcore:cosmic_processing_unit_core")
         .itemOutputs("gtceu:black_dwarf_mtter_nanoswarm")
@@ -13060,7 +13140,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UXV])
         .addData("nano_forge_tier", 3)
 
-    gtr.nano_forge("gtceu:spacetime_nanoswarm")
+    gtr.nano_forge("gtlcore:spacetime_nanoswarm")
         .notConsumable("gtceu:sapphire_lens")
         .notConsumable("gtlcore:quantum_anomaly")
         .itemInputs("8x gtceu:spacetime_block", "4x gtlcore:eigenfolded_kerr_manifold", "16x gtlcore:supracausal_ram_wafer", "8x gtlcore:supracausal_processing_core")
@@ -13070,7 +13150,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UXV])
         .addData("nano_forge_tier", 3)
 
-    gtr.nano_forge("gtceu:transcendentmetal_nanoswarm")
+    gtr.nano_forge("gtlcore:transcendentmetal_nanoswarm")
         .notConsumable("kubejs:non_linear_optical_lens")
         .notConsumable("gtlcore:hypercube")
         .itemInputs("gtceu:rhenium_nanoswarm", "8x gtceu:transcendentmetal_block", "8x gtlcore:recursively_folded_negative_space", "#gtceu:circuits/max")
@@ -13080,7 +13160,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UXV])
         .addData("nano_forge_tier", 3)
 
-    gtr.nano_forge("gtceu:eternity_nanoswarm")
+    gtr.nano_forge("gtlcore:eternity_nanoswarm")
         .notConsumable("gtceu:blue_glass_lens")
         .notConsumable("gtlcore:quantum_anomaly")
         .notConsumable("gtlcore:eternity_catalyst")
@@ -13179,7 +13259,7 @@ ServerEvents.recipes((event) => {
         .EUt(524288)
         .duration(400)
 
-    gtr.distort("gtceu:epoxy")
+    gtr.distort("gtlcore:epoxy")
         .itemInputs("gtceu:copper_nanoswarm")
         .itemOutputs("gtceu:contaminable_copper_nanoswarm")
         .itemInputs("1x gtceu:phosphorus_dust", "16x gtceu:salt_dust")
@@ -13190,7 +13270,7 @@ ServerEvents.recipes((event) => {
         .duration(240)
         .blastFurnaceTemp(5600)
 
-    gtr.distort("gtceu:polybenzimidazole")
+    gtr.distort("gtlcore:polybenzimidazole")
         .itemInputs("gtceu:iridium_nanoswarm")
         .itemOutputs("gtceu:contaminable_iridium_nanoswarm")
         .notConsumable("gtceu:potassium_dichromate_dust")
@@ -13202,7 +13282,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(6000)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:polyphenylene_sulfide")
+    gtr.distort("gtlcore:polyphenylene_sulfide")
         .itemInputs("gtceu:silver_nanoswarm")
         .itemOutputs("gtceu:contaminable_silver_nanoswarm")
         .itemInputs("16x gtceu:sulfur_dust")
@@ -13213,7 +13293,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(800)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:platinum_dust")
+    gtr.distort("gtlcore:platinum_dust")
         .itemInputs("gtceu:iridium_nanoswarm")
         .itemOutputs("gtceu:contaminable_iridium_nanoswarm")
         .itemInputs("576x gtceu:platinum_group_sludge_dust", "16x gtceu:sulfur_dust")
@@ -13224,7 +13304,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(9000)
 
-    gtr.distort("gtceu:polyimide")
+    gtr.distort("gtlcore:polyimide")
         .itemInputs("gtceu:glowstone_nanoswarm")
         .itemOutputs("gtceu:contaminable_glowstone_nanoswarm")
         .itemInputs("486x gtceu:carbon_dust")
@@ -13235,7 +13315,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(14400)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:cycloparaphenylene")
+    gtr.distort("gtlcore:cycloparaphenylene")
         .itemInputs("gtceu:osmium_nanoswarm")
         .itemOutputs("gtceu:contaminable_osmium_nanoswarm")
         .itemInputs("1920x gtceu:carbon_dust", "64x gtceu:iodine_dust")
@@ -13246,7 +13326,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(16200)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:polyvinyl_chloride")
+    gtr.distort("gtlcore:polyvinyl_chloride")
         .itemInputs("gtceu:glowstone_nanoswarm")
         .itemOutputs("gtceu:contaminable_glowstone_nanoswarm")
         .inputFluids("gtceu:oxygen 10000", "gtceu:chlorine 1440", "gtceu:ethylene 1440")
@@ -13255,7 +13335,7 @@ ServerEvents.recipes((event) => {
         .duration(160)
         .blastFurnaceTemp(800)
 
-    gtr.distort("gtceu:silicone_rubber")
+    gtr.distort("gtlcore:silicone_rubber")
         .itemInputs("gtceu:carbon_nanoswarm")
         .itemOutputs("gtceu:contaminable_carbon_nanoswarm")
         .itemInputs("3x gtceu:silicon_dust", "gtceu:sulfur_dust")
@@ -13265,7 +13345,7 @@ ServerEvents.recipes((event) => {
         .duration(320)
         .blastFurnaceTemp(1200)
 
-    gtr.distort("gtceu:styrene_butadiene_rubber")
+    gtr.distort("gtlcore:styrene_butadiene_rubber")
         .itemInputs("gtceu:iron_nanoswarm")
         .itemOutputs("gtceu:contaminable_iron_nanoswarm")
         .itemInputs("5x gtceu:sulfur_dust")
@@ -13275,7 +13355,7 @@ ServerEvents.recipes((event) => {
         .duration(120)
         .blastFurnaceTemp(1800)
 
-    gtr.distort("gtceu:polytetrafluoroethylene")
+    gtr.distort("gtlcore:polytetrafluoroethylene")
         .itemInputs("gtceu:copper_nanoswarm")
         .itemOutputs("gtceu:contaminable_copper_nanoswarm")
         .inputFluids("gtceu:oxygen 5000", "gtceu:methane 1440", "gtceu:fluorine 2880")
@@ -13284,7 +13364,7 @@ ServerEvents.recipes((event) => {
         .duration(240)
         .blastFurnaceTemp(2600)
 
-    gtr.distort("gtceu:naquadria_dust")
+    gtr.distort("gtlcore:naquadria_dust")
         .itemInputs("gtceu:naquadah_nanoswarm")
         .itemOutputs("gtceu:contaminable_naquadah_nanoswarm")
         .itemInputs("128x gtceu:naquadah_dust", "16x gtceu:caesium_dust")
@@ -13296,7 +13376,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(12600)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:unfolded_fullerene_dust")
+    gtr.distort("gtlcore:unfolded_fullerene_dust")
         .itemInputs("gtceu:enderium_nanoswarm")
         .itemOutputs("gtceu:contaminable_enderium_nanoswarm")
         .itemInputs("3780x gtceu:carbon_dust")
@@ -13308,7 +13388,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(16800)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:stem_cells")
+    gtr.distort("gtlcore:stem_cells")
         .itemInputs("gtceu:naquadah_nanoswarm")
         .itemOutputs("gtceu:contaminable_naquadah_nanoswarm")
         .chancedInput("gtlcore:glacio_spirit", 8000, 100)
@@ -13320,7 +13400,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(12200)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
 
-    gtr.distort("gtceu:polyurethaneresin")
+    gtr.distort("gtlcore:polyurethaneresin")
         .itemInputs("gtceu:gold_nanoswarm")
         .itemOutputs("gtceu:contaminable_gold_nanoswarm")
         .itemInputs("45x gtceu:tin_dust", "64x gtceu:carbon_dust", "5x gtceu:nickel_dust", "5x gtceu:palladium_dust", "5x gtceu:iron_dust", "36x gtceu:silicon_dust")
@@ -13331,7 +13411,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(16200)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:liquidcrystalkevlar")
+    gtr.distort("gtlcore:liquidcrystalkevlar")
         .itemInputs("gtceu:rhenium_nanoswarm")
         .itemOutputs("gtceu:contaminable_rhenium_nanoswarm")
         .notConsumable("gtceu:annealed_copper_dust")
@@ -13343,7 +13423,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(17200)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:zirconium_dust")
+    gtr.distort("gtlcore:zirconium_dust")
         .itemInputs("gtceu:osmium_nanoswarm")
         .itemOutputs("gtceu:contaminable_osmium_nanoswarm")
         .itemInputs("1152x gtceu:zircon_dust", "64x gtceu:potassium_dust")
@@ -13355,7 +13435,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(16200)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:hexanitrohexaaxaisowurtzitane_dust")
+    gtr.distort("gtlcore:hexanitrohexaaxaisowurtzitane_dust")
         .itemInputs("gtceu:orichalcum_nanoswarm")
         .itemOutputs("gtceu:contaminable_orichalcum_nanoswarm")
         .notConsumable("16x gtlcore:unstable_star")
@@ -13367,7 +13447,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(21600)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:photoresist")
+    gtr.distort("gtlcore:photoresist")
         .itemInputs("gtceu:uruium_nanoswarm")
         .itemOutputs("gtceu:contaminable_uruium_nanoswarm")
         .itemInputs("91x gtceu:rutile_dust", "60x gtceu:carbon_dust", "42x gtceu:sodium_hydroxide_dust")
@@ -13378,7 +13458,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(16200)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:euv_photoresist")
+    gtr.distort("gtlcore:euv_photoresist")
         .itemInputs("gtceu:infuscolium_nanoswarm")
         .itemOutputs("gtceu:contaminable_infuscolium_nanoswarm")
         .itemInputs("30x gtceu:rhenium_dust", "56x gtceu:lithium_dust", "40x gtceu:selenium_dust", "50x gtceu:activated_carbon_dust", "60x gtceu:rutile_dust", "55x gtceu:quicklime_dust")
@@ -13389,7 +13469,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(21600)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:photopolymer")
+    gtr.distort("gtlcore:photopolymer")
         .itemInputs("gtceu:white_dwarf_mtter_nanoswarm")
         .itemOutputs("gtceu:contaminable_white_dwarf_mtter_nanoswarm")
         .itemInputs("768x gtceu:carbon_dust", "50x gtceu:rutile_dust", "70x gtceu:succinic_acid_dust", "32x gtceu:ice_dust", "20x gtceu:silver_dust", "25x gtceu:quicklime_dust", "40x gtceu:boron_dust", "120x gtceu:sodium_dust")
@@ -13400,7 +13480,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(21600)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:polyetheretherketone")
+    gtr.distort("gtlcore:polyetheretherketone")
         .itemInputs("gtceu:vibranium_nanoswarm")
         .itemOutputs("gtceu:contaminable_vibranium_nanoswarm")
         .itemInputs("16x gtceu:sodium_dust")
@@ -13412,7 +13492,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(14400)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:zylon_dust")
+    gtr.distort("gtlcore:zylon_dust")
         .itemInputs("gtceu:black_dwarf_mtter_nanoswarm")
         .itemOutputs("gtceu:contaminable_black_dwarf_mtter_nanoswarm")
         .itemInputs("1762x gtceu:sulfur_dust", "41x gtceu:sodium_dust")
@@ -13423,7 +13503,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(18900)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.distort("gtceu:mutagen")
+    gtr.distort("gtlcore:mutagen")
         .itemInputs("gtceu:silver_nanoswarm")
         .itemOutputs("gtceu:contaminable_silver_nanoswarm")
         .itemInputs("256x gtceu:bio_chaff", "gtceu:naquadria_dust")
@@ -13445,7 +13525,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(16200)
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
 
-    gtr.distort("gtceu:polyvinyl_butyral")
+    gtr.distort("gtlcore:polyvinyl_butyral")
         .itemInputs("gtceu:carbon_nanoswarm")
         .itemOutputs("gtceu:contaminable_carbon_nanoswarm")
         .itemInputs("96x gtceu:carbon_dust", "4x gtceu:rutile_dust")
@@ -13455,7 +13535,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(6000)
 
-    gtr.distort("gtceu:cosmic_superconductor")
+    gtr.distort("gtlcore:cosmic_superconductor")
         .itemInputs("gtceu:draconium_nanoswarm")
         .itemOutputs("gtceu:contaminable_draconium_nanoswarm")
         .itemInputs("gtceu:phosphorus_dust", "18x gtceu:sulfur_dust", "6x gtceu:sodium_dust", "gtceu:thallium_dust", "6x gtceu:rhenium_chloride_dust", "5x gtceu:hassium_chloride_dust", "36x gtceu:atinium_hydride_dust", "14x gtceu:charged_caesium_cerium_cobalt_indium_dust")
@@ -13466,7 +13546,7 @@ ServerEvents.recipes((event) => {
         .duration(16000)
         .cleanroom(GTLCleanroomType.LAW_CLEANROOM)
 
-    gtr.distort("gtceu:acidic_naquadria_solution")
+    gtr.distort("gtlcore:acidic_naquadria_solution")
         .itemInputs("gtceu:carbon_nanoswarm")
         .itemOutputs("gtceu:contaminable_carbon_nanoswarm")
         .itemInputs("gtceu:enriched_naquadah_dust")
@@ -13476,7 +13556,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(9000)
         .duration(200)
 
-    gtr.distort("gtceu:acidic_enriched_naquadah_solution")
+    gtr.distort("gtlcore:acidic_enriched_naquadah_solution")
         .itemInputs("gtceu:carbon_nanoswarm")
         .itemOutputs("gtceu:contaminable_carbon_nanoswarm")
         .itemInputs("gtceu:naquadria_dust")
@@ -13486,7 +13566,7 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(9000)
         .duration(200)
 
-    gtr.qft("gtceu:fullerene_polymer_matrix_pulp_dust")
+    gtr.qft("gtlcore:fullerene_polymer_matrix_pulp_dust")
         .notConsumable("gtceu:starmetal_nanoswarm")
         .itemInputs("16x gtceu:fullerene_dust", "8x gtceu:palladium_dust")
         .inputFluids("gtceu:nitrogen 15000", "gtceu:hydrogen 73000", "gtceu:oxygen 13000")
@@ -13494,7 +13574,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(400)
 
-    gtr.qft("gtceu:taranium_dust")
+    gtr.qft("gtlcore:taranium_dust")
         .notConsumable("avaritia:infinity_catalyst")
         .itemInputs("176x gtceu:bedrock_dust", "64x gtceu:carbon_dust", "640x gtceu:deepslate_dust")
         .inputFluids("gtceu:helium 37000", "gtceu:hydrogen 73000", "gtceu:xenon 3000")
@@ -13565,7 +13645,7 @@ ServerEvents.recipes((event) => {
         .EUt(1920)
         .duration(20)
 
-    gtr.lightning_processor("gtceu:thaumium_dust")
+    gtr.lightning_processor("gtlcore:thaumium_dust")
         .itemInputs("8x gtceu:infused_gold_dust", "8x gtceu:iron_dust", "16x gtceu:lapis_dust")
         .inputFluids("gtceu:distilled_water 1000")
         .itemOutputs("16x gtceu:thaumium_dust")
@@ -13585,7 +13665,7 @@ ServerEvents.recipes((event) => {
         .EUt(480)
         .duration(600)
 
-    gtr.fluid_solidifier("gtceu:luminessence_dust")
+    gtr.fluid_solidifier("gtlcore:luminessence_dust")
         .itemInputs("2x gtceu:highenergymixture_dust")
         .inputFluids("gtceu:phosphoric_acid 2000")
         .itemOutputs("gtceu:luminessence_dust")
@@ -13599,7 +13679,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UXV])
         .duration(400)
 
-    gtr.stellar_forge("gtceu:astraltitanium_plasma")
+    gtr.stellar_forge("gtlcore:astraltitanium_plasma")
         .itemInputs("gtlcore:naquadria_charge")
         .inputFluids("gtceu:force 576", "gtceu:titanium 576", "gtceu:cobalt 288", "gtceu:copper 288", "gtceu:tritium 1000")
         .outputFluids("gtceu:astraltitanium_plasma 1000")
@@ -13607,7 +13687,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .addData("SCTier", 1)
 
-    gtr.stellar_forge("gtceu:celestialtungsten_plasma")
+    gtr.stellar_forge("gtlcore:celestialtungsten_plasma")
         .itemInputs("gtlcore:naquadria_charge")
         .inputFluids("gtceu:tartarite 576", "gtceu:tungsten 576", "gtceu:americium 288", "gtceu:titan_precision_steel 144", "gtceu:astraltitanium 144", "gtceu:xenon 1000")
         .outputFluids("gtceu:celestialtungsten_plasma 1000")
@@ -13623,7 +13703,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.qft("gtceu:cosmic_ingot")
+    gtr.qft("gtlcore:cosmic_ingot")
         .notConsumable("gtceu:cosmicneutronium_nanoswarm")
         .chancedInput("gtlcore:cosmic_singularity", 1000, 0)
         .itemInputs("gtlcore:hypercube", "avaritia:infinity_ingot")
@@ -13632,7 +13712,7 @@ ServerEvents.recipes((event) => {
         .EUt(64 * GTValues.VA[GTValues.MAX])
         .duration(200)
 
-    gtr.qft("gtceu:magmatter")
+    gtr.qft("gtlcore:magmatter")
         .notConsumable("gtlcore:spacetime_catalyst")
         .inputFluids("gtceu:chaos 1000", "gtceu:spatialfluid 1000", "gtceu:exciteddtsc 1000")
         .itemInputs("gtceu:attuned_tengam_block")
@@ -13640,7 +13720,7 @@ ServerEvents.recipes((event) => {
         .EUt(16 * GTValues.VA[GTValues.MAX])
         .duration(800)
 
-    gtr.sps_crafting("gtceu:magmatter_ingot")
+    gtr.sps_crafting("gtlcore:magmatter_ingot")
         .notConsumable("kubejs:ingot_field_shape")
         .inputFluids("gtceu:mana 100000", "gtceu:magmatter 100")
         .itemInputs("minecraft:netherite_ingot")
@@ -13648,7 +13728,7 @@ ServerEvents.recipes((event) => {
         .EUt(4 * GTValues.VA[GTValues.MAX])
         .duration(400)
 
-    gtr.sps_crafting("gtceu:magmatter_ingot_d")
+    gtr.sps_crafting("gtlcore:magmatter_ingot_d")
         .inputFluids("gtceu:mana 10000", "gtceu:magmatter 10")
         .notConsumable("kubejs:ingot_field_shape")
         .itemInputs("gtceu:magmatter_dust", "minecraft:netherite_ingot")
@@ -13777,14 +13857,14 @@ ServerEvents.recipes((event) => {
         .EUt(7680)
         .duration(800)
 
-    gtr.vacuum_freezer("gtceu:metastable_oganesson")
+    gtr.vacuum_freezer("gtlcore:metastable_oganesson")
         .inputFluids("gtceu:hot_oganesson 1000", "kubejs:gelid_cryotheum 144")
         .outputFluids("gtceu:metastable_oganesson 144")
         .itemOutputs("2x gtceu:small_enderium_dust")
         .EUt(GTValues.VA[GTValues.UV])
         .duration(280)
 
-    gtr.neutron_activator("gtceu:hassium")
+    gtr.neutron_activator("gtlcore:hassium")
         .inputFluids("gtceu:liquid_metastable_hassium 1000")
         .outputFluids("gtceu:hassium 1000")
         .addData("ev_min", 340)
@@ -13793,7 +13873,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.neutron_activator("gtceu:oganesson")
+    gtr.neutron_activator("gtlcore:oganesson")
         .inputFluids("gtceu:metastable_oganesson 1000")
         .outputFluids("gtceu:oganesson 1000")
         .addData("ev_min", 720)
@@ -13802,7 +13882,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.neutron_activator("gtceu:quantanium")
+    gtr.neutron_activator("gtlcore:quantanium")
         .inputFluids("gtceu:neon 10000")
         .itemInputs("4x gtceu:quantum_star", "8x gtceu:quantum_eye", "16x gtceu:mithril_dust", "16x gtceu:gadolinium_dust", "64x minecraft:netherite_scrap", "64x ae2:fluix_dust")
         .outputFluids("gtceu:quantanium 10000")
@@ -13855,7 +13935,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(1200)
 
-    gtr.extractor("gtceu:antimatter")
+    gtr.extractor("gtlcore:antimatter")
         .itemInputs("gtlcore:pellet_antimatter")
         .outputFluids("gtceu:antimatter 1000")
         .duration(2000)
@@ -14107,21 +14187,21 @@ ServerEvents.recipes((event) => {
         .duration(360000)
         .addData("FRheat", 9)
 
-    gtr.assembler("gtmthings:ulv_huge_item_import_bus")
+    gtr.assembler("gtlcore:ulv_huge_item_import_bus")
         .inputFluids("gtceu:soldering_alloy 144")
         .itemInputs("gtceu:ulv_input_bus", "gtlcore:primitive_robot_arm", "gtceu:bronze_crate", "4x #gtceu:circuits/ulv", "4x gtceu:wrought_iron_plate")
         .itemOutputs("gtmthings:ulv_huge_item_import_bus")
         .EUt(7)
         .duration(200)
 
-    gtr.assembler("gtmthings:ulv_huge_item_export_bus")
+    gtr.assembler("gtlcore:ulv_huge_item_export_bus")
         .inputFluids("gtceu:soldering_alloy 144")
         .itemInputs("gtceu:ulv_output_bus", "gtlcore:primitive_robot_arm", "gtceu:bronze_crate", "4x #gtceu:circuits/ulv", "4x gtceu:wrought_iron_plate")
         .itemOutputs("gtmthings:ulv_huge_item_export_bus")
         .EUt(7)
         .duration(200)
 
-    gtr.fuel_refining("gtceu:cetane_boosted_diesel")
+    gtr.fuel_refining("gtlcore:cetane_boosted_diesel")
         .itemInputs("16x gtceu:carbon_dust")
         .inputFluids("gtceu:hydrogen 10000", "gtceu:oxygen 5000", "gtceu:light_fuel 10000", "gtceu:heavy_fuel 2000", "gtceu:nitration_mixture 4000")
         .outputFluids("gtceu:cetane_boosted_diesel 18000")
@@ -14129,7 +14209,7 @@ ServerEvents.recipes((event) => {
         .duration(400)
         .blastFurnaceTemp(2200)
 
-    gtr.fuel_refining("gtceu:cetane_boosted_diesel_b")
+    gtr.fuel_refining("gtlcore:cetane_boosted_diesel_b")
         .itemInputs("12x gtceu:carbon_dust")
         .inputFluids("gtceu:hydrogen 10000", "gtceu:oxygen 5000", "gtceu:bio_diesel 16000", "gtceu:nitration_mixture 4000")
         .outputFluids("gtceu:cetane_boosted_diesel 14000")
@@ -14137,7 +14217,7 @@ ServerEvents.recipes((event) => {
         .duration(600)
         .blastFurnaceTemp(2500)
 
-    gtr.fuel_refining("gtceu:high_octane_gasoline")
+    gtr.fuel_refining("gtlcore:high_octane_gasoline")
         .itemInputs("44x gtceu:carbon_dust")
         .inputFluids("gtceu:oxygen 12000", "gtceu:nitrogen 8000", "gtceu:naphtha 16000", "gtceu:refinery_gas 2000", "gtceu:toluene 4000", "gtceu:octane 3000")
         .outputFluids("gtceu:high_octane_gasoline 50000")
@@ -14145,7 +14225,7 @@ ServerEvents.recipes((event) => {
         .duration(1200)
         .blastFurnaceTemp(4800)
 
-    gtr.fuel_refining("gtceu:rocket_fuel")
+    gtr.fuel_refining("gtlcore:rocket_fuel")
         .circuit(1)
         .itemInputs("8x gtceu:carbon_dust")
         .inputFluids("gtceu:hydrogen 32000", "gtceu:oxygen 14000", "gtceu:nitrogen 12000", "gtceu:chlorine 10000")
@@ -14154,7 +14234,7 @@ ServerEvents.recipes((event) => {
         .duration(1600)
         .blastFurnaceTemp(2600)
 
-    gtr.fuel_refining("gtceu:rocket_fuel_rp_1")
+    gtr.fuel_refining("gtlcore:rocket_fuel_rp_1")
         .itemInputs("64x gtceu:carbon_dust")
         .inputFluids("gtceu:coal_gas 80000", "gtceu:oxygen 10000")
         .outputFluids("gtceu:rocket_fuel_rp_1 4000")
@@ -14162,7 +14242,7 @@ ServerEvents.recipes((event) => {
         .duration(1200)
         .blastFurnaceTemp(3800)
 
-    gtr.fuel_refining("gtceu:dense_hydrazine_fuel_mixture")
+    gtr.fuel_refining("gtlcore:dense_hydrazine_fuel_mixture")
         .itemInputs("32x gtceu:carbon_dust")
         .inputFluids("gtceu:hydrogen 12000", "gtceu:oxygen 8000", "gtceu:nitrogen 10000", "gtceu:hydrogen_peroxide 4000")
         .outputFluids("gtceu:dense_hydrazine_fuel_mixture 8000")
@@ -14170,7 +14250,7 @@ ServerEvents.recipes((event) => {
         .duration(800)
         .blastFurnaceTemp(3200)
 
-    gtr.fuel_refining("gtceu:rocket_fuel_cn3h7o3")
+    gtr.fuel_refining("gtlcore:rocket_fuel_cn3h7o3")
         .circuit(1)
         .itemInputs("12x gtceu:carbon_dust")
         .inputFluids("gtceu:hydrogen 14000", "gtceu:nitrogen 6000", "gtceu:nitric_acid 3000", "gtceu:hydrogen_peroxide 2000")
@@ -14179,7 +14259,7 @@ ServerEvents.recipes((event) => {
         .duration(1200)
         .blastFurnaceTemp(3400)
 
-    gtr.fuel_refining("gtceu:rocket_fuel_h8n4c2o4")
+    gtr.fuel_refining("gtlcore:rocket_fuel_h8n4c2o4")
         .circuit(2)
         .itemInputs("18x gtceu:carbon_dust")
         .inputFluids("gtceu:hydrogen 30000", "gtceu:nitrogen 18000", "gtceu:oxygen 24000", "gtceu:chlorine 10000")
@@ -14196,7 +14276,7 @@ ServerEvents.recipes((event) => {
         .duration(6400)
         .blastFurnaceTemp(10000)
 
-    gtr.fuel_refining("gtceu:stellar_energy_rocket_fuel")
+    gtr.fuel_refining("gtlcore:stellar_energy_rocket_fuel")
         .itemInputs("64x minecraft:fire_charge", "8x gtceu:hmxexplosive_dust", "4x gtceu:enriched_naquadah_dust")
         .inputFluids("gtceu:hydrogen_peroxide 8000", "gtceu:rocket_fuel_cn3h7o3 8000", "gtceu:dense_hydrazine_fuel_mixture 12000", "gtceu:rocket_fuel_rp_1 4000", "gtceu:nitration_mixture 4000", "gtceu:benzene 4000")
         .outputFluids("gtceu:stellar_energy_rocket_fuel 40000")
@@ -14204,7 +14284,7 @@ ServerEvents.recipes((event) => {
         .duration(7200)
         .blastFurnaceTemp(14400)
 
-    gtr.atomic_energy_excitation("gtceu:naquadah_fuel")
+    gtr.atomic_energy_excitation("gtlcore:naquadah_fuel")
         .notConsumable("gtceu:orichalcum_nanoswarm")
         .itemInputs("16x gtceu:naquadah_dust")
         .inputFluids("gtceu:hydrogen 30000", "gtceu:nitrogen 15000", "gtceu:fluorine 8000", "gtceu:nitric_acid 8000")
@@ -14213,7 +14293,7 @@ ServerEvents.recipes((event) => {
         .duration(4000)
         .blastFurnaceTemp(12000)
 
-    gtr.atomic_energy_excitation("gtceu:enriched_naquadah_fuel")
+    gtr.atomic_energy_excitation("gtlcore:enriched_naquadah_fuel")
         .notConsumable("gtceu:vibranium_nanoswarm")
         .notConsumableFluid("gtceu:caesium_fluoride 1000")
         .itemInputs("16x gtceu:enriched_naquadah_dust", "4x gtceu:antimony_dust")
@@ -14223,7 +14303,7 @@ ServerEvents.recipes((event) => {
         .duration(4000)
         .blastFurnaceTemp(12500)
 
-    gtr.atomic_energy_excitation("gtceu:hyper_fuel_1")
+    gtr.atomic_energy_excitation("gtlcore:hyper_fuel_1")
         .itemInputs("14x gtceu:naquadria_dust", "20x gtceu:enriched_naquadah_dust", "40x gtceu:naquadah_dust")
         .inputFluids("gtceu:hydrogen 100000", "gtceu:nitrogen 76000", "gtceu:fluorine 10000", "gtceu:radon 2000", "gtceu:xenon 4000", "gtceu:thorium 4608")
         .outputFluids("gtceu:hyper_fuel_1 24000")
@@ -14231,7 +14311,7 @@ ServerEvents.recipes((event) => {
         .duration(3800)
         .blastFurnaceTemp(13200)
 
-    gtr.atomic_energy_excitation("gtceu:hyper_fuel_2")
+    gtr.atomic_energy_excitation("gtlcore:hyper_fuel_2")
         .itemInputs("4x gtceu:dubnium_dust", "6x gtceu:fermium_dust")
         .inputFluids("gtceu:hyper_fuel_1 6000", "gtceu:radon 40000", "gtceu:xenon 32000", "gtceu:thorium 3456", "gtceu:naquadria 864", "gtceu:uranium_235 2304")
         .outputFluids("gtceu:hyper_fuel_2 9600", "gtceu:hyper_fuel_1 500")
@@ -14239,7 +14319,7 @@ ServerEvents.recipes((event) => {
         .duration(4000)
         .blastFurnaceTemp(14000)
 
-    gtr.atomic_energy_excitation("gtceu:hyper_fuel_3")
+    gtr.atomic_energy_excitation("gtlcore:hyper_fuel_3")
         .itemInputs("6x gtceu:lawrencium_dust", "8x gtceu:adamantine_dust")
         .inputFluids("gtceu:hyper_fuel_2 6000", "gtceu:naquadria 864", "gtceu:thorium 1728", "gtceu:fermium 5184", "gtceu:uranium_235 2304", "gtceu:plutonium_241 4608")
         .outputFluids("gtceu:hyper_fuel_3 12000", "gtceu:hyper_fuel_2 750")
@@ -14247,7 +14327,7 @@ ServerEvents.recipes((event) => {
         .duration(4000)
         .blastFurnaceTemp(15200)
 
-    gtr.atomic_energy_excitation("gtceu:hyper_fuel_4")
+    gtr.atomic_energy_excitation("gtlcore:hyper_fuel_4")
         .itemInputs("8x gtceu:neutronium_dust", "12x gtceu:taranium_dust")
         .inputFluids("gtceu:hyper_fuel_3 6000", "gtceu:nobelium 8000", "gtceu:thorium 1728", "gtceu:fermium 2340", "gtceu:uranium_235 2304", "gtceu:plutonium_241 5184")
         .outputFluids("gtceu:hyper_fuel_4 16000", "gtceu:hyper_fuel_3 1000")
@@ -14255,7 +14335,7 @@ ServerEvents.recipes((event) => {
         .duration(4200)
         .blastFurnaceTemp(18000)
 
-    gtr.atomic_energy_excitation("gtceu:concentration_mixing_hyper_fuel_1")
+    gtr.atomic_energy_excitation("gtlcore:concentration_mixing_hyper_fuel_1")
         .notConsumable("gtceu:white_dwarf_mtter_nanoswarm")
         .itemInputs("4x gtlcore:resonating_gem", "16x gtceu:hassium_dust")
         .inputFluids("gtceu:hyper_fuel_4 8000", "gtceu:helium_plasma 6000", "gtceu:nickel_plasma 6000", "gtceu:oganesson 1152", "gtceu:naquadriatictaranium 2304", "gtceu:plutonium_241 864")
@@ -14264,7 +14344,7 @@ ServerEvents.recipes((event) => {
         .duration(1200)
         .blastFurnaceTemp(18800)
 
-    gtr.atomic_energy_excitation("gtceu:concentration_mixing_hyper_fuel_2")
+    gtr.atomic_energy_excitation("gtlcore:concentration_mixing_hyper_fuel_2")
         .notConsumable("gtceu:black_dwarf_mtter_nanoswarm")
         .itemInputs("16x gtceu:draconium_dust", "18x gtceu:starmetal_dust")
         .inputFluids("gtceu:concentration_mixing_hyper_fuel_1 6000", "gtceu:cosmic_element 60000", "gtceu:oxygen_plasma 6000", "gtceu:argon_plasma 6000", "gtceu:iron_plasma 6000", "gtceu:nitrogen_plasma 6000")
@@ -14280,33 +14360,33 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.UEV])
         .duration(800)
 
-    gtr.dehydrator("gtceu:polyimide")
+    gtr.dehydrator("gtlcore:polyimide")
         .inputFluids("gtceu:paa 144")
         .outputFluids("gtceu:polyimide 144")
         .EUt(30)
         .duration(270)
 
-    gtr.dehydrator("gtceu:stearic_acid")
+    gtr.dehydrator("gtlcore:stearic_acid")
         .inputFluids("gtceu:deglycerated_soap 1000")
         .outputFluids("gtceu:stearic_acid 800")
         .itemOutputs("gtceu:salt_dust")
         .EUt(2000)
         .duration(160)
 
-    gtr.dehydrator("gtceu:tungsten_trioxide_dust")
+    gtr.dehydrator("gtlcore:tungsten_trioxide_dust")
         .itemInputs("7x gtceu:tungstic_acid_dust")
         .itemOutputs("4x gtceu:tungsten_trioxide_dust")
         .EUt(120)
         .duration(150)
 
-    gtr.dehydrator("gtceu:silica_gel_dust")
+    gtr.dehydrator("gtlcore:silica_gel_dust")
         .inputFluids("gtceu:silica_gel_base 1000")
         .itemOutputs("3x gtceu:silica_gel_dust", "2x gtceu:salt_dust")
         .EUt(480)
         .duration(130)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.dehydrator("gtceu:salt_dust")
+    gtr.dehydrator("gtlcore:salt_dust")
         .inputFluids("gtceu:salt_water 1000")
         .itemOutputs("2x gtceu:salt_dust")
         .EUt(30)
@@ -15790,84 +15870,84 @@ ServerEvents.recipes((event) => {
             .addData("grindball", 2)
     })
 
-    gtr.flotating_beneficiation("gtceu:almandine_front")
+    gtr.flotating_beneficiation("gtlcore:almandine_front")
         .itemInputs("32x gtceu:sodium_ethylxanthate_dust", "64x gtceu:milled_almandine")
         .inputFluids("gtceu:turpentine 18000")
         .outputFluids("gtceu:almandine_front 1000")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:chalcopyrite_front")
+    gtr.flotating_beneficiation("gtlcore:chalcopyrite_front")
         .itemInputs("32x gtceu:potassium_ethylxanthate_dust", "64x gtceu:milled_chalcopyrite")
         .inputFluids("gtceu:turpentine 12000")
         .outputFluids("gtceu:chalcopyrite_front 1000")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:grossular_front")
+    gtr.flotating_beneficiation("gtlcore:grossular_front")
         .itemInputs("32x gtceu:potassium_ethylxanthate_dust", "64x gtceu:milled_grossular")
         .inputFluids("gtceu:turpentine 28000")
         .outputFluids("gtceu:grossular_front 1000")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:monazite_front")
+    gtr.flotating_beneficiation("gtlcore:monazite_front")
         .itemInputs("32x gtceu:sodium_ethylxanthate_dust", "64x gtceu:milled_monazite")
         .inputFluids("gtceu:turpentine 30000")
         .outputFluids("gtceu:monazite_front 1000")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:nickel_front")
+    gtr.flotating_beneficiation("gtlcore:nickel_front")
         .itemInputs("32x gtceu:potassium_ethylxanthate_dust", "64x gtceu:milled_nickel")
         .inputFluids("gtceu:turpentine 25000")
         .outputFluids("gtceu:nickel_front 1000")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:platinum_front")
+    gtr.flotating_beneficiation("gtlcore:platinum_front")
         .itemInputs("32x gtceu:sodium_ethylxanthate_dust", "64x gtceu:milled_platinum")
         .inputFluids("gtceu:turpentine 35000")
         .outputFluids("gtceu:platinum_front 1000")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:pyrope_front")
+    gtr.flotating_beneficiation("gtlcore:pyrope_front")
         .itemInputs("32x gtceu:sodium_ethylxanthate_dust", "64x gtceu:milled_pyrope")
         .inputFluids("gtceu:turpentine 8000")
         .outputFluids("gtceu:pyrope_front 1000")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:redstone_front")
+    gtr.flotating_beneficiation("gtlcore:redstone_front")
         .itemInputs("32x gtceu:sodium_ethylxanthate_dust", "64x gtceu:milled_redstone")
         .inputFluids("gtceu:turpentine 13000")
         .outputFluids("gtceu:redstone_front 1000")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:spessartine_front")
+    gtr.flotating_beneficiation("gtlcore:spessartine_front")
         .itemInputs("32x gtceu:potassium_ethylxanthate_dust", "64x gtceu:milled_spessartine")
         .inputFluids("gtceu:turpentine 35000")
         .outputFluids("gtceu:spessartine_front 1000")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:sphalerite_front")
+    gtr.flotating_beneficiation("gtlcore:sphalerite_front")
         .itemInputs("32x gtceu:sodium_ethylxanthate_dust", "64x gtceu:milled_sphalerite")
         .inputFluids("gtceu:turpentine 14000")
         .outputFluids("gtceu:sphalerite_front 1000")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:pentlandite_front")
+    gtr.flotating_beneficiation("gtlcore:pentlandite_front")
         .itemInputs("32x gtceu:potassium_ethylxanthate_dust", "64x gtceu:milled_pentlandite")
         .inputFluids("gtceu:turpentine 14000")
         .outputFluids("gtceu:pentlandite_front 1000")
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(4800)
 
-    gtr.flotating_beneficiation("gtceu:enriched_naquadah_front")
+    gtr.flotating_beneficiation("gtlcore:enriched_naquadah_front")
         .itemInputs("64x gtceu:potassium_ethylxanthate_dust", "64x gtceu:milled_enriched_naquadah")
         .inputFluids("gtceu:turpentine 140000")
         .outputFluids("gtceu:enriched_naquadah_front 1000")
@@ -15913,7 +15993,7 @@ ServerEvents.recipes((event) => {
         .duration(350)
         .blastFurnaceTemp(1200)
 
-    gtr.vacuum_drying("gtceu:almandine_front_pro")
+    gtr.vacuum_drying("gtlcore:almandine_front_pro")
         .circuit(1)
         .inputFluids("gtceu:almandine_front 4000")
         .itemOutputs("64x gtceu:aluminium_dust", "64x gtceu:aluminium_dust", "64x gtceu:manganese_dust", "24x gtceu:manganese_dust", "24x gtceu:yttrium_dust", "16x gtceu:ytterbium_dust")
@@ -15922,7 +16002,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(5500)
 
-    gtr.vacuum_drying("gtceu:chalcopyrite_front_pro")
+    gtr.vacuum_drying("gtlcore:chalcopyrite_front_pro")
         .circuit(2)
         .inputFluids("gtceu:chalcopyrite_front 4000")
         .itemOutputs("64x gtceu:copper_dust", "64x gtceu:copper_dust", "64x gtceu:iron_dust", "48x gtceu:iron_dust", "48x gtceu:cadmium_dust", "32x gtceu:indium_dust")
@@ -15931,7 +16011,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(4500)
 
-    gtr.vacuum_drying("gtceu:grossular_front_pro")
+    gtr.vacuum_drying("gtlcore:grossular_front_pro")
         .circuit(3)
         .inputFluids("gtceu:grossular_front 4000")
         .itemOutputs("64x gtceu:calcium_dust", "64x gtceu:calcium_dust", "64x gtceu:aluminium_dust", "64x gtceu:aluminium_dust", "64x gtceu:tungsten_dust", "16x gtceu:thallium_dust")
@@ -15940,7 +16020,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(5500)
 
-    gtr.vacuum_drying("gtceu:monazite_front_pro")
+    gtr.vacuum_drying("gtlcore:monazite_front_pro")
         .circuit(4)
         .inputFluids("gtceu:monazite_front 4000")
         .itemOutputs("64x gtceu:erbium_dust", "64x gtceu:neodymium_dust", "48x gtceu:thorium_dust", "32x gtceu:lanthanum_dust", "16x gtceu:lutetium_dust", "8x gtceu:europium_dust")
@@ -15949,7 +16029,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(5500)
 
-    gtr.vacuum_drying("gtceu:nickel_front_pro")
+    gtr.vacuum_drying("gtlcore:nickel_front_pro")
         .circuit(5)
         .inputFluids("gtceu:nickel_front 4000")
         .itemOutputs("64x gtceu:nickel_dust", "64x gtceu:nickel_dust", "64x gtceu:cobalt_dust", "64x gtceu:cobalt_dust", "32x gtceu:iron_dust", "32x gtceu:rhodium_dust")
@@ -15958,7 +16038,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(4500)
 
-    gtr.vacuum_drying("gtceu:platinum_front_pro")
+    gtr.vacuum_drying("gtlcore:platinum_front_pro")
         .circuit(6)
         .inputFluids("gtceu:platinum_front 4000")
         .itemOutputs("64x gtceu:platinum_dust", "48x gtceu:nickel_dust", "32x gtceu:iridium_dust", "32x gtceu:osmium_dust", "32x gtceu:palladium_dust", "32x gtceu:cobalt_dust")
@@ -15967,7 +16047,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(5500)
 
-    gtr.vacuum_drying("gtceu:pyrope_front_pro")
+    gtr.vacuum_drying("gtlcore:pyrope_front_pro")
         .circuit(7)
         .inputFluids("gtceu:pyrope_front 4000")
         .itemOutputs("64x gtceu:magnesium_dust", "64x gtceu:magnesium_dust", "64x gtceu:aluminium_dust", "64x gtceu:manganese_dust", "64x gtceu:boron_dust", "48x gtceu:silicon_dust")
@@ -15976,7 +16056,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(3500)
 
-    gtr.vacuum_drying("gtceu:redstone_front_pro")
+    gtr.vacuum_drying("gtlcore:redstone_front_pro")
         .circuit(8)
         .inputFluids("gtceu:redstone_front 4000")
         .itemOutputs("64x minecraft:redstone", "64x minecraft:redstone", "64x gtceu:manganese_dust", "64x gtceu:manganese_dust", "32x gtceu:yttrium_dust", "16x gtceu:ytterbium_dust")
@@ -15985,7 +16065,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(4500)
 
-    gtr.vacuum_drying("gtceu:spessartine_front_pro")
+    gtr.vacuum_drying("gtlcore:spessartine_front_pro")
         .circuit(9)
         .inputFluids("gtceu:spessartine_front 4000")
         .itemOutputs("64x gtceu:manganese_dust", "64x gtceu:manganese_dust", "64x gtceu:aluminium_dust", "32x gtceu:aluminium_dust", "32x gtceu:palladium_dust", "16x gtceu:strontium_dust")
@@ -15994,7 +16074,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(5500)
 
-    gtr.vacuum_drying("gtceu:sphalerite_front_pro")
+    gtr.vacuum_drying("gtlcore:sphalerite_front_pro")
         .circuit(10)
         .inputFluids("gtceu:sphalerite_front 4000")
         .itemOutputs("64x gtceu:zinc_dust", "64x gtceu:zinc_dust", "64x gtceu:iron_dust", "32x gtceu:iron_dust", "64x gtceu:indium_dust", "64x gtceu:gallium_dust")
@@ -16003,7 +16083,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(5500)
 
-    gtr.vacuum_drying("gtceu:pentlandite_front_pro")
+    gtr.vacuum_drying("gtlcore:pentlandite_front_pro")
         .circuit(11)
         .inputFluids("gtceu:pentlandite_front 4000")
         .itemOutputs("64x gtceu:iron_dust", "64x gtceu:iron_dust", "64x gtceu:nickel_dust", "64x gtceu:nickel_dust", "64x gtceu:bismuth_dust", "48x gtceu:ruthenium_dust")
@@ -16012,7 +16092,7 @@ ServerEvents.recipes((event) => {
         .duration(2400)
         .blastFurnaceTemp(5500)
 
-    gtr.vacuum_drying("gtceu:enriched_naquadah_front_pro")
+    gtr.vacuum_drying("gtlcore:enriched_naquadah_front_pro")
         .circuit(12)
         .inputFluids("gtceu:enriched_naquadah_front 4000")
         .itemOutputs("64x gtceu:enriched_naquadah_dust", "64x gtceu:enriched_naquadah_dust", "64x gtceu:naquadah_dust", "32x gtceu:naquadah_dust", "64x gtceu:naquadria_dust", "32x gtceu:trinium_dust")
@@ -16137,7 +16217,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.IV])
         .duration(800)
 
-    gtr.distillation_tower("gtceu:turpentine")
+    gtr.distillation_tower("gtlcore:turpentine")
         .inputFluids("gtceu:steam_cracked_turpentine 1000")
         .outputFluids("gtceu:turpentine 1000", "gtceu:naphtha 900")
         .EUt(GTValues.VA[GTValues.EV])
@@ -16164,22 +16244,6 @@ ServerEvents.recipes((event) => {
         .itemOutputs("3x gtceu:potash_dust")
         .EUt(7)
         .duration(120)
-
-    gtr.chemical_reactor("gtlcore:calcite_dust")
-        .circuit(1)
-        .itemInputs("2x gtceu:quicklime_dust")
-        .inputFluids("gtceu:carbon_dioxide 1000")
-        .itemOutputs("5x gtceu:calcite_dust")
-        .EUt(30)
-        .duration(80)
-
-    gtr.chemical_reactor("gtlcore:calcium_hydroxide_dust")
-        .circuit(1)
-        .itemInputs("2x gtceu:quicklime_dust")
-        .inputFluids("minecraft:water 1000")
-        .itemOutputs("5x gtceu:calcium_hydroxide_dust")
-        .EUt(120)
-        .duration(100)
 
     gtr.forge_hammer("gtlcore:special_ceramics_dust")
         .itemInputs("minecraft:brown_glazed_terracotta")
@@ -16389,13 +16453,13 @@ ServerEvents.recipes((event) => {
             .EUt(GTValues.VA[GTValues.OpV])
             .CWUt(1200))
 
-    gtr.compressor("gtceu:graphite_ingot")
+    gtr.compressor("gtlcore:graphite_ingot")
         .itemInputs("gtceu:graphite_dust")
         .itemOutputs("gtceu:graphite_ingot")
         .EUt(GTValues.VA[GTValues.LV])
         .duration(300)
 
-    gtr.laser_engraver("avaritia:singularity")
+    gtr.laser_engraver("gtlcore:singularity")
         .itemInputs("16x gtceu:magmatter_block")
         .itemInputs(Item.of("avaritia:singularity", `{Id:"avaritia:spacetime"}`).weakNBT())
         .itemOutputs("avaritia:singularity")
@@ -16403,7 +16467,7 @@ ServerEvents.recipes((event) => {
         .duration(1600)
 
     //Trinium Compound
-    gtr.vacuum_freezer("gtceu:fuming_nitric_acid")
+    gtr.vacuum_freezer("gtlcore:fuming_nitric_acid")
         .inputFluids("gtceu:fuming_nitric_acid 1000")
         .itemOutputs("5x gtceu:crystalline_nitric_acid_dust")
         .EUt(GTValues.VA[GTValues.MV])
@@ -16434,7 +16498,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.HV])
         .duration(190)
 
-    gtr.dehydrator("gtceu:residual_triniite_solution")
+    gtr.dehydrator("gtlcore:residual_triniite_solution")
         .inputFluids("gtceu:residual_triniite_solution 2000")
         .itemOutputs("1x gtceu:salt_dust", "20x gtceu:sodium_nitrate_dust")
         .chancedOutput("2x gtceu:naquadria_dust", 4800, 0)
@@ -16450,7 +16514,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.ZPM] * 2)
         .duration(210)
 
-    gtr.dissolution_treatment("gtceu:actinium_radium_hydroxide_solution")
+    gtr.dissolution_treatment("gtlcore:actinium_radium_hydroxide_solution")
         .inputFluids("gtceu:actinium_radium_hydroxide_solution 1000")
         .inputFluids("gtceu:nitric_acid 12000")
         .outputFluids("gtceu:actinium_radium_nitrate_solution 13000")
@@ -16526,7 +16590,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(350)
 
-    gtr.electrolyzer("gtceu:trinium_tetrafluoride_dust")
+    gtr.electrolyzer("gtlcore:trinium_tetrafluoride_dust")
         .itemInputs("5x gtceu:trinium_tetrafluoride_dust")
         .inputFluids("gtceu:molten_calcium_salts 1000")
         .itemOutputs("1x gtceu:trinium_dust", "2x gtceu:calcium_dust")
@@ -16608,7 +16672,7 @@ ServerEvents.recipes((event) => {
         .EUt(125)
         .duration(150)
 
-    gtr.electrolyzer("gtceu:caesium_nitrate_dust")
+    gtr.electrolyzer("gtlcore:caesium_nitrate_dust")
         .itemInputs("5x gtceu:caesium_nitrate_dust")
         .itemOutputs("1x gtceu:caesium_dust")
         .outputFluids("gtceu:nitrogen 1000", "gtceu:oxygen 3000")
@@ -16623,14 +16687,14 @@ ServerEvents.recipes((event) => {
         .duration(210)
         .blastFurnaceTemp(1100)
 
-    gtr.electrolyzer("gtceu:radium_nitrate_dust")
+    gtr.electrolyzer("gtlcore:radium_nitrate_dust")
         .itemInputs("9x gtceu:radium_nitrate_dust")
         .itemOutputs("1x gtceu:radium_dust")
         .outputFluids("gtceu:nitrogen 2000", "gtceu:oxygen 6000")
         .EUt(500)
         .duration(160)
 
-    gtr.electrolyzer("gtceu:actinium_nitrate_dust")
+    gtr.electrolyzer("gtlcore:actinium_nitrate_dust")
         .itemInputs("13x gtceu:actinium_nitrate_dust")
         .itemOutputs("1x gtceu:actinium_dust")
         .outputFluids("gtceu:nitrogen 3000", "gtceu:oxygen 9000")
@@ -16667,7 +16731,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.HV])
         .duration(240)
 
-    gtr.electrolyzer("gtceu:trimethylamine")
+    gtr.electrolyzer("gtlcore:trimethylamine")
         .inputFluids("gtceu:trimethylamine 13000")
         .itemOutputs("3x gtceu:carbon_dust")
         .outputFluids("gtceu:hydrogen 9000", "gtceu:nitrogen 1000")
@@ -16705,7 +16769,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.HV])
         .duration(320)
 
-    gtr.electrolyzer("gtceu:lithium_aluminium_fluoride_dust")
+    gtr.electrolyzer("gtlcore:lithium_aluminium_fluoride_dust")
         .itemInputs("6x gtceu:lithium_aluminium_fluoride_dust")
         .itemOutputs("4x gtceu:aluminium_trifluoride_dust", "2x gtceu:lithium_fluoride_dust")
         .EUt(120)
@@ -16734,7 +16798,7 @@ ServerEvents.recipes((event) => {
         .EUt(125)
         .duration(120)
 
-    gtr.dehydrator("gtceu:diethyl_ether")
+    gtr.dehydrator("gtlcore:diethyl_ether")
         .circuit(1)
         .notConsumableFluid("gtceu:sulfuric_acid 1000")
         .inputFluids("gtceu:ethanol 2000")
@@ -16770,7 +16834,7 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.MV])
         .duration(140)
 
-    gtr.electrolyzer("gtceu:sodium_hexafluoroaluminate")
+    gtr.electrolyzer("gtlcore:sodium_hexafluoroaluminate")
         .itemInputs("10x gtceu:alumina_dust")
         .inputFluids("gtceu:sodium_hexafluoroaluminate 1000")
         .itemOutputs("4x gtceu:aluminium_dust", "6x gtceu:sodium_fluoride_dust", "4x gtceu:aluminium_trifluoride_dust")
@@ -16785,13 +16849,13 @@ ServerEvents.recipes((event) => {
         .EUt(GTValues.VA[GTValues.LV])
         .duration(80)
 
-    gtr.electrolyzer("gtceu:trinium_compound_dust")
+    gtr.electrolyzer("gtlcore:trinium_compound_dust")
         .itemInputs("14x gtceu:trinium_compound_dust")
         .itemOutputs("3x gtceu:trinium_dust", "3x gtceu:actinium_dust", "4x gtceu:selenium_dust", "4x gtceu:astatine_dust")
         .EUt(GTValues.VA[GTValues.UIV])
         .duration(560)
 
-    gtr.compressor("kubejs:diamond_compressed_block")
+    gtr.compressor("gtlcore:diamond_compressed_block")
         .itemInputs("8x minecraft:diamond_block")
         .itemOutputs("kubejs:diamond_compressed_block")
         .EUt(GTValues.VA[GTValues.HV])
@@ -16802,7 +16866,7 @@ ServerEvents.recipes((event) => {
         .duration(120)
         .EUt(-2048)
 
-    gtr.lightning_processor("gtceu:nitric_oxide")
+    gtr.lightning_processor("gtlcore:nitric_oxide")
         .inputFluids("gtceu:air 10000")
         .outputFluids("gtceu:nitric_oxide 1000")
         .EUt(120)
