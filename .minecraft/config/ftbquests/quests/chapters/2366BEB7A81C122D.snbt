@@ -89,27 +89,27 @@
 			tasks: [
 				{
 					id: "7D4B60D506FF83C0"
-					item: "gtlcore:smd_capacitor_bioware"
+					item: "kubejs:smd_capacitor_bioware"
 					type: "item"
 				}
 				{
 					id: "796C0C67C3F01F7B"
-					item: "gtlcore:smd_diode_bioware"
+					item: "kubejs:smd_diode_bioware"
 					type: "item"
 				}
 				{
 					id: "7980D10B3CF288A4"
-					item: "gtlcore:smd_resistor_bioware"
+					item: "kubejs:smd_resistor_bioware"
 					type: "item"
 				}
 				{
 					id: "36CB0E3E237EC422"
-					item: "gtlcore:smd_transistor_bioware"
+					item: "kubejs:smd_transistor_bioware"
 					type: "item"
 				}
 				{
 					id: "43093BDBA607AFB5"
-					item: "gtlcore:smd_inductor_bioware"
+					item: "kubejs:smd_inductor_bioware"
 					type: "item"
 				}
 			]
@@ -126,7 +126,7 @@
 			id: "5E7F20C5F8530E1E"
 			tasks: [{
 				id: "2A747FECF6A9366B"
-				item: "gtlcore:bioware_processor"
+				item: "kubejs:bioware_processor"
 				type: "item"
 			}]
 			x: 8.0d
@@ -141,7 +141,7 @@
 			id: "76C32ADCD71DE8B8"
 			tasks: [{
 				id: "3EDE41255F7E04E7"
-				item: "gtlcore:bioware_assembly"
+				item: "kubejs:bioware_assembly"
 				type: "item"
 			}]
 			x: 10.0d
@@ -154,7 +154,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "648367DCA2352C63"
-				item: "gtlcore:bioware_computer"
+				item: "kubejs:bioware_computer"
 				type: "item"
 			}]
 			x: 10.0d
@@ -169,7 +169,7 @@
 			id: "7204F1B6BCC74F1C"
 			tasks: [{
 				id: "1E35DC7EF8C5881E"
-				item: "gtlcore:bioware_mainframe"
+				item: "kubejs:bioware_mainframe"
 				type: "item"
 			}]
 			x: 10.0d
@@ -247,7 +247,7 @@
 			id: "43A7282802A06626"
 			tasks: [{
 				id: "1763964DDAF2AECC"
-				item: "gtlcore:bioware_processing_core"
+				item: "kubejs:bioware_processing_core"
 				type: "item"
 			}]
 			x: 7.0d
@@ -264,7 +264,7 @@
 			id: "21CF5BE902E89B8A"
 			tasks: [{
 				id: "708ED67D28AAA758"
-				item: "gtlcore:bioware_boule"
+				item: "kubejs:bioware_boule"
 				type: "item"
 			}]
 			x: 6.0d
@@ -299,7 +299,7 @@
 			id: "6D83BAAC7DB34D51"
 			tasks: [{
 				id: "54ED6D9B82E6A10E"
-				item: "gtlcore:space_drone_mk1"
+				item: "kubejs:space_drone_mk1"
 				type: "item"
 			}]
 			x: 4.0d
@@ -322,7 +322,7 @@
 			id: "3EA935A712FA0EBE"
 			tasks: [{
 				id: "1D87EC0E1793346B"
-				item: "gtlcore:abyssalalloy_coil_block"
+				item: "kubejs:abyssalalloy_coil_block"
 				type: "item"
 			}]
 			x: 0.0d
@@ -375,7 +375,7 @@
 			id: "1B548589C6044A63"
 			tasks: [{
 				id: "74AD31D4642ED7CF"
-				item: "gtlcore:tcetieseaweedextract"
+				item: "kubejs:tcetieseaweedextract"
 				type: "item"
 			}]
 			x: 4.0d
@@ -429,7 +429,7 @@
 			id: "583079AD88755662"
 			tasks: [{
 				id: "6B65C07BCA6CC667"
-				item: "gtlcore:bioware_printed_circuit_board"
+				item: "kubejs:bioware_printed_circuit_board"
 				type: "item"
 			}]
 			x: 4.0d
@@ -534,7 +534,7 @@
 			id: "24585C3114095227"
 			tasks: [{
 				id: "65B817A00EF55E55"
-				item: "gtlcore:pellet_antimatter"
+				item: "kubejs:pellet_antimatter"
 				type: "item"
 			}]
 			x: 7.0d
@@ -600,7 +600,7 @@
 			id: "1385E89DD3FD663B"
 			tasks: [{
 				id: "68A5969FB9056BA3"
-				item: "gtlcore:precision_circuit_assembly_robot_mk1"
+				item: "kubejs:precision_circuit_assembly_robot_mk1"
 				type: "item"
 			}]
 			x: 10.0d

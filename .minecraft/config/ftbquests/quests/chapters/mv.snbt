@@ -920,6 +920,12 @@
 		{
 			dependencies: ["1B27E863E90AB90E"]
 			id: "0037D6BA6A4ABB72"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6EE131072EA1D9A8"
+				table_id: 6225023274141477362L
+				type: "random"
+			}]
 			tasks: [{
 				id: "41803FDFF0B25EBC"
 				item: "gtceu:polyethylene_bucket"
@@ -932,6 +938,11 @@
 			dependencies: ["033DE57F0D91698C"]
 			description: ["有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的锁定合成直到主产物返回。"]
 			id: "471C9A591D5CF776"
+			rewards: [{
+				id: "14728D61A431DB0B"
+				table_id: 6225023274141477362L
+				type: "random"
+			}]
 			tasks: [{
 				id: "6E1C628F99BD3D93"
 				item: {
@@ -981,7 +992,7 @@
 			y: 12.0d
 		}
 		{
-			dependencies: ["11B60450D7F3C188"]
+			dependencies: ["28B1628F5D38BBE9"]
 			description: ["压多层板"]
 			id: "06184322361F2DB5"
 			tasks: [{

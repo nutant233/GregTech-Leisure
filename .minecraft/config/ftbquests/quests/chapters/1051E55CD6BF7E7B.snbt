@@ -96,7 +96,7 @@
 			id: "5AFEAD001EDA612D"
 			tasks: [{
 				id: "318A4B7F9925680F"
-				item: "gtlcore:create_ultimate_battery"
+				item: "kubejs:create_ultimate_battery"
 				type: "item"
 			}]
 			x: 9.0d
@@ -111,7 +111,7 @@
 			id: "1EB9F1815EB656B0"
 			tasks: [{
 				id: "453883277EF4A1B6"
-				item: "gtlcore:two_way_foil"
+				item: "kubejs:two_way_foil"
 				type: "item"
 			}]
 			x: 1.0d
@@ -126,7 +126,7 @@
 			id: "48925ECBCC5D268D"
 			tasks: [{
 				id: "3DFC2C88970DA844"
-				item: "gtlcore:command_block_core"
+				item: "kubejs:command_block_core"
 				type: "item"
 			}]
 			x: 3.0d
@@ -173,8 +173,8 @@
 			dependencies: ["7C4AD33299386B47"]
 			id: "4C37CB772835CFD0"
 			tasks: [{
-				id: "2250D79F24AF553E"
-				item: "gtlcore:command_block_broken"
+				id: "3456609519072452"
+				item: "kubejs:command_block_broken"
 				type: "item"
 			}]
 			x: 9.0d
@@ -196,7 +196,7 @@
 			id: "429AEBE4BF55B1FF"
 			tasks: [{
 				id: "77BD91BF9EFBE178"
-				item: "gtlcore:chain_command_block_core"
+				item: "kubejs:chain_command_block_core"
 				type: "item"
 			}]
 			x: 7.0d
@@ -240,7 +240,7 @@
 			id: "5BA55D56C47EA2C4"
 			tasks: [{
 				id: "3C8BF60743D0FB97"
-				item: "gtlcore:repeating_command_block_core"
+				item: "kubejs:repeating_command_block_core"
 				type: "item"
 			}]
 			x: 9.0d
@@ -265,7 +265,7 @@
 			id: "435394EAA6536AA9"
 			tasks: [{
 				id: "5321FDC4FAA49862"
-				item: "gtlcore:chain_command_block_broken"
+				item: "kubejs:chain_command_block_broken"
 				type: "item"
 			}]
 			x: 11.0d
@@ -276,7 +276,7 @@
 			id: "2A19E7C6DC247B90"
 			tasks: [{
 				id: "00F2D831815D719F"
-				item: "gtlcore:chaotic_energy_core"
+				item: "kubejs:chaotic_energy_core"
 				type: "item"
 			}]
 			x: 11.0d

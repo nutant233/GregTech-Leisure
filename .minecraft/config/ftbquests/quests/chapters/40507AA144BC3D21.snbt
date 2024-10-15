@@ -50,7 +50,7 @@
 			id: "45C3486A3F0EE7FB"
 			tasks: [{
 				id: "5B7BBBB311822D83"
-				item: "gtlcore:spacetime_catalyst"
+				item: "kubejs:spacetime_catalyst"
 				type: "item"
 			}]
 			x: -3.0d
@@ -91,7 +91,7 @@
 			id: "11A7CCFCEAB722F3"
 			tasks: [{
 				id: "3DCC1C5866480D9F"
-				item: "gtlcore:hypercube"
+				item: "kubejs:hypercube"
 				type: "item"
 			}]
 			x: 1.0d
@@ -106,7 +106,7 @@
 			id: "77CADF4536151255"
 			tasks: [{
 				id: "53C4E2DE954FFFFC"
-				item: "gtlcore:space_probe_mk3"
+				item: "kubejs:space_probe_mk3"
 				type: "item"
 			}]
 			x: -11.0d
@@ -119,8 +119,8 @@
 			]
 			id: "736395E39993F727"
 			tasks: [{
-				id: "17C84E99F36C56AF"
-				item: "gtlcore:hyperdimensional_drone"
+				id: "7268B313B5D29DE8"
+				item: "kubejs:hyperdimensional_drone"
 				type: "item"
 			}]
 			x: 1.0d
@@ -131,8 +131,8 @@
 			description: ["可大批量生产"]
 			id: "414F9C645C799FAE"
 			tasks: [{
-				id: "40CEEC8099A2769E"
-				item: "gtlcore:suprachronal_circuit_max"
+				id: "47061FC3050F2DB2"
+				item: "kubejs:suprachronal_max"
 				type: "item"
 			}]
 			x: 3.0d
@@ -175,7 +175,7 @@
 			id: "2AFCDC0CA3205903"
 			tasks: [{
 				id: "470C4F62160DE7DA"
-				item: "gtlcore:eternity_catalyst"
+				item: "kubejs:eternity_catalyst"
 				type: "item"
 			}]
 			x: -1.0d
@@ -186,7 +186,7 @@
 			id: "622395061792FB5E"
 			tasks: [{
 				id: "049F132CCC5B262C"
-				item: "gtlcore:infinity_coil_block"
+				item: "kubejs:infinity_coil_block"
 				type: "item"
 			}]
 			x: -4.0d
@@ -197,7 +197,7 @@
 			id: "2C3C46AC660CC54E"
 			tasks: [{
 				id: "6FB785AF530B06F6"
-				item: "gtlcore:suprachronal_mainframe_complex"
+				item: "kubejs:suprachronal_mainframe_complex"
 				type: "item"
 			}]
 			x: 3.0d
@@ -266,7 +266,7 @@
 			id: "3F2335911E21E042"
 			tasks: [{
 				id: "331D93B6C432E57A"
-				item: "gtlcore:dimension_creation_casing"
+				item: "kubejs:dimension_creation_casing"
 				type: "item"
 			}]
 			x: 5.0d
@@ -280,7 +280,7 @@
 			id: "57B09C66B637C894"
 			tasks: [{
 				id: "3AE47388659309DE"
-				item: "gtlcore:chaos_shard"
+				item: "kubejs:chaos_shard"
 				type: "item"
 			}]
 			x: -9.0d
@@ -341,7 +341,7 @@
 			id: "67EF7F1C6AE2A6C9"
 			tasks: [{
 				id: "0E0235D9CF0EAA5F"
-				item: "gtlcore:draconic_energy_core"
+				item: "kubejs:draconic_energy_core"
 				type: "item"
 			}]
 			x: 1.0d

@@ -298,24 +298,15 @@
 			id: "0931ECBAAD9252C7"
 			rewards: [
 				{
-					id: "71C0434DFFE861C6"
-					item: {
-						Count: 1
-						id: "avaritia:infinity_bow"
-						tag: { }
-					}
-					type: "item"
+					exclude_from_claim_all: true
+					id: "5C6C59F17A03D91D"
+					table_id: 6225023274141477362L
+					type: "loot"
 				}
 				{
-					id: "78263F39DD0D1213"
-					item: {
-						Count: 1
-						id: "avaritia:infinity_totem"
-						tag: {
-							Damage: 0
-						}
-					}
-					type: "item"
+					id: "4BD4380EB0FC775D"
+					type: "xp_levels"
+					xp_levels: 15
 				}
 			]
 			tasks: [

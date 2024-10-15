@@ -383,15 +383,19 @@
 			]
 			description: ["前往太阳系之外"]
 			id: "7FD1D1D8ED72D40C"
-			rewards: [{
-				id: "4BCD53BFF7E94B0A"
-				item: {
-					Count: 1
-					id: "avaritia:infinity_shovel"
-					tag: { }
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "4A3E3E76042A9371"
+					table_id: 6225023274141477362L
+					type: "loot"
 				}
-				type: "item"
-			}]
+				{
+					id: "6F94E7148AB739BF"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
 			tasks: [
 				{
 					id: "50DBDD703AB9CE43"
@@ -424,7 +428,7 @@
 			tasks: [{
 				count: 4L
 				id: "32F1F3F299981C4F"
-				item: { Count: 4, id: "gtlcore:glacio_spirit" }
+				item: { Count: 4, id: "kubejs:glacio_spirit" }
 				type: "item"
 			}]
 			x: 8.0d
@@ -592,7 +596,7 @@
 			id: "35D158AD5036923D"
 			tasks: [{
 				id: "7A39828F0956F250"
-				item: "gtlcore:essence"
+				item: "kubejs:essence"
 				type: "item"
 			}]
 			x: 14.0d

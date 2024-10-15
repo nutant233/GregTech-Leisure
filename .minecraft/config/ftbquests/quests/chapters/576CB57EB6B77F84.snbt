@@ -160,7 +160,7 @@
 		}
 		{
 			description: [
-				"HV阶段不如小发电机，支架等级直接决定了产能，每高HV一级总产能x2"
+				"这种涡轮在目前的性能不如小发电机"
 				"注意不要遮挡转子"
 			]
 			id: "1B77B2C00B24906E"
@@ -169,7 +169,7 @@
 				item: "gtceu:steam_large_turbine"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 3.5d
 			y: -0.5d
 		}
 		{
@@ -525,8 +525,8 @@
 			description: ["每次成功的雷击会填充1/4的能量"]
 			id: "45656BC02DC740CE"
 			tasks: [{
-				id: "06C3B482C2FC633D"
-				item: "gtlcore:ev_lightning_rod"
+				id: "11BBDF10AD954709"
+				item: "gtceu:ev_lightning_rod"
 				type: "item"
 			}]
 			x: -1.0d
@@ -806,7 +806,7 @@
 			id: "0371ECA23AB14C7F"
 			tasks: [{
 				id: "6ED166264A82E96F"
-				item: "gtlcore:neutronium_antimatter_fuel_rod"
+				item: "kubejs:neutronium_antimatter_fuel_rod"
 				type: "item"
 			}]
 			x: -9.5d
@@ -817,7 +817,7 @@
 			tasks: [
 				{
 					id: "34B2083FD039EFE4"
-					item: "gtlcore:dyson_swarm_module"
+					item: "kubejs:dyson_swarm_module"
 					type: "item"
 				}
 				{
@@ -828,79 +828,6 @@
 			]
 			x: -11.0d
 			y: 10.0d
-		}
-		{
-			id: "62A418BCB67EE3D8"
-			tasks: [{
-				id: "331A7F4A9F8D6C64"
-				title: "ULV"
-				type: "checkmark"
-			}]
-			x: -4.5d
-			y: -5.0d
-		}
-		{
-			description: ["第一个发电机"]
-			id: "0047C9ACAB093E83"
-			tasks: [{
-				id: "4A844B5FEED61847"
-				item: "gtlcore:ulv_thermal_generator"
-				type: "item"
-			}]
-			x: -2.5d
-			y: -5.0d
-		}
-		{
-			description: ["清洁能源"]
-			id: "3F7C8701EE2BB3AD"
-			rewards: [{
-				id: "64778808B6663354"
-				item: {
-					Count: 1
-					id: "gtlcore:wood_rotor"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			tasks: [{
-				id: "6532E802EBB13EA9"
-				item: "gtlcore:ulv_wind_mill_turbine"
-				type: "item"
-			}]
-			x: -1.0d
-			y: -5.0d
-		}
-		{
-			id: "2F6AF03537CD148E"
-			tasks: [{
-				id: "1614F44A65180BA6"
-				item: "gtlcore:lv_wind_mill_turbine"
-				type: "item"
-			}]
-			x: 5.0d
-			y: -3.5d
-		}
-		{
-			id: "6F75FE8D818983D7"
-			tasks: [{
-				id: "34C2B49B23D6B5EF"
-				item: "gtlcore:mv_wind_mill_turbine"
-				type: "item"
-			}]
-			x: 3.5d
-			y: -2.0d
-		}
-		{
-			id: "22B3A0F72CC33ED6"
-			tasks: [{
-				id: "584A35EF16E51AAE"
-				item: "gtlcore:hv_wind_mill_turbine"
-				type: "item"
-			}]
-			x: 3.5d
-			y: -0.5d
 		}
 	]
 	title: "如何发电"

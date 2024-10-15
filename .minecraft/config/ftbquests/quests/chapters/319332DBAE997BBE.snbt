@@ -480,11 +480,19 @@
 				"然后你就可以去地狱了"
 			]
 			id: "67784DEB22D18308"
-			rewards: [{
-				id: "6798C71A84FECE4E"
-				item: "avaritia:infinity_axe"
-				type: "item"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0824E429390149DA"
+					table_id: 6225023274141477362L
+					type: "loot"
+				}
+				{
+					id: "7EF062FD0C4B1775"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
 			tasks: [
 				{
 					id: "1382D199FDBDEBF5"
@@ -647,9 +655,10 @@
 			dependencies: ["1F0956C3BD4745A1"]
 			id: "2AA63D77B0E86D2E"
 			rewards: [{
-				id: "74F83E0CD43D15C7"
-				item: "avaritia:infinity_hoe"
-				type: "item"
+				exclude_from_claim_all: true
+				id: "05158EC3825CC56E"
+				table_id: 6225023274141477362L
+				type: "loot"
 			}]
 			tasks: [{
 				id: "07D2F38F2B6D6996"

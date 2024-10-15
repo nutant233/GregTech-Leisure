@@ -47,7 +47,7 @@
 			id: "0CCE2A9119B2B1C4"
 			tasks: [{
 				id: "59E90C6145AA300E"
-				item: "gtlcore:naquadriatictaranium_coil_block"
+				item: "kubejs:naquadriatictaranium_coil_block"
 				type: "item"
 			}]
 			x: -2.0d
@@ -63,7 +63,7 @@
 			id: "7F79481263C17880"
 			tasks: [{
 				id: "47A684BB71106B1D"
-				item: "gtlcore:cosmic_processing_unit_core"
+				item: "kubejs:cosmic_processing_unit_core"
 				type: "item"
 			}]
 			x: 8.0d
@@ -78,7 +78,7 @@
 			id: "1F1FCB0CA5696FF1"
 			tasks: [{
 				id: "7064445D4522B0F9"
-				item: "gtlcore:leptonic_charge"
+				item: "kubejs:leptonic_charge"
 				type: "item"
 			}]
 			x: 4.0d
@@ -93,7 +93,7 @@
 			id: "28E91E5A98E3A8DD"
 			tasks: [{
 				id: "785069BBC7747ADC"
-				item: "gtlcore:cosmic_processing_core"
+				item: "kubejs:cosmic_processing_core"
 				type: "item"
 			}]
 			x: 10.0d
@@ -105,7 +105,7 @@
 			id: "596E4662227F4E38"
 			tasks: [{
 				id: "165EABF42AE36A02"
-				item: "gtlcore:cosmic_processor"
+				item: "kubejs:cosmic_processor"
 				type: "item"
 			}]
 			x: 12.0d
@@ -116,7 +116,7 @@
 			id: "3569AD043F42762A"
 			tasks: [{
 				id: "59A8FB50CBC35EDE"
-				item: "gtlcore:cosmic_assembly"
+				item: "kubejs:cosmic_assembly"
 				type: "item"
 			}]
 			x: 12.0d
@@ -127,7 +127,7 @@
 			id: "37C0845F870CC835"
 			tasks: [{
 				id: "57129B74F6D1DE2E"
-				item: "gtlcore:cosmic_computer"
+				item: "kubejs:cosmic_computer"
 				type: "item"
 			}]
 			x: 12.0d
@@ -142,7 +142,7 @@
 			id: "6C6A3B91957A0B7B"
 			tasks: [{
 				id: "06F01AC2F2AAFC1A"
-				item: "gtlcore:cosmic_mainframe"
+				item: "kubejs:cosmic_mainframe"
 				type: "item"
 			}]
 			x: 14.0d
@@ -228,7 +228,7 @@
 				}
 				{
 					id: "61D289345D143E85"
-					item: "gtlcore:uruium_coil_block"
+					item: "kubejs:uruium_coil_block"
 					type: "item"
 				}
 			]
@@ -256,7 +256,7 @@
 			id: "106303E7A3296E76"
 			tasks: [{
 				id: "0A45F0131D24EEE3"
-				item: "gtlcore:ultrashort_pulse_laser"
+				item: "kubejs:ultrashort_pulse_laser"
 				type: "item"
 			}]
 			x: 6.0d
@@ -327,7 +327,7 @@
 			id: "5405B22C3320841E"
 			tasks: [{
 				id: "49F1AC6F134AD9C5"
-				item: "gtlcore:cosmic_soc"
+				item: "kubejs:cosmic_soc"
 				type: "item"
 			}]
 			x: 6.0d
@@ -352,7 +352,7 @@
 			id: "7819969E76A18F15"
 			tasks: [{
 				id: "141E9E0F2345C854"
-				item: "gtlcore:scintillator"
+				item: "kubejs:scintillator"
 				type: "item"
 			}]
 			x: -2.0d
@@ -363,7 +363,7 @@
 			id: "5FC4E86486278172"
 			tasks: [{
 				id: "54DD3B46DB85E738"
-				item: "gtlcore:scintillator_crystal"
+				item: "kubejs:scintillator_crystal"
 				type: "item"
 			}]
 			x: -2.0d
@@ -398,7 +398,7 @@
 			id: "078ADC3E0F3A6746"
 			tasks: [{
 				id: "10E756E205893B29"
-				item: "gtlcore:photocoated_hassium_wafer"
+				item: "kubejs:photocoated_hassium_wafer"
 				type: "item"
 			}]
 			x: 4.0d
@@ -409,7 +409,7 @@
 			id: "0FB0AFA8DD71B19F"
 			tasks: [{
 				id: "6227D45032949460"
-				item: "gtlcore:lepton_trap_crystal"
+				item: "kubejs:lepton_trap_crystal"
 				type: "item"
 			}]
 			x: -2.0d
@@ -443,7 +443,7 @@
 			id: "5450D08C31AB23EF"
 			tasks: [{
 				id: "6282ECFD03A81811"
-				item: "gtlcore:insulation_wire_assembly"
+				item: "kubejs:insulation_wire_assembly"
 				type: "item"
 			}]
 			x: 2.0d

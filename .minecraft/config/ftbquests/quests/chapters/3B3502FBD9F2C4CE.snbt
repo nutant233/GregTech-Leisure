@@ -166,6 +166,12 @@
 				"079CD9FD65CB2ED2"
 			]
 			id: "7DCA0B7C9F3C3ACF"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "273DB45DA0D168E0"
+				table_id: 6225023274141477362L
+				type: "loot"
+			}]
 			tasks: [{
 				id: "0D25CA72C05B394F"
 				item: "gtceu:hssg_coil_block"
@@ -177,6 +183,12 @@
 		{
 			dependencies: ["7DCA0B7C9F3C3ACF"]
 			id: "2A81EA75E3DD41A3"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5E31C69FE3BA229B"
+				table_id: 6225023274141477362L
+				type: "loot"
+			}]
 			tasks: [
 				{
 					id: "3F58471B4B491DD6"
@@ -200,6 +212,12 @@
 			]
 			description: ["IV阶段的电路可以不用"]
 			id: "4604207A60F04214"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "26673EC4D33E3E35"
+				table_id: 6225023274141477362L
+				type: "loot"
+			}]
 			tasks: [
 				{
 					id: "54EBA1E915CCDDAC"
