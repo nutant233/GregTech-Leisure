@@ -18,12 +18,12 @@ recipes:
 
   # Whether to nerf Wood crafting to 2 Planks from 1 Log, and 2 Sticks from 2 Planks.
   # Default: false
-  nerfWoodCrafting: false
+  nerfWoodCrafting: true
 
   # Whether to make Wood related recipes harder.
   # Excludes sticks and planks.
   # Default: false
-  hardWoodRecipes: false
+  hardWoodRecipes: true
 
   # Recipes for Buckets, Cauldrons, Hoppers, and Iron Bars require Iron Plates, Rods, and more.
   # Default: true
@@ -31,16 +31,16 @@ recipes:
 
   # Whether to make Redstone related recipes harder.
   # Default: false
-  hardRedstoneRecipes: false
+  hardRedstoneRecipes: true
 
   # Whether to make Vanilla Tools and Armor recipes harder.
   # Excludes Flint and Steel, and Buckets.
   # Default: false
-  hardToolArmorRecipes: false
+  hardToolArmorRecipes: true
 
   # Whether to make miscellaneous recipes harder.
   # Default: false
-  hardMiscRecipes: false
+  hardMiscRecipes: true
 
   # Whether to make Glass related recipes harder. Default: true
   hardGlassRecipes: true
@@ -51,11 +51,11 @@ recipes:
 
   # Recipes for items like Iron Doors, Trapdoors, Anvil require Iron Plates, Rods, and more.
   # Default: false
-  hardAdvancedIronRecipes: false
+  hardAdvancedIronRecipes: true
 
   # Whether to make coloring blocks like Concrete or Glass harder.
   # Default: false
-  hardDyeRecipes: false
+  hardDyeRecipes: true
 
   # Whether to remove charcoal smelting recipes from the vanilla furnace.
   # Default: true
@@ -83,7 +83,7 @@ recipes:
 
   # Whether to nerf machine controller recipes.
   # Default: false
-  hardMultiRecipes: false
+  hardMultiRecipes: true
 
   # Whether tools should have enchants or not. Like the flint sword getting fire aspect.
   # Default: true
@@ -169,7 +169,7 @@ machines:
 
   # Energy use multiplier for prospectors.
   # Default: 100
-  prospectorEnergyUseMultiplier: 100
+  prospectorEnergyUseMultiplier: 1
 
   # Whether machines or boilers damage the terrain when they explode.
   # Note machines and boilers always explode when overloaded with power or met with special conditions, regardless of this config.
@@ -292,27 +292,27 @@ machines:
   smallBoilers:
     # The amount of steam a Steam Solid Boiler produces per second at max temperature.
     # Default: 120
-    solidBoilerBaseOutput: 120
+    solidBoilerBaseOutput: 240
 
     # The amount of steam a High Pressure Steam Solid Boiler produces per second at max temperature.
     # Default: 300
-    hpSolidBoilerBaseOutput: 300
+    hpSolidBoilerBaseOutput: 600
 
     # The amount of steam a Steam Liquid Boiler produces per second at max temperature.
     # Default: 240
-    liquidBoilerBaseOutput: 240
+    liquidBoilerBaseOutput: 480
 
     # The amount of steam a High Pressure Steam Liquid Boiler produces per second at max temperature.
     # Default: 600
-    hpLiquidBoilerBaseOutput: 600
+    hpLiquidBoilerBaseOutput: 1200
 
     # The amount of steam a Steam Solar Boiler produces per second at max temperature.
     # Default: 120
-    solarBoilerBaseOutput: 120
+    solarBoilerBaseOutput: 240
 
     # The amount of steam a High Pressure Steam Solar Boiler produces per second at max temperature.
     # Default: 360
-    hpSolarBoilerBaseOutput: 360
+    hpSolarBoilerBaseOutput: 720
 
   # Large Steam Boiler Options
   largeBoilers:
@@ -322,7 +322,7 @@ machines:
 
     # The max temperature of the Large Bronze Boiler.
     # Default: 800
-    bronzeBoilerMaxTemperature: 800
+    bronzeBoilerMaxTemperature: 1600
 
     # The heat speed of the Large Bronze Boiler.
     # Default: 1
@@ -330,7 +330,7 @@ machines:
 
     # The max temperature of the Large Steel Boiler.
     # Default: 1800
-    steelBoilerMaxTemperature: 1800
+    steelBoilerMaxTemperature: 3600
 
     # The heat speed of the Large Steel Boiler.
     # Default: 1
@@ -338,7 +338,7 @@ machines:
 
     # The max temperature of the Large Titanium Boiler.
     # Default: 3200
-    titaniumBoilerMaxTemperature: 3200
+    titaniumBoilerMaxTemperature: 6400
 
     # The heat speed of the Large Titanium Boiler.
     # Default: 1
@@ -346,7 +346,7 @@ machines:
 
     # The max temperature of the Large Tungstensteel Boiler.
     # Default: 6400
-    tungstensteelBoilerMaxTemperature: 6400
+    tungstensteelBoilerMaxTemperature: 12800
 
     # The heat speed of the Large Tungstensteel Boiler.
     # Default: 2
@@ -409,7 +409,7 @@ client:
 tools:
   # Random chance for electric tools to take actual damage
   # Default: 10%
-  rngDamageElectricTools: 10
+  rngDamageElectricTools: 0
 
   # Amount of blocks that can be spray painted at once
   # Default: 16
@@ -419,11 +419,11 @@ tools:
   nanoSaber:
     # The additional damage added when the NanoSaber is powered.
     # Default: 20.0
-    nanoSaberDamageBoost: 20.0
+    nanoSaberDamageBoost: 100.0
 
     # The base damage of the NanoSaber.
     # Default: 5.0
-    nanoSaberBaseDamage: 5.0
+    nanoSaberBaseDamage: 100.0
 
     # Should Zombies spawn with charged, active NanoSabers on hard difficulty?
     # Default: true
@@ -463,16 +463,16 @@ tools:
 gameplay:
   # Enable hazardous materials
   # Default: true
-  hazardsEnabled: true
+  hazardsEnabled: false
 
   # Whether hazards are applied to all valid items, or just GT's.
   # true = all, false = GT only.
   # Default: true
-  universalHazards: true
+  universalHazards: false
 
   # Whether environmental hazards like pollution or radiation are active
   # Default: true
-  environmentalHazards: true
+  environmentalHazards: false
 
   # How much environmental hazards decay per chunk, per tick.
   # Default: 0.001
@@ -499,12 +499,12 @@ compat:
     # Platform native Energy to GTEU ratio for converting FE to EU.
     # Only affects converters.
     # Default: 4 FE/Energy == 1 EU
-    platformToEuRatio: 4
+    platformToEuRatio: 16
 
     # GTEU to Platform native Energy ratio for converting EU to FE.
     # Affects native conversion and Converters.
     # Default: 4 FE/Energy == 1 EU
-    euToPlatformRatio: 4
+    euToPlatformRatio: 1
 
   # Config options regarding GTCEu compatibility with AE2
   ae2:
@@ -515,7 +515,7 @@ compat:
 
     # The energy consumption of ME Hatch/Bus.
     # Default: 1.0AE/t
-    meHatchEnergyUsage: 1.0
+    meHatchEnergyUsage: 10.0
 
   # Whether to hide facades of all blocks in JEI and creative search menu.
   # Default: true
@@ -527,7 +527,7 @@ compat:
 
   # Whether to hide the ore processing diagrams in JEI
   # Default: false
-  hideOreProcessingDiagrams: false
+  hideOreProcessingDiagrams: true
 
   # Whether Gregtech should remove smelting recipes from the vanilla furnace for ingots requiring the Electric Blast Furnace.
   # Default: true
@@ -535,7 +535,7 @@ compat:
 
   # Whether dimension marker should show dimension tier.
   # Default: false
-  showDimensionTier: false
+  showDimensionTier: true
 
 dev:
   # Debug general events? (will print recipe conficts etc. to server's debug.log)
