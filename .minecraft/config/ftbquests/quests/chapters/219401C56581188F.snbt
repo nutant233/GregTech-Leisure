@@ -91,7 +91,7 @@
 			id: "792A351AAA2A4F2B"
 			tasks: [{
 				id: "6496D870388FBB8D"
-				item: "gtlcroe:exotic_processing_core"
+				item: "gtlcore:exotic_processing_core"
 				type: "item"
 			}]
 			x: 6.0d
@@ -107,7 +107,7 @@
 			id: "26EB204E456E609A"
 			tasks: [{
 				id: "648B8707BFCB8059"
-				item: "gtlcroe:rydberg_spinorial_assembly"
+				item: "gtlcore:rydberg_spinorial_assembly"
 				type: "item"
 			}]
 			x: 2.0d
@@ -143,7 +143,7 @@
 			id: "1AA874C1351E4A0D"
 			tasks: [{
 				id: "1932A8FC6815B114"
-				item: "gtlcroe:adamantine_coil_block"
+				item: "gtlcore:adamantine_coil_block"
 				type: "item"
 			}]
 			x: 4.0d
@@ -155,7 +155,7 @@
 			id: "48E77454D1CD87CD"
 			tasks: [{
 				id: "4244DC73F0D8DA55"
-				item: "gtlcroe:exotic_processor"
+				item: "gtlcore:exotic_processor"
 				type: "item"
 			}]
 			x: 8.0d
@@ -169,7 +169,7 @@
 			id: "025FA532523BF33B"
 			tasks: [{
 				id: "2860A4E1E332B23C"
-				item: "gtlcroe:exotic_assembly"
+				item: "gtlcore:exotic_assembly"
 				type: "item"
 			}]
 			x: 10.0d
@@ -183,7 +183,7 @@
 			id: "140CE2AEC7015CAB"
 			tasks: [{
 				id: "2F5461C2A1F31B6E"
-				item: "gtlcroe:exotic_computer"
+				item: "gtlcore:exotic_computer"
 				type: "item"
 			}]
 			x: 12.0d
@@ -197,7 +197,7 @@
 			id: "39F73A63746EE6E8"
 			tasks: [{
 				id: "02A3997B96CC0AEC"
-				item: "gtlcroe:exotic_mainframe"
+				item: "gtlcore:exotic_mainframe"
 				type: "item"
 			}]
 			x: 14.0d
@@ -292,7 +292,7 @@
 			id: "1F5B121C6647E2CA"
 			tasks: [{
 				id: "02C4C3897AB62269"
-				item: "gtlcroe:exotic_chip"
+				item: "gtlcore:exotic_chip"
 				type: "item"
 			}]
 			x: 0.0d
@@ -308,7 +308,7 @@
 			id: "07B45AA08AA91467"
 			tasks: [{
 				id: "68E24C35E921D70B"
-				item: "gtlcroe:x_ray_laser"
+				item: "gtlcore:x_ray_laser"
 				type: "item"
 			}]
 			x: 4.0d
@@ -342,7 +342,7 @@
 			id: "588C2C0BED069F41"
 			tasks: [{
 				id: "7045DA087F52FA80"
-				item: "gtlcroe:unstable_star"
+				item: "gtlcore:unstable_star"
 				type: "item"
 			}]
 			x: 10.0d
@@ -410,7 +410,7 @@
 			id: "01268072B19FA1C9"
 			tasks: [{
 				id: "0D6AF6925DC299F6"
-				item: "gtlcroe:exotic_printed_circuit_board"
+				item: "gtlcore:exotic_printed_circuit_board"
 				type: "item"
 			}]
 			x: 8.0d
@@ -421,7 +421,7 @@
 			id: "2AA6041AC73CD47E"
 			tasks: [{
 				id: "1D9CEEE0C21C135E"
-				item: "gtlcroe:draconic_core"
+				item: "gtlcore:draconic_core"
 				type: "item"
 			}]
 			x: 12.0d
@@ -449,7 +449,7 @@
 			id: "192B626CF217FDBC"
 			tasks: [{
 				id: "529CC0E222436601"
-				item: "gtlcroe:draconium_dust"
+				item: "gtlcore:draconium_dust"
 				type: "item"
 			}]
 			x: 14.0d
@@ -472,7 +472,7 @@
 			id: "021401D3D29EBC87"
 			tasks: [{
 				id: "2D6BFFABEF72FB06"
-				item: "gtlcroe:high_precision_crystal_soc"
+				item: "gtlcore:high_precision_crystal_soc"
 				type: "item"
 			}]
 			x: 8.0d
@@ -523,7 +523,7 @@
 			id: "678E707F85CD2071"
 			tasks: [{
 				id: "44B32E745AA622FE"
-				item: "gtlcroe:taranium_boule"
+				item: "gtlcore:taranium_boule"
 				type: "item"
 			}]
 			x: 8.0d
@@ -549,7 +549,7 @@
 			id: "2F02BC009330F5CB"
 			tasks: [{
 				id: "6D489E30E36B6957"
-				item: "gtlcroe:cryogenic_interface"
+				item: "gtlcore:cryogenic_interface"
 				type: "item"
 			}]
 			x: 0.0d
@@ -573,7 +573,7 @@
 			id: "71CB57064256F904"
 			tasks: [{
 				id: "5DA669EA8A10856E"
-				item: "gtlcroe:pm_chip"
+				item: "gtlcore:pm_chip"
 				type: "item"
 			}]
 			x: 10.0d
@@ -587,7 +587,7 @@
 			id: "63F90FA0F85804B8"
 			tasks: [{
 				id: "4463009D8015AD7E"
-				item: "gtlcroe:reinforced_echo_shard"
+				item: "gtlcore:reinforced_echo_shard"
 				type: "item"
 			}]
 			x: 10.0d
@@ -643,7 +643,7 @@
 			id: "2858C1A89BAF2624"
 			tasks: [{
 				id: "41832AD8FA67EE4C"
-				item: "gtlcroe:rydberg_spinorial_assembly"
+				item: "gtlcore:rydberg_spinorial_assembly"
 				type: "item"
 			}]
 			x: 4.0d

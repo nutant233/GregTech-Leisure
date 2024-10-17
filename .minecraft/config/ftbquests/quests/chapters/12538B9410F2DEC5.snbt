@@ -428,7 +428,7 @@
 			tasks: [{
 				count: 4L
 				id: "32F1F3F299981C4F"
-				item: { Count: 4, id: "gtlcroe:glacio_spirit" }
+				item: { Count: 4, id: "gtlcore:glacio_spirit" }
 				type: "item"
 			}]
 			x: 8.0d
@@ -596,7 +596,7 @@
 			id: "35D158AD5036923D"
 			tasks: [{
 				id: "7A39828F0956F250"
-				item: "gtlcroe:essence"
+				item: "gtlcore:essence"
 				type: "item"
 			}]
 			x: 14.0d

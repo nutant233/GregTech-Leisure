@@ -304,7 +304,7 @@
 				}
 			]
 			tasks: [{
-				dimension: "gtlcroe:ancient_world"
+				dimension: "gtlcore:ancient_world"
 				id: "7B798A358D3DA56B"
 				title: "远古世界"
 				type: "dimension"
@@ -349,7 +349,7 @@
 			tasks: [
 				{
 					id: "3C71CBD9FE0DC224"
-					item: "gtlcroe:reactor_core"
+					item: "gtlcore:reactor_core"
 					type: "item"
 				}
 				{
@@ -599,7 +599,7 @@
 			}]
 			tasks: [{
 				id: "72CA64283A8A3E34"
-				item: "gtlcroe:precision_steam_mechanism"
+				item: "gtlcore:precision_steam_mechanism"
 				type: "item"
 			}]
 			x: 0.0d
