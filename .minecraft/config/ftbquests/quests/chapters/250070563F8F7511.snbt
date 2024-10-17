@@ -582,11 +582,11 @@
 				"如果你不喜欢用指令或者小地图"
 				"默认Y键可以切换槽位"
 			]
-			icon: "kubejs:warped_ender_pearl"
+			icon: "gtlcroe:warped_ender_pearl"
 			id: "72AFAC66A9EC5F1A"
 			rewards: [{
 				id: "16D977A5C13DD6A2"
-				item: "kubejs:warped_ender_pearl"
+				item: "gtlcroe:warped_ender_pearl"
 				type: "item"
 			}]
 			tasks: [{
@@ -1178,7 +1178,7 @@
 				"第一行和最上的图标一样可以切换合成工具（点击这一行的文字可以查看这种方式的所有合成表）"
 				"第二行可以翻页（很多物品有大量的合成方法，请仔细浏览）"
 			]
-			icon: "kubejs:rotating_transparent_surface"
+			icon: "gtlcroe:rotating_transparent_surface"
 			id: "575A2A1E4F56FF34"
 			tasks: [{
 				id: "076E6DC515FD655D"

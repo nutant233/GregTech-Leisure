@@ -33,7 +33,7 @@
 			id: "1433920A4DDCE2B5"
 			tasks: [{
 				id: "2034E44DBD7BF004"
-				item: "kubejs:contained_high_density_protonic_matter"
+				item: "gtlcroe:contained_high_density_protonic_matter"
 				type: "item"
 			}]
 			x: 2.0d
@@ -73,7 +73,7 @@
 			id: "6E3F07B3E9AB5882"
 			tasks: [{
 				id: "013D66093320BE17"
-				item: "kubejs:starmetal_coil_block"
+				item: "gtlcroe:starmetal_coil_block"
 				type: "item"
 			}]
 			x: 2.0d
@@ -114,7 +114,7 @@
 			id: "2E8DB6C5B61682C2"
 			tasks: [{
 				id: "098F3ABC24B16631"
-				item: "kubejs:contained_reissner_nordstrom_singularity"
+				item: "gtlcroe:contained_reissner_nordstrom_singularity"
 				type: "item"
 			}]
 			x: 6.0d
@@ -128,7 +128,7 @@
 			id: "30C7E9FE04629708"
 			tasks: [{
 				id: "0968342DC438273D"
-				item: "kubejs:contained_kerr_newmann_singularity"
+				item: "gtlcroe:contained_kerr_newmann_singularity"
 				type: "item"
 			}]
 			x: 8.0d
@@ -139,7 +139,7 @@
 			id: "5EEF654D4CD2168F"
 			tasks: [{
 				id: "1B0100A2DA661C34"
-				item: "kubejs:contained_kerr_singularity"
+				item: "gtlcroe:contained_kerr_singularity"
 				type: "item"
 			}]
 			x: 10.0d
@@ -154,7 +154,7 @@
 			id: "5A4208D724465B97"
 			tasks: [{
 				id: "3B1FF91246454F05"
-				item: "kubejs:graviton_transducer"
+				item: "gtlcroe:graviton_transducer"
 				type: "item"
 			}]
 			x: 6.0d
@@ -169,7 +169,7 @@
 			id: "0E69D0896D0218E3"
 			tasks: [{
 				id: "3A838D5524A952C3"
-				item: "kubejs:topological_manipulator_unit"
+				item: "gtlcroe:topological_manipulator_unit"
 				type: "item"
 			}]
 			x: 8.0d
@@ -180,7 +180,7 @@
 			id: "1E2191E5E31DC8B0"
 			tasks: [{
 				id: "4B942195EDD70FD6"
-				item: "kubejs:microwormhole_generator"
+				item: "gtlcroe:microwormhole_generator"
 				type: "item"
 			}]
 			x: 10.0d
@@ -197,7 +197,7 @@
 			id: "7843B0B9DF3F6FB3"
 			tasks: [{
 				id: "393B897D7AB83DD9"
-				item: "kubejs:supracausal_processing_core"
+				item: "gtlcroe:supracausal_processing_core"
 				type: "item"
 			}]
 			x: 8.0d
@@ -212,7 +212,7 @@
 			id: "2895FBB66750C0DF"
 			tasks: [{
 				id: "5D7AD7E0AEDFAC06"
-				item: "kubejs:supracausal_processor"
+				item: "gtlcroe:supracausal_processor"
 				type: "item"
 			}]
 			x: 10.0d
@@ -228,7 +228,7 @@
 			id: "44F9AF619F87974F"
 			tasks: [{
 				id: "489CB00F1158C54B"
-				item: "kubejs:supracausal_assembly"
+				item: "gtlcroe:supracausal_assembly"
 				type: "item"
 			}]
 			x: 12.0d
@@ -242,7 +242,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "4A48DFBBFE8F0E83"
-				item: "kubejs:neutronium_sphere"
+				item: "gtlcroe:neutronium_sphere"
 				type: "item"
 			}]
 			x: 4.0d
@@ -265,7 +265,7 @@
 			id: "41B4A5048EBCE287"
 			tasks: [{
 				id: "3D5673DC2CDD9216"
-				item: "kubejs:space_probe_mk2"
+				item: "gtlcroe:space_probe_mk2"
 				type: "item"
 			}]
 			x: 0.0d
@@ -288,7 +288,7 @@
 			id: "687FA1A8A6443436"
 			tasks: [{
 				id: "0FCC5549E1E17DF9"
-				item: "kubejs:resonating_gem"
+				item: "gtlcroe:resonating_gem"
 				type: "item"
 			}]
 			x: 0.0d
@@ -302,7 +302,7 @@
 			id: "74186877DB7DBE4D"
 			tasks: [{
 				id: "68FDD4F89178DC73"
-				item: "kubejs:quantum_chromodynamic_charge"
+				item: "gtlcroe:quantum_chromodynamic_charge"
 				type: "item"
 			}]
 			x: 4.0d
@@ -316,7 +316,7 @@
 			id: "43CEF1808795ECAD"
 			tasks: [{
 				id: "163852661E3ED688"
-				item: "kubejs:quantumchromodynamic_protective_plating"
+				item: "gtlcroe:quantumchromodynamic_protective_plating"
 				type: "item"
 			}]
 			x: 4.0d
@@ -327,7 +327,7 @@
 			id: "2667AA2D0C0929B3"
 			tasks: [{
 				id: "26EB8AC36A5784A4"
-				item: "kubejs:relativistic_spinorial_memory_system"
+				item: "gtlcroe:relativistic_spinorial_memory_system"
 				type: "item"
 			}]
 			x: 8.0d
@@ -339,7 +339,7 @@
 			id: "1BA07BC3DBFFF3E6"
 			tasks: [{
 				id: "1359A5CB71BF3AC9"
-				item: "kubejs:manifold_oscillatory_power_cell"
+				item: "gtlcroe:manifold_oscillatory_power_cell"
 				type: "item"
 			}]
 			x: 10.0d
@@ -350,7 +350,7 @@
 			id: "15A1DA0756AD0044"
 			tasks: [{
 				id: "13D35A9347B57438"
-				item: "kubejs:macrowormhole_generator"
+				item: "gtlcroe:macrowormhole_generator"
 				type: "item"
 			}]
 			x: 12.0d
@@ -361,7 +361,7 @@
 			id: "41A24F250D9C582A"
 			tasks: [{
 				id: "27F3C5C31B10F0B5"
-				item: "kubejs:recursively_folded_negative_space"
+				item: "gtlcroe:recursively_folded_negative_space"
 				type: "item"
 			}]
 			x: 12.0d
@@ -372,7 +372,7 @@
 			id: "042FBA3AE7DE9957"
 			tasks: [{
 				id: "4DF8BA0CEEDEAE11"
-				item: "kubejs:contained_exotic_matter"
+				item: "gtlcroe:contained_exotic_matter"
 				type: "item"
 			}]
 			x: 10.0d
@@ -386,7 +386,7 @@
 			id: "76C086C1C346355A"
 			tasks: [{
 				id: "64FA91CB818D7F89"
-				item: "kubejs:eigenfolded_kerr_manifold"
+				item: "gtlcroe:eigenfolded_kerr_manifold"
 				type: "item"
 			}]
 			x: 14.0d
@@ -438,7 +438,7 @@
 			id: "2E46491F39351B94"
 			tasks: [{
 				id: "141EA89CD2B703FA"
-				item: "kubejs:stabilized_wormhole_generator"
+				item: "gtlcroe:stabilized_wormhole_generator"
 				type: "item"
 			}]
 			x: 14.0d
@@ -452,7 +452,7 @@
 			id: "64441B6414C20A57"
 			tasks: [{
 				id: "4E6808ACDDA056DD"
-				item: "kubejs:charged_lepton_trap_crystal"
+				item: "gtlcroe:charged_lepton_trap_crystal"
 				type: "item"
 			}]
 			x: 8.0d
@@ -467,7 +467,7 @@
 			id: "30AC80FE245A38E0"
 			tasks: [{
 				id: "41E02527C8CF211E"
-				item: "kubejs:supracausal_computer"
+				item: "gtlcroe:supracausal_computer"
 				type: "item"
 			}]
 			x: 14.0d
@@ -485,7 +485,7 @@
 			size: 2.0d
 			tasks: [{
 				id: "27BE9064DAF5CCF3"
-				item: "kubejs:supracausal_mainframe"
+				item: "gtlcroe:supracausal_mainframe"
 				type: "item"
 			}]
 			x: 16.0d
@@ -499,7 +499,7 @@
 			id: "1291AD37204E4960"
 			tasks: [{
 				id: "5BA2D936168F00E3"
-				item: "kubejs:ctc_computational_unit"
+				item: "gtlcroe:ctc_computational_unit"
 				type: "item"
 			}]
 			x: 16.0d
@@ -510,7 +510,7 @@
 			id: "72EDAF2AFEF2827C"
 			tasks: [{
 				id: "3A4819805B21E8A5"
-				item: "kubejs:ctc_computational_unit_container"
+				item: "gtlcroe:ctc_computational_unit_container"
 				type: "item"
 			}]
 			x: 16.0d
@@ -524,7 +524,7 @@
 			id: "583D5AF26EDAF7DF"
 			tasks: [{
 				id: "2722C3C695B1ED2E"
-				item: "kubejs:nuclear_clock"
+				item: "gtlcroe:nuclear_clock"
 				type: "item"
 			}]
 			x: 6.0d
@@ -535,7 +535,7 @@
 			id: "6F7D79B8EA4FBF46"
 			tasks: [{
 				id: "6F01212E598DF915"
-				item: "kubejs:nuclear_star"
+				item: "gtlcroe:nuclear_star"
 				type: "item"
 			}]
 			x: 14.0d
@@ -599,7 +599,7 @@
 			id: "233C152024BACC4E"
 			tasks: [{
 				id: "0DD7CD386050EFC7"
-				item: "kubejs:highly_dense_polymer_plate"
+				item: "gtlcroe:highly_dense_polymer_plate"
 				type: "item"
 			}]
 			x: 16.0d
@@ -610,7 +610,7 @@
 			id: "38FFB6D2003C7EB4"
 			tasks: [{
 				id: "0B788414AD9CB8B4"
-				item: "kubejs:cosmic_fabric"
+				item: "gtlcroe:cosmic_fabric"
 				type: "item"
 			}]
 			x: 16.0d
@@ -621,7 +621,7 @@
 			id: "4C667361F07F4243"
 			tasks: [{
 				id: "16E54E03B44B51AF"
-				item: "kubejs:awakened_core"
+				item: "gtlcroe:awakened_core"
 				type: "item"
 			}]
 			x: 12.0d

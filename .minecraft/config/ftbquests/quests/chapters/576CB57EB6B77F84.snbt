@@ -806,7 +806,7 @@
 			id: "0371ECA23AB14C7F"
 			tasks: [{
 				id: "6ED166264A82E96F"
-				item: "kubejs:neutronium_antimatter_fuel_rod"
+				item: "gtlcroe:neutronium_antimatter_fuel_rod"
 				type: "item"
 			}]
 			x: -9.5d
@@ -817,12 +817,12 @@
 			tasks: [
 				{
 					id: "34B2083FD039EFE4"
-					item: "kubejs:dyson_swarm_module"
+					item: "gtlcroe:dyson_swarm_module"
 					type: "item"
 				}
 				{
 					id: "6D898C0C4CAC1D20"
-					item: "kubejs:gelid_cryotheum_bucket"
+					item: "gtlcroe:gelid_cryotheum_bucket"
 					type: "item"
 				}
 			]

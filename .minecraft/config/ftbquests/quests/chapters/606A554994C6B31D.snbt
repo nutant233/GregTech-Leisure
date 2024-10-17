@@ -458,7 +458,7 @@
 			]
 			icon: {
 				Count: 1
-				id: "kubejs:fermium_chestplate"
+				id: "gtlcroe:fermium_chestplate"
 				tag: {
 					Damage: 0
 				}
@@ -469,7 +469,7 @@
 					id: "305DCBDAB0E551AA"
 					item: {
 						Count: 1
-						id: "kubejs:fermium_helmet"
+						id: "gtlcroe:fermium_helmet"
 						tag: {
 							Damage: 0
 						}
@@ -478,17 +478,17 @@
 				}
 				{
 					id: "62D453E0BF5D0AC8"
-					item: "kubejs:fermium_chestplate"
+					item: "gtlcroe:fermium_chestplate"
 					type: "item"
 				}
 				{
 					id: "029A014B60FE9EB5"
-					item: "kubejs:fermium_leggings"
+					item: "gtlcroe:fermium_leggings"
 					type: "item"
 				}
 				{
 					id: "60FEFE03527530DF"
-					item: "kubejs:fermium_boots"
+					item: "gtlcroe:fermium_boots"
 					type: "item"
 				}
 			]
@@ -542,7 +542,7 @@
 			description: ["因游戏流程需要，没有掉落物的"]
 			icon: {
 				Count: 1
-				id: "kubejs:bedrock_destroyer"
+				id: "gtlcroe:bedrock_destroyer"
 				tag: {
 					Damage: 0
 				}
@@ -552,7 +552,7 @@
 				id: "3B9623C406861996"
 				item: {
 					Count: 1
-					id: "kubejs:bedrock_destroyer"
+					id: "gtlcroe:bedrock_destroyer"
 					tag: {
 						Damage: 0
 					}
