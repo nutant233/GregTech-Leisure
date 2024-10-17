@@ -282,15 +282,19 @@
 		{
 			dependencies: ["4FD556B867463D30"]
 			id: "5CE474BD971D9A4B"
-			rewards: [{
-				id: "3CCB97D519A02BFA"
-				item: {
-					Count: 1
-					id: "avaritia:infinity_pickaxe"
-					tag: { }
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "01D07F31696FB693"
+					table_id: 6225023274141477362L
+					type: "loot"
 				}
-				type: "item"
-			}]
+				{
+					id: "11F528FB3633E7D5"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
 			tasks: [
 				{
 					id: "37F1A09D5A9029ED"
@@ -707,11 +711,19 @@
 				"0375D068023B13D7"
 			]
 			id: "0889DB18E2C68D67"
-			rewards: [{
-				id: "48113BC2479CE3D9"
-				item: "avaritia:ultimate_stew"
-				type: "item"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3FDCE86B8215BC89"
+					table_id: 6225023274141477362L
+					type: "loot"
+				}
+				{
+					id: "662FBC35F98E5D21"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
 			tasks: [
 				{
 					id: "0CEFB603A42AEFD8"
@@ -830,6 +842,7 @@
 				item: "gtlcore:ev_64a_wireless_energy_input_hatch"
 				type: "item"
 			}]
+			title: "EV 64安 无限能源接收器"
 			x: 18.0d
 			y: 6.0d
 		}
@@ -901,11 +914,19 @@
 			]
 			hide_dependent_lines: true
 			id: "668BDF2093A9291B"
-			rewards: [{
-				id: "528352B7EE9D92EE"
-				item: "avaritia:neutron_horse_armor"
-				type: "item"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3C8E473E9E540AD4"
+					table_id: 6225023274141477362L
+					type: "loot"
+				}
+				{
+					id: "37B6B95E9F63ACB8"
+					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
 			tasks: [{
 				id: "284C18263BB214FF"
 				item: "gtceu:aqua_regia_bucket"

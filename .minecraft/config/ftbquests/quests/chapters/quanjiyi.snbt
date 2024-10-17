@@ -511,7 +511,7 @@
 			id: "70A3E21448780E5C"
 			tasks: [{
 				id: "3BE75A7C30BA5A84"
-				item: "gtlcore:glacio_spirit"
+				item: "kubejs:glacio_spirit"
 				type: "item"
 			}]
 			x: 29.0d

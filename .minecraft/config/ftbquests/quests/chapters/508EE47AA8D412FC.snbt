@@ -460,7 +460,7 @@
 			id: "6FDC282122A5B02C"
 			tasks: [{
 				id: "6B6EC87CDD8D05E2"
-				item: "gtlcore:magneto_resonatic_circuit_ulv"
+				item: "gtlcore:circuit_resonatic_ulv"
 				type: "item"
 			}]
 			x: -6.0d
@@ -471,7 +471,7 @@
 			id: "646C1CCEB181849D"
 			tasks: [{
 				id: "05ED3909F6DF2267"
-				item: "gtlcore:magneto_resonatic_circuit_lv"
+				item: "gtlcore:circuit_resonatic_lv"
 				type: "item"
 			}]
 			x: -6.0d
@@ -482,7 +482,7 @@
 			id: "2AC1D8E0FE210ECA"
 			tasks: [{
 				id: "0883B3B82134C146"
-				item: "gtlcore:magneto_resonatic_circuit_mv"
+				item: "gtlcore:circuit_resonatic_mv"
 				type: "item"
 			}]
 			x: -6.0d
@@ -493,7 +493,7 @@
 			id: "592112D25203587D"
 			tasks: [{
 				id: "3EABC2D14C1D7929"
-				item: "gtlcore:magneto_resonatic_circuit_hv"
+				item: "gtlcore:circuit_resonatic_hv"
 				type: "item"
 			}]
 			x: -6.0d
@@ -504,7 +504,7 @@
 			id: "014F144FE1D44D76"
 			tasks: [{
 				id: "32F9802B6D740EB8"
-				item: "gtlcore:magneto_resonatic_circuit_ev"
+				item: "gtlcore:circuit_resonatic_ev"
 				type: "item"
 			}]
 			x: -6.0d
@@ -515,7 +515,7 @@
 			id: "538AD958004C9735"
 			tasks: [{
 				id: "420D7E2027220B0C"
-				item: "gtlcore:magneto_resonatic_circuit_iv"
+				item: "gtlcore:circuit_resonatic_iv"
 				type: "item"
 			}]
 			x: -6.0d
@@ -526,7 +526,7 @@
 			id: "72B2B688F850153C"
 			tasks: [{
 				id: "2ABE84510F3A9EDA"
-				item: "gtlcore:magneto_resonatic_circuit_luv"
+				item: "gtlcore:circuit_resonatic_luv"
 				type: "item"
 			}]
 			x: -6.0d
@@ -537,7 +537,7 @@
 			id: "2345247068AC8E96"
 			tasks: [{
 				id: "4205CF48C71A3DC8"
-				item: "gtlcore:magneto_resonatic_circuit_zpm"
+				item: "gtlcore:circuit_resonatic_zpm"
 				type: "item"
 			}]
 			x: -6.0d
@@ -548,7 +548,7 @@
 			id: "37F21A829C79917A"
 			tasks: [{
 				id: "6816D41E49BBC5C0"
-				item: "gtlcore:magneto_resonatic_circuit_uv"
+				item: "gtlcore:circuit_resonatic_uv"
 				type: "item"
 			}]
 			x: -6.0d
@@ -559,7 +559,7 @@
 			id: "4E5FE0D4C86C6EC3"
 			tasks: [{
 				id: "7AC9602F29EA48BF"
-				item: "gtlcore:magneto_resonatic_circuit_uhv"
+				item: "gtlcore:circuit_resonatic_uhv"
 				type: "item"
 			}]
 			x: -6.0d
@@ -570,7 +570,7 @@
 			id: "7D6D4939A8E1DE7C"
 			tasks: [{
 				id: "3AFBEEF7BC30F4CA"
-				item: "gtlcore:magneto_resonatic_circuit_uev"
+				item: "gtlcore:circuit_resonatic_uev"
 				type: "item"
 			}]
 			x: -6.0d
@@ -581,7 +581,7 @@
 			id: "19E4FA7B41F44BDC"
 			tasks: [{
 				id: "5942973187EA50BD"
-				item: "gtlcore:magneto_resonatic_circuit_uiv"
+				item: "gtlcore:circuit_resonatic_uiv"
 				type: "item"
 			}]
 			x: -6.0d

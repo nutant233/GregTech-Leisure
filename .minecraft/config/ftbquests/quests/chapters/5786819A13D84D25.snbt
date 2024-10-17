@@ -296,8 +296,8 @@
 			hide_dependency_lines: true
 			id: "5BFA4802D228358C"
 			tasks: [{
-				id: "3FC8387C3D7D661C"
-				item: "gtlcore:raw_photon_carrying_wafer"
+				id: "7D3290423A198D18"
+				item: "gtlcore:photon_carrying_wafer"
 				type: "item"
 			}]
 			x: 6.0d
@@ -454,8 +454,8 @@
 				item: "gtlcore:mega_extractor"
 				type: "item"
 			}]
-			x: 14.0d
-			y: 8.0d
+			x: 13.0d
+			y: 7.0d
 		}
 		{
 			dependencies: ["783379F3A7557CEE"]

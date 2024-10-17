@@ -22,7 +22,7 @@
 					id: "15D75BB0BB713D68"
 					item: {
 						Count: 1
-						id: "kubejs:magnetohydrodynamicallyconstrainedstarmatter_helmet"
+						id: "gtlcore:magnetohydrodynamicallyconstrainedstarmatter_helmet"
 						tag: {
 							Damage: 0
 						}
@@ -33,7 +33,7 @@
 					id: "052DD5E4314038CA"
 					item: {
 						Count: 1
-						id: "kubejs:magnetohydrodynamicallyconstrainedstarmatter_chestplate"
+						id: "gtlcore:magnetohydrodynamicallyconstrainedstarmatter_chestplate"
 						tag: {
 							Damage: 0
 						}
@@ -44,7 +44,7 @@
 					id: "414803F9595967FD"
 					item: {
 						Count: 1
-						id: "kubejs:magnetohydrodynamicallyconstrainedstarmatter_leggings"
+						id: "gtlcore:magnetohydrodynamicallyconstrainedstarmatter_leggings"
 						tag: {
 							Damage: 0
 						}
@@ -55,7 +55,7 @@
 					id: "633F0A3296C38CD5"
 					item: {
 						Count: 1
-						id: "kubejs:magnetohydrodynamicallyconstrainedstarmatter_boots"
+						id: "gtlcore:magnetohydrodynamicallyconstrainedstarmatter_boots"
 						tag: {
 							Damage: 0
 						}
@@ -71,7 +71,7 @@
 			description: ["未知之地"]
 			id: "1416EAE88C9030C8"
 			tasks: [{
-				dimension: "kubejs:create"
+				dimension: "gtlcore:create"
 				id: "533527A60F7C2024"
 				type: "dimension"
 			}]
@@ -141,7 +141,7 @@
 			id: "34DB07A64CD1439C"
 			tasks: [{
 				id: "7BD60E6DCA58004A"
-				item: "kubejs:command_wand"
+				item: "gtlcore:command_wand"
 				type: "item"
 			}]
 			x: 3.0d
@@ -173,7 +173,7 @@
 			dependencies: ["7C4AD33299386B47"]
 			id: "4C37CB772835CFD0"
 			tasks: [{
-				id: "2250D79F24AF553E"
+				id: "3456609519072452"
 				item: "gtlcore:command_block_broken"
 				type: "item"
 			}]

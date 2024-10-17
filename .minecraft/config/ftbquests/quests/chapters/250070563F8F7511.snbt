@@ -15,7 +15,7 @@
 				"4536535E8DA71D5B"
 				"575A2A1E4F56FF34"
 			]
-			description: ["在开始之前需要先浏览一遍旁边的任务。"]
+			description: ["建议浏览一遍左边的信息之后再开始你的员工旅途"]
 			hide_dependency_lines: true
 			icon: "minecraft:grass_block"
 			id: "075D368E91231337"
@@ -78,10 +78,11 @@
 		{
 			description: [
 				"这个任务包含了一些在游戏过程中的重要信息。"
-				"这套任务旨在引导你完成格雷科技进展的主要里程碑。"
-				"推荐在和平模式下游玩，因为敌对生物带来的好处很少。"
-				"只要你觉得合适，可以随意使用地图传送。"
-				"最重要的，格雷科技会出现很复杂的配方，需要先熟练使用JEI。"
+				"这套任务旨在&e引导你完成格雷科技进展的主要里程碑&r"
+				"推荐在&e和平模式&r下游玩，因为&e敌对生物带来的好处&r&4很少&r"
+				""
+				"只要你觉得合适，可以随意使用地图传送,只需要打开地图，鼠标对着你想传送的位置然后按T"
+				"最重要的，格雷科技会出现很复杂的配方，&e需要先熟练使用JEI&r"
 			]
 			icon: "minecraft:command_block_minecart"
 			id: "25A6B2F421327892"
@@ -96,23 +97,23 @@
 		{
 			description: [
 				"一个主打休闲的格雷科技整合包，相对于其他格雷包难度更低"
-				""
+				"更舒爽"
 				"主要流程"
-				"蒸汽ULV：收集基础资源，更大更强蒸汽机器，炼钢，超维度泥土锻炉。"
-				"低压LV：基础电力机器，电力高炉，GT版数字采矿机。"
-				"中压MV：硅晶体，石油处理，燃油发电，升级机器。"
-				"高压HV：处理器，大化反，一阶火箭登月，蒸馏塔，钛，虚空采矿机。"
-				"超高压EV：纳米处理器，二三四阶火箭，钨，铂系金属。"
-				"强导压IV：量子处理器，合金冶炼炉，五阶火箭，大型机器，装配线，数据库。"
-				"剧差压LUV：晶体处理器，硅岩，六阶火箭，核聚变MK1，计算机，研究站。"
-				"零点压ZPM：湿件处理器，核聚变MK2，七阶火箭，硅岩反应堆。"
-				"极限压UV：生物活性处理器，核聚变MK3，深度处理稀土，电路装配线，太空电梯。"
-				"极高压UHV：光学处理器，恒星锻炉，超能硅岩爆弹，超能反应堆。"
-				"极超压UEV：奇异处理器，超临界合成，基岩处理，精金。"
-				"极巨压UIV：寰宇处理器，宇宙探测，质量发生器，夸克。"
-				"极顶压UXV：超因果处理器，龙，宇宙中子素，无尽，超维度锻炉。"
-				"过载压OPV：超时空电路，宇宙模拟，时空，奇点，永恒。"
-				"上限压MAX：创造物品合成。"
+				"蒸汽ULV：  收集基础资源，更大更强蒸汽机器，炼钢，超维度泥土锻炉"
+				"低压LV：     基础电力机器，电力高炉，GT版数字采矿机"
+				"中压MV： &e   硅晶体&r，石油处理，燃油发电，升级机器"
+				"高压HV： &e    处理器&r，大化反，一阶火箭登月，蒸馏塔，钛，虚空采矿机"
+				"超高压EV： &e 纳米处理器&r，二三四阶火箭，钨，铂系金属"
+				"强导压IV：&e量子处理器&r，合金冶炼炉，五阶火箭，大型机器，装配线，数据库"
+				"剧差压LUV：&b晶体处理器&r，硅岩，六阶火箭，核聚变MK1，计算机，研究站"
+				"零点压ZPM：&4湿件处理器&r，核聚变MK2，七阶火箭，硅岩反应堆"
+				"极限压UV：&a生物活性处理器&r，核聚变MK3，深度处理稀土，电路装配线，太空电梯"
+				"极高压UHV：&e光学处理器&r，恒星锻炉，超能硅岩爆弹，超能反应堆"
+				"极超压UEV：&d奇异处理器&r，超临界合成，基岩处理，精金"
+				"极巨压UIV：&0寰宇处理器&r，宇宙探测，质量发生器，夸克"
+				"极顶压UXV：&4超因果处理器&r，龙，宇宙中子素，无尽，超维度锻炉"
+				"过载压OPV：&4超时空电路&r，宇宙模拟，时空，奇点，永恒"
+				"上限压MAX：&4创造物品合成&r"
 			]
 			icon: "minecraft:structure_void"
 			id: "4536535E8DA71D5B"
@@ -128,8 +129,9 @@
 		{
 			dependencies: ["075D368E91231337"]
 			description: [
-				"这个怎么获得就不用多说了。"
-				"这个任务会给你一个探矿仪，潜行右键可以切换模式，流体模式目前还用不到。"
+				"道生一，一生二，工作台生万物"
+				"这个任务会给你一个超级探矿仪，理论你结档也用不完电"
+				"潜行右键可以切换模式，流体模式目前还用不到,得到MV"
 			]
 			id: "77DF4A561164B530"
 			rewards: [{
@@ -153,7 +155,7 @@
 		}
 		{
 			dependencies: ["77DF4A561164B530"]
-			description: ["石器时代"]
+			description: ["石器时代，注意背包空间哦"]
 			icon: "minecraft:cobblestone"
 			id: "2DC6C5D7DDA578F7"
 			rewards: [{
@@ -190,7 +192,7 @@
 		}
 		{
 			dependencies: ["2DC6C5D7DDA578F7"]
-			description: ["高炉更快"]
+			description: ["比熔炉快两倍"]
 			id: "0EA3AAE338C0FE7A"
 			rewards: [{
 				count: 8
@@ -209,7 +211,7 @@
 		{
 			can_repeat: true
 			dependencies: ["77DF4A561164B530"]
-			description: ["你不用担心黑暗了"]
+			description: ["你不用担心黑暗了,放心ruck and stone吧"]
 			disable_toast: true
 			icon: {
 				Count: 1
@@ -221,7 +223,7 @@
 			id: "525ED642C7A365D1"
 			optional: true
 			rewards: [{
-				command: "/effect give @p minecraft:night_vision 100000 0 true"
+				command: "/effect give @p minecraft:night_vision 400000 0 true"
 				elevate_perms: true
 				exclude_from_claim_all: true
 				id: "08BEFC60D3DA3529"
@@ -239,7 +241,7 @@
 			dependencies: ["77DF4A561164B530"]
 			description: [
 				"黑曜石可以去虚空世界，哭泣黑曜石可以去超平坦世界，传送X,Z坐标为主世界坐标x100"
-				"这里GT的太阳能设备无法工作"
+				"在这里GT的太阳能设备无法工作"
 			]
 			icon: "minecraft:obsidian"
 			id: "07AC1B02299EF734"
@@ -384,45 +386,39 @@
 					type: "item"
 				}
 				{
-					id: "43DB6E0844CC0989"
+					id: "6B2F3809C13398C5"
 					item: {
 						Count: 1
-						id: "gtceu:neutronium_hammer"
+						id: "gtceu:cobalt_brass_file"
 						tag: {
 							DisallowContainerItem: 0b
-							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
-							}
+							GT.Behaviours: { }
 							GT.Tool: {
 								Damage: 0
-								Enchantability: 33
-								HarvestLevel: 6
-								MaxDamage: 65534
-								ToolSpeed: 184.0f
+								Enchantability: 5
+								MaxDamage: 1023
 							}
 							HideFlags: 2
-							Unbreakable: 1b
 						}
 					}
 					type: "item"
 				}
 				{
-					id: "1E277D3D320568AE"
+					id: "7B6F59A2F0AF4E58"
 					item: {
 						Count: 1
-						id: "gtceu:neutronium_file"
+						id: "gtceu:cobalt_brass_hammer"
 						tag: {
 							DisallowContainerItem: 0b
-							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
-							}
+							GT.Behaviours: { }
 							GT.Tool: {
 								Damage: 0
-								Enchantability: 33
-								MaxDamage: 65534
+								Enchantability: 5
+								HarvestLevel: 2
+								MaxDamage: 1023
+								ToolSpeed: 6.5f
 							}
 							HideFlags: 2
-							Unbreakable: 1b
 						}
 					}
 					type: "item"
@@ -563,7 +559,7 @@
 			description: [
 				"手持终端潜行右键可以自动搭建多方块结构，如果是空手则会显示预览"
 				""
-				"自动搭建有一点问题，特别是在创造模式，推荐先不要在背包中放功能仓室只放结构方块，在搭建出主体结构后再手动放上功能仓室"
+				"自动搭建有一点问题，特别是在创造模式，&e推荐先不要在背包中放功能仓室只放结构方块&r，&6在搭建出主体结构后再手动放上功能仓室&r"
 			]
 			id: "4AB25C15F0B05AA0"
 			optional: true
@@ -603,7 +599,7 @@
 		}
 		{
 			dependencies: ["2C6F506ADD78F277"]
-			description: ["去小市场兑换宝物，注意钻石是耐烧王，推荐给锅炉用"]
+			description: ["去小市场兑换宝物，注意钻石是&6耐烧王&r，推荐给锅炉用"]
 			id: "2E6B876A85B30554"
 			rewards: [{
 				id: "4C4D7911A44B42C2"
@@ -688,6 +684,7 @@
 			description: [
 				"扳手右键点击可以&9&l设置GT机器的端口&r，而潜行右键点击可以&9&l旋转机器&r，也可以代替镐子破坏机器"
 				"螺丝刀可以&9&l打开机器覆盖板"
+				"撬棍可以&9&l拆下覆盖板&r&r"
 				"剪线钳可以&9&l连接线缆"
 				"{@pagebreak}"
 				"扳手："
@@ -718,160 +715,121 @@
 			id: "1F663A6C2DD1DB60"
 			rewards: [
 				{
-					id: "3953AFA6DC255A9D"
+					id: "348CB22199483B96"
 					item: {
 						Count: 1
-						id: "gtceu:neutronium_wrench"
+						id: "gtceu:cobalt_brass_crowbar"
 						tag: {
 							DisallowContainerItem: 0b
-							GT.Behaviours: {
-								Mode: 2b
-								RelocateMinedBlocks: 1b
-							}
+							GT.Behaviours: { }
 							GT.Tool: {
 								Damage: 0
-								Enchantability: 33
-								HarvestLevel: 6
-								MaxDamage: 65534
-								ToolSpeed: 184.0f
+								Enchantability: 5
+								HarvestLevel: 2
+								MaxDamage: 1023
+								ToolSpeed: 6.5f
 							}
 							HideFlags: 2
-							Unbreakable: 1b
 						}
 					}
 					type: "item"
 				}
 				{
-					id: "47195CDC24BB0499"
+					id: "2BBCB5ADE89977D6"
 					item: {
 						Count: 1
-						id: "gtceu:neutronium_screwdriver"
+						id: "gtceu:cobalt_brass_knife"
 						tag: {
 							DisallowContainerItem: 0b
-							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
-							}
+							GT.Behaviours: { }
 							GT.Tool: {
+								AttackDamage: 2.0f
+								AttackSpeed: 2.8f
 								Damage: 0
-								Enchantability: 33
-								MaxDamage: 65534
+								Enchantability: 5
+								MaxDamage: 1023
 							}
 							HideFlags: 2
-							Unbreakable: 1b
 						}
 					}
 					type: "item"
 				}
 				{
-					id: "0C92E28D8F481344"
+					id: "5F83D7E70A08A961"
 					item: {
 						Count: 1
-						id: "gtceu:neutronium_saw"
+						id: "gtceu:cobalt_brass_wire_cutter"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 5
+								HarvestLevel: 2
+								MaxDamage: 1023
+								ToolSpeed: 6.5f
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "1BB69ADE38909A63"
+					item: {
+						Count: 1
+						id: "gtceu:cobalt_brass_saw"
 						tag: {
 							DisallowContainerItem: 0b
 							GT.Behaviours: {
 								HarvestIce: 1b
-								RelocateMinedBlocks: 1b
 							}
 							GT.Tool: {
 								Damage: 0
-								Enchantability: 33
-								MaxDamage: 65534
-							}
-							HideFlags: 2
-							Unbreakable: 1b
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "2B53D098FE44E1E7"
-					item: {
-						Count: 1
-						id: "gtceu:neutronium_wire_cutter"
-						tag: {
-							DisallowContainerItem: 0b
-							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
-							}
-							GT.Tool: {
-								Damage: 0
-								Enchantability: 33
-								HarvestLevel: 6
-								MaxDamage: 65534
-								ToolSpeed: 184.0f
-							}
-							HideFlags: 2
-							Unbreakable: 1b
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "2F2ECAEB122EA729"
-					item: {
-						Count: 1
-						id: "gtceu:neutronium_knife"
-						tag: {
-							DisallowContainerItem: 0b
-							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
-							}
-							GT.Tool: {
-								AttackDamage: 100.0f
-								AttackSpeed: 3.5f
-								Damage: 0
-								Enchantability: 33
-								MaxDamage: 65534
-							}
-							HideFlags: 2
-							Unbreakable: 1b
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "3AE5213059754673"
-					item: {
-						Count: 1
-						id: "gtceu:polybenzimidazole_mallet"
-						tag: {
-							DisallowContainerItem: 0b
-							Enchantments: [{
-								id: "minecraft:unbreaking"
-								lvl: 999s
-							}]
-							GT.Behaviours: { }
-							GT.Tool: {
-								Damage: 0
-								Enchantability: 10
+								Enchantability: 5
 								MaxDamage: 1023
 							}
 							HideFlags: 2
-							RepairCost: 1
 						}
 					}
 					type: "item"
 				}
 				{
-					id: "43B75892B602126D"
+					id: "32061F409F218B03"
 					item: {
 						Count: 1
-						id: "gtceu:neutronium_crowbar"
+						id: "gtceu:cobalt_brass_screwdriver"
+						tag: {
+							DisallowContainerItem: 0b
+							GT.Behaviours: { }
+							GT.Tool: {
+								Damage: 0
+								Enchantability: 5
+								MaxDamage: 1023
+							}
+							HideFlags: 2
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3CF284D2374CA943"
+					item: {
+						Count: 1
+						id: "gtceu:cobalt_brass_wrench"
 						tag: {
 							DisallowContainerItem: 0b
 							GT.Behaviours: {
-								RelocateMinedBlocks: 1b
+								Mode: 2b
 							}
 							GT.Tool: {
 								Damage: 0
-								Enchantability: 33
-								HarvestLevel: 6
-								MaxDamage: 65534
-								ToolSpeed: 184.0f
+								Enchantability: 5
+								HarvestLevel: 2
+								MaxDamage: 1023
+								ToolSpeed: 6.5f
 							}
 							HideFlags: 2
-							Unbreakable: 1b
 						}
 					}
 					type: "item"
@@ -1091,9 +1049,9 @@
 			dependencies: ["2DC6C5D7DDA578F7"]
 			description: [
 				"格雷科技的矿石都是以矿脉形式生成的，每个矿脉都有特定的矿石"
-				"JEI可查看矿脉生成信息。"
-				"具体矿脉内容可到矿石生成章节查看。"
-				"连锁可以采集所有矿石。"
+				"&eJEI可查看矿脉生成信息&r"
+				"具体矿脉内容可到矿石生成章节查看"
+				"连锁可以采集所有矿石"
 			]
 			id: "050FD340224F7AB6"
 			rewards: [{
@@ -1210,10 +1168,11 @@
 		}
 		{
 			description: [
-				"鼠标移动到一个物品上面!（背包，右侧搜索栏，jei中"
 				""
-				"按r查看合成！！！"
-				"按u查看用途！！！"
+				"将鼠标移动到你想要查询合成表/被合成的物品上"
+				""
+				"按下&4R&r查询合成表(即此物品怎么才能获取) "
+				"按下&4U&r查询被合成表(即此物品可以用来合成哪些物品)"
 				""
 				"打开界面后上面有两个带箭头的行"
 				"第一行和最上的图标一样可以切换合成工具（点击这一行的文字可以查看这种方式的所有合成表）"
@@ -1273,6 +1232,7 @@
 		}
 		{
 			dependencies: ["4AB25C15F0B05AA0"]
+			description: ["不再担忧线圈，重复方块和舱室问题"]
 			id: "1A124E85453923DF"
 			tasks: [{
 				id: "10AA38DEE8B23298"

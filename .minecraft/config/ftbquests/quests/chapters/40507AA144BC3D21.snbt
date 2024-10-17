@@ -119,7 +119,7 @@
 			]
 			id: "736395E39993F727"
 			tasks: [{
-				id: "17C84E99F36C56AF"
+				id: "7268B313B5D29DE8"
 				item: "gtlcore:hyperdimensional_drone"
 				type: "item"
 			}]
@@ -131,8 +131,8 @@
 			description: ["可大批量生产"]
 			id: "414F9C645C799FAE"
 			tasks: [{
-				id: "40CEEC8099A2769E"
-				item: "gtlcore:suprachronal_circuit_max"
+				id: "47061FC3050F2DB2"
+				item: "gtlcore:suprachronal_max"
 				type: "item"
 			}]
 			x: 3.0d
