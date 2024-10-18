@@ -948,6 +948,48 @@ ServerEvents.recipes((event) => {
         U: "gtceu:mv_electric_pump",
     })
 
+    event.shaped("gtlcore:vacuum_hatch", [
+        "ABA",
+        "BCB",
+        "ABA"
+    ], {
+        A: "gtceu:ev_robot_arm",
+        B: "gtceu:vanadium_steel_large_fluid_pipe",
+        C: "gtceu:ev_pump"
+    })
+
+    event.shaped("gtlcore:vacuum_hatch", [
+        "ABA",
+        "BCB",
+        "ABA"
+    ], {
+        A: "gtceu:ev_robot_arm",
+        B: "gtceu:vanadium_steel_large_fluid_pipe",
+        C: "gtceu:ev_pump"
+    })
+
+    event.shaped("gtlcore:vacuum_configuration_hatch", [
+        "DCD",
+        "BAB",
+        "DCD"
+    ], {
+        A: "gtlcore:auto_configuration_maintenance_hatch",
+        B: "gtceu:gravi_star",
+        C: "#gtceu:circuits/uhv",
+        D: "gtlcore:vacuum_hatch"
+    })
+
+    event.shaped("gtlcore:gravity_configuration_hatch", [
+        "DCD",
+        "BAB",
+        "DCD"
+    ], {
+        A: "gtlcore:auto_configuration_maintenance_hatch",
+        B: "gtceu:uev_field_generator",
+        C: "#gtceu:circuits/uev",
+        D: "gtlcore:gravity_hatch"
+    })
+
     const world_data_scanner = [
         ["lv", "gtceu:tin_single_cable"],
         ["mv", "gtceu:copper_single_cable"],
@@ -12687,7 +12729,7 @@ ServerEvents.recipes((event) => {
         .duration(400)
 
     gtr.lightning_processor("gtlcore:ender_air")
-        .itemInputs("64x gtceu:ender_pearl_dust")
+        .itemInputs("64x ae2:ender_dust")
         .inputFluids("gtceu:fuming_nitric_acid 1000", "gtceu:nitrogen_dioxide 10000", "gtceu:helium 10000", "gtceu:radon 1000", "gtceu:deuterium 1000", "gtceu:xenon 1000")
         .outputFluids("gtceu:ender_air 1000")
         .EUt(480)
@@ -12709,10 +12751,10 @@ ServerEvents.recipes((event) => {
 
     gtr.electric_blast_furnace("gtlcore:iridium_dioxide_dust")
         .itemInputs("6x gtceu:iridium_metal_residue_dust", "5x gtceu:sodium_chlorate_dust")
-        .inputFluids("gtceu:hydrogen 6000")
+        .inputFluids("gtceu:hydrogen 1000")
         .itemOutputs("3x gtceu:iridium_dioxide_dust", "2x gtceu:salt_dust")
         .chancedOutput("gtceu:platinum_sludge_residue_dust", 8000, 0)
-        .outputFluids("gtceu:diluted_hydrochloric_acid 6000")
+        .outputFluids("gtceu:diluted_hydrochloric_acid 1000")
         .EUt(120)
         .duration(200)
         .blastFurnaceTemp(790)
@@ -13884,7 +13926,7 @@ ServerEvents.recipes((event) => {
 
     gtr.neutron_activator("gtlcore:quantanium")
         .inputFluids("gtceu:neon 10000")
-        .itemInputs("4x gtceu:quantum_star", "8x gtceu:quantum_eye", "16x gtceu:mithril_dust", "16x gtceu:gadolinium_dust", "64x minecraft:netherite_scrap", "64x ae2:fluix_dust")
+        .itemInputs("4x gtceu:quantum_star", "8x gtceu:quantum_eye", "16x gtceu:mithril_dust", "16x gtceu:gadolinium_dust", "16x gtceu:exquisite_fluix_gem", "64x minecraft:netherite_scrap")
         .outputFluids("gtceu:quantanium 10000")
         .addData("ev_min", 1020)
         .addData("ev_max", 1200)
@@ -13895,7 +13937,7 @@ ServerEvents.recipes((event) => {
         .inputFluids("gtceu:uu_amplifier 1000")
         .notConsumable("gtceu:degenerate_rhenium_plate")
         .itemInputs("minecraft:dragon_egg")
-        .itemOutputs("8x gtceu:ender_eye_dust", "4x gtceu:ender_pearl_dust")
+        .itemOutputs("8x gtceu:ender_eye_dust", "4x ae2:ender_dust")
         .chancedOutput("gtlcore:draconium_dust", 4000, 0)
         .addData("ev_min", 800)
         .addData("ev_max", 900)
