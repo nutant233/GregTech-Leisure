@@ -298,11 +298,7 @@
 			tasks: [
 				{
 					id: "37F1A09D5A9029ED"
-					item: {
-						Count: 1
-						id: "ad_astra:tier_2_rocket"
-						tag: { }
-					}
+					item: "ad_astra:tier_2_rocket"
 					type: "item"
 				}
 				{
@@ -488,11 +484,7 @@
 				}
 				{
 					id: "00ACD41B8ABD498C"
-					item: {
-						Count: 1
-						id: "ad_astra:tier_3_rocket"
-						tag: { }
-					}
+					item: "ad_astra:tier_3_rocket"
 					type: "item"
 				}
 			]
@@ -732,11 +724,7 @@
 				}
 				{
 					id: "65C057BCA5809552"
-					item: {
-						Count: 1
-						id: "ad_astra:tier_4_rocket"
-						tag: { }
-					}
+					item: "ad_astra:tier_4_rocket"
 					type: "item"
 				}
 			]

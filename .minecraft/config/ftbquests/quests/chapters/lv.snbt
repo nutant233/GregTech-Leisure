@@ -977,6 +977,7 @@
 		}
 		{
 			dependencies: ["0BBC0C3FB2E8C800"]
+			description: ["仅前期使用，产出的资源在后面都有高效的替代方法"]
 			id: "62B5D5669A535245"
 			tasks: [{
 				id: "41EE54C0336928F8"

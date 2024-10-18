@@ -297,7 +297,7 @@
 			id: "5BFA4802D228358C"
 			tasks: [{
 				id: "7D3290423A198D18"
-				item: "gtlcore:photon_carrying_wafer"
+				item: "gtlcore:raw_photon_carrying_wafer"
 				type: "item"
 			}]
 			x: 6.0d

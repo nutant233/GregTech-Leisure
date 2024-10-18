@@ -177,7 +177,7 @@
             "required": true
         },
         {
-            "fileID": 5543955,
+            "fileID": 5816794,
             "projectID": 289412,
             "required": true
         },
@@ -222,6 +222,11 @@
             "required": true
         },
         {
+            "fileID": 5806246,
+            "projectID": 1119284,
+            "required": true
+        },
+        {
             "fileID": 5543190,
             "projectID": 250702,
             "required": true
@@ -247,12 +252,12 @@
             "required": true
         },
         {
-            "fileID": 5806044,
+            "fileID": 5819331,
             "projectID": 626676,
             "required": true
         },
         {
-            "fileID": 5741238,
+            "fileID": 5819684,
             "projectID": 1028068,
             "required": true
         },
@@ -264,6 +269,11 @@
         {
             "fileID": 5676014,
             "projectID": 790626,
+            "required": true
+        },
+        {
+            "fileID": 4772109,
+            "projectID": 451682,
             "required": true
         },
         {
@@ -322,7 +332,7 @@
     "minecraft": {
         "modLoaders": [
             {
-                "id": "forge-47.3.7",
+                "id": "forge-47.3.11",
                 "primary": true
             }
         ],

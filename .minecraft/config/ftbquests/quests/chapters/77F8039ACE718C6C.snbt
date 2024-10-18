@@ -276,20 +276,12 @@
 				}
 				{
 					id: "270868F13527CD26"
-					item: {
-						Count: 1
-						id: "gtceu:nanomuscle_helmet"
-						tag: { }
-					}
+					item: "gtceu:nanomuscle_helmet"
 					type: "item"
 				}
 				{
 					id: "77165A6F0BE3AD56"
-					item: {
-						Count: 1
-						id: "gtceu:avanced_nanomuscle_chestplate"
-						tag: { }
-					}
+					item: "gtceu:avanced_nanomuscle_chestplate"
 					type: "item"
 				}
 				{
@@ -441,14 +433,15 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 4.0d
+			y: 3.0d
 		}
 		{
 			dependencies: [
 				"707E5114B7979898"
 				"388BD32463FA905D"
+				"6DB45A96500CC2EB"
 			]
-			description: ["你的第一颗ULV电路，你需要用它帮忙做更便宜的，做几个就够了"]
+			description: ["你的第一颗ULV电路，你需要用它帮忙做更便宜的"]
 			id: "5CD26DECB937FC71"
 			rewards: [{
 				id: "327EC9AD42261D00"
@@ -947,7 +940,10 @@
 		}
 		{
 			dependencies: ["12FE2B59FA86381C"]
-			description: ["激光物流的合成都被加强了，推荐使用这个模组来物流"]
+			description: [
+				"激光物流的合成都被加强了，推荐使用这个模组来物流"
+				"使用桶装流体可以标记流体过滤"
+			]
 			id: "7B38A7C2643C6766"
 			rewards: [{
 				id: "42242771F67681FC"
@@ -1015,11 +1011,7 @@
 				{
 					count: 6
 					id: "52A2B395450AF309"
-					item: {
-						Count: 1
-						id: "ae2:item_storage_cell_64k"
-						tag: { }
-					}
+					item: "ae2:item_storage_cell_64k"
 					type: "item"
 				}
 				{
@@ -1035,21 +1027,13 @@
 				}
 				{
 					id: "1A7FA662F18A00CA"
-					item: {
-						Count: 1
-						id: "ae2:energy_cell"
-						tag: { }
-					}
+					item: "ae2:energy_cell"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "307806F3D4DEE9BE"
-					item: {
-						Count: 1
-						id: "ae2:fluid_storage_cell_64k"
-						tag: { }
-					}
+					item: "ae2:fluid_storage_cell_64k"
 					type: "item"
 				}
 			]
@@ -1244,6 +1228,25 @@
 			}]
 			x: 14.0d
 			y: 6.0d
+		}
+		{
+			dependencies: ["4B6F43302E963F5E"]
+			description: ["等待1分钟获得第一片真空，注意停止工作后真空会立即消失"]
+			id: "6DB45A96500CC2EB"
+			tasks: [
+				{
+					id: "340938C89AA8C86B"
+					item: "gtlcore:lp_steam_vacuum_pump"
+					type: "item"
+				}
+				{
+					id: "328CAED860DFBE57"
+					item: "gtceu:bronze_huge_fluid_pipe"
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 4.5d
 		}
 	]
 	subtitle: ["Tier0-ULV"]

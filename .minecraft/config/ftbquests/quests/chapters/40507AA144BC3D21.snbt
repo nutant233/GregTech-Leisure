@@ -131,8 +131,8 @@
 			description: ["可大批量生产"]
 			id: "414F9C645C799FAE"
 			tasks: [{
-				id: "47061FC3050F2DB2"
-				item: "gtlcore:suprachronal_max"
+				id: "1F4CE7BD2782BBA9"
+				item: "gtlcore:suprachronal_circuit_max"
 				type: "item"
 			}]
 			x: 3.0d

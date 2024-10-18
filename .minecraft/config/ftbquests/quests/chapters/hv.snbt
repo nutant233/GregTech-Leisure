@@ -312,11 +312,7 @@
 			tasks: [
 				{
 					id: "5A00D926C53F953B"
-					item: {
-						Count: 1
-						id: "ad_astra:tier_1_rocket"
-						tag: { }
-					}
+					item: "ad_astra:tier_1_rocket"
 					type: "item"
 				}
 				{

@@ -4275,11 +4275,11 @@ ServerEvents.recipes((event) => {
         .duration(150)
 
     gtr.dissolution_treatment("gtlcore:rhenium_sulfuric_solution")
-        .inputFluids("gtceu:molybdenum_flue 3000")
-        .inputFluids("minecraft:water 250")
-        .outputFluids("gtceu:rhenium_sulfuric_solution 3000")
-        .EUt(491520)
-        .duration(30)
+        .inputFluids("gtceu:molybdenum_flue 30000")
+        .inputFluids("minecraft:water 2500")
+        .outputFluids("gtceu:rhenium_sulfuric_solution 30000")
+        .EUt(1920)
+        .duration(3000)
 
     gtr.electric_blast_furnace("gtlcore:molybdenum_flue")
         .itemInputs("4x gtceu:molybdenum_concentrate_dust")
@@ -4629,12 +4629,12 @@ ServerEvents.recipes((event) => {
 
     //rare_earth
     gtr.dissolution_treatment("gtlcore:rare_earth_hydroxides")
-        .itemInputs("gtceu:rare_earth_dust", "3x gtceu:sodium_hydroxide_dust")
-        .inputFluids("gtceu:phosphoric_acid 100")
-        .inputFluids("minecraft:water 900")
-        .outputFluids("gtceu:rare_earth_hydroxides 1000")
+        .itemInputs("10x gtceu:rare_earth_dust", "30x gtceu:sodium_hydroxide_dust")
+        .inputFluids("gtceu:phosphoric_acid 1000")
+        .inputFluids("minecraft:water 9000")
+        .outputFluids("gtceu:rare_earth_hydroxides 10000")
         .EUt(480)
-        .duration(50)
+        .duration(800)
 
     gtr.chemical_reactor("gtlcore:rare_earth_chlorides")
         .inputFluids("gtceu:rare_earth_hydroxides 1000", "gtceu:hydrochloric_acid 1000")
@@ -4726,12 +4726,12 @@ ServerEvents.recipes((event) => {
         .blastFurnaceTemp(16200)
 
     gtr.dissolution_treatment("gtlcore:bedrock_soot_solution")
-        .inputFluids("gtceu:bedrock_smoke 1000")
-        .inputFluids("gtceu:distilled_water 1000")
-        .itemInputs("gtceu:naquadah_dust")
-        .outputFluids("gtceu:bedrock_soot_solution 1000")
+        .inputFluids("gtceu:bedrock_smoke 10000")
+        .inputFluids("gtceu:distilled_water 10000")
+        .itemInputs("10x gtceu:naquadah_dust")
+        .outputFluids("gtceu:bedrock_soot_solution 10000")
         .EUt(7680)
-        .duration(400)
+        .duration(4000)
 
     gtr.centrifuge("gtlcore:clean_bedrock_solution")
         .inputFluids("gtceu:bedrock_soot_solution 2000")
@@ -10208,43 +10208,43 @@ ServerEvents.recipes((event) => {
         .duration(300)
         .cleanroom(CleanroomType.CLEANROOM)
 
-    gtr.circuit_assembler("gtlcore:circuit_resonatic_ulv")
+    gtr.circuit_assembler("gtlcore:magneto_resonatic_circuit_ulv")
         .itemInputs("4x gtceu:tantalum_capacitor", "4x gtceu:resistor", "4x gtceu:inductor", "gtlcore:imprinted_resonatic_circuit_board", "gtceu:magneto_resonatic_gem", "gtceu:vacuum_tube")
         .itemOutputs("4x gtlcore:magneto_resonatic_circuit_ulv")
         .EUt(30)
         .duration(50)
 
-    gtr.circuit_assembler("gtlcore:circuit_resonatic_lv")
+    gtr.circuit_assembler("gtlcore:magneto_resonatic_circuit_lv")
         .itemInputs("4x gtceu:diode", "4x gtceu:capacitor", "4x gtceu:transistor", "gtlcore:imprinted_resonatic_circuit_board", "gtceu:magneto_resonatic_gem", "gtlcore:magneto_resonatic_circuit_ulv")
         .itemOutputs("4x gtlcore:magneto_resonatic_circuit_lv")
         .EUt(120)
         .duration(90)
 
-    gtr.circuit_assembler("gtlcore:circuit_resonatic_mv")
+    gtr.circuit_assembler("gtlcore:magneto_resonatic_circuit_mv")
         .itemInputs("8x gtceu:diode", "8x gtceu:capacitor", "8x gtceu:transistor", "gtlcore:imprinted_resonatic_circuit_board", "gtceu:magneto_resonatic_gem", "gtlcore:magneto_resonatic_circuit_lv")
         .itemOutputs("4x gtlcore:magneto_resonatic_circuit_mv")
         .EUt(480)
         .duration(150)
 
-    gtr.circuit_assembler("gtlcore:circuit_resonatic_hv")
+    gtr.circuit_assembler("gtlcore:magneto_resonatic_circuit_hv")
         .itemInputs("4x gtceu:smd_diode", "4x gtceu:smd_capacitor", "4x gtceu:smd_transistor", "2x gtlcore:imprinted_resonatic_circuit_board", "gtceu:flawless_magneto_resonatic_gem", "gtlcore:magneto_resonatic_circuit_mv")
         .itemOutputs("4x gtlcore:magneto_resonatic_circuit_hv")
         .EUt(1920)
         .duration(230)
 
-    gtr.circuit_assembler("gtlcore:circuit_resonatic_ev")
+    gtr.circuit_assembler("gtlcore:magneto_resonatic_circuit_ev")
         .itemInputs("8x gtceu:smd_diode", "8x gtceu:smd_capacitor", "8x gtceu:smd_transistor", "4x gtlcore:imprinted_resonatic_circuit_board", "gtceu:flawless_magneto_resonatic_gem", "gtlcore:magneto_resonatic_circuit_hv")
         .itemOutputs("4x gtlcore:magneto_resonatic_circuit_ev")
         .EUt(7680)
         .duration(330)
 
-    gtr.circuit_assembler("gtlcore:circuit_resonatic_iv")
+    gtr.circuit_assembler("gtlcore:magneto_resonatic_circuit_iv")
         .itemInputs("4x gtceu:advanced_smd_diode", "4x gtceu:advanced_smd_capacitor", "4x gtceu:advanced_smd_transistor", "4x gtlcore:imprinted_resonatic_circuit_board", "gtceu:flawless_magneto_resonatic_gem", "gtlcore:magneto_resonatic_circuit_ev")
         .itemOutputs("4x gtlcore:magneto_resonatic_circuit_iv")
         .EUt(30720)
         .duration(450)
 
-    gtr.circuit_assembler("gtlcore:circuit_resonatic_luv")
+    gtr.circuit_assembler("gtlcore:magneto_resonatic_circuit_luv")
         .itemInputs("8x gtceu:advanced_smd_diode", "8x gtceu:advanced_smd_capacitor", "8x gtceu:advanced_smd_transistor", "4x gtlcore:imprinted_resonatic_circuit_board", "gtceu:flawless_magneto_resonatic_gem", "gtlcore:magneto_resonatic_circuit_iv")
         .itemOutputs("4x gtlcore:magneto_resonatic_circuit_luv")
         .EUt(122880)
@@ -10259,7 +10259,7 @@ ServerEvents.recipes((event) => {
     ]
 
     circuits.forEach((circuit) => {
-        gtr.circuit_assembler("gtlcore:circuit_resonatic_" + circuit[1])
+        gtr.circuit_assembler("gtlcore:magneto_resonatic_circuit_" + circuit[1])
             .itemInputs("16x gtlcore:smd_diode_" + circuit[0], "16x gtlcore:smd_capacitor_" + circuit[0], "16x gtlcore:smd_transistor_" + circuit[0], "8x gtlcore:imprinted_resonatic_circuit_board", "gtceu:exquisite_magneto_resonatic_gem", "gtlcore:magneto_resonatic_circuit_" + circuit[2])
             .itemOutputs("4x gtlcore:magneto_resonatic_circuit_" + circuit[1])
             .EUt(122880 * (4 ** circuit[3]))
@@ -16515,11 +16515,11 @@ ServerEvents.recipes((event) => {
         .duration(210)
 
     gtr.dissolution_treatment("gtlcore:actinium_radium_hydroxide_solution")
-        .inputFluids("gtceu:actinium_radium_hydroxide_solution 1000")
-        .inputFluids("gtceu:nitric_acid 12000")
-        .outputFluids("gtceu:actinium_radium_nitrate_solution 13000")
+        .inputFluids("gtceu:actinium_radium_hydroxide_solution 10000")
+        .inputFluids("gtceu:nitric_acid 120000")
+        .outputFluids("gtceu:actinium_radium_nitrate_solution 130000")
         .EUt(GTValues.VA[GTValues.EV] * 2)
-        .duration(290)
+        .duration(2900)
 
     gtr.centrifuge("gtlcore:actinium_radium_nitrate_solution")
         .notConsumable("1x gtceu:trifluoroacetic_phosphate_ester_dust")

@@ -66,6 +66,7 @@
 			}]
 			tasks: [{
 				consume_items: true
+				count: 4L
 				id: "553843DFB9C60240"
 				item: "gtceu:copper_credit"
 				type: "item"
@@ -87,7 +88,7 @@
 			}]
 			tasks: [{
 				consume_items: true
-				count: 2L
+				count: 4L
 				id: "79268F6FFDE91F4E"
 				item: "gtceu:copper_credit"
 				type: "item"
@@ -109,7 +110,7 @@
 			}]
 			tasks: [{
 				consume_items: true
-				count: 4L
+				count: 16L
 				id: "1B53ED998CCC2A56"
 				item: "gtceu:copper_credit"
 				type: "item"
@@ -347,6 +348,7 @@
 			y: -4.0d
 		}
 		{
+			dependencies: ["335ED39019FC62E7"]
 			id: "369BA1002418F097"
 			tasks: [{
 				id: "0E78B5C528062928"
@@ -450,45 +452,34 @@
 			y: -7.0d
 		}
 		{
+			can_repeat: true
 			dependencies: ["369BA1002418F097"]
 			description: [
 				"带有夜视和创造飞行，X键可加速飞行，最高4倍，潜行加X可以重制飞行速度，无需能量"
 				"Z键开关夜视"
 				"可使用宇航服升级为抵抗宇宙危险的航天版本，无需氧气"
 			]
-			icon: {
-				Count: 1
-				id: "gtlcore:fermium_chestplate"
-				tag: {
-					Damage: 0
-				}
-			}
+			icon: "kubejs:fermium_chestplate"
 			id: "204D5882D7F5CF64"
 			rewards: [
 				{
-					id: "305DCBDAB0E551AA"
-					item: {
-						Count: 1
-						id: "gtlcore:fermium_helmet"
-						tag: {
-							Damage: 0
-						}
-					}
+					id: "09EECCCA368A95A0"
+					item: "kubejs:fermium_helmet"
 					type: "item"
 				}
 				{
-					id: "62D453E0BF5D0AC8"
-					item: "gtlcore:fermium_chestplate"
+					id: "64F858F0B90508F5"
+					item: "kubejs:fermium_chestplate"
 					type: "item"
 				}
 				{
-					id: "029A014B60FE9EB5"
-					item: "gtlcore:fermium_leggings"
+					id: "1CFB92D340F1722C"
+					item: "kubejs:fermium_leggings"
 					type: "item"
 				}
 				{
-					id: "60FEFE03527530DF"
-					item: "gtlcore:fermium_boots"
+					id: "1487585609644258"
+					item: "kubejs:fermium_boots"
 					type: "item"
 				}
 			]
@@ -502,21 +493,13 @@
 				{
 					consume_items: true
 					id: "63DC036403653500"
-					item: {
-						Count: 1
-						id: "gtceu:nanomuscle_helmet"
-						tag: { }
-					}
+					item: "gtceu:nanomuscle_helmet"
 					type: "item"
 				}
 				{
 					consume_items: true
 					id: "73BEC5DD61996102"
-					item: {
-						Count: 1
-						id: "gtceu:avanced_nanomuscle_chestplate"
-						tag: { }
-					}
+					item: "gtceu:avanced_nanomuscle_chestplate"
 					type: "item"
 				}
 				{
@@ -1030,11 +1013,10 @@
 					type: "item"
 				}
 				{
-					consume_items: true
-					id: "42461EFC486A5CFF"
+					id: "33EB1BC91AFF548A"
 					item: {
 						Count: 1
-						id: "minecraft:diamond_pickaxe"
+						id: "minecraft:iron_pickaxe"
 						tag: {
 							Damage: 0
 						}
@@ -1042,11 +1024,10 @@
 					type: "item"
 				}
 				{
-					consume_items: true
-					id: "39113EFF1EFFE90E"
+					id: "1C8363E04212B69B"
 					item: {
 						Count: 1
-						id: "minecraft:diamond_axe"
+						id: "minecraft:iron_axe"
 						tag: {
 							Damage: 0
 						}
@@ -1054,11 +1035,21 @@
 					type: "item"
 				}
 				{
-					consume_items: true
-					id: "2033F767038F478C"
+					id: "4E8752072BAA2C16"
 					item: {
 						Count: 1
-						id: "minecraft:diamond_shovel"
+						id: "minecraft:iron_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "15A01F5D2D16FCCF"
+					item: {
+						Count: 1
+						id: "minecraft:iron_sword"
 						tag: {
 							Damage: 0
 						}
@@ -1084,6 +1075,7 @@
 			tasks: [
 				{
 					consume_items: true
+					count: 4L
 					id: "6DDAAF664EA230B3"
 					item: "gtceu:cupronickel_credit"
 					type: "item"
@@ -1237,19 +1229,26 @@
 			icon: "gtlcore:cell_component_256m"
 			id: "30787B18066763DB"
 			rewards: [{
-				count: 2
 				id: "0641B4398B707B90"
 				item: "gtlcore:cell_component_256m"
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				id: "6C29298EE3013869"
-				item: "gtceu:naquadah_credit"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "6C29298EE3013869"
+					item: "gtceu:naquadah_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "7F54B98EC5DF6AB0"
+					item: "ae2:cell_component_1k"
+					type: "item"
+				}
+			]
 			title: "256M"
-			x: -3.0d
+			x: -1.5d
 			y: 2.0d
 		}
 		{
@@ -1264,14 +1263,23 @@
 				item: "ae2:fluix_glass_cable"
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				id: "5559DCB34AF137A7"
-				item: "gtceu:osmium_credit"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "5559DCB34AF137A7"
+					item: "gtceu:osmium_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "3AF66436A7DBB58F"
+					item: "minecraft:glass"
+					type: "item"
+				}
+			]
 			title: "玻璃线缆"
-			x: -1.5d
+			x: -3.0d
 			y: 2.0d
 		}
 		{
@@ -1280,7 +1288,6 @@
 			description: ["未知科技"]
 			icon: "minecraft:end_crystal"
 			id: "7B72A96FC0A31033"
-			optional: true
 			rewards: [
 				{
 					id: "29D25464BAE8D612"
@@ -1313,11 +1320,7 @@
 				}
 				{
 					id: "6D1ADD564C5DF00A"
-					item: {
-						Count: 1
-						id: "ae2:dense_energy_cell"
-						tag: { }
-					}
+					item: "ae2:dense_energy_cell"
 					type: "item"
 				}
 			]
@@ -1331,7 +1334,6 @@
 			description: ["未知科技升级版"]
 			icon: "minecraft:end_crystal"
 			id: "44FE453E57FAD7C8"
-			optional: true
 			rewards: [{
 				id: "2DC3B970A4DC26CF"
 				item: "gtlcore:lv_primitive_magic_energy"
@@ -1388,18 +1390,27 @@
 				}
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				id: "46E3481E70E44CE8"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					count: 4L
+					id: "46E3481E70E44CE8"
+					item: "gtceu:cupronickel_credit"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "44F634809871C75E"
+					item: "gtceu:long_wood_rod"
+					type: "item"
+				}
+			]
 			title: "钓鱼竿"
 			x: 6.0d
 			y: -5.5d
 		}
 		{
-			dependencies: ["1994BAD293E85984"]
+			dependencies: ["231670C48BBDDB3E"]
 			icon: "gtlcore:large_steam_input_hatch"
 			id: "38B2098D8D6B47B6"
 			rewards: [{
@@ -1407,15 +1418,23 @@
 				item: "gtlcore:large_steam_input_hatch"
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				id: "12CB57CCE511AC2A"
-				item: "gtceu:platinum_credit"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "12CB57CCE511AC2A"
+					item: "gtceu:platinum_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "4CBA22B77132B99C"
+					item: "gtceu:steam_input_hatch"
+					type: "item"
+				}
+			]
 			title: "大型蒸汽输入仓"
-			x: 3.0d
-			y: -2.5d
+			x: 0.0d
+			y: -1.0d
 		}
 		{
 			can_repeat: true
@@ -1423,7 +1442,6 @@
 			icon: "gtceu:me_input_bus"
 			id: "2BD587F979B3EC97"
 			rewards: [{
-				count: 10
 				id: "377705671CB3A0E6"
 				item: "gtceu:me_input_bus"
 				type: "item"
@@ -1444,7 +1462,6 @@
 			icon: "gtceu:me_output_bus"
 			id: "49E1A594519BE6B1"
 			rewards: [{
-				count: 10
 				id: "4615D89A449DE9B5"
 				item: "gtceu:me_output_bus"
 				type: "item"
@@ -1465,7 +1482,6 @@
 			icon: "gtceu:me_input_hatch"
 			id: "41B1846CEF413C67"
 			rewards: [{
-				count: 10
 				id: "263A0D73345407AD"
 				item: "gtceu:me_input_hatch"
 				type: "item"
@@ -1486,7 +1502,6 @@
 			icon: "gtceu:me_output_hatch"
 			id: "002C9937FB903B42"
 			rewards: [{
-				count: 10
 				id: "4341F28F93558E3D"
 				item: "gtceu:me_input_bus"
 				type: "item"
@@ -1513,8 +1528,8 @@
 			}]
 			tasks: [{
 				consume_items: true
-				id: "785E6A2E29CA762F"
-				item: "gtceu:osmium_credit"
+				id: "22830592F976DBEE"
+				item: "gtceu:naquadah_credit"
 				type: "item"
 			}]
 			title: "ME库存输入总线"
@@ -1533,8 +1548,8 @@
 			}]
 			tasks: [{
 				consume_items: true
-				id: "30CA9049006C6953"
-				item: "gtceu:osmium_credit"
+				id: "71CF97070CE2A413"
+				item: "gtceu:naquadah_credit"
 				type: "item"
 			}]
 			title: "ME库存输入仓"
@@ -1555,8 +1570,8 @@
 			}]
 			tasks: [{
 				consume_items: true
-				id: "6F6CA06904C1B4BF"
-				item: "gtceu:osmium_credit"
+				id: "7B7CE2329314C19B"
+				item: "gtceu:naquadah_credit"
 				type: "item"
 			}]
 			title: "ME输出总成"
@@ -1564,6 +1579,7 @@
 			y: 2.0d
 		}
 		{
+			dependencies: ["335ED39019FC62E7"]
 			id: "45189DD9F85A272B"
 			tasks: [{
 				id: "532F68A0794DFA62"
@@ -1574,7 +1590,7 @@
 			y: -8.5d
 		}
 		{
-			can_repeat: false
+			can_repeat: true
 			dependencies: ["45189DD9F85A272B"]
 			icon: "avaritia:infinity_bucket"
 			id: "2AE793A3D6C0FCA0"
@@ -1583,46 +1599,60 @@
 				item: "avaritia:infinity_bucket"
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				id: "78AD1CE74AF12EE3"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "78AD1CE74AF12EE3"
+					item: "gtceu:gold_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "02A7BE50B947C24F"
+					item: "minecraft:bucket"
+					type: "item"
+				}
+			]
 			title: "远海鲸吞之桶"
 			x: -6.0d
 			y: -8.5d
 		}
 		{
-			can_repeat: false
+			can_repeat: true
 			dependencies: ["45189DD9F85A272B"]
-			icon: {
-				Count: 1
-				id: "avaritia:infinity_bow"
-				tag: { }
-			}
+			icon: "avaritia:infinity_bow"
 			id: "0C081324DE1D4C12"
 			rewards: [{
 				id: "396172CB1B925FD2"
-				item: {
-					Count: 1
-					id: "avaritia:infinity_bow"
-					tag: { }
+				item: "avaritia:infinity_bow"
+				type: "item"
+			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "58B1036352FC91D4"
+					item: "gtceu:gold_credit"
+					type: "item"
 				}
-				type: "item"
-			}]
-			tasks: [{
-				consume_items: true
-				id: "58B1036352FC91D4"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+				{
+					consume_items: true
+					id: "2763817B2C9A5ECA"
+					item: {
+						Count: 1
+						id: "minecraft:bow"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			title: "天堂陨落长弓"
 			x: -4.5d
 			y: -8.5d
 		}
 		{
-			can_repeat: false
+			can_repeat: true
 			dependencies: ["45189DD9F85A272B"]
 			icon: {
 				Count: 1
@@ -1643,46 +1673,60 @@
 				}
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				id: "7616A70DF0829F6C"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "7616A70DF0829F6C"
+					item: "gtceu:gold_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "4018379BF5A111F4"
+					item: "minecraft:totem_of_undying"
+					type: "item"
+				}
+			]
 			title: "无尽图腾"
 			x: -3.0d
 			y: -8.5d
 		}
 		{
-			can_repeat: false
+			can_repeat: true
 			dependencies: ["45189DD9F85A272B"]
-			icon: {
-				Count: 1
-				id: "avaritia:infinity_pickaxe"
-				tag: { }
-			}
+			icon: "avaritia:infinity_pickaxe"
 			id: "3F6C2CA4C0DB1908"
 			rewards: [{
 				id: "3AEF0D4B7166EC39"
-				item: {
-					Count: 1
-					id: "avaritia:infinity_pickaxe"
-					tag: { }
+				item: "avaritia:infinity_pickaxe"
+				type: "item"
+			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "498E588CDB4A9B9D"
+					item: "gtceu:gold_credit"
+					type: "item"
 				}
-				type: "item"
-			}]
-			tasks: [{
-				consume_items: true
-				id: "498E588CDB4A9B9D"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+				{
+					consume_items: true
+					id: "48E6E5722293B2B0"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			title: "世界崩解之镐"
 			x: 1.5d
 			y: -8.5d
 		}
 		{
-			can_repeat: false
+			can_repeat: true
 			dependencies: ["45189DD9F85A272B"]
 			icon: "avaritia:neutron_horse_armor"
 			id: "21C6BBA2E4999C80"
@@ -1691,18 +1735,26 @@
 				item: "avaritia:neutron_horse_armor"
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				id: "26A02C5ADB6423A7"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "26A02C5ADB6423A7"
+					item: "gtceu:gold_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "181061C0B5875E6C"
+					item: "minecraft:diamond_horse_armor"
+					type: "item"
+				}
+			]
 			title: "中子战马铠"
 			x: 0.0d
 			y: -8.5d
 		}
 		{
-			can_repeat: false
+			can_repeat: true
 			dependencies: ["45189DD9F85A272B"]
 			icon: "avaritia:ultimate_stew"
 			id: "6CAEBEE192A18FFC"
@@ -1711,18 +1763,26 @@
 				item: "avaritia:ultimate_stew"
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				id: "127D50E398234ACC"
-				item: "gtceu:platinum_credit"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "127D50E398234ACC"
+					item: "gtceu:platinum_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "66A4FED0C96CB8FD"
+					item: "minecraft:pumpkin_pie"
+					type: "item"
+				}
+			]
 			title: "超级煲"
 			x: -1.5d
 			y: -8.5d
 		}
 		{
-			can_repeat: false
+			can_repeat: true
 			dependencies: ["45189DD9F85A272B"]
 			icon: "avaritia:infinity_axe"
 			id: "32EE0553E9112ADC"
@@ -1731,18 +1791,32 @@
 				item: "avaritia:infinity_axe"
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				id: "211A78DC53E64C40"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "211A78DC53E64C40"
+					item: "gtceu:gold_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "417FE2FCABE0A336"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_axe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			title: "自然荒芜之斧"
 			x: 3.0d
 			y: -8.5d
 		}
 		{
-			can_repeat: false
+			can_repeat: true
 			dependencies: ["45189DD9F85A272B"]
 			icon: "avaritia:infinity_hoe"
 			id: "1AB285CE198D3E41"
@@ -1751,40 +1825,60 @@
 				item: "avaritia:infinity_hoe"
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				id: "2FD7D388BA97E0E4"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "2FD7D388BA97E0E4"
+					item: "gtceu:gold_credit"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "47C1E92690EA32FF"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_hoe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			title: "地蕴复生之锄"
 			x: 4.5d
 			y: -8.5d
 		}
 		{
-			can_repeat: false
+			can_repeat: true
 			dependencies: ["45189DD9F85A272B"]
-			icon: {
-				Count: 1
-				id: "avaritia:infinity_shovel"
-				tag: { }
-			}
+			icon: "avaritia:infinity_shovel"
 			id: "4EA03BF2680E0EE7"
 			rewards: [{
 				id: "2CA6ABE44FABFDE2"
-				item: {
-					Count: 1
-					id: "avaritia:infinity_shovel"
-					tag: { }
+				item: "avaritia:infinity_shovel"
+				type: "item"
+			}]
+			tasks: [
+				{
+					consume_items: true
+					id: "44AE99A2A69241A5"
+					item: "gtceu:gold_credit"
+					type: "item"
 				}
-				type: "item"
-			}]
-			tasks: [{
-				consume_items: true
-				id: "44AE99A2A69241A5"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
+				{
+					consume_items: true
+					id: "5654891B9B4A1EE5"
+					item: {
+						Count: 1
+						id: "minecraft:diamond_shovel"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			title: "星球吞噬之铲"
 			x: 6.0d
 			y: -8.5d

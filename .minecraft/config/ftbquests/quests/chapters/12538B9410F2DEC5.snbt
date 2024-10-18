@@ -504,11 +504,7 @@
 			id: "5C4B11CEA53D5B78"
 			tasks: [{
 				id: "4B5ADAE9ED77C366"
-				item: {
-					Count: 1
-					id: "gtceu:data_module"
-					tag: { }
-				}
+				item: "gtceu:data_module"
 				type: "item"
 			}]
 			x: 10.0d
