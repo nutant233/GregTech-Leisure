@@ -2,6 +2,9 @@
   "gtmthings": {
     "wireless_energy_hatch_provider": true
   },
+  "framedblocks": {
+    "framed_item_frame": true
+  },
   "minecraft": {
     "item_storage.show_name_amount": 5,
     "furnace": true,

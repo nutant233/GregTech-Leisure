@@ -909,6 +909,7 @@
 				"128671E4DC47EF55"
 			]
 			id: "033DE57F0D91698C"
+			optional: true
 			tasks: [{
 				id: "139820782C4C2E96"
 				item: "ae2:blank_pattern"
@@ -938,6 +939,7 @@
 			dependencies: ["033DE57F0D91698C"]
 			description: ["有了无限的电路，只需在写样板时带上电路，你就可以方便的通过AE系统来控制你的机器电路设置，注意打开样板供应器的锁定合成直到主产物返回。"]
 			id: "471C9A591D5CF776"
+			optional: true
 			rewards: [{
 				id: "14728D61A431DB0B"
 				table_id: 6225023274141477362L

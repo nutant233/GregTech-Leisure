@@ -433,11 +433,11 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 3.0d
+			y: 4.0d
 		}
 		{
 			dependencies: [
-				"707E5114B7979898"
+				"5EA323F44ADF07BE"
 				"388BD32463FA905D"
 				"6DB45A96500CC2EB"
 			]
@@ -453,7 +453,7 @@
 				item: "gtceu:vacuum_tube"
 				type: "item"
 			}]
-			x: 6.0d
+			x: 8.0d
 			y: 4.0d
 		}
 		{
@@ -990,8 +990,8 @@
 				item: "ae2:inscriber"
 				type: "item"
 			}]
-			x: 10.0d
-			y: 4.0d
+			x: 12.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["6E69F45AEA66D5ED"]
@@ -1202,7 +1202,7 @@
 				item: "gtlcore:ulv_thermal_generator"
 				type: "item"
 			}]
-			x: 8.0d
+			x: 10.0d
 			y: 4.0d
 		}
 		{
@@ -1245,7 +1245,19 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
+			x: 6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["707E5114B7979898"]
+			description: ["潜行右键真空泵"]
+			id: "5EA323F44ADF07BE"
+			tasks: [{
+				id: "78897AC60997B30B"
+				item: "gtlcore:raw_vacuum_tube"
+				type: "item"
+			}]
+			x: 6.0d
 			y: 4.5d
 		}
 	]

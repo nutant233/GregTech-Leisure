@@ -1,10 +1,8 @@
 //priority: 98
 ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
-
-    event.remove({ id: "minecraft:netherite_ingot" })
-    event.remove({ id: "minecraft:netherite_scrap" })
-    event.remove({ id: "minecraft:netherite_scrap_from_blasting" })
+    event.smelting("minecraft:slime_ball", "gtceu:sticky_resin")
+    event.smelting("minecraft:leather", "minecraft:rotten_flesh")
 
     event.shaped("minecraft:sculk_sensor", [
         "ABA",

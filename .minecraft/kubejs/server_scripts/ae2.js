@@ -1,8 +1,6 @@
 //priority: 94
 ServerEvents.recipes((event) => {
     const gtr = event.recipes.gtceu
-
-    event.remove({ id: "expatternprovider:fishbig" })
     event.shapeless("gtlcore:item_infinity_cell", ["ae2:item_cell_housing", "gtlcore:infinite_cell_component"])
     event.shapeless("gtlcore:fluid_infinity_cell", ["ae2:fluid_cell_housing", "gtlcore:infinite_cell_component"])
     event.shapeless("gtlcore:pattern_modifier", "expatternprovider:pattern_modifier")

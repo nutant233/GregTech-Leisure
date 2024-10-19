@@ -550,7 +550,7 @@
 		}
 		{
 			dependencies: ["38480A52A13DA157"]
-			description: ["用不完的蒸汽"]
+			description: ["用不完的蒸汽，属于玩具，不推荐"]
 			id: "5744F6172D4E112B"
 			optional: true
 			shape: "rsquare"
@@ -792,7 +792,7 @@
 		}
 		{
 			dependencies: ["365298DB6520227A"]
-			description: ["将超临界钠钾合金转变为超临界蒸汽，用于给超临界蒸汽涡轮发电"]
+			description: ["使用超临界钠钾合金将蒸馏水转变为超临界蒸汽，用于给超临界蒸汽涡轮发电，或者使用热钠钾合金消耗水产生大量蒸汽"]
 			id: "24CE67689DD540B7"
 			optional: true
 			tasks: [{

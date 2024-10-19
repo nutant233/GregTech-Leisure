@@ -1,60 +1,5 @@
 ServerEvents.recipes(event => {
     const gtr = event.recipes.gtceu
-    const id = ["ad_astra:compressor",
-        "ad_astra:coal_generator",
-        "ad_astra:etrionic_blast_furnace",
-        "ad_astra:fuel_refinery",
-        "ad_astra:solar_panel",
-        "ad_astra:water_pump",
-        "ad_astra:cryo_freezer",
-        "ad_astra:fan",
-        "ad_astra:engine_frame",
-        "ad_astra:steel_engine",
-        "ad_astra:desh_engine",
-        "ad_astra:ostrum_engine",
-        "ad_astra:calorite_engine",
-        "ad_astra:calorite_tank",
-        "ad_astra:ostrum_tank",
-        "ad_astra:desh_tank",
-        "ad_astra:steel_tank",
-        "ad_astra:rocket_fin",
-        "ad_astra:rocket_nose_cone",
-        "ad_astra:smelting/desh_ingot_from_smelting_deepslate_desh_ore",
-        "ad_astra:smelting/desh_ingot_from_smelting_moon_desh_ore",
-        "ad_astra:smelting/desh_ingot_from_smelting_raw_desh",
-        "ad_astra:smelting/ostrum_ingot_from_smelting_deepslate_ostrum_ore",
-        "ad_astra:smelting/ostrum_ingot_from_smelting_mars_ostrum_ore",
-        "ad_astra:smelting/ostrum_ingot_from_smelting_raw_ostrum",
-        "ad_astra:smelting/calorite_ingot_from_smelting_deepslate_calorite_ore",
-        "ad_astra:smelting/calorite_ingot_from_smelting_venus_calorite_ore",
-        "ad_astra:smelting/calorite_ingot_from_smelting_raw_calorite",
-        "ad_astra:smelting/ice_shard_from_smelting_deepslate_ice_shard_ore",
-        "ad_astra:smelting/ice_shard_from_smelting_glacio_ice_shard_ore",
-        "ad_astra:smelting/ice_shard_from_smelting_mars_ice_shard_ore",
-        "ad_astra:smelting/ice_shard_from_smelting_moon_ice_shard_ore",
-        "ad_astra:blasting/desh_ingot_from_blasting_deepslate_desh_ore",
-        "ad_astra:blasting/desh_ingot_from_blasting_moon_desh_ore",
-        "ad_astra:blasting/desh_ingot_from_blasting_raw_desh",
-        "ad_astra:blasting/ostrum_ingot_from_blasting_deepslate_ostrum_ore",
-        "ad_astra:blasting/ostrum_ingot_from_blasting_mars_ostrum_ore",
-        "ad_astra:blasting/ostrum_ingot_from_blasting_raw_ostrum",
-        "ad_astra:blasting/calorite_ingot_from_blasting_deepslate_calorite_ore",
-        "ad_astra:blasting/calorite_ingot_from_blasting_venus_calorite_ore",
-        "ad_astra:blasting/calorite_ingot_from_blasting_raw_calorite",
-        "ad_astra:blasting/ice_shard_from_blasting_deepslate_ice_shard_ore",
-        "ad_astra:blasting/ice_shard_from_blasting_glacio_ice_shard_ore",
-        "ad_astra:blasting/ice_shard_from_blasting_mars_ice_shard_ore",
-        "ad_astra:blasting/ice_shard_from_blasting_moon_ice_shard_ore",
-        "ad_astra:steel_block",
-        "ad_astra:energizer",
-        "ad_astra:steel_cable",
-        "ad_astra:desh_cable",
-        "ad_astra:cable_duct",
-        "ad_astra:steel_ingot",
-        "ad_astra:nasa_workbench"]
-    id.forEach(i => {
-        event.remove({ id: i })
-    })
     event.remove({ type: "ad_astra:compressing" })
     event.remove({ type: "ad_astra:alloying" })
     event.remove({ type: "ad_astra:cryo_freezing" })
@@ -473,23 +418,23 @@ ServerEvents.recipes(event => {
     gtr.alloy_smelter("gtlcore:calorite_ingot")
         .itemInputs("gtceu:naquadah_ingot", "gtceu:calorite_dust")
         .itemOutputs("ad_astra:calorite_ingot")
-        .EUt(30720)
-        .duration(1200)
+        .EUt(16)
+        .duration(120000)
 
-    gtr.compressor("gtlcore:desh_plate")
-        .itemInputs("9x ad_astra:desh_ingot")
+    gtr.rolling("gtlcore:desh_plate")
+        .itemInputs("ad_astra:desh_block")
         .itemOutputs("ad_astra:desh_plate")
         .EUt(1920)
         .duration(200)
 
-    gtr.compressor("gtlcore:ostrum_plate")
-        .itemInputs("9x ad_astra:ostrum_ingot")
+    gtr.rolling("gtlcore:ostrum_plate")
+        .itemInputs("ad_astra:ostrum_block")
         .itemOutputs("ad_astra:ostrum_plate")
         .EUt(7680)
         .duration(200)
 
-    gtr.compressor("gtlcore:calorite_plate")
-        .itemInputs("9x ad_astra:calorite_ingot")
+    gtr.rolling("gtlcore:calorite_plate")
+        .itemInputs("ad_astra:calorite_block")
         .itemOutputs("ad_astra:calorite_plate")
         .EUt(7680)
         .duration(200)

@@ -1,0 +1,15 @@
+{
+  "type": "sophisticatedbackpacks:smithing_backpack_upgrade",
+  "addition": {
+    "item": "gtceu:tungsten_steel_crate"
+  },
+  "base": {
+    "item": "sophisticatedbackpacks:diamond_backpack"
+  },
+  "result": {
+    "item": "sophisticatedbackpacks:netherite_backpack"
+  },
+  "template": {
+    "item": "ae2:fluix_upgrade_smithing_template"
+  }
+}
