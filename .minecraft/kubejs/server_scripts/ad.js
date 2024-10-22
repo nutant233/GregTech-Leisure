@@ -1,11 +1,5 @@
 ServerEvents.recipes(event => {
     const gtr = event.recipes.gtceu
-    event.remove({ type: "ad_astra:compressing" })
-    event.remove({ type: "ad_astra:alloying" })
-    event.remove({ type: "ad_astra:cryo_freezing" })
-    event.remove({ type: "ad_astra:nasa_workbench" })
-    event.remove({ type: "ad_astra:oxygen_loading" })
-    event.remove({ type: "ad_astra:refining" })
     event.shapeless("ad_astra:energizer", "gtceu:ulv_charger_4x")
 
     event.shaped("ad_astra:nasa_workbench", [

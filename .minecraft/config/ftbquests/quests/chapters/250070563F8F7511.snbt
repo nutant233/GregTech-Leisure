@@ -497,13 +497,13 @@
 			}]
 			tasks: [
 				{
-					id: "327FF4C13FFEC8B6"
-					item: "gtceu:copper_dust"
+					id: "2554E87AD51D2037"
+					item: "enderio:powdered_copper"
 					type: "item"
 				}
 				{
-					id: "788C88B4C8AD93FC"
-					item: "gtceu:tin_dust"
+					id: "20228681A1C01DA6"
+					item: "enderio:powdered_tin"
 					type: "item"
 				}
 			]
@@ -1211,26 +1211,6 @@
 			title: "记笔记"
 			x: 7.5d
 			y: -4.0d
-		}
-		{
-			dependencies: ["2C6F506ADD78F277"]
-			description: [
-				"关于pipez的管道，虽然便捷，但是"
-				"1 每t都在运作"
-				"2 一对多传输会超级卡"
-				"3 分配规则改成轮询调度会超级卡"
-				"4 大量过滤会超级卡"
-				"5 流体管道会很卡"
-				"所以推荐在前期使用，后面避免使用"
-			]
-			id: "206F4C123EC2550F"
-			tasks: [{
-				id: "78133B00994EC9AC"
-				item: "pipez:wrench"
-				type: "item"
-			}]
-			x: 0.0d
-			y: -1.0d
 		}
 		{
 			dependencies: ["4AB25C15F0B05AA0"]

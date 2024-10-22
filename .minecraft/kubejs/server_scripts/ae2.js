@@ -102,7 +102,7 @@ ServerEvents.recipes((event) => {
     gtr.forming_press("gtlcore:logic_processor1")
         .notConsumable("ae2:silicon_press")
         .notConsumable("ae2:logic_processor_press")
-        .itemInputs("gtceu:gold_dust", "gtceu:silicon_dust", "minecraft:redstone")
+        .itemInputs("enderio:powdered_gold", "gtceu:silicon_dust", "minecraft:redstone")
         .itemOutputs("ae2:logic_processor")
         .duration(20)
         .EUt(480)

@@ -83,7 +83,7 @@
 		{
 			can_repeat: true
 			dependencies: ["5F5F348E3A34827E"]
-			description: ["记得在使用时用扳手蹲下右键锁定流向"]
+			description: ["记得在使用时用扳手蹲下右键锁定流向，推荐当作流体储罐而不是管道使用，使用它来方便的合成末影接口管道"]
 			id: "781417A4FA36101D"
 			rewards: [{
 				count: 64
@@ -252,8 +252,8 @@
 			id: "30F031CD02425ED7"
 			rewards: [{
 				count: 64
-				id: "4FB6BBE01DEAFC93"
-				item: "minecraft:gunpowder"
+				id: "72C280D37FB0269E"
+				item: "minecraft:ender_pearl"
 				type: "item"
 			}]
 			tasks: [{
@@ -315,8 +315,8 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "4DE17D3F21E3C195"
-				item: "gtceu:pulsating_alloy_ingot"
+				id: "26CA7B24E38AB373"
+				item: "enderio:pulsating_alloy_block"
 				type: "item"
 			}]
 			x: 4.0d
@@ -937,38 +937,6 @@
 			}]
 			x: -2.0d
 			y: 2.0d
-		}
-		{
-			dependencies: ["12FE2B59FA86381C"]
-			description: [
-				"激光物流的合成都被加强了，推荐使用这个模组来物流"
-				"使用桶装流体可以标记流体过滤"
-			]
-			id: "7B38A7C2643C6766"
-			rewards: [{
-				id: "42242771F67681FC"
-				item: "gtceu:cupronickel_credit"
-				type: "item"
-			}]
-			tasks: [
-				{
-					id: "1B1773B40FB9AB2F"
-					item: "laserio:laser_connector"
-					type: "item"
-				}
-				{
-					id: "2D87329069B3E34F"
-					item: "laserio:laser_node"
-					type: "item"
-				}
-				{
-					id: "5B2CA5034DD7A34B"
-					item: "laserio:laser_wrench"
-					type: "item"
-				}
-			]
-			x: 12.0d
-			y: -2.0d
 		}
 		{
 			id: "664C46D5C12E7255"

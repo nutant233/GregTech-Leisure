@@ -114,7 +114,7 @@ ServerEvents.recipes((event) => {
         .duration(4000)
 
     gtr.lightning_processor("gtlcore:glowstone_dust")
-        .itemInputs("gtceu:gold_dust", "minecraft:redstone")
+        .itemInputs("enderio:powdered_gold", "minecraft:redstone")
         .itemOutputs("2x minecraft:glowstone_dust")
         .EUt(30)
         .duration(200)

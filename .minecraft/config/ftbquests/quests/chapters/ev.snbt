@@ -690,7 +690,7 @@
 			}]
 			tasks: [{
 				id: "50CF22DC1B6C3E56"
-				item: "gtceu:raw_desh"
+				item: "ad_astra:raw_desh"
 				type: "item"
 			}]
 			x: 14.0d

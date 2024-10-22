@@ -29,14 +29,6 @@
 	#Out-of-bound slots are ignored
 	#Omit sortRange to leave as default
 	[[sorting.containerOverrides]]
-		containerClass = "appeng.client.gui.implementations.*Screen"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
-		containerClass = "appeng.client.gui.me.items.*Screen"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
 		containerClass = "de.mari_023.ae2wtlib.wct.*Screen"
 		sortRange = ""
 
@@ -45,43 +37,7 @@
 		sortRange = ""
 
 	[[sorting.containerOverrides]]
-		containerClass = "org.cyclops.integrateddynamics.inventory.container.*"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
-		containerClass = "org.cyclops.integratedterminals.inventory.container.ContainerTerminalStoragePart"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
-		containerClass = "com.refinedmods.refinedstorage.screen.*"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
 		containerClass = "net.p3pp3rf1y.sophisticatedbackpacks.common.gui.BackpackContainer"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
-		containerClass = "net.p3pp3rf1y.sophisticatedstorage.common.gui.StorageContainerMenu"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
-		containerClass = "tfar.craftingstation.CraftingStationMenu"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
-		containerClass = "tfar.dankstorage.container.DankContainers"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
-		containerClass = "mcjty.rftoolsutility.modules.crafter.blocks.CrafterContainer"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
-		containerClass = "gripe._90.megacells.menu.MEGAInterfaceMenu"
-		sortRange = ""
-
-	[[sorting.containerOverrides]]
-		containerClass = "com.direwolf20.laserio.client.screens.*"
 		sortRange = ""
 
 	[[sorting.containerOverrides]]

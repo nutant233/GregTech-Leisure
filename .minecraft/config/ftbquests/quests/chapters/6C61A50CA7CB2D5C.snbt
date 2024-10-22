@@ -974,7 +974,7 @@
 			tasks: [
 				{
 					id: "053580F012F38F61"
-					item: "gtceu:raw_desh"
+					item: "ad_astra:raw_desh"
 					type: "item"
 				}
 				{
@@ -1028,7 +1028,7 @@
 			tasks: [
 				{
 					id: "6428D6EEAEE1BA91"
-					item: "gtceu:raw_calorite"
+					item: "ad_astra:raw_calorite"
 					type: "item"
 				}
 				{
@@ -1095,7 +1095,7 @@
 			id: "48DFA1EF82126177"
 			tasks: [{
 				id: "712CE912BBCC97FA"
-				item: "gtceu:raw_ostrum"
+				item: "ad_astra:raw_ostrum"
 				type: "item"
 			}]
 			title: "谷神星的矿"

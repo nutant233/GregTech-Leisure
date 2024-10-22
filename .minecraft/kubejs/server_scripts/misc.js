@@ -382,6 +382,8 @@ PlayerEvents.loggedIn(event => {
     if (event.player.persistentData.getInt("pearl") == null) {
         event.player.persistentData.putInt("pearl", 0)
     }
+    event.server.runCommand("say 当前版本是开发测试版本，不能保证内容的稳定性和完整性。如果您遇到任何问题或有任何建议，请访问GitHub提供反馈。")
+    event.server.runCommand("say The current version is a development test version, which does not guarantee stability and completeness of content. If you encounter any issues or have suggestions, please go to GitHub to provide feedback.")
 })
 
 EntityEvents.spawned("minecraft:bat", event => {

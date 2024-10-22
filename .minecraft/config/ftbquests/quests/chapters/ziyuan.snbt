@@ -521,7 +521,7 @@
 				}
 				{
 					id: "6E1058A98ED43D59"
-					item: "gtceu:iron_dust"
+					item: "enderio:powdered_iron"
 					optional_task: true
 					type: "item"
 				}

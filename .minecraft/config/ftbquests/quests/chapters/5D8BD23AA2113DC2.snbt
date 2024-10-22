@@ -255,7 +255,7 @@
 			id: "60E8908833FD2617"
 			tasks: [{
 				id: "431ABAC084CD896C"
-				item: "gtceu:iron_dust"
+				item: "enderio:powdered_iron"
 				type: "item"
 			}]
 			x: 4.0d
@@ -295,7 +295,7 @@
 			id: "07C88B6FB9070D49"
 			tasks: [{
 				id: "4AD942AA379753F9"
-				item: "gtceu:cobalt_dust"
+				item: "enderio:powdered_cobalt"
 				type: "item"
 			}]
 			x: 5.5d
@@ -365,7 +365,7 @@
 			id: "79BA775A0F489F66"
 			tasks: [{
 				id: "58B39C938575FB83"
-				item: "gtceu:copper_dust"
+				item: "enderio:powdered_copper"
 				type: "item"
 			}]
 			x: 8.5d
@@ -385,7 +385,7 @@
 			id: "237A5D3B829D0B71"
 			tasks: [{
 				id: "20106D3EF775CC3C"
-				item: "gtceu:gold_dust"
+				item: "enderio:powdered_gold"
 				type: "item"
 			}]
 			x: 8.5d
@@ -465,7 +465,7 @@
 			id: "05842D8E522354BE"
 			tasks: [{
 				id: "61DC5D11D6313FEC"
-				item: "gtceu:tin_dust"
+				item: "enderio:powdered_tin"
 				type: "item"
 			}]
 			x: 13.0d
