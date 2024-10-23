@@ -409,11 +409,12 @@ ServerEvents.recipes(event => {
         .duration(2400)
         .blastFurnaceTemp(5200)
 
-    gtr.alloy_smelter("gtlcore:calorite_ingot")
+    gtr.electric_blast_furnace("gtlcore:calorite_ingot")
         .itemInputs("gtceu:naquadah_ingot", "gtceu:calorite_dust")
         .itemOutputs("ad_astra:calorite_ingot")
-        .EUt(16)
-        .duration(120000)
+        .EUt(1920)
+        .duration(3200)
+        .blastFurnaceTemp(6100)
 
     gtr.rolling("gtlcore:desh_plate")
         .itemInputs("ad_astra:desh_block")
