@@ -750,8 +750,8 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "001139BEE7311878"
-				item: "gtceu:conductive_alloy_ingot"
+				id: "7324D4E1B54DBBCD"
+				item: "enderio:conductive_alloy_ingot"
 				type: "item"
 			}]
 			title: "LV超导"

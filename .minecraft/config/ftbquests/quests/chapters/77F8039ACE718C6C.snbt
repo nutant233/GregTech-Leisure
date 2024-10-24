@@ -48,8 +48,9 @@
 			description: ["而水又是从哪里来的呢，现在的你需要一些水"]
 			id: "4E96A08CF12D496A"
 			rewards: [{
-				id: "0EF18EDF382FF874"
-				item: "gtceu:cupronickel_credit"
+				count: 32
+				id: "0868FB6589D83F8D"
+				item: "enderio:pressurized_fluid_conduit"
 				type: "item"
 			}]
 			tasks: [{
@@ -83,7 +84,7 @@
 		{
 			can_repeat: true
 			dependencies: ["5F5F348E3A34827E"]
-			description: ["记得在使用时用扳手蹲下右键锁定流向，推荐当作流体储罐而不是管道使用，使用它来方便的合成末影接口管道"]
+			description: ["记得在使用时用扳手蹲下右键锁定流向，推荐当作流体储罐而不是管道使用"]
 			id: "781417A4FA36101D"
 			rewards: [{
 				count: 64

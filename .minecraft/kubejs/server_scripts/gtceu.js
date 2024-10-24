@@ -1507,7 +1507,7 @@ ServerEvents.recipes((event) => {
             "16x gtceu:double_black_steel_plate",
             "16x gtceu:double_niobium_nitride_plate")
         .itemOutputs("gtlcore:large_void_miner")
-        .inputFluids("gtceu:soldering_alloy 5760", "gtceu:fall_king 5760", "gtceu:energetic_alloy 5760", "gtceu:tanmolyium 5760")
+        .inputFluids("gtceu:soldering_alloy 5760", "gtceu:fall_king 5760", "gtceu:conductive_alloy 5760", "gtceu:tanmolyium 5760")
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(800)
         .stationResearch(b => b.researchStack(Registries.getItemStack("gtlcore:void_miner"))
@@ -3408,12 +3408,14 @@ ServerEvents.recipes((event) => {
     gtr.assembler("gtlcore:ingot_field_shape")
         .itemInputs("2x gtceu:polyphenylene_sulfide_plate", "2x gtceu:polybenzimidazole_plate", "gtceu:uv_field_generator", "gtceu:ingot_casting_mold")
         .itemOutputs("kubejs:ingot_field_shape")
+        .inputFluids("gtceu:redstone_alloy 2304")
         .EUt(30720)
         .duration(200)
 
     gtr.assembler("gtlcore:ball_field_shape")
         .itemInputs("2x gtceu:polyphenylene_sulfide_plate", "2x gtceu:polybenzimidazole_plate", "gtceu:uv_field_generator", "gtceu:ball_casting_mold")
         .itemOutputs("kubejs:ball_field_shape")
+        .inputFluids("gtceu:redstone_alloy 2304")
         .EUt(30720)
         .duration(200)
 
@@ -12109,7 +12111,7 @@ ServerEvents.recipes((event) => {
         .duration(1200)
 
     gtr.assembler("gtlcore:slaughterhouse")
-        .itemInputs("gtceu:steel_frame", "gtceu:lv_world_accelerator", "4x #gtceu:circuits/lv", "8x gtceu:lv_electric_motor", "4x gtceu:lv_robot_arm", "8x gtceu:invar_gear", "2x gtceu:diamond_grinding_head", "4x gtceu:double_steel_plate")
+        .itemInputs("gtceu:steel_frame", "gtceu:lv_world_accelerator", "4x #gtceu:circuits/lv", "2x gtceu:pulsating_alloy_hex_wire", "8x gtceu:lv_electric_motor", "4x gtceu:lv_robot_arm", "8x gtceu:invar_gear", "2x gtceu:diamond_grinding_head", "4x gtceu:double_steel_plate")
         .itemOutputs("gtlcore:slaughterhouse")
         .EUt(30)
         .duration(400)
@@ -13647,7 +13649,7 @@ ServerEvents.recipes((event) => {
         .duration(20)
 
     gtr.lightning_processor("gtlcore:thaumium_dust")
-        .itemInputs("8x gtceu:infused_gold_dust", "8x enderio:powdered_iron", "16x enderio:lapis_cobalt")
+        .itemInputs("8x gtceu:infused_gold_dust", "4x enderio:soul_powder","4x enderio:powdered_iron", "16x enderio:powdered_lapis_lazuli")
         .inputFluids("gtceu:distilled_water 1000")
         .itemOutputs("16x gtceu:thaumium_dust")
         .EUt(7680)
@@ -13845,7 +13847,7 @@ ServerEvents.recipes((event) => {
         .duration(200)
 
     gtr.assembler("gtlcore:process_machine_casing")
-        .itemInputs("gtceu:solid_machine_casing", "2x #gtceu:circuits/iv", "2x gtceu:double_stainless_steel_plate", "4x gtceu:double_mar_m_200_steel_plate")
+        .itemInputs("gtceu:solid_machine_casing", "2x #gtceu:circuits/iv", "gtceu:end_steel_quadruple_wire", "2x gtceu:double_stainless_steel_plate", "4x gtceu:double_mar_m_200_steel_plate")
         .inputFluids("gtceu:fall_king 576")
         .itemOutputs("gtlcore:process_machine_casing")
         .EUt(7680)

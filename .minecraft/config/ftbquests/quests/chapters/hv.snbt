@@ -733,7 +733,7 @@
 		}
 		{
 			dependencies: ["1A48D2DB936FF632"]
-			description: ["这个系列的最后一个"]
+			description: ["可能已经用不上了"]
 			id: "46BFDB71190C1F49"
 			rewards: [{
 				id: "21D42C7B4D0E84C3"
@@ -741,8 +741,8 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "7DDB9B944116C1C1"
-				item: "gtceu:vibrant_alloy_ingot"
+				id: "6B080AA23948E527"
+				item: "enderio:vibrant_alloy_ingot"
 				type: "item"
 			}]
 			title: "HV的便宜超导"

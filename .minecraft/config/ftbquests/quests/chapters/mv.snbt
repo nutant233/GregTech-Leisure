@@ -779,24 +779,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["79382D841C3CEB78"]
-			description: ["无CD，可穿墙"]
-			hide_dependency_lines: true
-			id: "0BB44C475666B862"
-			rewards: [{
-				id: "54528A3D2B69E805"
-				item: "gtceu:gold_credit"
-				type: "item"
-			}]
-			tasks: [{
-				id: "2D126E194E987083"
-				item: "travelanchors:travel_staff"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 8.0d
-		}
-		{
 			dependencies: [
 				"79AE49C5DE7900FF"
 				"56EA21AD61D2ACB1"
@@ -864,8 +846,8 @@
 				type: "item"
 			}]
 			tasks: [{
-				id: "412AE134485FD3CC"
-				item: "gtceu:energetic_alloy_ingot"
+				id: "7DA67D952D5C9607"
+				item: "enderio:energetic_alloy_ingot"
 				type: "item"
 			}]
 			title: "MV的便宜超导"

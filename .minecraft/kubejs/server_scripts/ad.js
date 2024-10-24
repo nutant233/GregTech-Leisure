@@ -29,7 +29,7 @@ ServerEvents.recipes(event => {
         .duration(200)
 
     gtr.electric_blast_furnace("gtlcore:iron_plate")
-        .itemInputs("gtceu:conductive_alloy_block", "gtceu:double_wrought_iron_plate", "16x gtceu:wrought_iron_dust")
+        .itemInputs("gtceu:magnetic_iron_block", "gtceu:double_wrought_iron_plate", "16x gtceu:wrought_iron_dust")
         .inputFluids("gtceu:iron 1296")
         .itemOutputs("ad_astra:iron_plate")
         .chancedOutput("gtceu:steel_ingot", 5000, 0)

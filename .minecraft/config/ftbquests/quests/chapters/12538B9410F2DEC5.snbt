@@ -424,13 +424,33 @@
 		}
 		{
 			dependencies: ["7FD1D1D8ED72D40C"]
+			description: ["打开实体模式来提高概率"]
 			id: "079FEA1875012A69"
-			tasks: [{
-				count: 4L
-				id: "32F1F3F299981C4F"
-				item: { Count: 4, id: "gtlcore:glacio_spirit" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					count: 4L
+					id: "32F1F3F299981C4F"
+					item: { Count: 4, id: "gtlcore:glacio_spirit" }
+					type: "item"
+				}
+				{
+					id: "45AEED77FD63ABEE"
+					item: {
+						Count: 64
+						id: "enderio:powered_spawner"
+						tag: {
+							BlockEntityTag: {
+								EntityStorage: {
+									Entity: {
+										id: "ad_astra:glacian_ram"
+									}
+								}
+							}
+						}
+					}
+					type: "item"
+				}
+			]
 			x: 8.0d
 			y: 0.0d
 		}

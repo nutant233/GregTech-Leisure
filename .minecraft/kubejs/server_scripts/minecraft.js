@@ -25,6 +25,20 @@ ServerEvents.recipes((event) => {
         D: "minecraft:sculk_sensor"
     })
 
+    gtr.mixer("gtlcore:rooted_dirt")
+        .chancedInput("minecraft:moss_carpet", 1000, 0)
+        .itemInputs("minecraft:dirt")
+        .itemOutputs("minecraft:rooted_dirt")
+        .duration(200)
+        .EUt(16)
+
+    gtr.autoclave("gtlcore:soul_soil")
+        .itemInputs("enderio:filled_soul_vial", "minecraft:rooted_dirt")
+        .inputFluids("gtceu:liquid_nether_air 100")
+        .itemOutputs("enderio:empty_soul_vial", "minecraft:soul_soil")
+        .EUt(480)
+        .duration(240)
+
     gtr.compressor("gtlcore:netherite_block")
         .itemInputs("9x minecraft:netherite_ingot")
         .itemOutputs("minecraft:netherite_block")
